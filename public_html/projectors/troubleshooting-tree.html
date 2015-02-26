@@ -1,0 +1,1783 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="/resources/js/jquery.scrollintoview.js"></script>
+<script src="/resources/js/jquery.scrollintoview.min.js"></script>
+<script src="/resources/js/tree.jquery.js"></script>
+<link rel="stylesheet" href="/resources/css/jqtree.css">
+</head>
+
+<style>
+			#content ul li{list-style:none;background:none no-repeat left 0em;margin-left:0em;padding-left:0px;z-index:9999999;}	
+			ul li{background-image:none !important;margin-left:0em;padding-left:0px;}
+</style>
+
+<h2>Projector Troubleshooting</h2>
+<div id="PrematureShutdown" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:500px;overflow-y:auto;"></div>
+<script>
+        $(function() {
+                var element = document.getElementById("PrematureShutdown");
+				var lastHeight = element.scrollHeight;
+				var data = [
+                { label: '&nbsp;&nbsp;&nbsp;&nbsp;My projector shuts off during use',
+                    children: [
+                        { label: '&nbsp;&nbsp;&nbsp;&nbsp;Does your projector shut off immediately, or after its been used for a while?' },
+                        { label: '&nbsp;&nbsp;&nbsp;&nbsp;Immediately' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please clean all vents and filters (if any) on the projector.  Also remove the lamp and clean any dust off the lamp screens.  Did this resolve your issue?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Projectors produce a large amount of heat, any restriction of airflow can cause the internal temperature of the projector to heat up substantially.  If it gets too hot the projector will turn itself off to prevent damage.' }
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check around the outside of the projector, are there any HVAC vents that may be blowing hot air on the projector, or could anything be restricting the airflow (there should be 4-6 inches on all sides of the projector for proper airflow).' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;There was something blocking/blowing on the projector.' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Projectors produce a large amount of heat, any restriction of airflow can cause the internal temperature of the projector to heat up substantially.  If it gets too hot the projector will turn itself off to prevent damage.' }
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;There is plenty of space for airflow and Nothing blowing hot air on the projector.' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Is your firmware up to date?  To check what version is current locate your projector below and go to the Documents and Tools section of the projector page.  The firmware is listed at the bottom.' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Firmware can effect a great number of things in the projector.  It is best to keep it up to date.  Please update your firmware.  Did this resolve your issue?' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Remember it is always a good idea to update your firmware.  If you have additional issues in the future check to see if you are up to date.' }
+															]
+														},
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},											
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;After a while' ,
+                    		children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check settings like Auto off Time, Sleep Timer, Screen Save Time, etc to make sure they are not on (see your user manual for details).  Did this resolve your issue?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;These timers are in place to prevent the projector from being left on for long periods of time.  They are not necessary if you are consistent about turning off the projector when you are finished using it.' }
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please clean all vents and filters (if any) on the projector.  Also remove the lamp and clean any dust off the lamp screens.  Did this resolve your issue?'},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Projectors produce a large amount of heat, any restriction of airflow can cause the internal temperature of the projector to heat up substantially.  If it gets too hot the projector will turn itself off to prevent damage.'}
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check around the outside of the projector, are there any HVAC vents that may be blowing hot air on the projector, or could anything be restricting the airflow (there should be 4-6 inches on all sides of the projector for proper airflow).'},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;There was something blocking/blowing on the projector.' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Projectors produce a large amount of heat, any restriction of airflow can cause the internal temperature of the projector to heat up substantially.  If it gets too hot the projector will turn itself off to prevent damage.'}
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;There is plenty of space for airflow and Nothing blowing hot air on the projector.' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Is your firmware up to date?  To check what version is current locate your projector below and go to the Documents and Tools section of the projector page.  The firmware is listed at the bottom.' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+															]
+														},
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Firmware can effect a great number of things in the projector.  It is best to keep it up to date.  Please update your firmware.  Did this resolve your issue?' },
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+																	children: [
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Remember it is always a good idea to update your firmware.  If you have additional issues in the future check to see if you are up to date.' }
+																	]
+																},
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+																	children: [
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+                },
+			];
+	        $('#PrematureShutdown').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#PrematureShutdown');
+			$('#PrematureShutdown').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+		(function(){
+			var element = document.getElementById("PrematureShutdown");
+			var lastHeight = element.scrollHeight;
+			function detectChange(){
+				var currentHeight = element.scrollHeight;
+			if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+					}
+					}
+			detectChange();
+			setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+				})();
+</script>
+
+<div id="AudibleNoise" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:400px;overflow-y:auto;"></div>
+<Script>
+        $(function() {
+                var element = document.getElementById("AudibleNoise");
+				var lastHeight = element.scrollHeight;
+				var data = [
+                { label: '&nbsp;&nbsp;&nbsp;&nbsp;My projector is noisy',
+                    children: [
+                        { label: '&nbsp;&nbsp;&nbsp;&nbsp;Projectors do make a resonable amount of noise. It is possible you will be able to hear it over your content even though it is working properly. Also keep in mind that a projector in ceiling mount mode is generally louder than desktop mode (as the fans need to run on max to sufficiently cool the projector when upside down). If you believe it is unusually loud, or has gotten louder over time, then there may be an issue. Is it a whirring fan like Noise, or a grinding sound?' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Whirring' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Has it gotten louder or has it always been this way?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Gotten louder' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;It could be that your fans are working overtime to cool the projector due to increased heat from dust or other environmental conditions. Vaccum all vents and screen, including the screen on the projector lamp (see your user manual for instructions). Did this resolve your issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;It is a good idea to clean these screens and vents semi regularly if you have dust accumulation. It will not only reduce the noise from your projector, but help lengthen the life of the lamp.' }
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Try turning on "low power" (also called eco mode), or turning off "High Bright" mode on your projector (varies by model). If this still does not resolve your issue Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+											]										
+										}
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Always been loud' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Try turning on "low power" (also called eco mode), or turning off "High Bright" mode on your projector (varies by model). If this still does not resolve your issue Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' } 
+									]								
+								}
+								
+							]
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Grinding' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;This is generally only seen in DLP projectors when the bearings in the color wheel begin to fail.  Often times the Noise will only be when the projector starts up and will go away after a certain number of minutes in use, but will always resurface when the projector is restarted.  This is a hardware failure and Not something that can be resolved via troubleshooting.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+							]
+						}
+                    ]
+                },
+			];
+	        $('#AudibleNoise').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#AudibleNoise');
+			$('#AudibleNoise').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("AudibleNoise");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+</script>
+
+<div id="Keystone" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:400px;overflow-y:auto;"></div>
+<Script>
+
+        $(function() {
+                var element = document.getElementById("Keystone");
+				var lastHeight = element.scrollHeight;
+				var data = [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;My image is not square' ,
+					children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The first step is to perform a factory reset.  This can be found in the service menu (check your manual for details).  Is the image square?'},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes',
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;There are keystone settings to compensate for the projector being at an angle. Factory reset returns these to default.' }
+							]
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No',
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;My image looks like this: </br><img src="Top.png" width=80px><img src="http://www.infocus.com/sites/default/files/u38/Bottom.png" width=80px>' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;This means your projector is not level. If the top is skinnier than it is pointing downward, if the top is wider, then it is pointing upward. Ideally the projector should be perfectly level, this will give you the best quality image and the longest lamp life. If you must have the projector angled, use the verticle keystone settings in your projector menu. Did this resolve your issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Again, it is recommended to have as little keystone as possible. We have a selection of extension arms for mounting your projector; if this would help please visit www.infocusstore.com.' }
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you keystone your image and the top is still Not the same width as the bottom then it is likely that your projector is at too extreme an agle. If you place your projector on a flat surface with No angle, can you create a square image?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;This shows that the projector is functioning as it should. Angling the projector beyong what it is capable of will cause damage to the projector, the lamp, and possibly void your warranty. It is recommended to have your projector as close to level as possible.' }
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If, even on a flat surface, the width of the top and bottom are Not the same then your projector may need service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+													]
+												}
+											]
+										}
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;My image looks like this:</br><img src="http://www.infocus.com/sites/default/files/u38/Right.png" width=80px> <img src="http://www.infocus.com/sites/default/files/u38/Left.png" width=80px>' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;This means your projector is angled to the left or the right.  Some high end projectors have horizontal keystone, but it is not recommended as it will reduce the quality of the image. </br> Step 1. Rotate the projector until the image is square on the wall (it may be partially off the screen). </br>Step 2. Slide the projector to the right or left to bring the image onto the screen. </br><img src="http://www.infocus.com/sites/default/files/u38/KeyAdj.png" width=260px></br>    If you are still unable to get a square image Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+									]								
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Only one corner of the image is distorted like this:</br><img src="http://www.infocus.com/sites/default/files/u38/Multi.png" width=160px>' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;This means there is a combination of the above two, and possibly keystoning as well.  Check again that a factory reset was completed and place the projector on a flat level surface.  </br> Step 1. Rotate the projector until the image is square on the wall (it may be partially off the screen). </br>Step 2. Slide the projector to the right or left to bring the image onto the screen. </br><img src="http://www.infocus.com/sites/default/files/u38/KeyAdj.png" width=260px> </br>   If you are still unable to get a square image Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }						
+									]
+								}
+							]
+						}
+					]
+				},
+			];
+	        $('#Keystone').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#Keystone');
+			$('#Keystone').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("Keystone");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+</script>
+
+<div id="NoImage" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:400px;overflow-y:auto;"></div>
+<Script>
+
+        $(function() {
+                var element = document.getElementById("NoImage");
+				var lastHeight = element.scrollHeight;
+				var data = [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;I see the InFocus logo, but not my computer screen' ,
+					children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please confirm that your cables are securely plugged in to both the computer, and the projector (If using LiteShow 3, please select that troubleshooting tree). We recommend using a 6-12ft cable for testing as cable length can be a significat factor on the signal locking. Even if this cable has worked in the past, trying a shorter cable is recommended. Also remember, if you are using USB to connect, Not all projectors can project over USB. Check your user manual to confirm whether your projector supports this feature. Finally make sure you have the correct source selected on the projector (again, refer to the user manual for instructions on changing the source). It can take as much as 10-15 seconds for auto source to sync with the connection you are using.  If the correct source is selected, and the are cables firmly in place and you still don&#146;t have an image then select your connection.' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;I am connecting via USB' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;First step is to simply unplug the USB connection from your computer, wait a few seconds, then plug it back in. If this does not resolve the issue check the port on the back of the projector does it say "Display Link" or just "USB"'},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Display Link' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please download and install the current software Here. Once the installation is complete, disconnect the USB and restart your computer. Once your computer has finished booting, plug the USB cable from the projector to your computer. If your projector is on Auto Source, wait 10-15 seconds for the source to sync. Are you seeing your desktop now?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The latest software and drivers are important for connections like Display link. Always check for a current version if you are having issues connecting.'}
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Try using a different USB cable and a different USB port on the laptop. Did this resolve your issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Cables and USB ports can fail over time. Its always good to test these when other troubleshooting fails.' }
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The only test remaining is to try a different computer or display source.  If you still cannot get project over USB to work then this connection, or something else in the projector may be defective.  You can try a different connection type (VGA, HDMI, etc) or <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+													]
+												}
+											]
+										}
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;USB',
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If this is the first time you have used the USB Display feature, an Auto-Play screen should appear within a minute of connecting the cable. Click Start USB Display to initiate projection. (Note: If the Auto-Play screen does not appear, browse to the CD Drive USB Display on your computer and double-click the DLUSB.Cab file to initiate manually.) Did this resolve your issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Autoplay does not always engage automatically, so sometimes it will be necessary to maually run the file on the projector.'}
+											]
+										
+										},										
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Try using a different USB cable and a different USB port on the laptop. Did this resolve your issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Cables and USB ports can fail over time. Its always good to test these when other troubleshooting fails.' }
+													]
+												},												
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The only test remaining is to try a different computer or display source.  If you still cannot get project over USB to work then this connection, or something else in the projector may be defective.  You can try a different connection type (VGA, HDMI, etc) or <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;I am connecting via VGA (15 pin computer cable), a DVI (25 or more pins), or an M1 (25 or more pins, with a "Y" cable containing a USB connection)' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you are using an M1 cable (it will have one connection on the projector end, and 2 connections on the computer end). Make sure BOTH cables are connected to your computer. USB projection is not supported over this cable. Are you using a laptop?'},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please be sure to activate the external monitor port on your laptop. Most laptops have a shortcut key corresponding to one of the "F#" keys at the top of the keyboard. Look for one that has a picture of a monitor or says "CRT" or "LCD". You activate this function by holding down the "FN" key and then tapping on the coresponding "F#" key. If you have found the correct key you should see some changes to your screen and your laptop display may flicker. Once this is completed press the Auto Image key on the projector keypad. Did this resolve your issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;By default the external port on a laptop is disabled to conserve energy and processing power. Sometimes the laptop is able to recognize when something is plugged in and activate this port automatically, but if Not, then you must activate it manually.'}
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Is your computer in a docking station?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;For testing purposes we need to confirm that there is No issue with the docking station itself. Please Un-dock the laptop, and complete the same troubleshooting steps you have done to this point.' }
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please complete a factory reset on your projector (see user manual). Did this resolve your issue?' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;when you are stuck a factory reset is always a good idea. It brings your projector back to the factory state which should make it easier to setup.' }
+															]
+														},												
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please try a different (Maximum 12ft) cable. If this still does not resolve your issue we would recommend trying a different computer, or possibly a video source. If you are still having issues and can not try another source please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No',
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please press the Auto Image key on the projector keypad. Did that resolve the issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Auto Image tells the projector to attempt to autmoatically detect the best settings for the connected source. Sometimes this is needed to get things to sync correctly.'}
+											]
+										
+										},										
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please complete a factory reset on your projector (see user manual). Did this resolve your issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;when you are stuck a factory reset is always a good idea. It brings your projector back to the factory state which should make it easier to setup.' }
+													]
+												},												
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please try a different (Maximum 12ft) cable. If this still does not resolve your issue we would recommend trying a different computer, or possibly a video source. If you are still having issues and can not try another source please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;I am connecting via HDMI' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Some of our projector models support HDMI 1.3 and Deep Color. This feature significantly increases the bandwidth of the signal. When combined with a high bandwidth signal like 1080p60 and a long cable run (greater than 12ft.) it can max out the processing power of the projector making it unable to synchronize. Some of our models (IN81, IN82, IN83) do not have the ability to turn off Deep color, so the only solution to this issue is to shorten the cable run or reduce the signal (1080p24, 1080i). Check your projector manual for the ability to turn off "Deep Color" or for a feature called "HDMI Long Cable". Did this resolve your issue?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The reason why other projectors may work in the same setup is most manufacturers turn off Deep Color by default. This means the projectors are not truly supporting HDMI 1.3 and the source isn&#146;t outputting Deep Color.'}
+									]								
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you are using an M1 cable (it will have one connection on the projector end, and 2 connections on the computer end). Make sure BOTH cables are connected to your computer. USB projection is not supported over this cable. Are you using a laptop?'},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please be sure to activate the external monitor port on your laptop. Most laptops have a shortcut key corresponding to one of the "F#" keys at the top of the keyboard. Look for one that has a picture of a monitor or says "CRT" or "LCD". You activate this function by holding down the "FN" key and then tapping on the coresponding "F#" key. If you have found the correct key you should see some changes to your screen and your laptop display may flicker. Once this is completed press the Auto Image key on the projector keypad. Did this resolve your issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;By default the external port on a laptop is disabled to conserve energy and processing power. Sometimes the laptop is able to recognize when something is plugged in and activate this port automatically, but if Not, then you must activate it manually.'}
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Is your computer in a docking station?' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;For testing purposes we need to confirm that there is No issue with the docking station itself. Please Un-dock the laptop, and complete the same troubleshooting steps you have done to this point.' }
+															]
+														},
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please complete a factory reset on your projector (see user manual). Did this resolve your issue?' },
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+																	children: [
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;when you are stuck a factory reset is always a good idea. It brings your projector back to the factory state which should make it easier to setup.' }
+																	]
+																},												
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+																	children: [
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please try a different (Maximum 12ft) cable. If this still does not resolve your issue we would recommend trying a different computer, or possibly a video source. If you are still having issues and can not try another source please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No',
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please press the Auto Image key on the projector keypad. Did that resolve the issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Auto Image tells the projector to attempt to autmoatically detect the best settings for the connected source. Sometimes this is needed to get things to sync correctly.'}
+													]
+												
+												},										
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please complete a factory reset on your projector (see user manual). Did this resolve your issue?' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;when you are stuck a factory reset is always a good idea. It brings your projector back to the factory state which should make it easier to setup.' }
+															]
+														},												
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please try a different (Maximum 12ft) cable. If this still does not resolve your issue we would recommend trying a different computer, or possibly a video source. If you are still having issues and can not try another source please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;I am connecting wirelessly' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Wireless Displaylink' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Make sure you are plugging in the main USB into your computer not the flash drive:</br><img src="http://www.infocus.com/sites/default/files/u38/WirelessDL.png" width=80px> </br>You should be seeing LEDs lit on both the sender and receiver of the wireless USB.  If you are not then the USB adapter is not getting power.  Either the port it is plugged into, or the adapter itself may be defective.  If you are seeing LEDs lit, unplug the connection to the computer, wait a few seconds and re-plug the connection.  Did this resolve your issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;USB connections can be finicky, it is a good idea to try a few times before assuming the connection isn&#146;t working.' }
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please download and install the current software Here. Once the installation is complete, disconnect the USB and restart your computer. Once your computer has finished booting, plug the USB cable from the projector to your computer. If your projector is on Auto Source, wait 10-15 seconds for the source to sync. Are you seeing your desktop now?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The latest software and drivers are important for connections like Display link. Always check for a current version if you are having issues connecting.' }
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Try using a different USB port on the laptop. Did this resolve your issue?' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;USB ports can fail over time. Its always good to test these when other troubleshooting fails.' }
+															]
+														},
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you still cannot get project over USB to work then this device, or something in the projector may be defective. Please contact InFocus support to initate service.' }
+															]
+														}
+													]												
+												}
+											]
+										}
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Liteshow' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Coming Soon...' }
+									]
+								}
+							]
+						}
+					]
+				},
+			];
+	        $('#NoImage').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#NoImage');
+			$('#NoImage').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("NoImage");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+</script>
+
+<div id="NoLight" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:400px;overflow-y:auto;"></div>
+<Script>
+
+        $(function() {
+                var element = document.getElementById("NoLight");
+				var lastHeight = element.scrollHeight;
+				var data = [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;My projector turns on, but does not project any light' ,
+					children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;First check that the lens cap is not on the projector and that nothing is blocking the path of the light. If there is nothing blocking the light the next step is to check any error codes from the LEDs on your projector. These may tell you to replace the lamp, reset the lamp counter, or it may indicate some other failure. The nature of the LED message will vary depending on the specific model you have. Please check your user guide for details on what these error codes mean.' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;I have checked the user guide, or there are no error LEDs' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Next step would be to re-seat the lamp. Remove the lamp from your projector (see user guide for details on how). Inspect lamp for any physical damage. If the glass on the lamp is broken, then it would need to be replaced. If the lamp appears to be intact place it back in the projector being sure to firmly attach any electrical connectors. Place the lamp door back on the projector. Did this resolve your issue?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;It is possible that the connector to the lamp, or the switch on the lamp door was not firmly in place. Taking the lamp out and replacing it just ensures that everything is connected correctly.' }
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you still are not getting light from the projector then it is likely you have a defective lamp. If you have another projector of the same model we would recommend borrowing a lamp from that projector for testing purposes. Otherwise we would recommend purchasing a new replacement. Purchasing direct from InFocus the lamps have a 15 day return policy. If you are purchasing from another vendor be sure to confirm their return policy as well. Did replacing the lamp resolve the issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Lamps deteriorate with both usage and time. If you have a large number of hours, or a moderate number of hours over a few years time, both of these are normal failures for a lamp. If you are consistenly seeing low hour failures there may be an issue with the projector itself.' }
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If this still does not resolve your issue Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+			];
+	        $('#NoLight').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#NoLight');
+			$('#NoLight').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("NoLight");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+</script>
+
+<div id="NoPower" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:400px;overflow-y:auto;"></div>
+<Script>
+
+        $(function() {
+                var element = document.getElementById("NoPower");
+				var lastHeight = element.scrollHeight;
+				var data = [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;My projector does not turn on' ,
+					children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Are there any LEDs on the top of the projector or can you hear the fans running?' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;First check that the lens cap is not on the projector and that nothing is blocking the path of the light. If there is nothing blocking the light the next step is to check any error codes from the LEDs on your projector. These may tell you to replace the lamp, reset the lamp counter, or it may indicate some other failure. The nature of the LED message will vary depending on the specific model you have. Please check your user guide for details on what these error codes mean.' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;I have checked the user guide, or there are no error LEDs' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Next step would be to re-seat the lamp. Remove the lamp from your projector (see user guide for details on how). Inspect lamp for any physical damage. If the glass on the lamp is broken, then it would need to be replaced. If the lamp appears to be intact place it back in the projector being sure to firmly attach any electrical connectors. Place the lamp door back on the projector. Did this resolve your issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;It is possible that the connector to the lamp, or the switch on the lamp door was not firmly in place. Taking the lamp out and replacing it just ensures that everything is connected correctly.' }
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you still are not getting light from the projector then it is likely you have a defective lamp. If you have another projector of the same model we would recommend borrowing a lamp from that projector for testing purposes. Otherwise we would recommend purchasing a new replacement. Purchasing direct from InFocus the lamps have a 15 day return policy. If you are purchasing from another vendor be sure to confirm their return policy as well. Did replacing the lamp resolve the issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Lamps deteriorate with both usage and time. If you have a large number of hours, or a moderate number of hours over a few years time, both of these are normal failures for a lamp. If you are consistenly seeing low hour failures there may be an issue with the projector itself.' }
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Try a different power cable AND plugging the projector into a different outlet. Did this resolve the issue?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Though uncommon, power cables and outlets can fail. This is always the first thing to check with power issues.' }
+									]	
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+									]
+								}
+							]
+						}
+					]
+			},
+			];
+	        $('#NoPower').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#NoPower');
+			$('#NoPower').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("NoPower");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+</script>
+
+<div id="ImageColor" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:400px;overflow-y:auto;"></div>
+<Script>
+
+        $(function() {
+                var element = document.getElementById("ImageColor");
+				var lastHeight = element.scrollHeight;
+				var data = [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The colors on the screen are not right' ,
+					children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Press menu on remote or projector keypad. Does the Menu appear discolored in any way?' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Disconnect all video cables from the back of the projector. This should bring up the InFocus Logo, or a blue searching screen. Does this appear discolored?' }
+							]	
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Disconnect all video cables from the back of the projector. This should bring up the InFocus Logo, or a blue searching screen. Does this appear discolored?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;There are many menu settings which can adjust colors. Factory reset changes these to default.' }
+											]	
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+											]
+										}
+									]	
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Perform a factory reset on your projector menu (for location of factory reset, see your user guide). Did this resolve the issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;There are many menu settings which can adjust colors. Factory reset changes these to default.' }
+											]	
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The issue is most likely with the cables connecting the computer to the projector. Please try a different (Maximum 12ft) cable.  Did this resolve your issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Cables carry the color data to the proejctor, if one or more of the internal cables or pins is defective it can effect the overall tint of the screen. Cables can become damaged through normal use over time.' }
+													]	
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If changing the cables did not resolve your issue try a different source (ie. Different laptop, dvd player, etc). Did this resolve your issue?' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;It is likely that the settings or perhaps the physical port on your original source is defective.' }
+															]	
+														},
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+			];
+	        $('#ImageColor').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#ImageColor');
+			$('#ImageColor').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("ImageColor");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+
+</script>
+
+<div id="Blotches" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:400px;overflow-y:auto;"></div>
+<Script>
+        $(function() {
+                var element = document.getElementById("Blotches");
+				var lastHeight = element.scrollHeight;
+				var data = [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;There are blotches of discoloration on the screen' ,
+					children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Press menu on remote or projector keypad. Does the Menu appear discolored in any way?' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Disconnect all video cables from the back of the projector. This should bring up the InFocus Logo, or a blue searching screen. Does this appear discolored?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Perform a factory reset on your projector menu (for location of factory reset, see your user guide). Did this resolve the issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;There are many menu settings which can adjust colors. Factory reset changes these to default.' }
+											]	
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please test the projector in a different location to ensure nothing environmental is causing distortion. Is the same discoloration present in a different location?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Environmental conditions (reflections, projection surface, ambient light) can affect the image. Changing the location shows the projector is functioning properly.' }
+													]
+												}
+											]
+										}
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The issue is most likely with the cables connecting the computer to the projector. Please try a different (Maximum 12ft) cable.  Did this resolve your issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Cables carry the color data to the proejctor, if one or more of the internal cables or pins is defective it can effect the overall tint of the screen. Cables can become damaged through normal use over time.' }
+											]	
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If changing the cables did not resolve your issue try a different source (ie. Different laptop, dvd player, etc). Did this resolve your issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;It is likely that the settings or perhaps the physical port on your original source is defective.' }
+													]	
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+													]
+												}
+											]
+										}
+									]
+								}
+							]	
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Disconnect all video cables from the back of the projector. This should bring up the InFocus Logo, or a blue searching screen. Does this appear discolored?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Perform a factory reset on your projector menu (for location of factory reset, see your user guide). Did this resolve the issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;There are many menu settings which can adjust colors. Factory reset changes these to default.' }
+											]	
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+											]
+										}
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The issue is most likely with the cables connecting the computer to the projector. Please try a different (Maximum 12ft) cable.  Did this resolve your issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Cables carry the color data to the proejctor, if one or more of the internal cables or pins is defective it can effect the overall tint of the screen. Cables can become damaged through normal use over time.' }
+											]	
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If changing the cables did not resolve your issue try a different source (ie. Different laptop, dvd player, etc). Did this resolve your issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;It is likely that the settings or perhaps the physical port on your original source is defective.' }
+													]	
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+			];
+	        $('#Blotches').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#Blotches');
+			$('#Blotches').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("Blotches");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+</script>
+
+<div id="LBWand" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:400px;overflow-y:auto;"></div>
+<Script>
+
+        $(function() {
+                var element = document.getElementById("LBWand");
+				var lastHeight = element.scrollHeight;
+				var data = [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;My liteboard wand does not work right' ,
+					children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;First thing to check is that your computer is in "duplicate" or "Clone" mode. You should be seeing the same thing on your computer as you are on the projector. The liteboard wand does not work in extended desktop modes. Next is there a blue blinking LED on the liteboard wand?' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Is the liteboard wand not responding at all, or responding, but not working as needed?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Not working at all' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Are you currently using display over USB?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Display over USB is not supported with liteboard wand. Please use an alternate source.' }
+											]	
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Make sure there is a USB cable connected from the projector to your laptop. This is required for the liteboard wand to function. Did this resolve your issue.' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;USB communicates the mouse movement and actions to your lapop. It is required for the liteboard wand to function.' }
+													]	
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Make sure the liteboard wand is enabled for the port you are using (for example, by default it is not enabled for HDMI). Goto Menu->setup->lite wand.' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Enabled but still not working' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;USB has a very short working distance. Any cable length over 12ft may be too much. Please test with a cable under 12ft. Did this resolve your issue?' },
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+																	children: [
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you need a longer cable length consider using a powered USB extension. InFocus does not manufacture one, but there are many 3rd party manufacturers.' }
+																	]	
+																},
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+																	children: [
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Try a different USB port on the source OR a different source alltogether. If neither of these resolve your issue please contact InFocus support at 877-388-8360.' }
+																	]
+																}
+															]
+														},
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Enabled and functioning' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The liteboard wand can be disabled on certain connections to prevent accidental usage of the wand.' }
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Not working as needed' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Liteboard wand is misaligned with pointer' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Are you currently using a Mac or a Windows PC?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Mac' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please download the Mac patch for liteboard wand located Here. [Mac Tiger of higher required]. Did this resolve your issue?' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;For Macintosh with large track pads, this software is required.' }
+															]	
+														},
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Is the projector aspect ratio set to Auto?' },
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+																	children: [
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Set the comptuer&#146;s display resolution to the native resolution of the projector you are using. Did this resolve yoru issue?' },
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+																			children: [
+																				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Having different aspect ratios or resolutions can effect the invisible grid of the liteboard wand.' }
+																			]	
+																		},
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+																			children: [
+																				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you continue to have issues please contact InFocus Support at 877-388-8360.' }
+																			]
+																		}
+																	]
+																},
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+																	children: [
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Set the aspect ratio to Auto. Did this resolve your issue?' },
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+																			children: [
+																				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Litboard wand must have the native aspect ratio of the resolution being sent or the grid will not function properly.' }
+																			]	
+																		},
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+																			children: [
+																				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Set the comptuer&#146;s display resolution to the native resolution of the projector you are using. Did this resolve yoru issue?' },
+																				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+																					children: [
+																						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Having different aspect ratios or resolutions can effect the invisible grid of the liteboard wand.' }
+																					]	
+																				},
+																				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+																					children: [
+																						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you continue to have issues please contact InFocus Support at 877-388-8360.' }
+																					]
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;PC' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Is the projector aspect ratio set to Auto?' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Set the comptuer&#146;s display resolution to the native resolution of the projector you are using. Did this resolve yoru issue?' },
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+																	children: [
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Having different aspect ratios or resolutions can effect the invisible grid of the liteboard wand.' }
+																	]	
+																},
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+																	children: [
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you continue to have issues please contact InFocus Support at 877-388-8360.' }
+																	]
+																}
+															]
+														},
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Set the aspect ratio to Auto. Did this resolve your issue?' },
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+																	children: [
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Litboard wand must have the native aspect ratio of the resolution being sent or the grid will not function properly.' }
+																	]	
+																},
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+																	children: [
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Set the comptuer&#146;s display resolution to the native resolution of the projector you are using. Did this resolve yoru issue?' },
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+																			children: [
+																				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Having different aspect ratios or resolutions can effect the invisible grid of the liteboard wand.' }
+																			]	
+																		},
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+																			children: [
+																				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you continue to have issues please contact InFocus Support at 877-388-8360.' }
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Stutter or screen lag' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;It is normal to have some measure of lag or delay when using the wand. If you feel this lag is excessive make sure your wand is fully charged and make sure you do not have multiple wands on the same channel (see manual for details). [note: only mac Tiger or higher is supported currently]. Did this resolve your issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Charge or interference can affect the response time of the wand. For optimal performance make sure your wand is as charged as possible, and keep all wands in the area on separate channels.' }
+													]	
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Make sure the wand or wand tip is not in a shadow when in use. Did this resolve your issue?' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Shadows reduce the data that the wand is able to read and causes less than optimal response and accuracy.' }
+															]	
+														},
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If there is a large amount of florescent lighting in the room, you can try reducing the lighting as this can interfere with wand communication. If the issue is still present please contact support at 877-388-8360 for further troubleshooting or wand replacement.' }
+															]
+														}
+													]
+												}
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Tip not activating icons' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;There IS a button on the tip, but it may not press very consistently if you are using a pulldown screen.  Try pushing the button with your finger, if it sucessfully clicks then it could be an issue with there not being enough resistance from the screen.  If you feel this is not the case and would like your wand replaced please call support at 877-388-8360' }
+											]	
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Buttons or Scrolll Wheel not working' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact support at 877-388-8360 to have your wand replaced.' }
+											]	
+										}
+									]
+								}
+							]
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The liteboard wand is not sufficiently charged. Please plug in the liteboard wand and charge a minimum of 5-10 minutes.' }
+							]
+						}
+					]
+				},
+			];
+	        $('#LBWand').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#LBWand');
+			$('#LBWand').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("LBWand");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+</script>
+
+<div id="ReplaceLamp" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:400px;overflow-y:auto;"></div>
+<Script>
+
+        $(function() {
+                var element = document.getElementById("ReplaceLamp");
+				var lastHeight = element.scrollHeight;
+				var data = [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The "Replace Lamp" message is displayed even after I replaced the lamp' ,
+					children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Did you reset the lamp timer on the projector? (see user guide for instructions)' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Do you have a genuine InFocus lamp in your projector, not a 3rd party repalcement?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact support for additional assistance. Your projector may need to come in for service.' }
+									]	
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;We cannot guarantee the performance of non InFocus lamps. They frequently do not function as well, and can even damage your projector. We recommend purchase of a Genuine InFocus lamp.' }
+									]
+								}
+							]	
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;See your user guide for details on resetting the lamp timer' }
+							]
+						}
+					]
+				},
+			];
+	        $('#ReplaceLamp').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#ReplaceLamp');
+			$('#ReplaceLamp').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("ReplaceLamp");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+</script>
+
+<div id="ImageFocus" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:400px;overflow-y:auto;"></div>
+<Script>
+
+        $(function() {
+                var element = document.getElementById("ImageFocus");
+				var lastHeight = element.scrollHeight;
+				var data = [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The projected image is blurry' ,
+					children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;First check that the zoom and focus rings are adjusted correctly (see user manual for details). Did this resolve your issue?' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Zoom and focus must be adjusted properly for the location of your projector.' }
+							]	
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please make sure the lens cap is not still on the projector. If the lens cap is not on check the lense for dust, scratches or other damage. Does the lens appear clean and undamaged?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please perform a factory reset. (see user manual for details). Did your image get bigger?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;This means that digital zoom was enabled on the projector. This will reduce the quality of the image and could make it appear blurry. Move the projector closer to the screen to reduce the image size.' }
+											]	
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you continue to have issues please contact InFocus Support at 877-388-8360.' }
+											]
+										}
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Clean the lens with a soft cloth, if the lens still appears blemished or scratched then it is possible the lens is damaged. Please contact InFocus support at 877-388-8360 for further assistance.' }
+									]	
+								}
+							]
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Zoom and Focus rings do not move.' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact InFocus support at 877-388-8360 for further assistance. You projector will need service.' }
+							]
+						}
+					]
+				},
+			];
+	        $('#ImageFocus').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#ImageFocus');
+			$('#ImageFocus').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("ImageFocus");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+</script>
+
+<div id="Audio" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:400px;overflow-y:auto;"></div>
+<Script>
+
+        $(function() {
+                var element = document.getElementById("Audio");
+				var lastHeight = element.scrollHeight;
+				var data = [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No sound from the projector' ,
+					children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;HDMI, RCA, or 3.5mm (headphone jack)' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Make sure audio on projector and source is turned up and not muted. Did this resolve your issue?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Simple solutions are often the easiest to overlook.' }
+									]	
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check with short cables to confirm they are not the source of the issue. Test with a different input on the projector (if available). And check with a different source (mp3 player?). If these do not resolve your issue then there is likely a hardware failure. Please contact support at 877-388-8360 for further assistance.' }
+									]
+								}
+							]
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Audio over Liteshow 3 (wireless)' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Liteshow 3 audio troubleshooting coming soon...' }
+							]
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Wired Display link' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Must have Audio over USB drivers. See the display link download section for details. If issue persists please contact InFocus Support at 877-388-8360.' }
+							]
+						}
+					]
+				},
+			];
+	        $('#Audio').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#Audio');
+			$('#Audio').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("Audio");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+</script>
+
+<div id="Brightness" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:400px;overflow-y:auto;"></div>
+<Script>
+
+        $(function() {
+                var element = document.getElementById("Brightness");
+				var lastHeight = element.scrollHeight;
+				var data = [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The image is too dim' ,
+					children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Depending on the lumens of your projector the ambient lighting in the space may be too bright and may overpower your image. Try dimming the lights in the room and/or pulling curtains over the windows. Did this resolve your issue?' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Brightness of the projection environment is a critical factor in any install. Too much ambient light can quickly overpower the lumens of a projector.' }
+							]	
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check lamp hours. Lamps will loose approximately 50% of its brightness through the course of its lamp life. If you are within 20% of the rated lamp life it is likely that your lamp simply needs to be replaced. Did replacing the lamp resolve the issue?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;A new lamp will always be the brightest possible. As the lamp ages it will slowly lose brightness as the lamp wears down.' }
+									]	
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Disable eco or low power mode in the settings menu of yoru projector. Did this resolve your issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Eco mode conserves lamp life and reduces brightness. Toward the end of the lamp life it is often a good idea to disable this mode.' }
+											]	
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check the brightness on the logo screen with no source connected. Is the image brighter?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Long or old cables can reduce the signal strength of the image lowering the overall brightness.' }
+													]	
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+			];
+	        $('#Brightness').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#Brightness');
+			$('#Brightness').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("Brightness");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+</script>
+
+<div id="VideoSource" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:400px;overflow-y:auto;"></div>
+<Script>
+
+        $(function() {
+                var element = document.getElementById("VideoSource");
+				var lastHeight = element.scrollHeight;
+				var data = [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;My Bluray/DVD/Cable box is not displaying' ,
+					children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Press the source button on the remote or the keypad until the correct projector input is shown. Is the source connected through a reciever, adapter, or switch?' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please connect the source directly to the projector. Did this resolve the issue?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The failure point is somewhere between the source and the projector. Try connecting one piece at a time to narrow the cause of the issue.' }
+									]	
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Test with shorter (6&#146;) cables. Is your source being displayed?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The cables you are currently using are either defective or too long. Replace the cables, if issue persists try using a signal amplifier.' }
+											]	
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Try an alternate source connected direct to the projector. Did this resolve the issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;It is possible that your source is defective. If your source functions on other display devices try changing the resolution on the source to the native resolution of the projector.' }
+													]	
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Test with shorter (6&#146;) cables. Is your source being displayed?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The cables you are currently using are either defective or too long. Replace the cables, if issue persists try using a signal amplifier.' }
+									]	
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Try an alternate source connected direct to the projector. Did this resolve the issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;It is possible that your source is defective. If your source functions on other display devices try changing the resolution on the source to the native resolution of the projector.' }
+											]	
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+			];
+	        $('#VideoSource').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#VideoSource');
+			$('#VideoSource').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("VideoSource");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+</script>
+
+<div id="USBDisplay" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:400px;overflow-y:auto;"></div>
+<Script>
+
+        $(function() {
+                var element = document.getElementById("USBDisplay");
+				var lastHeight = element.scrollHeight;
+				var data = [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Display over USB is not functioning' ,
+						children: [
+							{ label: '&nbsp;&nbsp;&nbsp;&nbsp;First step is to simply unplug the USB connection from your computer, wait a few seconds, then plug it back in. If this does not resolve the issue check the port on the back of the projector does it say "Display Link" or just "USB"'},
+							{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Display Link' ,
+								children: [
+									{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please download and install the current software Here. Once the installation is complete, disconnect the USB and restart your computer. Once your computer has finished booting, plug the USB cable from the projector to your computer. If your projector is on Auto Source, wait 10-15 seconds for the source to sync. Are you seeing your desktop now?' },
+									{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+										children: [
+											{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The latest software and drivers are important for connections like Display link. Always check for a current version if you are having issues connecting.'}
+										]
+									},
+									{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+										children: [
+											{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Try using a different USB cable and a different USB port on the laptop. Did this resolve your issue?' },
+											{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+												children: [
+													{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Cables and USB ports can fail over time. Its always good to test these when other troubleshooting fails.' }
+												]
+											},
+											{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+												children: [
+													{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The only test remaining is to try a different computer or display source.  If you still cannot get project over USB to work then this connection, or something else in the projector may be defective.  You can try a different connection type (VGA, HDMI, etc) or <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+												]
+											}
+										]
+									}
+								]
+							},
+							{ label: '&nbsp;&nbsp;&nbsp;&nbsp;USB',
+								children: [
+									{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If this is the first time you have used the USB Display feature, an Auto-Play screen should appear within a minute of connecting the cable. Click Start USB Display to initiate projection. (Note: If the Auto-Play screen does not appear, browse to the CD Drive USB Display on your computer and double-click the DLUSB.Cab file to initiate manually.) Did this resolve your issue?' },
+									{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+										children: [
+											{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Autoplay does not always engage automatically, so sometimes it will be necessary to maually run the file on the projector.'}
+										]
+									},										
+									{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+										children: [
+											{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Try using a different USB cable and a different USB port on the laptop. Did this resolve your issue?' },
+											{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+												children: [
+													{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Cables and USB ports can fail over time. Its always good to test these when other troubleshooting fails.' }
+												]
+											},												
+											{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+												children: [
+													{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The only test remaining is to try a different computer or display source.  If you still cannot get project over USB to work then this connection, or something else in the projector may be defective.  You can try a different connection type (VGA, HDMI, etc) or <a href="/support/RMAWorldMap">Click Here</a> to initiate service on the projector.' }
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+			];
+	        $('#USBDisplay').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#USBDisplay');
+			$('#USBDisplay').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("USBDisplay");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+    </script>
+
+
+</body>
+</html>

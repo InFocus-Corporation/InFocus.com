@@ -1,0 +1,592 @@
+<style>
+
+.slide-info{
+font-size:215%;
+width:30%;
+position:absolute;
+left:65.5%;
+top:2em;
+}
+.slide-info h3 {
+font-weight:700;
+text-shadow:none;
+font-size:210%;
+margin-bottom:0;
+text-align:right;
+}
+
+.slide-info h6{
+position:relative;
+color:#1BA1E2;
+font-size:90%;
+font-weight:400;
+text-shadow: 3px 3px 4px rgba(0,0,0,.25);
+}
+
+.slide-info p {
+font-weight:100;
+text-shadow:none;
+line-height:1.2em;
+text-align:right;
+}
+
+.edu-btns {
+position:absolute;
+bottom:35px;
+right:100px;
+text-align:left;
+font-size:200%;
+width:30%;
+}
+
+.wider {width:39%; left:60%;}
+
+
+img.bgimage, img.wider  {
+width:100%;
+box-shadow:0px 0px 5px #000;
+}
+
+.Mobile-Color-Swap{
+color:white;
+}
+
+
+.swiper-slide img{
+width:100%;
+}
+
+.swiper-slide{
+position:relative;
+}
+
+.swiper-pagination-switch,swiper-visible-switch, swiper-active-switch {
+width: 20px;
+height: 20px;
+border-radius: 50%;
+}
+
+.pagination{
+bottom:20px;
+}
+
+
+.greyoverlaybtn {
+background: #626262;
+background-image: -webkit-linear-gradient(top, #626262, #636363);
+background-image: -moz-linear-gradient(top, #626262, #636363);
+background-image: -ms-linear-gradient(top, #626262, #636363);
+background-image: -o-linear-gradient(top, #626262, #636363);
+background-image: linear-gradient(to bottom, #626262, #636363);
+-webkit-border-radius: 3;
+-moz-border-radius: 3;
+border-radius: 3px;
+-webkit-box-shadow: 0px 4px 10px  rgba(0, 0, 0, 0.5);
+-moz-box-shadow: 0px 4px 10px  rgba(0, 0, 0, 0.5);
+box-shadow: 0px 4px 10px  rgba(0, 0, 0, 0.5);
+color: #ADD238;
+font-size:50%;
+padding: 6px 30px;
+text-decoration: none;
+border:0px;
+}
+
+.greyoverlaybtn:hover {
+background: #a3a3a3;
+background-image: -webkit-linear-gradient(top, #a3a3a3, #a6a6a6);
+background-image: -moz-linear-gradient(top, #a3a3a3, #a6a6a6);
+background-image: -ms-linear-gradient(top, #a3a3a3, #a6a6a6);
+background-image: -o-linear-gradient(top, #a3a3a3, #a6a6a6);
+background-image: linear-gradient(to bottom, #a3a3a3, #a6a6a6);
+text-decoration: none;
+}
+
+.greyoverlaybtn:active {
+position: relative;
+top: 1px;
+left: 0px;
+}
+
+
+
+.orangebtn {
+-webkit-border-radius: 3;
+-moz-border-radius: 3;
+border-radius: 3px;
+-webkit-box-shadow: 0px 1px 3px #000000;
+-moz-box-shadow: 0px 1px 3px #000000;
+box-shadow: 0px 1px 3px #000000;
+font-family: pragmatica-web-condensed;
+color: #ffffff;
+font-size:50%;
+background: #f66d26;
+padding: 5px 20px;
+text-decoration: none;
+border:0px;
+width:400px;
+display:table-cell;
+vertical-align:baseline;
+margin-bottom:10px;
+}
+
+.orangebtn:hover {
+background: #ff8c57;
+text-decoration: none;
+}
+
+.orangebtn:active {
+position: relative;
+top: 1px;
+left: 0px;
+}
+
+.verticals > li{
+padding-top:40px;
+padding-bottom:20px;
+}
+
+.headlines-bar{
+position:relative;
+top:-14px;
+width:100%;
+display:inline-block;
+background-color:rgba(0,0,0,0.25);
+text-align:center;
+margin:0 auto;
+font-size:80%;
+margin-bottom:15px;
+vertical-align:middle;
+color:white;
+}
+
+
+
+.headlines-bar > div, .headlines-bar img{
+display:inline-block;
+vertical-align:middle;
+min-width:220px;
+}
+
+.snippet a{
+color:#f66d26;
+} 
+.snippet a:hover{
+color:white;
+}
+
+
+@media only screen and (min-width:1020px) and  (max-width: 1400px) {
+.slide-info{
+font-size:180%;
+width:39%;
+position:absolute;
+left:59%;
+top:2.2em;
+
+}
+
+.wider {width:60%; left:39%;}
+
+
+.orangebtn {
+font-size:45%;
+width:350px
+}
+}
+
+@media only screen and (min-width:770px) and  (max-width: 1019px) {
+.slide-info{
+font-size:140%;
+width:44%;
+position:absolute;
+left:54%;
+top:2em;
+
+}
+.wider {width:65%; left:34%;}
+
+.orangebtn {
+font-size:40%;
+width:300px
+}
+}
+
+@media only screen and  (max-width: 769px) {
+.slide{
+overflow:hidden;
+}
+#four-prod {display:none;}
+.slide img.wider{width:120%;}
+
+.slide img.bgimage{width:140%;}
+
+
+.slide-info{
+font-size:200%;
+position:static;
+width:95%;
+margin-top:40px;
+padding:15px 5px;
+
+}
+#layout #content #education #hero #slider ul.thumbs {
+position:static;
+}
+
+
+.edu-btns {
+position:static;
+text-align:right;
+padding-right:10px;
+font-size:200%;
+padding-bottom:35px;
+}
+
+.Mobile-Color-Swap{
+color:black;
+}
+
+}
+
+  
+@media only screen and  (max-width: 840px) {
+.headlines-bar img{ display:none;}
+.snippet{ width:235px;}
+}
+
+</style>
+
+
+<div class="device" style="width:100%;padding-top: 87px;">
+<a class="arrow-left" href="#"></a>
+<a class="arrow-right" href="#"></a>
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide slide">				
+			<img class="bgimage" src="/resources/images/EDU_1">
+					<div class="slide-info">
+
+							<div class="info">
+								<h3 style="color:#1BA1E2;">EDUCATION</h3>
+								<p style="color:black;">Helping students engage, teachers connect and administrators succeed with technology that’s effective, easy and affordable.
+<br><a href="/videos?wMbxkvcaeXo"><img style="width:100%;padding-top:.5em" src="/resources/images/roosevelt-high-play" <="" img=""></a>
+</p><div style="position:relative"><img id="four-prod" style="width:100%;padding-top:.5em" src="/resources/images/EDU_1_Object_2">
+<a href="/displays/family?series=MONDOPAD-Series"><div style="position:absolute;width:50%;height:47%;top:.5em;left:0"></div></a>
+<a href="/displays/family?series=BIGTOUCH-Series"><div style="position:absolute;width:50%;height:47%;top:.5em;right:0"></div></a>
+<a href="/displays/family?series=JTOUCH-Series"><div style="position:absolute;width:50%;white;height:47%;bottom:0;left:0"></div></a>
+<a href="/projectors"><div style="position:absolute;width:50%;height:47%;bottom:0;right:0"></div></a></div>						</div>
+					</div>
+					</div>
+<div class="swiper-slide slide">
+<div>				<img class="bgimage" src="/resources/images/EDU_2">
+					<div class="slide-info">
+					<div style="text-align:right" class="info adjust-right">
+								<h6 style="">EDUCATION</h6>
+								<h3 style="color:#ADD238;font-size:300%;font-weight:200;text-shadow: 4px 4px 4px rgba(0,0,0,.25);">ENGAGE</h3>
+								<p class="Mobile-Color-Swap" style="text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);">Bright, fun and interactive touchscreen computers and displays get students involved – it’s technology they know and want to touch <br><a href="/displays/"><button class="greyoverlaybtn">SEE ALL TOUCH DISPLAYS</button></a></p>
+							</div>
+					</div>
+</div></div>
+<div class="swiper-slide slide">
+<div>				<img class="wider" src="/resources/images/EDU_3">
+					<div style="" class="slide-info wider">
+
+							<div style="text-align:right" class="info">
+								<h6 style="">EDUCATION</h6>
+								<h3 style="color:#EC126D;font-size:300%;font-weight:200;text-shadow: 4px 4px 4px rgba(0,0,0,.25);">EXPAND</h3>
+								<p class="Mobile-Color-Swap" style="text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);">Bring a world of thought, leaders, and information into the classroom with the flexible video conferencing features of Mondopad.<br><a href="/displays/family?series=MONDOPAD-Series"><button class="greyoverlaybtn" style="color:#EC126D">LEARN ABOUT MONDOPAD</button></a></p>
+							</div>
+					</div>
+</div></div>
+<div class="swiper-slide slide">
+<div>
+
+				<img class="wider" src="/resources/images/EDU_6">
+					<div class="slide-info" style="">
+
+							<div style="text-align:right;height:100%" class="info">
+								<h6 style="">EDUCATION</h6>
+							<h3 style="color:#f66d26;font-size:300%;font-weight:200;text-shadow: 4px 4px 4px rgba(0,0,0,.25);">SUCCEED</h3>
+								<p class="Mobile-Color-Swap" style="text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);">From interactive solutions that get students involved to projecting bright images the whole class can see<br><strong style="font-size:100%;font-weight:400;color:white;">We’re here to make you successful.</strong>
+								</p>
+							</div>
+					</div>
+					<div class="edu-btns"> <a href="/product-finder"><button class="orangebtn">FIND THE PROJECTOR YOU NEED</button></a>
+								<a href="/displays/"><button class="orangebtn">COMPARE TOUCH SCREEN SOLUTIONS</button></a>
+								<a href="/projectors/?interactive"><button class="orangebtn">VIEW INTERACTIVE PROJECTORS</button></a></div>
+</div></div>
+
+</div>
+</div>
+<div class="pagination"></div>
+</div>
+<script>
+ 
+
+
+ var mySwiper = new Swiper('.swiper-container',{
+    pagination: '.pagination',
+    loop:true,
+    grabCursor: true,
+	calculateHeight: true,
+	resistance:'100%',
+	longSwipesRatio:0.9,
+	grabCursor:true,
+    paginationClickable: true,
+	onSlideChangeEnd: function(){
+	fixSwiperHeight();
+	}
+  })
+  $('.arrow-left').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipePrev()
+
+  })
+  $('.arrow-right').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipeNext()
+
+  })
+  
+    $('#ytcover').on('mousedown', function(e) {
+    $(this).data('p0', { x: e.pageX, y: e.pageY });
+}).on('mouseup', function(e) {
+    var p0 = $(this).data('p0'),
+        p1 = { x: e.pageX, y: e.pageY },
+        d = Math.sqrt(Math.pow(p1.x - p0.x, 2) + Math.pow(p1.y - p0.y, 2));
+
+    if (d < 4) {
+		playVideo();
+    }
+	else{
+	player.pauseVideo();
+	
+	}
+})
+
+
+
+  </script>
+<div class="headlines-bar" id="headlines-bar">
+	<div class="snippet" style="display:inline-block;text-align:left;">
+		<a href="/resources/documents/Mondo/InFocus-Mondopad-CaseStudy-BirminghamSouthernCollege.pdf"><img style="float:left;padding-right:5px;" src="/resources/images/education-tout-1">
+		<span class="title cmsedit">HIGHER ED SUCCESS</span></a>
+		<p class="cmsedit">Alabama college creates a popular global collaboration classroom with Mondopad<br>
+		<a href="/resources/documents/Mondo/InFocus-Mondopad-CaseStudy-BirminghamSouthernCollege.pdf">Read a case study (PDF)</a></p>
+	</div>	
+
+	<div class="snippet" style="padding-top:15px;display:inline-block;text-align:left;">
+		<a href="/reseller-locator"><img style="float:left;padding-right:5px;" src="/resources/images/education-tout-2">
+		<span class="title cmsedit">EDUCATION DISCOUNTS</span></a>
+		<p class="cmsedit">Public sector customers get discounts! Ask your reseller how much you could save.<br>
+		<a href="/reseller-locator">Find a Reseller &gt;</a></p>
+	</div>
+</div>
+<div class="content" style="padding-top:1em;">
+<div class="C9" id="education">
+<div class="tabs" style="text-align:center;">
+
+	<h3 class="title-choose">See Products Tailored For:</h3>
+	<nav role="navigation" class="C6 transformer-tabs tabs-wrapper" style="padding-bottom:30px">
+		<ul>
+		<li><a style="min-width:120px;" href="#products-k12" class="active">K-12</a></li>
+		<li><a style="min-width:120px;" href="#products-uni">Higher Education</a></li>
+		</ul>
+	</nav>
+	<div class="tab-shadow"></div>
+	<div id="products-k12" class="active">
+		<ul class="verticals">
+		<li class="C10 C5_child Col_child ui-shadow-after">
+			<div class="image-set cmsedit"><p><a href="/displays/JTOUCH-SERIES"><img alt="InFocus 65-inch JTouch Touchscreen Display" src="/resources/images/InFocus-INF6501A-Front.jpg"></a></p>
+			</div>
+			<div class="info cmsedit"><h3 class="name">ENGAGE WITH TOUCH</h3>
+
+			<h5 class="name">Affordable JTouch 65” Touchscreen Display</h5>
+
+			<div class="description">
+			<p>Display your PC’s content on a bright, colorful <a href="/displays/INF6501a">65-inch LCD touchscreen</a> that every student in the class can see and touch.</p>
+
+			<p>Create an exciting and engaging classroom that utilizes the assets you already have for a fraction of the cost of an interactive whiteboard.</p>
+
+			<p><a href="/touchscreen-solutions-sale-education">SALE on Touchscreens for Schools on NOW!</a></p>
+			<a class="btn" href="/displays/family?series=JTOUCH-Series">Learn more about JTouch</a></div>
+			</div>
+		</li>
+		<li class="C10 C3x7_child Col_child ui-dots-after">
+			<div class="image-set cmsedit" style="float:right;"><p style="padding:0 45px;"><a href="/projectors/IN120A-Series"><img src="/resources/images/InFocus-IN110A"><img alt="" src="/resources/images/InFocus-IN120A-Back"><img alt="" src="/resources/images/svga-xga-wxga_3"></a></p>
+			</div>
+			<div class="info cmsedit"><h3 class="name" style="text-transform:capitalize;">Low Cost Wireless Projectors</h3>
+
+			<div class="description">The new <a href="/projectors/IN122A">IN122a</a>, <a href="/projectors/IN124A">IN124a</a> and <a href="/projectors/IN126A">IN126a</a> are low-cost, high-brightness projectors with HDMI connectivity, 2GB internal storage, USB wireless option, and more. Optional <a href="/accessories/SP-WIFIUSB-2">wireless USB adapter</a> lets you present from tablets, annotate on documents, and even use your mobile device like a document camera.</div>
+
+			<ul class="feature-list" style="padding-bottom:50px;">
+			<li>3500 lumens of brightness</li>
+			<li>Long-life lamp of up to 6,000 hours for long-term savings</li>
+			<li>High 15000:1 contrast ratio and BrilliantColor technology</li>
+			<li>Wireless connectivity with <a href="/accessories/SP-WIFIUSB-2">optional USB adapter</a></li>
+			<li>Display over HDMI or USB</li>
+			<li>PC-less display from USB drive or 2GB of internal memory</li>
+			<li>Present Office docs, video, audio, photos and more wirelessly from your mobile device</li>
+			<li>Display 3D content from Blu-ray, PCs and more</li>
+			</ul>
+
+			<table id="table-comparison">
+			<thead>
+			<tr>
+			<th>&nbsp;</th>
+			<th class="model">IN122a</th>
+			<th class="model">IN124a</th>
+			<th class="model">IN126a</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<td class="category">Price (U.S.)*</td>
+			<td>$409</td>
+			<td>$469</td>
+			<td>$569</td>
+			</tr>
+			<tr>
+			<td class="category">Resolution</td>
+			<td>SVGA (800 x 600)</td>
+			<td>XGA (1024 x 768)</td>
+			<td>WXGA (1280 x 800)</td>
+			</tr>
+			<tr>
+			<td class="category">Brightness</td>
+			<td>3500 Lumens</td>
+			<td>3500 Lumens</td>
+			<td>3500 Lumens</td>
+			</tr>
+			<tr>
+			<td class="category">Aspect Ratio</td>
+			<td>4:3</td>
+			<td>4:3</td>
+			<td>16:10</td>
+			</tr>
+			<tr class="footer">
+			<td>&nbsp;</td>
+			<td><a class="btn buy-now" href="http://www.infocusstore.com/s?defaultSearchTextValue=Search&amp;searchKeywords=IN122a+-lamp+-filter&amp;Action=submit">Buy Now</a> <a class="learn-more" href="/projectors/product?pn=IN122A">Learn More</a></td>
+			<td><a class="btn buy-now" href="http://www.infocusstore.com/s?defaultSearchTextValue=Search&amp;searchKeywords=IN124a+-lamp+-filter&amp;Action=submit">Buy Now</a> <a class="learn-more" href="/projectors/product?pn=IN124A">Learn More</a></td>
+			<td><a class="btn buy-now" href="http://www.infocusstore.com/s?defaultSearchTextValue=Search&amp;searchKeywords=IN126a+-lamp+-filter&amp;Action=submit">Buy Now</a> <a class="learn-more" href="/projectors/product?pn=IN126A">Learn More</a></td>
+			</tr>
+			</tbody>
+			</table>
+			</div>
+		</li>
+		<li class="C10 C4x6_child Col_child ui-shadow-after">
+			<div class="image-set cmsedit"><p><a href="/projectors/IN3920-Series"><img src="/resources/images/InFocus-IN3920-Right"></a></p>
+			</div>
+			<div class="info cmsedit"><h3 class="name">INTERACT FROM AROUND THE ROOM</h3>
+
+			<h5 class="name">Remote wand gets you out of the way of your content</h5>
+
+			<div class="description">
+			<p><a href="/projectors/interactive">InFocus LiteBoard interactive projectors</a> come with a handheld wand that you (or your students) can use to control your PCs content from anywhere in the room.</p>
+
+			<p>Use the wand like a mouse to control your software, browse the web, draw on the screen and more. You can even use two wands at the same time.</p>
+			<a class="btn" href="/projectors/family?series=IN3920-Series">View IN3920 Interactive Projectors</a></div>
+			</div>
+		</li>
+		</ul>
+	</div>
+	<div id="products-uni">
+
+		<ul class="verticals">
+		<li class="C10 C5_child Col_child ui-shadow-after">
+			<div class="image-set cmsedit"><p><a href="/displays/family?series=MONDOPAD-SERIES"><img src="/resources/images/InFocus-INF7021-Hero"></a></p>
+			</div>
+			<div class="info cmsedit"><h3 class="name">CLOSING THE DISTANCE GAP</h3>
+
+			<h5 class="name">Mondopad brings the world’s resources to you</h5>
+
+			<div class="description">
+			<p>Cost and quality of video conferencing are no longer barriers to creating a high-tech, collaborative classroom or huddle room with a worldwide reach. <a href="/displays/family?series=MONDOPAD-SERIES">Mondopad</a> combines multiple functions into one affordable PC-based system that’s easy for students and faculty to use every day.</p>
+
+			<ul class="feature-list">
+			<li>Videoconferencing</li>
+			<li>Whiteboard and annotation</li>
+			<li>Complete Windows PC capability</li>
+			</ul>
+			<a class="btn" href="/displays/family?series=MONDOPAD-Series">Learn more about Mondopad</a></div>
+			</div>
+		</li>
+		<li class="C10 C5_child Col_child ui-dots-after">
+			<div class="image-set cmsedit" style="float:right;"><p><a href="/resources/documents/Mondopad_Higher_Education_Whitepaper.pdf"><img src="/resources/images/Olin205-Web-Ready"></a></p>
+			</div>
+			<div class="info cmsedit"><h3 class="name">HIGHER ED WHITE PAPER</h3>
+
+			<h5 class="tagline">More efficient, cost-effective collaboration in higher education</h5>
+
+			<div class="description">
+			<p>This brief and informative report examines the benefits and challenges of various videoconferencing and collaboration use cases in higher education, including administrative and faculty collaboration, huddle rooms, and distance learning and collaboration.</p>
+			<a class="btn" href="/resources/documents/Mondopad_Higher_Education_Whitepaper.pdf">Download White Paper (PDF)</a></div>
+			</div>
+		</li>
+		<li class="C10 C3x7_child Col_child ui-shadow-after">
+			<div class="image-set cmsedit"><p><a href="/projectors/IN5550-Series"><img src="/resources/images/InFocus-IN5550-Right"></a><a href="/projectors/IN5140-Series"><img src="/resources/images/InFocus-IN5140-Back"></a></p>
+			</div>
+			<div class="info cmsedit"><h3 class="name" style="text-transform:capitalize;">Large Venue Projectors</h3>
+
+			<h5 class="tagline">Powerful and flexible DLP and LCD projectors to fit any lecture hall or auditorium.</h5>
+
+			<div class="description">&nbsp;</div>
+
+			<table id="table-comparison">
+			<thead>
+			<tr>
+			<th>&nbsp;</th>
+			<th class="model">IN5120 Series</th>
+			<th class="model">IN5140 Series</th>
+			<th class="model">IN5540 Series</th>
+			<th class="model">IN5550 Series</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<td class="category">Resolution</td>
+			<td>XGA, WXGA</td>
+			<td>XGA, WXGA, WUXGA</td>
+			<td>XGA, WXGA</td>
+			<td>XGA, WXGA, WUXGA</td>
+			</tr>
+			<tr>
+			<td class="category">Technology</td>
+			<td>LCD</td>
+			<td>3LCD</td>
+			<td>3LCD</td>
+			<td>DLP with 2 color wheels</td>
+			</tr>
+			<tr>
+			<td class="category">Brightness</td>
+			<td>Up to 4000 Lumens</td>
+			<td>Up to 6000 Lumens</td>
+			<td>Up to 7500 Lumens</td>
+			<td>Up to 8300 Lumens</td>
+			</tr>
+			<tr>
+			</tr>
+			<tr>
+			<td class="category">Lenses</td>
+			<td>Standard lens</td>
+			<td>Standard lens, plus 4 optional lenses</td>
+			<td>7 optional lenses</td>
+			<td>6 optional lenses</td>
+			</tr>
+			<tr class="footer">
+			<td>&nbsp;</td>
+			<td><a class="btn buy-now" href="/projectors/family?series=IN5120-Series">Learn More</a></td>
+			<td><a class="btn buy-now" href="/projectors/family?series=IN5140-Series">Learn More</a></td>
+			<td><a class="btn buy-now" href="/projectors/family?series=IN5540-Series">Learn More</a></td>
+			<td><a class="btn buy-now" href="/projectors/family?series=IN5550-Series">Learn More</a></td>
+			</tr>
+			</tbody>
+			</table>
+			</div>
+		</li>
+		</ul>
+	</div>
+</div>
+</div>
+</div>
+

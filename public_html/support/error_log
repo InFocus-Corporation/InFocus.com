@@ -1,0 +1,99 @@
+[09-Sep-2014 06:49:52 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
+[09-Sep-2014 06:49:52 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
+[09-Sep-2014 06:49:52 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 272
+[09-Sep-2014 06:49:52 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 274
+[09-Sep-2014 06:49:52 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 285
+[09-Sep-2014 06:49:52 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 286
+[09-Sep-2014 06:49:52 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/support/index.php on line 300
+[09-Sep-2014 06:49:52 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/support/index.php on line 301
+[09-Sep-2014 06:50:25 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
+[09-Sep-2014 06:50:25 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
+[09-Sep-2014 06:50:25 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 272
+[09-Sep-2014 06:50:25 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 274
+[09-Sep-2014 06:50:25 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 285
+[09-Sep-2014 06:50:25 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 286
+[09-Sep-2014 06:50:25 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/support/index.php on line 300
+[09-Sep-2014 06:50:25 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/support/index.php on line 301
+[09-Sep-2014 06:50:26 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
+[09-Sep-2014 06:50:26 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
+[09-Sep-2014 06:50:26 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 272
+[09-Sep-2014 06:50:26 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 274
+[09-Sep-2014 06:50:26 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 285
+[09-Sep-2014 06:50:26 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 286
+[09-Sep-2014 06:50:26 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/support/index.php on line 300
+[09-Sep-2014 06:50:26 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/support/index.php on line 301
+[30-Sep-2014 11:44:14 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ifcprod/public_html/support/warrantyvt.php on line 29
+[30-Sep-2014 11:44:14 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/ifcprod/public_html/support/warrantyvt.php on line 47
+[30-Sep-2014 11:44:14 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ifcprod/public_html/support/warrantyvt.php on line 50
+[13-Oct-2014 04:44:18 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
+[13-Oct-2014 04:44:18 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
+[13-Oct-2014 04:44:18 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
+[13-Oct-2014 04:44:18 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
+[13-Oct-2014 04:44:18 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
+[13-Oct-2014 04:44:18 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
+[13-Oct-2014 04:44:18 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
+[13-Oct-2014 04:44:18 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/support/index.php on line 300
+[13-Oct-2014 04:44:18 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/support/index.php on line 301
+[30-Nov-2014 11:03:02 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
+[30-Nov-2014 11:03:02 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
+[30-Nov-2014 11:03:02 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
+[30-Nov-2014 11:03:02 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
+[30-Nov-2014 11:03:02 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
+[30-Nov-2014 11:03:02 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
+[30-Nov-2014 11:03:02 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
+[30-[08-Dec-2014 01:19:33 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
+[08-Dec-2014 01:19:33 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
+[08-Dec-2014 01:19:33 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
+[08-Dec-2014 01:19:33 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
+[08-Dec-2014 01:19:33 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
+[08-Dec-2014 01:19:33 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
+[08-Dec-2014 01:19:33 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
+[08-Dec-2014 01:19:33 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/support/index.php on line 300
+[08-Dec-2014 01:19:33 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/support/index.php on line 301
+[08-Dec-2014 15:30:03 America/New_York] PHP Parse error:  syntax error, unexpected end of file in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 73
+[22-Dec-2014 08:10:49 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
+[22-Dec-2014 08:10:49 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
+[22-Dec-2014 08:10:49 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
+[22-Dec-2014 08:10:49 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
+[22-Dec-2014 08:10:49 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
+[22-Dec-2014 08:10:49 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
+[22-Dec-2014 08:10:49 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
+[22-Dec-2014 08:10:49 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/support/index.php on line 300
+[22-Dec-2014 08:10:49 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/support/index.php on line 301
+[22-Dec-2014 08:10:58 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
+[22-Dec-2014 08:10:58 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
+[22-Dec-2014 08:10:58 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
+[22-Dec-2014 08:10:58 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
+[22-Dec-2014 08:10:58 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
+[22-Dec-2014 08:10:58 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
+[22-Dec-2014 08:10:58 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
+[05-Jan-2015 02:18:51 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
+[05-Jan-2015 02:18:51 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
+[05-Jan-2015 02:18:51 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
+[05-Jan-2015 02:18:51 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
+[05-Jan-2015 02:18:51 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
+[05-Jan-2015 02:18:51 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
+[05-Jan-2015 02:18:51 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
+[05-Jan-2015 02:18:51 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/support/index.php on line 300
+[05-Jan-2015 02:18:51 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/support/index.php on line 301
+[12-Jan-2015 09:10:55 America/New_York] PHP Warning:  mysqli_connect(): (HY000/2003): Can't connect to MySQL server on '67.43.0.33' (111) in /home/ifcprod/public_html/resources/php/connections.php on line 2
+[12-Jan-2015 09:10:55 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
+[12-Jan-2015 09:10:55 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
+[12-Jan-2015 09:10:55 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
+[12-Jan-2015 09:10:55 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
+[12-Jan-2015 09:10:55 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
+[12-Jan-2015 09:10:55 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
+[12-Jan-2015 09:10:55 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/support/index.php on line 300
+[12-Jan-2015 09:10:55 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/support/index.php on line 301
+[12-Jan-2015 09:10:59 America/New_York] PHP Warning:  mysqli_connect(): (HY000/2003): Can't connect to MySQL server on '67.43.0.33' (111) in /home/ifcprod/public_html/resources/php/connections.php on line 2
+[12-Jan-2015 09:10:59 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
+[12-Jan-2015 09:10:59 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
+[12-Jan-2015 09:10:59 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
+[12-Jan-2015 09:10:59 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
+[12-Jan-2015 09:10:59 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
+[12-Jan-2015 09:10:59 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
+[12-Jan-2015 09:10:59 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/support/index.php on line 300
+[12-Jan-2015 09:10:59 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/support/index.php on line 301
+[15-Jan-2015 05:26:32 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ifcprod/public_html/support/warrantyvt.php on line 29
+[15-Jan-2015 05:26:32 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/ifcprod/public_html/support/warrantyvt.php on line 47
+[15-Jan-2015 05:26:32 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ifcprod/public_html/support/warrantyvt.php on line 50

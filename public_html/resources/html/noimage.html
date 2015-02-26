@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="/resources/js/jquery.scrollintoview.js"></script>
+<script src="/resources/js/jquery.scrollintoview.min.js"></script>
+<script src="/resources/js/tree.jquery.js"></script>
+<link rel="stylesheet" href="/resources/css/jqtree.css">
+</head>
+
+
+
+<div id="NoImage" style="ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:500px;overflow-y:auto;"></div>
+<Script>
+
+        $(function() {
+                var element = document.getElementById("NoImage");
+				var lastHeight = element.scrollHeight;
+				var data = [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please confirm that your cables are securely plugged in to both the computer, and the projector (If using LiteShow 3, please select that troubleshooting tree). We recommend using a 6-12ft cable for testing as cable length can be a significat factor on the signal locking. Even if this cable has worked in the past, trying a shorter cable is recommended. Also remember, if you are using USB to connect, Not all projectors can project over USB. Check your user manual to confirm whether your projector supports this feature. Finally make sure you have the correct source selected on the projector (again, refer to the user manual for instructions on changing the source). It can take as much as 10-15 seconds for auto source to sync with the connection you are using.  If the correct source is selected, and the are cables firmly in place and you still don&#146;t have an image then select your connection.' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;I am connecting via USB' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;First step is to simply unplug the USB connection from your computer, wait a few seconds, then plug it back in. If this does not resolve the issue check the port on the back of the projector does it say "Display Link" or just "USB"'},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Display Link' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please download and install the current software Here. Once the installation is complete, disconnect the USB and restart your computer. Once your computer has finished booting, plug the USB cable from the projector to your computer. If your projector is on Auto Source, wait 10-15 seconds for the source to sync. Are you seeing your desktop now?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The latest software and drivers are important for connections like Display link. Always check for a current version if you are having issues connecting.'}
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Try using a different USB cable and a different USB port on the laptop. Did this resolve your issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Cables and USB ports can fail over time. Its always good to test these when other troubleshooting fails.' }
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The only test remaining is to try a different computer or display source.  If you still cannot get project over USB to work then this connection, or something else in the projector may be defective.  You can try a different connection type (VGA, HDMI, etc) or <a href="https://portal.infocus.com/support/region.htm"  target="_blank">Click Here</a> to initiate service on the projector.' }
+													]
+												}
+											]
+										}
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;USB',
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If this is the first time you have used the USB Display feature, an Auto-Play screen should appear within a minute of connecting the cable. Click Start USB Display to initiate projection. (Note: If the Auto-Play screen does not appear, browse to the CD Drive USB Display on your computer and double-click the DLUSB.Cab file to initiate manually.) Did this resolve your issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Autoplay does not always engage automatically, so sometimes it will be necessary to maually run the file on the projector.'}
+											]
+										
+										},										
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Try using a different USB cable and a different USB port on the laptop. Did this resolve your issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Cables and USB ports can fail over time. Its always good to test these when other troubleshooting fails.' }
+													]
+												},												
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The only test remaining is to try a different computer or display source.  If you still cannot get project over USB to work then this connection, or something else in the projector may be defective.  You can try a different connection type (VGA, HDMI, etc) or <a href="https://portal.infocus.com/support/region.htm"  target="_blank">Click Here</a> to initiate service on the projector.' }
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;I am connecting via VGA (15 pin computer cable), a DVI (25 or more pins), or an M1 (25 or more pins, with a "Y" cable containing a USB connection)' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you are using an M1 cable (it will have one connection on the projector end, and 2 connections on the computer end). Make sure BOTH cables are connected to your computer. USB projection is not supported over this cable. Are you using a laptop?'},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please be sure to activate the external monitor port on your laptop. Most laptops have a shortcut key corresponding to one of the "F#" keys at the top of the keyboard. Look for one that has a picture of a monitor or says "CRT" or "LCD". You activate this function by holding down the "FN" key and then tapping on the coresponding "F#" key. If you have found the correct key you should see some changes to your screen and your laptop display may flicker. Once this is completed press the Auto Image key on the projector keypad. Did this resolve your issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;By default the external port on a laptop is disabled to conserve energy and processing power. Sometimes the laptop is able to recognize when something is plugged in and activate this port automatically, but if Not, then you must activate it manually.'}
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Is your computer in a docking station?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;For testing purposes we need to confirm that there is No issue with the docking station itself. Please Un-dock the laptop, and complete the same troubleshooting steps you have done to this point.' }
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please complete a factory reset on your projector (see user manual). Did this resolve your issue?' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;when you are stuck a factory reset is always a good idea. It brings your projector back to the factory state which should make it easier to setup.' }
+															]
+														},												
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please try a different (Maximum 12ft) cable. If this still does not resolve your issue we would recommend trying a different computer, or possibly a video source. If you are still having issues and can not try another source please <a href="https://portal.infocus.com/support/region.htm"  target="_blank">Click Here</a> to initiate service on the projector.' }
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No',
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please press the Auto Image key on the projector keypad. Did that resolve the issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Auto Image tells the projector to attempt to autmoatically detect the best settings for the connected source. Sometimes this is needed to get things to sync correctly.'}
+											]
+										
+										},										
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please complete a factory reset on your projector (see user manual). Did this resolve your issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;when you are stuck a factory reset is always a good idea. It brings your projector back to the factory state which should make it easier to setup.' }
+													]
+												},												
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please try a different (Maximum 12ft) cable. If this still does not resolve your issue we would recommend trying a different computer, or possibly a video source. If you are still having issues and can not try another source please <a href="https://portal.infocus.com/support/region.htm"  target="_blank">Click Here</a> to initiate service on the projector.' }
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;I am connecting via HDMI' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Some of our projector models support HDMI 1.3 and Deep Color. This feature significantly increases the bandwidth of the signal. When combined with a high bandwidth signal like 1080p60 and a long cable run (greater than 12ft.) it can max out the processing power of the projector making it unable to synchronize. Some of our models (IN81, IN82, IN83) do not have the ability to turn off Deep color, so the only solution to this issue is to shorten the cable run or reduce the signal (1080p24, 1080i). Check your projector manual for the ability to turn off "Deep Color" or for a feature called "HDMI Long Cable". Did this resolve your issue?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The reason why other projectors may work in the same setup is most manufacturers turn off Deep Color by default. This means the projectors are not truly supporting HDMI 1.3 and the source isn&#146;t outputting Deep Color.'}
+									]								
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you are using an M1 cable (it will have one connection on the projector end, and 2 connections on the computer end). Make sure BOTH cables are connected to your computer. USB projection is not supported over this cable. Are you using a laptop?'},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please be sure to activate the external monitor port on your laptop. Most laptops have a shortcut key corresponding to one of the "F#" keys at the top of the keyboard. Look for one that has a picture of a monitor or says "CRT" or "LCD". You activate this function by holding down the "FN" key and then tapping on the coresponding "F#" key. If you have found the correct key you should see some changes to your screen and your laptop display may flicker. Once this is completed press the Auto Image key on the projector keypad. Did this resolve your issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;By default the external port on a laptop is disabled to conserve energy and processing power. Sometimes the laptop is able to recognize when something is plugged in and activate this port automatically, but if Not, then you must activate it manually.'}
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Is your computer in a docking station?' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;For testing purposes we need to confirm that there is No issue with the docking station itself. Please Un-dock the laptop, and complete the same troubleshooting steps you have done to this point.' }
+															]
+														},
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please complete a factory reset on your projector (see user manual). Did this resolve your issue?' },
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+																	children: [
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;when you are stuck a factory reset is always a good idea. It brings your projector back to the factory state which should make it easier to setup.' }
+																	]
+																},												
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+																	children: [
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please try a different (Maximum 12ft) cable. If this still does not resolve your issue we would recommend trying a different computer, or possibly a video source. If you are still having issues and can not try another source please <a href="https://portal.infocus.com/support/region.htm"  target="_blank">Click Here</a> to initiate service on the projector.' }
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No',
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please press the Auto Image key on the projector keypad. Did that resolve the issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Auto Image tells the projector to attempt to autmoatically detect the best settings for the connected source. Sometimes this is needed to get things to sync correctly.'}
+													]
+												
+												},										
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please complete a factory reset on your projector (see user manual). Did this resolve your issue?' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;when you are stuck a factory reset is always a good idea. It brings your projector back to the factory state which should make it easier to setup.' }
+															]
+														},												
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please try a different (Maximum 12ft) cable. If this still does not resolve your issue we would recommend trying a different computer, or possibly a video source. If you are still having issues and can not try another source please <a href="https://portal.infocus.com/support/region.htm"  target="_blank">Click Here</a> to initiate service on the projector.' }
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;I am connecting wirelessly' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Wireless Displaylink' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Make sure you are plugging in the main USB into your computer not the flash drive:</br><img src="http://www.infocus.com/sites/default/files/u38/WirelessDL.png" width=80px> </br>You should be seeing LEDs lit on both the sender and receiver of the wireless USB.  If you are not then the USB adapter is not getting power.  Either the port it is plugged into, or the adapter itself may be defective.  If you are seeing LEDs lit, unplug the connection to the computer, wait a few seconds and re-plug the connection.  Did this resolve your issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;USB connections can be finicky, it is a good idea to try a few times before assuming the connection isn&#146;t working.' }
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please download and install the current software Here. Once the installation is complete, disconnect the USB and restart your computer. Once your computer has finished booting, plug the USB cable from the projector to your computer. If your projector is on Auto Source, wait 10-15 seconds for the source to sync. Are you seeing your desktop now?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The latest software and drivers are important for connections like Display link. Always check for a current version if you are having issues connecting.' }
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Try using a different USB port on the laptop. Did this resolve your issue?' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;USB ports can fail over time. Its always good to test these when other troubleshooting fails.' }
+															]
+														},
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you still cannot get project over USB to work then this device, or something in the projector may be defective. Please contact InFocus support to initate service.' }
+															]
+														}
+													]												
+												}
+											]
+										}
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Liteshow' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Coming Soon...' }
+									]
+								}
+							]
+						}
+					];
+	        $('#NoImage').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#NoImage');
+			$('#NoImage').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("NoImage");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+</script>
+
+
+</body>
+</html>

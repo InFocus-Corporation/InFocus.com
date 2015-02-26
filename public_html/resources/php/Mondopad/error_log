@@ -1,0 +1,24 @@
+[19-Aug-2014 04:48:34 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'devinfoc'@'localhost' (using password: YES) in /home/devinfoc/public_html/resources/php/Mondopad/s.php on line 5
+[19-Aug-2014 04:49:07 America/New_York] PHP Warning:  mysql_numrows() expects parameter 1 to be resource, boolean given in /home/devinfoc/public_html/resources/php/Mondopad/s.php on line 10
+[01-Sep-2014 04:00:48 America/New_York] PHP Fatal error:  Call to undefined method M::dedelete() in /home/devinfoc/public_html/resources/php/Mondopad/server.php on line 150
+[01-Sep-2014 04:01:53 America/New_York] PHP Fatal error:  Call to undefined method M::dedelete() in /home/devinfoc/public_html/resources/php/Mondopad/server.php on line 150
+[01-Sep-2014 04:02:20 America/New_York] PHP Fatal error:  Call to undefined method M::dedelete() in /home/devinfoc/public_html/resources/php/Mondopad/server.php on line 150
+[01-Sep-2014 04:02:24 America/New_York] PHP Fatal error:  Call to undefined method M::dedelete() in /home/devinfoc/public_html/resources/php/Mondopad/server.php on line 150
+[01-Sep-2014 04:05:07 America/New_York] PHP Fatal error:  Call to undefined method M::dedelete() in /home/devinfoc/public_html/resources/php/Mondopad/server.php on line 150
+[30-Nov-2014 20:32:30 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resources/php/Mondopad/sqlclass.php on line 40
+[30-Nov-2014 20:33:18 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resources/php/Mondopad/sqlclass.php on line 40
+[30-Nov-2014 20:34:19 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resources/php/Mondopad/sqlclass.php on line 40
+[30-Nov-2014 20:34:40 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resources/php/Mondopad/sqlclass.php on line 40
+[30-Nov-2014 20:34:40 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resources/php/Mondopad/sqlclass.php on line 40
+[30-Nov-2014 20:34:41 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resources/php/Mondopad/sqlclass.php on line 40
+[30-Nov-2014 20:34:41 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resources/php/Mondopad/sqlclass.php on line 40
+[30-Nov-2014 20:34:42 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resources/php/Mondopad/sqlclass.php on line 40
+[30-Nov-2014 20:34:42 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resources/php/Mondopad/sqlclass.php on line 40
+[30-Nov-2014 20:34:45 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resources/php/Mondopad/sqlclass.php on line 40
+[30-Nov-2014 20:36:30 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resources/php/Mondopad/sqlclass.php on line 40
+[30-Nov-2014 20:37:29 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resources/php/Mondopad/sqlclass.php on line 40
+[30-Nov-2014 20:37:30 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resources/php/Mondopad/sqlclass.php on line 40
+[30-Nov-2014 20:38:29 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resources/php/Mondopad/sqlclass.php on line 40
+[30-Nov-2014 20:40:30 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resources/php/Mondopad/sqlclass.php on line 40
+[30-Nov-2014 20:41:30 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resources/php/Mondopad/sqlclass.php on line 40
+[30-Nov-2014 20:43:31 America/New_York] PHP Warning:  mysql_connect(): Too many connections in /home/devinfoc/public_html/resourc

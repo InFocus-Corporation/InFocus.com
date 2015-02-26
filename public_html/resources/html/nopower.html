@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="/resources/js/jquery.scrollintoview.js"></script>
+<script src="/resources/js/jquery.scrollintoview.min.js"></script>
+<script src="/resources/js/tree.jquery.js"></script>
+<link rel="stylesheet" href="/resources/css/jqtree.css">
+</head>
+
+
+
+<div id="NoPower" style="ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:500px;overflow-y:auto;"></div>
+<Script>
+
+        $(function() {
+                var element = document.getElementById("NoPower");
+				var lastHeight = element.scrollHeight;
+				var data = [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Are there any LEDs on the top of the projector or can you hear the fans running?' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;First check that the lens cap is not on the projector and that nothing is blocking the path of the light. If there is nothing blocking the light the next step is to check any error codes from the LEDs on your projector. These may tell you to replace the lamp, reset the lamp counter, or it may indicate some other failure. The nature of the LED message will vary depending on the specific model you have. Please check your user guide for details on what these error codes mean.' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;I have checked the user guide, or there are no error LEDs' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Next step would be to re-seat the lamp. Remove the lamp from your projector (see user guide for details on how). Inspect lamp for any physical damage. If the glass on the lamp is broken, then it would need to be replaced. If the lamp appears to be intact place it back in the projector being sure to firmly attach any electrical connectors. Place the lamp door back on the projector. Did this resolve your issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;It is possible that the connector to the lamp, or the switch on the lamp door was not firmly in place. Taking the lamp out and replacing it just ensures that everything is connected correctly.' }
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you still are not getting light from the projector then it is likely you have a defective lamp. If you have another projector of the same model we would recommend borrowing a lamp from that projector for testing purposes. Otherwise we would recommend purchasing a new replacement. Purchasing direct from InFocus the lamps have a 15 day return policy. If you are purchasing from another vendor be sure to confirm their return policy as well. Did replacing the lamp resolve the issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Lamps deteriorate with both usage and time. If you have a large number of hours, or a moderate number of hours over a few years time, both of these are normal failures for a lamp. If you are consistenly seeing low hour failures there may be an issue with the projector itself.' }
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="https://portal.infocus.com/support/region.htm"  target="_blank">Click Here</a> to initiate service on the projector.' }
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Try a different power cable AND plugging the projector into a different outlet. Did this resolve the issue?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Though uncommon, power cables and outlets can fail. This is always the first thing to check with power issues.' }
+									]	
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="https://portal.infocus.com/support/region.htm"  target="_blank">Click Here</a> to initiate service on the projector.' }
+									]
+								}
+							]
+						}
+					];
+	        $('#NoPower').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#NoPower');
+			$('#NoPower').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("NoPower");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+</script>
+
+
+</body>
+</html>

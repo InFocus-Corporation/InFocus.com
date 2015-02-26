@@ -1,0 +1,7 @@
+<tile>
+<visual lang='en-US' version='2'>
+<binding template="TileWide310x150Image" branding="none">
+<image id="1" src="http://www.infocus.com/resources/php/add1wide.jpg"/>
+</binding>
+</visual>
+</tile>

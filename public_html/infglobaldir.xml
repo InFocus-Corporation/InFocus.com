@@ -1,0 +1,1840 @@
+<SearchResult hasMoreEntries="false">
+<PhoneBookEntries>
+<Contact>
+<Id>105</Id>
+<Name>Abbi Rath</Name>
+<GivenName>Abbi</GivenName>
+<Surname>Rath</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>abbi@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>186</Id>
+<Name>Alex Doyle</Name>
+<GivenName>Alex</GivenName>
+<Surname>Doyle</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6502734107</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>6</Id>
+<Name>Alex Garfio</Name>
+<GivenName>Alex</GivenName>
+<Surname>Garfio</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256231</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>7</Id>
+<Name>Alex Garfio Home</Name>
+<GivenName>Alex</GivenName>
+<Surname>Garfio Home</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6263889793</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>294</Id>
+<Name>Ancora Jakarta</Name>
+<GivenName>Ancora</GivenName>
+<Surname>Jakarta</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6507417801</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>293</Id>
+<Name>Ancora Singapore</Name>
+<GivenName>Ancora</GivenName>
+<Surname>Singapore</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6507417678</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>86</Id>
+<Name>Anna Liao</Name>
+<GivenName>Anna</GivenName>
+<Surname>Liao</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6344</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>73</Id>
+<Name>Ben Wong</Name>
+<GivenName>Ben</GivenName>
+<Surname>Wong</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9499543142</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>110</Id>
+<Name>Benjamin Norris</Name>
+<GivenName>Benjamin</GivenName>
+<Surname>Norris</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256243</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>8</Id>
+<Name>Bob Davidson</Name>
+<GivenName>Bob</GivenName>
+<Surname>Davidson</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256221</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>112</Id>
+<Name>Bonnie Norris</Name>
+<GivenName>Bonnie</GivenName>
+<Surname>Norris</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256245</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>206</Id>
+<Name>Dave Duncan</Name>
+<GivenName>Dave</GivenName>
+<Surname>Duncan</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5039125166</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>9</Id>
+<Name>Derek Boduch</Name>
+<GivenName>Derek</GivenName>
+<Surname>Boduch</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256236</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>10</Id>
+<Name>Derek Boduch Home</Name>
+<GivenName>Derek</GivenName>
+<Surname>Boduch Home</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9492007437</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>72</Id>
+<Name>Diana Maranon</Name>
+<GivenName>Diana</GivenName>
+<Surname>Maranon</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>596097555@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>180</Id>
+<Name>Dorfman Demo</Name>
+<GivenName>Dorfman</GivenName>
+<Surname>Demo</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4242025437</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>200</Id>
+<Name>Eddie Lee</Name>
+<GivenName>Eddie</GivenName>
+<Surname>Lee</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5039125122</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>208</Id>
+<Name>Elliot Randall</Name>
+<GivenName>Elliot</GivenName>
+<Surname>Randall</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9493133718</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>36</Id>
+<Name>Eric Lookenott</Name>
+<GivenName>Eric</GivenName>
+<Surname>Lookenott</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8207@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>204</Id>
+<Name>Foxconn Demo 4159267482</Name>
+<GivenName>Foxconn</GivenName>
+<Surname>Demo 4159267482</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4159267482</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>203</Id>
+<Name>Foxconn Demo 4159267535</Name>
+<GivenName>Foxconn</GivenName>
+<Surname>Demo 4159267535</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4159267535</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>202</Id>
+<Name>Foxconn Demo 4159267536</Name>
+<GivenName>Foxconn</GivenName>
+<Surname>Demo 4159267536</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4159267536</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>201</Id>
+<Name>Foxconn Demo 4159267537</Name>
+<GivenName>Foxconn</GivenName>
+<Surname>Demo 4159267537</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4159267537</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>38</Id>
+<Name>Frank Picarello</Name>
+<GivenName>Frank</GivenName>
+<Surname>Picarello</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4158489747</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>11</Id>
+<Name>Fugoo Boardroom</Name>
+<GivenName>Fugoo</GivenName>
+<Surname>Boardroom</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256250</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>12</Id>
+<Name>Fugoo Chengdu</Name>
+<GivenName>Fugoo</GivenName>
+<Surname>Chengdu</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256238</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>13</Id>
+<Name>Fugoo Conference Room</Name>
+<GivenName>Fugoo</GivenName>
+<Surname>Conference Room</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256251</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>93</Id>
+<Name>Fugoo Travel E20</Name>
+<GivenName>Fugoo</GivenName>
+<Surname>Travel E20</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256247</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>14</Id>
+<Name>Gary Elsasser</Name>
+<GivenName>Gary</GivenName>
+<Surname>Elsasser</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256234</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>15</Id>
+<Name>Gary Elsasser Home</Name>
+<GivenName>Gary</GivenName>
+<Surname>Elsasser Home</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256253</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>123</Id>
+<Name>Glenn Crawford</Name>
+<GivenName>Glenn</GivenName>
+<Surname>Crawford</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5126877991</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>16</Id>
+<Name>Glenn Jystad</Name>
+<GivenName>Glenn</GivenName>
+<Surname>Jystad</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256235</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>122</Id>
+<Name>Globaltel Hyderabad</Name>
+<GivenName>Globaltel</GivenName>
+<Surname>Hyderabad</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6194889865</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>121</Id>
+<Name>Globaltel Manila</Name>
+<GivenName>Globaltel</GivenName>
+<Surname>Manila</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6194889864</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>111</Id>
+<Name>Greg White</Name>
+<GivenName>Greg</GivenName>
+<Surname>White</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256244</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>243</Id>
+<Name>Hammond Wong</Name>
+<GivenName>Hammond</GivenName>
+<Surname>Wong</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6269932915</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>245</Id>
+<Name>Highland Capital 2</Name>
+<GivenName>Highland</GivenName>
+<Surname>Capital 2</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6176748171</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>37</Id>
+<Name>HL Cheung</Name>
+<GivenName>HL</GivenName>
+<Surname>Cheung</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4159634785</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>113</Id>
+<Name>Hokoon Yau</Name>
+<GivenName>Hokoon</GivenName>
+<Surname>Yau</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256246</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>299</Id>
+<Name>Hon Hai Corp 1</Name>
+<GivenName>Hon Hai</GivenName>
+<Surname>Corp 1</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5039125222</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>290</Id>
+<Name>Hon Hai Corp 2</Name>
+<GivenName>Hon Hai</GivenName>
+<Surname>Corp 2</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5039125037</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>17</Id>
+<Name>Hookah Lounge</Name>
+<GivenName>Hookah</GivenName>
+<Surname>Lounge</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256256</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>39</Id>
+<Name>InFocus Cascade</Name>
+<GivenName>InFocus</GivenName>
+<Surname>Cascade</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6102</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>191</Id>
+<Name>InFocus Demo 1</Name>
+<GivenName>InFocus</GivenName>
+<Surname>Demo 1</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4242025457</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>302</Id>
+<Name>InFocus Demo 2</Name>
+<GivenName>InFocus</GivenName>
+<Surname>Demo 2</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>3109746818</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>40</Id>
+<Name>InFocus Long Beach</Name>
+<GivenName>InFocus</GivenName>
+<Surname>Long Beach</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6103</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>41</Id>
+<Name>InFocus Pacific</Name>
+<GivenName>InFocus</GivenName>
+<Surname>Pacific</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6101</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>187</Id>
+<Name>James Griffiths</Name>
+<GivenName>James</GivenName>
+<Surname>Griffiths</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8210@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>118</Id>
+<Name>Jay Houck</Name>
+<GivenName>Jay</GivenName>
+<Surname>Houck</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9493133721</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>64</Id>
+<Name>Jean Bekker</Name>
+<GivenName>Jean</GivenName>
+<Surname>Bekker</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256237</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>100</Id>
+<Name>Jennifer Lynch</Name>
+<GivenName>Jennifer</GivenName>
+<Surname>Lynch</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8211@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>18</Id>
+<Name>Jennifer Tsai</Name>
+<GivenName>Jennifer</GivenName>
+<Surname>Tsai</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256241</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>43</Id>
+<Name>Jeremy Farren</Name>
+<GivenName>Jeremy</GivenName>
+<Surname>Farren</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8407@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>30</Id>
+<Name>Jim Mitchell</Name>
+<GivenName>Jim</GivenName>
+<Surname>Mitchell</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4242178053</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>77</Id>
+<Name>Jim Reddy</Name>
+<GivenName>Jim</GivenName>
+<Surname>Reddy</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8201@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>85</Id>
+<Name>Jimmy Chin</Name>
+<GivenName>Jimmy</GivenName>
+<Surname>Chin</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6343</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>63</Id>
+<Name>Joe Lam</Name>
+<GivenName>Joe</GivenName>
+<Surname>Lam</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>jlam@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>135</Id>
+<Name>John Chow</Name>
+<GivenName>John</GivenName>
+<Surname>Chow</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4084181773</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>83</Id>
+<Name>John Hall</Name>
+<GivenName>John</GivenName>
+<Surname>Hall</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6262431781</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>177</Id>
+<Name>John Hii</Name>
+<GivenName>John</GivenName>
+<Surname>Hii</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5623042736</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>45</Id>
+<Name>John Hui</Name>
+<GivenName>John</GivenName>
+<Surname>Hui</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5622628940</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>46</Id>
+<Name>John Hui E20</Name>
+<GivenName>John</GivenName>
+<Surname>Hui E20</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5622628941</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>70</Id>
+<Name>John In His Car</Name>
+<GivenName>John</GivenName>
+<Surname>In His Car</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4159634787</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>183</Id>
+<Name>John Yu</Name>
+<GivenName>John</GivenName>
+<Surname>Yu</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6505282094</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>146</Id>
+<Name>Johnny Lee</Name>
+<GivenName>Johnny</GivenName>
+<Surname>Lee</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6505282800</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>232</Id>
+<Name>Johnny Pan</Name>
+<GivenName>Johnny</GivenName>
+<Surname>Pan</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>7144755406</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>31</Id>
+<Name>Jonathan Lui</Name>
+<GivenName>Jonathan</GivenName>
+<Surname>Lui</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6176</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>116</Id>
+<Name>Julian Quattlebaum</Name>
+<GivenName>Julian</GivenName>
+<Surname>Quattlebaum</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>3109746034</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>303</Id>
+<Name>Katherine Tin</Name>
+<GivenName>Katherine</GivenName>
+<Surname>Tin</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6507417841</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>115</Id>
+<Name>KC East West Bank</Name>
+<GivenName>KC</GivenName>
+<Surname>East West Bank</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5103716836</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>188</Id>
+<Name>Larry Lisser</Name>
+<GivenName>Larry</GivenName>
+<Surname>Lisser</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4152948791</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>184</Id>
+<Name>Laszlo Buza</Name>
+<GivenName>Laszlo</GivenName>
+<Surname>Buza</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8129@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>19</Id>
+<Name>Liew Choon Lian</Name>
+<GivenName>Liew Choon</GivenName>
+<Surname>Lian</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>3237840429</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>148</Id>
+<Name>Lockheed Martin 1</Name>
+<GivenName>Lockheed</GivenName>
+<Surname>Martin 1</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5035065009</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>149</Id>
+<Name>Lockheed Martin 2</Name>
+<GivenName>Lockheed</GivenName>
+<Surname>Martin 2</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5035065017</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>247</Id>
+<Name>Loren Shaw</Name>
+<GivenName>Loren</GivenName>
+<Surname>Shaw</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8130@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>270</Id>
+<Name>Mariette Wharton</Name>
+<GivenName>Mariette</GivenName>
+<Surname>Wharton</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6502734104</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>21</Id>
+<Name>Mark Chien</Name>
+<GivenName>Mark</GivenName>
+<Surname>Chien</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5110</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>50</Id>
+<Name>Mark Cunningham</Name>
+<GivenName>Mark</GivenName>
+<Surname>Cunningham</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8215@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>253</Id>
+<Name>Mark Frein</Name>
+<GivenName>Mark</GivenName>
+<Surname>Frein</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6463566883</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>80</Id>
+<Name>Mark Housley</Name>
+<GivenName>Mark</GivenName>
+<Surname>Housley</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5104239704</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>51</Id>
+<Name>Mark Housley</Name>
+<GivenName>Mark</GivenName>
+<Surname>Housley</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5417085346</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>78</Id>
+<Name>Masahiro Sun</Name>
+<GivenName>Masahiro</GivenName>
+<Surname>Sun</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>590548468@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>124</Id>
+<Name>Max Chung 2</Name>
+<GivenName>Max</GivenName>
+<Surname>Chung 2</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>594722573@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>125</Id>
+<Name>Max Chung 3</Name>
+<GivenName>Max</GivenName>
+<Surname>Chung 3</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>595159081@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>142</Id>
+<Name>Michael Kuehn</Name>
+<GivenName>Michael</GivenName>
+<Surname>Kuehn</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8401@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>207</Id>
+<Name>Michael OConnell</Name>
+<GivenName>Michael</GivenName>
+<Surname>OConnell</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>7144755052</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>102</Id>
+<Name>Mike Murphy</Name>
+<GivenName>Mike</GivenName>
+<Surname>Murphy</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6489</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>101</Id>
+<Name>Mike Porter</Name>
+<GivenName>Mike</GivenName>
+<Surname>Porter</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6488</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>233</Id>
+<Name>Montgomery Demo 1</Name>
+<GivenName>Montgomery</GivenName>
+<Surname>Demo 1</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>3109866828</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>234</Id>
+<Name>Montgomery Demo 2</Name>
+<GivenName>Montgomery</GivenName>
+<Surname>Demo 2</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>3109866829</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>189</Id>
+<Name>Montgomery 1 InFocus</Name>
+<GivenName>Montgomery 1</GivenName>
+<Surname>InFocus</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4242025499</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>190</Id>
+<Name>Montgomery 2 InFocus</Name>
+<GivenName>Montgomery 2</GivenName>
+<Surname>InFocus</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4159267528</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>238</Id>
+<Name>New Enterprise Associates Demo 1</Name>
+<GivenName>New Enterprise Associates</GivenName>
+<Surname>Demo 1</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6504854931</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>239</Id>
+<Name>New Enterprise Associates Demo 2</Name>
+<GivenName>New Enterprise Associates</GivenName>
+<Surname>Demo 2</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6504854932</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>109</Id>
+<Name>Nobby Yawata</Name>
+<GivenName>Nobby</GivenName>
+<Surname>Yawata</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>599411956@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>98</Id>
+<Name>Noreen Morris</Name>
+<GivenName>Noreen</GivenName>
+<Surname>Morris</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6485</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>88</Id>
+<Name>NWT 1</Name>
+<GivenName>NWT</GivenName>
+<Surname>1</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>3023562827</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>89</Id>
+<Name>NWT 2</Name>
+<GivenName>NWT</GivenName>
+<Surname>2</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>3023562828</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>90</Id>
+<Name>NWT 3</Name>
+<GivenName>NWT</GivenName>
+<Surname>3</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>3023562829</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>91</Id>
+<Name>NWT 4</Name>
+<GivenName>NWT</GivenName>
+<Surname>4</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>3023562830</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>92</Id>
+<Name>NWT 5</Name>
+<GivenName>NWT</GivenName>
+<Surname>5</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>3023562831</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>95</Id>
+<Name>Ole Dame</Name>
+<GivenName>Ole</GivenName>
+<Surname>Dame</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8217@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>22</Id>
+<Name>Patricia Arnold</Name>
+<GivenName>Patricia</GivenName>
+<Surname>Arnold</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256222</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>178</Id>
+<Name>Paul Walker</Name>
+<GivenName>Paul</GivenName>
+<Surname>Walker</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8054215634</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>179</Id>
+<Name>Paul Walker 2</Name>
+<GivenName>Paul</GivenName>
+<Surname>Walker 2</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8054215635</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>129</Id>
+<Name>Projector Foxconn</Name>
+<GivenName>Projector</GivenName>
+<Surname>Foxconn</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6549</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>4</Id>
+<Name>Ray Pang</Name>
+<GivenName>Ray</GivenName>
+<Surname>Pang</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6117</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>295</Id>
+<Name>Ray Uhlir</Name>
+<GivenName>Ray</GivenName>
+<Surname>Uhlir</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5039125038</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>240</Id>
+<Name>Raymond Lin</Name>
+<GivenName>Raymond</GivenName>
+<Surname>Lin</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>3109866128</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>20</Id>
+<Name>Raymond Lin</Name>
+<GivenName>Raymond</GivenName>
+<Surname>Lin</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>200109</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>53</Id>
+<Name>Raymond Yu 6506410675</Name>
+<GivenName>Raymond</GivenName>
+<Surname>Yu 6506410675</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6506410675</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>231</Id>
+<Name>Richard YC Lee</Name>
+<GivenName>Richard YC</GivenName>
+<Surname>Lee</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5039125114</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>229</Id>
+<Name>Rick Nixon</Name>
+<GivenName>Rick</GivenName>
+<Surname>Nixon</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5039125150</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>300</Id>
+<Name>Robb Fujioka</Name>
+<GivenName>Robb</GivenName>
+<Surname>Fujioka</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5039125226</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>32</Id>
+<Name>Robb Fujioka</Name>
+<GivenName>Robb</GivenName>
+<Surname>Fujioka</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4242178052</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>140</Id>
+<Name>Robert Detwiler</Name>
+<GivenName>Robert</GivenName>
+<Surname>Detwiler</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8140@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>119</Id>
+<Name>Robert Sanchez Home</Name>
+<GivenName>Robert</GivenName>
+<Surname>Sanchez Home</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8587777948</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>120</Id>
+<Name>Robert Sanchez Work</Name>
+<GivenName>Robert</GivenName>
+<Surname>Sanchez Work</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6194889863</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>306</Id>
+<Name>Rod Gippetti</Name>
+<GivenName>Rod</GivenName>
+<Surname>Gippetti</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6502734109</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>147</Id>
+<Name>Ron Dorfman</Name>
+<GivenName>Ron</GivenName>
+<Surname>Dorfman</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>3109746040</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>235</Id>
+<Name>Ron Dorfman Demo 7</Name>
+<GivenName>Ron</GivenName>
+<Surname>Dorfman Demo 7</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>3109866830</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>236</Id>
+<Name>Ron Dorfman Demo 8</Name>
+<GivenName>Ron</GivenName>
+<Surname>Dorfman Demo 8</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>3109866831</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>242</Id>
+<Name>RYu Demo 1</Name>
+<GivenName>RYu</GivenName>
+<Surname>Demo 1</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6505282803</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>114</Id>
+<Name>Saro Baghoomian</Name>
+<GivenName>Saro</GivenName>
+<Surname>Baghoomian</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256249</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>61</Id>
+<Name>Scott Wharton Home</Name>
+<GivenName>Scott</GivenName>
+<Surname>Wharton Home</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6502650421</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>60</Id>
+<Name>Scott Wharton Office</Name>
+<GivenName>Scott</GivenName>
+<Surname>Wharton Office</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6502734111</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>107</Id>
+<Name>Service Desk</Name>
+<GivenName>Service</GivenName>
+<Surname>Desk</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5039125058</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>127</Id>
+<Name>Sharper Image</Name>
+<GivenName>Sharper</GivenName>
+<Surname>Image</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6464480450</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>248</Id>
+<Name>Shion Chung</Name>
+<GivenName>Shion</GivenName>
+<Surname>Chung</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5103716929</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>286</Id>
+<Name>Spencer Chan</Name>
+<GivenName>Spencer</GivenName>
+<Surname>Chan</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4159634784</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>56</Id>
+<Name>Steve Hui 6108</Name>
+<GivenName>Steve</GivenName>
+<Surname>Hui 6108</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6108</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>57</Id>
+<Name>Steve Hui 6506180076</Name>
+<GivenName>Steve</GivenName>
+<Surname>Hui 6506180076</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6506180076</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>139</Id>
+<Name>Steve Reynolds</Name>
+<GivenName>Steve</GivenName>
+<Surname>Reynolds</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8143@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>33</Id>
+<Name>Steven Hsieh</Name>
+<GivenName>Steven</GivenName>
+<Surname>Hsieh</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6177</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>175</Id>
+<Name>Steven Kuan</Name>
+<GivenName>Steven</GivenName>
+<Surname>Kuan</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>200106</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>24</Id>
+<Name>Sunny Chen home (8th floor)</Name>
+<GivenName>Sunny</GivenName>
+<Surname>Chen home (8th floor)</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498258156</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>81</Id>
+<Name>Sunny Chen home (9th floor)</Name>
+<GivenName>Sunny</GivenName>
+<Surname>Chen home (9th floor)</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5622628993</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>65</Id>
+<Name>Sunny Chen Office</Name>
+<GivenName>Sunny</GivenName>
+<Surname>Chen Office</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498258106</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>298</Id>
+<Name>Surendra Arora</Name>
+<GivenName>Surendra</GivenName>
+<Surname>Arora</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8255@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>199</Id>
+<Name>Susan Rockwise</Name>
+<GivenName>Susan</GivenName>
+<Surname>Rockwise</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5039125075</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>145</Id>
+<Name>Ted McCann</Name>
+<GivenName>Ted</GivenName>
+<Surname>McCann</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5039125081</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>150</Id>
+<Name>Terry Guo</Name>
+<GivenName>Terry</GivenName>
+<Surname>Guo</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5623042938</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>25</Id>
+<Name>Tim Chen</Name>
+<GivenName>Tim</GivenName>
+<Surname>Chen</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5113</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>58</Id>
+<Name>Tim Spofford</Name>
+<GivenName>Tim</GivenName>
+<Surname>Spofford</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5039125030</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>26</Id>
+<Name>Tom Paterson</Name>
+<GivenName>Tom</GivenName>
+<Surname>Paterson</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256255</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>82</Id>
+<Name>Toyoki Furuta</Name>
+<GivenName>Toyoki</GivenName>
+<Surname>Furuta</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>5622628994</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>71</Id>
+<Name>William Qiu</Name>
+<GivenName>William</GivenName>
+<Surname>Qiu</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>4159634786</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>75</Id>
+<Name>William Qiu Home</Name>
+<GivenName>William</GivenName>
+<Surname>Qiu Home</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9499543144</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>62</Id>
+<Name>William Wang</Name>
+<GivenName>William</GivenName>
+<Surname>Wang</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9499543137</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>29</Id>
+<Name>Yifan Li</Name>
+<GivenName>Yifan</GivenName>
+<Surname>Li</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>9498256239</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>79</Id>
+<Name>Yueh-Way Sun</Name>
+<GivenName>Yueh-Way</GivenName>
+<Surname>Sun</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>6304452041</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+<Contact>
+<Id>291</Id>
+<Name>Zhu Lin</Name>
+<GivenName>Zhu</GivenName>
+<Surname>Lin</Surname>
+<ContactMethods>
+<ContactMethod preferred="true">
+<Number>8301@infocus.net</Number>
+<Protocol>SIP</Protocol>
+</ContactMethod>
+</ContactMethods>
+</Contact>
+</PhoneBookEntries>
+</SearchResult>

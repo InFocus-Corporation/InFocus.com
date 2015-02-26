@@ -1,0 +1,17 @@
+User-agent:	*
+Disallow:	/cgi-bin/
+Disallow:	/tmp/
+Disallow:	/ckeditor/
+Disallow:	/login/
+Disallow:	/upload/
+Disallow:	/users/
+Disallow:	/resources/
+Disallow: /mondopad-live-demo-cdw/
+Disallow: /node/
+Disallow: /labs/
+Disallow: /noderelationships/
+Disallow: /sites/default/files/
+Disallow: /taxonomy/term/
+
+Allow:	/resources/images/
+Allow:	/resources/documents/

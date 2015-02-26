@@ -1,0 +1,789 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="/resources/js/jquery.scrollintoview.js"></script>
+<script src="/resources/js/jquery.scrollintoview.min.js"></script>
+<script src="/resources/js/tree.jquery.js"></script>
+<link rel="stylesheet" href="/resources/css/jqtree.css">
+</head>
+
+
+<div id="Registerloop" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:500px;overflow-y:auto;"></div>
+<script>
+        $(function() {
+                var element = document.getElementById("Registerloop");
+				var lastHeight = element.scrollHeight;
+				var data = [
+                { label: '&nbsp;&nbsp;&nbsp;&nbsp;My Mondopad is prompting me to re-register',
+                    children: [
+                        { label: '&nbsp;&nbsp;&nbsp;&nbsp;Have you registered as an Admin Account?' },
+                        { label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes ' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check with your network administrator to verify your user privileges and password. Did this resolve your issue?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The MondoPad requires granted administrative (Super-user) privileges locally.' }
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance.' }
+									]
+								}
+							]
+						},											
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+                    		children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please register with an account that has administrative privileges. Did this resolve your issue?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The MondoPad requires granted administrative (Super-user) privileges locally.' }
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance.'}
+									]
+								}
+							]
+						}
+					]
+                },
+			];
+	        $('#Registerloop').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#Registerloop');
+			$('#Registerloop').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+		(function(){
+			var element = document.getElementById("Registerloop");
+			var lastHeight = element.scrollHeight;
+			function detectChange(){
+				var currentHeight = element.scrollHeight;
+			if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+					}
+					}
+			detectChange();
+			setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+				})();
+</script>
+
+
+<div id="NoShell" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:200px;overflow-y:auto;"></div>
+<script>
+        $(function() {
+                var element = document.getElementById("NoShell");
+				var lastHeight = element.scrollHeight;
+				var data = [
+                { label: '&nbsp;&nbsp;&nbsp;&nbsp;My MondoPad shell will not open',
+                    children: [
+                        { label: '&nbsp;&nbsp;&nbsp;&nbsp;Has it worked previously?' },
+                        { label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes ' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Have you recently installed any 3ed party software' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please uninstall that software and reboot the MondoPad. Did this resolve you issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Some 3ed party software can block the shell from launching. Please contact support to help with reinstalling this software.' }
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please download the new software from the InFocus support site <a href="http://www.infocus.com/mondopad#support"  target="_blank">Here</a>. Did this resolve your issue?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Far Out!' }
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance.' }
+													]
+												},
+											]
+										}
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please download the new software from the InFocus support site <a href="http://www.infocus.com/mondopad#support"  target="_blank">Here</a>. Did this resolve your issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;That Rocks!' }
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance.' }
+											]
+										},
+									]
+								}
+							]
+						},											
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please download the new software from the InFocus support site <a href="http://www.infocus.com/mondopad#support"  target="_blank">Here</a>. Did this resolve your issue?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Isn&#146;t it nice when the troubleshooting works?' }
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance.' }
+									]
+								},
+							]
+						}
+					]
+                },
+			];
+	        $('#NoShell').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#NoShell');
+			$('#NoShell').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+		(function(){
+			var element = document.getElementById("NoShell");
+			var lastHeight = element.scrollHeight;
+			function detectChange(){
+				var currentHeight = element.scrollHeight;
+			if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+					}
+					}
+			detectChange();
+			setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+				})();
+</script>
+
+<div id="NoEmail" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:200px;overflow-y:auto;"></div>
+<script>
+        $(function() {
+                var element = document.getElementById("NoEmail");
+				var lastHeight = element.scrollHeight;
+				var data = [
+	{ label: '&nbsp;&nbsp;&nbsp;&nbsp;I cannot get my email to register ' ,
+		children: [
+		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Are you using Gmail?' },
+		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+			children: [
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;With Gmail the email address and user name fields must match and the domain field must be left blank. for example:<br\>Email: test@gmail.com<br\>User Name: Test<br\>Domain:<br\>Password: testpassword<br\>Did this resolve your issue?' },
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Make sure to tap save once you receive a “Receive mail success!”'}
+			]
+			},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Test all of the port options. For example for POP3 you can pick 995 or 110. Did this resolve your issue?' },
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Make sure to tap save once you receive a “Receive mail success!”'}
+				]
+				},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance.'}
+		]
+		}]
+		}]
+		},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+			children: [
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Test all of the port options. For example for POP3 you can pick 995 or 110. Did this resolve your issue?' },
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Make sure to tap save once you receive a “Receive mail success!”'}
+			]
+			},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check to make sure the address you have in the domain field is available on the web. If it is not available   please contact your network administrator for the correct address. Did this resolve your issue?' },
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Make sure to tap save once you receive a “Receive mail success!”'}
+				]
+				},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance.'}
+	]
+	}]
+	}]
+	}]
+	},
+			];
+	        $('#NoEmail').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#NoEmail');
+			$('#NoEmail').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+		(function(){
+			var element = document.getElementById("NoEmail");
+			var lastHeight = element.scrollHeight;
+			function detectChange(){
+				var currentHeight = element.scrollHeight;
+			if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+					}
+					}
+			detectChange();
+			setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+				})();
+</script>
+
+<div id="NoCal" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:200px;overflow-y:auto;"></div>
+<script>
+        $(function() {
+                var element = document.getElementById("NoCal");
+				var lastHeight = element.scrollHeight;
+				var data = [
+	{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The calendar is not showing' ,
+		children: [
+		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Has it worked before?' },
+		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+			children: [
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;check with your network administrator. Exchange Server disables the Room Mailbox account by default, it may be necessary to have the Exchange Server Administrator enable the account. Did this resolve your issue?' },
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Cool'}
+			]
+			},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance.'}
+		]
+		}]
+		},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+			children: [
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Confirm that you are connecting to a Microsoft Exchange calendar version 2007 & later, using EWS service, or Office 365. ' },
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Confirmed' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance.'}
+			]
+			},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Not Confirmed' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The MondoPad calendar can only work with Microsoft Exchange calendar versions 2007 & later, using EWS service, or Office 365.'}
+	]
+	}]
+	}]
+	},
+
+
+				];
+	        $('#NoCal').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#NoCal');
+			$('#NoCal').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+		(function(){
+			var element = document.getElementById("NoCal");
+			var lastHeight = element.scrollHeight;
+			function detectChange(){
+				var currentHeight = element.scrollHeight;
+			if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+					}
+					}
+			detectChange();
+			setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+				})();
+</script>
+
+
+
+<div id="NoVidCall" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:200px;overflow-y:auto;"></div>
+<script>
+        $(function() {
+                var element = document.getElementById("NoVidCall");
+				var lastHeight = element.scrollHeight;
+				var data = [
+
+	{ label: '&nbsp;&nbsp;&nbsp;&nbsp;I cannot make a video call' ,
+		children: [
+		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Have you installed any 3ed party software?' ,
+			children: [
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Uninstall this software and reboot the MondoPad. Did this resolve your issue?' },
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Some 3ed party software blocks this activity. Please contact MondoPad Support at 855-MONDOPAD to help with reinstalling this software.'}
+				]
+				},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please download the new software from the InFocus support site <a href=http://www.infocus.com/mondopad#support  target=_blank>Here</a>.  Did this resolve your issue?' },
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+						children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;sweet!'}
+					]
+					},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+						children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance. '}
+			]
+			}]
+			}]
+			},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please refer to your SIP provider to check your user name, passwords and proxys are entered correctly. Did this resolve your issue?' },
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Call on!'}
+				]
+				},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check with your network administrator to make sure that both the 5060 and 5061 UDP/TCP must be open inbound and outbound. Did this resolve your issue?' },
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+						children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;that’s cool!'}
+					]
+					},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+						children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check with your network administrator to see if you have an Application Layer Gateway (ALG) on your router. Please have them turn this feature off. Did this resolve your issue?' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+							children: [
+							{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Application Layer Gateway (ALG) can interfere with standard video calls'}
+						]
+						},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+							children: [
+							{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance.'}
+	]
+	}]
+	}]
+	}]
+	}]
+	}]
+	},				
+
+				];
+	        $('#NoVidCall').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#NoVidCall');
+			$('#NoVidCall').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+		(function(){
+			var element = document.getElementById("NoVidCall");
+			var lastHeight = element.scrollHeight;
+			function detectChange(){
+				var currentHeight = element.scrollHeight;
+			if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+					}
+					}
+			detectChange();
+			setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+				})();
+</script>
+
+
+<div id="LowQualVidCall" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:200px;overflow-y:auto;"></div>
+<script>
+        $(function() {
+                var element = document.getElementById("LowQualVidCall");
+				var lastHeight = element.scrollHeight;
+				var data = [
+
+	{ label: '&nbsp;&nbsp;&nbsp;&nbsp;My video calls have a poor quality' ,
+		children: [
+		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;When you select the Self View button does the image look normal?' },
+		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+			children: [
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check to make sure the plastic film is not still on the lens. Did this resolve your issue?' },
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Go to the camera properties from the dial pad>settings>general then down at the bottom. You will see a Powerline frequency with a box next to it, please select 50. Did this resolve your issue?' },
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Does your image look out of focus?' },
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+						children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance.'}
+					]
+					},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+						children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please download <a href="http://www.infocus.com/sites/default/files/SupportDocs/Mondopad_Family_Page/INF5520/How to enable auto focus.zip">this</a> file and follow the directions on the PDF to get auto focus back. Did this resolve your issue?' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+							children: [
+							{ label: '&nbsp;&nbsp;&nbsp;&nbsp;that’s cool'}
+						]
+						},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+							children: [
+							{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance.'}
+				]
+				}]
+				}]
+				},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;cool beans'}
+			]
+			}]
+			},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;cool beans'}
+		]
+		}]
+		},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+			children: [
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Make sure you are connected to a wired LAN. Did this resolve your issue?' },
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Bandwidth over LAN will give you a better quality image'}
+			]
+			},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Adjust the minimum and maximum bandwidth for your device (try lowering both to improve call quality). This feature is found on the setting tab of your video conferencing page. Did this resolve your issue?' },
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Glad that helped'}
+				]
+				},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check to make sure you have the necessary Bandwidth for the MondoPad Some 3ed party software blocks this activity. Please contact MondoPad Support at 855-MONDOPAD to help with reinstalling this software. Did that resolve your issue? ' },
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+						children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Awesome'}
+					]
+					},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+						children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance.'}
+	]
+	}]
+	}]
+	}]
+	}]
+	},				
+				];
+	        $('#LowQualVidCall').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#LowQualVidCall');
+			$('#LowQualVidCall').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+		(function(){
+			var element = document.getElementById("LowQualVidCall");
+			var lastHeight = element.scrollHeight;
+			function detectChange(){
+				var currentHeight = element.scrollHeight;
+			if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+					}
+					}
+			detectChange();
+			setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+				})();
+</script>
+
+
+<div id="AuthFail" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:200px;overflow-y:auto;"></div>
+<script>
+        $(function() {
+                var element = document.getElementById("AuthFail");
+				var lastHeight = element.scrollHeight;
+				var data = [
+
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;I keep getting an “Authentication Failed” on my Video Conferencing screen' ,
+		children: [
+		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Have you previously been able to make video calls?' },
+		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+			children: [
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check with your SIP provider to make sure your credentials are still correct. Did that resolve your issue?' },
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Awesome sauce!'}
+			]
+			},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Have your network administrator check to make sure there is not a local firewall or router blocking it. You can find more information on what they need to check for Some 3ed party software blocks this activity. Please contact MondoPad Support at 855-MONDOPAD to help with reinstalling this software.  Did that resolve your issue?  ' },
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;yep that can happen'}
+				]
+				},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance. '}
+		]
+		}]
+		}]
+		},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+			children: [
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Have your network administrator check to make sure there is not a local firewall or router blocking it. You can find more information on what they need to check for Some 3ed party software blocks this activity. Please contact MondoPad Support at 855-MONDOPAD to help with reinstalling this software. Did that resolve your issue?  ' },
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;firewall are funny that way'}
+			]
+			},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check with your SIP provider to make sure your credentials are still correct. Did that resolve your issue?' },
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Rad!'}
+				]
+				},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance. '}
+	]
+	}]
+	}]
+	}]
+	},
+
+				];
+	        $('#AuthFail').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#AuthFail');
+			$('#AuthFail').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+		(function(){
+			var element = document.getElementById("NoVidCall");
+			var lastHeight = element.scrollHeight;
+			function detectChange(){
+				var currentHeight = element.scrollHeight;
+			if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+					}
+					}
+			detectChange();
+			setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+				})();
+</script>
+
+
+<div id="NoSound" style="margin-left:80px;ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:200px;overflow-y:auto;"></div>
+<script>
+        $(function() {
+                var element = document.getElementById("NoSound");
+				var lastHeight = element.scrollHeight;
+				var data = [
+	{ label: '&nbsp;&nbsp;&nbsp;&nbsp;I cannot hear any sound coming from my MondoPad' ,
+		children: [
+		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Are you using a soundbar?' ,
+			children: [
+			{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Make sure the power cord is connected from the sound bar to the Mondopad.  Did that resolve your issue?' },
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;pesky cables'}
+				]
+				},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;When attaching the RCA audio cables there are 2 sets on the Mondopad. The bottom set is audio out, make sure the Sound Bar is connected to these. Did that resolve your issue?' },
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+						children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;silly cables'}
+					]
+					},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+						children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Make sure the power switch on the back of the sound bar is turned on. Did that resolve your issue?' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+							children: [
+							{ label: '&nbsp;&nbsp;&nbsp;&nbsp;yep it needs power'}
+						]
+						},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+							children: [
+							{ label: '&nbsp;&nbsp;&nbsp;&nbsp;With the panel remote make sure that Speaker is set to external. Did that resolve your issue?' },
+							{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+								children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Woohoo!'}
+							]
+							},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+								children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Using the remote make sure the volume on the panel is turned up as well. Did that resolve your issue?'}
+						]
+						}]
+						},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+							children: [
+							{ label: '&nbsp;&nbsp;&nbsp;&nbsp;cool'}
+						]
+						},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+							children: [
+							{ label: '&nbsp;&nbsp;&nbsp;&nbsp;In the upper right corner of the Mondopad client there is a speaker icon. Clicking this icon will bring up a slider that allows you to adjust volume level. Did that resolve your issue?' },
+							{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+								children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;rock on'}
+							]
+							},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+								children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Minimize the MondoPad Shell. In the bottom right corner you will see the windows audio icon. Make sure this is not turned all the way down or muted. Did that resolve your issue?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+									{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Good work'}
+								]
+								},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+									{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance. '}
+			]
+			}]
+			}]
+			}]
+			}]
+			}]
+			},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+				children: [
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;With the panel remote make sure that Speaker is set to internal. Did that resolve your issue?' },
+				{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;easypeasy'}
+				]
+				},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+					children: [
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Using the remote make sure the volume on the panel is turned up as well. Did that resolve your issue?' },
+					{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+						children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;pump up the volume'}
+					]
+					},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+						children: [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;In the upper right corner of the Mondopad client there is a speaker icon. Clicking this icon will bring up a slider that allows you to adjust volume level. Did that resolve your issue?' },
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+							children: [
+							{ label: '&nbsp;&nbsp;&nbsp;&nbsp;slider for the win'}
+						]
+						},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+							children: [
+							{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Minimize the MondoPad Shell. In the bottom right corner you will see the windows audio icon. Make sure this is not turned all the way down or muted. Did that resolve your issue?' },
+							{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+								children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;finally! Now time to celebrate!'}
+							]
+							},{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+								children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please contact MondoPad Support at 855-MONDOPAD for further assistance. '}
+	]
+	}]
+	}]
+	}]
+	}]
+	}]
+	}]
+	},				
+				
+				];
+	        $('#NoSound').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#NoSound');
+			$('#NoSound').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+		(function(){
+			var element = document.getElementById("NoSound");
+			var lastHeight = element.scrollHeight;
+			function detectChange(){
+				var currentHeight = element.scrollHeight;
+			if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+					}
+					}
+			detectChange();
+			setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+				})();
+</script>
+
+
+
+</body>
+</html>

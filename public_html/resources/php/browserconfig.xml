@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+<msapplication>
+<tile>
+<square70x70logo src="tiny.png"/>
+<square150x150logo src="square.png"/>
+<wide310x150logo src="simplelogowide.jpg"/>
+<square310x310logo src="simplelogolarge.jpg"/>
+<TileColor>#2078DB</TileColor>
+</tile>
+    <notification>
+      <polling-uri  src="feed.xml"/>
+      <polling-uri2  src="feed2.xml"/>
+      <polling-uri3  src="feed3.xml"/>
+      <frequency>30</frequency>
+      <cycle>3</cycle>
+    </notification>
+</msapplication>
+</browserconfig>

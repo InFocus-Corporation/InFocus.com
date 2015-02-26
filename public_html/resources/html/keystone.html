@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="/resources/js/jquery.scrollintoview.js"></script>
+<script src="/resources/js/jquery.scrollintoview.min.js"></script>
+<script src="/resources/js/tree.jquery.js"></script>
+<link rel="stylesheet" href="/resources/css/base.css">
+<link rel="stylesheet" href="/resources/css/jqtree.css">
+</head>
+
+
+
+
+<div id="Keystone" class="rounded" style="ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:500px;overflow-y:auto;width:900px"></div>
+<Script>
+
+        $(function() {
+                var element = document.getElementById("Keystone");
+				var lastHeight = element.scrollHeight;
+				var data = [
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;The first step is to perform a factory reset.  This can be found in the service menu (check your manual for details).  Is the image square?'},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes',
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;There are keystone settings to compensate for the projector being at an angle. Factory reset returns these to default.' }
+							]
+						},
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No',
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;My image looks like this: </br><img src="Top.png" width=80px><img src="http://www.infocus.com/sites/default/files/u38/Bottom.png" width=80px>' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;This means your projector is not level. If the top is skinnier than it is pointing downward, if the top is wider, then it is pointing upward. Ideally the projector should be perfectly level, this will give you the best quality image and the longest lamp life. If you must have the projector angled, use the verticle keystone settings in your projector menu. Did this resolve your issue?' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Again, it is recommended to have as little keystone as possible. We have a selection of extension arms for mounting your projector; if this would help please visit www.infocusstore.com.' }
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If you keystone your image and the top is still Not the same width as the bottom then it is likely that your projector is at too extreme an agle. If you place your projector on a flat surface with No angle, can you create a square image?' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;This shows that the projector is functioning as it should. Angling the projector beyong what it is capable of will cause damage to the projector, the lamp, and possibly void your warranty. It is recommended to have your projector as close to level as possible.' }
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;If, even on a flat surface, the width of the top and bottom are Not the same then your projector may need service.  Please <a href="https://portal.infocus.com/support/region.htm"  target="_blank">Click Here</a> to initiate service on the projector.' }
+													]
+												}
+											]
+										}
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;My image looks like this:</br><img src="http://www.infocus.com/sites/default/files/u38/Right.png" width=80px> <img src="http://www.infocus.com/sites/default/files/u38/Left.png" width=80px>' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;This means your projector is angled to the left or the right.  Some high end projectors have horizontal keystone, but it is not recommended as it will reduce the quality of the image. </br> Step 1. Rotate the projector until the image is square on the wall (it may be partially off the screen). </br>Step 2. Slide the projector to the right or left to bring the image onto the screen. </br><img src="http://www.infocus.com/sites/default/files/u38/KeyAdj.png" width=260px></br>    If you are still unable to get a square image Please <a href="https://portal.infocus.com/support/region.htm"  target="_blank">Click Here</a> to initiate service on the projector.' }
+									]								
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Only one corner of the image is distorted like this:</br><img src="http://www.infocus.com/sites/default/files/u38/Multi.png" width=160px>' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;This means there is a combination of the above two, and possibly keystoning as well.  Check again that a factory reset was completed and place the projector on a flat level surface.  </br> Step 1. Rotate the projector until the image is square on the wall (it may be partially off the screen). </br>Step 2. Slide the projector to the right or left to bring the image onto the screen. </br><img src="http://www.infocus.com/sites/default/files/u38/KeyAdj.png" width=260px> </br>   If you are still unable to get a square image Please <a href="https://portal.infocus.com/support/region.htm"  target="_blank">Click Here</a> to initiate service on the projector.' }						
+									]
+								}
+							]
+						}
+					];
+	        $('#Keystone').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#Keystone');
+			$('#Keystone').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+(function(){
+    var element = document.getElementById("Keystone");
+    var lastHeight = element.scrollHeight;
+    function detectChange(){
+        var currentHeight = element.scrollHeight;
+        if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+			
+        }
+    }
+    detectChange();
+    setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+})();
+</script>
+
+
+</body>
+</html>

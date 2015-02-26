@@ -1,0 +1,186 @@
+
+<script type="text/Javascript" src="/resources/plugins/TableFilter/tablefilter_all_min.js"></script>
+<link rel="stylesheet" href="/resources/plugins/TableFilter/filtergrid.css" />
+
+<script>
+function inIframe () {
+    try {
+        return window.self !== window.top;
+    } catch (e) {
+  $('#masthead').hide();
+    }
+}
+ function addRow(tableID) {
+ 
+            var table = document.getElementById(tableID);
+ 
+            var rowCount = table.rows.length;
+            var row = table.insertRow(rowCount);
+ 
+            var colCount = table.rows[1].cells.length;
+ 
+            for(var i=0; i<colCount; i++) {
+ 
+                var newcell = row.insertCell(i);
+    var prodValue = "";
+                newcell.innerHTML = table.rows[1].cells[i].innerHTML;
+                //alert(newcell.childNodes);
+               switch(newcell.childNodes[0].name) {
+                    case "product[]":
+                            newcell.childNodes[0].value = prodValue;
+       newcell.childNodes[0].style.width = '200px';
+                            break;
+                    case "delete":
+                            newcell.childNodes[0].checked = false;
+        newcell.childNodes[0].style.width = '25px';
+                           break;
+                    case "qty[]":
+                            newcell.childNodes[0].value = "";
+        newcell.childNodes[0].style.width = '75px';
+                           break;
+                }
+            }
+        }
+ 
+        function deleteRow(tableID) {
+            try {
+            var table = document.getElementById(tableID);
+            var rowCount = table.rows.length;
+ 
+            for(var i=0; i<rowCount; i++) {
+                var row = table.rows[i];
+                var chkbox = row.cells[0].childNodes[0];
+                if(null != chkbox && true == chkbox.checked) {
+                    if(rowCount <= 1) {
+                        alert("Cannot delete all the rows.");
+                        break;
+                    }
+                    table.deleteRow(i);
+                    rowCount--;
+                    i--;
+                }
+ 
+ 
+            }
+            }catch(e) {
+                alert(e);
+            }
+        }
+
+
+
+</script>
+<style>
+table { border-collapse: collapse; text-align: left; } 
+.rounded {font: normal 12px/150% Arial, Helvetica, sans-serif; background: #fff;  border: 1px solid #006699; -webkit-border-radius: 12px; -moz-border-radius: 12px; border-radius: 12px; }
+table td, 
+table th { padding: 4px 6px; }
+table thead th {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );background:-moz-linear-gradient( center top, #006699 5%, #00557F 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');background-color:#006699; color:#FFFFFF; font-size: 15px; font-weight: bold; border-left: 1px solid #0070A8; } 
+table thead th:first-child { border: none; }
+table tbody td { color: #00496B; border-left: 1px solid #E1EEF4;font-size: 12px;font-weight: normal; }
+table tbody td:first-child { border-left: none; }
+table tbody tr:last-child td { border-bottom: none; }
+table tfoot td div { border-top: 1px solid #006699;background: #E1EEF4;} 
+table tfoot td { padding: 0; font-size: 12px } 
+table tfoot td div{ padding: 2px; }
+table tfoot td ul { margin: 0; padding:0; list-style: none; text-align: right; }
+table tfoot  li { display: inline; }
+table tfoot li a { text-decoration: none; display: inline-block;  padding: 2px 8px; margin: 1px;color: #FFFFFF;border: 1px solid #006699;-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F) );background:-moz-linear-gradient( center top, #006699 5%, #00557F 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');background-color:#006699; }
+table tfoot ul.active, 
+table tfoot ul a:hover { text-decoration: none;border-color: #006699; color: #FFFFFF; background: none; background-color:#00557F;}
+table tbody tr:nth-child(even) {
+    background: #E1EEF4; color: #00496B;
+}
+#blurb, #list, #firmware{
+max-width:400px;
+}
+#navigation ul li{
+vertical-align:top;
+}
+  
+.btn{  
+  text-transform: capitalize;
+}
+.flexnav > li:nth-child(n) {
+    width: auto;
+	padding:0px 20px;
+}
+
+#content{
+padding-top:80px;
+}
+</style>
+ </head>
+ <body onload="if(inIframe()){$('#masthead').hide();}">
+  
+  		<header id="masthead" >
+<?php 
+if($_COOKIE["cmsedit"] == "Activate Edit Mode"){
+echo '<div style="float:left"><a href="/resources/editmode.php?exit">Click to EXIT "edit mode"</a></div>';
+}
+else{
+echo '<div style="float:left"><a href="/resources/editmode.php">Click to enter "edit mode"</a></div>';
+}   ?>
+			<div id="brand" class="C9" >
+				<h3 id="logo"><a href="/">InFocus</a></h3>
+				<p id="title"><?php echo $translate['The New Way to Collaborate']; ?></p>
+				<div class="headerNav" style=""><div style=""><input type="text" id="search"><button type="button" onclick="Search(document.getElementById('search').value);">search</button></div></div>
+				
+			
+			</div>
+		</header>
+			<div class="menu-button" style="position:fixed;width:10%;z-index:1102;"></div>
+			<nav class="main-nav" style="background-color:#24282B">
+			<div class="" style="width:1150px;margin:auto;">
+			<ul  class="flexnav" data-breakpoint="1130">
+				<li><a href="/resources/maincms">CMS Home</a></li>
+				<li><a href="/resources/mainmenu.php">Website Navigation</a></li>
+
+				     <li> <a>Guided Processes</a>
+					  <ul style="display:none">
+						<li class="" style="padding-top:10px"><a href="guided?product=projectors">Add a New Projector</a></li>
+						<li class="" style=""><a href="guided?product=displays">Add a New Display</a></li>
+						<li class="" style=""><a href="guided?product=accessories">Add a New Accessory</a></li>
+					  </ul>
+					 </li>
+
+					 <li><a>Specs</a>
+					  <ul style="display:none">
+						<li class="" style="padding-top:10px"><a href="/resources/projectors" title="Spec entry for projectors">Projectors</a></li>
+						<li class="" style=""><a href="/resources/displays" title="Spec entry for displays">Displays</a></li>
+						<li class="" style=""><a href="/resources/accessories" title="Spec entry for accessories">Accessories</a></li>
+					  </ul>
+					 </li>
+     <li><a href="/resources/series">Product Series</a></li>
+     <li><a >Text & Translations</a>
+      <ul class="container dropdown-list" style="display:none">
+        <li class="" style="padding-top:10px"><a href="/resources/producttext" title="Title, Header, Short Description, Hilight list, etc...">Product Text</a></li>
+        <li><a href="/resources/sitetext" Title="Various Site text like category descriptions">Site Text</a></li>
+        <li><a href="/resources/buttontrans" Title="Button and Label Translations">Label Text</a></li>
+        <li><a href="/resources/mkcustompage" Title="Custom pages like privacy policy or mondopad demo">Custom Pages</a></li>
+		<li><a href="/resources/overvieweditor" title="HTML 'overview' section for products">Overview</a></li>
+      </ul>
+     </li>
+     <li><a href="/resources/downloads" title="Specific files that will be displayed in the 'Dowloads' tab on the product pages">Downloads</a></li>
+          <li><a >Accessories</a>
+      <ul class="container dropdown-list" style="display:none">
+        <li class="" style="padding-top:10px"><a href="/resources/accessorymatrix" Title="Enter the accessory part number and check which products the accessory works with">Accy by Accy</a></li>
+        <li class="" style=""><a href="/resources/accessorymatrixp" Title="Enter the product part number and check which accessories it works with">Accy by Product</a></li>
+      </ul>
+     </li>
+          <li style="width:75px;"><a >Other</a>
+      <ul class="container dropdown-list" style="display:none">
+     <li><a href="/resources/redirects" Title="Add or Edit Redirects">Redirects</a></li>
+     <li><a href="/resources/addarticles" Title="Add or Edit Articles">Articles</a></li>
+     <li><a href="/resources/videos.php" Title="Add or Edit Videos">Videos</a></li>
+     <li><a href="/resources/resellers" Title="Add or Edit Resellers">Resellers</a></li>
+     <li><a href="/resources/leadassignment" Title="Edit Form Assignments">Form Assignments</a></li>
+     <li><a href="/resources/productsreview" Title="Review Products for completeness">Product Review</a></li>
+     <li><a href="/resources/searchterms" Title="Add terms and phrases for the search function">Search Terms</a></li>
+      </ul>
+     </li>
+
+				</ul>
+				</div>
+			</nav>
+

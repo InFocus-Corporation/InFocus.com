@@ -1,0 +1,12 @@
+header#masthead #brand h3#logo, header#masthead #brand p#title {
+  text-transform:none;
+}
+
+	h1, .h1 { 
+    text-transform: none;
+}
+
+
+h4, .h4 {
+    text-transform: none;
+}

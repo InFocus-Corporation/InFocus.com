@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# By default this .htaccess file will password-protect all file types in the
+# directory where it's located (and all subdirectories of that directory), by
+# passing all requests through the userbase.cgi script.  However, in some
+# cases you may want to bypass the password-protection for certain file types,
+# such as image files, CSS style files, etc.  One benefit of bypassing the
+# protection for those files is better performance, since adding an extra
+# filtering step onto every request is naturally more work than not doing so.
+# If you want to bypass the protection for these file types, you can do so by
+# enabling the RewriteCond line below, by deleting the "#" from the front of
+# the line.
+#
+#RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif|css|js|swf)$ [NC]
+RewriteRule (.*) /cgi-bin/userbase.cgi?pdir=01&ppge=$1 [L]

@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="/resources/js/jquery.scrollintoview.js"></script>
+<script src="/resources/js/jquery.scrollintoview.min.js"></script>
+<script src="/resources/js/tree.jquery.js"></script>
+<link rel="stylesheet" href="/resources/css/jqtree.css">
+</head>
+
+
+
+
+<div id="PrematureShutdown" style="ul{list-style-type:none};li{list-style-type:none};height:auto;max-height:500px;overflow-y:auto;"></div>
+<script>
+        $(function() {
+                var element = document.getElementById("PrematureShutdown");
+				var lastHeight = element.scrollHeight;
+				var data = [
+                        { label: '&nbsp;&nbsp;&nbsp;&nbsp;Does your projector shut off immediately, or after its been used for a while?' },
+                        { label: '&nbsp;&nbsp;&nbsp;&nbsp;Immediately' ,
+							children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please clean all vents and filters (if any) on the projector.  Also remove the lamp and clean any dust off the lamp screens.  Did this resolve your issue?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Projectors produce a large amount of heat, any restriction of airflow can cause the internal temperature of the projector to heat up substantially.  If it gets too hot the projector will turn itself off to prevent damage.' }
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check around the outside of the projector, are there any HVAC vents that may be blowing hot air on the projector, or could anything be restricting the airflow (there should be 4-6 inches on all sides of the projector for proper airflow).' },
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;There was something blocking/blowing on the projector.' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Projectors produce a large amount of heat, any restriction of airflow can cause the internal temperature of the projector to heat up substantially.  If it gets too hot the projector will turn itself off to prevent damage.' }
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;There is plenty of space for airflow and Nothing blowing hot air on the projector.' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Is your firmware up to date?  To check what version is current locate your projector below and go to the Documents and Tools section of the projector page.  The firmware is listed at the bottom.' },
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="https://portal.infocus.com/support/region.htm"  target="_blank">Click Here</a> to initiate service on the projector.' }
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Firmware can effect a great number of things in the projector.  It is best to keep it up to date.  Please update your firmware.  Did this resolve your issue?' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Remember it is always a good idea to update your firmware.  If you have additional issues in the future check to see if you are up to date.' }
+															]
+														},
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="https://portal.infocus.com/support/region.htm"  target="_blank">Click Here</a> to initiate service on the projector.' }
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},											
+						{ label: '&nbsp;&nbsp;&nbsp;&nbsp;After a while' ,
+                    		children: [
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check settings like Auto off Time, Sleep Timer, Screen Save Time, etc to make sure they are not on (see your user manual for details).  Did this resolve your issue?' },
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;These timers are in place to prevent the projector from being left on for long periods of time.  They are not necessary if you are consistent about turning off the projector when you are finished using it.' }
+									]
+								},
+								{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+									children: [
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Please clean all vents and filters (if any) on the projector.  Also remove the lamp and clean any dust off the lamp screens.  Did this resolve your issue?'},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Projectors produce a large amount of heat, any restriction of airflow can cause the internal temperature of the projector to heat up substantially.  If it gets too hot the projector will turn itself off to prevent damage.'}
+											]
+										},
+										{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+											children: [
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Check around the outside of the projector, are there any HVAC vents that may be blowing hot air on the projector, or could anything be restricting the airflow (there should be 4-6 inches on all sides of the projector for proper airflow).'},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;There was something blocking/blowing on the projector.' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Projectors produce a large amount of heat, any restriction of airflow can cause the internal temperature of the projector to heat up substantially.  If it gets too hot the projector will turn itself off to prevent damage.'}
+													]
+												},
+												{ label: '&nbsp;&nbsp;&nbsp;&nbsp;There is plenty of space for airflow and Nothing blowing hot air on the projector.' ,
+													children: [
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Is your firmware up to date?  To check what version is current locate your projector below and go to the Documents and Tools section of the projector page.  The firmware is listed at the bottom.' },
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="https://portal.infocus.com/support/region.htm"  target="_blank">Click Here</a> to initiate service on the projector.' }
+															]
+														},
+														{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+															children: [
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Firmware can effect a great number of things in the projector.  It is best to keep it up to date.  Please update your firmware.  Did this resolve your issue?' },
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Yes' ,
+																	children: [
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Remember it is always a good idea to update your firmware.  If you have additional issues in the future check to see if you are up to date.' }
+																	]
+																},
+																{ label: '&nbsp;&nbsp;&nbsp;&nbsp;No' ,
+																	children: [
+																		{ label: '&nbsp;&nbsp;&nbsp;&nbsp;Your projector will most likely require service.  Please <a href="https://portal.infocus.com/support/region.htm"  target="_blank">Click Here</a> to initiate service on the projector.' }
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					];
+	        $('#PrematureShutdown').tree({
+               data: data,
+				autoEscape: false,
+				selectable: true
+            });
+			var $tree = $('#PrematureShutdown');
+			$('#PrematureShutdown').bind(
+				'tree.click',
+				function(event) {
+					// The clicked node is 'event.node'
+					var node = event.node;
+					$tree.tree('toggle', node);
+					}
+					
+			);
+        });
+		
+		(function(){
+			var element = document.getElementById("PrematureShutdown");
+			var lastHeight = element.scrollHeight;
+			function detectChange(){
+				var currentHeight = element.scrollHeight;
+			if(lastHeight != currentHeight){
+            element.scrollTop = currentHeight;
+            lastHeight = currentHeight;
+					}
+					}
+			detectChange();
+			setInterval(detectChange, 5); //Checks each 200ms = 5 times a second
+				})();
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+[31-Oct-2014 14:14:29 America/New_York] PHP Warning:  require_once(BaseTest.php): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/plugins/googleapi/tests/general/ApiModelTest.php on line 21
+[31-Oct-2014 14:14:29 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'BaseTest.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/plugins/googleapi/tests/general/ApiModelTest.php on line 21
+[31-Oct-2014 14:15:41 America/New_York] PHP Warning:  require_once(BaseTest.php): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/plugins/googleapi/tests/general/ApiModelTest.php on line 21
+[31-Oct-2014 14:15:41 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'BaseTest.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/plugins/googleapi/tests/general/ApiModelTest.php on line 21
+[31-Oct-2014 18:16:31 UTC] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home/ifcprod/public_html/resources/plugins/googleapi/tests/BaseTest.php on line 23

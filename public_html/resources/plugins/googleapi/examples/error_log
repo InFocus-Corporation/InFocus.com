@@ -1,0 +1,85 @@
+[31-Oct-2014 14:28:52 America/New_York] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling POST https://www.googleapis.com/urlshortener/v1/url: (403) Access Not Configured. Please use Google Developers Console to activate the API for your project.' in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php:76
+Stack trace:
+#0 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php(41): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request))
+#1 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Client.php(548): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Resource.php(190): Google_Client->execute(Object(Google_Http_Request))
+#3 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Urlshortener.php(136): Google_Service_Resource->call('insert', Array, 'Google_Service_...')
+#4 /home/ifcprod/public_html/resources/plugins/googleapi/exampl in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php on line 76
+[31-Oct-2014 14:30:00 America/New_York] PHP Warning:  file_get_contents(): Filename cannot be empty in /home/ifcprod/public_html/resources/plugins/googleapi/examples/service-account.php on line 65
+[31-Oct-2014 14:30:00 America/New_York] PHP Fatal error:  Uncaught exception 'Google_Auth_Exception' with message 'Unable to parse the p12 file.  Is this a .p12 file?  Is the password correct?  OpenSSL error: ' in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Signer/P12.php:51
+Stack trace:
+#0 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Auth/AssertionCredentials.php(130): Google_Signer_P12->__construct(false, 'notasecret')
+#1 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Auth/AssertionCredentials.php(107): Google_Auth_AssertionCredentials->makeSignedJwt(Array)
+#2 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Auth/OAuth2.php(302): Google_Auth_AssertionCredentials->generateAssertion()
+#3 /home/ifcprod/public_html/resources/plugins/googleapi/examples/service-account.php(73): Google_Auth_OAuth2->refreshTokenWithAssertion(Object(Google_Auth_AssertionCredentials))
+#4 {main}
+  thrown in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Signer/P12.php on line 51
+[31-Oct-2014 14:30:08 America/New_York] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling GET https://www.googleapis.com/drive/v2/files?maxResults=10: (403) Insufficient Permission' in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php:76
+Stack trace:
+#0 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php(41): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request))
+#1 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Client.php(548): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Resource.php(190): Google_Client->execute(Object(Google_Http_Request))
+#3 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Drive.php(1793): Google_Service_Resource->call('list', Array, 'Google_Service_...')
+#4 /home/ifcprod/public_html/resources/plugins/googleapi/examples/multi-api.php(80): Google_Service_Drive_Files_Resource->listFiles(Array in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php on line 76
+[31-Oct-2014 14:30:47 America/New_York] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling GET https://www.googleapis.com/books/v1/volumes?q=Henry+David+Thoreau&filter=free-ebooks&key=%3CYOUR_API_KEY%3E: (400) Bad Request' in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php:76
+Stack trace:
+#0 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php(41): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request))
+#1 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Client.php(548): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Resource.php(190): Google_Client->execute(Object(Google_Http_Request))
+#3 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Books.php(2304): Google_Service_Resource->call('list', Array, 'Google_Service_...')
+#4 /home/ifcprod/public_html/resources/plugins/googleapi/examples/simple-query.php(57): Google_Se in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php on line 76
+[31-Oct-2014 14:32:13 America/New_York] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling GET https://www.googleapis.com/books/v1/volumes?q=Henry+David+Thoreau&filter=free-ebooks&key=AIzaSyBOg1vuastDTSg2zoLaHvE4qOLBXPIQtFc: (403) Access Not Configured. Please use Google Developers Console to activate the API for your project.' in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php:76
+Stack trace:
+#0 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php(41): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request))
+#1 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Client.php(548): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Resource.php(190): Google_Client->execute(Object(Google_Http_Request))
+#3 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Books.php(2304): Google_Service_Resource->call('list', Array, 'Google_Serv in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php on line 76
+[31-Oct-2014 14:32:24 America/New_York] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling GET https://www.googleapis.com/books/v1/volumes?q=Henry+David+Thoreau&filter=free-ebooks&key=AIzaSyBOg1vuastDTSg2zoLaHvE4qOLBXPIQtFc: (403) Access Not Configured. Please use Google Developers Console to activate the API for your project.' in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php:76
+Stack trace:
+#0 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php(41): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request))
+#1 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Client.php(548): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Resource.php(190): Google_Client->execute(Object(Google_Http_Request))
+#3 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Books.php(2304): Google_Service_Resource->call('list', Array, 'Google_Serv in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php on line 76
+[31-Oct-2014 14:32:26 America/New_York] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling GET https://www.googleapis.com/books/v1/volumes?q=Henry+David+Thoreau&filter=free-ebooks&key=AIzaSyBOg1vuastDTSg2zoLaHvE4qOLBXPIQtFc: (403) Access Not Configured. Please use Google Developers Console to activate the API for your project.' in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php:76
+Stack trace:
+#0 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php(41): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request))
+#1 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Client.php(548): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Resource.php(190): Google_Client->execute(Object(Google_Http_Request))
+#3 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Books.php(2304): Google_Service_Resource->call('list', Array, 'Google_Serv in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php on line 76
+[31-Oct-2014 14:32:27 America/New_York] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling GET https://www.googleapis.com/books/v1/volumes?q=Henry+David+Thoreau&filter=free-ebooks&key=AIzaSyBOg1vuastDTSg2zoLaHvE4qOLBXPIQtFc: (403) Access Not Configured. Please use Google Developers Console to activate the API for your project.' in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php:76
+Stack trace:
+#0 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php(41): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request))
+#1 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Client.php(548): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Resource.php(190): Google_Client->execute(Object(Google_Http_Request))
+#3 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Books.php(2304): Google_Service_Resource->call('list', Array, 'Google_Serv in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php on line 76
+[31-Oct-2014 14:35:44 America/New_York] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling GET https://www.googleapis.com/books/v1/volumes?q=Henry+David+Thoreau&filter=free-ebooks&key=AIzaSyA4TS9Oai3xcaCKtFFoa8M2byWMRq_rYaA: (403) Access Not Configured. Please use Google Developers Console to activate the API for your project.' in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php:76
+Stack trace:
+#0 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php(41): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request))
+#1 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Client.php(548): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Resource.php(190): Google_Client->execute(Object(Google_Http_Request))
+#3 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Books.php(2304): Google_Service_Resource->call('list', Array, 'Google_Serv in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php on line 76
+[31-Oct-2014 14:35:52 America/New_York] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling GET https://www.googleapis.com/books/v1/volumes?q=Henry+David+Thoreau&filter=free-ebooks&key=AIzaSyA4TS9Oai3xcaCKtFFoa8M2byWMRq_rYaA: (403) Access Not Configured. Please use Google Developers Console to activate the API for your project.' in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php:76
+Stack trace:
+#0 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php(41): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request))
+#1 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Client.php(548): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Resource.php(190): Google_Client->execute(Object(Google_Http_Request))
+#3 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Books.php(2304): Google_Service_Resource->call('list', Array, 'Google_Serv in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php on line 76
+[31-Oct-2014 14:35:54 America/New_York] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling GET https://www.googleapis.com/books/v1/volumes?q=Henry+David+Thoreau&filter=free-ebooks&key=AIzaSyA4TS9Oai3xcaCKtFFoa8M2byWMRq_rYaA: (403) Access Not Configured. Please use Google Developers Console to activate the API for your project.' in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php:76
+Stack trace:
+#0 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php(41): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request))
+#1 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Client.php(548): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Resource.php(190): Google_Client->execute(Object(Google_Http_Request))
+#3 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Books.php(2304): Google_Service_Resource->call('list', Array, 'Google_Serv in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php on line 76
+[31-Oct-2014 14:36:30 America/New_York] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling GET https://www.googleapis.com/books/v1/volumes?q=Henry+David+Thoreau&filter=free-ebooks&key=AIzaSyASirl89BdQ75mEAjG_a1blgfHWxmIJxGw: (403) Access Not Configured. Please use Google Developers Console to activate the API for your project.' in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php:76
+Stack trace:
+#0 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php(41): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request))
+#1 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Client.php(548): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Resource.php(190): Google_Client->execute(Object(Google_Http_Request))
+#3 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Books.php(2304): Google_Service_Resource->call('list', Array, 'Google_Serv in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php on line 76
+[31-Oct-2014 14:36:32 America/New_York] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling GET https://www.googleapis.com/books/v1/volumes?q=Henry+David+Thoreau&filter=free-ebooks&key=AIzaSyASirl89BdQ75mEAjG_a1blgfHWxmIJxGw: (400) Bad Request' in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php:76
+Stack trace:
+#0 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php(41): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request))
+#1 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Client.php(548): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Resource.php(190): Google_Client->execute(Object(Google_Http_Request))
+#3 /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Service/Books.php(2304): Google_Service_Resource->call('list', Array, 'Google_Service_...')
+#4 /home/ifcprod/public_html/resources/plugins/googleapi/examples/simple-que in /home/ifcprod/public_html/resources/plugins/googleapi/src/Google/Http/REST.php on line 76
