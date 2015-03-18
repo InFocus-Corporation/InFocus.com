@@ -170,6 +170,7 @@ $('div[contenteditable="true"]').each(function(i, editableElement)
 .alternateDivChildL2custom > div:nth-child(odd) > div:nth-child(2) > div:first-child {
 float:right;
 margin-left:1.5em;
+z-index:100;
 }
 
 .alternateDivChildL2custom > div {
@@ -180,6 +181,7 @@ padding-top:0em;
 .alternateDivChildL2custom > div:nth-child(even) > div:nth-child(2) > div:first-child {
 float:left;
 margin-right:1.5em;
+z-index:100;
 }
 
 .alternateDivChildL2custom > div > div:nth-child(2) > div.image-set {
