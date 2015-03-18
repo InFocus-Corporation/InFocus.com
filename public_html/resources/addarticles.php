@@ -1,4 +1,27 @@
-<!DOCTYPE html><?php$groups_allowed = "admin,editor,saleseditor,marketingeditor";require($_SERVER['DOCUMENT_ROOT'] . "/login/ublock.php");require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");$localdir = dirname(__FILE__);require($_SERVER['DOCUMENT_ROOT'] . "/resources/cmsmainmenu.html");mysqli_set_charset($connection, "utf8");$pn = $_GET['pn'];if(!empty($_GET['lang'])){$lang = $_GET['lang'];}?><head><script src="/ckeditor/ckeditor.js"></script><link rel="stylesheet" media="screen" href="/resources/css/core.css"><script type="text/javascript">
+<!DOCTYPE html>
+<?php
+$groups_allowed = "admin,editor,saleseditor,marketingeditor";
+require($_SERVER['DOCUMENT_ROOT'] . "/login/ublock.php");
+
+require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
+$localdir = dirname(__FILE__);
+
+require($_SERVER['DOCUMENT_ROOT'] . "/resources/cmsmainmenu.html");
+mysqli_set_charset($connection, "utf8");
+
+
+$pn = $_GET['pn'];
+if(!empty($_GET['lang'])){$lang = $_GET['lang'];}
+
+?>
+
+<head>
+
+
+<script src="/ckeditor/ckeditor.js"></script>
+<link rel="stylesheet" media="screen" href="/resources/css/core.css">
+
+<script type="text/javascript">
 var cat="";
 
 $(function() {

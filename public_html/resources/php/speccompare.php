@@ -2,7 +2,7 @@
 <?php
 $localdir = dirname(__FILE__);
 $homedir = $_SERVER['DOCUMENT_ROOT']; 
-require_once($homedir . "/resources/php/imageprocess.php"); 
+require_once($homedir . "/resources/php/imagetest.php"); 
 require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
 mysqli_set_charset($connection, "utf8");
 ini_set('default_charset', 'utf-8');

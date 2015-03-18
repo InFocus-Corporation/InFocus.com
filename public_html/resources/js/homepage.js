@@ -1,7 +1,18 @@
-var controlHTML = '<div class="removeafter" style="height:90px;width:120px;position:absolute;top:0;right:100px;z-index:1007;"> \<div style="margin:auto;width:65px;height:30px;background: url(/resources/images/slider-arrow-up.png) no-repeat scroll center center #808080;" \ onclick="$($(this).parent().parent()).insertBefore($(this).parent().parent().prev());"></div> \<div style="margin:auto;width:65px;height:30px;background: url(/resources/images/slider-arrow-down.png) no-repeat scroll center center #808080;" \ onclick="$($(this).parent().parent()).insertAfter($(this).parent().parent().next());"> </div> \<button style="width:120px" onclick="addBox(this);">Add Link Box</button> \<button style="width:120px" onclick="lastobject.remove();" title="Removes the last link-box that was either moved or resized">Remove Last</button> \<button style="width:120px" onclick="$(this).parent().parent().remove();">Remove Slide</button> \</div>';
+var controlHTML = '<div class="removeafter" style="height:90px;width:120px;position:absolute;top:0;right:100px;z-index:1007;"> \
+<div style="margin:auto;width:65px;height:30px;background: url(/resources/images/slider-arrow-up.png) no-repeat scroll center center #808080;" \ onclick="$($(this).parent().parent()).insertBefore($(this).parent().parent().prev());"></div> \
+<div style="margin:auto;width:65px;height:30px;background: url(/resources/images/slider-arrow-down.png) no-repeat scroll center center #808080;" \ onclick="$($(this).parent().parent()).insertAfter($(this).parent().parent().next());"> </div> \
+<button style="width:120px" onclick="addBox(this);">Add Link Box</button> \
+<button style="width:120px" onclick="lastobject.remove();" title="Removes the last link-box that was either moved or resized">Remove Last</button> \
+<button style="width:120px" onclick="$(this).parent().parent().remove();">Remove Slide</button> \
+</div>';
 
-for (i = 0; i < $(".swiper-slide.sedit").length; i++) { $(".swiper-slide.sedit")[i].innerHTML = $(".swiper-slide.sedit")[i].innerHTML + controlHTML;}
- var lastobject;$('.linkspan')
+for (i = 0; i < $(".swiper-slide.sedit").length; i++) { 
+
+$(".swiper-slide.sedit")[i].innerHTML = $(".swiper-slide.sedit")[i].innerHTML + controlHTML;
+}
+ var lastobject;
+
+$('.linkspan')
 .resizable({ handles: "se", create: setContainerResizer, stop:resizeStop})
 .draggable({ stop:dragStop});
 
@@ -67,7 +78,14 @@ if(box == null){return;}
 
 var parent = el.parentNode.parentNode;
 
-parent.innerHTML = parent.innerHTML + '<a href="' + box + '"><span class="linkspan" style=" \ position: absolute; \ top: 0%; \ width: 8.97%; \ height: 5%; \ left: 20%; \ opacity: 0;"></span></a>';
+parent.innerHTML = parent.innerHTML + '<a href="' + box + '"><span class="linkspan" style=" \
+ position: absolute; \
+ top: 0%; \
+ width: 8.97%; \
+ height: 5%; \
+ left: 20%; \
+ opacity: 0;"></span></a>';
+
  $('.linkspan')
 .resizable({ handles: "se", create: setContainerResizer, stop:resizeStop})
 .draggable({ stop:dragStop});
@@ -91,7 +109,8 @@ mouseEvent.target.parentNode.href = box;}
 
 function addSlider(el){
 
-$(".swiper-wrapper")[0].innerHTML = $(".swiper-wrapper")[0].innerHTML.replace("<!-- EndSwipeGenerated -->","") + '<div class="swiper-slide sedit" style="position:relative"> <div  class="crop cmsedit" contenteditable="true"><img style="" src="/resources/images/no-image"></div>' + controlHTML+ '</div> \<!-- EndSwipeGenerated -->';
+$(".swiper-wrapper")[0].innerHTML = $(".swiper-wrapper")[0].innerHTML.replace("<!-- EndSwipeGenerated -->","") + '<div class="swiper-slide sedit" style="position:relative"> <div  class="crop cmsedit" contenteditable="true"><img style="" src="/resources/images/no-image"></div>' + controlHTML+ '</div> \
+<!-- EndSwipeGenerated -->';
 refreshInstances();
 
 }
