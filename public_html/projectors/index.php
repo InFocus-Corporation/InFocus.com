@@ -162,7 +162,7 @@ cursor:pointer;
 		<ul class="floatList" style="overflow:hidden">
 				<li class="model"><div>
 					<a onclick="showCategory('mobile');">
-	<div class="image-set categoryThumb"  ><img src="<?php echo imagethumb('category-mobile-projectors','135');?>" alt="Mobile Projectors"/></div>
+	<div class="image-set categoryThumb"  ><img src="<?php echo imagethumb('category-mobile-projectors',NULL,'125');?>" alt="Mobile Projectors"/></div>
 	<span  class="title" id="mobile"><?php echo translate('Ultra Portable') . "<br>" . translate('Projectors');?></span></a>
 	<div class="description"><?php echo $pageText['mobile-short'];?></div>
 	
@@ -175,7 +175,7 @@ echo '<br>
 		?>
 				</div></li><li class="model"><div>
 					<a  onclick="showCategory('meeting');">
-	<div class="image-set categoryThumb" ><img src="<?php echo imagethumb('category-meeting-projectors','135');?>" alt="Meeting Projectors" /></div>
+	<div class="image-set categoryThumb" ><img src="<?php echo imagethumb('category-meeting-projectors',NULL,'125');?>" alt="Meeting Projectors" /></div>
 	<span  class="title" id="meeting"><?php echo translate('Office/Classroom') . "<br>" . translate('Projectors');?></span></a>
 	<div class="description"><?php echo $pageText['meeting-short'];?>
 	</div>
@@ -190,7 +190,7 @@ echo '<br>
 		?>
 				</div></li><li class="model"><div>
 					<a  onclick="showCategory('short-throw');">
-	<div class="image-set categoryThumb" ><img src="<?php echo imagethumb('category-short-throw-projectors','135');?>" alt="Short-Throw Projectors" /></div>
+	<div class="image-set categoryThumb" ><img src="<?php echo imagethumb('category-short-throw-projectors',NULL,'125');?>" alt="Short-Throw Projectors" /></div>
 	<span  class="title" id="short-throw"><?php echo translate('Short Throw') . "<br>" . translate('Projectors');?></span></a>
 	<div class="description"><?php echo $pageText['short-throw-short'];?>	
 </div>
@@ -205,7 +205,7 @@ echo '<br>
 		?>
 				</div></li><li class="model" ><div>
 					<a onclick="showCategory('large-venue');">
-	<div class="image-set categoryThumb" ><img src="<?php echo imagethumb('category-large-venue-projectors','135');?>" alt="Large-Venue Projectors" /></div>
+	<div class="image-set categoryThumb" ><img src="<?php echo imagethumb('category-large-venue-projectors',NULL,'125');?>" alt="Large-Venue Projectors" /></div>
 	<span  class="title" id="large-venue"><?php echo translate('Large Venue') . "<br>" . translate('Projectors');?></span></a>
 	<div class="description"><?php echo $pageText['large-venue-short'];?> 
 	</div>
@@ -220,7 +220,7 @@ echo '<br>
 		?>
 				</div></li><li class="model"><div>
 					<a onclick="showCategory('home-theater');">
-	<div class="image-set categoryThumb" ><img src="<?php echo imagethumb('category-home-theater-projectors','135');?>" alt="Home-Theater Projectors" /></div>
+	<div class="image-set categoryThumb" ><img src="<?php echo imagethumb('category-home-theater-projectors',NULL,'125');?>" alt="Home-Theater Projectors" /></div>
 	<span  class="title" id="home-theater"><?php echo translate('Home Theater') . "<br>" . translate('Projectors');?></span></a>
 	<div class="description"><?php echo $pageText['home-theater-short'];?>
 	</div>
@@ -235,7 +235,7 @@ echo '<br>
 		?>
 				</div></li><li class="model"><div>
 					<a onclick="showCategory('interactive');">
-	<div class="image-set categoryThumb" ><img src="<?php echo imagethumb('category-interactive-projectors','135');?>" alt="Interactive Projectors" /></div>
+	<div class="image-set categoryThumb" ><img src="<?php echo imagethumb('category-interactive-projectors',NULL,'125');?>" alt="Interactive Projectors" /></div>
 	<span  class="title" id="interactive"><?php echo translate('Interactive') . "<br>" . translate('Projectors');?></span></a>
 	<div class="description"><?php echo $pageText['interactive-short'];?>
 	</div>

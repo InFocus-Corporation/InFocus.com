@@ -94,11 +94,17 @@ else{$lang=$matches[0];}
 }
 else{
 
-if(substr($_SERVER['DOCUMENT_ROOT'], -4)=="html"){
-$lang = "en";
+if(strpos($_SERVER['DOCUMENT_ROOT'], ".de")>0){
+$lang = "de";
+}
+elseif(strpos($_SERVER['DOCUMENT_ROOT'], ".fr")>0){
+$lang = "fr";
+}
+elseif(strpos($_SERVER['DOCUMENT_ROOT'], ".nl")>0){
+$lang = "nl";
 }
 else{
-$lang = substr($_SERVER['DOCUMENT_ROOT'], -2);
+$lang = "en";
 } 
 }
 
@@ -297,7 +303,7 @@ $pagename = str_replace($replaceArray,"",$_SERVER['PHP_SELF']);
 		
 $localdir = dirname(__FILE__);
 $homedir = $_SERVER['DOCUMENT_ROOT']; 
-require_once($homedir . "/resources/php/imagetest.php"); 
+require_once($homedir . "/resources/php/imageprocess.php"); 
 
 if($_GET['edit']=="true" OR $_COOKIE["cmsedit"] == "Activate Edit Mode"){
 $_GET['edit']="true";
@@ -1346,6 +1352,18 @@ else{return $translate[$key];}
 <!--[if IE]>
     <link href="/resources/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <![endif]-->
+  
+<!-- Start Visual Website Optimizer Asynchronous Code -->
+<script type='text/javascript'>
+var _vwo_code=(function(){
+var account_id=19382,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+// DO NOT EDIT BELOW THIS LINE
+f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script>
+<!-- End Visual Website Optimizer Asynchronous Code -->
 
 <?php 
 

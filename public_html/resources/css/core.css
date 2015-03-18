@@ -1671,3 +1671,8 @@ form ul.wrap{
     -moz-column-count: 3; /* Firefox */
     column-count: 3;
 }
+
+.categoryThumb{
+  padding-right: 5%;
+  padding-left: 5%;
+  }

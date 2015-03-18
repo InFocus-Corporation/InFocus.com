@@ -2,160 +2,15 @@
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
 echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '"/>' . PHP_EOL;
 
-//
-//
-//test
-//
-//
 ?>
 <title>InFocus | Collaboration That Works</title>
 <meta name="description" content="Discover advanced projection equipment offered by InFocus. Global leader in LCD projectors and DLP projection, Mondopad products and projector accessories." />
 <meta name="keywords" content="infocus,mondopad,projector,projection,DLP,LCD,LCD display,digital display,visual communications,projector accessories,infocus company,digital technology,projection equipment,monopad, communication, touchscreen" />
 <script type="text/Javascript" src="/resources/js/idangerous.swiper-2.4.min.js"></script>
 <link rel="stylesheet" href="/resources/css/idangerous.swiper.css" />
-	<base target="_parent" />
+<base target="_parent" />
 <script>
 var pagetype = "index";
-
-function fixSwiperHeight(){
-return "test";
-var sHeight;
-  return sHeight;
-
-if($(".swiper-slide-active div").height() != null){
-sHeight = $(".swiper-slide-active div").height();
-}
-else if($(".swiper-slide-active img").height() != null){
-sHeight = $(".swiper-slide-active img").height();
-}
-else if($(".swiper-slide-active .player").height() != null){
-sHeight = $(".swiper-slide-active .player").height();
-}
-
-else{
-sHeight = $(".swiper-slide-active").height();
-}
-if(sHeight==0){sHeight='937px';}
-
-
- $('.device').stop();
- $('.swiper-slide-visible').stop();
- $('.device').animate({  height: sHeight  },500);
-  $('.swiper-slide-visible').animate({
-    height: sHeight
-  },500);  
-  
-  mySwiper.reInit();
-  
-  return "test";
-}
-  
-
- "use strict"; 
-
-(function($){
-    var defaultOptions = {
-        rotateText: null,
-        padding: null,
-        fontSizeFactor: 1,
-		maximumFontSize: null,
-        limitingDimension: "both"
-    }
-    
-    $.fn.bigText = function(options) {
- 			$(this).removeAttr('style');
-       return this.each(function() {
-            options = $.extend({}, defaultOptions, options);
-            var $this= $(this);
-            $this.css('display', "inline-block");
-            $this.css('clear', "both");
-            //$this.css('float', "left"); //the need to set this is very odd, its due to margin-collapsing. See https://developer.mozilla.org/en-US/docs/Web/CSS/margin_collapsing
-            $this.css('font-size', (1000 * options.fontSizeFactor) + "px");
-            $this.css('line-height', "1000px");
-            $this.css('position', "relative");
-            $this.css('white-space', "nowrap");
-            //$this.css('top', "50%");
-            //$this.css('left', "50%");
-            $this.css('padding', 0);
-            $this.css('margin', 0);
-            
-			$this.parent().css("overflow", "hidden");
-
-            if (options.padding !== null) {
-                if (typeof options.padding === "number") {
-                    options.padding = options.padding;
-                } else {
-                    throw "bigText error: Padding value must be a number";
-                }
-                //$this.parent().css("padding", options.padding + "px");
-            }
-
-
-            var box = {};
-            if (options.rotateText !== null) {
-                if (typeof options.rotateText !== "number") {
-                    throw "bigText error: Rotate value must be a number";
-                }
-                var rotate = "rotate(" + options.rotateText + "deg)";
-                $this.css("-webkit-transform", rotate);
-                $this.css("-ms-transform", rotate);
-                $this.css("-moz-transform", rotate);
-                $this.css("-o-transform", rotate);
-                $this.css("transform", rotate);
-                //calculating bounding box of the rotated element
-                var w = $this.width();
-                var h = $this.height();
-                var sin = Math.abs(Math.sin(options.rotateText * Math.PI / 180));
-                var cos = Math.abs(Math.cos(options.rotateText * Math.PI / 180));
-                box.width = w * cos + h * sin;
-                box.height = w * sin + h * cos;
-            } else {
-                box.width = $this.outerWidth();
-                box.height = $this.outerHeight();
-                //box.height = 1000; //we know this for sure because of line-height
-            }
-
-            var padding = {
-                left: parseInt($this.parent().css('padding-left')),
-                top: parseInt($this.parent().css('padding-top')),
-                right: parseInt($this.parent().css('padding-right')),
-                bottom: parseInt($this.parent().css('padding-bottom'))
-            };
-			
-		
-            var foo = ($this.parent().innerWidth() - padding.left - padding.right) / box.width;
-            var bar = ($this.parent().innerHeight() - padding.top - padding.bottom) / box.height;
-            var lineHeight;
-
-			if (options.limitingDimension.toLowerCase() === "width") {
-                lineHeight = Math.floor(foo * 1000);
-				$this.parent().height(lineHeight);
-			} else if (options.limitingDimension.toLowerCase() === "height") {
-                lineHeight = Math.floor(bar * 1000);
-			} else if (foo < bar) {
-                lineHeight = Math.floor(foo * 1000);		
-			} else if (foo >= bar) {
-                lineHeight = Math.floor(bar * 1000);
-			}
-
-			var fontSize= lineHeight * options.fontSizeFactor;
-			if (options.maximumFontSize !== null && fontSize > options.maximumFontSize) {
-				fontSize= options.maximumFontSize;
-				lineHeight= fontSize / options.fontSizeFactor;
-			}
-            $this.css('font-size', fontSize  + "px");
-            $this.css('line-height', lineHeight  + "px");
-            //centralizing text, top and left are defined as 50% on the CSS
-            $this.css('margin-left', (-$this.width() / 2) + "px");
-            //$this.css('margin-top', (-$this.height() / 2) + "px");
-            //$this.css('margin-right', 0);
-            $this.css('margin', 'auto');
-			if (options.limitingDimension.toLowerCase() === "height") {
-				$this.parent().width($this.width());
-			}
-        });
-    } 
-})(jQuery);
 </script>
 <style>
 .swiper-slide img{
@@ -168,6 +23,10 @@ z-index:100;
 
 .device{
 z-index:10;
+}
+
+.CTA li:nth-child(3), .CTA li:nth-child(4){
+	padding-top:1%;
 }
 
 .tout44 {
@@ -208,6 +67,9 @@ display:none;
 background: #F2F2F2;
 }
 
+.large-CTA img{
+	max-width: 95.5%;
+}
 .crop {
     width: 100%;
     overflow: hidden;
@@ -246,7 +108,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 <a class="arrow-right" href="#"></a>
 <div class="swiper-container" >
 <div id="swiperwrap" class="swiper-wrapper"><!-- SwipeGenerated -->
-<div class="swiper-slide sedit" style="position:relative"> <div aria-describedby="" title="Rich Text Editor, editor7" aria-label="Rich Text Editor, editor7" role="textbox" style="position: relative;" spellcheck="false" tabindex="0" class="crop cmsedit    "><img alt="InFocus 1080p HD Projector Values" data-cke-saved-src="/resources/images/InFocus-1080p-HD-Projector-Lineup.png" src="/resources/images/InFocus-1080p-HD-Projector-Lineup.png"><br></div><a style="height: 28px;" href="http://www.infocusstore.com/High-Definition-Projectors/b/10483487011"><span class="linkspan" style="position: absolute; top: 83.683%; width: 10.767%; height: 9.32401%; left: 27.2124%; opacity: 0;"></span></a><a style="height: 28px;" href="/hd-projector-lineup"><span class="linkspan" style="position: absolute; top: 83.683%; width: 10.9145%; height: 9.32401%; left: 10.1032%; opacity: 0;"></span></a></div><div class="swiper-slide sedit" style="position:relative"> <div aria-describedby="" title="Rich Text Editor, editor2" aria-label="Rich Text Editor, editor2" role="textbox" style="position: relative;" spellcheck="false" tabindex="0" class="crop cmsedit  "><img alt="InFocus Thunder Speakerphone" src="/resources/images/InFocus-Thunder-Speakerphone-Intro.png"></div><a style="height: 25px;" href="/peripherals/INA-TH150"><span class="linkspan" style="position: absolute; top: 74.4949%; width: 13.6953%; height: 14.899%; left: 16.5316%; opacity: 0;"></span></a></div><div class="swiper-slide" style="position:relative">
+<div class="swiper-slide sedit" style="position:relative"> <div style="position: relative;" class="crop cmsedit"><img alt="InFocus 1080p HD Projector Values" src="/resources/images/InFocus-1080p-HD-Projector-Low-Price.png"></div><a style="height: 28px;" href="http://www.infocusstore.com/High-Definition-Projectors/b/10483487011"><span class="linkspan" style="position: absolute; top: 83.2957%; width: 10.8011%; height: 9.25508%; left: 75.8941%; opacity: 0;"></span></a><a style="height: 28px;" href="/hd-projector-lineup"><span class="linkspan" style="position: absolute; top: 83.07%; width: 10.9442%; height: 9.25508%; left: 58.7983%; opacity: 0;"></span></a></div><div class="swiper-slide sedit" style="position:relative"> <div style="position: relative;" class="crop cmsedit"><img alt="InFocus Thunder Speakerphone" src="/resources/images/InFocus-Thunder-Speakerphone-Meetings.png"></div><a style="height: 28px;" href="/peripherals/INA-TH150"><span class="linkspan" style="position: absolute; top: 27.4419%; width: 11.8304%; height: 14.8837%; left: 25.2232%; opacity: 0;"></span></a></div><div class="swiper-slide" style="position:relative">
 <img src="/resources/images/InFocus-MVP100-Video-Phone-Video-Marquee">
 <div id="ytcover" class="" style="width: 35%;
 height: 18%;
@@ -260,7 +122,7 @@ cursor:pointer;"></div>
 
 </div>
  
- <div class="swiper-slide" style="position:relative"> <div aria-describedby="" title="Rich Text Editor, editor3" aria-label="Rich Text Editor, editor3" role="textbox" spellcheck="false" tabindex="0" style="position: relative;" class="crop cmsedit sedit  "><img alt="InFocus LightPro IN1146 Mobile LED Projector" src="/resources/images/InFocus-LightPro-IN1146-Reviews.png"></div><a style="height: 25px;" href="/projectors/IN1146"><span class="linkspan" style="position: absolute; top: 61.8037%; width: 9.79557%; height: 7.95756%; left: 73.2538%; opacity: 0;"></span></a><a style="height: 25px;" href="http://www.infocusstore.com/InFocus-LightPro-IN1146-Mobile-Projector/dp/B00H9SKMFE"><span class="linkspan" style="position: absolute; top: 74.8011%; width: 16.5247%; height: 13.5279%; left: 69.7615%; opacity: 0;"></span></a></div>
+ <div class="swiper-slide" style="position:relative"> <div style="position: relative;" class="crop cmsedit sedit"><img alt="InFocus LightPro IN1146 Mobile LED Projector" src="/resources/images/InFocus-LightPro-IN1146-Reviews.png"></div><a style="height: 25px;" href="/projectors/IN1146"><span class="linkspan" style="position: absolute; top: 61.8037%; width: 9.79557%; height: 7.95756%; left: 73.2538%; opacity: 0;"></span></a><a style="height: 25px;" href="http://www.infocusstore.com/InFocus-LightPro-IN1146-Mobile-Projector/dp/B00H9SKMFE"><span class="linkspan" style="position: absolute; top: 74.8011%; width: 16.5247%; height: 13.5279%; left: 69.7615%; opacity: 0;"></span></a></div>
  
 
 
@@ -405,17 +267,17 @@ $.get(
 
   </script>
 
-<div id="category" class="C9 cmsedit" style="padding-top:0.5em;max-width:1153px;padding-left: 3px;"><!-- CTAGenerated -->
-<div class="C4 Col image-set">
-<div><a href="/mondopad-live-demo"><img alt="See a Live Mondopad Demo" src="/resources/images/InFocus-Mondopad-Live-Demo-Home.png"></a></div>
+<div id="category" class="C9 cmsedit" style="padding-top:2.5em;max-width:1153px;"><!-- CTAGenerated -->
+<div class="C4 Col image-set large-CTA">
+<div><a href="/mondopad-live-demo"><img alt="See a Live Mondopad Demo" src="/resources/images/InFocus-Mondopad-Live-Demo.gif"></a></div>
 </div>
 
-<div class="C6 Col Col_child C5_child" style="margin-top:5.2%;">
+<div class="C6 Col Col_child C5_child CTA">
 
-	<li class="image-set" style=""><a href="/product-finder"><img alt="Projector Finder" src="/resources/images/CTA-Thumb-TL.png"></a></li>
-	<li class="image-set" style=""><a href="/accessories/CONX"><img alt="InFocus ConX Video Meeting" src="http://www.infocus.com/resources/images/InFocus-ConX-Video-Meeting-340x220.png"></a></li>
-	<li class="image-set" style="text-align:center"><a href="http://www.infocusstore.com"><img alt="Shop at the InFocus Store" src="/resources/images/InFocus-Home-Store-340x220.png"></a></li>
-	<li class="image-set"><a href="/projectors/IN3138HD"><img alt="IN3138HD 1080p 3D Projector" src="/resources/images/InFocus-IN3138HD-Projector-EdChoice-340x220.png"></a></li>
+	<li class="image-set" style=""><a href="/peripherals/INF-SPTZ-2"><img alt="InFocus RealCam PTZ Camera" src="/resources/images/InFocus-RealCam-PTZ-Camera.png"></a></li>
+	<li class="image-set" style=""><a href="/product-finder"><img alt="Find a projector based on your needs" src="/resources/images/InFocus-Projector-Finder-Help-Choose.png"></a></li>
+	<li class="image-set" style="text-align:center"><a href="http://www.infocusstore.com"><img alt="Shop at the InFocus Store" src="/resources/images/InFocus-Store-Free-Shipping-March.png"></a></li>
+	<li class="image-set"><a href="/peripherals/INLITESHOW4"><img alt="Present wirelessly to any display with LiteShow 4" src="/resources/images/InFocus-LiteShow4-Wireless-Adapter.png"></a></li>
 
 </div>
 <!-- EndCTAGenerated --></div> 
