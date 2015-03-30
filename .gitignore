@@ -102,5 +102,8 @@ public_html/tmp/
 public_html/resources/misc/
 public_html/resources/documents/
 public_html/resources/firmware/
+public_html/resources/images/
 public_html/cgi-bin/
 public_html/upload/
+ftpsync.settings
+ftpsync.settings.txt
