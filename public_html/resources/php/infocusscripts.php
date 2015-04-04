@@ -232,8 +232,8 @@ $AmazonSearch = explode(" <a href=",$AmazonSearch);
  
 $lastValue = "";
 
-$searchA = 	array("LIGHTPRO-", '"HTTP://WWW.INFOCUSSTORE.COM/INFOCUS-', "JTOUCH-70", "JTOUCH-55", "BIGTOUCH-55", "BIGTOUCH-70", "JTOUCH-65", "MONDOPAD-55", "MONDOPAD-70", "MONDOPAD-80", "Q-TABLET");
-$replaceA = array("", "", "INF7001A", "INF5520A~NOPC", "INF55WIN8", "INF7011", "INF6501A", "INF5520A", "INF7021", "INF8021", "INP~110Q-");
+$searchA = 	array("LIGHTPRO-", '"HTTP://WWW.INFOCUSSTORE.COM/INFOCUS-', "Q-TABLET-FOR-BUSINESS", "Q-TABLET-FOR-HOME", "JTOUCH-70", "JTOUCH-55", "BIGTOUCH-55", "BIGTOUCH-70", "JTOUCH-65", "MONDOPAD-55", "MONDOPAD-70", "MONDOPAD-80");
+$replaceA = array("", "", "INP~120Q~PR-", "INP~120Q-", "INF7001A", "INF5520A~NOPC", "INF55WIN8", "INF7011", "INF6501A", "INF5520A", "INF7021", "INF8021");
 
 foreach($AmazonSearch as &$Result){
 $Result = substr($Result,0,strpos($Result,"?"));
@@ -255,8 +255,8 @@ $AmazonSearch = explode(" <a href=",$AmazonSearch);
  
 $lastValue = "";
 
-$searchA = 	array("LIGHTPRO-", '"HTTP://WWW.INFOCUSSTORE.COM/INFOCUS-', "JTOUCH-70", "JTOUCH-55", "BIGTOUCH-55", "BIGTOUCH-70", "JTOUCH-65", "MONDOPAD-55", "MONDOPAD-70", "MONDOPAD-80", "Q-TABLET");
-$replaceA = array("", "", "INF7001A", "INF5520A~NOPC", "INF55WIN8", "INF7011", "INF6501A", "INF5520A", "INF7021", "INF8021", "INP~110Q-");
+//$searchA = 	array("LIGHTPRO-", '"HTTP://WWW.INFOCUSSTORE.COM/INFOCUS-', "JTOUCH-70", "JTOUCH-55", "BIGTOUCH-55", "BIGTOUCH-70", "JTOUCH-65", "MONDOPAD-55", "MONDOPAD-70", "MONDOPAD-80", "Q-TABLET");
+//$replaceA = array("", "", "INF7001A", "INF5520A~NOPC", "INF55WIN8", "INF7011", "INF6501A", "INF5520A", "INF7021", "INF8021", "INP~110Q-");
 
 foreach($AmazonSearch as &$Result){
 $Result = substr($Result,0,strpos($Result,"?"));
@@ -1111,7 +1111,7 @@ echo $row;
 
 foreach($dlRows as $othercat){
 
-  if(COUNT($dlRows[$othercat])>0){
+if(COUNT($dlRows[$othercat])>0){
   echo "<h2 style='margin-top:40px;text-align:center;'>$othercat</h2>";
 //<!--Trans-Marker-->
     echo '<div class="rounded" style="margin:auto;max-wi

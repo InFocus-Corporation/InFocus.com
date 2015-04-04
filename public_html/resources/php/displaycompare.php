@@ -113,7 +113,7 @@ else{$translate[$row[0]] = $row[1];}
 	SELECT * from InFocus.displays WHERE partnumber NOT IN (
 	SELECT partnumber FROM InFocus.displays WHERE lang = '" . $lang . "' AND (partnumber LIKE '" . $partnumbers ."')) 
 	AND lang = 'en' 
-	AND (partnumber LIKE '" . $partnumbers ."')) as selectdisplays","false");
+	AND (partnumber LIKE '" . $partnumbers ."') ORDER BY partnumber DESC) as selectdisplays","false");
 
     echo '</div>';
 

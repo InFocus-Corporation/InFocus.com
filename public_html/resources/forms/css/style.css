@@ -1,0 +1,321 @@
+/* 
+Contents:
+Global
+Header
+
+*/
+
+
+/* Global
+-------------------------------------------------- */
+
+body { background: #eff2f7; }
+
+.h1, .h2, .h3, h1, h2, h3 { margin: 0px; color: #424142; text-transform: uppercase; }
+
+h1 { font-size: 13px; border-bottom: 1px dotted #dddcdc; padding-bottom: 10px; margin-bottom: 15px; }
+h3 { font-size: 10px;  }
+
+ul { margin: 0px; padding: 0px; }
+
+ul li { list-style: none; }
+
+
+/* Header
+-------------------------------------------------- */
+
+#projNavResp .nav { display: none; }
+/*.projNavDrop { margin: 10px 0px 0px 100px; }*/
+
+.navbar-brand { margin-right: 20px; }
+
+.navbar-default { background: #2b72b9; }
+.navbar-default .navbar-nav>li>a { color: #ffffff; }
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: #cecece; }
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.open>a:hover { color: #ffffff; background: #175899; }
+.navbar-toggle { background: #ffffff; }
+
+@media (max-width: 767px) {
+ .navbar-default .navbar-nav .open .dropdown-menu>li>a { color: #ffffff; }   
+}
+
+/* Custom responsive drop nav */
+
+.projDrop { border-left: 1px solid #8f8f8f; border-right: 1px solid #8f8f8f; }
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+collapse {
+  max-height: 540px;
+}
+
+@media (min-width: 1200px) {
+    #projNavResp .nav { display: none; }
+    .projNavDrop { margin-left: 100px;  }     
+}
+
+@media (max-width: 1200px) {
+    #projNavResp .nav { display: none; }
+    .projNavDrop { margin-left: 100px;  }     
+}
+
+@media (max-width: 979px) {
+    #projNavResp .nav { display: none; }
+    .projNavDrop { margin-left: none !important; }    
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .projNavDrop { margin-left: none !important; }    
+}
+
+@media (max-width: 768px) {
+    #projNavResp .nav { display: block; }
+    .projNavDrop { display: none; }
+}
+
+
+
+/* Left Column
+-------------------------------------------------- */
+
+ul.projDropList { margin: 9px 0px 0px 0px; }
+ul.projDropList li, .projModelInput li { float: left; }
+ul.projDropList li { margin-right: 15px; }
+.projModelInput .vertDivide { margin-top: -2px; }
+.projModelInput input[type="text"] { width: 150px; }
+
+.projModelInput .btn:hover { -webkit-transition-property:color, background; 
+-webkit-transition-duration: 0.125s, 0.125s; -webkit-transition-timing-function: linear, ease-in; }
+
+.pBlock { padding: 20px 20px 5px 20px; -webkit-box-shadow: 0 0 4px rgba(0,0,0,.2); moz-box-shadow: 0 0 4px rgba(0,0,0,.2); box-shadow: 0 0 4px rgba(0,0,0,.2); border-radius:3px ;-moz-border-radius:3px ;-webkit-border-radius: 3px; }
+
+.nav-tabs { border-bottom: none;  }
+
+.topLeftVis, .btmLeftScale { background: #ffffff; margin-left: 100px; }
+.btmLeftScale { padding-bottom: 0px; }  
+.topLeftVis { margin-top: 5px; }
+.topRightModel, .rightZoom, .rightOffset, .rightSupport, .topRightSpec, .rightLens { background: #ffffff; margin-right: 100px; }
+.btmLeftScale, .rightZoom, .rightOffset, .rightSupport, .rightLens  { margin-top: 25px; }
+.btmLeftScale hr { margin: 5px 0px; }
+
+@media (max-width: 1200px) {
+    .topRightModel, .rightZoom, .rightOffset, .rightSupport, .topRightSpec, .rightLens { margin-right: 30px; }
+}
+
+@media (max-width: 979px) {
+    .topLeftVis { margin-top: 5px; }    
+    .topLeftVis, .btmLeftScale { margin-left: 0px; }
+    .topRightModel, .rightZoom, .rightOffset, .rightSupport, .topRightSpec, .rightLens { margin-right: 0px; }
+    .editTogGroup { margin: 20px 0px 0px 0px; } 
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .topLeftVis, .btmLeftScale { margin-left: 0px; }
+    .topRightModel, .rightZoom, .rightOffset, .rightSupport, .topRightSpec, .rightLens { margin-right: 0px; }
+}
+
+@media (max-width: 768px) {
+    .topLeftVis, .btmLeftScale { margin-left: 0px; }
+    .topRightModel, .rightZoom, .rightOffset, .rightSupport, .topRightSpec, .rightLens { margin-right: 0px; }
+    .projModelInput .vertDivide { display: none; }
+}
+
+
+
+/* Visual Scale */
+
+.vertDivide { width: 1px; height: 38px; border-left: 1px solid #a2a2a2; }
+.vizBtmWrap { margin-bottom: 15px; }
+.aRatioTitle h3 { width: 56px; line-height: 15px; }
+.vizOffset h3 { width: 46px; line-height: 15px; }
+.aRatio ul:after, .vizOffset ul:after, .vizBtmWrap:after, .projModelInput:after, ul.projDropList:after { content: ""; display: table; clear: both; }
+.aRatio li, .vizOffset li { float: left; }
+.aRatioType h2 { font-size: 15px; margin: 9px; }
+.vizImage { width: 100%; min-height: 200px; }
+.vizOffset { float: left; }
+.vizTitle h2 { font-size: 18px; margin: 5px; }
+.topLeftVis .vertDivide { float: left; margin: -4px 14px 0px 10px; }
+.distTitle h3 { width: 56px; line-height: 15px; }
+
+/* Distance */
+
+
+.btmLeftScale .vertDivide { height: 34px; margin-right: 12px; } 
+.btmLeftScale h1 { border: none; padding-bottom: 0px; }
+.distMessage { border-bottom: 1px dotted #dddcdc; margin-bottom: 8px; }
+.leftSlide { margin: 18px 8px 0px 8px; }
+.btmLeftScale label { font-size: 12px; margin: 10px 10px 0px 10px; }
+.btmLeftScale input[type="text"] { max-width: 60px; }
+.btmLeftScale h3 { font-size: 13px; margin: 7px 0px 15px 0px; text-transform: none; }
+.scaleWrap ul { margin: 50px 0px 0px 0px; }
+.scaleWrap ul.tabdistWrap { margin: 0px 15px 0px 0px; }
+.scaleWrap ul:after, .inTab:after, .nearFar ul:after , ul.distMessage:after { content: ""; display: table; clear: both; } 
+.scaleWrap li { float: left; }
+.scaleWrap .vertDivide { margin: -2px 20px 0px 10px; }
+.scaleWrap .btn { background: #565A5C; color: #ffffff; }
+.scaleWrap .btn:hover { background: #32383b; }
+#scaleListLast { margin-bottom: 20px; }
+.btmLeftScale { margin-bottom: 30px; }
+.secHide, .secWidthHide, .secHeiHide, .secDiaHide { display: none; }
+li.distHead { float: left; }
+li#dist_desc { float: right; margin-top: -5px; }
+#dist_desc img { width: 30px; height: 26px; float: left; display: inline-block; margin: -3px 5px 0px 0px; }
+#dist_desc p { float: left; display: inline-block; font-size: 12px; line-height: 27px; margin-left: 5px; }
+.inTab { padding: 10px 0px 10px 10px; border: 1px solid #dddddd; -webkit-border-radius: 0px 0px 4px 4px; -moz-border-radius: 0px 0px 4px 4px; border-radius: 0px 0px 4px 4px; }
+.inTab input[type="text"] { max-width: 55px; font-size: 12px; float: left; }
+.inTab label { float: left; }
+.tab-pane label:last-child { margin-right: 0px; }
+.inTab .vertDivide { float: left; }
+.btmLeftScale .nav>li>a { padding: 7px 13px; }
+.blocky { margin: -30px 0px 10px 0px; }
+
+@media (max-width: 1200px) {
+    .respBreak { margin-top: 50px; }   
+}
+
+@media (max-width: 979px) {
+    .respBreak { margin-top: 0px; }       
+    .btmLeftScale { margin-bottom: 0px; }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .btmLeftScale { margin-bottom: 0px; }
+    .blocky { margin: 0px 0px 10px 0px; }    
+}
+
+@media (max-width: 768px) {
+    .blocky { margin: 0px 0px 10px 0px; }    
+}
+
+@media (max-width: 480px) {
+    .scaleWrap .vertDivide { display: none; }
+    ul.distMessage { margin-bottom: 20px; }
+    li.distHead { float: none; }
+    li#dist_desc { float: none; margin: 10px 0px; }
+    .btmLeftScale  { padding-right: 10px; }
+    .btmLeftScale label { margin: 7px 5px 0px 5px; }
+    .blocky { margin: 0px 0px 10px 0px; }    
+}
+
+
+/* Right Column
+-------------------------------------------------- */
+
+.rightSpecs .nav-tabs { margin-top: 24px; }
+
+/* Projector Model */
+
+.topRightModel .input-group { margin-top: 15px; }
+.topRightModel #lensAddon, .topRightModel #arAddonFront, .rightZoom #zoomAddonFront { font-weight: bold; background: none; border: none; padding: 6px 15px 6px 0px; }
+.topRightModel #videotype, .rightZoom #zoomvalue { font-weight: bold; background: none; border: none; padding: 6px 0px 6px 10px; }
+
+/* Zoom */
+
+.rightZoom { padding-bottom: 13px; }
+.rightZoom .zoom_slider { margin: 23px 10px 14px 10px; }
+.nearFar ul { display: block; padding-top: 9px; }
+.nearFar li { float: left; }
+.nearLabel, .nearValue { margin-right: 8px; }
+.nearLabel { padding-top: 6px; }
+.nearValue { font-size: 15px; font-weight: bold; }
+.nearFarSep { margin: 0px 8px 0px 0px; }
+.imgOffsetLabel { font-weight: bold; }
+
+/* Specs/Lens */
+
+.dl-horizontal { padding-bottom: 15px; }
+.dl-horizontal dt { width: 120px; text-align: left; font-size: 13px; }
+.dl-horizontal dd { margin-left: 130px; }
+.topRightSpec, .rightLens { padding-bottom: 0px; }
+
+/* Support */
+
+.rightSupport { margin-bottom: 30px; }
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #d3d3d3;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}

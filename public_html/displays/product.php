@@ -16,6 +16,18 @@ $(document).ready(function() {
 try{$( "#viddropdownbox" ).dropdownbox();}catch(e){}
 $(function() {$(".langlist").menu();});
 });
+
+function readFull(article){
+$(article).parent().slideUp(0);
+ var fullArticle = $(article).parent().next(".fullarticle");
+    fullArticle.slideDown(0);
+}
+
+function readLess(article){
+$(article).parent().slideUp(0);
+ var snippet = $(article).parent().prev(".snippet");
+    snippet.slideDown(0);
+}
 </script>
 
 	</head>
@@ -70,6 +82,7 @@ if($_GET['edit']=="true"){CMSHTML("SavePage",'admin,salespublisher,saleseditor,m
 	}
 	?>
  				<li id="vidsection"><a href="#videos"><?php echo translate('Videos'); ?></a></li>
+ 				<li id="revsection"><a href="#reviews"><?php echo translate('Reviews'); ?></a></li>
 				<li><a href="#accessories"><?php echo translate('Accessories'); ?></a></li>
 				<li><a href="#downloads"><?php echo translate('Downloads'); ?></a></li>
 				<li><a href="#support"><?php echo translate('Support'); ?></a></li>
@@ -121,6 +134,11 @@ getProductDownloadnew('SELECT Downloadstmp.filename, Downloadstmp.lang, if(Downl
 		<div id="support">
 <?PHP include($homedir."/resources/html/support-tab-displays.html"); ?>
 		</div>
+		<div id="reviews">
+<ul id="eventarticles" class="col-r news-list">
+			</ul>
+		</div>
+
 		</div>
 	</div>
 </div>
@@ -133,7 +151,19 @@ getProductDownloadnew('SELECT Downloadstmp.filename, Downloadstmp.lang, if(Downl
 			</section>
 		</div>
 <script>
-				$(".form-box").colorbox({iframe:true, innerWidth:"80%", innerHeight:400});
+var datestart = "2020-01-01";
+	jQuery.post("/resources/php/fetcharticles.php",
+		{category: "review",
+		lang:"<?php echo $lang; ?>",
+		limit: "0,50",
+		datestart: datestart,
+		model: "<?php echo $pn; ?>"},
+		function(response){
+		document.getElementById('eventarticles').innerHTML = response;
+		console.log(response.length);
+		if(response.length<10){$("#revsection").hide();}
+	});
+					$(".form-box").colorbox({iframe:true, innerWidth:"80%", innerHeight:400});
 				$(".colorbox-inline").colorbox({inline:true});
 $( "#details" ).tabs();
 </script>

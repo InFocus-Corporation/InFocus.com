@@ -16,10 +16,23 @@ $(document).ready(function() {
 try{$( "#viddropdownbox" ).dropdownbox();}catch(e){}
 $(function() {$(".langlist").menu();});
 });
+
+function readFull(article){
+$(article).parent().slideUp(0);
+ var fullArticle = $(article).parent().next(".fullarticle");
+    fullArticle.slideDown(0);
+}
+
+function readLess(article){
+$(article).parent().slideUp(0);
+ var snippet = $(article).parent().prev(".snippet");
+    snippet.slideDown(0);
+}
+
 </script>
+
 	</head>
 	<body>
-
 		<?php include($homedir . "/resources/html/mainmenu.html"); //insert menu?>
 <?php
 //Legacy function.  Pulls product Series
@@ -30,7 +43,7 @@ if($_GET['edit']=="true"){CMSHTML("SavePage",'admin,salespublisher,saleseditor,m
 		<div class="content">
 <div id="product" class="C9">
 <div class="breadcrumb"><?php echo $breadcrumb;?></div>
-				<div class="productheader C10 Col_child C4x6_child" >
+	<div class="productheader C10 Col_child C4x6_child" >
  	<?php getProductButtons(); //Product buttons (get a quote, buy now, demo, etc). ?>
 			</div>
 			<div class="C10 Col_child C5_child">
@@ -50,9 +63,7 @@ if($_GET['edit']=="true"){CMSHTML("SavePage",'admin,salespublisher,saleseditor,m
 	?>
 				</div>
 	</div>
-	
-
-<div class="tabs" >
+<div class="tabs">
   
   <nav role='navigation' class="C10 transformer-tabs tabs-wrapper">
     <ul>
@@ -64,27 +75,26 @@ if($_GET['edit']=="true"){CMSHTML("SavePage",'admin,salespublisher,saleseditor,m
 		if(mysqli_num_rows($results)==0){ 
 		$sql = "SELECT `name`, tagline, `image`, `body` FROM productoverview WHERE `lang` = 'en' AND partnumber = '$pn' ORDER BY `order`";
 		$results = mysqli_query($connection,$sql);
-		}
-	
+		}	
 	if(mysqli_num_rows($results)!=0){ 
 	echo '<li><a href="#overview" class="active">' . translate('Overview') . '</a></li>
 					<li><a href="#specs">' . translate('Specifications') . '</a></li>
-	';
+';
 	}
 	else{
 	echo '<li><a href="#specs" class="active">' . translate('Specifications') . '</a></li>';
 	}
 	?>
  				<li id="vidsection"><a href="#videos"><?php echo translate('Videos'); ?></a></li>
+ 				<li id="revsection"><a href="#reviews"><?php echo translate('Reviews'); ?></a></li>
 				<li><a href="#accessories"><?php echo translate('Accessories'); ?></a></li>
 				<li><a href="#downloads"><?php echo translate('Downloads'); ?></a></li>
 				<li><a href="#support"><?php echo translate('Support'); ?></a></li>
-    </ul>
+   </ul>
 	<div class="tab-shadow"></div>
   </nav>
   
 <?PHP 
-
 		if(mysqli_num_rows($results)!=0){
 echo '<div id="overview" class="active">	
 <ul class="C10 alternateDivChildL2">';
@@ -105,6 +115,7 @@ echo '<li>
 echo '</ul></div>';
 		}
 ?>
+
 		<div id="specs" style="position:relative" <?PHP if(mysqli_num_rows($results)==0){ echo 'class="active"';} ?> >
 			<?php 
 			$models = $pn;
@@ -112,7 +123,6 @@ echo '</ul></div>';
 			getSpecs("projectors","speccompare.php"); 
 			?>
 		</div>
-
 			<?php getSeriesVideos(); ?>
 		<div id="accessories">
 <?PHP getProductAccessories(); ?>
@@ -121,13 +131,19 @@ echo '</ul></div>';
 <?php 
 //new downloads section replaced original in mid 2014
 getProductDownloadnew('SELECT Downloadstmp.filename, Downloadstmp.lang, if(DownloadTrans.description is null,Downloadstmp.description,DownloadTrans.description) AS description, filelocation, relatedproducts, extension, if(DownloadTrans.category is null,Downloadstmp.category,DownloadTrans.category) AS category, if(rank is null,999,rank) AS rank, if(DownloadTrans.title is null,Downloadstmp.title,DownloadTrans.title) AS title  FROM Downloadstmp LEFT JOIN (SELECT * FROM DownloadTrans WHERE lang = "' .$lang . '") AS DownloadTrans ON DownloadTrans.filename = Downloadstmp.filename WHERE relatedproducts like "%' . $pn . ';%" ORDER BY rank,title,description'); 
-				
-				
-				?>
+
+
+?>
 		</div>
 		<div id="support">
 <?PHP include($homedir."/resources/html/support-tab-" . $lang . ".html"); ?>
 		</div>
+
+		<div id="reviews">
+<ul id="eventarticles" class="col-r news-list">
+			</ul>
+		</div>
+
 		</div>
 	</div>
 </div>
@@ -139,9 +155,22 @@ getProductDownloadnew('SELECT Downloadstmp.filename, Downloadstmp.lang, if(Downl
 			</section>
 		</div>
 <script>
-				$(".form-box").colorbox({iframe:true, innerWidth:"80%", innerHeight:400});
-$(".colorbox-inline").colorbox({inline:true});
+var datestart = "2020-01-01";
+	jQuery.post("/resources/php/fetcharticles.php",
+		{category: "review",
+		lang:"<?php echo $lang; ?>",
+		limit: "0,50",
+		datestart: datestart,
+		model: "<?php echo $pn; ?>"},
+		function(response){
+		document.getElementById('eventarticles').innerHTML = response;
+		console.log(response.length);
+		if(response.length<10){$("#revsection").hide();}
+	});
 
+	$(".form-box").colorbox({iframe:true, innerWidth:"80%", innerHeight:400});
+				$(".colorbox-inline").colorbox({inline:true});
+$( "#details" ).tabs();
 </script>
 
 

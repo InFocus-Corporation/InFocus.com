@@ -114,6 +114,7 @@ function submitForm(){
 
 	jQuery.post("consumekey.php",
 	{key: document.getElementById('key').value,
+	note: document.getElementById('firstname').value + ' ' + document.getElementById('lastname').value + ' ' + document.getElementById('org').value + ' ' + document.getElementById('email').value,
 	table: "Services"
 	}, 
 	function(response){ document.trainingsubmit.submit(); });
