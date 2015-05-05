@@ -47,7 +47,7 @@ echo '
 	echo '
 					<div class="snippet">
 ';
-if($cattype == "review"){
+if($cattype == "review" AND $row[5] != 0){
 	echo '
 					<img style="position: absolute;
   right: 20px;
@@ -62,7 +62,7 @@ echo '						<a class="read-more" onclick="readFull(this)"><h5>' . $row[0] . '</h
 					</div>
 					<div class="snippet fullarticle" style="display:none">
 ';
-if($cattype == "review"){
+if($cattype == "review" AND $row[5] != 0){
 	echo '
 					<img style="position: absolute;
   right: 20px;

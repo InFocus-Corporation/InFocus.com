@@ -80,7 +80,7 @@ $attachment
 }
 else{
 define("ZDAPIKEY", "srU2sx3OY0fK2TDn3CDGblU0yBxDBGIULwSWGVps");
-define("ZDUSER", "daniel.boggs@infocus.com");
+define("ZDUSER", "administrator@infocus.com");
 define("ZDURL", "https://infocuscorp.zendesk.com/api/v2");
 
 function curlWrap($url, $json)
@@ -109,7 +109,7 @@ return $decoded;
 
 function post_files($url,$filearray) {
 
-
+if(!empty($filearray['tmp_name'])){
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 curl_setopt($ch, CURLOPT_MAXREDIRS, 10 );
@@ -133,11 +133,11 @@ curl_setopt($ch, CURLOPT_VERBOSE, true);
     $response = curl_exec($ch);
     return $response;
 }
-
+}
 
 
 foreach($_POST as $key => $value){
-if($key != "Troubleshooting" AND $key != "symptom" ){
+if($key != "Troubleshooting" AND $key != "symptom" AND !is_array($value)){
 $arr[strip_tags($key)] = strip_tags($value);
 }}
 
@@ -163,11 +163,14 @@ $name = $FName . ' ' . $LName;
 $description = $arr['notes'] . '
 
 ';
-
+if(is_array($_POST['troubleshooting'])){
 foreach($_POST['troubleshooting'] as $value){
 $description .= "
  - " . $value;
 }
+}
+else{$description .= "
+- " . $_POST['troubleshooting'];}
 
 $description .= '
 Purchase Date:' . $_POST['purchasedate'] . '

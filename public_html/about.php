@@ -79,7 +79,7 @@ cursor:pointer;
 		</div>
 		<div id="careers">
 			<div class="C2 Col" style="border-right: 1px solid grey">
-				<h2 class="title"><?php echo str_replace(" ","<br>",$translate['Work With Infocus']); ?></h2>
+				<h2 class="title"><?php echo str_replace(" ","<br>", translate('Work With InFocus')); ?></h2>
 			</div>
 			<div class="C8 Col">
 

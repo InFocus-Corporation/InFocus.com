@@ -3,8 +3,7 @@
 
  	if(typeof(validateCaptchaAndSubmit)!='undefined'){
  		validateCaptchaAndSubmit();
- 	}else{
- 		check_webtolead_fields();
+ 	}else{ 		check_webtolead_fields();
  	}
  }
  function check_webtolead_fields(){

@@ -28,6 +28,14 @@ $pagename = str_replace($replaceArray,"",$_SERVER['PHP_SELF']);
 		while($row = mysqli_fetch_array($results)){
 		$pageText[$row[0]] = $row[1];
 		}
+
+function translate($key){
+global $translate;
+
+if($translate[$key] == NULL){return $key;}
+else{return $translate[$key];}
+}
+
 ?>
 <!DOCTYPE html>
 
@@ -97,41 +105,45 @@ getProductList(" productgroup != ' . "'Accessory'" . ' AND productgroup != ' . "
 
 ?>
 
-<label class="top" for="description"><?php echo $translate['Notes'];?>: <span class="required" style="color: #ff0000;">*</span></label>
+<label class="top" for="quanity_of_units_c"><?=translate('Quantity') ?>: </label>
+<input id="quanity_of_units_c" type="text" name="quanity_of_units_c"/>
+
+
+<label class="top" for="description"><?=translate('Notes') ?>: <span class="required" style="color: #ff0000;">*</span></label>
 <textarea id="description" type="text" name="description" rows="8" /> </textarea>
   </li>
   
 <li>
-<label class="top" for="email1"><?php echo $translate['Email Address'];?>: <span class="required" style="color: #ff0000;">*</span></label>
+<label class="top" for="email1"><?=translate('Email') ?>: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="email1" type="text" name="email1" onchange="validateEmailAdd();" />
 </li>
 <li>
 
-<label class="top" for="first_name"><?php echo $translate['First Name'];?>: <span class="required" style="color: #ff0000;">*</span></label>
+<label class="top" for="first_name"><?=translate('First Name') ?>: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="first_name" type="text" name="first_name" />
 </li>
 <li>
-<label class="top" for="last_name"><?php echo $translate['Last Name'];?>: <span class="required" style="color: #ff0000;">*</span></label>
+<label class="top" for="last_name"><?=translate('Last Name') ?>: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="last_name" type="text" name="last_name"  onchange="validateHuman();"/>
 </li>
 <li>
-<label class="top" for="title"><?php echo $translate['Job Title'];?>: </label>
+<label class="top" for="title"><?=translate('Job Title');?>: </label>
 <input id="title" type="text" name="title" />
 </li>
 <li>
-<label class="top" for="account_name"><?php echo $translate['Organization Name'];?>: <span class="required" style="color: #ff0000;">*</span></label>
+<label class="top" for="account_name"><?=translate('Organization Name');?>: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="account_name" type="text" name="account_name" />
 </li>
 <li>
-<label class="top" for="primary_address_street"><?php echo $translate['Address'];?>: <span class="required" style="color: #ff0000;">*</span></label>
+<label class="top" for="primary_address_street"><?=translate('Address');?>: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="primary_address_street" type="text" name="primary_address_street" />
 </li>
 <li>
-<label class="top" for="primary_address_city"><?php echo $translate['City'];?>: <span class="required" style="color: #ff0000;">*</span></label>
+<label class="top" for="primary_address_city"><?=translate('City');?>: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="primary_address_city" type="text" name="primary_address_city" />
 </li>
 <li>
-<label class="top" for="primary_address_country"><?php echo $translate['Country'];?>: <span class="required" style="color: #ff0000;">*</span></label>
+<label class="top" for="primary_address_country"><?=translate('Country');?>: <span class="required" style="color: #ff0000;">*</span></label>
 <Select id="primary_address_country" type="text" name="primary_address_country" onchange="showhidefields()">
 	<option value="" selected="selected"><?php echo $translate['Select Country'];?></option> 
 	<option value="United States">United States</option> 

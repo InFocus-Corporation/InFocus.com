@@ -138,11 +138,13 @@ function preValidate(){
 	console.log(response);
 	   if(response['type'].trim()=="True"){
 	   alert("This key has already been used.  If you feel this is in error please contact the support department at 877-388-8360");
+	   document.getElementById('key').value = "";
 		keyhrs="";
 		return;
 	   }
 	   if(response['type'].trim()=="Not Valid"){
 	   alert("The key you entered is not valid.  If you feel this is in error please contact the support department at 877-388-8360");
+	   document.getElementById('key').value = "";
 		keyhrs="";
 		return;
 	   }

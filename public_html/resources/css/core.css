@@ -358,6 +358,7 @@ form select {
 	background: #f1f1f1;
 	color: #b5b5b5;
 	margin-bottom: 4px;
+	margin-left: 8px;
 }
 form select:hover {
 	background:#f7f7f7;
@@ -377,6 +378,7 @@ form textarea {
 	background: #f1f1f1;
 	color: #b5b5b5;
 	margin-bottom: 4px;
+	margin-left: 8px;
 }
 form textarea:hover {
 	background:#F7F7F7;
@@ -423,6 +425,12 @@ form label.top {
 	padding-top: 10px;
 	padding-bottom: 3px;
 	padding-left: 10px;
+}
+
+form li{
+	  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
 }
 
 form input[type="submit"] {
@@ -659,26 +667,32 @@ margin-right:1.5em;
 }
 @media only screen and (min-width:1280px) and (max-width: 1679px) {
 .content { font-size: 120%;width:1265px;}
+html{line-height:1.4em;}
 }
 @media only screen and (min-width:1136px) and (max-width: 1279px) {
 .content { font-size: 110%;width:1121px;}
+html{line-height:1.3em;}
 }
 @media only screen and (min-width:960px) and (max-width: 1135px) {
 .content { font-size: 100%;width:945px;}
+html{line-height:1.2em;}
 }
 @media only screen and (min-width:800px) and (max-width: 959px) {
 .content { font-size: 80%;	width:785px;}
+html{line-height:1.1em;}
 }
 @media only screen and (min-width:720px) and (max-width: 799px) {
 .content { font-size: 70%;width:705px;}
+html{line-height:1.0em;}
 }
 @media only screen and (min-width:640px) and (max-width: 719px) {
 .content { font-size: 60%;width:625px;}
+html{line-height:0.9em;}
 }
 @media only screen and (max-width: 639px) {
 .content { font-size: 60%;width: 100%;}
 .C10, .C9, .C8, .C7, .C6, .C5, .C4, .C3, .C2, .C1, .C5_child > li:nth-child(odd),  .C5_child > div:nth-child(odd), .C5_child > li:nth-child(even),  .C5_child > div:nth-child(even), .C6x4_child > li:nth-child(odd),  .C6x4_child > div:nth-child(odd), .C6x4_child > li:nth-child(even),  .C6x4_child > div:nth-child(even), .C4x6_child > li:nth-child(odd),  .C4x6_child > div:nth-child(odd), .C4x6_child > li:nth-child(even),  .C4x6_child > div:nth-child(even), .C7x3_child > li:nth-child(odd),  .C7x3_child > div:nth-child(odd), .C7x3_child > li:nth-child(even),  .C7x3_child > div:nth-child(even), .C3x7_child > li:nth-child(odd),  .C3x7_child > div:nth-child(odd), .C3x7_child > li:nth-child(even),  .C3x7_child > div:nth-child(even), .C8x2_child > li:nth-child(odd),  .C8x2_child > div:nth-child(odd), .C8x2_child > li:nth-child(even), .C8x2_child > li:nth-child(odd),  .C8x2_child > div:nth-child(odd), .C8x2_child > li:nth-child(even),  .C8x2_child > div:nth-child(even) {width: 98%;}	
-
+html{line-height:0.7em;}
 .alternateDivChildL2 > li > div:first-child, .alternateDivChildL2 > div > div:first-child {
 clear:both;
 margin-top:0em;
@@ -810,8 +824,8 @@ border-image: url("/resources/images/svg/dotted_circle_line.svg") 10 repeat;
     background: #f66d26;
     left: 0;
     width: 100%;
-    height: 100%;
-  }
+/*    height: 100%;
+*/  }
   .transformer-tabs a.active {
     border: 0;
     z-index: 1;
@@ -858,8 +872,8 @@ z-index: 10;
 margin-top:-1.5em;
 max-width:55%;
 min-width:30%;
-height:100%;
-}
+/*height:100%;
+*/}
 
 .btn, a.btn {
 background: #f66d26;
@@ -1704,3 +1718,25 @@ li.review a.btn{
  font-size: 0.5em;
  margin-left: 20px;
 }
+
+.stretch-wrap33{
+	width:100%;
+	padding-bottom:33.33%;
+	position:relative;
+	margin-bottom:2px;
+}
+.stretch-wrap60{
+	width:100%;
+	padding-bottom:60%;
+	position:relative;
+	margin-bottom:2px;
+}
+.stretch-wrap33 > div, .stretch-wrap33 > a > img,.stretch-wrap60 > div, .stretch-wrap60 > a > img{
+	position: absolute;
+	bottom: 0; left: 0; right: 0; top:0;
+}
+.stretch-wrap33 > div > img, .stretch-wrap33 > a > img,.stretch-wrap60 > div > img, .stretch-wrap60 > a > img{
+height:100%;
+object-fit: contain;
+}
+		a:hover{cursor:pointer;}

@@ -1,0 +1,30 @@
+ErrorDocument 404 /404.php
+
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks -Indexes
+Options -Indexes
+RewriteEngine On
+
+RewriteRule  ^portable-projectors/infocus-in1100er-projektor-serie$ /projectors/IN1100-SERIES [R=301,NC,L]
+
+RewriteRule  ^discontinued(-)?(projectors)?(displays)?.*$ /support [R=301,NC,L]
+RewriteRule  ^compare.*$ /projectors/ [R=301,NC,L]
+
+RewriteRule  ^(?:ultra-)?(?:office|classroom|portable|large-venue|home-theater|interactive|mobile|short-throw|meeting)(?:-projectors)?/([A-Za-z0-9-]+)serie(s)?/?$ /projectors/family.php?series=$1series [NC,L]
+
+RewriteRule  ^(?:ultra-)?(?:office|classroom|portable|large-venue|home-theater|interactive|mobile|short-throw|meeting)(?:-projectors)?/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
+
+RewriteRule  ^(?:ultra-)?(?:office|classroom|portable|large-venue|home-theater|interactive|mobile|short-throw|meeting)(?:-projectors)?/(?:[A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
+
+
+RewriteRule  ^(office-classroom|ultra-portable|large-venue|short-throw|home-theater|interactive)(?:-projectors)?/?$ /projectors/?cat=$1 [NC,L]
+
+RewriteRule  ^(office|classroom|meeting)(?:-projectors)?/?$ /projectors/?cat=office-classroom [NC,L]
+
+RewriteRule  ^(portable|mobile)(?:-projectors)?/?$ /projectors/?cat=ultra-portable [NC,L]
+
+RewriteRule  ^([A-Za-z0-9-]+)series/?$ /projectors/family.php?series=$1series [NC,L]
+RewriteRule  ^([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
+RewriteRule  ^(?:[A-Za-z0-9-]+)series/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
+RewriteRule  ^(?:[A-Za-z0-9-_]+)/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
+</ifmodule>

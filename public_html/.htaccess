@@ -2,654 +2,553 @@ Options MultiViews -Indexes
 AddType application/x-httpd-php5 .php
 
 # 480 weeks (290304000)
+
 <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+
 Header set Cache-Control "max-age=290304000, public"
+
 </FilesMatch>
+
+
 
 # 2 DAYS (172800)
+
 <FilesMatch "\.(xml|txt)$">
+
 Header set Cache-Control "max-age=172800, public, must-revalidate"
+
 </FilesMatch>
 
+
+
 # 2 HOURS (7200)
+
 <FilesMatch "\.(html|htm)$">
+
 Header set Cache-Control "max-age=7200, must-revalidate"
+
 </FilesMatch>
+
+
+
+
+
+<IfModule mod_alias.c>
+
+#Catch-All Redirects (mostly for old links)	
+RedirectMatch 301 (?i)^/sites/default/files/InFocus-Mondopad-CaseStudy-BirminghamSouthernCollege.pdf /resources/documents/Mondo/InFocus-Mondopad-CaseStudy-BirminghamSouthernCollege.pdf
+
+
+RedirectMatch 301 (?i)^/x1promo/index.*$ 	/
+
+RedirectMatch 301 (?i)^/www.infocus.com.*$ 	/
+
+RedirectMatch 301 (?i)^/wv-fs-02/techpubs/.*$ 	/
+
+RedirectMatch 301 (?i)^/WebResource.*$ 	/
+
+RedirectMatch 301 (?i)^/taxonomy.*$ 	/
+
+RedirectMatch 301 (?i)^/supportIN82010-0629-01.*$ 	/support
+
+RedirectMatch 301 (?i)^/support.aspx.*$  	/support
+
+RedirectMatch 301 (?i)^/store.*$  	http://www.infocusstore.com
+
+RedirectMatch 301 (?i)^/spn/amer/.*$  	/
+
+RedirectMatch 301 (?i)^/software.*$  	/accessories/?software
+
+RedirectMatch 301 (?i)^/sites.*$  	/
+
+RedirectMatch 301 (?i)^/Segments/Education.*$	/education
+
+#RedirectMatch 301 (?i)^/projectors/portable(-)?(projectors)?.*$	/projectors/ultra-portable
+
+#RedirectMatch 301 (?i)^/projectors/\?office.*$	/projectors/meeting
+
+#RedirectMatch 301 (?i)^/projectors/of...n102-projector.*$	/projectors/
+
+#RedirectMatch 301 (?i)^/projectors/\?large(-)?venue(-)?(projectors)?.*$	/projectors/large-venue
+
+#RedirectMatch 301 (?i)^/projectors/\?interactive(-)?(projectors)?.*$	/projectors/interactive
+
+#RedirectMatch 301 (?i)^/projectors/\?home(-)?theater.*$	/projectors/home-theater
+
+#RedirectMatch 301 (?i)^/projectors/classroom-projectors.*$	/projectors/?meeting
+
+RedirectMatch 301 (?i)^/projectors/discontinued(-)?(projectors)?(displays)?.*$	/support
+RedirectMatch 301 (?i)^/projectors/compare.*$	/projectors/
+RedirectMatch 301 (?i)^/presenters/genigraphics.*$	/
+
+RedirectMatch 301 (?i)^/parts.*$	/support
+
+RedirectMatch 301 (?i)^/noderelationships.*$	/
+
+RedirectMatch 301 (?i)^/node.*$	/
+
+RedirectMatch 301 (?i)^/ms/.*$	/
+
+RedirectMatch 301 (?i)^/mondopad/.*$	/displays/family?series=MONDOPAD-Series
+
+RedirectMatch 301 (?i)^/Melinda/AppData.*$	/
+
+RedirectMatch 301 (?i)^/media/library.*$	/
+
+RedirectMatch 301 (?i)^/LP640.*$	/support
+
+RedirectMatch 301 (?i)^/lp330.*$	/support
+
+RedirectMatch 301 (?i)^/Local%20Settings/Temporary%20Internet%20Files/.*$	/
+
+RedirectMatch 301 (?i)^/labs/video.*$	/videos
+
+RedirectMatch 301 (?i)^/labs/all/news(.*$)	/about#news
+
+RedirectMatch 301 (?i)^/labs/all/events.*$	/about#events
+
+RedirectMatch 301 (?i)^/labs.*$	/about
+
+RedirectMatch 301 (?i)^/ir/.*$	/
+
+RedirectMatch 301 (?i)^/infsBin/job.*$	/about#jobs
+
+RedirectMatch 301 (?i)^/i/.*$	/
+
+RedirectMatch 301 (?i)^/Home/Segments.*$	/education
+
+RedirectMatch 301 (?i)^/home.*$	/
+
+RedirectMatch 301 (?i)^/GovContracts/FederalContracts.*$	/
+
+RedirectMatch 301 (?i)^/ger/emea.*$	/
+
+RedirectMatch 301 (?i)^/forum.*$	/
+
+RedirectMatch 301 (?i)^/escalate/store/.*$  	http://www.infocusstore.com/
+
+RedirectMatch 301 (?i)^/dvdclaimform1231enddate.*$	/sales-partners
+
+RedirectMatch 301 (?i)^/download.*$	/
+
+RedirectMatch 301 (?i)^/Documents%20and%20Settings/mkrueger.*$	/
+
+RedirectMatch 301 (?i)^/disti_site/Documents.*$	/sales-partners
+
+RedirectMatch 301 (?i)^/displays/thin-displays.*$	/displays
+
+RedirectMatch 301 (?i)^/displays/mondopad.*$	/displays/family?series=MONDOPAD-SERIES
+
+RedirectMatch 301 (?i)^/displays/discontinued-displays.*$	/support
+
+RedirectMatch 301 (?i)^/displays/bigtouch.*$	/displays/family?series=BIGTOUCH-SERIES
+
+RedirectMatch 301 (?i)^/deauthorized/.*$	/
+
+RedirectMatch 301 (?i)^/company/press.*$	/about#news
+
+RedirectMatch 301 (?i)^/Company/Contact.*$	/support
+
+RedirectMatch 301 (?i)^/Support/authorized_service_centers.*$	/support/authorized-service-centers
+
+RedirectMatch 301 (?i)^/company.*$	/about
+
+RedirectMatch 301 (?i)^/comment/reply/.*$	/
+
+RedirectMatch 301 (?i)^/Brilliant/~/.*$	/support
+
+RedirectMatch 301 (?i)^/bigtouch/.*$	/displays/family?series=BIGTOUCH-SERIES
+
+RedirectMatch 301 (?i)^/AppData/Local/.*$	/
+
+#RedirectMatch 301 (?i)^/accessories/wireless.*$	/accessories/?networking
+
+#RedirectMatch 301 (?i)^/accessories/warrant(ies)?(y)?.*$	/accessories/?services
+
+#RedirectMatch 301 (?i)^/accessories/software.*$	/accessories/?software
+
+#RedirectMatch 301 (?i)^/accessories/screen.*$	/accessories/?screens
+
+#RedirectMatch 301 (?i)^/accessories/remote.*$	/accessories/?remotes
+
+#RedirectMatch 301 (?i)^/accessories/mount.*$	/accessories/?mounts
+
+#RedirectMatch 301 (?i)^/accessories/miscellaneous.*$	/accessories/?misc
+
+#RedirectMatch 301 (?i)^/Accessories/Lens.*$	/accessories/?lenses
+
+#RedirectMatch 301 (?i)^/Accessories/Lamp.*$	/accessories/?lamps
+
+#RedirectMatch 301 (?i)^/accessories/case.*$	/accessories/?cases
+
+#RedirectMatch 301 (?i)^/accessories/cable.*$	/accessories/?cables
+
+RedirectMatch 301 (?i)^/accessories/accessories(-for)?-mondopad-and-bigtouch.*$	/accessories/?mpbtaccessories
+
+RedirectMatch 301 (?i)^/10.0.0.250/ad1_dfs/.*$	/
+
+RedirectMatch 301 (?i)^/~/media/.*$	/
+	
+
+	
+
+#Specific Redirects	
+
+RedirectMatch 301 (?i).*outlet.infocus.com$ 	http://outlet.infocus.com
+
+RedirectMatch 301 (?i).*www.infocusstore.com$	http://www.infocusstore.com
+
+RedirectMatch 301 (?i)^/_1	/
+
+RedirectMatch 301 (?i)^/99$	/
+
+RedirectMatch 301 (?i)^/a$	/
+
+RedirectMatch 301 (?i)^/worldwide	/
+
+RedirectMatch 301 (?i)^/accessories.aspx	/accessories
+
+RedirectMatch 301 (?i)^/americas-support	/support
+
+RedirectMatch 301 (?i)^/bulb(s)?	/accessories/?lamps
+
+RedirectMatch 301 (?i)^/buynow/lamp(s)?	http://www.infocusstore.com/Lamps-Accessories/b/7448620011?ie=UTF8&title=Lamps
+
+RedirectMatch 301 (?i)^/buynow/projector(s)?	http://www.infocusstore.com/Projectors/b/7288433011?ie=UTF8&title=Projectors
+
+RedirectMatch 301 (?i)^/cable(s)?	/accessories/?cables
+
+RedirectMatch 301 (?i)^/calculator	/resources/forms/projectioncalculator
+
+RedirectMatch 301 (?i)^/projector-installation	/resources/forms/projectioncalculator
+RedirectMatch 301 (?i)^/career(s)?	/about#careers
+
+#RedirectMatch 301 (?i)^/classroom-projectors	/projectors/?meeting
+
+RedirectMatch 301 (?i)^/cms	/resources/maincms.php
+
+RedirectMatch 301 (?i)^/company/jobs	/about#careers
+
+RedirectMatch 301 (?i)^/consumerspecialoffers	http://www.infocusrebates.com/
+
+RedirectMatch 301 (?i)^/contact(u)?(s)?(upport)?	/support/
+
+RedirectMatch 301 (?i)^/controlview	/accessories/product?pn=CONTROLVIEW
+
+RedirectMatch 301 (?i)^/conx$	/accessories/product?pn=CONX
+
+RedirectMatch 301 (?i)^/conx/activate	http://collaborate.infocus.com
+
+RedirectMatch 301 (?i)^/corp.htm	/about
+
+RedirectMatch 301 (?i)^/cs	/support
+
+RedirectMatch 301 (?i)^/dealregistration	https://www.infocusregistrationrewards.com/index.php
+
+RedirectMatch 301 (?i)^/designservices	http://design.infocus.com/designservices/
+
+RedirectMatch 301 (?i)^/displaylink	/accessories/product?pn=SP-DOUSB-WIRELESS
+
+RedirectMatch 301 (?i)^/easymoney	https://www.brightprojections.com/easymoney
+
+RedirectMatch 301 (?i)^/educationrewards	http://www.brightprojections.com/aplushonors/
+
+RedirectMatch 301 (?i)^/FirstResponders_MondopadSuccessStory	http://collaborate.infocus.com/firerescue1/
+
+RedirectMatch 301 (?i)^/giftshop	https://www.madetoorder.com/infocus/
+
+RedirectMatch 301 (?i)^/highered	http://collaborate.infocus.com/collaborate_education/
+
+RedirectMatch 301 (?i)^/imagelibrary	https://infocus.box.net/s/rm0l6xcsfot4c4tk8670
+
+RedirectMatch 301 (?i)^/INF5520docs	/displays/product?pn=INF5520A#downloads
+
+RedirectMatch 301 (?i)^/INF7020	/displays/product?pn=INF7021
+
+RedirectMatch 301 (?i)^/INF7020docs	/displays/product?pn=INF7021#downloads
+
+RedirectMatch 301 (?i)^/infocus-mondopad-portland-public-schools 	/education
+
+RedirectMatch 301 (?i)^/interactive-solutions 	/displays
+
+RedirectMatch 301 (?i)^/job(s)?	/about#careers
+
+RedirectMatch 301 (?i)^/jtouch	/displays/family?series=JTOUCH-SERIES
+
+RedirectMatch 301 (?i)^/lamp(s)?	/accessories/?lamps
+
+RedirectMatch 301 (?i)^/la-promo	/custompages/index.php?pagename=sales-partners
+
+RedirectMatch 301 (?i)^/learnbig 	/education
+
+RedirectMatch 301 (?i)^/li(ght)?(te)?show	/accessories/?networking
+
+RedirectMatch 301 (?i)^/wireless	/accessories/?networking
+
+RedirectMatch 301 (?i)^/LiteshowIII	/accessories/product?pn=INLITESHOW3
+
+RedirectMatch 301 (?i)^/lp$	/projectors/
+
+RedirectMatch 301 (?i)^/macadapter	http://store.infocus.com/
+
+RedirectMatch 301 (?i)^/mondodemo	http://mondopad.infocus.com/mondodemo/
+
+RedirectMatch 301 (?i)^/mondopad-auth(orization)?(-request)?	http://collaborate.infocus.com/msp/
+
+RedirectMatch 301 (?i)^/mportal	http://collaborate.infocus.com/msp/
+
+RedirectMatch 301 (?i)^/ms/displaylink/index.html	/accessories/product?pn=SP-DOUSB-WIRELESS
+
+RedirectMatch 301 (?i)^/Ms/documents/InFocus_ePortal_Quick_Start_Guide.pdf	/custompages/index.php?pagename=sales-partners
+
+RedirectMatch 301 (?i)^/mvp100 	/video-communication/product?pn=mvp100
+
+RedirectMatch 301 (?i)^/node/office-projectors	/projectors/?meeting
+
+RedirectMatch 301 (?i)^/pcc$	/education
+
+RedirectMatch 301 (?i)^/pps$	/education
+
+RedirectMatch 301 (?i)^/press	/about
+
+RedirectMatch 301 (?i)^/products/finder	/product-finder
+
+RedirectMatch 301 (?i)^/about-infocus	/about
+
+RedirectMatch 301 (?i)^/previewmp18	http://collaborate.infocus.com/mondopad_preview/
+
+RedirectMatch 301 (?i)^/projectornet	/accessories/product?pn=PROJECTORNET31
+
+RedirectMatch 301 (?i)^/pwd	/
+
+RedirectMatch 301 (?i)^/rebate(s)?	http://www.infocusrebates.com
+
+RedirectMatch 301 (?i)^/regrewards	https://www.infocusregistrationrewards.com
+
+RedirectMatch 301 (?i)^/sale$	http://store.infocus.com/
+
+RedirectMatch 301 (?i)^/serv	/support
+
+RedirectMatch 301 (?i)^/suport	/support
+
+RedirectMatch 301 (?i)^/support/Laptop_Activation  	/support/laptop-activation
+
+RedirectMatch 301 (?i)^/support/terms	/support/warranty
+
+RedirectMatch 301 (?i)^/support/underconstruction 	/support
+
+RedirectMatch 301 (?i)^/(support)?(-)?survey	http://www.surveymonkey.com/Users/76030828/Surveys/676053839216/43AD4246-ADE3-4FDF-B0AE-C581A8140D89.asp?U=676053839216&DO_NOT_COPY_THIS_LINK=
+
+RedirectMatch 301 (?i)^/orderstatus	http://www.infocusstore.com/
+
+RedirectMatch 301 (?i)^/where(-)?to(-)?buy /reseller-locator
+RedirectMatch 301 (?i)^/online(-)?RMA /#online-rma
+RedirectMatch 301 (?i)^/firstresponders /first-responders
+
+#RedirectMatch 301 (?i)^/projectors/family(.php)?(series=)?([A-Za-z0-9-]+)/?$    /projectors/$1   
+#RedirectMatch 301 (?i)^/projectors/product(.php)?\?(pn=)?([A-Za-z0-9-]+)/?$    /projectors/$3 
+#RedirectMatch 301 (?i)^displays/family(.php)?(series=)?([A-Za-z0-9-]+)/?$    /displays/$1   
+#RedirectMatch 301 (?i)^displays/product(.php)?(pn=)?([A-Za-z0-9-]+)/?$    /displays/$1    
+#RedirectMatch 301 (?i)^video-communication/family(.php)?(series=)?([A-Za-z0-9-]+)/?$    /video-communication/$1    
+#RedirectMatch 301 (?i)^video-communication/product(.php)?(pn=)?([A-Za-z0-9-]+)/?$    /video-communication/$1   
+#RedirectMatch 301 (?i)^accessories/product(.php)?(pn=)?([A-Za-z0-9-]+)/?$    /accessories/$1    
+
+RedirectMatch 301 (?i)^\/resources\/misc\/MP\sShell\s1\.8\.03\.exe$ /support/index.php?regdl=regdl=TRUE#register
+
+</ifmodule>
+
+
 
 
 
 <ifmodule mod_deflate.c>
+
 SetOutputFilter DEFLATE
+
 </ifmodule>
+
+
 
 ErrorDocument 404 /404.php
 
 
+
+
+
 <IfModule mod_rewrite.c>
+
 Options +FollowSymLinks -Indexes
 Options -Indexes
-RewriteEngine On
+	RewriteEngine On
 
-RewriteRule (.*?)\s\$([0-9\.]*?)(\*)(\(us\)) $1 [NC]
-RewriteRule ^([A-Za-z0-9-_/]+)\.aspx$ $1 [NC]
-RewriteRule ^([A-Za-z0-9-_/]+)EP\.aspx$ $1 [NC]
-RewriteRule ^([A-Za-z0-9-_/]+)EX\.aspx$ $1 [NC]
- 
-RewriteRule  ^qtablet/live /resources/php/test.php [NC,L]
-RewriteRule  ^bigtouch/live /resources/php/test.php [NC,L]
+	
 
+	RewriteCond		${InFocusDev:$1|NOT_FOUND}	!NOT_FOUND
 
-#Generated
+	RewriteRule		^(.*)			${InFocusDev:$1}					[NC,L]
 
-RewriteRule  ^sites/default/files/InFocus-Mondopad-CaseStudy-BirminghamSouthernCollege.pdf /resources/documents/Mondo/InFocus-Mondopad-CaseStudy-BirminghamSouthernCollege.pdf [R=301,NC,L]
 
-RewriteRule  ^node/88255/clone-infocus-in1146-led-projector-de /projectors/IN1146 [R=301,NC,L]
 
-RewriteRule  ^x1promo/index.*$ / [R=404,NC,L]
+	
 
-RewriteRule  ^www.infocus.com.*$ / [R=301,NC,L]
 
-RewriteRule  ^wv-fs-02/techpubs/.*$ / [R=404,NC,L]
 
-RewriteRule  ^WebResource.*$ / [R=404,NC,L]
+	RewriteRule authorized(-)?service(-)?(center)?(s)?$	/custompages/index.php?pagename=authorized-service-centers [NC,L]
 
-RewriteRule  ^taxonomy.*$ / [R=301,NC,L]
+	RewriteRule ^(mondopad)?(mp)?(-)?training(-)?(registration)?(-0)?$	/resources/forms/mptraining [NC,L]
 
-RewriteRule  ^supportIN82010-0629-01.*$ /support [R=301,NC,L]
+	RewriteRule ^404 	/custompages/index.php?404 [NC,L]
 
-RewriteRule  ^support.aspx.*$ /support [R=301,NC,L]
+	RewriteRule ^big(-)?note$ 	/custompages/index.php?big-note [NC,L]
 
-RewriteRule  ^store.*$ http://www.infocusstore.com [R=301,NC,L]
+	RewriteRule ^big(-)?note/download 	/custompages/index.php?pagename=big-note [NC,L]
 
-RewriteRule  ^spn/amer/.*$ / [R=404,NC,L]
+	RewriteRule ^bigtouch$	/displays/family?series=BIGTOUCH-SERIES [NC,L]
 
-RewriteRule  ^software.*$ /accessories/?software [R=301,NC,L]
+	RewriteRule ^mississippi$ 	/custompages/index.php?pagename=mississippi&pagetype=blank [NC,L]
 
-RewriteRule  ^sites.*$ / [R=301,NC,L]
+	RewriteRule ^mondopad$	/displays/family?series=MONDOPAD-Series [NC,L]
 
-RewriteRule  ^Segments/Education.*$ /education [R=301,NC,L]
+	RewriteRule ^mondopad(-)?(live)?(-)?demo$	/custompages/index.php?pagename=mondopad-live-demo [NC,L]
 
-RewriteRule  ^projectors/discontinued(-)?(projectors)?(displays)?.*$ /support [R=301,NC,L]
+	RewriteRule ^mondopad(-)?(live)?(-)?demo(-)?cdw$	/custompages/index.php?pagename=mondopad-live-demo-cdw [NC,L]
 
-RewriteRule  ^projectors/compare.*$ /projectors/ [R=301,NC,L]
+	RewriteRule ^mondopad(-)?video(-)?phone(-)?promotion$ 	/custompages/index.php?mondopad-video-phone-promotion [NC,L]
 
-RewriteRule  ^presenters/genigraphics.*$ / [R=404,NC,L]
+	RewriteRule ^partner(s)?(central)?$	/custompages/index.php?pagename=sales-partners [NC,L]
 
-RewriteRule  ^parts.*$ /support [R=301,NC,L]
+	RewriteRule ^privacy(-)?(policy)?$	/custompages/index.php?pagename=privacy-policy [NC,L]
 
-RewriteRule  ^noderelationships.*$ / [R=301,NC,L]
+	RewriteRule ^programs(-)?(&)?(and)?(-promotions)?$	/custompages/index.php?pagename=sales-partners [NC,L]
 
-RewriteRule  ^node.*$ / [R=301,NC,L]
+	RewriteRule ^register$ 	/support/#register [NC,L]
 
-RewriteRule  ^ms/.*$ / [R=301,NC,L]
+	RewriteRule ^reseller(s)?$	/custompages/index.php?pagename=sales-partners [NC,L]
 
-RewriteRule  ^mondopad/.*$ /displays/MONDOPAD-Series [R=301,NC,L]
+	RewriteRule ^revendedor$	/custompages/index.php?pagename=sales-partners [NC,L]
 
-RewriteRule  ^Melinda/AppData.*$ / [R=404,NC,L]
+	RewriteRule ^sales(-)?partner(s)?$	/custompages/index.php?pagename=sales-partners [NC,L]
 
-RewriteRule  ^media/library.*$ / [R=301,NC,L]
+	RewriteRule ^sales_manager$  	/resources/documents/InFocus_TAM_areamap.pdf [NC,L]
 
-RewriteRule  ^LP640.*$ /support [R=301,NC,L]
+	RewriteRule ^spec_rebate$ 	/custompages/index.php?pagename=sales-partners [NC,L]
 
-RewriteRule  ^lp330.*$ /support [R=301,NC,L]
+	RewriteRule ^terms(-)?of(-)?use$ 	/custompages/index.php?terms-of-use [NC,L]
 
-RewriteRule  ^Local%20Settings/Temporary%20Internet%20Files/.*$ / [R=301,NC,L]
+	RewriteRule ^thank(-)?you$ 	/custompages/index.php?thank-you [NC,L]
 
-RewriteRule  ^labs/video.*$ /videos [R=301,NC,L]
+	RewriteRule ^touchscreen(-)?solutions(-)?sale(-)?education$ 	/custompages/index.php?touchscreen-solutions-sale-education [NC,L]
 
-RewriteRule  ^labs.*$ /about [R=301,NC,L]
+	RewriteRule ^videoconferencing$	/displays/family?series=MONDOPAD-SERIES [NC,L]
 
-RewriteRule  ^ir/.*$ / [R=301,NC,L]
+	RewriteRule ^warranty$	/support/warranty [NC,L]
 
-RewriteRule  ^i/.*$ / [R=301,NC,L]
 
-RewriteRule  ^Home/Segments.*$ /education [R=301,NC,L]
 
-RewriteRule  ^home.*$ / [R=301,NC,L]
+	
 
-RewriteRule  ^GovContracts/FederalContracts.*$ / [R=404,NC,L]
+	
 
-RewriteRule  ^ger/emea.*$ / [R=404,NC,L]
+	RewriteRule	^accessories/lamps?/?$    /accessories/?lamps   [NC,L]    
 
-RewriteRule  ^forum.*$ / [R=404,NC,L]
+	RewriteRule	^accessories/mondopad-?accessories?/?$    /accessories/?mpbtaccessories   [NC,L]    
 
-RewriteRule  ^escalate/store/.*$ http://www.infocusstore.com/ [R=301,NC,L]
+	RewriteRule	^accessories/mpbt-?accessories?/?$    /accessories/?mpbtaccessories   [NC,L]    
 
-RewriteRule  ^dvdclaimform1231enddate.*$ /sales-partners [R=301,NC,L]
+	RewriteRule	^accessories/bigtouch-?accessories?/?$    /accessories/?mpbtaccessories   [NC,L]    
 
-RewriteRule  ^download.*$ / [R=404,NC,L]
+	RewriteRule	^accessories/cables?/?$    /accessories/?cables   [NC,L]    
 
-RewriteRule  ^Documents%20and%20Settings/mkrueger.*$ / [R=404,NC,L]
+	RewriteRule	^accessories/cases?/?$    /accessories/?cases   [NC,L]    
 
-RewriteRule  ^disti_site/Documents.*$ /sales-partners [R=301,NC,L]
+	RewriteRule	^accessories/lens(es)?/?$    /accessories/?lenses   [NC,L]    
 
-RewriteRule  ^displays/thin-displays.*$ /displays [R=301,NC,L]
+	RewriteRule	^accessories/misc(ellaneous)?/?$    /accessories/?misc   [NC,L]    
 
-RewriteRule  ^displays/discontinued-displays.*$ /support [R=301,NC,L]
+	RewriteRule	^accessories/mounts?/?$    /accessories/?mounts   [NC,L]    
 
-RewriteRule  ^displays/bigtouch$ /displays/BIGTOUCH-SERIES [R=301,NC,L]
+	RewriteRule	^accessories/remotes?/?$    /accessories/?remotes   [NC,L]    
 
-RewriteRule  ^projectors/portable-projectors/infocus-in1100er-projektor-serie$ /projectors/IN1100-SERIES [R=301,NC,L]
+	RewriteRule	^accessories/screens?/?$    /accessories/?screens   [NC,L]    
 
-RewriteRule  ^deauthorized/.*$ / [R=301,NC,L]
+	RewriteRule	^accessories/software?/?$    /accessories/?software   [NC,L]    
 
-RewriteRule  ^Company/Contact.*$ /support [R=301,NC,L]
+	RewriteRule	^accessories/services?/?$    /accessories/?services   [NC,L]    
 
-RewriteRule  ^Support/authorized_service_centers.*$ /support/authorized-service-centers [R=301,NC,L]
+	RewriteRule	^accessories/warrant(y)?(ies)?/?$    /accessories/?services   [NC,L]    
 
-RewriteRule  ^company$ /about [R=301,NC,L]
+	RewriteRule	^accessories/wireless/?$    /accessories/?networking   [NC,L]    
 
-RewriteRule  ^comment/reply/.*$ / [R=301,NC,L]
+	RewriteRule	^accessories/networking/?$    /accessories/?networking   [NC,L]    
 
-RewriteRule  ^Brilliant/~/.*$ /support [R=301,NC,L]
+	RewriteRule	^projectors/office/([A-Za-z0-9-]+)series/?$    /projectors/family.php?series=$1series    [NC,L]
+	RewriteRule	^projectors/office/([A-Za-z0-9-]+)/?$    /projectors/product.php?pn=$1    [NC,L]
+	RewriteRule	^projectors/classroom/([A-Za-z0-9-]+)series/?$    /projectors/family.php?series=$1series    [NC,L]
+	RewriteRule	^projectors/classroom/([A-Za-z0-9-]+)/?$    /projectors/product.php?pn=$1    [NC,L]
+	RewriteRule	^projectors/ultra-portable/([A-Za-z0-9-]+)series/?$    /projectors/family.php?series=$1series    [NC,L]
+	RewriteRule	^projectors/ultra-portable/([A-Za-z0-9-]+)/?$    /projectors/product.php?pn=$1    [NC,L]
+	RewriteRule	^projectors/large-venue/([A-Za-z0-9-]+)series/?$    /projectors/family.php?series=$1series    [NC,L]
+	RewriteRule	^projectors/large-venue/([A-Za-z0-9-]+)/?$    /projectors/product.php?pn=$1    [NC,L]
+	RewriteRule	^projectors/short-throw/([A-Za-z0-9-]+)series/?$    /projectors/family.php?series=$1series    [NC,L]
+	RewriteRule	^projectors/short-throw/([A-Za-z0-9-]+)/?$    /projectors/product.php?pn=$1    [NC,L]
+	RewriteRule	^projectors/home-theater/([A-Za-z0-9-]+)series/?$    /projectors/family.php?series=$1series    [NC,L]
+	RewriteRule	^projectors/home-theater/([A-Za-z0-9-]+)/?$    /projectors/product.php?pn=$1    [NC,L]
+	RewriteRule	^projectors/interactive/([A-Za-z0-9-]+)series/?$    /projectors/family.php?series=$1series    [NC,L]
+	RewriteRule	^projectors/interactive/([A-Za-z0-9-]+)/?$    /projectors/product.php?pn=$1    [NC,L]
+	RewriteRule	^projectors/office/?$    /projectors/?meeting   [NC,L]    
 
-RewriteRule  ^bigtouch/.*$ /displays/BIGTOUCH-SERIES [R=301,NC,L]
+	RewriteRule	^projectors/classroom/?$    /projectors/?meeting    [NC,L]    
 
-RewriteRule  ^AppData/Local/.*$ / [R=301,NC,L]
+	RewriteRule	^projectors/meeting/?$    /projectors/?meeting    [NC,L]    
 
-RewriteRule  ^accessories/accessories(-for)?-mondopad-and-bigtouch/?$ /accessories/mpbtaccessories [R=301,NC,L]
+	RewriteRule	^projectors/mobile/?$    /projectors/?mobile    [NC,L]
 
-RewriteRule  ^10.0.0.250/ad1_dfs/.*$ / [R=301,NC,L]
+	RewriteRule	^projectors/ultra-portable/?$    /projectors/?mobile    [NC,L]
 
-RewriteRule  ^~/media/.*$ / [R=301,NC,L]
+	RewriteRule	^projectors/(large-venue)/?$    /projectors/?$1    [NC,L]
+	RewriteRule	^projectors/(short-throw)/?$    /projectors/?$1    [NC,L]
 
-RewriteRule  ^resources/misc/(MP\sShell\s.\..\...\.exe) /support/index.php?register&filename=$1&regdl=TRUE [NC,L]
+	RewriteRule	^projectors/(home-theater)/?$    /projectors/?$1    [NC,L]
 
-RewriteRule  ^online(-)?RMA /support/?online-rma [NC,L]
+	RewriteRule	^projectors/(interactive)/?$    /projectors/?$1   [NC,L]
 
-RewriteRule  ^support/online(-)?RMA /support/?online-rma [NC,L]
+	RewriteRule	^projectors/([A-Za-z0-9-]+)series/?$    /projectors/family.php?series=$1series    [NC,L]
 
-RewriteRule  ^pressearchiv$ /about?news [NC,L]
+	RewriteRule	^projectors/([A-Za-z0-9-]+)/?$    /projectors/product.php?pn=$1    [NC,L]
 
-RewriteRule  ^news$ /about?news [NC,L]
+	RewriteRule	^displays/([A-Za-z0-9-]+)series/?$    /displays/family.php?series=$1series    [NC,L]
 
-RewriteRule  ^job(s)? /about?careers [NC,L]
+	RewriteRule	^displays/([A-Za-z0-9-]+)/?$    /displays/product.php?pn=$1    [NC,L]
 
-RewriteRule  ^career(s)? /about?careers [NC,L]
+	RewriteRule	^video-communication(s)?/([A-Za-z0-9-]+)series/?$    /video-communication/family.php?series=$2series    [NC,L]
 
-RewriteRule  ^register$ /support/?register [NC,L]
+	RewriteRule	^video-communication(s)?/([A-Za-z0-9-]+)/?$    /video-communication/product.php?pn=$2    [NC,L]
 
-RewriteRule  ^support/register$ /support/?register [NC,L]
+	RewriteRule	^accessories/([A-Za-z0-9-]+)/?$    /accessories/product.php?pn=$1    [NC,L]
 
-RewriteRule  ^labs/all/news(.*$) /about?news [NC,L]
+	RewriteBase /
 
-RewriteRule  ^labs/all/events.*$ /about?events [NC,L]
+	RewriteCond %{SCRIPT_FILENAME} !-f 
 
-RewriteRule  ^company/press.*$ /about?news [NC,L]
+	RewriteRule ^([^\.])$ $1.php [NC,L]
 
-RewriteRule  ^infsBin/job.*$ /about?careers [NC,L]
+	RewriteRule ^([^\.])$ $1.html [NC,L]
 
-RewriteRule  ^company/jobs /about?careers [NC,L]
+	RewriteCond %{HTTP_HOST} ^209\.59\.161\.112
 
-RewriteRule  ^.*outlet.infocus.com$ http://outlet.infocus.com [R=301,NC,L]
-
-RewriteRule  ^.*www.infocusstore.com$ http://www.infocusstore.com [R=301,NC,L]
-
-RewriteRule  ^_1 / [R=404,NC,L]
-
-RewriteRule  ^99$ / [R=404,NC,L]
-
-RewriteRule  ^a$ / [R=404,NC,L]
-
-RewriteRule  ^worldwide / [R=301,NC,L]
-
-RewriteRule  ^accessories/accessories-mondopad-and-bigtouch/bignote /accessories/INS-BIGNOTE [R=301,NC,L]
-
-RewriteRule  ^displays/bigtouch/video-kommunikation /video-communication/MVP100 [R=301,NC,L]
-
-RewriteRule  ^accessories/warranties-and-services/conx-group-videoconferencing-de /accessories/CONX [R=301,NC,L]
-
-RewriteRule  ^accessories.aspx /accessories [R=301,NC,L]
-
-RewriteRule  ^americas-support /support [R=301,NC,L]
-
-RewriteRule  ^bulb(s)? /accessories/lamps [R=301,NC,L]
-
-RewriteRule  ^buynow/lamp(s)? http://www.infocusstore.com/Lamps-Accessories/b/7448620011?ie=UTF8&title=Lamps [R=301,NC,L]
-
-RewriteRule  ^buynow/projector(s)? http://www.infocusstore.com/Projectors/b/7288433011?ie=UTF8&title=Projectors [R=301,NC,L]
-
-RewriteRule  ^cable(s)? /accessories/?cables [R=301,NC,L]
-
-RewriteRule  ^calculator /resources/forms/projectioncalculator [R=301,NC,L]
-
-RewriteRule  ^projector-installation /resources/forms/projectioncalculator [R=301,NC,L]
-
-RewriteRule  ^consumerspecialoffers http://www.infocusrebates.com/ [R=301,NC,L]
-
-RewriteRule  ^contact(u)?(s)?(upport)? /support/ [R=301,NC,L]
-
-RewriteRule  ^controlview /accessories/CONTROLVIEW [R=301,NC,L]
-
-RewriteRule  ^conx$ /accessories/CONX [R=301,NC,L]
-
-RewriteRule  ^conx/activate http://collaborate.infocus.com [R=301,NC,L]
-
-RewriteRule  ^corp.htm /about [R=301,NC,L]
-
-RewriteRule  ^cs /support [R=301,NC,L]
-
-RewriteRule  ^dealregistration https://www.infocusregistrationrewards.com/index.php [R=301,NC,L]
-
-RewriteRule  ^designservices http://design.infocus.com/designservices/ [R=301,NC,L]
-
-RewriteRule  ^displaylink /accessories/product?pn=SP-DOUSB-WIRELESS [R=301,NC,L]
-
-RewriteRule  ^easymoney https://www.brightprojections.com/easymoney [R=301,NC,L]
-
-RewriteRule  ^educationrewards http://www.brightprojections.com/aplushonors/ [R=301,NC,L]
-
-RewriteRule  ^FirstResponders_MondopadSuccessStory http://collaborate.infocus.com/firerescue1/ [R=301,NC,L]
-
-RewriteRule  ^giftshop https://www.madetoorder.com/infocus/ [R=301,NC,L]
-
-RewriteRule  ^highered http://collaborate.infocus.com/collaborate_education/ [R=301,NC,L]
-
-RewriteRule  ^imagelibrary https://infocus.box.net/s/rm0l6xcsfot4c4tk8670 [R=301,NC,L]
-
-RewriteRule  ^INF7020 /displays/INF7021 [R=301,NC,L]
-
-RewriteRule  ^INF7020docs /displays/downloads [R=301,NC,L]
-
-RewriteRule  ^infocus-mondopad-portland-public-schools /education [R=301,NC,L]
-
-RewriteRule  ^interactive-solutions /displays [R=301,NC,L]
-
-RewriteRule  ^jtouch /displays/JTOUCH-SERIES [R=301,NC,L]
-
-RewriteRule  ^lamp(s)? /accessories/?lamps [R=301,NC,L]
-
-RewriteRule  ^learnbig /education [R=301,NC,L]
-
-RewriteRule  ^li(ght)?(te)?show /accessories/networking [R=301,NC,L]
-
-RewriteRule  ^wireless$ /accessories/networking [R=301,NC,L]
-
-RewriteRule  ^LiteshowIII /peripherals/INLITESHOW3 [R=301,NC,L]
-
-RewriteRule  ^lp$ /projectors/ [R=301,NC,L]
-
-RewriteRule  ^macadapter http://store.infocus.com/ [R=301,NC,L]
-
-RewriteRule  ^mondodemo http://mondopad.infocus.com/mondodemo/ [R=301,NC,L]
-
-RewriteRule  ^mondopad-auth(orization)?(-request)? http://collaborate.infocus.com/msp/ [R=301,NC,L]
-
-RewriteRule  ^mportal http://collaborate.infocus.com/msp/ [R=301,NC,L]
-
-RewriteRule  ^ms/displaylink/index.html /accessories/product?pn=SP-DOUSB-WIRELESS [R=301,NC,L]
-
-RewriteRule  ^mvp100$ /video-communication/product?pn=mvp100 [R=301,NC,L]
-
-RewriteRule  ^node/office-projectors /projectors/?meeting [R=301,NC,L]
-
-RewriteRule  ^pcc$ /education [R=301,NC,L]
-
-RewriteRule  ^pps$ /education [R=301,NC,L]
-
-RewriteRule  ^press$ /about [R=301,NC,L]
-
-RewriteRule  ^products/finder /product-finder [R=301,NC,L]
-
-RewriteRule  ^about-infocus /about [R=301,NC,L]
-
-RewriteRule  ^previewmp18 http://collaborate.infocus.com/mondopad_preview/ [R=301,NC,L]
-
-RewriteRule  ^projectornet /accessories/PROJECTORNET31 [R=301,NC,L]
-
-RewriteRule  ^pwd / [R=301,NC,L]
-
-RewriteRule  ^rebate(s)? http://www.infocusrebates.com [R=301,NC,L]
-
-RewriteRule  ^regrewards https://www.infocusregistrationrewards.com [R=301,NC,L]
-
-RewriteRule  ^sale$ http://store.infocus.com/ [R=301,NC,L]
-
-RewriteRule  ^serv /support [R=301,NC,L]
-
-RewriteRule  ^suport /support [R=301,NC,L]
-
-RewriteRule  ^support/Laptop_Activation /support/laptop-activation [R=301,NC,L]
-
-RewriteRule  ^support/terms /support/warranty [R=301,NC,L]
-
-RewriteRule  ^support/underconstruction /support [R=301,NC,L]
-
-RewriteRule  ^(support)?(-)?survey http://www.surveymonkey.com/Users/76030828/Surveys/676053839216/43AD4246-ADE3-4FDF-B0AE-C581A8140D89.asp?U=676053839216&DO_NOT_COPY_THIS_LINK= [R=301,NC,L]
-
-RewriteRule  ^orderstatus http://www.infocusstore.com/ [R=301,NC,L]
-
-RewriteRule  ^where(-)?to(-)?buy /reseller-locator [R=301,NC,L]
-
-RewriteRule  ^firstresponders /first-responders [R=301,NC,L]
-
-RewriteRule  ^(mondopad)?(mp)?(-)?training(-)?(registration)?(-0)?$ /resources/forms/mptraining [NC,L]
-
-RewriteRule  ^bigtouch$ /displays/family?series=BIGTOUCH-SERIES [NC,L]
-
-RewriteRule  ^mondopad$ /displays/family?series=MONDOPAD-Series [NC,L]
-
-RewriteRule  ^sales_manager$ /resources/documents/InFocus_TAM_areamap.pdf [NC,L]
-
-RewriteRule  ^videoconferencing$ /displays/family?series=MONDOPAD-SERIES [NC,L]
-
-RewriteRule  ^warranty$ /support/warranty [NC,L]
-
-RewriteRule  ^cms$ /resources/maincms.php [NC,L]
-
-RewriteRule  ^accessories/lamps?/?$ /accessories/?lamps [NC,L]
-
-RewriteRule  ^accessories/mondopad-?accessories?/?$ /accessories/?mpbtaccessories [NC,L]
-
-RewriteRule  ^accessories/mpbt-?accessories?/?$ /accessories/?mpbtaccessories [NC,L]
-
-RewriteRule  ^accessories/bigtouch-?accessories?/?$ /accessories/?mpbtaccessories [NC,L]
-
-RewriteRule  ^accessories/cables?/?$ /accessories/?cables [NC,L]
-
-RewriteRule  ^accessories/cases?/?$ /accessories/?cases [NC,L]
-
-RewriteRule  ^accessories/lens(es)?/?$ /accessories/?lenses [NC,L]
-
-RewriteRule  ^accessories/misc(ellaneous)?/?$ /accessories/?misc [NC,L]
-
-RewriteRule  ^accessories/mounts?/?$ /accessories/?mounts [NC,L]
-
-RewriteRule  ^accessories/remotes?/?$ /accessories/?remotes [NC,L]
-
-RewriteRule  ^accessories/screens?/?$ /accessories/?screens [NC,L]
-
-RewriteRule  ^accessories/software?/?$ /accessories/?software [NC,L]
-
-RewriteRule  ^accessories/services?/?$ /accessories/?services [NC,L]
-
-RewriteRule  ^accessories/warrant(y)?(ies)?/?$ /accessories/?services [NC,L]
-
-RewriteRule  ^accessories/wireless/?$ /accessories/?networking [NC,L]
-
-RewriteRule  ^accessories/networking/?$ /accessories/?networking [NC,L]
-
-RewriteRule  ^projectors/office(?:-projectors)?/([A-Za-z0-9-]+)serie(s)?/?$ /projectors/family.php?series=$1series [NC,L]
-
-RewriteRule  ^projectors/office(?:-projectors)?/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^projectors/office(?:-projectors)?/(?:[A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^projectors/classroom(?:-projectors)?/([A-Za-z0-9-]+)serie(s)?/?$ /projectors/family.php?series=$1series [NC,L]
-
-RewriteRule  ^projectors/classroom(?:-projectors)?/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^projectors/classroom(?:-projectors)?/(?:[A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^projectors/(?:ultra-)?portable(?:-projectors)?/([A-Za-z0-9-]+)serie(s)?/?$ /projectors/family.php?series=$1series [NC,L]
-
-RewriteRule  ^projectors/(?:ultra-)?portable(?:-projectors)?/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^projectors/(?:ultra-)?portable(?:-projectors)?/(?:[A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^projectors/large-venue(?:-projectors)?/([A-Za-z0-9-]+)serie(s)?/?$ /projectors/family.php?series=$1series [NC,L]
-
-RewriteRule  ^projectors/large-venue(?:-projectors)?/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^projectors/large-venue(?:-projectors)?/(?:[A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^projectors/short-throw(?:-projectors)?/([A-Za-z0-9-]+)serie(s)?/?$ /projectors/family.php?series=$1series [NC,L]
-
-RewriteRule  ^projectors/short-throw(?:-projectors)?/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^projectors/short-throw(?:-projectors)?/(?:[A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^projectors/home-theater/([A-Za-z0-9-]+)serie(s)?/?$ /projectors/family.php?series=$1series [NC,L]
-
-RewriteRule  ^projectors/home-theater/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^projectors/interactive/([A-Za-z0-9-]+)serie(s)?/?$ /projectors/family.php?series=$1series [NC,L]
-
-RewriteRule  ^projectors/interactive/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^projectors/interactive(?:-projectors)?/(?:[A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^projectors/office/?$ /projectors/?meeting [NC,L]
-
-RewriteRule  ^projectors/classroom/?$ /projectors/?meeting [NC,L]
-
-RewriteRule  ^projectors/meeting/?$ /projectors/?meeting [NC,L]
-
-RewriteRule  ^projectors/mobile/?$ /projectors/?mobile [NC,L]
-
-RewriteRule  ^projectors/ultra-portable/?$ /projectors/?mobile [NC,L]
-
-RewriteRule  ^projectors/(large-venue)/?$ /projectors/?$1 [NC,L]
-
-RewriteRule  ^projectors/(short-throw)/?$ /projectors/?$1 [NC,L]
-
-RewriteRule  ^projectors/(home-theater)/?$ /projectors/?$1 [NC,L]
-
-RewriteRule  ^projectors/(interactive)/?$ /projectors/?$1 [NC,L]
-
-RewriteRule  ^projectors/([A-Za-z0-9-]+)series/?$ /projectors/family.php?series=$1series [NC,L]
-
-RewriteRule  ^projectors/([A-Za-z0-9-]+)/?$ /projectors/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^displays/([A-Za-z0-9-]+)series/?$ /displays/family.php?series=$1series [NC,L]
-
-RewriteRule  ^displays/([A-Za-z0-9-]+)/?$ /displays/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^video-communication(s)?/([A-Za-z0-9-]+)series/?$ /peripherals/family.php?series=$2series [NC,L]
-
-RewriteRule  ^video-communication(s)?/([A-Za-z0-9-]+)/?$ /peripherals/product.php?pn=$2 [NC,L]
-
-RewriteRule  ^accessories/([A-Za-z0-9-]+)/?$ /accessories/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^peripheral(?:s)?/([A-Za-z0-9-]+)serie(s)?/?$ /peripherals/family.php?series=$1series [NC,L]
-
-RewriteRule  ^peripheral(?:s)?/([A-Za-z0-9-]+)/?$ /peripherals/product.php?pn=$1 [NC,L]
-
-RewriteRule  ^accessor(ies)?(y)?/?$ /accessories/index.php [NC,L]
-
-RewriteRule  ^display(s)?/?$ /displays/index.php [NC,L]
-
-RewriteRule  ^projector(s)?/?$ /projectors/index.php [NC,L]
-
-RewriteRule  ^peripheral(s)?/?$ /peripherals/index.php [NC,L]
-
-RewriteRule  ^qtablet/?$ /displays/product.php?pn=INP-110Q [NC,L]
-
-RewriteRule  ^support/?$ /support/index.php [NC,L]
-
-RewriteRule  ^la-promo /custompages/index.php?pagename=sales-partners [R=301,NC,L]
-
-RewriteRule  authorized(-)?service(-)?(center)?(s)?$ /custompages/index.php?pagename=authorized-service-centers [NC,L]
-
-RewriteRule  ^404 /custompages/index.php?404 [NC,L]
-
-RewriteRule  ^big(-)?note$ /custompages/index.php?big-note [NC,L]
-
-RewriteRule  ^big(-)?note/download /custompages/index.php?pagename=big-note [NC,L]
-
-RewriteRule  ^mississippi$ /custompages/index.php?pagename=mississippi&pagetype=blank [NC,L]
-
-RewriteRule  ^mondopad(-)?(live)?(-)?demo$ /custompages/index.php?pagename=mondopad-live-demo [NC,L]
-
-RewriteRule  ^mondopad(-)?(live)?(-)?demo(-)?cdw$ /custompages/index.php?pagename=mondopad-live-demo-cdw [NC,L]
-
-RewriteRule  ^mondopad(-)?video(-)?phone(-)?promotion$ /custompages/index.php?mondopad-video-phone-promotion [NC,L]
-
-RewriteRule  ^partner(s)?(central)?$ /custompages/index.php?pagename=sales-partners [NC,L]
-
-RewriteRule  ^privacy(-)?(policy)?$ /custompages/index.php?pagename=privacy-policy [NC,L]
-
-RewriteRule  ^programs(-)?(&)?(and)?(-promotions)?$ /custompages/index.php?pagename=sales-partners [NC,L]
-
-RewriteRule  ^reseller(s)?$ /custompages/index.php?pagename=sales-partners [NC,L]
-
-RewriteRule  ^revendedor$ /custompages/index.php?pagename=sales-partners [NC,L]
-
-RewriteRule  ^sales(-)?partner(s)?$ /custompages/index.php?pagename=sales-partners [NC,L]
-
-RewriteRule  ^spec_rebate$ /custompages/index.php?pagename=sales-partners [NC,L]
-
-RewriteRule  ^terms(-)?of(-)?use$ /custompages/index.php?terms-of-use [NC,L]
-
-RewriteRule  ^thank(-)?you$ /custompages/index.php?thank-you [NC,L]
-
-RewriteRule  ^touchscreen(-)?solutions(-)?sale(-)?education$ /custompages/index.php?touchscreen-solutions-sale-education [NC,L]
-
-RewriteRule  ^Ms/documents/InFocus_ePortal_Quick_Start_Guide.pdf /custompages/index.php?pagename=sales-partners [R=301,NC,L]
-
-RewriteRule  ^terms(-)?(of)?(-)?service /custompages/index.php?pagename=terms-of-service [NC,L]
-
-RewriteRule  ^MP-Shell.exe /support/index.php?register&filename=MP-Shell.exe&regdl=TRUE [NC,L]
-
-RewriteRule  ^reseller/infocus-store$ http://www.infocusstore.com [R=301,NC,L]
-
-RewriteRule  ^buy_now/reseller/infocus-store$ http://www.infocusstore.com [R=301,NC,L]
-
-RewriteRule  ^infocus-team$ /about?infocus-team [R=301,NC,L]
-
-RewriteRule  ^mondomadness$ /displays/MONDOPAD-SERIES [R=301,NC,L]
-
-RewriteRule  ^global-contactus$ /resources/forms/supportcontactus [R=301,NC,L]
-
-RewriteRule  ^legal/?$ /support/warranty [R=301,NC,L]
-
-RewriteRule  ^support/displaylink$ /support [R=301,NC,L]
-
-RewriteRule  ^support/howto$ /support [R=301,NC,L]
-
-RewriteRule  ^support/howtoguides.aspx$ /support [R=301,NC,L]
-
-RewriteRule  ^support/rmaworldmap$ /support [R=301,NC,L]
-
-RewriteRule  ^get_a_quote/launch$ /resources/forms/getaquote [R=301,NC,L]
-
-RewriteRule  ^accessories/wireless-and-networking/.* /accessories/networking [R=301,NC,L]
-
-RewriteRule  ^accessories/warranties-and-services/.* /accessories/services [R=301,NC,L]
-
-RewriteRule  ^accessories/software/.* /accessories/software [R=301,NC,L]
-
-RewriteRule  ^accessories/screens/.* /accessories/screens [R=301,NC,L]
-
-RewriteRule  ^accessories/remotes/.* /accessories/remotes [R=301,NC,L]
-
-RewriteRule  ^accessories/mounts-and-stands/.* /accessories/mounts [R=301,NC,L]
-
-RewriteRule  ^accessories/miscellaneous/.* /accessories/misc [R=301,NC,L]
-
-RewriteRule  ^accessories/lenses/.* /accessories/lenses [R=301,NC,L]
-
-RewriteRule  ^accessories/lamps/.* /accessories/lamps [R=301,NC,L]
-
-RewriteRule  ^accessories/cases/.* /accessories/cases [R=301,NC,L]
-
-RewriteRule  ^accessories/cables-and-adapters/.* /accessories/cables [R=301,NC,L]
-
-RewriteRule  ^troubleshooting-tree$ /support [R=301,NC,L]
-
-RewriteRule  ^search/node$ /support [R=301,NC,L]
-
-RewriteRule  ^user$ /login/index.php?phasemsg=Please+login+first.&whence=/ [NC,L]
-
-RewriteRule  ^warranty-terms-and-conditions$ /support/warranty [R=301,NC,L]
-
-RewriteRule  ^work-infocus-1$ /about?career [R=301,NC,L]
-
-RewriteRule  ^product_page/(?:[A-Za-z0-9-_]+)/bigtouch(?:[A-Za-z0-9-_]+) /displays/BIGTOUCH-SERIES [R=301,NC]
-
-RewriteRule  ^product_page/(?:[A-Za-z0-9-_]+)/mondopad(?:[A-Za-z0-9-_]+) /displays/MONDOPAD-SERIES [R=301,NC]
-
-RewriteRule  ^product_page/(?:[A-Za-z0-9-_]+)/infocus_liteshow_iii /accessories/INLITESHOW3 [R=301,NC]
-
-RewriteRule  ^product_page/(?:[A-Za-z0-9-_]+)/wireless_usb_module /accessories/SP-WIFIUSB [R=301,NC,L]
-
-RewriteRule  ^product_page/(?:[A-Za-z0-9-_]+)/wireless_displaylink /accessories/SP-DOUSB-WIRELESS [R=301,NC,L]
-
-RewriteRule  ^product_page/(?:[A-Za-z0-9-_]+)/universal_projector_ceiling_mount /accessories/PRJ-MNT-UNIV [R=301,NC,L]
-
-RewriteRule  ^product_page/(?:[A-Za-z0-9-_]+)/projectornet /accessories/PROJECTORNET31 [R=301,NC,L]
-
-RewriteRule  ^product_page/(?:[A-Za-z0-9-_]+)/realcam_pan/tilt/zoom_camera /peripherals/INF-SPTZ-2 [R=301,NC,L]
-
-RewriteRule  ^reseller_locator(?:[.]*) /reseller-locator [R=301,NC]
-
-RewriteRule  ^products$ / [R=301,NC]
-
-RewriteRule  (?:.*)home(-)?(_)?theat(er)?(re)?(-)?(_)?projectors$ /projectors/home-theater [R=301,NC]
-
-RewriteRule  ^proav-partners /sales-partners [R=301,NC,L]
-
-RewriteRule  ^reseller-login /sales-partners [R=301,NC,L]
-
-RewriteRule  ^sales-tools /sales-partners [R=301,NC,L]
-
-RewriteRule  ^outbound/store$ http://www.infocusstore.com [R=301,NC,L]
-
-RewriteRule  ^emeaservice http://www.infocus.de/support [R=301,NC,L]
-
-RewriteRule  ^proav-communications-sign /?proavsignup [NC,L]
-
-RewriteRule  ^freightestimate /?freightestimate [NC,L]
-
-RewriteRule  ^demokeys /?demokeys 
-
-RewriteRule  ^sip2phone /peripherals/INASIP2PHONE [R=301,NC,L]
-
-RewriteRule  ^sip2phone/install /resources/misc/InFocus-SIP2PHONE-Install.msi [R=301,NC,L]
-
-RewriteRule  sellersolutions /sales-partners 
-
-RewriteRule  sellersolution /sales-partners 
-
-RewriteRule  ^touchscreen-sale-K12 http://jtouchk12.com/ [R=301,NC,L]
-
-RewriteRule  ^touchscreen-solutions-sale-education http://jtouchk12.com/ [R=301,NC,L]
-#EndGenerated
-
- 
- RewriteBase /
- RewriteCond %{HTTPS} off
-RewriteCond %{HTTP_HOST} ^infocus(.*)$ [NC]
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
-
-RewriteCond %{HTTPS} on
-RewriteCond %{HTTP_HOST} ^infocus(.*)$ [NC]
-RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
-
- 
- RewriteCond %{SCRIPT_FILENAME} !-f 
- RewriteRule ^([^\.])$ $1.php [NC,L]
- RewriteRule ^([^\.])$ $1.html [NC,L]
-
-
- RewriteCond %{HTTP_HOST} ^209\.59\.161\.112
- RewriteRule (.*) http://dev.infocus.com/$1  [R=301,NC,L]
- 
- RewriteRule ^login/$ /login/index.php?phasemsg=Please+login+first.&whence=/  [NC,L]
- RewriteRule ^admin/$ /cgi-bin/userbase.cgi  [NC,L]
- 
- RewriteCond %{QUERY_STRING} ^q=(.*)$
- RewriteRule ^(?:site_)?search/? /custompage.php?pagename=%1 [NC,L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^resources/documents/([A-Za-z0-9-_]+)/.*$ /unknown.php?$1[R=301,NC,L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^resources/documents/([A-Za-z0-9-_\.]+)/?$ /unknown.php?pn=$1&ref=doc [R=301,NC,L]
-
- 
- RewriteRule ^(?:[A-Za-z0-9-_]+)/(?:[A-Za-z0-9-_]+)/(?:[A-Za-z0-9-_]+)/(?:[A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$  /unknown.php?$1   [R=301,NC,L]
- RewriteRule ^(?:[A-Za-z0-9-_]+)/(?:[A-Za-z0-9-_]+)/(?:[A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$  /unknown.php?$1   [R=301,NC,L]
- RewriteRule ^(?:[A-Za-z0-9-_]+)/(?:[A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$  /unknown.php?$1   [R=301,NC,L]
- RewriteRule ^(?:[A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$  /unknown.php?$1   [R=301,NC,L]
- RewriteRule ^([A-Za-z0-9-_]+)/?$  /custompage.php?pagename=$1   [NC,L]
-
+	RewriteRule (.*) http://dev.infocus.com/$1 [R=301,NC,L]
 
 </IfModule>
 
+
+
 DirectoryIndex index.php index.html index.htm
+
 <FilesMatch "\.(htm|html|css|js)$">
+
 AddDefaultCharset UTF-8
+
 </FilesMatch>
+
+
 

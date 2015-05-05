@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks -Indexes
+Options -Indexes
+RewriteEngine On
+RewriteRule  ^displays/thin-displays.*$ /displays [R=301,NC,L]
+RewriteRule  ^discontinued-displays.*$ /support [R=301,NC,L]
+RewriteRule  ^bigtouch$ /displays/BIGTOUCH-SERIES [R=301,NC,L]
+RewriteRule  ^bigtouch/video-kommunikation /video-communication/MVP100 [R=301,NC,L]
+RewriteRule  ^([A-Za-z0-9-]+)series/?$ /displays/family.php?series=$1series [NC,L]
+RewriteRule  ^([A-Za-z0-9-]+)/?$ /displays/product.php?pn=$1 [NC,L]
+RewriteRule  ^(?:[A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ /displays/product.php?pn=$1 [NC,L]
+</ifmodule>

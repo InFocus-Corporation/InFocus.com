@@ -9,7 +9,7 @@ $connection = mysqli_connect('67.43.0.33','partners_login','InF0cusP@ssw0rd', 'p
 
 mysqli_set_charset($connection, "utf8");
 
-$_POST['serial_number'] = str_replace("-","",str_replace("1S","",str_replace(" ","",$_POST['serial_number'])));
+$_POST['serial_number'] = mysqli_real_escape_string($connection,str_replace("-","",str_replace("1S","",str_replace(" ","",$_POST['serial_number']))));
 
 $result = mysqli_query($connection,'SELECT * FROM InstallBase WHERE SerialNumber = "' . $_POST['serial_number'] . '"' );
 
@@ -18,7 +18,7 @@ if(mysqli_num_rows($result)==0 OR !empty($filename))
 
 
 define("ZDAPIKEY", "srU2sx3OY0fK2TDn3CDGblU0yBxDBGIULwSWGVps");
-define("ZDUSER", "daniel.boggs@infocus.com");
+define("ZDUSER", "administrator@infocus.com");
 define("ZDURL", "https://infocuscorp.zendesk.com/api/v2");
 
 function curlWrap($url, $json)

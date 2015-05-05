@@ -46,8 +46,8 @@ $lang = $row['lang'];
 $category = $row['category'];
 $firmware = $row['firmware'];
 $group = $row['productgroup'];
-
-
+$addImage = $row['additionalimages'];
+$productmeta = $row['productmeta'];
 
 }
 }
@@ -101,8 +101,14 @@ $group = $row['productgroup'];
 <option value="Accessory" <?php if($group == "Accessory"){echo "Selected"; }?>>Accessory</option>
 <option value="Peripheral" <?php if($group == "Peripheral"){echo "Selected"; }?>>Peripheral</option>
 </select>
+<label class="top" for="additionalimages">Additional Images (comma separated)</label>
+<textarea type="text" id="additionalimages" name="additionalimages" rows="10" col="10"><?= $addImage; ?></textarea>
+<br>
+<label class="top" for="productmeta">Custom Meta (Product Name, Title, Category, and Accessories are already included)</label>
+<textarea type="text" id="productmeta" name="productmeta" rows="10" col="10"><?= $productmeta; ?></textarea>
+<br>
 <label class="top" for="firmware">Firmware</label>
-<textarea type="text" id="firmware" name="firmware" rows="10" col="10"><?php echo $firmware; ?></textarea>
+<textarea type="text" id="firmware" name="firmware" rows="10" col="10"><?= $firmware; ?></textarea>
 <br><br><br>
 <input type="submit" id="submit" name="submit" value="Submit"/>
 </form>

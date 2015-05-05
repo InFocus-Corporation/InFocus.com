@@ -1,11 +1,10 @@
-<?PHP
+<?php header('Access-Control-Allow-Origin: *');
 //$groups_allowed = "ASC";
 //require($_SERVER['DOCUMENT_ROOT'] . "/login/ublock.php");
 
-extract($_POST);
+extract($_REQUEST);
 
-if ( isset($SN) ) {
-$connection = mysqli_connect('67.43.0.33','partners_login','InF0cusP@ssw0rd', 'partners_IFC_IB',3306);
+if ( isset($SN) ) {$connection = mysqli_connect('67.43.0.33','partners_login','InF0cusP@ssw0rd', 'partners_IFC_IB',3306);$SN = mysqli_real_escape_string($connection,$SN);
 mysqli_set_charset($connection, "utf8");
 
 $Serial = $SN;
@@ -52,37 +51,9 @@ $end = date("M jS, Y", strtotime($start." + 1 week"));
 
 echo "Based on the format of your serial number your warranty most likely expires " . $end;
 }
-else if (substr($Serial,0,1) == 'a' OR substr($Serial,0,1) == 'A'){
-
-$year = 2002 + substr($SN,4,1);
-$week = substr($SN,5,2);
-$start = date("M jS, Y", strtotime("01 Jan ".$year." 00:00:00 GMT + ".$week." weeks"));
-$end = date("M jS, Y", strtotime($start." + 1 week"));
-
-if ($week >= 1)
-{
+else if (substr($Serial,0,1) == 'a' OR substr($Serial,0,1) == 'A'){$year = 2002 + substr($SN,4,1);
+$week = substr($SN,5,2);$start = date("M jS, Y", strtotime("01 Jan ".$year." 00:00:00 GMT + ".$week." weeks"));$end = date("M jS, Y", strtotime($start." + 1 week"));if ($week >= 1){echo "Based on the format of your serial number your warranty most likely expires " . $end;}}else{$year = 2012 + substr($SN,4,1);$week = substr($SN,5,2);$start = date("M jS, Y", strtotime("01 Jan ".$year." 00:00:00 GMT + ".$week." weeks"));$end = date("M jS, Y", strtotime($start." + 1 week"));if ($week >= 1){
 echo "Based on the format of your serial number your warranty most likely expires " . $end;
-}
-
-}
-else
-{
-$year = 2012 + substr($SN,4,1);
-$week = substr($SN,5,2);
-$start = date("M jS, Y", strtotime("01 Jan ".$year." 00:00:00 GMT + ".$week." weeks"));
-$end = date("M jS, Y", strtotime($start." + 1 week"));
-
-if ($week >= 1)
-{
-echo "Based on the format of your serial number your warranty most likely expires " . $end;
-}
-
-}
-}
-else {
-
-echo $Result;
-
-}
-}
+}}
+}else {echo $Result;}}
 ?> 

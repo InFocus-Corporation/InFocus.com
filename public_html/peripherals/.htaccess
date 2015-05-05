@@ -1,0 +1,9 @@
+
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks -Indexes
+Options -Indexes
+RewriteRule  ^/?$ /accessories/index.php [NC,L]
+RewriteRule  ^([A-Za-z0-9-]+)serie(?:s)?/?$ /peripherals/family.php?series=$1series [NC,L]
+RewriteRule  ^(?:[A-Za-z0-9-]+)serie(?:s)?/([A-Za-z0-9-]+)/?$ /peripherals/product.php?pn=$1 [NC,L]
+RewriteRule  ^([A-Za-z0-9-]+)/?$ /peripherals/product.php?pn=$1 [NC,L]
+</ifmodule>

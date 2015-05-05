@@ -1,0 +1,33 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks -Indexes
+Options -Indexes
+RewriteRule  ^accessories-mondopad-and-bigtouch/bignote /accessories/software/INS-BIGNOTE [R=301,NC,L]
+RewriteRule  ^warranties-and-services/conx-group-videoconferencing-de /accessories/CONX [R=301,NC,L]
+
+
+RewriteRule  ^/?$ /accessories/index.php [NC,L]
+RewriteRule  ^(?:[A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ /accessories/product.php?pn=$1 [NC,L]
+
+
+RewriteRule  ^(mounts|remotes|screens|software|services|networking|cables|cases|mpbtaccessories|lamps|misc|lenses)?/?$ /accessories/categories.php?$1 [NC,L]
+
+RewriteRule  ^mondopad-?accessories?/?$ /accessories/categories.php?mpbtaccessories [NC,L]
+RewriteRule  ^mpbt-?accessories?/?$ /accessories/categories.php?mpbtaccessories [NC,L]
+RewriteRule  ^bigtouch-?accessories?/?$ /accessories/categories.php?mpbtaccessories [NC,L]
+RewriteRule  ^cables?/?$ /accessories/categories.php?cables [NC,L]
+RewriteRule  ^cases?/?$ /accessories/categories.php?cases [NC,L]
+RewriteRule  ^lens(es)?/?$ /accessories/categories.php?lenses [NC,L]
+RewriteRule  ^misc(ellaneous)?/?$ /accessories/categories.php?misc [NC,L]
+RewriteRule  ^display-?accessories?/?$ /accessories/categories.php?mpbtaccessories [NC,L]
+
+
+RewriteRule  ^warrant(y)?(ies)?/?$ /accessories/categories.php?services [NC,L]
+RewriteRule  ^wireless/?$ /accessories/?networking [NC,L]
+RewriteRule  ^wireless-and-networking/.* /accessories/networking [NC,L]
+RewriteRule  ^warranties-and-services/.* /accessories/services [NC,L]
+RewriteRule  ^mounts-and-stands/.* /accessories/mounts [NC,L]
+RewriteRule  ^miscellaneous/.* /accessories/misc [NC,L]
+RewriteRule  ^cables-and-adapters/.* /accessories/cables [NC,L]
+
+RewriteRule  ^([A-Za-z0-9-]+)/?$ /accessories/product.php?pn=$1 [NC,L]
+</ifmodule>

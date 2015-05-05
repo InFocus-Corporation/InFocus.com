@@ -2,7 +2,7 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . "/login/ubvars.php");
 
 
-function validateUser($adminList = "admin"){
+function validateUser($adminList = "admin,editor"){
 $adminList=explode(",",$adminList);
 $isAdmin = false;
 global $ub_group_list;
@@ -14,7 +14,7 @@ foreach ($adminList as &$admins) {
 return $isAdmin;
 }
 
-function CMSscript($fileName, $pn, $filepath, $adminList = "admin", $fileExt = ".src", $editableID = "overview", $THB = "true", $SavePageAs = "SavePage", $removeID = "product"){
+function CMSscript($fileName, $pn, $filepath, $adminList = "admin,editor", $fileExt = ".src", $editableID = "overview", $THB = "true", $SavePageAs = "SavePage", $removeID = "product"){
 $adminList=explode(",",$adminList);
 $isAdmin = false;
 global $ub_group_list;
