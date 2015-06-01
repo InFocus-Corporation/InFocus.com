@@ -7,13 +7,13 @@ require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
 mysqli_set_charset($connection, "utf8");
 ini_set('default_charset', 'utf-8');
 
-
-$result = mysqli_query($connection,'SELECT fieldname, fieldvalue
+$sql = 'SELECT fieldname, fieldvalue
 				FROM accessoryspecs
-				WHERE partnumber = "' . $_REQUEST['pn'] . '" AND lang = "' . $_REQUEST['lang'] . '"');
+				WHERE partnumber = "' . $_REQUEST['pn'] . '" AND lang = "' . $_REQUEST['lang'] . '"';
+$result = mysqli_query($connection,$sql);
 
-		if(mysqli_num_rows($results)!=0){ 
-				echo '<div class="rounded" style="margin-top:40px;width:50%"><table><thead><tr class="HeaderRow"><th></th><th></th></tr></thead><tbody>';
+		if(mysqli_num_rows($result)!=0){ 
+				echo '<div class="rounded" style="margin-top:40px;width:100%"><table><thead><tr class="HeaderRow"><th></th><th></th></tr></thead><tbody>';
 
 				while($row = mysqli_fetch_array($result))
 				{

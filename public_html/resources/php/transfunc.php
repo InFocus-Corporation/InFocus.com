@@ -9,7 +9,6 @@ else{$translate[$row[0]] = $row[1];}
 
 $replaceArray = array(".php",".htm",".html","/","-");
 $pagename = str_replace($replaceArray,"",$_SERVER['PHP_SELF']);
-echo "<script>console.log('$pagename');</script>";
 		$sql = 'SELECT EngText.textkey, if(LangText.`text` is null,EngText.`text`,LangText.`text`) as Text FROM (SELECT * FROM InFocus.sitetext WHERE lang = "en") AS EngText LEFT JOIN (SELECT * FROM InFocus.sitetext WHERE lang = "' . $lang . '") AS LangText ON (EngText.textkey = LangText.textkey AND EngText.pagename = LangText.pagename) WHERE EngText.pagename = "' . $pagename . '"';
 		$results = mysqli_query($connection,$sql);
 		while($row = mysqli_fetch_array($results)){

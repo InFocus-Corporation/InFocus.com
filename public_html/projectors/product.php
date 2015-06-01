@@ -55,7 +55,9 @@ if($_GET['edit']=="true"){CMSHTML("SavePage",'admin,editor');}
 	<div class="tab-shadow"></div>
   </nav>
   
+		<div id="overview" class="active">
 		<?=$overview ?>
+		</div>
 
 		<div id="specs" style="position:relative">
 		<?=$specs ?>
@@ -69,7 +71,12 @@ if($_GET['edit']=="true"){CMSHTML("SavePage",'admin,editor');}
 		<?=$downloads ?>
 			</div>
 		<div id="support">
-<?PHP include($_SERVER['DOCUMENT_ROOT']."/resources/html/support-tab-" . $product->lang . ".html"); ?>
+<?PHP if($product->productText['firmware'] != null){
+	echo "<div class='C8'><h4>firmware</h4>";
+	echo $product->productText['firmware'];
+	echo "</div>";
+	}
+	include($_SERVER['DOCUMENT_ROOT']."/resources/html/support-tab-" . $product->lang . ".html"); ?>
 		</div>
 
 

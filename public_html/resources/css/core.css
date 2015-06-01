@@ -339,7 +339,9 @@ form input {
 	color: #B5B5B5;
 	margin-bottom: 8px;
 	max-width: 240px;
-	margin-left: 8px;	}
+    margin-left: 8px;
+    width: 75%;	
+	}
 form input:hover {
 	background:#f7f7f7;
 }
@@ -358,7 +360,10 @@ form select {
 	background: #f1f1f1;
 	color: #b5b5b5;
 	margin-bottom: 4px;
+	max-width: 260px;
 	margin-left: 8px;
+	width: 90%;
+  }
 }
 form select:hover {
 	background:#f7f7f7;
@@ -378,7 +383,10 @@ form textarea {
 	background: #f1f1f1;
 	color: #b5b5b5;
 	margin-bottom: 4px;
-	margin-left: 8px;
+	max-width: 240px;
+    margin-left: 8px;
+    width: 75%;	
+	}
 }
 form textarea:hover {
 	background:#F7F7F7;
@@ -861,6 +869,7 @@ margin-bottom:.1em;
 .image-set img {
 max-width:100%;
 display:block;
+height:auto;
 }
 
 .image-set {
@@ -944,7 +953,7 @@ margin-top:50px;
 }
 .footer li{
 display:inline-block;
-padding:0px 20px;
+padding:0px 1%;
 border-bottom: 1px solid #F66D26;
 }
 
@@ -1028,7 +1037,7 @@ margin:0 auto;
 }
 .resultsList img {
 max-width:100%;
-max-height:100%;
+height:auto;
 margin:auto;
 
 }
@@ -1554,7 +1563,7 @@ text-align: left;}
 
 .floatList img {
 max-width:100%;
-
+height:auto;
 }
 
 .floatList > li {

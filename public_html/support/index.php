@@ -296,7 +296,7 @@ Our goal in the support department is to provide you every tool you need to reso
 			<option value="/accessories/product?pn=INLITESHOW3">Liteshow III</option>
 			<option value="/accessories/product?pn=INLITESHOW2">Liteshow II</option>
 			<?php 
-			$sql = "SELECT partnumber, productgroup, active FROM producttext WHERE partnumber NOT LIKE 'A%' AND partnumber NOT LIKE 'C%' AND partnumber NOT LIKE 'DP%' AND productgroup != 'Accessory' AND productgroup != 'Series' AND lang = '" . $lang . "' AND active is not null AND active != '' ORDER BY partnumber";
+			$sql = "SELECT partnumber, productgroup, active FROM producttext WHERE partnumber NOT LIKE 'A%' AND partnumber NOT LIKE 'C%' AND partnumber NOT LIKE 'DP%' AND productgroup != 'Accessory' AND productgroup != 'Series' AND lang = '" . $lang . "' AND active is not null ORDER BY partnumber";
 			$results = mysqli_query($connection,$sql);
 			while($row = mysqli_fetch_array($results)){echo '<option value="/'. strtolower($row['productgroup']) . "s/" . $row['partnumber'] .'">'.$row['partnumber'] .'</option>';}
 			?>      

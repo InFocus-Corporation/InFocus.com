@@ -1,10 +1,7 @@
 <?PHP
-
 if(strpos(dirname(__FILE__),"dev")>0){
 
-
 }
-
 require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
 require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/langchk.php");
 require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/transfunc.php");
@@ -23,9 +20,9 @@ $list = $product->sList();
 $models = $product->models();
 }
 else{
-$priceBuyNow = $product->priceBuyNow($product->pn);
 $thumbnails = $product->thumbnails();
 $reviews = $product->reviews();
+$priceBuyNow = $product->priceBuyNow($product->pn);
 }
     $specs = $product->specs();
     $videos = $product->videos();
@@ -42,7 +39,10 @@ elseif(basename($_SERVER['PHP_SELF']) == "custompage.php"){
 		$sql = "SELECT pagecontent FROM pages WHERE pagename = '" . $_GET['pagename'] . "' AND lang = '" . $lang . "'";
 		$results = mysqli_query($connection,$sql);
 		if(mysqli_num_rows($results)==0)
-		{header("Location: /unknown.php?" . $_GET['pagename']); die();}
+		{			header("HTTP/1.0 404 Not Found");
+			include($_SERVER['DOCUMENT_ROOT'] . '/404.php');
+			exit;
+}
  }
 
 $productLinks = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/resources/misc/links"));

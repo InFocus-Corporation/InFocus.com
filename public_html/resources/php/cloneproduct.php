@@ -3,7 +3,8 @@ $groups_allowed = "admin,editor,saleseditor,marketingeditor";
 require($_SERVER['DOCUMENT_ROOT'] . "/login/ublock.php");
 
 ini_set('default_charset', 'utf-8');
-$lang = "en";
+if( substr($_SERVER['DOCUMENT_ROOT'],-11) == "public_html"){$lang = "en";}
+else{$lang = substr($_SERVER['DOCUMENT_ROOT'],-2);}
 global $localdir;
 global $homedir; 
 $localdir = dirname(__FILE__);

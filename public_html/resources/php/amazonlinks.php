@@ -19,8 +19,8 @@ $AmazonSearch = file_get_contents("http://www.infocusstore.com/Touch/b/728844001
 $AmazonSearch = substr($AmazonSearch,strpos($AmazonSearch,'<div id="searchResultsContainer"'));
 $AmazonSearch = explode(" <a href=",$AmazonSearch);
 $lastValue = "";
-$searchA = 	array("LIGHTPRO-", '"HTTP://WWW.INFOCUSSTORE.COM/INFOCUS-', "Q-TABLET-FOR-BUSINESS", "Q-TABLET-FOR-HOME", "JTOUCH-70", "JTOUCH-55", "BIGTOUCH-55", "BIGTOUCH-70", "JTOUCH-65", "MONDOPAD-55", "MONDOPAD-70", "MONDOPAD-80");
-$replaceA = array("", "", "INP~120Q~PR-", "INP~120Q-", "INF7001A", "INF5520A~NOPC", "INF55WIN8", "INF7011", "INF6501A", "INF5520A", "INF7021", "INF8021");
+$searchA = 	array("LIGHTPRO-", '"HTTP://WWW.INFOCUSSTORE.COM/INFOCUS-', "Q-TABLET-FOR-BUSINESS", "Q-TABLET-FOR-HOME", "JTOUCH-70", "JTOUCH-55", "BIGTOUCH-55", "BIGTOUCH-70", "JTOUCH-65", "MONDOPAD-55", "MONDOPAD-70", "MONDOPAD-80", "BIGTOUCH-57","TABLET-SCHOOLS-10","TABLET-HOME-10","TABLET-BUSINESS-10");
+$replaceA = array("", "", "INP~120Q~PR-", "INP~120Q-", "INF7001A", "INF5520A~NOPC", "INF55WIN8", "INF7011", "INF6501A", "INF5520A", "INF7021", "INF8021", "INF5711","INP~120Q~ED","INP~120Q","INP~120Q~PR");
 
 foreach($AmazonSearch as &$Result){
 $Result = substr($Result,0,strpos($Result,"?"));
@@ -52,5 +52,15 @@ $products[$pn] = str_replace('"','',$Result);
 $lastValue = $Result;
 }
 
-file_put_contents($_SERVER['DOCUMENT_ROOT'] . "/resources/misc/links",serialize($products));
+
+	$conn = mysqli_connect('67.43.0.33','InFocus','InF0cusP@ssw0rd', 'InFocus',3306);
+	mysqli_set_charset($conn, "utf8");
+	ini_set('default_charset', 'utf-8');
+
+		$sql = "SELECT partnumber, link FROM InFocus.buylinks";
+		$result = mysqli_query($conn,$sql);
+		while($row = mysqli_fetch_assoc($result))
+		{$products[strtoupper($row['partnumber'])] = $row['link'];}
+
+file_put_contents("/home/ifcprod/public_html/resources/misc/links",serialize($products));
 ?>

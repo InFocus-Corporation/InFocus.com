@@ -1,19 +1,11 @@
 <IfModule mod_rewrite.c>
 Options +FollowSymLinks -Indexes
 Options -Indexes
-
-RewriteEngine On
-RewriteCond %{HTTP_HOST} !^www\.
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/accessories/$1 [R=301,L]
-
-
 RewriteRule  ^accessories-mondopad-and-bigtouch/bignote /accessories/software/INS-BIGNOTE [R=301,NC,L]
 RewriteRule  ^warranties-and-services/conx-group-videoconferencing-de /accessories/CONX [R=301,NC,L]
 
 
 RewriteRule  ^/?$ /accessories/index.php [NC,L]
-RewriteRule  ^SP-LAMP_087/?$ /accessories/product.php?pn=SP-LAMP_087 [NC,L]
-RewriteRule  ^(?:[A-Za-z0-9-]+)/SP-LAMP_087/?$ /accessories/product.php?pn=SP-LAMP_087 [NC,L]
 RewriteRule  ^(?:[A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$ /accessories/product.php?pn=$1 [NC,L]
 
 

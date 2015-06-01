@@ -109,7 +109,7 @@ echo '<option value ="' . $row[0] . '">' .  $row[0] . '</option>';
    
   <script>
 <?php 
-$sql = 'SELECT * FROM sitetext WHERE pagename LIKE "%' . $_GET['pn'] . '%" LIMIT 50';
+$sql = 'SELECT * FROM sitetext WHERE pagename LIKE "%' . $_GET['pn'] . '%" AND lang = "' . $lang . '" LIMIT 50';
 
 require_once($_SERVER['DOCUMENT_ROOT'] . "/resources/php/tableQuery.php");
 

@@ -1,12 +1,12 @@
 /**
- * @license Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
- * For licensing, see LICENSE.html or http://ckeditor.com/license
+ * @license Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
 
 CKEDITOR.editorConfig = function( config ) {
-	
-	// %REMOVE_START%
-	// The configuration options below are needed when running CKEditor from source files.
+	// Define changes to default configuration here. For example:
+	// config.language = 'fr';
+	// config.uiColor = '#AADC6E';
 	config.extraPlugins = 'colorbutton';
 	config.autoParagraph = false;
 	// %REMOVE_END%
@@ -45,4 +45,4 @@ CKEDITOR.editorConfig = function( config ) {
 	config.allowedContent = true;
 	config.colorButton_colors = 'Header Blue/1BA1E2,Accent Orange/f66d26,Accent Green/bcc853, Dark Background/006699, Light Background/E1EEF4';
 
-};
+	};

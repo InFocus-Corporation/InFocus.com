@@ -19,6 +19,7 @@ if(!empty($_GET['lang'])){$lang = $_GET['lang'];}
 #sortable { list-style-type: none; margin: 0; padding: 0; }
 #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; }
 #sortable li span { position: absolute; margin-left: -1.3em; }
+.image-set span{width:100%;}
 </style>
 <script>
 

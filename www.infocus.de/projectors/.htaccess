@@ -3,10 +3,7 @@ ErrorDocument 404 /404.php
 <IfModule mod_rewrite.c>
 Options +FollowSymLinks -Indexes
 Options -Indexes
-
 RewriteEngine On
-RewriteCond %{HTTP_HOST} !^www\.
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/projectors/$1 [R=301,L]
 
 RewriteRule  ^portable-projectors/infocus-in1100er-projektor-serie$ /projectors/IN1100-SERIES [R=301,NC,L]
 

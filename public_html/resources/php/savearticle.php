@@ -8,8 +8,9 @@ require($_SERVER['DOCUMENT_ROOT'] . "/login/ubvars.php");
 
 $homedir=substr(dirname(__FILE__),0,stripos(dirname(__FILE__),"public_html")+11); 
 
-
-$_REQUEST['categories'] = str_replace("3","Review",str_replace("4","Story",str_replace("2","News",str_replace("1","Event",$_REQUEST['categories']))));
+$keynum = array(1,2,3,4,5,6);
+$valrep = array('Event','News','Press Review','Customer Review','Story');
+$_REQUEST['categories'] = str_replace($keynum,$valrep,$_REQUEST['categories']);
 
 require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
 mysqli_set_charset($connection, "utf8");

@@ -10,7 +10,7 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 }
 
 ?>
-<?php echo $pageText['meta'];?>
+<?php echo $pageText[$category.'meta'];?>
 
 <script>
 

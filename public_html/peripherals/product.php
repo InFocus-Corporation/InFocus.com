@@ -55,7 +55,9 @@ if($_GET['edit']=="true"){CMSHTML("SavePage",'admin,editor');}
 	<div class="tab-shadow"></div>
   </nav>
   
+		<div id="overview" class="active">
 		<?=$overview ?>
+		</div>
 
 		<div id="specs" style="position:relative">
 		<?=$specs ?>

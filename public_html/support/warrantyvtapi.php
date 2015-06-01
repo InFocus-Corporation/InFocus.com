@@ -1,4 +1,4 @@
-<?php header('Access-Control-Allow-Origin: *');
+<?php header('Access-Control-Allow-Origin: https://infocuscorp.zendesk.com');
 //$groups_allowed = "ASC";
 //require($_SERVER['DOCUMENT_ROOT'] . "/login/ublock.php");
 

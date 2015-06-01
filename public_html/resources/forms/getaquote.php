@@ -71,12 +71,12 @@ window.location = "/#getaquote";
 }
 </style>
  </HEAD>
-<body style="max-width:1200px;background: #f7f7f7;">
+<body style="max-width:1200px;background: #f7f7f7;line-height: 1em;">
 
 
 <form id="WebToLeadForm" method="POST" name="WebToLeadForm">
 
-<h2 style="text-align: left;"><?php echo $translate['Get a Quote'];?></h2>
+<h2 style="text-align: left;"><?php echo translate('Get a Quote');?></h2>
 <p style="text-align: left;"><?php echo $pageText['WorkWithYou'];?></p>
 
 
@@ -85,7 +85,7 @@ window.location = "/#getaquote";
  <li>
 
 <p><?php echo $pageText['TellUs'];?></p>
-<label class="top" for="productofinterest_c"><?php echo $translate['Product'];?>: <span class="required" style="color: #ff0000;">*</span></label>
+<label class="top" for="productofinterest_c"><?php echo translate('Product');?>: <span class="required" style="color: #ff0000;">*</span></label>
 
 <?php 
 

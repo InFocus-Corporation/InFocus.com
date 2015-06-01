@@ -28,32 +28,35 @@ class IFCSeries extends InFocus
 	    $producttest = str_replace($find,$replace,$this->pn);
 	    $producttest = rtrim(ltrim($producttest,'-'),'-');
 
-	  	$sql = "SELECT s.series, producttext.partnumber, s.differencelist, producttext.active, producttext.productgroup, s.category, producttext.price
-		FROM (SELECT * FROM InFocus.producttext WHERE `lang` = '{$this->lang}' OR `lang` = 'en') as producttext JOIN (
+	  	$sql = "SELECT s.series, producttext.partnumber, s.differencelist, producttext.active, producttext.productgroup, s.category, producttext.price, producttext.listtitle
+		FROM (SELECT * FROM InFocus.producttext WHERE `lang` = '{$this->lang}' ) as producttext JOIN (
 			SELECT productseries.*, ss.category
-			FROM (SELECT * FROM InFocus.productseries  WHERE `lang` = '{$this->lang}' OR `lang` = 'en') as productseries JOIN (
+			FROM (SELECT * FROM InFocus.productseries  WHERE `lang` = '{$this->lang}' ) as productseries JOIN (
 				SELECT series, category 
 					FROM InFocus.productseries JOIN InFocus.producttext ON productseries.series = producttext.partnumber
 					WHERE (productseries.partnumber IN('{$producttest}','IN{$producttest}','INS-{$producttest}') OR series IN('{$producttest}','{$producttest}-Series','IN{$producttest}','IN{$producttest}-Series','INS-{$producttest}','INS-{$producttest}-Series') ) LIMIT 1) AS ss 
 			ON ss.series = productseries.series ) AS s 
-		ON s.partnumber = producttext.partnumber AND s.`lang` = producttext.`lang`
-		ORDER BY 
-				IF(producttext.`lang` = '$this->lang',1,
-				IF(producttext.`lang` = 'en',2,3))";
+		ON s.partnumber = producttext.partnumber AND s.`lang` = producttext.`lang` ORDER BY partnumber desc";
 
 		$result = mysqli_query($this->conn,$sql);
 
 		if(mysqli_num_rows($result)==0){
-		$sql = "SELECT  * FROM InFocus.producttext WHERE (`lang` = '{$this->lang}' OR `lang` = 'en') AND partnumber IN('{$producttest}','IN{$producttest}','INS-{$producttest}') 
-				ORDER BY 
-						IF(producttext.`lang` = '{$this->lang}',1,
-						IF(producttext.`lang` = 'en',2,3))";
+		$sql = "SELECT  * FROM InFocus.producttext WHERE (`lang` = '{$this->lang}') AND partnumber IN('{$producttest}','IN{$producttest}','INS-{$producttest}') ORDER BY partnumber";
 		$result = mysqli_query($this->conn,$sql);
+			echo "<script>console.log('$producttest');</script>";
+		}
+
+		if(mysqli_num_rows($result)==0){
+		$sql = "SELECT  * FROM InFocus.producttext WHERE (`lang` = '{$this->lang}') AND partnumber IN('{$this->pn}','IN{$this->pn}','INS-{$this->pn}') ORDER BY partnumber";
+		$result = mysqli_query($this->conn,$sql);
+		$producttest = $this->pn;
+			echo "<script>console.log('$this->pn');</script>";
 		}
 
 		if(mysqli_num_rows($result)==0){
 			header("HTTP/1.0 404 Not Found");
 			include($_SERVER['DOCUMENT_ROOT'] . '/404.php');
+			echo "<script>console.log('$producttest');</script>";
 			exit;
 		}
 
@@ -71,6 +74,7 @@ class IFCSeries extends InFocus
 			if(empty($this->modelsDiff[$row['partnumber']])) {$this->modelsDiff[$row['partnumber']] = $row['differencelist'];}
 			if(empty($this->modelActive[$row['partnumber']])) {$this->modelActive[$row['partnumber']] = $row['active'];}
 			if(empty($this->modelPrice[$row['partnumber']])) {$this->modelPrice[$row['partnumber']] = $row['price'];}
+			if(empty($this->modelListTitle[$row['partnumber']])) {$this->modelListTitle[$row['partnumber']] = $row['listtitle'];}
 			if(empty($this->productGroup)) {$this->productGroup = $row['productgroup'];}
 			if(empty($this->productCategory)) {$this->productCategory = $row['category'];}
 
@@ -103,8 +107,9 @@ class IFCSeries extends InFocus
 			}
 			$this->breadcrumb = rtrim($this->breadcrumb,",");
 		}
-
-		$this->canonical = "<link rel='canonical' href='http://{$_SERVER['SERVER_NAME']}/{$this->productPath}/{$multiCat[0]}";
+		$cservername = $_SERVER['SERVER_NAME'];
+		if($cservername == "infocus.com"){$cservername = "www.infocus.com";}
+		$this->canonical = "<link rel='canonical' href='http:////{$cservername}/{$this->productPath}/{$multiCat[0]}";
 		if($this->series != ''){
 			$this->breadcrumb .= " > <a href='/{$this->productPath}/{$multiCat[0]}/{$this->series}'>{$this->series}</a>";
 			$this->canonical .= "/{$this->series}";
@@ -118,7 +123,7 @@ class IFCSeries extends InFocus
 			$this->breadcrumb = str_replace('//','/',$this->breadcrumb);
 			$this->breadcrumb = str_replace('> > > ','> > ',$this->breadcrumb);
 
-		file_put_contents("clog.txt", $this->lang . $this->pn  . $this->series . $multiCat[0] .  "\n", FILE_APPEND);
+		//file_put_contents("clog.txt", $this->lang . $this->pn  . $this->series . $multiCat[0] .  "\n", FILE_APPEND);
 	     if($this->isSeries == true AND basename($_SERVER['PHP_SELF']) != "family.php")
 	    {header("HTTP/1.0 301 Moved Permanently"); header("Location: /{$this->productPath}/{$multiCat[0]}/{$this->series}"); exit();}
 
@@ -177,7 +182,7 @@ class IFCSeries extends InFocus
 		$overviewString;
 		if(mysqli_num_rows($results)!=0){
 			$this->productTabs .= '<li><a href="#overview" class="active">' . translate('Overview') . '</a></li>';
-			$overviewString .= '	<div id="overview" class="active">
+			$overviewString .= '
 			<ul class="C10 alternateDivChildL2">';
 			while($row = mysqli_fetch_array($results)){
 			$overviewString .=  "<li>
@@ -191,22 +196,22 @@ class IFCSeries extends InFocus
 			</div>
 			</li>";
 			}
-			$overviewString .= '</ul></div>';
+			$overviewString .= '</ul>';
 		}
 		return $overviewString;
 	 }
 
-	public function priceBuyNow($model){
+	public function priceBuyNow($model,$panel = false){
 		if(strlen($this->modelPrice[$model])>0){$priceSection = "<small class='price'>";}
 		else{$priceSection = "<small class='price' style='display:none;'>";}
-		$productLinks = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/resources/misc/links"));
+		if($this->lang == 'en'){$productLinks = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/resources/misc/links"));}
 
 		$infoLink = '<span class="infolink" title="' . translate('Manufacturer\'s Suggested Retail Price (MSRP) in US Dollars. Actual price may vary by dealer and country; consult your local Authorized InFocus Reseller for details.') . '"></span>';
 
 		if($productLinks[$model] != null){
 			if($this->modelActive[$model] != 2){
-				if($this->productGroup != "Accessory"){$modelLink = $productLinks[$model];
-					$infoLink = '<span class="infolink" title="Price displayed in US Dollars from InFocusStore.com, may vary elsewhere, and is valid only in the US."></span>';}
+				$modelLink = $productLinks[$model];
+				$infoLink = '<span class="infolink" title="Price displayed in US Dollars from InFocusStore.com, may vary elsewhere, and is valid only in the US."></span>';
 			}
 			else{
 			$modelLink ="";		
@@ -223,7 +228,7 @@ class IFCSeries extends InFocus
 			$this->modelActive[$model] = 2;
 			}
 			}
-			else{$modelLink = 'http://infocusstore.com/s?defaultSearchTextValue=Search&searchKeywords=' . $this->pn . '&Action=submit';}
+			elseif($this->modelActive[$model] != 2){$modelLink = 'http://infocusstore.com/s?defaultSearchTextValue=Search&searchKeywords=' . $model . '&Action=submit';}
 			}
 
 			switch($this->modelActive[$model]){
@@ -247,7 +252,7 @@ class IFCSeries extends InFocus
 			     </div>
 			    </li>";
 
-		if($this->isSeries){
+		if($panel){
 			return $priceSection;
 		}
 			switch(strtolower($this->series)){
@@ -260,61 +265,70 @@ class IFCSeries extends InFocus
 			}
 
 		$gacode = "<a class='btn buy-now' onclick = 'ga(\"send\",\"event\",\"button\",\"click\",\"Buy Now\")' href='{{link}}'> " . translate('Buy Now') . " <span style='font-size:70%'> (US)</span> </a>";
-		  $priceSection = '<div style="vertical-align:bottom;"><h1 class="mysqledit h2" id="pagetitle" style=""  >' . $this->productText['title'] . '</h1>
-		  Part Number: ' . $this->pn . '</div><div class=""><ul class="action-links Col_child';
+		  $priceSection = '<div style="vertical-align:bottom;"><h1 class="mysqledit h2" id="pagetitle" style=""  >' . $this->productText['title'] . '</h1>';
+		if($this->isSeries == false){$priceSection .= 'Part Number: ' . $this->pn;}
+		$priceSection .= '</div><div class=""><ul class="action-links Col_child';
 
-		if(in_array($this->modelActive[$model], array(1,5,6))){$priceSection .=  ' bnwp">';}
+		if(in_array($this->productText['active'], array(1,5,6))){$priceSection .=  ' bnwp">';}
 		else{$priceSection .=   '">';}
-		if(in_array($this->modelActive[$model], array(1,2,5,6,7))){
+		if(in_array($this->productText['active'], array(1,2,5,6,7))){
 			$priceSection .=   '<li><span class="cost mysqledit" id="price" style="font-size:160%;">';
-			if(strlen($this->modelPrice[$model])>0){$priceSection .= $this->modelPrice[$model] . $infoLink; }
+			if(strlen($this->productText['active'])>0){$priceSection .= $this->modelPrice[$model] . $infoLink; }
 		}
 		$priceSection .= '</span>';
 		//if(in_array($this->modelActive[$model], array(2,7))){$priceSection .= '</span></li>';}
-		if(in_array($this->modelActive[$model], array(1,5,6))){$priceSection .= str_replace("{{link}}", $modelLink, $gacode) . "</li>";}
-		if(in_array($this->modelActive[$model], array(4))){$priceSection .= '      <li><a onclick = "ga('. "'send','event','button','click','Buy Now'" . ')" href="http://collaborate.infocus.com/' . $pn . '" class="btn learn-more">' . translate("Buy Now") . ' <span style="font-size:70%">(US)</span></a>';}
-		if(in_array($this->modelActive[$model], array(9))){$priceSection .= '      <li><a href="http://outlet.infocus.com/s?defaultSearchTextValue=Search&searchKeywords=' . $pn . '+-lamp+-filter&Action=submit" class="btn learn-more">Available on Outlet Store</a>';}
+		if(in_array($this->productText['active'], array(1,5,6))){$priceSection .= str_replace("{{link}}", $modelLink, $gacode) . "</li>";}
+		if(in_array($this->productText['active'], array(4))){$priceSection .= '      <li><a onclick = "ga('. "'send','event','button','click','Buy Now'" . ')" href="http://collaborate.infocus.com/' . $pn . '" class="btn learn-more">' . translate("Buy Now") . ' <span style="font-size:70%">(US)</span></a>';}
+		if(in_array($this->productText['active'], array(9))){$priceSection .= '      <li><a href="http://outlet.infocus.com/s?defaultSearchTextValue=Search&searchKeywords=' . $pn . '+-lamp+-filter&Action=submit" class="btn learn-more">Available on Outlet Store</a>';}
 		$priceSection .= '</li>';
 
-		if(in_array($this->modelActive[$model], array(2,3,6))){$bclass='btn ';}
+		if(in_array($this->productText['active'], array(2,3,6))){$bclass='btn ';}
 		$getaQuote = "<a class='$bclass form-box' style='display:block' href='/resources/forms/getaquote'>" . translate("Get a Quote") . '</a>';
-		$resellerLoc = "<a class='$bclass' href='/reseller-locator{$resellerloc}'>" . translate("Find a Reseller"). '</a>';
+		$resellerLoc = "<a class='$bclass ' href='/reseller-locator{$resellerloc}'>" . translate("Find a Reseller"). '</a>';
 		$requestDemo = "<a class='$bclass form-box cboxElement' href='/resources/forms/mpdemo'>" . translate("Request a Demo") . '</a>';
 
-		switch($this->modelActive[$model]){
+		switch($this->productText['active']){
 		case 1:
-		$priceSection .=  "<li>{$getaQuote}{$resellerLoc}</li>";
+		$this->justButtons = "<li>{$getaQuote}</li><li>{$resellerLoc}</li>";
+		$priceSection .= "<li>{$getaQuote}{$resellerLoc}</li>";
 		break;
 		case 6:
+		$this->justButtons =  "<li>{$resellerLoc}</li><li>{$requestDemo}</li>";
 		$priceSection .=  "<li>{$resellerLoc}{$requestDemo}</li>";
 		break;
 		case 3: 
-		$priceSection .=  "<li>{$getaQuote}</li><li>{$resellerLoc}</li><li>{$requestDemo}</li>";
+		$this->justButtons =  "<li>{$getaQuote}</li><li>{$resellerLoc}</li><li>{$requestDemo}</li>";
+		$priceSection .=  $this->justButtons;
 		break;
 		case 2: case 4: case 7:
-		$priceSection .=  "<li>{$getaQuote}</li><li>{$resellerLoc}</li>";
+		$this->justButtons =  "<li>{$getaQuote}</li><li>{$resellerLoc}</li>";
+		$priceSection .=  $this->justButtons;
 		break;
 		case 8:
-		$priceSection .=  "<li><a class='btn' href='#overview'>" . translate("Download") . '</a></li>';
+		$this->justButtons =  "<li><a class='btn' href='#overview'>" . translate("Download") . '</a></li>';
+		$priceSection .=  $this->justButtons;
 		}
 		$priceSection .=  "</ul></div>"; 
-
+		$this->justButtons = str_replace("class=' ","class='btn ",$this->justButtons);
 		return $priceSection;
 	 }
 
 	public function models(){
-		$this->productTabs .= '<li><a href="#models" class="active">' .  translate('Models') . '</a></li>';
+		$this->productTabs .= '<li id="modid"><a href="#models" class="active">' .  translate('Models') . '</a></li>';
 		$seriesPanels;
 		foreach($this->seriesModels as $model){
-			if(($this->productText['active'] != 0 AND $this->modelActive[$model] != 0) OR $this->productText['active'] == 0){
+			if(($this->modelActive[$model] != 0 AND $this->modelActive[$model] != 0) OR $this->productText['active'] == 0){
 				$thumb = imagethumb($model,'135');
-				$displayModel = str_replace('A','a',$model);
+				$displayModel = str_replace('A','a',$model );
 				$specList = str_replace('<ul>','<ul class="spec-list">', $this->modelsDiff[$model]);
 
-				$seriesPanels .= "<li><section class='stretch-wrap33'><a href='$this->series/{$model}'><img style='margin:0 auto;' src='{$thumb}'></a></section>
+		//				$seriesPanels .= "<li><section class='stretch-wrap33'><a href='$this->series/{$model}'><img style='margin:0 auto;' src='{$thumb}'></a></section>
+		//					<div><a href='$this->series/{$model}'><h6 class='title'>{$displayModel}</h6></a>
+		//				      {$specList}";
+				$seriesPanels .= "<li>
 					<div><a href='$this->series/{$model}'><h6 class='title'>{$displayModel}</h6></a>
 				      {$specList}";
-				$seriesPanels .= $this->priceBuyNow($model);
+				$seriesPanels .= $this->priceBuyNow($model,true);
 			}
 		}
 		return $seriesPanels;
@@ -341,7 +355,6 @@ class IFCSeries extends InFocus
 			break;
 		}
 
-		$results = mysqli_query($this->conn,$sql);
 		if($this->isSeries){
 			$count = 0;
 			foreach($this->seriesModels as $model){
@@ -360,6 +373,8 @@ class IFCSeries extends InFocus
 		$count = 495 + (215*$count);
 		if($count>1490)($count=1490);
 
+		if(!empty($sql)){
+		$results = mysqli_query($this->conn,$sql);
 		if(mysqli_num_rows($results)!=0){ 
 		$specCompare = "<input id='modlist' style='display:none;' value='{$models}' ><br/>
 				<div class='ui-widget' style='padding-bottom:30px;'>
@@ -372,7 +387,7 @@ class IFCSeries extends InFocus
 		$specCompare .= "		      
 		</select><INPUT type='button' id='btn' class='formbutton' style='display:inline;margin-right:10px;' value='+' onclick=' updateSpecs(document.getElementById(" . '"combobox"' . ').value,"' . strtolower($this->productGroup) . 'specs.php"' . ");'  /><br>
 		</div>		";
-		}
+		}}
 		$postdata = http_build_query(array('pn' => $models,'lang' => $this->lang));
 		$opts = array('http' => array('method'  => 'POST','header'  => 'Content-type: application/x-www-form-urlencoded','content' => $postdata));
 		$context  = stream_context_create($opts);
@@ -388,9 +403,10 @@ class IFCSeries extends InFocus
 
 	public function videos(){
 		$sql = 'SELECT Summary, title, body, vidid, about, industry FROM videos WHERE';
-		if($this->series != null and $this->series !=''){$sql .= ' about LIKE "%' . rtrim($this->series,"-Series") . '%"';}
-		 $sql .= ' OR about LIKE "%' . implode('%" OR about LIKE "%',$this->seriesModels) . '%" ORDER BY rank , postdate DESC ';
+		if($this->series != null and $this->series !=''){$sql .= ' about LIKE "%' . rtrim($this->series,"-Series") . '%" OR ';}
+		 $sql .= ' about LIKE "%' . implode('%" OR about LIKE "%',$this->seriesModels) . '%" ORDER BY rank , postdate DESC ';
 		$result = mysqli_query($this->conn,$sql);
+		if($result === false){error_log($sql);}
 		if(mysqli_num_rows($result)>0){
 		$this->productTabs .= '<li id="vidsection"><a href="#videos">' . translate('Videos') . '</a></li>';
 		$x=0;
@@ -546,11 +562,10 @@ class IFCSeries extends InFocus
 			}
 			$dlRows[$row['category']][COUNT($dlRows[$row['category']])-1] .= "</ul></ul></td></tr>";
 		}
-		$dtHead = '<div class="rounded" style="margin:auto;max-wi
-		dth:960px;"><table><thead><tr class="HeaderRow"><th style="width:45px">' . translate('Type') . '</th><th>' . translate('File name & Description') . '</th><th style="width: 120px;">' . translate('Language') . '</th></tr></thead><tbody>';
+		$dtHead = '<div class="rounded" style="margin:auto;max-width:960px;"><table><thead><tr class="HeaderRow"><th style="width:45px">' . translate('Type') . '</th><th>' . translate('File name & Description') . '</th><th style="width: 120px;">' . translate('Language') . '</th></tr></thead><tbody>';
 		$dtFoot = 			'</tbody>
 		</table></div>';
-		$dlSetCat = array("Datasheets","User Guides","Firmware");
+		$dlSetCat = array("Datasheets","Success Stories","User Guides","Firmware");
 		foreach($dlSetCat AS $dlCat){
 			if(COUNT($dlRows[$dlCat])>0){
 				$dlTable .= "<h2 style='margin-top:40px;text-align:center;'>$dlCat</h2>";

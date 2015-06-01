@@ -1,9 +1,33 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
+$priceBuyNow = $product->priceBuyNow($product->pn);
 ?>
 <?=$product->canonical ?>
 <?=$product->productmeta ?>
+
 <style>
+	.blue_btn {
+  padding: 0.1em 1em;
+  max-width: 60%;
+  margin-top: 0.3em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  margin-bottom: 0em;
+  font-size:0.7em;
+}
+.spec-list {
+  text-align: left;
+  margin: 1em 1em .4em 1em;
+  font-size: 0.7em;
+  line-height: 1.2em;
+  padding: 8px 0;
+  border-top: 1px solid #bababa;
+  border-bottom: 1px solid #bababa;
+}
+.panels > li > div {
+  padding: 1em .2em;
+  margin: 0em .8em;
+}
 	.feature-list  ul {
 		width:46%;  
 		float:left;
@@ -21,9 +45,16 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
 	<div class="content">
 		<div id="family" class="C9">
 			<div class="breadcrumb"><?=$product->breadcrumb ?></div>
+			<div class="productheader C10 Col_child C4x6_child">
+			<div><h1 class="mysqledit h2" id="pagetitle" style=""  ><?=$product->productText['title'] ?></h1></div>
+			<div>
+			<ul class="action-links Col_child">
+			<li></li>
+ 		<?=$product->justButtons?>
+ 		</ul></div></div>
 			<div class="C10 Col_child C7x3_child">
 				<div class="info" style="float:left;">
-					<h2 class="name" id="pagetitle" ><?=$product->productText['title'] ?></h2>
+					
 					<strong class="tagline mysqledit" id="header"><?=$product->productText['header'] ?></strong>
 					<div class="mysqledit" id="blurb" ><?=$product->productText['blurb'] ?></div>
 					<div id="list" class="feature-list half mysqledit" style="font-size:80%"><?=$list ?></div>
@@ -39,13 +70,17 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
 					</ul>
 					<div class="tab-shadow"></div>
 				</nav>
-				<?=$overview ?>
+<script>$('#modid').hide();</script>		
 
-				<div id="models" class="active" style="position:relative">
-					<ul class="C10 panels resultsList">
-						<?=$models ?>
-					</ul>
-				</div>		
+			<div id="overview" class="active">
+			<div id="models" class="active" style="position:relative;top:1.5em;text-align:center;">
+			<ul class="C10 panels resultsList">
+				<?=$models ?>
+			</ul>
+			</div>	
+				<?=$overview ?>
+			</div>	
+	
 				<div id="specs" style="position:relative">
 					<?=$specs ?>
 				</div>

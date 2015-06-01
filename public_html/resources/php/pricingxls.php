@@ -108,6 +108,11 @@ $FreightAarray['INF7021-KIT'] = 250;
 $FreightAarray['INF8021-KIT'] = 499;
 $FreightAarray['INF8001'] = 499;
 $FreightAarray['INF8011'] = 499;
+$FreightAarray['INF5701'] = 200;
+$FreightAarray['INF5711'] = 200;
+$FreightAarray['INF6501aAG'] = 250;
+$FreightAarray['INF6501c'] = 250;
+$FreightAarray['INF6501cAG'] = 250;
 $FreightAarray['INF7001a'] = 250;
 
 
@@ -501,21 +506,22 @@ else{$ActiveSheet->setCellValue(num_to_letter($j++) . $i, $row[$Field]);}
 }
 $i = $i+1;
 
-
-if(strpos($row['PartNumber'],"-KIT")>0 AND $row['PartNumber'] != "INF-MCENTER-KIT"){
-
-$fieldArray = array('DirRestPubSec', 'ProAVPubSec', 'DistPubSec', 'ProAV', 'DirResp', 'Dist','MSContractPrice','NYContractPrice');
-
 $server = '67.43.7.189';
 $login = 'InternalAdmin';
 $password = 'nIinmFd0Aclu';
 $SelectDB = 'infocus_internal';
 $subconnection = mysqli_connect($server,$login,$password, $SelectDB,3306);
 
+if(strpos($row['PartNumber'],"-KIT")>0 AND $row['PartNumber'] != "INF-MCENTER-KIT"){
+
+$fieldArray = array('DirRestPubSec', 'ProAVPubSec', 'DistPubSec', 'ProAV', 'DirResp', 'Dist','MSContractPrice','NYContractPrice');
+
+
 
 $sql = "SELECT * FROM infocus_internal.Pricing_Kits WHERE kitsku = '" . $row['PartNumber'] . "' ORDER BY sortorder";
 $subresult	=	mysqli_query($subconnection,$sql);
 $subarray='';
+$subcost=0;
 while($subrow = mysqli_fetch_assoc($subresult))
 {
 $subcost = $subcost + $subrow['cost'];
@@ -543,6 +549,95 @@ $i = $i+1;
 
 }
 }
+
+
+
+
+//Secondary Row (generally accessories) Code. 
+if($secondaryRows != NULL){
+foreach($secondaryRows as $row){
+
+$prevCategory;
+
+$BaseX = $row['BaseX'];
+$COM = $row['CurrentBom'];
+$MAP = $row['MAP'];
+
+if($row['Category'] != $prevCategory AND $sheetOptions['Category_Spacers'] == 1){
+	if($row['Category'] == "PORTABLE" OR $row['Category'] == "OFFICE & CLASSROOM" OR $row['Category'] == "LARGE VENUE" OR $row['Category'] == "HOME THEATER" OR $row['Category'] == "INTERACTIVE"){ 
+		$ActiveSheet->setCellValue('A' . $i, $row['Category'] . ' PROJECTORS');
+		$ActiveSheet->getStyle(sheetScope($i))->getFill()->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setARGB(PHPExcel_Style_Color::COLOR_BLACK);
+		$ActiveSheet->getStyle(sheetScope($i))->getFont()->getColor()->setARGB(PHPExcel_Style_Color::COLOR_WHITE);
+	}
+	else{
+		$ActiveSheet->setCellValue('A' . $i, $row['Category'] );
+		$ActiveSheet->getStyle(sheetScope($i))->getFill()->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setARGB(PHPExcel_Style_Color::COLOR_BLACK);
+		$ActiveSheet->getStyle(sheetScope($i))->getFont()->getColor()->setARGB(PHPExcel_Style_Color::COLOR_WHITE);
+	}
+$i = $i+1;
+$prevCategory = $row['Category'];
+}
+
+foreach($row as $Key => &$Value){
+
+if($Value == NULL AND $Key == "DemoPricing"){$Value = 'N/A';}
+elseif($Value == NULL AND $Key == "PubSecMultiplier"){$Value = $Multiplier[$Key];}
+elseif($Value == NULL AND $Key == "AccyPubSec"){$Value = ROUND($MAP * $Multiplier[$Key]);}
+elseif($Value == NULL AND $Key == "NYContractPrice"){$Value = ROUND($MAP * $Multiplier[$Key]);}
+elseif($Value == NULL AND $Key == "NYContractAccy"){$Value = ROUND($MAP * $Multiplier[$Key]);}
+elseif($Value == NULL AND $Key == "NYListAccy"){$Value = ROUND($MAP * $Multiplier[$Key]);}
+elseif($Value == NULL AND $Key == "CDWStrat"){$Value = ROUND($row['Strategic']-$row['RegRewards']);}
+elseif($Value == NULL AND $Key == "Description"){$Value = $Description[strtoupper(str_replace("-KIT","",$row['PartNumber']))];}
+elseif($Value == NULL AND $Key == "UsedWith"){$Value = "";}
+elseif($Value == NULL AND $Key == "NotesKey"){$Value = "";}
+elseif($Value === '0' AND ($Key != 'NotesKey' AND $Key != 'UsedWith' AND $Key != 'Description' AND $Key != 'PartNumber' AND $Key != 'Country')){$Value = "N/A";}
+elseif($Value == NULL){$Value = ROUND($BaseX * $Multiplier[$Key]);}
+
+
+if($Key == "PubSecMultiplier"){
+$currentPSMult = $Value;
+}
+elseif(strpos($Key,"PubSec")>0 AND $Value == NULL){
+$Value = ROUND($lastValue * $currentPSMult);
+}
+
+$lastValue = $Value;
+
+if(($Value === '' OR $Value === '0' OR $Value == NULL OR $Value === 0) AND ($Key != 'NotesKey' AND $Key != 'UsedWith' AND $Key != 'Description' AND $Key != 'PartNumber' AND $Key != 'Country')){$Value = "N/A";}
+
+}			
+
+$manufacturCtry = "China";
+if(in_array($row['PartNumber'],$USAarray)){$manufacturCtry = "USA";}
+$Freight = $FreightAarray[$row['PartNumber']];
+$Freight = $FreightAarray[$row['PartNumber']];
+if($Freight == NULL){$Freight = "";}
+$WeightVal = $Weight[strtoupper(str_replace("-KIT","",$row['PartNumber']))];
+if($WeightVal == NULL){$WeightVal = "N/A";}
+
+$j = 1;
+foreach($cFields as $Field){
+if($Field == "Country"){$ActiveSheet->setCellValue(num_to_letter($j++) . $i, $manufacturCtry);}
+elseif($Field == "Weight"){$ActiveSheet->setCellValue(num_to_letter($j++) . $i, $WeightVal);}
+elseif($Field == "Freight"){$ActiveSheet->setCellValue(num_to_letter($j++) . $i, $Freight);}
+elseif($Field == "Date"){$ActiveSheet->setCellValue(num_to_letter($j++) . $i, date('Y-m-d' , $eDate));}
+elseif(substr($Field,0,1) == "'" AND substr($Field,-1) == "'" ){$ActiveSheet->setCellValue(num_to_letter($j++) . $i, substr($Field,1,-1));}
+elseif($Field == "Lamp"){$ActiveSheet->setCellValue(num_to_letter($j++) . $i, $Lamp[strtoupper(str_replace("-KIT","",$row['PartNumber']))]);}
+else{$ActiveSheet->setCellValue(num_to_letter($j++) . $i, $row[$Field]);}
+
+
+
+}
+$i = $i+1;
+
+}
+}
+
+
+
+
+
+
 
 
 $styleArray = array(
@@ -632,85 +727,7 @@ $ActiveSheet->setCellValue('A' . $i, 'InFocus Confidential');
 
 
 
-//Secondary Row Code.  Not currently in use
-// if($secondaryRows != NULL AND FALSE){
-// foreach($secondaryRows as $row){
 
-// $prevCategory;
-
-// $BaseX = $row['BaseX'];
-// $COM = $row['CurrentBom'];
-// $MAP = $row['MAP'];
-
-// if($row['Category'] != $prevCategory AND $sheetOptions['Category_Spacers'] == 1){
-	// if($row['Category'] == "PORTABLE" OR $row['Category'] == "OFFICE & CLASSROOM" OR $row['Category'] == "LARGE VENUE" OR $row['Category'] == "HOME THEATER" OR $row['Category'] == "INTERACTIVE"){ 
-		// $ActiveSheet->setCellValue('A' . $i, $row['Category'] . ' PROJECTORS');
-		// $ActiveSheet->getStyle(sheetScope($i))->getFill()->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setARGB(PHPExcel_Style_Color::COLOR_BLACK);
-		// $ActiveSheet->getStyle(sheetScope($i))->getFont()->getColor()->setARGB(PHPExcel_Style_Color::COLOR_WHITE);
-	// }
-	// else{
-		// $ActiveSheet->setCellValue('A' . $i, $row['Category'] );
-		// $ActiveSheet->getStyle(sheetScope($i))->getFill()->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setARGB(PHPExcel_Style_Color::COLOR_BLACK);
-		// $ActiveSheet->getStyle(sheetScope($i))->getFont()->getColor()->setARGB(PHPExcel_Style_Color::COLOR_WHITE);
-	// }
-// $i = $i+1;
-// $prevCategory = $row['Category'];
-// }
-
-// foreach($row as $Key => &$Value){
-
-// if($Value == NULL AND $Key == "DemoPricing"){$Value = 'N/A';}
-// elseif($Value == NULL AND $Key == "PubSecMultiplier"){$Value = $Multiplier[$Key];}
-// elseif($Value == NULL AND $Key == "AccyPubSec"){$Value = ROUND($MAP * $Multiplier[$Key]);}
-// elseif($Value == NULL AND $Key == "NYContractPrice"){$Value = ROUND($MAP * $Multiplier[$Key]);}
-// elseif($Value == NULL AND $Key == "NYContractAccy"){$Value = ROUND($MAP * $Multiplier[$Key]);}
-// elseif($Value == NULL AND $Key == "NYListAccy"){$Value = ROUND($MAP * $Multiplier[$Key]);}
-// elseif($Value == NULL AND $Key == "CDWStrat"){$Value = ROUND($row['Strategic']-$row['RegRewards']);}
-// elseif($Value == NULL AND $Key == "Description"){$Value = $Description[strtoupper(str_replace("-KIT","",$row['PartNumber']))];}
-// elseif($Value == NULL AND $Key == "UsedWith"){$Value = "";}
-// elseif($Value == NULL AND $Key == "NotesKey"){$Value = "";}
-// elseif($Value === '0' AND ($Key != 'NotesKey' AND $Key != 'UsedWith' AND $Key != 'Description' AND $Key != 'PartNumber' AND $Key != 'Country')){$Value = "N/A";}
-// elseif($Value == NULL){$Value = ROUND($BaseX * $Multiplier[$Key]);}
-
-
-// if($Key == "PubSecMultiplier"){
-// $currentPSMult = $Value;
-// }
-// elseif(strpos($Key,"PubSec")>0 AND $Value == NULL){
-// $Value = ROUND($lastValue * $currentPSMult);
-// }
-
-// $lastValue = $Value;
-
-// if(($Value === '' OR $Value === '0' OR $Value == NULL OR $Value === 0) AND ($Key != 'NotesKey' AND $Key != 'UsedWith' AND $Key != 'Description' AND $Key != 'PartNumber' AND $Key != 'Country')){$Value = "N/A";}
-
-// }			
-
-// $manufacturCtry = "China";
-// if(in_array($row['PartNumber'],$USAarray)){$manufacturCtry = "USA";}
-// $Freight = $FreightAarray[$row['PartNumber']];
-// $Freight = $FreightAarray[$row['PartNumber']];
-// if($Freight == NULL){$Freight = "";}
-// $WeightVal = $Weight[strtoupper(str_replace("-KIT","",$row['PartNumber']))];
-// if($WeightVal == NULL){$WeightVal = "N/A";}
-
-// $j = 1;
-// foreach($cFields as $Field){
-// if($Field == "Country"){$ActiveSheet->setCellValue(num_to_letter($j++) . $i, $manufacturCtry);}
-// elseif($Field == "Weight"){$ActiveSheet->setCellValue(num_to_letter($j++) . $i, $WeightVal);}
-// elseif($Field == "Freight"){$ActiveSheet->setCellValue(num_to_letter($j++) . $i, $Freight);}
-// elseif($Field == "Date"){$ActiveSheet->setCellValue(num_to_letter($j++) . $i, date('Y-m-d' , $eDate));}
-// elseif(substr($Field,0,1) == "'" AND substr($Field,-1) == "'" ){$ActiveSheet->setCellValue(num_to_letter($j++) . $i, substr($Field,1,-1));}
-// elseif($Field == "Lamp"){$ActiveSheet->setCellValue(num_to_letter($j++) . $i, $Lamp[strtoupper(str_replace("-KIT","",$row['PartNumber']))]);}
-// else{$ActiveSheet->setCellValue(num_to_letter($j++) . $i, $row[$Field]);}
-
-
-
-// }
-// $i = $i+1;
-
-// }
-// }
 
 
 

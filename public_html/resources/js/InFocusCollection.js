@@ -310,6 +310,50 @@ if($(".flexnav").length>0){$(".flexnav").flexNav();}
 });
 
 
+  function sendData(formid,url,action,validateid) {
+   try {
+    validateid = validateid || "";
+    validation = document.getElementById(validateid).value;
+    validation = validation.split(",");
+
+    for(x=0;x<validation.length;x++){if(document.getElementById(validation[x]).value == ''){alert("Please fill in all required fields");return;}}
+    }
+    catch(err) {
+    }
+
+    var XHR = new XMLHttpRequest();
+    form = document.getElementById(formid);
+    // We bind the FormData object and the form element
+    var FD  = new FormData(form);
+
+    // We define what will happen if the data are successfully sent
+    XHR.addEventListener("load", function(event) {
+      switch(action) {
+    case 'alertresponse':
+        alert(event.target.responseText);
+        break;
+    case 'alertresponse':
+        alert(document.getElementById('alert').value);
+        break;
+    case 'clear':
+        document.getElementById(formid).innerHTML = document.getElementById('clear').value;
+        break;
+    default:
+    }
+    
+    });
+
+    // We define what will happen in case of error
+    XHR.addEventListener("error", function(event) {
+      alert('Oops! Something goes wrong.');
+    });
+
+    // We setup our request
+    XHR.open("POST", url);
+
+    // The data sent are the one the user provide in the form
+    XHR.send(FD);
+  }
 
 $( document ).ready(function() {
 var Tabs = {

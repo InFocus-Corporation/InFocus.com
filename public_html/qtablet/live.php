@@ -6,10 +6,10 @@
     <meta name="msapplication-config" content="none" />
     <meta name="application-name" content=" " />
     <meta name="msapplication-TileColor" content=" #2078DB" />
-    <meta name="msapplication-square70x70logo" content="/resources/images/livetiletiny.jpg" />
-    <meta name="msapplication-square150x150logo" content="/resources/images/livetilesquare.jpg" />
-    <meta name="msapplication-wide310x150logo" content="/resources/images/livetilewide.jpg" />
-    <meta name="msapplication-square310x310logo" content="/resources/images/livetilelarge.jpg" />
+    <meta name="msapplication-square70x70logo" content="/resources/images/QTablet-Tile-70x70.jpg" />
+    <meta name="msapplication-square150x150logo" content="/resources/images/QTablet-Tile-150x150.jpg" />
+    <meta name="msapplication-wide310x150logo" content="/resources/images/QTablet-Tile-310x150.jpg" />
+    <meta name="msapplication-square310x310logo" content="/resources/images/QTablet-Tile-310x310.jpg" />
     <script>
       if (document.addEventListener) {
         document.addEventListener('mssitepinned', StartPeriodicUpdateBatch, false);

@@ -13,6 +13,9 @@ mysqli_set_charset($connection, "utf8");
 $pn = $_GET['pn'];
 if(!empty($_GET['lang'])){$lang = $_GET['lang'];}
 
+echo "This has been disabled due to risk.  May be re-created in a different fashion at some point, but for now if you have a redirect please email Daniel Boggs.";
+die();
+
 ?>
 
 <script src="/resources/plugins/jquery-handsontable/dist/jquery.handsontable.full.js"></script>
