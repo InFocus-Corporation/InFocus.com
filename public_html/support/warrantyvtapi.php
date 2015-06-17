@@ -4,7 +4,7 @@
 
 extract($_REQUEST);
 
-if ( isset($SN) ) {$connection = mysqli_connect('67.43.0.33','partners_login','InF0cusP@ssw0rd', 'partners_IFC_IB',3306);$SN = mysqli_real_escape_string($connection,$SN);
+if ( isset($SN) ) {$connection = mysqli_connect('67.43.0.33','partners_login','InF0cusP@ssw0rd', 'partners_IFC_IB',3306);$SN = mysqli_real_escape_string($connection,$SN);
 mysqli_set_charset($connection, "utf8");
 
 $Serial = $SN;

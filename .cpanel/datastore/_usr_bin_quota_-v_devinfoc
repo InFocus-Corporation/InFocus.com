@@ -1,0 +1,3 @@
+Disk quotas for user devinfoc (uid 500): 
+     Filesystem  blocks   quota   limit   grace   files   quota   limit   grace
+      /dev/vda3  229008       0       0            3116       0       0        

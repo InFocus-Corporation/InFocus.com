@@ -1,0 +1,5 @@
+Filesystem     1024-blocks     Used Available Capacity Mounted on
+/dev/vda3        142485904 96608212  38641908      72% /
+tmpfs              5521140        0   5521140       0% /dev/shm
+/dev/vda1           101086    81702     14165      86% /boot
+/usr/tmpDSK        4026560    82336   3739680       3% /tmp

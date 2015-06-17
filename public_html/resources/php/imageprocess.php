@@ -31,7 +31,6 @@ function imagethumb($imagepath, $b = null, $h = null, $w = null, $prefix = "{InF
     if (is_null($prefix)) {
         $prefix = '{InFocus-,}';
     }
-$imagepath = strtoupper($imagepath);
 
 $GENERATE_CACHE = true;	/* if true, generates caches of the thumbnailed images */
 $CACHE_PATH = $_SERVER['DOCUMENT_ROOT'] . '/tmp/imagethumbs/';	/* the full path where thumbnails should be saved (if $GENERATE_CACHE is enabled) */
@@ -55,19 +54,27 @@ filemtime_remote( $uri );
 
 /* temporary kludge */
 //while ( list( $key, $val ) = each( $HTTP_GET_VARS ) ) $_GET[ $key ] = $val;
-if ( ! eregi( "^http://", $imagepath ) && ! eregi( "^ftp://", $imagepath ) ) {
+$pn = $imagepath;
 
+$imagepath = $BASE_HREF . $pn;
+
+if ( file_exists( $imagepath)) {
+
+}
+elseif( file_exists( $imagepath . ".png" ) ){
+	$imagepath = $imagepath . ".png";
+}
+elseif( file_exists( $imagepath . ".jpg"  ) ){
+		$imagepath = $imagepath . ".jpg";
+
+}
+else{
 require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
 mysqli_set_charset($connection, "utf8");
 
-$pn = $imagepath;
 
 
-if(substr($pn,-3)=="jpg"){
-$imagepath = $BASE_HREF . $pn;
-}
 
-else{
 global $series;
 
 $result = mysqli_query($connection,'SELECT `series` FROM productseries WHERE `productseries`.`partnumber` = "' . $pn . '"');
@@ -80,12 +87,11 @@ if(mysqli_num_rows($result)==0)
 {$series = $pn;}
 
 
-$filename = glob($BASE_HREF . $prefix . "{" . $pn . "," . $series . "}" . $suffix,GLOB_BRACE);
+$filename = glob($BASE_HREF . $prefix . "{" . strtoupper($pn) . "," . strtoupper($series) . "}" . $suffix,GLOB_BRACE);
     $imagepath = $filename[0];
 // error_log ('90:' . $filename[0]);
 /* get source image size */
 if(empty($filename[0])){$imagepath = $BASE_HREF . $BROKEN_IMAGE_PATH;}
-}
 }
 
 $src_size = getimagesize( $imagepath );
