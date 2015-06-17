@@ -207,7 +207,6 @@ class IFCSeries extends InFocus
 		if($this->lang == 'en'){$productLinks = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/resources/misc/links"));}
 
 		$infoLink = '<span class="infolink" title="' . translate('Manufacturer\'s Suggested Retail Price (MSRP) in US Dollars. Actual price may vary by dealer and country; consult your local Authorized InFocus Reseller for details.') . '"></span>';
-
 		if($productLinks[strtoupper($model)] != null){
 			if($this->modelActive[$model] != 2){
 				$modelLink = $productLinks[strtoupper($model)];
@@ -222,10 +221,13 @@ class IFCSeries extends InFocus
 			if($this->productGroup != "Accessory" AND $this->productGroup != "Peripheral"){
 			switch($this->modelActive[$model]){
 			case 6:	case 3:
-			$this->modelActive[$model] = 3; break;
+			$this->modelActive[$model] = 3; 
+			$this->productText['active'] = 3; 
+			break;
 			case 0:	case 9:	break;
 			default:
 			$this->modelActive[$model] = 2;
+			$this->productText['active'] = 2;
 			}
 			}
 			elseif($this->modelActive[$model] != 2){$modelLink = 'http://infocusstore.com/s?defaultSearchTextValue=Search&searchKeywords=' . $model . '&Action=submit';}
