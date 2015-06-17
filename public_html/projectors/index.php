@@ -17,8 +17,11 @@ else{
 
 <base target="_parent" />
 </head>
-<body>';
+<body class="proj">';
+?>
 
+
+<?php
  include($_SERVER['DOCUMENT_ROOT']. "/resources/html/mainmenu.html"); 
  echo "<div class='content'>
 		<div id='category' class='C9' style='overflow:hidden;'>";}
@@ -90,7 +93,7 @@ if(empty($category)) : ?>
 						<div class="description"><?= $pageText["$category-short"];?></div>
 						<span>
 							<a href="/projectors/<?= $category ?>" class="inbound view-all" onclick="showCategory('<?= $category ?>');"><?= translate('View All');?></a>
-							<?php if($lang != "de"){echo "<br><a href='http://www.infocusstore.com/{$catarray[$category]['alt']}'>". translate('Go to Store') . '</a>';} ?>
+							<?php if($lang != "de"){echo "<a href='http://www.infocusstore.com/{$catarray[$category]['alt']}'>". translate('Shop Now') . '</a>';} ?>
 						</span>
 					</div>
 				</li>
@@ -108,7 +111,7 @@ if(empty($category)) : ?>
 		while($row = mysqli_fetch_array($result))
 		{
 					$subject = $row[0];
-			        $subject = str_replace('-Series','',$subject);
+			        $subject = strtoupper(str_replace('-Series','',$subject));
 			        $cat = explode(",",str_replace(", ",",",$row[3]));
 		echo '<li class="model">
 							<div class="meta">

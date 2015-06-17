@@ -208,9 +208,9 @@ class IFCSeries extends InFocus
 
 		$infoLink = '<span class="infolink" title="' . translate('Manufacturer\'s Suggested Retail Price (MSRP) in US Dollars. Actual price may vary by dealer and country; consult your local Authorized InFocus Reseller for details.') . '"></span>';
 
-		if($productLinks[$model] != null){
+		if($productLinks[strtoupper($model)] != null){
 			if($this->modelActive[$model] != 2){
-				$modelLink = $productLinks[$model];
+				$modelLink = $productLinks[strtoupper($model)];
 				$infoLink = '<span class="infolink" title="Price displayed in US Dollars from InFocusStore.com, may vary elsewhere, and is valid only in the US."></span>';
 			}
 			else{
@@ -319,7 +319,7 @@ class IFCSeries extends InFocus
 		foreach($this->seriesModels as $model){
 			if(($this->modelActive[$model] != 0 AND $this->modelActive[$model] != 0) OR $this->productText['active'] == 0){
 				$thumb = imagethumb($model,'135');
-				$displayModel = str_replace('A','a',$model );
+				$displayModel = $model;
 				$specList = str_replace('<ul>','<ul class="spec-list">', $this->modelsDiff[$model]);
 
 		//				$seriesPanels .= "<li><section class='stretch-wrap33'><a href='$this->series/{$model}'><img style='margin:0 auto;' src='{$thumb}'></a></section>
@@ -494,14 +494,14 @@ class IFCSeries extends InFocus
 
 	public function accessories(){ 
 		if($this->productGroup == "Peripheral" OR $this->productGroup == "Accessory"){return;}
-		$sql = 'SELECT title, acc_matrix.accessorypn, producttext.partnumber, acc_matrix.rank
+		$sql = 'SELECT title, acc_matrix.accessorypn, producttext.partnumber, acc_matrix.rank, producttext.productgroup
 		FROM acc_matrix LEFT JOIN producttext ON (producttext.partnumber = acc_matrix.accessorypn) WHERE producttext.lang = "'. $this->lang . '" AND acc_matrix.productpn = "' . $this->pn . '" ORDER BY acc_matrix.rank, acc_matrix.accessorypn';
 		return $this->subProdList("Accessories",$sql);
 	 }
 
 	public function worksWith(){  
 		if($this->productGroup == "Display" OR $this->productGroup == "Projector"){return;}
-		$sql = 'SELECT title, acc_matrix.productpn, producttext.partnumber, acc_matrix.rank FROM acc_matrix LEFT JOIN producttext ON (producttext.partnumber = acc_matrix.productpn) WHERE producttext.lang = "'. $this->lang . '" AND acc_matrix.accessorypn = "' . $this->pn . '" ORDER BY acc_matrix.rank, acc_matrix.productpn';
+		$sql = 'SELECT title, acc_matrix.productpn, producttext.partnumber, acc_matrix.rank, producttext.productgroup FROM acc_matrix LEFT JOIN producttext ON (producttext.partnumber = acc_matrix.productpn) WHERE producttext.lang = "'. $this->lang . '" AND acc_matrix.accessorypn = "' . $this->pn . '" ORDER BY acc_matrix.rank, acc_matrix.productpn';
 		return $this->subProdList("Works With",$sql);
 	 }
 
@@ -512,8 +512,9 @@ class IFCSeries extends InFocus
 		$sectionText = '<ul class="C10 resultsList" style="padding-top:4em;">';
 		 while($row = mysqli_fetch_array($result))
 		 {
+			 if($row[4]=="Accessory"){$row[4] = "accessorie";}
 		 $sectionText .= '<li>
-	     <a href="/accessories/' . strtoupper($row[1]) . '">
+	     <a href="/' . strtolower($row[4]) . "s/" . strtoupper($row[1]) . '">
 	      <section class="stretch-wrap60"><div class="image-set" style="margin:auto;"><img src="' . imagethumb(strtoupper($row[1]),null,'220') . '"></div></section>
 	      <h6>' . $row[0] . '</h6>
 	     </a></li>';
@@ -528,7 +529,7 @@ class IFCSeries extends InFocus
 		$dlTable;
 		if($this->isSeries){
 		$sql = 'SELECT Downloadstmp.filename, Downloadstmp.lang, if(DownloadTrans.description is null,Downloadstmp.description,DownloadTrans.description) AS description, filelocation, relatedproducts, extension, if(DownloadTrans.category is null,Downloadstmp.category,DownloadTrans.category) AS category, if(rank is null,999,rank) AS rank, if(DownloadTrans.title is null,Downloadstmp.title,DownloadTrans.title) AS title  FROM Downloadstmp LEFT JOIN (SELECT * FROM DownloadTrans WHERE lang = "' .$this->lang . '") AS DownloadTrans ON DownloadTrans.filename = Downloadstmp.filename 
-		WHERE Downloadstmp.filename LIKE "%Datasheet%" AND (relatedproducts LIKE "%' . implode(';%" OR relatedproducts LIKE ";%', $this->seriesModels) . ';%") ORDER BY rank,title,description';
+		WHERE (Downloadstmp.filename LIKE "%Datasheet%" OR Downloadstmp.category = "Datasheets" OR Downloadstmp.category = "Success Stories") AND (relatedproducts LIKE "%' . implode(';%" OR relatedproducts LIKE "%', $this->seriesModels) . ';%") ORDER BY rank,title,description';
 		}
 		else{
 		$sql = 'SELECT Downloadstmp.filename, Downloadstmp.lang, if(DownloadTrans.description is null,Downloadstmp.description,DownloadTrans.description) AS description, filelocation, relatedproducts, extension, if(DownloadTrans.category is null,Downloadstmp.category,DownloadTrans.category) AS category, if(rank is null,999,rank) AS rank, if(DownloadTrans.title is null,Downloadstmp.title,DownloadTrans.title) AS title  FROM Downloadstmp LEFT JOIN (SELECT * FROM DownloadTrans WHERE lang = "' .$this->lang . '") AS DownloadTrans ON DownloadTrans.filename = Downloadstmp.filename WHERE relatedproducts like "%' . $this->pn . ';%" ORDER BY rank,title,description';

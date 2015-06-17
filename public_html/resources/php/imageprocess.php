@@ -31,7 +31,7 @@ function imagethumb($imagepath, $b = null, $h = null, $w = null, $prefix = "{InF
     if (is_null($prefix)) {
         $prefix = '{InFocus-,}';
     }
-
+$imagepath = strtoupper($imagepath);
 
 $GENERATE_CACHE = true;	/* if true, generates caches of the thumbnailed images */
 $CACHE_PATH = $_SERVER['DOCUMENT_ROOT'] . '/tmp/imagethumbs/';	/* the full path where thumbnails should be saved (if $GENERATE_CACHE is enabled) */

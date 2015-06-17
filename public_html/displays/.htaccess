@@ -4,6 +4,7 @@ Options -Indexes
 
 RewriteEngine On
 RewriteCond %{HTTP_HOST} !^www\.
+RewriteCond %{HTTP_HOST} !^dev\.
 RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/displays/$1 [R=301,L]
 
 RewriteRule  ^displays/thin-displays.*$ /displays [R=301,NC,L]

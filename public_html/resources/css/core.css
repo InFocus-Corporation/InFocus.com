@@ -1749,3 +1749,68 @@ height:100%;
 object-fit: contain;
 }
 		a:hover{cursor:pointer;}
+#categories .floatList > li > div {
+  padding-bottom: 20px;
+}
+.proj span.title {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.proj .description {
+  font-size: 16px;
+  padding-top: 10px;
+  font-weight:100;
+}
+.proj .floatList > li > div > span {
+  position: inherit;
+  width: 85%;
+  margin: auto;
+  display: block;
+  margin-top: 15px;
+}
+.proj li.model div > span a {
+  background: #f66d26;
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 16px;
+  float: left;
+}
+.proj li.model div > span a:last-of-type {
+  margin-left: 10px;
+}
+.proj .view-all, .proj a.view-all:link, .proj a.view-all:visited {
+  color: #fff;
+  background: #1BA1E2;
+}
+.proj .view-all:hover {background-color:#bcc853; color:#000;}
+.proj #catdesc .info p:first-of-type {font-weight:100; color:#6d6d6d;}
+.proj .action-links[style]{padding:0 !important;}
+.proj .sub-title {font-weight:400; color:#6d6d6d; font-size:90%;}
+
+@media (max-width: 1280px) {
+	.proj li.model div > span a:last-of-type {
+	  margin-left:0;
+	  width:inherit;
+	}
+	.proj li.model div > span a:first-of-type {
+		margin-bottom:10px;
+		width:inherit;
+	}
+}
+@media screen and (min-width: 1135px) {
+	.proj .description {min-height:111px;}
+}
+@media screen and (max-width: 1135px) {
+	.proj .description {min-height:151px;}
+}
+@media screen and (max-width: 960px) {
+	.proj span.title {font-size:120%; line-height:120%;}
+	.proj .description {font-size:14px;}
+	.proj .info p:first-of-type {font-size:120%;}
+}
+@media screen and (min-width: 640px) and (max-width: 790px) {
+	.proj #cattitle {margin-top:20px;}
+}
+@media screen and (max-width: 640px) {
+	.proj .info p:first-of-type {line-height:120%;}
+}

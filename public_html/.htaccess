@@ -50,6 +50,7 @@ RewriteRule  ^qtablet/live /resources/php/test.php [NC,L]
 RewriteRule  ^bigtouch/live /resources/php/test.php [NC,L]
 
 RewriteRule  ^realcam$ /peripherals/product.php?pn=INF-SPTZ-2 [NC,L]
+RewriteRule  ^mp20assets$ /mondopad20assets [NC,L]
 
 #Generated
 
@@ -377,7 +378,7 @@ RewriteRule  ^mondopad(-)?(live)?(-)?demo$ /custompages/index.php?pagename=mondo
 
 RewriteRule  ^mondopad(-)?(live)?(-)?demo(-)?cdw$ /custompages/index.php?pagename=mondopad-live-demo-cdw [NC,L]
 
-RewriteRule  ^mondopad(-)?video(-)?phone(-)?promotion$ /custompages/index.php?mondopad-video-phone-promotion [NC,L]
+RewriteRule  ^mondopad(-)?video(-)?phone(-)?promotion$ /displays/MONDOPAD-SERIES [R=301,NC,L]
 
 RewriteRule  ^partner(s)?(central)?$ /custompages/index.php?pagename=sales-partners [NC,L]
 
@@ -397,7 +398,7 @@ RewriteRule  ^terms(-)?of(-)?use$ /custompages/index.php?terms-of-use [NC,L]
 
 RewriteRule  ^thank(-)?you$ /custompages/index.php?thank-you [NC,L]
 
-RewriteRule  ^touchscreen(-)?solutions(-)?sale(-)?education$ /custompages/index.php?touchscreen-solutions-sale-education [NC,L]
+RewriteRule  ^touchscreen(-)?solutions(-)?sale(-)?education$ /displays/JTOUCH-SERIES [R=301,NC,L]
 
 RewriteRule  ^Ms/documents/InFocus_ePortal_Quick_Start_Guide.pdf /custompages/index.php?pagename=sales-partners [R=301,NC,L]
 
@@ -483,9 +484,9 @@ RewriteRule  sellersolutions /sales-partners
 
 RewriteRule  sellersolution /sales-partners 
 
-RewriteRule  ^touchscreen-sale-K12 http://jtouchk12.com/ [R=301,NC,L]
+RewriteRule  ^touchscreen-sale-K12 /displays/JTOUCH-SERIES [R=301,NC,L]
 
-RewriteRule  ^touchscreen-solutions-sale-education http://jtouchk12.com/ [R=301,NC,L]
+RewriteRule  ^touchscreen-solutions-sale-education /displays/JTOUCH-SERIES [R=301,NC,L]
 #EndGenerated
 
  

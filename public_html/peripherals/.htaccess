@@ -5,6 +5,7 @@ Options -Indexes
 
 RewriteEngine On
 RewriteCond %{HTTP_HOST} !^www\.
+RewriteCond %{HTTP_HOST} !^dev\.
 RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/peripherals/$1 [R=301,L]
 
 RewriteRule  ^/?$ /accessories/index.php [NC,L]

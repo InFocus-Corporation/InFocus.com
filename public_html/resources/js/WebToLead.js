@@ -75,9 +75,9 @@ var TAM8index = TAM8Array.indexOf(document.getElementById('primary_address_state
 
 	//Test for N/S California Zip code matches.  If doesn't match zip, but is CA assign to Tam3.
 	if(document.getElementById('primary_address_postalcode') && document.getElementById('primary_address_postalcode').value.length >=5) {
-		if(document.getElementById('primary_address_postalcode').value.match(/^([940-969]+\d{2,}$/) != null){
+		if(document.getElementById('primary_address_postalcode').value.match(/^([940-969]+\d{2,}/) != null){
 			NOCAindex = 1;
-		}else if(document.getElementById('primary_address_postalcode').value.match(/^([900-936]+\d{2,}$/) != null){
+		}else if(document.getElementById('primary_address_postalcode').value.match(/^([900-936]+\d{2,}/) != null){
 			SOCAindex = 1;
 		}else if(document.getElementById('primary_address_state').value == 'CA'){var TAM3index = 1;}
 	}else if(document.getElementById('primary_address_state').value == 'CA'){var TAM3index = 1;}
@@ -86,9 +86,9 @@ catch (e){
 }
 var PostEntry = '/resources/forms/crmpostforward.php';
 document.getElementById('name').value = 'http://abu-crm.infocus.com/index.php?entryPoint=WebToLeadCapture';
-var formName = document.getElementById('campaign_id').value
+var formName = document.getElementById('campaign_id').value;
 
-			else if(EMEAindex >= 0 && formName == 'GetAQuote'){
+			if(EMEAindex >= 0 && formName == 'GetAQuote'){
 	document.getElementById('campaign_id').value = '63760045-10cb-0dec-8ba6-50ec6c2bb9a9';
 	document.getElementById('team_id').value = '5553b1b8-f462-596c-954b-50c257c533a1';
 	document.getElementById('assigned_user_id').value = 'daa24b5f-2772-185c-7046-50c8cda5e821';

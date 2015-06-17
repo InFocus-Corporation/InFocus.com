@@ -99,7 +99,7 @@ else
 echo '<select id="productofinterest_c" type="text" name="productofinterest_c" >
 </select>
 <script>
-getProductList(" productgroup != ' . "'Accessory'" . ' AND productgroup != ' . "'Series'" . ' AND active != 0 AND active is not null","productofinterest_c");
+getProductList(" productgroup != ' . "'Accessory'" . ' AND productgroup != ' . "'Series'" . ' AND active != 0 AND active is not null AND active != 9","productofinterest_c");
 </script>';
 }
 
