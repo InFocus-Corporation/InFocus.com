@@ -1,5 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
+require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 
 $categories = array("mpbtaccessories","cables","cases","lamps","lenses","misc","mounts","remotes","screens","software","networking","services");	
 
@@ -67,7 +68,7 @@ cursor:pointer;
 </style>
 
 	</head>
-	<body class="">
+	<body class="accsr-sub">
 		<?php include($homedir . "/resources/html/mainmenu.html"); ?>
 
 		<div class="content">
@@ -87,7 +88,7 @@ cursor:pointer;
 <?= $pageText[$category . 'tag'];?>
 					</h4>
 
-					<div id="<?= $category;?>desc">
+					<div class="subprod-desc" id="<?= $category;?>desc">
 <?= $pageText[$category . 'desc'];?>
 					</div>
 
@@ -115,7 +116,7 @@ $result = mysqli_query($connection,'SELECT producttext.partnumber, listtitle, de
 while($row = mysqli_fetch_array($result))
 {
 echo "<li><div><a href='$category/{$row[0]}'><section class='stretch-wrap60'><div><img ";
-echo 'src="' . imagethumb( $row[0], '192') . '" alt="InFocus ' . $row[0] . '" /></div></section><span  class="title">' . $row[1] . '</span></a><div>' . $row[2] . '</div></div></li>
+echo 'src="' . imagethumb( $row[0], '192') . '" alt="InFocus ' . $row[0] . '" /></div></section><span  class="title">' . $row[1] . '</span></a><div class="subprod-desc">' . $row[2] . '</div></div></li>
 ';
 
 }

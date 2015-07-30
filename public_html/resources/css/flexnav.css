@@ -47,6 +47,15 @@
     color: #fff;
     /*background: #24282B; submenu color */
     border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
+
+  .flexnav li span {
+    position: relative;
+    display: block;
+    padding: .25em;
+    z-index: 2;
+    overflow: hidden;
+
+}
 	
   .flexnav li ul {
     width: 100%; 
@@ -70,7 +79,8 @@
 }
 
   .flexnav li ul.flexnav-show li {
-    overflow: visible; }
+    overflow: visible; 
+    z-index:1000;}
   .flexnav li ul li a {
     display: block;
     /* background: #24282B; submenu color */
@@ -88,7 +98,7 @@
     top: 0;
     right: 0;
     width: 15px;
-    height: 32px;
+    height: 20px;
     display: inline-block;
     background: #acaca1;
     background: rgba(0, 0, 0, 0.075);
@@ -102,13 +112,14 @@
       color: #666; }
 
 .menu-button {
-  position: relative;
+ position:fixed;
   display: block;
   padding: .75em;
   background: #fff;
   color: #000;
   cursor: pointer;
-  }
+ width:10%;
+ z-index:1102; }
   
   .menu-button:after {
   padding-left:85%;
@@ -157,8 +168,13 @@
 	
 	  .flexnav .touch-button {
     width: 20%;
+    height:100%;
      }
-	
+	   .flexnav .touch-button .navicon {
+    top: 0;
+
+     }
+
 	
 }
 @media all and (min-width: 800px) {

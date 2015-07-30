@@ -236,10 +236,12 @@ function deleteColumn(tableID) {
   })( jQuery );
  
   $(function() {
+    try{
     $( "#combobox" ).combobox();
     $( "#toggle" ).click(function() {
       $( "#combobox" ).toggle();
     });
+  }catch(e){}
   });
   
   function projectorSlide(){

@@ -112,3 +112,8 @@ public_html/resources/html/mainmenu-de.html
 *.png
 *.jpg
 *.gif
+public_html/index.php
+public_html/projectors/angularindex.php
+public_html/projectors/app.js
+public_html/projectors/clog.txt
+public_html/projectors/familybak.php

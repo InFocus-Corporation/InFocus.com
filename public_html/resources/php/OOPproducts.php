@@ -43,20 +43,17 @@ class IFCSeries extends InFocus
 		if(mysqli_num_rows($result)==0){
 		$sql = "SELECT  * FROM InFocus.producttext WHERE (`lang` = '{$this->lang}') AND partnumber IN('{$producttest}','IN{$producttest}','INS-{$producttest}') ORDER BY partnumber";
 		$result = mysqli_query($this->conn,$sql);
-			echo "<script>console.log('$producttest');</script>";
 		}
 
 		if(mysqli_num_rows($result)==0){
 		$sql = "SELECT  * FROM InFocus.producttext WHERE (`lang` = '{$this->lang}') AND partnumber IN('{$this->pn}','IN{$this->pn}','INS-{$this->pn}') ORDER BY partnumber";
 		$result = mysqli_query($this->conn,$sql);
 		$producttest = $this->pn;
-			echo "<script>console.log('$this->pn');</script>";
 		}
 
 		if(mysqli_num_rows($result)==0){
 			header("HTTP/1.0 404 Not Found");
 			include($_SERVER['DOCUMENT_ROOT'] . '/404.php');
-			echo "<script>console.log('$producttest');</script>";
 			exit;
 		}
 
@@ -202,11 +199,13 @@ class IFCSeries extends InFocus
 	 }
 
 	public function priceBuyNow($model,$panel = false){
-		if(strlen($this->modelPrice[$model])>0){$priceSection = "<small class='price'>";}
+		if(strlen($this->modelPrice[$model])>0){$priceSection = "<small class='price'>";
+				$infoLink = '<span class="infolink" title="' . translate('Manufacturer\'s Suggested Retail Price (MSRP) in US Dollars. Actual price may vary by dealer and country; consult your local Authorized InFocus Reseller for details.') . '"></span>';
+	}
 		else{$priceSection = "<small class='price' style='display:none;'>";}
 		if($this->lang == 'en'){$productLinks = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/resources/misc/links"));}
 
-		$infoLink = '<span class="infolink" title="' . translate('Manufacturer\'s Suggested Retail Price (MSRP) in US Dollars. Actual price may vary by dealer and country; consult your local Authorized InFocus Reseller for details.') . '"></span>';
+
 		if($productLinks[strtoupper($model)] != null){
 			if($this->modelActive[$model] != 2){
 				$modelLink = $productLinks[strtoupper($model)];
@@ -288,7 +287,7 @@ class IFCSeries extends InFocus
 		$getaQuote = "<a class='$bclass form-box' style='display:block' href='/resources/forms/getaquote'>" . translate("Get a Quote") . '</a>';
 		$resellerLoc = "<a class='$bclass ' href='/reseller-locator{$resellerloc}'>" . translate("Find a Reseller"). '</a>';
 		$requestDemo = "<a class='$bclass form-box cboxElement' href='/resources/forms/mpdemo'>" . translate("Request a Demo") . '</a>';
-
+		if($this->productGroup != "Display" ){$getaQuote="";}
 		switch($this->productText['active']){
 		case 1:
 		$this->justButtons = "<li>{$getaQuote}</li><li>{$resellerLoc}</li>";
@@ -481,8 +480,8 @@ class IFCSeries extends InFocus
 		}
 		$standardpics = array("-Back.jpg","-Front.jpg","-Side.jpg","-Top.jpg","-Right.jpg","-Left.jpg");
 		foreach($standardpics AS $imgend){
-		if(file_exists($_SERVER['DOCUMENT_ROOT'] . "/resources/images/InFocus-" . $this->pn . $imgend )){
-		$allthumbs .=   '<a class="group1" href="' . imagethumb("InFocus-" . $this->pn . $imgend,'800') . '" title="InFocus ' . $this->pn . ' (' . substr($imgend,1,-4) .')"><img class="thumb" src="' . imagethumb("InFocus-" . $this->pn . $imgend,'','70') . '"></a>
+		if(file_exists($_SERVER['DOCUMENT_ROOT'] . "/resources/images/InFocus-" . strtoupper($this->pn) . $imgend )){
+		$allthumbs .=   '<a class="group1" href="' . imagethumb("InFocus-" . strtoupper($this->pn) . $imgend,'800') . '" title="InFocus ' . strtoupper($this->pn) . ' (' . substr($imgend,1,-4) .')"><img class="thumb" src="' . imagethumb("InFocus-" . strtoupper($this->pn) . $imgend,'','70') . '"></a>
 		';
 		}
 		elseif(file_exists($_SERVER['DOCUMENT_ROOT'] . "/resources/images/InFocus-" . $picSeries . $imgend )){

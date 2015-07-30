@@ -1,5 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
+require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 $localdir = dirname(__FILE__);
 //Check if logged in user in edit mode for WYSIWYG editor
 if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $homedir.'/resources/overviews/', 'admin,editor', ".src", "overview", "true", "SavePage","overview");}
@@ -13,7 +14,6 @@ $(document).ready(function() {
 try{$( "#viddropdownbox" ).dropdownbox();}catch(e){}
 $(function() {$(".langlist").menu();});
 });
-
 </script>
 
 	</head>
@@ -24,8 +24,8 @@ $(function() {$(".langlist").menu();});
 if($_GET['edit']=="true"){CMSHTML("SavePage",'admin,editor');}
 ?>
 		<div class="content">
-<div id="product" class="C9">
-<div class="breadcrumb"><?=$product->breadcrumb ?></div>
+<div id="product" class="C9" itemscope itemtype="http://schema.org/Product">
+<div class="breadcrumb"><ol itemscope itemtype="https://schema.org/BreadcrumbList"><?=$product->breadcrumb ?></ol></div>
 	<div class="productheader C10 Col_child C4x6_child" >
  		<?=$priceBuyNow?>
  		</ul></div>
@@ -33,7 +33,7 @@ if($_GET['edit']=="true"){CMSHTML("SavePage",'admin,editor');}
 			<div class="C10 Col_child C5_child">
 
 				<div class="image-set" style="padding-bottom:10px;text-align:center;">
-				<image src="<?= imagethumb($pn ,'550') ?>"/>
+				<image itemprop="image" src="<?= imagethumb($pn ,'550') ?>"/>
 		<?=$thumbnails?>
     <script>
 		$(".group1").colorbox({photo:true, className: "colorclass2"});
@@ -41,7 +41,7 @@ if($_GET['edit']=="true"){CMSHTML("SavePage",'admin,editor');}
 	</div>
 				<div class="info" style="float:left;">
 	<strong class="tagline mysqledit" id="header"><?=$product->productText['header'] ?></strong>
-	<div class="mysqledit" id="blurb" ><?=$product->productText['blurb'] ?></div>
+	<div class="mysqledit" id="blurb" itemprop="description"><?=$product->productText['blurb'] ?></div>
 	<div id="list" class="feature-list mysqledit"><?=$product->productText['list'] ?></div>
 				</div>
 	</div>
@@ -96,6 +96,4 @@ if($_GET['edit']=="true"){CMSHTML("SavePage",'admin,editor');}
 				$(".colorbox-inline").colorbox({inline:true});
 $( "#details" ).tabs();
 </script>
-
-
 </body></html>

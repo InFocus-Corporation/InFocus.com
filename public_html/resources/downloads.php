@@ -105,6 +105,7 @@ foreach ($miscDira as $result) {array_push($miscDirs,str_replace($_SERVER['DOCUM
 
 
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
+require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 $localdir = dirname(__FILE__);
 
 require($_SERVER['DOCUMENT_ROOT'] . "/resources/cmsmainmenu.html");

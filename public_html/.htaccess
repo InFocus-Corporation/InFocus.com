@@ -30,6 +30,7 @@ Options +FollowSymLinks -Indexes
 Options -Indexes
 RewriteEngine On
 RewriteCond %{HTTP_HOST} !^www\.
+RewriteCond %{HTTP_HOST} !^dev\.
 RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 
 RewriteCond %{HTTPS} off
@@ -50,7 +51,11 @@ RewriteRule  ^qtablet/live /resources/php/test.php [NC,L]
 RewriteRule  ^bigtouch/live /resources/php/test.php [NC,L]
 
 RewriteRule  ^realcam$ /peripherals/product.php?pn=INF-SPTZ-2 [NC,L]
+RewriteRule  ^ic2015$ http://infocus.box.com/s/m1f93uhbrorgl2tnnyzl8auniqorpbxb [NC,L]
 RewriteRule  ^mp20assets$ /mondopad20assets [NC,L]
+RewriteRule  ^contact(u)?(s)?(upport)? /resources/forms/contactus.php [NC,L]
+RewriteRule  ^video-communication/(.*)? /peripherals/$1 [NC,L]
+
 
 #Generated
 
@@ -182,6 +187,8 @@ RewriteRule  ^career(s)? /about?careers [NC,L]
 
 RewriteRule  ^register$ /support/?register [NC,L]
 
+RewriteRule  ^reg$ /support/?register&euwar=1 [NC,L]
+
 RewriteRule  ^support/register$ /support/?register [NC,L]
 
 RewriteRule  ^labs/all/news(.*$) /about?news [NC,L]
@@ -210,7 +217,7 @@ RewriteRule  ^accessories/accessories-mondopad-and-bigtouch/bignote /accessories
 
 RewriteRule  ^displays/bigtouch/video-kommunikation /video-communication/MVP100 [R=301,NC,L]
 
-RewriteRule  ^accessories/warranties-and-services/conx-group-videoconferencing-de /accessories/CONX [R=301,NC,L]
+RewriteRule  ^accessories/warranties-and-services/conx-group-videoconferencing-de /peripherals/ConX-Series [R=301,NC,L]
 
 RewriteRule  ^accessories.aspx /accessories [R=301,NC,L]
 
@@ -230,11 +237,11 @@ RewriteRule  ^projector-installation /resources/forms/projectioncalculator [R=30
 
 RewriteRule  ^consumerspecialoffers http://www.infocusrebates.com/ [R=301,NC,L]
 
-RewriteRule  ^contact(u)?(s)?(upport)? /support/ [R=301,NC,L]
-
 RewriteRule  ^controlview /accessories/CONTROLVIEW [R=301,NC,L]
 
-RewriteRule  ^conx$ /accessories/CONX [R=301,NC,L]
+RewriteRule  ^conx$ /peripherals/ConX-Series [R=301,NC,L]
+
+RewriteRule  ^/accessories/CONX$ /peripherals/ConX-Series [R=301,NC,L]
 
 RewriteRule  ^conx/activate http://collaborate.infocus.com [R=301,NC,L]
 
@@ -338,9 +345,9 @@ RewriteRule  ^firstresponders /first-responders [R=301,NC,L]
 
 RewriteRule  ^(mondopad)?(mp)?(-)?training(-)?(registration)?(-0)?$ /resources/forms/mptraining [NC,L]
 
-RewriteRule  ^bigtouch$ /displays/family?series=BIGTOUCH-SERIES [NC,L]
+RewriteRule  ^bigtouch$ /displays/BigTouch-Series [R=301,NC,L]
 
-RewriteRule  ^mondopad$ /displays/family?series=MONDOPAD-Series [NC,L]
+RewriteRule  ^mondopad$ /displays/Mondopad-Series [R=301,NC,L]
 
 RewriteRule  ^sales_manager$ /resources/documents/InFocus_TAM_areamap.pdf [NC,L]
 
@@ -372,7 +379,9 @@ RewriteRule  ^big(-)?note$ /custompages/index.php?big-note [NC,L]
 
 RewriteRule  ^big(-)?note/download /custompages/index.php?pagename=big-note [NC,L]
 
-RewriteRule  ^mississippi$ / [R=301,NC,L]
+RewriteRule  ^mississippi$ /custompages/index.php?pagename=mississippi&pagetype=blank [NC,L]
+
+RewriteRule  ^mississippi-test$ /custompages/index.php?pagename=mississippi-test&pagetype=blank [NC,L]
 
 RewriteRule  ^mondopad(-)?(live)?(-)?demo$ /custompages/index.php?pagename=mondopad-live-demo [NC,L]
 
@@ -413,8 +422,6 @@ RewriteRule  ^buy_now/reseller/infocus-store$ http://www.infocusstore.com [R=301
 RewriteRule  ^infocus-team$ /about?infocus-team [R=301,NC,L]
 
 RewriteRule  ^mondomadness$ /displays/MONDOPAD-SERIES [R=301,NC,L]
-
-RewriteRule  ^global-contactus$ /resources/forms/supportcontactus [R=301,NC,L]
 
 RewriteRule  ^legal/?$ /support/warranty [R=301,NC,L]
 
@@ -507,12 +514,13 @@ RewriteRule  ^touchscreen-solutions-sale-education /displays/JTOUCH-SERIES [R=30
  RewriteCond %{QUERY_STRING} ^q=(.*)$
  RewriteRule ^(?:site_)?search/? /custompage.php?pagename=%1 [NC,L]
 
+RewriteRule ^resources/documents/(.*)\.(.*)$ /resources/documents/$1-EN.$2[NC,L]
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^resources/documents/([A-Za-z0-9-_]+)/.*$ /unknown.php?$1[NC,L]
+RewriteRule ^resources/documents/(.*)-EN-EN(\..*)$ /resources/documents/$1$2[NC,L]
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^resources/documents/([A-Za-z0-9-_\.]+)/?$ /unknown.php?pn=$1&ref=doc [NC,L]
+RewriteRule ^resources/documents/([A-Za-z0-9-_]+)/(.*)-EN(\..*)$ /resources/documents/$1/$2$3[NC,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^resources/documents/([A-Za-z0-9-_]+)/(.*)-EN-EN(\..*)$ /resources/documents/$1/$2$3[NC,L]
 
  
  RewriteRule ^(?:[A-Za-z0-9-_]+)/(?:[A-Za-z0-9-_]+)/(?:[A-Za-z0-9-_]+)/(?:[A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$  /unknown.php?$1   [NC,L]

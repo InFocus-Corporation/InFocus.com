@@ -1,5 +1,57 @@
 <?php
 
+require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
+
+
+function curlWrap($url, $json){
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
+	curl_setopt($ch, CURLOPT_MAXREDIRS, 10 );
+	curl_setopt($ch, CURLOPT_URL, ZDURL.$url);
+	curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
+	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
+	curl_setopt($ch, CURLOPT_USERAGENT, "MozillaXYZ/1.0");
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+	$output = curl_exec($ch);
+
+	$info = curl_getinfo($ch);
+	// echo $output . '<br>';
+	// print_r($info);
+
+	curl_close($ch);
+	$decoded = json_decode($output);
+	return $decoded;
+}
+
+function post_files($url,$filearray) {
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+	curl_setopt($ch, CURLOPT_MAXREDIRS, 10 );
+	    curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
+
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/binary'));
+
+	curl_setopt($ch, CURLOPT_POST, true);
+
+	$file = fopen($filearray['tmp_name'], 'r');
+	$size = filesize($filearray['tmp_name']);
+	$fildata = fread($file,$size);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $fildata);
+	curl_setopt($ch, CURLOPT_INFILE, $file);
+	curl_setopt($ch, CURLOPT_INFILESIZE, $size);
+	curl_setopt($ch, CURLOPT_USERAGENT, "MozillaXYZ/1.0");
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+	curl_setopt($ch, CURLOPT_VERBOSE, true);
+	    $response = curl_exec($ch);
+	    return $response;
+	}
+
+
 if(!empty($_POST['first_name'])){
 
 
@@ -8,294 +60,232 @@ if(in_array($_POST['primary_address_country'],array("AF", "AL", "DZ", "AD", "AO"
 elseif(in_array($_POST['primary_address_country'],array("AS", "AI", "AG", "AR", "AW", "MO", "TW", "AU", "BD", "BT", "BN", "KH", "FJ", "IN", "JP", "KP", "KR", "LA", "FM", "NP", "NZ", "PK", "PW", "PN", "SG", "TH", "TP", "TK", "VN"))){$to = "Jill.Neo@infocus.com";}
 
 if(!empty($to)){
-$date = new DateTime();
-$result = $date->format('Y-m-d H:i:s');
+	$date = new DateTime();
+	$result = $date->format('Y-m-d H:i:s');
 
 
-$subject = "[Form:Online Request]";
-$message = "
-<Created On>" . $result . "</Created On>
-
-<first_name>" . $_POST['first_name'] . "</first_name>
-
-<last_name>" . $_POST['last_name'] . "</last_name>
-
-<phone_number>" . $_POST['phone_number'] . "</phone_number>
-
-<organization>" . $_POST['organization'] . "</organization>
-<e_mail>" . $_POST['e_mail'] . "</e_mail>
-<serial_number>" . $_POST['serial_number'] . "</serial_number>
-<symptom>" . $_POST['symptom'] . "</symptom>
-"; 
-
-
-$message .=  "
-<symptom_notes>" . $_POST['product'] . "
-" . $_POST['purchasedate'] . "
-" . $_POST['notes'] . "</symptom_notes>
-<address>" . $_POST['address'] . "</address>
-<city>" . $_POST['city'] . "</city>
-<state>" . $_POST['state'] . "</state>
-<zip_postal_code>" . $_POST['zip_postal_code'] . "</zip_postal_code>
-<country>" . $_POST['primary_address_country'] . "</country>";
-$from = $_POST['primary_address_country'] . " <" . $_POST['e_mail'] . ">";
+	$subject = "Online Request";
+	$message = "
+	Created On:" . $result . "
+	First Name:" . $_POST['first_name'] . "
+	Last Name:" . $_POST['last_name'] . "
+	Phone Number:" . $_POST['phone_number'] . "
+	Organization:" . $_POST['organization'] . "
+	Email:" . $_POST['e_mail'] . "
+	Serial Number:" . $_POST['serial_number'] . "
+	Symptom:" . $_POST['symptom'] . "
+	Product" . $_POST['product'] . "
+	Purchase Date:" . $_POST['purchasedate'] . "
+	Notes:" . $_POST['notes'] . "
+	Address:" . $_POST['address'] . "
+	City:" . $_POST['city'] . "
+	State:" . $_POST['state'] . "
+	Postal Code:" . $_POST['zip_postal_code'] . "
+	Country:" . $_POST['primary_address_country'] ;
+	$from = $_POST['primary_address_country'] . " <" . $_POST['e_mail'] . ">";
 
 
-    	if(!empty($_FILES['file']['tmp_name'])){
-		$attachment = chunk_split(base64_encode(file_get_contents($_FILES['file']['tmp_name'])));
-    	$filename = $_FILES['file']['name'];
-		}
-    	$boundary =md5(date('r', time())); 
+	    	if(!empty($_FILES['file']['tmp_name'])){
+			$attachment = chunk_split(base64_encode(file_get_contents($_FILES['file']['tmp_name'])));
+	    	$filename = $_FILES['file']['name'];
+			}
+	    	$boundary =md5(date('r', time())); 
 
-    	$headers = "From: $from";
-    	$headers .= "\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"_1_$boundary\"";
+	    	$headers = "From: $from";
+	    	$headers .= "\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"_1_$boundary\"";
 
 
-    	$headers = "From: $from";
-    	$headers .= "\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"_1_$boundary\"";
+	    	$headers = "From: $from";
+	    	$headers .= "\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"_1_$boundary\"";
 
-    	$message="
+	    	$message="
 
---_1_$boundary\r\n"
-        . "Content-Type: text/html; charset=ISO-8859-1\r\n"
-        . "Content-Transfer-Encoding: 7bit\r\n"
-        . "\r\n"
-		. "$message\r\n";
+	--_1_$boundary\r\n"
+	        . "Content-Type: text/html; charset=ISO-8859-1\r\n"
+	        . "Content-Transfer-Encoding: 7bit\r\n"
+	        . "\r\n"
+			. "$message\r\n";
 
-if(!empty($filename)){
-$message .= "--_1_$boundary
-Content-Type: application/octet-stream; name=\"$filename\" 
-Content-Transfer-Encoding: base64 
-Content-Disposition: attachment 
+	if(!empty($filename)){
+	$message .= "--_1_$boundary
+	Content-Type: application/octet-stream; name=\"$filename\" 
+	Content-Transfer-Encoding: base64 
+	Content-Disposition: attachment 
 
-$attachment
---_1_$boundary--";}
+	$attachment
+	--_1_$boundary--";}
 
-    	mail($to, $subject, $message, $headers);
+	    	mail($to, $subject, $message, $headers);
 
 }
 else{
-define("ZDAPIKEY", "srU2sx3OY0fK2TDn3CDGblU0yBxDBGIULwSWGVps");
-define("ZDUSER", "daniel.boggs@infocus.com");
-define("ZDURL", "https://infocuscorp.zendesk.com/api/v2");
+	define("ZDAPIKEY", "srU2sx3OY0fK2TDn3CDGblU0yBxDBGIULwSWGVps");
+	define("ZDUSER", "administrator@infocus.com");
+	define("ZDURL", "https://infocuscorp.zendesk.com/api/v2");
 
-function curlWrap($url, $json)
-{
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
-curl_setopt($ch, CURLOPT_MAXREDIRS, 10 );
-curl_setopt($ch, CURLOPT_URL, ZDURL.$url);
-curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
-curl_setopt($ch, CURLOPT_USERAGENT, "MozillaXYZ/1.0");
-curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-$output = curl_exec($ch);
+	foreach($_POST as $key => $value){
+	if($key != "Troubleshooting" AND $key != "symptom" ){
+	$arr[strip_tags($key)] = strip_tags($value);
+	}}
 
-$info = curl_getinfo($ch);
-// echo $output . '<br>';
-// print_r($info);
+	$Symptom = split(",",$_POST['symptom']);
+	$SympName = $Symptom[1];
+	$Symptom = $Symptom[0];
+	$Subject = $arr['product'] . '/' . $SympName;
+	$type = 'problem';
+	$FName = $arr['first_name'];
+	$LName = $arr['last_name'];
+	$orgName = $arr['organization'];
+	$email = $arr['e_mail'];
+	$Country = $arr['primary_address_country'];
+	$Phne = $arr['phone_number'];
+	$serial = $arr['serial_number'];
+	$address = $arr['address'];
+	$city = $arr['city'];
+	$state = $arr['state'];
+	$zip = $arr['zip_postal_code']; 
+	$productin = $arr['product']; 
+	$Channel = "email";
+	$name = $FName . ' ' . $LName;
+	$description = $arr['notes'] . '
 
-curl_close($ch);
-$decoded = json_decode($output);
-return $decoded;
-}
+	';
 
-function post_files($url,$filearray) {
+	$description .= '
+
+	' . $name . '
+	' . $orgName . '
+	' . $email . '
+	' . $Phne . '
+	' . $address . '
+	' . $city . '
+	' . $state . '
+	' . $zip . '
+	' . $Country;
 
 
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-curl_setopt($ch, CURLOPT_MAXREDIRS, 10 );
-    curl_setopt($ch, CURLOPT_URL, $url);
+	$Mondopadg = 22747639;
+	$Prog = 22747659;
+	$Projectorg = 22386119;
+	$Salesg = 22811785;
+	$Servicesg = 22747919;
+	$Tabletg = 22811795;
+	$VPhoneg = 22811805;
+
+	$group = $Projectorg;
+
+	$formnum = 34285;
+	if(substr($productin,0,3) == "INF"){
+	$formnum = 34505;
+	$group = $Mondopadg;
+	}
+
+	if(substr($productin,0,3) == "EPW" OR substr($productin,0,5) == "IN121"  OR substr($productin,0,5) == "INF-V" ){
+	$group = $Servicesg;
+	}
+
+	if(substr($productin,0,3) == "MVP"){
+	$group = $VPhoneg;
+	}
+
+	if(substr($productin,0,3) == "INP"){
+	$group = $Tabletg;
+	}
+
+
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, ZDURL.'/search.json?query=' . urlencode("type:user email:$email"));
 	curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
+	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	$output = curl_exec($ch);
+	curl_close($ch);
+	$decoded = json_decode($output);
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/binary'));
+	$results = $decoded->results;
+	$result = $results[0];
+	if(!empty($result->id)){$uid = $result->id;}
 
-curl_setopt($ch, CURLOPT_POST, true);
+	$Phne = str_replace("-","",str_replace(")","",str_replace("(","",str_replace("+","",$Phne))));
 
-$file = fopen($filearray['tmp_name'], 'r');
-$size = filesize($filearray['tmp_name']);
-$fildata = fread($file,$size);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $fildata);
-curl_setopt($ch, CURLOPT_INFILE, $file);
-curl_setopt($ch, CURLOPT_INFILESIZE, $size);
-curl_setopt($ch, CURLOPT_USERAGENT, "MozillaXYZ/1.0");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-curl_setopt($ch, CURLOPT_VERBOSE, true);
-    $response = curl_exec($ch);
-    return $response;
-}
+	if(empty($uid)){
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, ZDURL.'/search.json?query=' . urlencode("type:user name:$name"));
+		curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
+		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		$output = curl_exec($ch);
+		curl_close($ch);
+		$decoded = json_decode($output);
 
+		$results = $decoded->results;
+		foreach($results as $result){
+		if('+' .$Phne ==  $result->phone OR '+1' .$Phne ==  $result->phone){
+		$uid = $result->id;
+		}
+		}
+	}
 
-
-foreach($_POST as $key => $value){
-if($key != "Troubleshooting" AND $key != "symptom" ){
-$arr[strip_tags($key)] = strip_tags($value);
-}}
-
-$Symptom = split(",",$_POST['symptom']);
-$SympName = $Symptom[1];
-$Symptom = $Symptom[0];
-$Subject = $arr['product'] . '/' . $SympName;
-$type = 'problem';
-$FName = $arr['first_name'];
-$LName = $arr['last_name'];
-$orgName = $arr['organization'];
-$email = $arr['e_mail'];
-$Country = $arr['primary_address_country'];
-$Phne = $arr['phone_number'];
-$serial = $arr['serial_number'];
-$address = $arr['address'];
-$city = $arr['city'];
-$state = $arr['state'];
-$zip = $arr['zip_postal_code']; 
-$productin = $arr['product']; 
-$Channel = "email";
-$name = $FName . ' ' . $LName;
-$description = $arr['notes'] . '
-
-';
-
-$description .= '
-
-' . $name . '
-' . $orgName . '
-' . $email . '
-' . $Phne . '
-' . $address . '
-' . $city . '
-' . $state . '
-' . $zip . '
-' . $Country;
-
-
-$Mondopadg = 22747639;
-$Prog = 22747659;
-$Projectorg = 22386119;
-$Salesg = 22811785;
-$Servicesg = 22747919;
-$Tabletg = 22811795;
-$VPhoneg = 22811805;
-
-$group = $Projectorg;
-
-$formnum = 34285;
-if(substr($productin,0,3) == "INF"){
-$formnum = 34505;
-$group = $Mondopadg;
-}
-
-if(substr($productin,0,3) == "EPW" OR substr($productin,0,5) == "IN121"  OR substr($productin,0,5) == "INF-V" ){
-$group = $Servicesg;
-}
-
-if(substr($productin,0,3) == "MVP"){
-$group = $VPhoneg;
-}
-
-if(substr($productin,0,3) == "INP"){
-$group = $Tabletg;
-}
-
-
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, ZDURL.'/search.json?query=' . urlencode("type:user email:$email"));
-curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$output = curl_exec($ch);
-curl_close($ch);
-$decoded = json_decode($output);
-
-$results = $decoded->results;
-$result = $results[0];
-if(!empty($result->id)){$uid = $result->id;}
-
-$Phne = str_replace("-","",str_replace(")","",str_replace("(","",str_replace("+","",$Phne))));
-
-if(empty($uid)){
-
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, ZDURL.'/search.json?query=' . urlencode("type:user name:$name"));
-curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$output = curl_exec($ch);
-curl_close($ch);
-$decoded = json_decode($output);
-
-$results = $decoded->results;
-foreach($results as $result){
-if('+' .$Phne ==  $result->phone OR '+1' .$Phne ==  $result->phone){
-$uid = $result->id;
-}
-}
-}
-
-if(empty($uid)){
-$create = json_encode(array('user' => array(
-'name' => $name, 
-'email' => $email, 
-'phone' => $Phne, 
-'user_fields' => array( 
-					"first_name"=> $FName, 
-					"last_name"=> $LName, 
-					"organization"=> $orgName, 
-					"shipping_address"=> $address, 
-					"city"=> $city, 
-					"state"=> $state, 
-					"country"=> $Country, 
-					"zip_code"=> $zip))));
-$return = curlWrap("/users.json", $create); 
-$decoded = $return->user;
-$uid = $decoded->id;
-}
+	if(empty($uid)){
+		$create = json_encode(array('user' => array(
+		'name' => $name, 
+		'email' => $email, 
+		'phone' => $Phne, 
+		'user_fields' => array( 
+							"first_name"=> $FName, 
+							"last_name"=> $LName, 
+							"organization"=> $orgName, 
+							"shipping_address"=> $address, 
+							"city"=> $city, 
+							"state"=> $state, 
+							"country"=> $Country, 
+							"zip_code"=> $zip))));
+		$return = curlWrap("/users.json", $create); 
+		$decoded = $return->user;
+		$uid = $decoded->id;
+	}
 
 
 
-if(!empty($_FILES)){
-$output = post_files("https://infocuscorp.zendesk.com/api/v2/uploads.json?filename=" . urlencode($_FILES['file']['name']),$_FILES['file']);
-$output = json_decode($output);
-$ftoken = $output->upload->token;
-}
+	if(!empty($_FILES)){
+		$output = post_files("https://infocuscorp.zendesk.com/api/v2/uploads.json?filename=" . urlencode($_FILES['file']['name']),$_FILES['file']);
+		$output = json_decode($output);
+		$ftoken = $output->upload->token;
+	}
 
 
-if(!empty($uid)){
-$create = json_encode(array('ticket' => array(
-'type' => $type, 
-'subject' => $Subject, 
-'status' => 'new', 
-'group_id' => $group, 
-'comment' => array( "value"=> $description,"uploads" => array($ftoken)), 
-'requester_id' => $uid,
-'custom_fields' => 	array( array("id"=> 23473115, "value"=> $orgName), 
-					array("id"=> 23338039, "value"=> $Symptom), 
-					array("id"=> 23415649, "value"=> $productin), 
-					array("id"=> 23278985, "value"=> $serial), 
-					array("id"=> 23394275, "value"=> $productout), ))));
-}
-else{
-$create = json_encode(array('ticket' => array(
-'type' => $type, 
-'subject' => $Subject, 
-'status' => 'new', 
-'group_id' => $group, 
-'comment' => array( "value"=> $description,"uploads" => array($ftoken)), 
-'requester' => array('name' => $FName . ' ' . $LName, 'email' => $email),
-"uploads" => array($ftoken),
-'custom_fields' => 	array( array("id"=> 23473115, "value"=> $orgName), 
-					array("id"=> 23338039, "value"=> $Symptom), 
-					array("id"=> 23415649, "value"=> $productin), 
-					array("id"=> 23278985, "value"=> $serial), 
-					array("id"=> 23394275, "value"=> $productout), ))));
-}
+	if(!empty($uid)){
+		$create = json_encode(array('ticket' => array(
+		'type' => $type, 
+		'subject' => $Subject, 
+		'status' => 'new', 
+		'group_id' => $group, 
+		'comment' => array( "value"=> $description,"uploads" => array($ftoken)), 
+		'requester_id' => $uid,
+		'custom_fields' => 	array( array("id"=> 23473115, "value"=> $orgName), 
+							array("id"=> 23338039, "value"=> $Symptom), 
+							array("id"=> 23415649, "value"=> $productin), 
+							array("id"=> 23278985, "value"=> $serial), 
+							array("id"=> 23394275, "value"=> $productout), ))));
+	}
+	else{
+		$create = json_encode(array('ticket' => array(
+		'type' => $type, 
+		'subject' => $Subject, 
+		'status' => 'new', 
+		'group_id' => $group, 
+		'comment' => array( "value"=> $description,"uploads" => array($ftoken)), 
+		'requester' => array('name' => $FName . ' ' . $LName, 'email' => $email),
+		"uploads" => array($ftoken),
+		'custom_fields' => 	array( array("id"=> 23473115, "value"=> $orgName), 
+							array("id"=> 23338039, "value"=> $Symptom), 
+							array("id"=> 23415649, "value"=> $productin), 
+							array("id"=> 23278985, "value"=> $serial), 
+							array("id"=> 23394275, "value"=> $productout), ))));
+	}
 
-$return = curlWrap("/tickets.json", $create); 
-}
+	$return = curlWrap("/tickets.json", $create); 
+	}
 
 echo "<script src='http://code.jquery.com/jquery-1.9.1.js'></script><br>Request submitted<br><br><script>$(function(){
     parent.$.colorbox.resize({
@@ -307,22 +297,9 @@ echo "<script src='http://code.jquery.com/jquery-1.9.1.js'></script><br>Request 
 
 die();
 }
+require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
+
 ?>
-
-
-
-<!DOCTYPE html>
-
-<HTML>
-<HEAD>
- 
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<link type="text/css" rel="stylesheet" href="/resources/css/core.css">
-<!--[if IE]>
-    <link href="/resources/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <![endif]-->
 
 <script>
 
@@ -350,6 +327,24 @@ for (index = 0; index < required.length; ++index) {
 document.getElementById("contactus").submit();
 
 }
+
+function checkSN(Serial){
+  if(Serial.search(/[^A-Z^0-9^a-z]/)>0){
+ document.getElementById('serial_number').value = Serial.replace(/[^A-Z^0-9^a-z]/g,'');
+ alert("Only letters and numbers are valid in serial numbers. \nYou may only submit one serial at a time.");
+  }
+
+  if(Serial.length<12){
+  alert("Serial numbers are generally 12-15.");
+  document.getElementById('serial_number').value = Serial.substr(0,19);
+ }
+
+   if(Serial.length>19){
+  alert("Serial numbers are generally 12-15.\nYou may only submit one serial at a time.");
+  document.getElementById('serial_number').value = Serial.substr(0,19);
+ }
+
+  }
 </script>
 <style>
   form {
@@ -358,49 +353,89 @@ document.getElementById("contactus").submit();
 	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 0px 0px 0px rgba(255, 255, 255, 1);
 	border: 0px solid #B2B2B2;
 }
+a.subtle{color:darkgrey;}
+@media (min-width: 640px){
+.contact-support{
+	border-left:1px solid grey;
+	padding-left:1%;
+}
+}
 </style>
  </HEAD>
 <body style="max-width:1200px;background: #f7f7f7;">
 
 <form action="" id="contactus" method="POST" enctype="multipart/form-data">
 
-<h3 ><!--Trans-Marker-->Contact Support</h3><span ><!--Trans-Marker-->Please fill out the below fields. Support response time is 1-2 business days.<br>
-      <!--Trans-Marker-->If you need faster answers feel free to call us at 877-388-8360. </span><br>
+<h3 ><?=translate('Contact InFocus')?></h3><span><?=$pageText['LearnAbout']?></span><br>
 <input type="hidden" id="reqfields" value="first_name,last_name,e_mail,primary_address_country,notes">
+<div class="Row">
+<div class="C5 Col"><h5><?=translate('Sales and General Inquiries')?></h5>
+<div><?=$pageText['Help']?>
+</div>
+<p><button type="button"><?=translate('Send Sales a Question')?></button></p>
 
-	  <ul class="wrap">
-	  <li>
+<div>
+<h6><?=translate('Other Resources')?></h6>
+> <a class="subtle"><?=translate('Find a Reseller')?></a><br>
+> <a class="subtle"><?=translate('Find a Product')?></a><br>
+</div>
+</div><div class="C5 Col contact-support" >
+<h5><?=translate('Support')?></h5>
+<p><?=$pageText['Own']?> </p>
 
-<label class="top" for="first_name" >First Name: <span class="required" style="color: #ff0000;">*</span></label>
-<input id="first_name" type="text" name="first_name" />
-</li>
+<div><h6><?=$pageText['Failure']?></h6>
+<p><?=$pageText['Power']?></p>
+<p><button type="button"><?=translate('Create a Service Request')?></button> </p>
+</div>
+<div>
+<h6><?=$pageText['General']?></h6>
+<p><?=$pageText['Lumens']?></p>
+<p><button type="button"><?=translate('Send Tech Support a Question')?></button> </p>
+</div>
+<p><?=translate('Or call us at 877-388-8360 (US and Canada)')?></p>
+
+<p><a onclick="$('#phoneHours').toggle(500)"><?=translate('See phone numbers and hours for worldwide tech support')?> &darr;</a></p>
+<style>
+
+table.contact-table tr:nth-child(n+3) td:first-child{padding-left:40px;}
+table.contact-table tr td:first-child{width:60px;}
+table.contact-table td{ padding: 1px 6px;}
+table.contact-table th{font-weight:bold;color:grey;text-align:left;}
+table.contact-table{
+	margin-bottom:20px;
+}
+</style>
+ <div id="phoneHours" style="display:none">
+<?=$contactTables?>
+</div>
+<br>
+<div>
+<h6><?=translate('Other Resources')?></h6>
+> <a class="subtle"><?=translate('Projection Calculator')?></a><br>
+> <a class="subtle"><?=translate('Check Status of Your Warranty')?></a><br>
+> <a class="subtle"><?=translate('Find a Service Provider')?></a><br>
+</div>
+</div>
+</div>
+
+
+<div style="display:none">
+<form action="" id="onlinerma" method="POST" name="onlinerma" enctype="multipart/form-data">
+
+<h3 ><!--Trans-Marker-->Online RMA</h3><span >Need support or documentation for your product? Please visit our <a href="/support"> Support site.</a> </span><br>
+<input type="hidden" id="reqfields" value="first_name,last_name,e_mail,phone_number,organization,serial_number,symptom,address,city,state,zip_postal_code,primary_address_country,notes">
+
+ <ul class="wrap">
 <li>
-<label class="top" for="last_name" >Last Name: <span class="required" style="color: #ff0000;">*</span></label>
-<input id="last_name" type="text" name="last_name" onchange="validateHuman('1');" />
+ <label class="top" for="serial_number"><?=translate('Serial Number')?>: <span class="form-required" title="This field is required.">*</span></label>
+ <input maxlength="128" name="serial_number" id="serial_number" size="60" type="text" onkeyup="checkSN(this.value);" onchange="isRegistered(this.value);" required>
 </li>
-<li>
-<label class="top" for="e_mail" >Email Address: <span class="required" style="color: #ff0000;">*</span></label>
-<input id="e_mail" type="text" name="e_mail" onchange="validateEmailAdd('1');" />
-</li>
-<li>
-<label class="top" for="phone_number" >Phone: </label>
-<input id="phone_number" type="text" name="phone_number" />
-</li>
-<li>
-<label class="top" for="organization" >Organization: </label>
-<input id="organization" type="text" name="organization" />
-</li>
-<li>
-<label class="top" for="product" >Product: </label>
-<input id="product" type="text" name="product" />
-</li>
-<li>
-<label class="top" for="serial_number" >Serial Number: </label>
-<input id="serial_number" type="text" name="serial_number" />
-</li>
-<li>
-<label class="top" for="symptom" >Symptom: </label>
-<select type="text" name="symptom" id="symptom">
+<li><label class="top" for="purchasedate" >Purchase Date: </label>
+<input id="purchasedate" type="text" name="purchasedate" /></li>
+
+<li><label class="top" for="symptom" >Symptom: <span class="required" style="color: #ff0000;">*</span></label>
+<select type="text" name="symptom" id="symptom" >
+
 	<option value="" selected="selected">- Select -</option>
 	<option value="001,Abused / Dropped">Abused / Dropped</option>
 	<option value="004,Audible Noise">Audible Noise</option>
@@ -445,43 +480,89 @@ document.getElementById("contactus").submit();
 	<option value="vcmessages,V/C Messages">V/C Messages</option>
 	<option value="048,Wireless Functionality">Wireless Functionality</option>
 	<option value="049,Won&#039;t retain user settings">Won&#039;t retain user settings</option>
-</select>
+</select></li>
+<li>
+ <label class="top" for="first_name"><?=translate('First Name')?>: <span class="form-required" title="This field is required.">*</span></label>
+ <input maxlength="128" name="first_name" id="first_name" size="60" type="text" value="<?php echo $_GET['first_name']; ?>" required>
 </li>
 <li>
-<label class="top" for="address" >Address: </label>
-<input id="address" type="text" name="address" />
+ <label class="top" for="last_name"><?=translate('Last Name')?>: <span class="form-required" title="This field is required.">*</span></label>
+ <input maxlength="128" name="last_name" id="last_name" size="60" type="text" value="<?php echo $_GET['last_name']; ?>" required>
 </li>
 <li>
-<label class="top" for="city" >City: </label>
-<input id="city" type="text" name="city" />
+ <label class="top" for="organization"><?=translate('Organization Name')?>: <span class="form-required" title="This field is required.">*</span></label>
+ <input maxlength="128" name="organization" id="organization" size="60" type="text" value="<?php echo $_GET['organization']; ?>" required>
 </li>
 <li>
-<label class="top" for="state" >State: </label>
-<input maxlength="2" id="state" type="text" name="state" />
+ <label class="top" for="phone_number"><?=translate('Phone')?>: </label>
+ <input maxlength="128" name="phone_number" id="phone_number" size="60" type="text" value="<?php echo $_GET['phone_number']; ?>" >
 </li>
 <li>
-<label class="top" for="zip_postal_code" >Postal Code: </label>
-<input id="zip_postal_code" type="text" name="zip_postal_code" />
+ <label class="top" for="e_mail"><?=translate('Email Address')?>: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="email" id="email" name="e_mail" size="60" type="e_mail" value="<?php echo $_GET['e_mail']; ?>" required>
 </li>
 <li>
-<label class="top" for="primary_address_country">Country: <span class="required" style="color: #ff0000;">*</span></label>
-<Select id="primary_address_country" type="text" name="primary_address_country">
-	<option value="" selected="selected">Select Country</option> 
-<option value="AD">AD</option><option value="AE">AE</option><option value="AF">AF</option><option value="AG">AG</option><option value="AI">AI</option><option value="AL">AL</option><option value="AM">AM</option><option value="AO">AO</option><option value="AQ">AQ</option><option value="AR">AR</option><option value="AS">AS</option><option value="AT">AT</option><option value="AU">AU</option><option value="AW">AW</option><option value="AX">AX</option><option value="AZ">AZ</option><option value="BA">BA</option><option value="BB">BB</option><option value="BD">BD</option><option value="BE">BE</option><option value="BF">BF</option><option value="BG">BG</option><option value="BH">BH</option><option value="BI">BI</option><option value="BJ">BJ</option><option value="BL">BL</option><option value="BM">BM</option><option value="BN">BN</option><option value="BO">BO</option><option value="BQ">BQ</option><option value="BR">BR</option><option value="BS">BS</option><option value="BT">BT</option><option value="BV">BV</option><option value="BW">BW</option><option value="BY">BY</option><option value="BZ">BZ</option><option value="CA">CA</option><option value="CC">CC</option><option value="CD">CD</option><option value="CF">CF</option><option value="CG">CG</option><option value="CH">CH</option><option value="CI">CI</option><option value="CK">CK</option><option value="CL">CL</option><option value="CM">CM</option><option value="CN">CN</option><option value="CO">CO</option><option value="CR">CR</option><option value="CU">CU</option><option value="CV">CV</option><option value="CW">CW</option><option value="CX">CX</option><option value="CY">CY</option><option value="CZ">CZ</option><option value="DE">DE</option><option value="DJ">DJ</option><option value="DK">DK</option><option value="DM">DM</option><option value="DO">DO</option><option value="DZ">DZ</option><option value="EC">EC</option><option value="EE">EE</option><option value="EG">EG</option><option value="EH">EH</option><option value="ER">ER</option><option value="ES">ES</option><option value="ET">ET</option><option value="FI">FI</option><option value="FJ">FJ</option><option value="FK">FK</option><option value="FM">FM</option><option value="FO">FO</option><option value="FR">FR</option><option value="GA">GA</option><option value="GB">GB</option><option value="GD">GD</option><option value="GE">GE</option><option value="GF">GF</option><option value="GG">GG</option><option value="GH">GH</option><option value="GI">GI</option><option value="GL">GL</option><option value="GM">GM</option><option value="GN">GN</option><option value="GP">GP</option><option value="GQ">GQ</option><option value="GR">GR</option><option value="GS">GS</option><option value="GT">GT</option><option value="GU">GU</option><option value="GW">GW</option><option value="GY">GY</option><option value="HK">HK</option><option value="HM">HM</option><option value="HN">HN</option><option value="HR">HR</option><option value="HT">HT</option><option value="HU">HU</option><option value="ID">ID</option><option value="IE">IE</option><option value="IL">IL</option><option value="IM">IM</option><option value="IN">IN</option><option value="IO">IO</option><option value="IQ">IQ</option><option value="IR">IR</option><option value="IS">IS</option><option value="IT">IT</option><option value="JE">JE</option><option value="JM">JM</option><option value="JO">JO</option><option value="JP">JP</option><option value="KE">KE</option><option value="KG">KG</option><option value="KH">KH</option><option value="KI">KI</option><option value="KM">KM</option><option value="KN">KN</option><option value="KP">KP</option><option value="KR">KR</option><option value="KW">KW</option><option value="KY">KY</option><option value="KZ">KZ</option><option value="LA">LA</option><option value="LB">LB</option><option value="LC">LC</option><option value="LI">LI</option><option value="LK">LK</option><option value="LR">LR</option><option value="LS">LS</option><option value="LT">LT</option><option value="LU">LU</option><option value="LV">LV</option><option value="LY">LY</option><option value="MA">MA</option><option value="MC">MC</option><option value="MD">MD</option><option value="ME">ME</option><option value="MF">MF</option><option value="MG">MG</option><option value="MH">MH</option><option value="MK">MK</option><option value="ML">ML</option><option value="MM">MM</option><option value="MN">MN</option><option value="MO">MO</option><option value="MP">MP</option><option value="MQ">MQ</option><option value="MR">MR</option><option value="MS">MS</option><option value="MT">MT</option><option value="MU">MU</option><option value="MV">MV</option><option value="MW">MW</option><option value="MX">MX</option><option value="MY">MY</option><option value="MZ">MZ</option><option value="NA">NA</option><option value="NC">NC</option><option value="NE">NE</option><option value="NF">NF</option><option value="NG">NG</option><option value="NI">NI</option><option value="NL">NL</option><option value="NO">NO</option><option value="NP">NP</option><option value="NR">NR</option><option value="NU">NU</option><option value="NZ">NZ</option><option value="OM">OM</option><option value="PA">PA</option><option value="PE">PE</option><option value="PF">PF</option><option value="PG">PG</option><option value="PH">PH</option><option value="PK">PK</option><option value="PL">PL</option><option value="PM">PM</option><option value="PN">PN</option><option value="PR">PR</option><option value="PS">PS</option><option value="PT">PT</option><option value="PW">PW</option><option value="PY">PY</option><option value="QA">QA</option><option value="RE">RE</option><option value="RO">RO</option><option value="RS">RS</option><option value="RU">RU</option><option value="RW">RW</option><option value="SA">SA</option><option value="SB">SB</option><option value="SC">SC</option><option value="SD">SD</option><option value="SE">SE</option><option value="SG">SG</option><option value="SH">SH</option><option value="SI">SI</option><option value="SJ">SJ</option><option value="SK">SK</option><option value="SL">SL</option><option value="SM">SM</option><option value="SN">SN</option><option value="SO">SO</option><option value="SR">SR</option><option value="SS">SS</option><option value="ST">ST</option><option value="SV">SV</option><option value="SX">SX</option><option value="SY">SY</option><option value="SZ">SZ</option><option value="TC">TC</option><option value="TD">TD</option><option value="TF">TF</option><option value="TG">TG</option><option value="TH">TH</option><option value="TJ">TJ</option><option value="TK">TK</option><option value="TL">TL</option><option value="TM">TM</option><option value="TN">TN</option><option value="TO">TO</option><option value="TR">TR</option><option value="TT">TT</option><option value="TV">TV</option><option value="TW">TW</option><option value="TZ">TZ</option><option value="UA">UA</option><option value="UG">UG</option><option value="UM">UM</option><option value="US" selected="selected">US</option><option value="UY">UY</option><option value="UZ">UZ</option><option value="VA">VA</option><option value="VC">VC</option><option value="VE">VE</option><option value="VG">VG</option><option value="VI">VI</option><option value="VN">VN</option><option value="VU">VU</option><option value="WF">WF</option><option value="WS">WS</option><option value="YE">YE</option><option value="YT">YT</option><option value="ZA">ZA</option><option value="ZM">ZM</option><option value="ZW">ZW</option>
-</select>
+ <label class="top" for="first_name"><?=translate('Secondary Contact Name')?>: </label>
+ <input maxlength="128" name="second_name" id="second_name" size="60" type="text" value="<?php echo $_GET['first_name']; ?>" >
 </li>
 <li>
-<label class="top" for="notes">Question: <span class="required" style="color: #ff0000;">*</span></label>
-<textarea id="notes" type="text" name="notes" rows="10"> </textarea>
+ <label class="top" for="e_mail"><?=translate('Secondary Contact Email')?>: </label>
+ <input type="email" id="second_email" name="second_email" size="60" value="<?php echo $_GET['e_mail']; ?>" >
 </li>
-</ul>
+<li>
+ <label class="top" for="product"><?=translate('Product Part #')?>: </label>
+<input maxlength="128" name="product" id="product" size="60" value="" class="form-text" type="text" required>
+</li>
 
-<br>
+<li>
+
+ <label class="top" for="address"><?=translate('Address')?>: <span class="form-required" title="This field is required.">*</span></label>
+ <textarea type="text" cols="30" rows="5" name="address" id="address" required><?php echo $_GET['address']; ?></textarea>
+</li>
+<li>
+
+ <label class="top" for="city"><?=translate('City')?>: <span class="form-required" title="This field is required."></span></label>
+ <input maxlength="128" name="city" id="city" size="60" type="text" value="<?php echo $_GET['city']; ?>" required>
+</li>
+<li>
+
+ <label class="top" for="state"><?=translate('State/Province')?>: <span class="form-required" title="This field is required."></span></label>
+ <input maxlength="128" name="state" id="state" size="60" type="text" value="<?php echo $_GET['state']; ?>" required>
+</li>
+<li>
+
+ <label class="top" for="zip_postal_code"><?=translate('Zip/Postalcode')?>: <span class="form-required" title="This field is required."></span></label>
+ <input maxlength="128" name="zip_postal_code" id="zip_postal_code" size="60" type="text" value="<?php echo $_GET['zip_postal_code']; ?>" required>
+</li>
+<li>
+
+ <label class="top" for="primary_address_country"><?=translate('Country')?>: <span class="form-required" title="This field is required.">*</span></label>
+ <select type="text" name="primary_address_country" id="primary_address_country" required>
+ <option value=""></option>
+<?php  
+ foreach($displayedCountries as $cCode){
+	 echo "<option value='$cCode'>{$countryList[$cCode]} ($cCode)</option>";
+ }
+ 
+ ?>
+ </select>
+</li>
+
+
+
+<li><label class="top" for="notes">Notes: <span class="required" style="color: #ff0000;">*</span></label>
+<textarea id="notes" type="text" name="notes" rows="6"> </textarea></li>
+
+<li><label class="top" for="file">Attach File: </label>
+<input id="file" type="file" name="file"></li>
+
+<br><br>
+<br><br>
 <button onclick="submit_form();" type="button">Submit</button>
+
 <br><span class="form-required" style="font-size:70%">* Denotes a Required field.</span>
 
-</form>
-
+</div>
 <script>
 $(function(){
     parent.$.colorbox.resize({

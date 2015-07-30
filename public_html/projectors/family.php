@@ -1,5 +1,7 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
+require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
+
 ?>
 <?=$product->canonical ?>
 <?=$product->productmeta ?>
@@ -20,7 +22,7 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
 	<?php include($homedir . "/resources/html/mainmenu.html"); //insert menu?>
 	<div class="content">
 		<div id="family" class="C9">
-			<div class="breadcrumb"><?=$product->breadcrumb ?></div>
+			<div class="breadcrumb"><ol itemscope itemtype="https://schema.org/BreadcrumbList"><?=$product->breadcrumb ?></ol></div>
 			<div class="C10 Col_child C7x3_child">
 				<div class="info" style="float:left;">
 					<h2 class="name" id="pagetitle" ><?=$product->productText['title'] ?></h2>

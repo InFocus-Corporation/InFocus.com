@@ -114,6 +114,8 @@ $FreightAarray['INF6501aAG'] = 250;
 $FreightAarray['INF6501c'] = 250;
 $FreightAarray['INF6501cAG'] = 250;
 $FreightAarray['INF7001a'] = 250;
+$FreightAarray['INF4030'] = 150;
+$FreightAarray['INF4032'] = 150;
 
 
 $result	=	mysqli_query($connection,$presql);

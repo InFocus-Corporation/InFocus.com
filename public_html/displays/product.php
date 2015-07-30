@@ -1,11 +1,13 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
+require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 $localdir = dirname(__FILE__);
 //Check if logged in user in edit mode for WYSIWYG editor
 if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $homedir.'/resources/overviews/', 'admin,editor', ".src", "overview", "true", "SavePage","overview");}
  ?>
 
  <?=$product->canonical ?>
+
 <?=$product->productmeta ?>
 
 <script>
@@ -18,14 +20,15 @@ $(function() {$(".langlist").menu();});
 
 	</head>
 	<body>
+
 		<?php include($_SERVER['DOCUMENT_ROOT']. "/resources/html/mainmenu.html"); //insert menu?>
 <?php
 //Check if logged in user in edit mode, activate WYSIWYG editor
 if($_GET['edit']=="true"){CMSHTML("SavePage",'admin,editor');}
 ?>
 		<div class="content">
-<div id="product" class="C9">
-<div class="breadcrumb"><?=$product->breadcrumb ?></div>
+<div id="product" class="C9" itemscope itemtype="http://schema.org/Product">
+<div class="breadcrumb"><ol itemscope itemtype="https://schema.org/BreadcrumbList"><?=$product->breadcrumb ?></ol></div>
 	<div class="productheader C10 Col_child C4x6_child" >
  		<?=$priceBuyNow?>
  		</ul></div>

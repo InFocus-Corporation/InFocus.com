@@ -4,6 +4,7 @@ $groups_allowed = "admin,editor,saleseditor,marketingeditor";
 require($_SERVER['DOCUMENT_ROOT'] . "/login/ublock.php");
 
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
+require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 $localdir = dirname(__FILE__);
 
 require($_SERVER['DOCUMENT_ROOT'] . "/resources/cmsmainmenu.html");

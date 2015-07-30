@@ -35,31 +35,86 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 <?php endif; ?>
+
+
 		<header id="masthead" >
-			<div id="brand" class="C9" style="max-width:1075px;">
-				<h3 id="logo"><a href="/">InFocus</a></h3><span style="font-size: 170%;font-weight: bold;padding:0 5px;">|</span>
-				<p id="title"><?php echo translate('Collaboration That Works'); ?></p>
-				<div class="headerNav" style="">
-				<?php 
-if($_SERVER['SERVER_NAME'] == "www.infocus.com"){echo'
-<a href="http://www.infocusstore.com" style="">' . translate('InFocus Store') . '</a> | 
-<a class="" href="http://outlet.infocus.com" style="">' . translate('Outlet Store') . '</a>';
-} 
-?>
-				<div style=""><input type="text" id="search"><button type="button" onclick="Search(document.getElementById('search').value);"><?php echo translate('search'); ?></button></div></div>
+			<div id="brand" class="C9">
+				<h3 id="logo"><a href="/">InFocus</a></h3>
+				<p id="title"><span>|</span><?=translate('Collaboration That Works')?></p>
+
+		</header>
+			<div class="menu-button"></div>
+			<nav class="main-nav">
+			<div class="C9">
+							<div class="headerNav">
+				<span class="onlyhidemobile"><ul  class="flexnav onlyhidemobile" data-breakpoint="640">
+<li>
+	<a class="form-box" href="/resources/forms/contactus"><img class="nav-icon" src="/resources/images/bubbleicon.png" /><?=translate('Contact Us')?></a>
+</li>			 			 			 
+	<li><span class="iconMenu touch-button"><i><img class="nav-icon" src="/resources/images/carticon.png" /><?=translate('How to Buy')?></i></span>
+	<ul style="display:none">
+		<li>
+		<?php if($lang == "en"):?>
+			<a href="http://www.infocusstore.com"><?=translate('InFocus Store (US)')?></a>
+			<a href="http://outlet.infocus.com"><?=translate('InFocus Outlet (US)')?></a>
+		<?php endif; ?>
+			<a href="/resellerlocator"><?=translate('Find a Reseller')?></a>
+			<a class="form-box" href="/resources/forms/contactus"><?=translate('Contact Us')?></a>
+		</li>
+	</ul>
+</li>
+
+	<li><span class="iconMenu touch-button"><i><img class="nav-icon" src="/resources/images/globeicon.png" /><?=translate('Region')?></i></span>
+	<ul style="display:none">
+		<li>
+			<a href="http://www.infocus.com"><?=translate('English (US)')?></a>
+			<a href="http://www.infocus.de"><?=translate('German')?></a>
+			<!--<a href="http://www.infocus.fr">French</a>
+			<a href="http://www.infocus.nl">Dutch</a>-->
+			<a href="http://www.infocusindia.co.in"><?=translate('English (India)')?></a>
+			<a href="http://www.infocus.com.cn"><?=translate('Chinese')?></a>
+		</li>
+	</ul>
+</li>
+</ul></span>
+
+<input type="text" id="search" class="nav-search" placeholder="<?=translate('search')?>" onsubmit="Search(document.getElementById('search').value);"><span onclick="Search(document.getElementById('search').value);" class="nav-search-icon"><img src="/resources/images/magicon.png" /></span>
 				
 				<!--<a class="onlyhidemobile" href="#" style="margin-left:50px;">Region</a>
 				<input type="text" style="margin-left:50px;"><button type="button">Search</button>-->
 				
 			</div>
-		</header>
-			<div class="menu-button" style="position:fixed;width:10%;z-index:1102;"></div>
-			<nav class="main-nav" style="background-color:#24282B">
-			<div class="C9" style="max-width:1082px;">
 			<ul  class="flexnav" data-breakpoint="800">
 
 			<?php include($_SERVER['DOCUMENT_ROOT']  . "/resources/html/mainmenu-" . $lang . ".html"); ?>
 
-			</ul>
+<li  class="hidefs" style="vertical-align:top;">
+	<a href="/contact"><?=translate('Contact Us')?></a>
+</li>			 			 			 
+	<li class="hidefs"><a><?=translate('How to Buy')?></a>
+	<ul style="display:none">
+		<li>
+		<?php if($lang == "en"):?>
+			<a href="http://www.infocusstore.com"><?=translate('InFocus Store (US)')?></a>
+			<a href="http://outlet.infocus.com"><?=translate('InFocus Outlet (US)')?></a>
+		<?php endif; ?>
+			<a href="/resellerlocator"><?=translate('Find a Reseller')?></a>
+			<a href="/contact"><?=translate('Contact Us')?></a>
+		</li>
+	</ul>
+</li>
+
+	<li class="hidefs"><a><?=translate('Region')?></a>
+	<ul style="display:none">
+		<li>
+			<a href="http://www.infocus.com"><?=translate('English (US)')?></a>
+			<a href="http://www.infocus.de"><?=translate('German')?></a>
+			<!--<a href="http://www.infocus.fr">French</a>
+			<a href="http://www.infocus.nl">Dutch</a>-->
+			<a href="http://www.infocusindia.co.in"><?=translate('English (India)')?></a>
+			<a href="http://www.infocus.com.cn"><?=translate('Chinese')?></a>
+		</li>
+	</ul>
+</li>			</ul>
 				</div>
 			</nav>

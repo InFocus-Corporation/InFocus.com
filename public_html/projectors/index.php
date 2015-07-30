@@ -9,6 +9,7 @@ require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/transfunc.php");
 }
 else{
 	require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
+	require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 
 	$categories = array("ultra-portable","office-classroom","short-throw","large-venue","home-theater","interactive");	
 	if(!empty($category)){echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '/projectors/' . $category . '"/>' . PHP_EOL;}

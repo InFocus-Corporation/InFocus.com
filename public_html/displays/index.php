@@ -1,5 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
+require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 
 echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '/displays/"/>' . PHP_EOL;
 
@@ -70,7 +71,7 @@ max-width:100%;
 
 .displaylist > li {
 padding-left:2%;
-width:30%;
+width:17%;
 float:left;
 padding-bottom: 60px;
 }

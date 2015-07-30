@@ -4,11 +4,11 @@
 <?php 
 if($lang != "de"){
 echo 	'
-     <li><a id="contact-us" class="form-box" href="/resources/forms/supportcontactus">' . translate('Contact Us') . '</a></li>';
+     <li><a id="contact-us" class="form-box" href="/resources/forms/contactus">' . translate('Contact Us') . '</a></li>';
  }
 else{
 echo 	'
-     <li><a id="contact-us" class="form-box" href="/resources/forms/globalcontactus">' . translate('Contact Us') . '</a></li>';
+     <li><a id="contact-us" class="form-box" href="/resources/forms/contactus">' . translate('Contact Us') . '</a></li>';
 
 }
 ?>
@@ -39,16 +39,32 @@ echo 	'
     <a href="<?php echo translate('http://twitter.com/InFocusCorp'); ?>" target="blank" style="float:left; padding: 0px 6px;"><img src="/resources/images/twicosmall"/></a>
     <a href="<?php echo translate('http://www.youtube.com/user/InFocusCorp'); ?>" target="blank" style="float:left; padding: 0px 6px;"><img alt="InFocus YouTube" src="/resources/images/yticosmall"/></a>
     <a href="<?php echo translate('http://www.linkedin.com/company/infocus'); ?>" target="blank" style="float:left; padding: 0px 6px;"><img alt="LinkedIn" src="/resources/images/linkedinsmall"/></a>
-<?php 
-if($lang == "de"){
-echo 	'<a href="https://plus.google.com/105523386195512949734/posts" target="blank" style="float:left; padding: 0px 6px;"><img alt="Google+" src="/resources/images/gpicosmall"/></a>
-';
-}
-?>
   </div>
   
   <iframe id="f2c00b8d5c" name="f1ff7b2be" scrolling="no" title="Like this content on Facebook." class="fb_ltr" src="http://www.facebook.com/plugins/like.php?api_key=369224146470072&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D28%23cb%3Dfbad13c3c%26domain%3Dwww.infocus.com%26origin%3Dhttp%253A%252F%252Fwww.infocus.com%252Ff11d30a64%26relation%3Dparent.parent&amp;colorscheme=light&amp;extended_social_context=false&amp;font=verdana&amp;href=http%3A%2F%2Fwww.infocus.com%2F&amp;layout=button_count&amp;locale=en_US&amp;node_type=link&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=450" style="border: none; overflow: hidden; height: 20px; width: 87px; display:inline-block;vertical-align:top;padding-top:23px;"></iframe>
-  
+ <?php 
+if($lang == "de"){
+echo  '<div data-type="xing/share" data-counter="right"></div>
+<script>
+  ;(function (d, s) {
+    var x = d.createElement(s),
+      s = d.getElementsByTagName(s)[0];
+      x.src = "https://www.xing-share.com/plugins/share.js";
+      s.parentNode.insertBefore(x, s);
+  })(document, "script");
+</script>
+
+
+<!-- FÃ¼gen Sie dieses Tag in den head-Abschnitt oder direkt vor dem schlieÃŸenden body-Tag ein. -->
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: "de"}
+</script>
+
+<!-- FÃ¼gen Sie dieses Tag an der Stelle ein, an der die Teilen-SchaltflÃ¤che erscheinen soll. -->
+<div class="g-plus" data-action="share" data-annotation="bubble"></div>
+';
+}
+?> 
 </div>
 
 <div class="footerblock">

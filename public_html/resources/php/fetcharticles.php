@@ -27,10 +27,11 @@ $datestart = $_POST['datestart'];
 $model = $_POST['model'];
 if($category == "review"){
 	$cattype="review";
-	$category = '(categories LIKE "%Story%" OR categories LIKE "%Customer Review%" OR categories LIKE "%Press Review%") AND products = "' . $model . ';" ';
+	$category = '(categories LIKE "%Story%" OR categories LIKE "%Customer Review%" OR categories LIKE "%Press Review%") AND products LIKE "%' . $model . ';%" ';
 }
 else{$category = 'categories LIKE "%'. $_POST['category'] .'%"';}
-$result = mysqli_query($connection,'SELECT title, body, teaser, postdate, id, Rating, categories FROM articles WHERE ' . $category . ' AND lang="' . $lang . '" AND (postdate <= CURDATE() OR postdate is null) ORDER BY postdate DESC, date DESC LIMIT ' . $limit);
+$sql = 'SELECT title, body, teaser, postdate, id, Rating, categories FROM articles WHERE ' . $category . ' AND lang="' . $lang . '" AND (postdate <= CURDATE() OR postdate is null) ORDER BY postdate DESC, date DESC LIMIT ' . $limit;
+$result = mysqli_query($connection,$sql);
 while($row = mysqli_fetch_array($result))
 {
 if($category != "event" AND $cattype != "review"){$dateText = '<h6 style="color:black">' . date("F d, Y",strtotime($row[3])) . '</h6>';}

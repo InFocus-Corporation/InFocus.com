@@ -6,13 +6,44 @@ require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
 require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/langchk.php");
 require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/transfunc.php");
 
+$contactTables = '<table class="contact-table">
+<tr><th colspan="2">'. translate('US &amp; Canada') . '</th></tr>
+<tr><td>' . translate('Mon-Fri') . ',</td><td> ' . translate('6am - 5pm PST') . '</tr>
+<tr><td colspan="2">877-388-8360</td></tr>
+</table>
+
+<table class="contact-table">
+<tr><th colspan="2">' . translate('Asia-Pacific Region') . '</th></tr>
+<tr><td>' . translate('Mon-Fri') . ':</td><td>' . translate('9am -5pm Local Time') . '</tr>
+<tr><td>' . translate('Singapore') . '<td>+65 6506-3196</td></tr>
+<tr><td>' . translate('Australia') . '<td>1300-290-922</td></tr>
+<tr><td>' . translate('China') . '<td>800-888-9288</td></tr>
+</table>
+
+<table class="contact-table">
+<tr><th colspan="2">' . translate('Europe, Middle-East &amp; Africa') . '</th></tr>
+<tr><td>Mon-Fri:</td><td>' . translate('08:00 - 17:00 local time') . '</tr>
+<tr><td>' . translate('France') . '<td>0800 905-993</td></tr>
+<tr><td>' . translate('Germany') . '<td>0800 181-3649</td></tr>
+<tr><td>' . translate('Italy') . '<td>0800 877-238</td></tr>
+<tr><td>' . translate('Spain') . '<td>+34 902 366 592</td></tr>
+<tr><td>' . translate('Sweden') . '<td>020-791251</td></tr>
+<tr><td>' . translate('UK') . '<td>0800 028-6470</td></tr>
+<tr><td>' . translate('Other') . '<td>008000 463-6287</td></tr>
+</table>';
+
+$countryList = array('AF' => 'Afghanestan','SA' => 'Al Arabiyah as Suudiyah','BH' => 'Al Bahrayn','AE' => 'Al Imarat al Arabiyah al Muttahidah','IQ' => 'Al Iraq','DZ' => 'Al Jaza\'ir','KW' => 'Al Kuwayt','MA' => 'Al Maghrib','JO' => 'Al Urdun','YE' => 'Al Yaman','AD' => 'Andorra','AO' => 'Angola','AG' => 'Antigua and Barbuda','AR' => 'Argentina','SD' => 'As-Sudan','AU' => 'Australia','AZ' => 'Azarbaycan Respublikasi','BD' => 'Bangladesh','BB' => 'Barbados','PW' => 'Belau','BE' => 'Belgique (French) or Belgie (Flemish)','BZ' => 'Belice','BJ' => 'Benin','BO' => 'Bolivia','BA' => 'Bosna i Hercegovina','BW' => 'Botswana','BR' => 'Brasil','BF' => 'Burkina Faso','BI' => 'Burundi','BY' => 'Byelarus','CV' => 'Cabo Verde','CM' => 'Cameroon or Cameroun (French)','CA' => 'Canada','CZ' => 'Ceska Republika','CL' => 'Chile','KR' => 'Choson or Choson-minjujuui-inmin-konghwaguk','CO' => 'Colombia','KM' => 'Comores','CR' => 'Costa Rica','CI' => 'Cote d\'Ivoire','CU' => 'Cuba','DK' => 'Danmark','DE' => 'Deutschland','MV' => 'Dhivehi Raajje','DJ' => 'Djibouti','DM' => 'Dominica','BT' => 'Drukyul','EC' => 'Ecuador','EE' => 'Eesti','SV' => 'El Salvador','GR' => 'Ellas','ER' => 'Ertra','ES' => 'Espana','FM' => 'Federated States of Micronesia','FJ' => 'Fiji','FR' => 'France or Republique Francaise','GA' => 'Gabon','GH' => 'Ghana','GD' => 'Grenada','GT' => 'Guatemala','GQ' => 'Guinea Ecuatorial','GW' => 'Guine-Bissau','GN' => 'Guinee','GY' => 'Guyana','HT' => 'Haiti','AM' => 'Hayastan','HN' => 'Honduras','HR' => 'Hrvatska','IN' => 'India, Bharat','ID' => 'Indonesia','IR' => 'Iran, Persia','IE' => 'Ireland or Eire','IS' => 'Island','IT' => 'Italia','JM' => 'Jamaica','TJ' => 'Jumhurii Tojikistan','KH' => 'Kampuchea','KE' => 'Kenya','KI' => 'Kiribati','CY' => 'Kypros (Greek) or Kibris (Turkish)','KG' => 'Kyrgyz Respublikasy','LV' => 'Latvija','LS' => 'Lesotho','LR' => 'Liberia','LY' => 'Libya','LI' => 'Liechtenstein','LT' => 'Lietuva','LB' => 'Lubnan','LU' => 'Luxembourg','MG' => 'Madagascar','HU' => 'Magyarorszag','MK' => 'Makedonija','MW' => 'Malawi','MY' => 'Malaysia','ML' => 'Mali','MT' => 'Malta','MH' => 'Marshall Islands','MU' => 'Mauritius','MX' => 'Mexico','EG' => 'Misr','MZ' => 'Mocambique','MD' => 'Moldova','MC' => 'Monaco','MN' => 'Mongol Uls','TH' => 'Muang Thai','MR' => 'Muritaniyah','MM' => 'Myanma Naingngandaw','NA' => 'Namibia','NR' => 'Nauru','NL' => 'Nederland','NP' => 'Nepal','NZ' => 'New Zealand','NI' => 'Nicaragua','NE' => 'Niger','NG' => 'Nigeria','JP' => 'Nippon','NO' => 'Norge','AT' => 'Oesterreich','PK' => 'Pakistan','PA' => 'Panama','PG' => 'Papua New Guinea','PY' => 'Paraguay','PE' => 'Peru','PH' => 'Pilipinas','PL' => 'Polska','PT' => 'Portugal','QA' => 'Qatar','KZ' => 'Qazaqstan','DO' => 'Republica Dominicana','BG' => 'Republika Bulgariya','CF' => 'Republique Centrafricaine','CD' => 'Republique Democratique du Congo','CG' => 'Republique du Congo','RO' => 'Romania','RU' => 'Rossiya','RW' => 'Rwanda','KN' => 'Saint Kitts and Nevis','LC' => 'Saint Lucia','GE' => 'Sak\'art\'velo','WS' => 'Samoa','SM' => 'San Marino','VA' => 'Santa Sede (Citta del Vaticano)','ST' => 'Sao Tome e Principe','LA' => 'Sathalanalat Paxathipatai Paxaxon Lao','CH' => 'Schweiz (German), Suisse (French), Svizzera (Italian)','SN' => 'Senegal','SC' => 'Seychelles','AL' => 'Shqiperia','SL' => 'Sierra Leone','SG' => 'Singapore','SI' => 'Slovenija','SK' => 'Slovensko','SB' => 'Solomon Islands','SO' => 'Somalia','ZA' => 'South Africa','RS' => 'Srbija-Crna Gora','LK' => 'Sri Lanka','FI' => 'Suomi','SR' => 'Suriname','SY' => 'Suriyah','SE' => 'Sverige','SZ' => 'Swaziland','KP' => 'Taehan-min\'guk','TW' => 'T\'ai-wan','TZ' => 'Tanzania','TD' => 'Tchad','BS' => 'The Bahamas','GM' => 'The Gambia','TG' => 'Togo','TO' => 'Tonga','TT' => 'Trinidad and Tobago','TN' => 'Tunis','TR' => 'Turkiye','TM' => 'Turkmenistan','TV' => 'Tuvalu','UG' => 'Uganda','UA' => 'Ukrayina','OM' => 'Uman','GB' => 'United Kingdom','US' => 'United States','UY' => 'Uruguay','UZ' => 'Uzbekiston Respublikasi','VU' => 'Vanuatu','VE' => 'Venezuela','VN' => 'Viet Nam','ET' => 'YeItyop\'iya','IL' => 'Yisra\'el','ZM' => 'Zambia','CN' => 'Zhong Guo','ZW' => 'Zimbabwe');
+$displayedCountries = array('AF','SA','BH','AE','IQ','DZ','KW','MA','JO','YE','AD','AO','AG','AR','SD','AU','AZ','BD','BB','PW','BE','BZ','BJ','BO','BA','BW','BR','BF','BI','BY','CV','CM','CA','CZ','CL','KR','CO','KM','CR','CI','CU','DK','DE','MV','DJ','DM','BT','EC','EE','SV','GR','ER','ES','FM','FJ','FR','GA','GH','GD','GT','GQ','GW','GN','GY','HT','AM','HN','HR','IN','ID','IR','IE','IS','IT','JM','TJ','KH','KE','KI','CY','KG','LV','LS','LR','LY','LI','LT','LB','LU','MG','HU','MK','MW','MY','ML','MT','MH','MU','MX','EG','MZ','MD','MC','MN','TH','MR','MM','NA','NR','NL','NP','NZ','NI','NE','NG','JP','NO','AT','PK','PA','PG','PY','PE','PH','PL','PT','QA','KZ','DO','BG','CF','CD','CG','RO','RU','RW','KN','LC','GE','WS','SM','VA','ST','LA','CH','SN','SC','AL','SL','SG','SI','SK','SB','SO','ZA','RS','LK','FI','SR','SY','SE','SZ','KP','TW','TZ','TD','BS','GM','TG','TO','TT','TN','TR','TM','TV','UG','UA','OM','GB','US','UY','UZ','VU','VE','VN','ET','IL','ZM','CN','ZW');
+$emeaCountries=array("AF", "AL", "DZ", "AD", "AO", "AQ", "AM", "AT", "AZ", "BH", "BY", "BE", "BJ", "BM", "BA", "BW", "BV", "IO", "BG", "BF", "BI", "CM", "CV", "CF", "TD", "CX", "CC", "KM", "CG", "CK", "CI", "HR", "CY", "CZ", "DK", "DJ", "EG", "GQ", "ER", "EE", "ET", "FK", "FO", "FI", "FR", "GF", "PF", "TF", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GN", "GW", "HM", "HU", "IS", "IR", "IQ", "IE", "IL", "IT", "JO", "KZ", "KE", "KI", "KW", "KG", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MK", "MG", "MW", "MV", "ML", "MT", "MR", "MU", "YT", "MD", "MC", "MN", "MA", "MZ", "MM", "NA", "NR", "NL", "AN", "NC", "NE", "NG", "NU", "NF", "MP", "NO", "OM", "PG", "PY", "PL", "PT", "QA", "RE", "RO", "RU", "RW", "KN", "LC", "VC", "SM", "ST", "SA", "SN", "SC", "SL", "SK", "SI", "SB", "SO", "ZA", "GS", "ES", "SD", "SR", "SJ", "SZ", "SE", "CH", "SY", "TJ", "TZ", "TG", "TO", "TN", "TR", "TM", "TC", "UA", "AE", "UK", "UZ", "EH", "YE", "ZM", "ZW", "GB");
+$apacCountries=array("AS", "AI", "AG", "AR", "AW", "MO", "TW", "AU", "BD", "BT", "BN", "KH", "FJ", "IN", "JP", "KP", "KR", "LA", "FM", "NP", "NZ", "PK", "PW", "PN", "SG", "TH", "TP", "TK", "VN","CN");
+$stateList = array('AB' => 'Alberta ','AK' => 'ALASKA','AL' => 'ALABAMA','AR' => 'ARKANSAS','AS' => 'AMERICAN SAMOA','AZ' => 'ARIZONA','BC' => 'British Columbia','CA' => 'CALIFORNIA','CO' => 'COLORADO','CT' => 'CONNECTICUT','DC' => 'WASHINGTON, DC','DE' => 'DELAWARE','FL' => 'FLORIDA','FM' => 'FEDERATED STATES OF MICRONESIA','GA' => 'GEORGIA','GU' => 'GUAM','HI' => 'HAWAII','IA' => 'IOWA','ID' => 'IDAHO','IL' => 'ILLINOIS','IN' => 'INDIANA','KS' => 'KANSAS','KY' => 'KENTUCKY','LA' => 'LOUISIANA','MA' => 'MASSACHUSETTS','MB' => 'Manitoba ','MD' => 'MARYLAND','ME' => 'MAINE','MH' => 'MARSHALL ISLANDS','MI' => 'MICHIGAN','MN' => 'MINNESOTA','MO' => 'MISSOURI','MP' => 'NORTHERN MARIANA ISLANDS','MS' => 'MISSISSIPPI','MT' => 'MONTANA','NB' => 'New Brunswick','NC' => 'NORTH CAROLINA','ND' => 'NORTH DAKOTA','NE' => 'NEBRASKA','NF' => 'Newfoundland ','NH' => 'NEW HAMPSHIRE','NJ' => 'NEW JERSEY','NM' => 'NEW MEXICO','NS' => 'Nova Scotia','NT' => 'Northwest Territories','NV' => 'NEVADA','NY' => 'NEW YORK','OH' => 'OHIO','OK' => 'OKLAHOMA','ON' => 'Ontario ','OR' => 'OREGON','PA' => 'PENNSYLVANIA','PE' => 'Prince Edward Island','PR' => 'PUERTO RICO','PW' => 'PALAU','QC' => 'Quebec','RI' => 'RHODE ISLAND','SC' => 'SOUTH CAROLINA','SD' => 'SOUTH DAKOTA','SK' => 'Saskatchewan','TN' => 'TENNESSEE','TX' => 'TEXAS','UT' => 'UTAH','VA' => 'VIRGINIA','VI' => 'VIRGIN ISLANDS','VT' => 'VERMONT','WA' => 'WASHINGTON','WI' => 'WISCONSIN','WV' => 'WEST VIRGINIA','WY' => 'WYOMING','YT' => 'Yukon ');
+
 if(basename($_SERVER['PHP_SELF']) == "product.php" OR basename($_SERVER['PHP_SELF']) == "family.php" OR basename($_SERVER['PHP_SELF']) == "unknown.php"){
     $pn=strtoupper($_GET['series']);
     if(empty($pn)){$pn=strtoupper($_GET['pn']);}
     if(empty($pn)){$pn=strtoupper($_SERVER['QUERY_STRING']);}
 
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/OOPproducts.php");
-
     $product = new IFCSeries($pn);
     $overview = $product->overview();
 if($product->isSeries){
@@ -49,41 +80,7 @@ $productLinks = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/reso
 
 
 ?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="<?= $lang; ?>" dir="ltr" class="wf-pragmaticawebcondensed-n3-active wf-pragmaticawebcondensed-n4-active wf-pragmaticawebcondensed-n9-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta charset="UTF-8">
-<link rel="icon" href="/favicon.png" type="image/gif" sizes="32x32">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-<script type="text/javascript" src="//use.typekit.net/lbn0ick.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-<script type="text/Javascript" src="/resources/js/InFocusCollection.js"></script>
-<script type="text/Javascript" src="/resources/js/jquery.colorbox.js"></script>
-<link rel="stylesheet" href="/resources/css/colorbox.css" />
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<link rel="stylesheet" href="/resources/css/core.css" />
-<?php if($lang != "en"){echo '<link rel="stylesheet" href="/resources/css/Non-en.css" />'; }?>
-<link rel="stylesheet" href="/resources/css/flexnav.css" />
-<script type="text/Javascript" src="/resources/js/jquery.hoverIntent.min.js"></script>
-<script type="text/Javascript" src="/resources/js/jquery.flexnav.min.js"></script>
-<script src="/resources/js/jquery.fitvids.js"></script>
-<!--[if IE]>
-    <link href="/resources/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <![endif]-->
-  
-<!-- Start Visual Website Optimizer Asynchronous Code -->
-<script type='text/javascript'>
-var _vwo_code=(function(){
-var account_id=19382,
-settings_tolerance=2000,
-library_tolerance=2500,
-use_existing_jquery=false,
-// DO NOT EDIT BELOW THIS LINE
-f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
-</script>
-<!-- End Visual Website Optimizer Asynchronous Code -->
+
 
 <?php 
  if(substr($_SERVER['HTTP_REFERER'],11,7) != "infocus" AND preg_match('/(?i)msie [2-8]/',$_SERVER['HTTP_USER_AGENT']) AND strpos($_SERVER['HTTP_USER_AGENT'], 'Trident/7.0') == false){
@@ -110,8 +107,5 @@ die();
 }
 
 ?>
-  <script>
-window.onbeforeunload = function () {
-$(".flexnav").flexNav();
-}  
-  </script>
+
+

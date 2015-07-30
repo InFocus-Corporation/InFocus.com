@@ -1,5 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
+require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 $priceBuyNow = $product->priceBuyNow($product->pn);
 ?>
 <?=$product->canonical ?>
@@ -44,7 +45,7 @@ $priceBuyNow = $product->priceBuyNow($product->pn);
 	<?php include($homedir . "/resources/html/mainmenu.html"); //insert menu?>
 	<div class="content">
 		<div id="family" class="C9">
-			<div class="breadcrumb"><?=$product->breadcrumb ?></div>
+			<div class="breadcrumb"><ol itemscope itemtype="https://schema.org/BreadcrumbList"><?=$product->breadcrumb ?></ol></div>
 			<div class="productheader C10 Col_child C4x6_child">
 			<div><h1 class="mysqledit h2" id="pagetitle" style=""  ><?=$product->productText['title'] ?></h1></div>
 			<div>

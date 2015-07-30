@@ -1,5 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
+require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 
 if($_GET['edit']=="true" OR $_COOKIE["cmsedit"] == "Activate Edit Mode"){CMSscript("/resources/html/education-$lang.html", "", $homedir.'/resources/html/', 'admin,salespublisher,saleseditor,marketingpublisher,marketingeditor,editor', ".src", "education", "false", "SavePage","body");}
  
