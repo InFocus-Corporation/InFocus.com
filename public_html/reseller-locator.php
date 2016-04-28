@@ -50,6 +50,7 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 		</table>
 	</div>
 </div>
+</div>
 
 				<footer id="site-info" >
 				<?php include($homedir . "/resources/html/footer.html"); ?>

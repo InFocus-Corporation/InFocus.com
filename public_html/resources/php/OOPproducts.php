@@ -36,17 +36,17 @@ class IFCSeries extends InFocus
 					FROM InFocus.productseries JOIN InFocus.producttext ON productseries.series = producttext.partnumber
 					WHERE (productseries.partnumber IN('{$producttest}','IN{$producttest}','INS-{$producttest}') OR series IN('{$producttest}','{$producttest}-Series','IN{$producttest}','IN{$producttest}-Series','INS-{$producttest}','INS-{$producttest}-Series') ) LIMIT 1) AS ss 
 			ON ss.series = productseries.series ) AS s 
-		ON s.partnumber = producttext.partnumber AND s.`lang` = producttext.`lang` ORDER BY partnumber desc";
+		ON s.partnumber = producttext.partnumber AND s.`lang` = producttext.`lang` and producttext.active != 86 ORDER BY partnumber desc";
 
 		$result = mysqli_query($this->conn,$sql);
 
 		if(mysqli_num_rows($result)==0){
-		$sql = "SELECT  * FROM InFocus.producttext WHERE (`lang` = '{$this->lang}') AND partnumber IN('{$producttest}','IN{$producttest}','INS-{$producttest}') ORDER BY partnumber";
+		$sql = "SELECT  * FROM InFocus.producttext WHERE (`lang` = '{$this->lang}') AND partnumber IN('{$producttest}','IN{$producttest}','INS-{$producttest}') and producttext.active != 86 ORDER BY partnumber";
 		$result = mysqli_query($this->conn,$sql);
 		}
 
 		if(mysqli_num_rows($result)==0){
-		$sql = "SELECT  * FROM InFocus.producttext WHERE (`lang` = '{$this->lang}') AND partnumber IN('{$this->pn}','IN{$this->pn}','INS-{$this->pn}') ORDER BY partnumber";
+		$sql = "SELECT  * FROM InFocus.producttext WHERE (`lang` = '{$this->lang}') AND partnumber IN('{$this->pn}','IN{$this->pn}','INS-{$this->pn}') and producttext.active != 86 ORDER BY partnumber";
 		$result = mysqli_query($this->conn,$sql);
 		$producttest = $this->pn;
 		}
@@ -203,34 +203,34 @@ class IFCSeries extends InFocus
 				$infoLink = '<span class="infolink" title="' . translate('Manufacturer\'s Suggested Retail Price (MSRP) in US Dollars. Actual price may vary by dealer and country; consult your local Authorized InFocus Reseller for details.') . '"></span>';
 	}
 		else{$priceSection = "<small class='price' style='display:none;'>";}
-		if($this->lang == 'en'){$productLinks = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/resources/misc/links"));}
+		//if($this->lang == 'en'){$productLinks = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/resources/misc/links"));}
 
 
-		if($productLinks[strtoupper($model)] != null){
+		//if($productLinks[strtoupper($model)] != null){
 			if($this->modelActive[$model] != 2){
-				$modelLink = $productLinks[strtoupper($model)];
-				$infoLink = '<span class="infolink" title="Price displayed in US Dollars from InFocusStore.com, may vary elsewhere, and is valid only in the US."></span>';
+				$modelLink = "https://InFocusDirect.com/".strtoupper($model);
+				$infoLink = '<span class="infolink" title="Price displayed in US Dollars from InFocusDirect.com, may vary elsewhere, and is valid only in the US."></span>';
 			}
 			else{
 			$modelLink ="";		
 			}
-		}
-		else{
+		//}
+		//else{
 
-			if($this->productGroup != "Accessory" AND $this->productGroup != "Peripheral"){
-			switch($this->modelActive[$model]){
-			case 6:	case 3:
-			$this->modelActive[$model] = 3; 
-			$this->productText['active'] = 3; 
-			break;
-			case 0:	case 9:	break;
-			default:
-			$this->modelActive[$model] = 2;
-			$this->productText['active'] = 2;
-			}
-			}
-			elseif($this->modelActive[$model] != 2){$modelLink = 'http://infocusstore.com/s?defaultSearchTextValue=Search&searchKeywords=' . $model . '&Action=submit';}
-			}
+			// if($this->productGroup != "Accessory" AND $this->productGroup != "Peripheral"){
+			// switch($this->modelActive[$model]){
+			// case 6:	case 3:
+			// $this->modelActive[$model] = 3; 
+			// $this->productText['active'] = 3; 
+			// break;
+			// case 0:	case 9:	break;
+			// default:
+			// $this->modelActive[$model] = 2;
+			// $this->productText['active'] = 2;
+			// }
+			// }
+			//elseif($this->modelActive[$model] != 2){$modelLink = 'http://infocusstore.com/s?defaultSearchTextValue=Search&searchKeywords=' . $model . '&Action=submit';}
+			//}
 
 			switch($this->modelActive[$model]){
 			case 1:
@@ -247,9 +247,11 @@ class IFCSeries extends InFocus
 			$modelLink = "http://outlet.infocus.com/s?defaultSearchTextValue=Search&searchKeywords={$model}+-lamp+-filter&Action=submit";
 			break;
 			}
-			$gacode = "<a class='' onclick = 'ga(\"send\",\"event\",\"button\",\"click\",\"Buy Now\")' href='{{link}}'> " . translate('Buy Now') . " <span style='font-size:70%'> (US)</span> >></a>";
+			if($this->modelActive[$model] != 0 AND $this->modelActive[$model] != null){$gacode = "<a class='' onclick = 'ga(\"send\",\"event\",\"button\",\"click\",\"Buy Now\")' href='{{link}}'> " . translate('Buy Now') . " <span style='font-size:70%'> (US)</span> >></a>";}
 			if($modelLink !=""){$priceSection .= str_replace("{{link}}", $modelLink, $gacode);}
-				$priceSection .= "</small><br><a href='{$model}' class='blue_btn' style='width:80%;'>" . translate('Learn More') . "</a>
+				$priceSection .= "</small>";
+				if($this->modelActive[$model] == 0 OR $this->modelActive[$model] == null){$priceSection .= "<small>Discontinued</small>";$gacode="";}
+				$priceSection .= "<br><a href='{$model}' class='blue_btn' style='width:80%;'>" . translate('Learn More') . "</a>
 			     </div>
 			    </li>";
 
@@ -281,6 +283,7 @@ class IFCSeries extends InFocus
 		if(in_array($this->productText['active'], array(1,5,6))){$priceSection .= str_replace("{{link}}", $modelLink, $gacode) . "</li>";}
 		if(in_array($this->productText['active'], array(4))){$priceSection .= '      <li><a onclick = "ga('. "'send','event','button','click','Buy Now'" . ')" href="http://collaborate.infocus.com/' . $pn . '" class="btn learn-more">' . translate("Buy Now") . ' <span style="font-size:70%">(US)</span></a>';}
 		if(in_array($this->productText['active'], array(9))){$priceSection .= '      <li><a href="http://outlet.infocus.com/s?defaultSearchTextValue=Search&searchKeywords=' . $pn . '+-lamp+-filter&Action=submit" class="btn learn-more">Available on Outlet Store</a>';}
+		if(in_array($this->productText['active'], array(0,null))){$priceSection .= '      <li>Discontinued';}
 		$priceSection .= '</li>';
 
 		if(in_array($this->productText['active'], array(2,3,6))){$bclass='btn ';}
@@ -315,10 +318,60 @@ class IFCSeries extends InFocus
 	 }
 
 	public function models(){
-		$this->productTabs .= '<li id="modid"><a href="#models" class="active">' .  translate('Models') . '</a></li>';
+		$this->productTabs .= '<li id="modid"><a href="#models" class="active ' . $this->productGroup . '">' .  translate('Models') . '</a></li>';
 		$seriesPanels;
+		$totalCount = COUNT($this->seriesModels);
+		$minusCount = array_count_values($this->modelActive);
+		if(($totalCount-$minusCount[0]-$minusCount[null])>8 AND $this->productGroup == "Display"){
+		
+		$sql = "SELECT * FROM panel_features";
+		$panelfeatures = mysqli_query($this->conn,$sql);
+		while($row = mysqli_fetch_assoc($panelfeatures))
+		{
+			$panelfeat[$row['partnumber']]=$row;
+		}
+		$seriesPanels = '<div class="tableWrap">     
+	<div class="C3_tag">
+		<div class="navWrap">     
+			<h4 class="checkCon">JTouch Models</h4>
+			<small style="position: relative;top: -1em;">Narrow your search</small>
+			<div class="checkCon tags-container tagsort-tags-container"></div>
+		</div>
+	</div>
+	<div class="C7_tag">
+		<div class="infocusTable">
+		<table class="rwd-table-large">
+			<thead>
+				<tr>
+					<th>Size</th>
+					<th>Part #</th>
+					<th>Features</th>
+					<th>Availability</th>
+					<th>Price (US)</th>    
+					<th>Learn / Buy</th>
+				</tr>
+			</thead>
+			<tbody>';
 		foreach($this->seriesModels as $model){
-			if(($this->modelActive[$model] != 0 AND $this->modelActive[$model] != 0) OR $this->productText['active'] == 0){
+			if($this->modelActive[$model] != 0 OR $this->productText['active'] == 0){
+			$seriesPanels .=   "
+			<tr class=\"item\" data-item-id=\"1\" data-item-tags=\"{$panelfeat[$model]['categories']}\">
+<td data-label='Size'>{$panelfeat[$model]['size']}</td>
+<td data-label='Part #'><a href='$model'>$model</a></td>         
+<td data-label='Features'>{$panelfeat[$model]['features']}</td>     
+<td data-label='Availability'>{$panelfeat[$model]['availability']}</td>
+		<td data-label='Price US'>" . $this->modelPrice[$model] . "<span class='infolink' title='Price displayed in US Dollars from InFocusDirect.com, may vary elsewhere, and is valid only in the US.'></span></td>            
+<td class='buyLearn' data-label='Buy/Learn'><a href='$model'>Learn More</a><br>";
+if(in_array($this->modelActive[$model],array(1,4,5,7,9))){$seriesPanels .=   "<a class='buyNow'href='https://infocusdirect.com/$model'>Buy Now</a>";}
+$seriesPanels .=   "</td>  
+</tr>";    
+			}  
+		}
+		$seriesPanels .= "</table></div></div>";
+		}
+		else{
+		foreach($this->seriesModels as $model){
+			if($this->modelActive[$model] != 0 OR $this->productText['active'] == 0){
 				$thumb = imagethumb($model,'135');
 				$displayModel = $model;
 				$specList = str_replace('<ul>','<ul class="spec-list">', $this->modelsDiff[$model]);
@@ -332,6 +385,8 @@ class IFCSeries extends InFocus
 				$seriesPanels .= $this->priceBuyNow($model,true);
 			}
 		}
+		}
+		
 		return $seriesPanels;
 	 }
 
@@ -403,9 +458,15 @@ class IFCSeries extends InFocus
 	 }
 
 	public function videos(){
-		$sql = 'SELECT Summary, title, body, vidid, about, industry FROM videos WHERE';
-		if($this->series != null and $this->series !=''){$sql .= ' about LIKE "%' . rtrim($this->series,"-Series") . '%" OR ';}
-		 $sql .= ' about LIKE "%' . implode('%" OR about LIKE "%',$this->seriesModels) . '%" ORDER BY rank , postdate DESC ';
+		$sql = 'SELECT Summary, title, body, vidid, about, industry FROM videos WHERE lang = "'.$this->lang.'" AND';
+		if($this->isSeries){
+			$sql .= ' about LIKE "%' . rtrim($this->series,"-Series") . '%" OR ';
+			$sql .= ' about LIKE "%' . implode('%" OR about LIKE "%',$this->seriesModels) . '%"';
+		}
+		else{
+			$sql .= ' about LIKE "%' . $this->pn . '%" ';
+		}
+		$sql .= ' ORDER BY rank , postdate DESC ';
 		$result = mysqli_query($this->conn,$sql);
 		if($result === false){error_log($sql);}
 		if(mysqli_num_rows($result)>0){
@@ -419,7 +480,7 @@ class IFCSeries extends InFocus
 		$videoHTML .= "<div class='video' style='padding-bottom:30px'>
 		          <h3 id='videoheader'>{$row['title']}</h3>
 		   <p id='videosummary'>{$row['Summary']}</p>
-		   <iframe id='main-video' src='//www.youtube.com/embed/{$row['vidid']}?vq=hd720' style='width:100%;height:600px' frameborder='0' allowfullscreen ></iframe></div>";
+		   <iframe id='main-video' src='//www.youtube.com/embed/{$row['vidid']}?vq=hd720&rel=0&modestbranding=1' style='width:100%;height:600px' frameborder='0' allowfullscreen ></iframe></div>";
 		   $allvid = "<div  >
 		    <ul class='resultsList'>";
 		 $x=1;
@@ -478,7 +539,7 @@ class IFCSeries extends InFocus
 		}
 		}
 		}
-		$standardpics = array("-Back.jpg","-Front.jpg","-Side.jpg","-Top.jpg","-Right.jpg","-Left.jpg");
+		$standardpics = array("-Back.jpg","-Front.jpg","-Side.jpg","-Top.jpg","-Right.jpg","-Left.jpg","-Bottom.jpg");
 		foreach($standardpics AS $imgend){
 		if(file_exists($_SERVER['DOCUMENT_ROOT'] . "/resources/images/InFocus-" . strtoupper($this->pn) . $imgend )){
 		$allthumbs .=   '<a class="group1" href="' . imagethumb("InFocus-" . strtoupper($this->pn) . $imgend,'800') . '" title="InFocus ' . strtoupper($this->pn) . ' (' . substr($imgend,1,-4) .')"><img class="thumb" src="' . imagethumb("InFocus-" . strtoupper($this->pn) . $imgend,'','70') . '"></a>
@@ -494,7 +555,7 @@ class IFCSeries extends InFocus
 	 }
 
 	public function accessories(){ 
-		if($this->productGroup == "Peripheral" OR $this->productGroup == "Accessory"){return;}
+		if($this->productGroup == "Accessory"){return;}
 		$sql = 'SELECT title, acc_matrix.accessorypn, producttext.partnumber, acc_matrix.rank, producttext.productgroup
 		FROM acc_matrix LEFT JOIN producttext ON (producttext.partnumber = acc_matrix.accessorypn) WHERE producttext.lang = "'. $this->lang . '" AND acc_matrix.productpn = "' . $this->pn . '" ORDER BY acc_matrix.rank, acc_matrix.accessorypn';
 		return $this->subProdList("Accessories",$sql);
@@ -525,7 +586,7 @@ class IFCSeries extends InFocus
 	 }
 
 	public function downloads(){
-		$languagelist = array('AA'  => 'Afár af','AF'  => 'Afrikaans','AK'  => 'Akan','AM'  => 'ኣማርኛ (amarəñña)','AN'  => 'Fabla / l\'Aragonés','AR'  => '(al arabiya) العربية','AS'  => 'অসমীয়া (asamīẏa)','AY'  => 'Aymar aru','AZ'  => 'Azərbaycan dili / Азәрбајҹан дили / آذربايجانجا ديلي','BA'  => 'башҡорт теле (bašḵort tele)','BE'  => 'Беларуская мова (Bielaruskaja mova)','BG'  => 'български (bãlgarski) български език (bãlgarski ezik)','BM'  => 'Bamanankan','BN'  => 'বাংলা (baɛṅlā)','BO'  => 'བོད་སྐད་ (pö-gay)','BR'  => 'Ar brezhoneg / brezhoneg','BS'  => 'Bosanski / босански / بۉسانسقى','CE'  => 'Нохчийн мотт (Noxchiin mott)','CH'  => '中文 (zhōngwén)','CO'  => 'Aorsu','CR'  => 'ᓀᐦᐃᔭᐍᐏᐣ (Nēhiyawēwin) ᓀᐦᐃᔭᐤ (Nēhiyaw)','CS'  => 'čeština / český jazyk','CY'  => 'Cymraeg / Y Gymraeg','DA'  => 'Dansk','DE'  => 'Deutsch','EE'  => 'Eʋegbe','EO'  => 'Esperanto','ET'  => 'Eesti keel','EU'  => 'Europe English','FA'  => '(fārsī) فارسى','FI'  => 'Suomi / suomen kieli','FJ'  => 'Vakaviti','FO'  => 'Føroyskt','FR'  => 'Français','GL'  => 'Galego','GN'  => 'Avañe\'ẽ','GU'  => 'ગુજરાતી (gujarātī)','GV'  => 'Gaelg/Gailck (Vanninagh) / Yn Ghaelg / Y Ghailck','HA'  => '(ḥawsa) حَوْسَ','HE'  => '(ivrit) עברית / עִבְרִית','HI'  => 'हिन्दी (hindī)','HR'  => 'Hrvatski','HU'  => 'Magyar / magyar nyelv','HY'  => 'Հայերէն (Hayeren)','HZ'  => 'Otjiherero','ID'  => 'Bahasa Indonesia','IG'  => 'Igbo','IS'  => 'Íslenska','IT'  => 'Italiano ','IU'  => 'ᐃᓄᒃᑎᑐᑦ (inuktitut)','JA'  => '日本語 (nihongo)','JV'  => 'Basa Jawa','KA'  => 'ქართული (kʻartʻuli) ქართული ენა (kʻartʻuli ena)','KG'  => 'Kikongo','KK'  => 'Қазақ тілі / Qazaq tili / قازاق ٴتىلى','KN'  => 'ಕನ್ನಡ (kannaḍa)','KO'  => '한국어 [韓國語] (han-guk-eo)','KR'  => 'Kanuri','KS'  => 'कॉशुर / كٲشُر','KU'  => 'Kurdí / کوردی / к’öрди','KV'  => 'коми кыв (komi kyv)','KW'  => 'Kernewek / Kernowek / Kernuak / Curnoack','LA'  => 'Lingua Latina','LG'  => 'LùGáànda','LN'  => 'lingála','LO'  => 'ພາສາລາວ (pháasaa láo)','LT'  => 'Lietuvių kalba','LV'  => 'Latviešu valoda','MG'  => 'Fiteny Malagasy','MH'  => 'Kajin M̧ajeļ / Kajin Majōl','MK'  => 'македонски (Makedonski) македонски јазик (makedonski jazik)','ML'  => 'മലയാളം (malayāḷam)','MN'  => 'монгол (mongol) монгол хэл (mongol hêl)','MR'  => 'मराठी (marāṭhī)','MS'  => 'Bahasa melayu','MT'  => 'Malti','MY'  => 'Bama saka','NA'  => 'Ekakairũ Naoero','NE'  => 'नेपाली (nēpālī)','NO'  => 'Norsk','OM'  => 'Afaan Oromo','OR'  => 'ଓଡ଼ିଆ (ōṛiyā)','PI'  => 'पालि (pāli)','PL'  => 'Polski / język polski / polszczyzna','PT'  => 'Português','QU'  => 'Qhichwa','RM'  => 'Rumantsch','RU'  => 'Русский язык (Russkij jazyk)','RW'  => 'Ikinyarwanda','SA'  => 'संस्कृतम् (saṃskṛtam) संस्कृता भाषा (saṃskṛtā bhāṣā)','SC'  => 'Limba Sarda / sardu','SD'  => '(sindhī) سنڌي','SG'  => 'Yângâ tî Sängö','SK'  => 'Slovenčina','SL'  => 'Slovenščina','SM'  => 'Gagana Samoa','SN'  => 'ChiShona','SO'  => 'Af Soomaali','SQ'  => 'Shqip / gjuha shqipe','SQ'  => 'Shqip / gjuha shqipe','SR'  => 'Cрпски (srpski) српски језик (srpski jezik)','SS'  => 'SiSwati','SU'  => 'Basa Sunda','SV'  => 'Svenska','SW'  => 'Kiswahili','TA'  => 'தமிழ் (tamiḻ)','TE'  => 'తెలుగు (telugu)','TG'  => 'тоҷики / toçikī / تاجيكي','TH'  => 'ภาษาไทย (paasaa-tai)','TI'  => 'ትግርኛ (təgərəña)','TK'  => 'түркmенче (türkmençe) түркмен дили (türkmen dili)','TL'  => 'Tagalog','TN'  => 'Setswana','TR'  => 'Türkçe','TS'  => 'XiTsonga','TT'  => 'татарча / tatar tele / تاتارچا (tatarça)','TW'  => 'Twi','TY'  => 'Te reo tahiti / te reo Māʼohi','UK'  => 'Українська (Ukrajins\'ka)','UR'  => '(urdū) اردو','UZ'  => 'أۇزبېك ﺗﻴﻠی o\'zbek tili ўзбек тили (o‘zbek tili)','VE'  => 'TshiVenḓa','VI'  => 'Tiếng việt (㗂越)','VT'  => 'Tiếng việt (㗂越)','WA'  => 'Talon','WO'  => 'Wollof','XH'  => 'IsiXhosa','YI'  => '(Yidish) ײִדיש','YO'  => 'Yorùbá','ZH'  => '中文 (zhōngwén)','ZU'  => 'IsiZulu','EN'  => 'English','ES'  => 'Español','SP'  => 'Español','NL'  => 'Nederlands','ZHS'  => '中文 (zhōngwén)','ZHT'  => '中文 (zhōngwén)');
+		$languagelist = array('AA'  => 'Afár af','AF'  => 'Afrikaans','AK'  => 'Akan','AM'  => 'ኣማርኛ (amarəñña)','AN'  => 'Fabla / l\'Aragonés','AR'  => '(al arabiya) العربية','AS'  => 'অসমীয়া (asamīẏa)','AY'  => 'Aymar aru','AZ'  => 'Azərbaycan dili / Азәрбајҹан дили / آذربايجانجا ديلي','BA'  => 'башҡорт теле (bašḵort tele)','BE'  => 'Беларуская мова (Bielaruskaja mova)','BG'  => 'български (bãlgarski) български език (bãlgarski ezik)','BM'  => 'Bamanankan','BN'  => 'বাংলা (baɛṅlā)','BO'  => 'བོད་སྐད་ (pö-gay)','BR'  => 'Ar brezhoneg / brezhoneg','BS'  => 'Bosanski / босански / بۉسانسقى','CE'  => 'Нохчийн мотт (Noxchiin mott)','CH'  => '中文 (zhōngwén)','CO'  => 'Aorsu','CR'  => 'ᓀᐦᐃᔭᐍᐏᐣ (Nēhiyawēwin) ᓀᐦᐃᔭᐤ (Nēhiyaw)','CS'  => 'čeština / český jazyk','CY'  => 'Cymraeg / Y Gymraeg','DA'  => 'Dansk','DE'  => 'Deutsch','EE'  => 'Eʋegbe','EO'  => 'Esperanto','ET'  => 'Eesti keel','EU'  => 'Europe English','FA'  => '(fārsī) فارسى','FI'  => 'Suomi / suomen kieli','FJ'  => 'Vakaviti','FO'  => 'Føroyskt','FR'  => 'Français','GL'  => 'Galego','GN'  => 'Avañe\'ẽ','GU'  => 'ગુજરાતી (gujarātī)','GV'  => 'Gaelg/Gailck (Vanninagh) / Yn Ghaelg / Y Ghailck','HA'  => '(ḥawsa) حَوْسَ','HE'  => '(ivrit) עברית / עִבְרִית','HI'  => 'हिन्दी (hindī)','HR'  => 'Hrvatski','HU'  => 'Magyar / magyar nyelv','HY'  => 'Հայերէն (Hayeren)','HZ'  => 'Otjiherero','ID'  => 'Bahasa Indonesia','IG'  => 'Igbo','IS'  => 'Íslenska','IT'  => 'Italiano ','IU'  => 'ᐃᓄᒃᑎᑐᑦ (inuktitut)','JA'  => '日本語 (nihongo)','JV'  => 'Basa Jawa','KA'  => 'ქართული (kʻartʻuli) ქართული ენა (kʻartʻuli ena)','KG'  => 'Kikongo','KK'  => 'Қазақ тілі / Qazaq tili / قازاق ٴتىلى','KN'  => 'ಕನ್ನಡ (kannaḍa)','KO'  => '한국어 [韓國語] (han-guk-eo)','KR'  => 'Kanuri','KS'  => 'कॉशुर / كٲشُر','KU'  => 'Kurdí / کوردی / к’öрди','KV'  => 'коми кыв (komi kyv)','KW'  => 'Kernewek / Kernowek / Kernuak / Curnoack','LA'  => 'Espanol Latina','LG'  => 'LùGáànda','LN'  => 'lingála','LO'  => 'ພາສາລາວ (pháasaa láo)','LT'  => 'Lietuvių kalba','LV'  => 'Latviešu valoda','MG'  => 'Fiteny Malagasy','MH'  => 'Kajin M̧ajeļ / Kajin Majōl','MK'  => 'македонски (Makedonski) македонски јазик (makedonski jazik)','ML'  => 'മലയാളം (malayāḷam)','MN'  => 'монгол (mongol) монгол хэл (mongol hêl)','MR'  => 'मराठी (marāṭhī)','MS'  => 'Bahasa melayu','MT'  => 'Malti','MY'  => 'Bama saka','NA'  => 'Ekakairũ Naoero','NE'  => 'नेपाली (nēpālī)','NO'  => 'Norsk','OM'  => 'Afaan Oromo','OR'  => 'ଓଡ଼ିଆ (ōṛiyā)','PI'  => 'पालि (pāli)','PL'  => 'Polski / język polski / polszczyzna','PT'  => 'Português','QU'  => 'Qhichwa','RM'  => 'Rumantsch','RU'  => 'Русский язык (Russkij jazyk)','RW'  => 'Ikinyarwanda','SA'  => 'संस्कृतम् (saṃskṛtam) संस्कृता भाषा (saṃskṛtā bhāṣā)','SC'  => 'Limba Sarda / sardu','SD'  => '(sindhī) سنڌي','SG'  => 'Yângâ tî Sängö','SK'  => 'Slovenčina','SL'  => 'Slovenščina','SM'  => 'Gagana Samoa','SN'  => 'ChiShona','SO'  => 'Af Soomaali','SQ'  => 'Shqip / gjuha shqipe','SQ'  => 'Shqip / gjuha shqipe','SR'  => 'Cрпски (srpski) српски језик (srpski jezik)','SS'  => 'SiSwati','SU'  => 'Basa Sunda','SV'  => 'Svenska','SW'  => 'Kiswahili','TA'  => 'தமிழ் (tamiḻ)','TE'  => 'తెలుగు (telugu)','TG'  => 'тоҷики / toçikī / تاجيكي','TH'  => 'ภาษาไทย (paasaa-tai)','TI'  => 'ትግርኛ (təgərəña)','TK'  => 'түркmенче (türkmençe) түркмен дили (türkmen dili)','TL'  => 'Tagalog','TN'  => 'Setswana','TR'  => 'Türkçe','TS'  => 'XiTsonga','TT'  => 'татарча / tatar tele / تاتارچا (tatarça)','TW'  => 'Twi','TY'  => 'Te reo tahiti / te reo Māʼohi','UK'  => 'Українська (Ukrajins\'ka)','UR'  => '(urdū) اردو','UZ'  => 'أۇزبېك ﺗﻴﻠی o\'zbek tili ўзбек тили (o‘zbek tili)','VE'  => 'TshiVenḓa','VI'  => 'Tiếng việt (㗂越)','VT'  => 'Tiếng việt (㗂越)','WA'  => 'Talon','WO'  => 'Wollof','XH'  => 'IsiXhosa','YI'  => '(Yidish) ײִדיש','YO'  => 'Yorùbá','ZH'  => '中文 (zhōngwén)','ZU'  => 'IsiZulu','EN'  => 'English','ES'  => 'Español','SP'  => 'Español','NL'  => 'Nederlands','ZHS'  => '中文 (zhōngwén)','ZHT'  => '中文 (zhōngwén)');
 
 		$dlTable;
 		if($this->isSeries){

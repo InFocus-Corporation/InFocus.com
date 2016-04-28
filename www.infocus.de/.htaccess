@@ -1,5 +1,5 @@
-Options MultiViews -Indexes
-AddType application/x-httpd-php5 .php
+Options +MultiViews -Indexes
+# AddType application/x-httpd-php5 .php
 # 480 weeks (290304000)
 <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
 Header set Cache-Control "max-age=290304000, public"
@@ -26,11 +26,65 @@ ErrorDocument 404 /404.php
 
 
 <IfModule mod_rewrite.c>
+RewriteEngine On
 Options +FollowSymLinks -Indexes
-Options -Indexes
- RewriteEngine On
+#
+# stuff to let through (ignore)
+RewriteRule ^resources/css - [L,NC]
+RewriteRule ^resources/html - [L,NC]
+RewriteRule ^resources/js - [L,NC]
+RewriteRule ^resources/misc - [L,NC]
+RewriteRule ^resources/php - [L,NC]
+#
+  
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteCond %{HTTP_HOST} !^dev\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 
- RewriteRule (.*?)\s\$([0-9\.]*?)(\*)(\(us\)) $1 [NC]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^infocus(.*)$ [NC]
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^infocus(.*)$ [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^resources/documents/(.*?)-EN\.(.*)$ /resources/documents/$1.$2 [NC]
+
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^resources/documents/(.*?)[.](.*)$ /resources/documents/$1-EN.$2 [NC]
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule (.*) $1 [NC,L]
+
+RewriteRule ^resources/documents/([A-Za-z0-9-_]+)/.*/?$ /unknown.php?$1  [R=302,NC,L]
+
+
+RewriteRule  IN1118HDLC /projectors/ultra-portable/IN1110-Series/IN1118HD [R=301,NC,L]
+RewriteRule  IN1116LC /projectors/ultra-portable/IN1110-Series/IN1116 [R=301,NC,L]
+
+RewriteRule (.*?)\s\$([0-9\.]*?)(\*)(\(us\)) $1 [NC]
+RewriteRule ^([A-Za-z0-9-_/]+)\.aspx$ $1 [NC]
+RewriteRule ^([A-Za-z0-9-_/]+)EP\.aspx$ $1 [NC]
+RewriteRule ^([A-Za-z0-9-_/]+)EX\.aspx$ $1 [NC]
+ 
+RewriteRule  ^qtablet/live /resources/php/test.php [NC,L]
+RewriteRule  ^bigtouch/live /resources/php/test.php [NC,L]
+
+RewriteRule  ^realcam$ /peripherals/product.php?pn=INF-SPTZ-2 [NC,L]
+RewriteRule  ^ic2015$ http://infocus.box.com/s/m1f93uhbrorgl2tnnyzl8auniqorpbxb [NC,L]
+RewriteRule  ^mp20assets$ /mondopad20assets [NC,L]
+RewriteRule  ^contact(u)?(s)?(upport)/? /?contactus [NC,L]
+RewriteRule  ^get(-)?a(-)?quote/? /?getaquote [NC,L]
+RewriteRule  ^projector(-)?calculator/? /?projectorcalculator [NC,L]
+RewriteRule  ^request(-)?demo/? /?mpdemo [NC,L]
+RewriteRule  ^register/? /support/?register [NC,L]
+RewriteRule  ^video-communication/(.*)? /peripherals/$1 [NC,L]
+RewriteRule  ^bigconnect/download? /bcdownload [NC,L]
+RewriteRule  ^mondopad20upgrade/? /mondopad20 [R=301,NC,L]
 
  
  

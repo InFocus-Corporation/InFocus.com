@@ -4,8 +4,6 @@ Color Pallet
 Accent: #f66d26
 Primary: #006699, #1D5773, #00557F, #1BA1E2, #5CA7CC, #E1EEF4
 
-X103-EDUX3-R1
-BigTouch/InFocus_BigTouch_K12_Brochure.pdf
  */
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -684,7 +682,7 @@ margin-right:1.5em;
 .Col {display:inline-block;padding:0.5%;vertical-align:top;}
 .Col_child > li, .Col_child  > div, .Col_child  > ul {display:inline-block;padding:0.5%;margin:0 auto;}
 @media only screen and (min-width:1680px) and (max-width: 1919px) {
-.content { font-size: 130%;width:1660px;}
+.content { font-size: 130%;width:1659px;}
 }
 @media only screen and (min-width:1280px) and (max-width: 1679px) {
 .content { font-size: 120%;width:1265px;}
@@ -1183,6 +1181,7 @@ background: #f66d26;
 .title {
 text-align:center;
 color: #1BA1E2;
+text-transform:capitalize;
 }
 
 h6.sub-title {
@@ -1658,7 +1657,7 @@ position: relative;
   display        : inline-block;
   position       : relative;
   height         : 24px;
-  background     : url('stars.png') repeat-x 0 0;
+  background     : url('/resources/images/Star-icon.png') repeat-x 0 0;
   vertical-align : bottom;
 }
 
@@ -1692,7 +1691,7 @@ position: relative;
 
 .starRating       input:checked       + label,
 .starRating:hover input:checked:hover + label{
-  background : url('stars.png') repeat-x 0 -24px;
+  background : url('/resources/images/Star-icon.png') repeat-x 0 -24px;
 }
 
 .starRating:hover input:checked + label{
@@ -1700,7 +1699,7 @@ position: relative;
 }
 
 .starRating:hover input:hover + label{
-  background : url('stars.png') repeat-x 0 -48px;
+  background : url('/resources/images/Star-icon.png') repeat-x 0 -48px;
 }
 
 form ul.wrap{
@@ -1921,3 +1920,306 @@ table.contact-table{
 .breadcrumb > ol > li {display:inline; font-weight:100;}
 .breadcrumb > ol > li > a > span {font-weight:100;}
 
+
+.formFieldLabelBad {
+    padding-bottom: 2px;
+    background: url(http://marketing.infocus.com/acton/image/12x12no.gif) center right no-repeat;
+}
+
+.formFieldLabelGood {
+    padding-bottom: 2px;
+    background: url(http://marketing.infocus.com/acton/image/12x12yes.gif) center right no-repeat;
+}
+
+
+.navicon {
+  position: relative;
+	text-align: center;
+	padding: 0px;
+	margin-bottom: 0px;
+	height: 0;
+	width: 0;
+	    left: -2px;
+}
+
+.navicon:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 35%;
+    width: 50%;
+    background: #C2C2C2;
+    -webkit-transform: skew(0deg, 45deg);
+    -moz-transform: skew(0deg, 45deg);
+    -ms-transform: skew(0deg, 45deg);
+    -o-transform: skew(0deg, 45deg);
+    transform: skew(0deg, 45deg);
+}
+.navicon:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    height: 35%;
+    width: 50%;
+    background: #C2C2C2;
+    -webkit-transform: skew(0deg, 135deg);
+    -moz-transform: skew(0deg, 135deg);
+    -ms-transform: skew(0deg, 135deg);
+    -o-transform: skew(0deg, 135deg);
+    transform: skew(0deg, 135deg);
+}​
+
+/*  Tooltip
+------------------------------------------- */
+
+div.checkCon > span {
+	display: inline-block;/*bug fix*/
+	position: relative;
+	text-decoration: none;
+}
+
+div.checkCon > span.tagsort-worldwide:after {
+	content: "Displays available for purchase in Europe and the Americas.";
+}
+
+div.checkCon > span.tagsort-capacitive:after {
+	content: "Displays with capacitive touch technology.";
+}
+
+div.checkCon > span.tagsort-wireless:after {
+	content: "Displays that include wireless screen sharing, web browsing and whiteboard technology.";
+	white-space:normal;
+	line-height:.9em;
+}
+
+div.checkCon > span.tagsort-anti-glare:after {
+	content: "Displays with smooth-touch anti-glare surface.";
+}
+
+div.checkCon > span.tagsort-k-12:after {
+	content: "Displays with discounted pricing available for US-based K-12 schools.";
+}
+
+
+div.checkCon > span:after {
+	position: absolute;
+	font-size:x-small;
+	bottom: 130%;
+	left: -220%;
+	background: white;
+	padding: 5px 15px;
+	color: #7F7F7F;
+	border: 2px solid black;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	white-space: nowrap;
+	opacity: 0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+div.checkCon > span:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 20px solid black;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	opacity: 0;
+	left: -230%;
+	bottom: 90%;
+}
+div.checkCon > span:hover:after {
+	bottom: 100%;
+	left: 20%;
+}
+div.checkCon > span:hover:before {
+	bottom: 70%;
+	left: 30%;
+}
+div.checkCon > span:hover:after,
+div.checkCon > span:hover:before {
+	opacity: 1;
+	transition-delay:1s;
+	-o-transition-delay:1s;
+	-ms-transition-delay:1s;
+	-moz-transition-delay:1s;
+	-webkit-transition-delay:1s;
+
+}
+
+/* Filterable jTouch table
+
+/* ================================================== */
+
+
+.tableWrap {
+	display: block;
+	margin-top: 50px;
+}
+
+.tableWrap:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.C3_tag {
+	width: 28%;
+	float: left;
+}
+
+.C7_tag {
+	width: 68%;
+	float: left;
+}
+
+.checkCon {
+	padding: 0px 0px 0px 0px;
+}
+
+table.rwd-table-large > tbody > tr.item{
+	background:none;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+
+.tagsort-tags-container span {
+    display: block;
+    border: 2px solid #CCC;
+    color: #AAA;
+    font-size: 16px;
+    line-height: 10px;
+    padding: 10px;
+    margin: 10px 10px 10px 0px;
+    cursor: pointer;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+	position:relative;
+}
+
+.tagsort-tags-container span:hover {
+    border: 2px solid #c25218;
+    color: #FFF;
+    background-color: #f6a981;
+}
+
+.tagsort-tags-container span.tagsort-active {
+    border: 2px solid #c25218;
+    color: #FFF;
+    background-color: #f66d26;
+}
+
+
+@media only screen and (min-width:1919px) {
+	.tagBtn {
+		width: 420px;
+	}
+}
+
+@media only screen and (min-width:1680px) and (max-width: 1919px) {
+	.tagBtn {
+		width: 353px;
+	}
+}
+@media only screen and (min-width:1280px) and (max-width: 1679px) {
+	.tagBtn {
+		width: 260px;
+	}
+}
+@media only screen and (min-width:1136px) and (max-width: 1279px) {
+	.tagBtn {
+		width: 238px;
+	}
+}
+
+
+
+@media only screen and (max-width: 1135px) and (min-width: 960px) {
+	.tableWrap {
+		margin-top: 80px;
+	}
+	.tagBtn {
+		width: 200px;
+	}
+}
+
+@media only screen and (max-width: 959px) and (min-width: 800px){
+	.tableWrap {
+		margin-top: 80px;
+	}
+	.tagBtn {
+		width: 158px;
+	}
+
+}
+
+
+@media only screen and (max-width: 719px) and (min-width: 640px){
+	.tableWrap {
+		margin-top: 170px;
+	}
+	.infocusTable {
+		margin-top: 20px;
+	}
+	.C3_tag {
+		display: block;
+		width: 100%;
+		float: none;
+	}
+	.C7_tag {
+		display: block;
+		width: 100%;
+		float: none;
+	}
+	.checkCon {
+		padding: 0px 0px 0px 0px;
+	}
+	.tagsort-tags-container span {
+	    margin: 10px 0px 10px 0px;
+	}
+}
+
+@media only screen and (max-width: 639px) {
+	.infocusTable {
+		margin-top: 20px;
+	}
+	.C3_tag {
+		display: block;
+		width: 100%;
+		float: none;
+	}
+	.C7_tag {
+		display: block;
+		width: 100%;
+		float: none;
+	}
+	.checkCon {
+		padding: 0px 0px 0px 0px;
+	}
+	.tagsort-tags-container span {
+	    margin: 10px 0px 10px 0px;
+	}
+}
+
+
+/* ================================================== */

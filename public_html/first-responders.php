@@ -440,32 +440,34 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<img class="bgimage" src="/resources/images/FRE_1">
 					<div class="slide-info">
 
-							<div class="info cmsedit" style="text-align:right;">
-								<h3 style="color:#1BA1E2;font-size:170%">FIRST RESPONDERS</h3>
-								<p style="color:white;">Fire, law enforcement and EMT professionals use Mondopad to stay sharp and be ready.
-<br><a href="/displays?MONDOPAD-Series"><button class="btn bluebtn" style="width:300px;display:block;margin-left:auto;">Mondopad collaboration solution</button></a>
-<a href="/resources/documents/Mondo/InFocus-Mondopad-CaseStudy-AddisonFireProtection.pdf"><button class="btn bluebtn" style="width:300px;display:block;margin-left:auto;">Read success story (PDF)</button></a>
-</p>
-<div style="position:relative"><img id="four-prod" style="width:100%;padding-top:.5em" src="/resources/images/FRE_1_Object_2">
-<a href="/displays/family?series=MONDOPAD-Series"><div style="position:absolute;width:50%;height:47%;top:.5em;left:0"></div></a>
-<a href="/displays/family?series=BIGTOUCH-Series"><div style="position:absolute;width:50%;height:47%;top:.5em;right:0"></div></a>
-<a href="/displays/family?series=JTOUCH-Series"><div style="position:absolute;width:50%;white;height:47%;bottom:0;left:0"></div></a>
-<a href="/projectors/"><div style="position:absolute;width:50%;height:47%;bottom:0;right:0"></div></a></div>
-						</div>
+							<div class="info cmsedit" style="text-align: right; position: relative;"><h3 style="color:#1BA1E2;font-size:170%">FIRST RESPONDERS</h3>
+
+<p style="color:white;">Fire, law enforcement and EMT professionals use Mondopad to stay sharp and be ready.<br>
+<button class="btn bluebtn" style="width:300px;display:block;margin-left:auto;">Mondopad collaboration solution</button><button class="btn bluebtn" style="width:300px;display:block;margin-left:auto;">Read success story (PDF)</button></p>
+
+<div style="position:relative"><img alt="" id="four-prod" src="/resources/images/FRE_1_Object_2" style="width: 100%; padding-top: 0.5em;">
+<div style="position:absolute;width:50%;height:47%;top:.5em;left:0">&nbsp;</div>
+
+<div style="position:absolute;width:50%;height:47%;top:.5em;right:0">&nbsp;</div>
+
+<div style="position:absolute;width:50%;white;height:47%;bottom:0;left:0">&nbsp;</div>
+
+<div style="position:absolute;width:50%;height:47%;bottom:0;right:0">&nbsp;</div>
+</div>
+</div>
 					</div>
 					</div>
 					
 <div class="swiper-slide slide sedit" style="position:relative">
 <div>				<img class="bgimage" src="/resources/images/FRE_3">
 					<div class="slide-info wider">
-					<div style="text-align:right" class="info adjust-right cmsedit">
-								<h6 style="">FIRST RESPONDERS</h6>
-								<h3 style="color:#ADD238;font-size:300%;font-weight:200;text-shadow: 4px 4px 4px rgba(0,0,0,.25);">TRAIN IN PLACE</h3>
-								<p class="Mobile-Color-Swap" style="text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);">Have face-to-face training sessions with video, maps and annotation while personnel and equipment remain at-the-ready.</p>
-								<br><a href="/displays?MONDOPAD-Series/"><button class="btn greybtn" style="width:430px;margin-left: auto;display:block;">Mondopad videoconferencing, annotation and more</button></a>
-								<a href="/video-communication/product?pn=MVP100"><button class="btn greybtn" style="width:430px;margin-left: auto;display:block;">MVP100 Video Phones</button></a>
-								<a href="/accessories/product?pn=CONX"><button class="btn greybtn" style="width:430px;margin-left: auto;display:block;">ConX Group Videoconferencing</button></a>
-							</div>
+					<div style="text-align: right; position: relative;" class="info adjust-right cmsedit"><h6 style="">FIRST RESPONDERS</h6>
+
+<h3 style="color:#ADD238;font-size:300%;font-weight:200;text-shadow: 4px 4px 4px rgba(0,0,0,.25);">TRAIN IN PLACE</h3>
+
+<p class="Mobile-Color-Swap" style="text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);">Have face-to-face training sessions with video, maps and annotation while personnel and equipment remain at-the-ready.</p>
+<br>
+<button class="btn greybtn" style="width:430px;margin-left: auto;display:block;">Mondopad video conferencing, annotation and more</button><button class="btn greybtn" style="width:430px;margin-left: auto;display:block;">ConX Video Phones</button><button class="btn greybtn" style="width:430px;margin-left: auto;display:block;">ConX Video Meeting</button></div>
 					</div>
 </div></div>
 
@@ -473,15 +475,13 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 <div>				<img class="wider" src="/resources/images/FRE_4">
 					<div style="" class="slide-info">
 
-							<div style="text-align:right;" class="info cmsedit">
-								<h6 style="">FIRST RESPONDERS</h6>
-								<h3 style="color:#EC126D;font-size:300%;font-weight:200;text-shadow: 4px 4px 4px rgba(0,0,0,.25);">SAVE</h3>
-								<p class="Mobile-Color-Swap" style="text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);">Be it saving time, money or lives, InFocus technology helps you do your job better. </p>
-								<br><a href="/displays/family?series=MONDOPAD-Series"><button class="btn greybtn" style="color:#EC126D;width:415px;margin-left: auto;display:block;">Learn about Mondopad</button></a>
-								<a href="/projectors"><button class="btn greybtn" style="color:#EC126D;width:415px;margin-left: auto;display:block;">Browse projectors</button></a>
-								<a href="/resources/documents/Mondo/InFocus-Mondopad-CaseStudy-AddisonFireProtection.pdf"><button class="btn greybtn" style="color:#EC126D;width:415px;margin-left: auto;display:block;">Read fire protection district success story (PDF)</button></a>
-								
-							</div>
+							<div style="text-align: right; position: relative;" class="info cmsedit"><h6 style="">FIRST RESPONDERS</h6>
+
+<h3 style="color:#EC126D;font-size:300%;font-weight:200;text-shadow: 4px 4px 4px rgba(0,0,0,.25);">SAVE</h3>
+
+<p class="Mobile-Color-Swap" style="text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);">Be it saving time, money or lives, InFocus technology helps you do your job better.</p>
+<br>
+<button class="btn greybtn" style="color:#EC126D;width:415px;margin-left: auto;display:block;">Learn about Mondopad</button><button class="btn greybtn" style="color:#EC126D;width:415px;margin-left: auto;display:block;">Browse projectors</button><button class="btn greybtn" style="color:#EC126D;width:415px;margin-left: auto;display:block;">Read fire protection district success story (PDF)</button></div>
 					</div>
 </div></div>
 
@@ -625,113 +625,119 @@ $.get(
   </script>
 
 <div id="category" class="cmsedit" style=""><!-- CTAGenerated -->
-  					<div class="headlines-bar" id="headlines-bar">
-									<div class="snippet" style="display:inline-block;text-align:left;">
-									<a href="/videos?QwL9nQa4CGM"><img style="float:left;padding-right:5px;" src="/resources/images/first-responders-tout-1">
-										<span class="title cmsedit">FIRE DISTRICT SUCCESS</span></a>
-										<p class="cmsedit">Watch how Chicago-area fire district uses Mondopads to save time, money and lives.<br>
-<a href="/videos?QwL9nQa4CGM">PLAY VIDEO</a></p>
-									</div>	
+<div class="headlines-bar" id="headlines-bar">
+<div class="snippet" style="display:inline-block;text-align:left;"><a href="/videos?QwL9nQa4CGM"><img alt="Fire District Mondopad Success Story" src="/resources/images/first-responders-tout-1" style="padding-right:5px; float:left"> <span class="title cmsedit" >FIRE DISTRICT SUCCESS</span></a>
 
-									<div class="snippet" style="padding-top:15px;display:inline-block;text-align:left;">
-									<a href="/mondopad-live-demo"><img style="float:left;padding-right:5px;" src="/resources/images/first-responders-tout-2.png">
-										<span class="title cmsedit">LIVE MONDOPAD DEMO</span></a>
-										<p class="cmsedit">Get a personal, interactive Mondopad demo online from an InFocus expert.<br>
+<p class="cmsedit" >Watch how Chicago-area fire district uses Mondopads to save time, money and lives.<br>
+<a href="/videos?QwL9nQa4CGM">PLAY VIDEO</a></p>
+</div>
+
+<div class="snippet" style="padding-top:15px;display:inline-block;text-align:left;"><a href="/mondopad-live-demo"><img alt="Mondopad Live Demo" src="/resources/images/first-responders-tout-2.png" style="padding-right:5px; float:left"> <span class="title cmsedit" >LIVE MONDOPAD DEMO</span></a>
+
+<p class="cmsedit" >Get a personal, interactive Mondopad demo online from an InFocus expert.<br>
 <a href="/mondopad-live-demo">GET YOUR DEMO HERE</a></p>
-									</div>
-					</div>
+</div>
+</div>
+
 <div class="content" style="padding-top:1em;">
 <div class="C9" id="first-responders">
-
-				<ul class="verticals">
-					<li class="C10 C5_child Col_child ui-shadow-after">
-						<div class="image-set cmsedit"><p><a href="/displays/family?series=MONDOPAD-SERIES"><img src="/resources/images/vid-conference-low"></a></p>
-</div>
-						<div class="info cmsedit"><h3 class="name">TRAIN EFFICIENTLY</h3>
-
-<h5 class="name">Communicate with video using Mondopad and ConX</h5>
-
-<div class="description">
-<p>Connect your locations with easy-to-use, cloud-based video communications and save time and money over travelling to meet in-person.</p>
-
-<ul class="feature-list">
-	<li>Convey information more clearly</li>
-	<li>Reduce errors and misunderstanding</li>
-	<li>Save time and money</li>
-	<li>Improve safety and readiness</li>
-</ul>
-<br>
-<a class="btn" href="/displays/family?series=MONDOPAD-Series">Learn more about Mondopad</a><br>
-<br>
-<a class="btn" href="/conx">Learn more about ConX video meeting rooms</a></div>
-</div>
-					</li>
-					<li class="C10 C4x6_child Col_child ui-dots-after">
-						<div class="image-set cmsedit" style="float:right;"><a href="/displays/family?series=MONDOPAD-SERIES"><img src="/resources/images/Web-Edit-Center"></a></div>
-						<div class="info cmsedit"><h3 class="name" style="text-transform:capitalize;">EDUCATE AND ANNOTATE</h3>
-
-<h5 class="name">Annotate on shared web-based content</h5>
-
-<div class="description"><a href="/displays/family?series=MONDOPAD-SERIES">Mondopad</a> enables everyone in the videoconference to see and annotate on the same content, such as maps, videos or other web-based content.</div>
-
-<ul class="feature-list" style="padding-bottom:50px;">
-	<li>Whiteboard on an endless canvas</li>
-	<li>Annotate on documents, web pages and video</li>
-	<li>Save changes and email files to participants</li>
-</ul>
-
-<table id="table-comparison" style="text-align:center;border:1px solid #006699">
-	<thead>
-		<tr>
-			<th class="model">INF5520a</th>
-			<th class="model">INF7021</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>55” multi-touch screen</td>
-			<td>70” multi-touch screen</td>
-		</tr>
-		<tr>
-			<td colspan="2">Video conferencing, interactive whiteboard, document annotation, web browser, file sharing</td>
-		</tr>
-		<tr>
-			<td colspan="2">LCD display with touch overlay, Mondopad collaboration software, MS Office Suite, 720p camera, microphone array, sound bar, wireless keyboard and mouse</td>
-		</tr>
-		<tr>
-			<td colspan="2">Built-in PC running Windows 7 Pro, 120 GB SSD, multiple USB and HDMI inputs, and more</td>
-		</tr>
-		<tr class="footer">
-			<td><a class="learn-more" href="/displays/product?pn=INF5520A">Learn More</a></td>
-			<td><a class="learn-more" href="/displays/product?pn=INF7021">Learn More</a></td>
-		</tr>
-	</tbody>
-</table>
-</div>
-					</li>
-					<li class="C10 C4x6_child Col_child ui-shadow-after">
-						<div class="image-set cmsedit"><p><img src="/resources/images/Mondopad-Addison-Safety"></p>
-</div>
-						<div class="info cmsedit"><h3 class="name">ON-DEMAND COMMUNICATION</h3>
-
-<h5 class="name">Talk face-to-face from station-to-station</h5>
-
-<div class="description">
-<p>The infocus.net network provides affordable high-quality video calls and service you can count on at a moment’s notice.</p>
-
-<ul class="feature-list" style="padding-bottom:50px;">
-	<li>InFocus <a href="/video-communication/121-Series">121 video calling</a> service</li>
-	<li>InFocus <a href="/accessories/CONX">ConX group videoconferencing</a> rooms</li>
-	<li>Manage accounts and services on infocus.net</li>
-</ul>
-<a class="btn" href="/videos?NR2miS6yU7Q">Watch first responders webinar recording</a></div>
-</div>
-					</li>
-
-					</ul>
-		</div>
-
+<ul class="verticals">
+	<li class="C10 C5_child Col_child ui-shadow-after">
+	<div class="image-set cmsedit" >
+	<p><a href="/displays/MONDOPAD-SERIES"><img alt="InFocus Mondopad Video Conferencing" src="/resources/images/InFocus-Mondopad-INF5720-Conference-Call.jpg"></a></p>
 	</div>
+
+	<div class="info cmsedit" >
+	<h3 class="name">TRAIN EFFICIENTLY</h3>
+
+	<h5 class="name">Communicate with video using Mondopad and ConX Video Meeting</h5>
+
+	<div class="description">
+	<p>Connect your locations with easy-to-use, cloud-based video communications and save time and money over traveling to meet in-person.</p>
+
+	<ul class="feature-list">
+		<li>Convey information more clearly</li>
+		<li>Reduce errors and misunderstanding</li>
+		<li>Save time and money</li>
+		<li>Improve safety and readiness</li>
+	
+	<br>
+	Flyer: <a href="/resources/documents/InFocus-Mondopad-First-Responders-17MAR16.pdf">Mondopad for Law Enforcement and First Responders (PDF)</a><br>
+	<br>
+	<a class="btn" href="/displays/MONDOPAD-SERIES">Learn more about Mondopad</a><br>
+	<br>
+	<a class="btn" href="/peripherals/ConX-Series">Learn more about ConX Video Meeting</a></div>
+	</div>
+	</li>
+	<li class="C10 C4x6_child Col_child ui-dots-after">
+	<div class="image-set cmsedit" style="float:right;" ><a href="/displays/family?series=MONDOPAD-SERIES"><img alt="InFocus Mondopad Whiteboard Fire Department" src="/resources/images/InFocus-Mondopad-Whiteboard-Fire"></a></div>
+
+	<div class="info cmsedit" >
+	<h3 class="name" style="text-transform:capitalize;">EDUCATE AND ANNOTATE</h3>
+
+	<h5 class="name">Annotate on shared web-based content</h5>
+
+	<div class="description"><a href="/displays/MONDOPAD-SERIES">Mondopad</a> enables everyone in the video conference to see and annotate on the same content, such as maps, videos or other web-based content.</div>
+
+	<ul class="feature-list" style="padding-bottom:50px;">
+		<li>Whiteboard on an endless canvas</li>
+		<li>Annotate on documents, web pages and video</li>
+		<li>Save changes and email files to participants</li>
+	</ul>
+
+	<table id="table-comparison" style="text-align:center;border:1px solid #006699">
+		<thead>
+			<tr>
+				<th class="model">INF5720</th>
+				<th class="model">INF7021</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>57” multi-touch screen</td>
+				<td>70” multi-touch screen</td>
+			</tr>
+			<tr>
+				<td colspan="2">Video conferencing, interactive whiteboard, document annotation, web browser, file sharing</td>
+			</tr>
+			<tr>
+				<td colspan="2">LCD touchscreen display, Mondopad collaboration software, MS Office Suite, 720p camera, microphone array, sound bars, wireless keyboard and mouse</td>
+			</tr>
+			<tr>
+				<td colspan="2">Built-in i7-based PC running Windows 7 Pro, 120 GB SSD, multiple USB and HDMI inputs, and more</td>
+			</tr>
+			<tr class="footer">
+				<td><a href="/displays/MONDOPAD-Series/INF5720">Learn More</a></td>
+				<td><a href="/displays/MONDOPAD-Series/INF7021">Learn More</a></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</li>
+	<li class="C10 C4x6_child Col_child ui-shadow-after">
+	<div class="image-set cmsedit" >
+	<p><img alt="" src="/resources/images/Mondopad-Addison-Safety"></p>
+	</div>
+
+	<div class="info cmsedit" >
+	<h3 class="name">ON-DEMAND COMMUNICATION</h3>
+
+	<h5 class="name">Talk face-to-face from station-to-station</h5>
+
+	<div class="description">
+	<p>InFocus provides affordable high-quality video calls and service you can count on at a moment’s notice.</p>
+
+	<ul class="feature-list" style="padding-bottom:50px;">
+		<li>InFocus <a href="/peripherals/121-Series">121 video calling</a> service</li>
+		<li>InFocus <a href="/peripherals/ConX-Series">ConX Video Meeting</a> rooms for up to 25 participants</li>
+		<li>Manage accounts and services online</li>
+	</ul>
+	<a class="btn" href="/videos?NR2miS6yU7Q">Watch first responders webinar recording</a></div>
+	</div>
+	</li>
+</ul>
+</div>
+</div>
 <!-- EndCTAGenerated --></div> 
 </div>
  

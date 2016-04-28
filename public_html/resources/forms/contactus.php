@@ -1,354 +1,5 @@
 <?php
-
-
-
-function curlWrap($url, $json){
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
-	curl_setopt($ch, CURLOPT_MAXREDIRS, 10 );
-	curl_setopt($ch, CURLOPT_URL, ZDURL.$url);
-	curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
-	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
-	curl_setopt($ch, CURLOPT_USERAGENT, "MozillaXYZ/1.0");
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-	$output = curl_exec($ch);
-
-	$info = curl_getinfo($ch);
-	// echo $output . '<br>';
-	// print_r($info);
-
-	curl_close($ch);
-	$decoded = json_decode($output);
-	return $decoded;
-}
-
-function post_files($url,$filearray) {
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-	curl_setopt($ch, CURLOPT_MAXREDIRS, 10 );
-	    curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
-
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/binary'));
-
-	curl_setopt($ch, CURLOPT_POST, true);
-
-	$file = fopen($filearray['tmp_name'], 'r');
-	$size = filesize($filearray['tmp_name']);
-	$fildata = fread($file,$size);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $fildata);
-	curl_setopt($ch, CURLOPT_INFILE, $file);
-	curl_setopt($ch, CURLOPT_INFILESIZE, $size);
-	curl_setopt($ch, CURLOPT_USERAGENT, "MozillaXYZ/1.0");
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-	curl_setopt($ch, CURLOPT_VERBOSE, true);
-	    $response = curl_exec($ch);
-	    return $response;
-	}
-
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
-
-
-
-if(!empty($_POST['first_name'])){
-
-if(in_array($_POST['primary_address_country'],$apacCountries)){
-	$to = "daniel.boggs@infocus.com";
-	$date = new DateTime();
-	$result = $date->format('Y-m-d H:i:s');
-
-
-	$subject = "Online Request";
-	$message = "
-	Created On:" . $result . "\r";
-	$message .= (empty($_POST['first_name']) ? "" : "First Name:" . $_POST['first_name'] . "\r");
-	$message .= (empty($_POST['last_name']) ? "" : "Last Name:" . $_POST['last_name'] . "\r");
-	$message .= (empty($_POST['phone_number']) ? "" : "Phone Number:" . $_POST['phone_number'] . "\r");
-	$message .= (empty($_POST['organization']) ? "" : "Organization:" . $_POST['organization'] . "\r");
-	$message .= (empty($_POST['e_mail']) ? "" : "Email:" . $_POST['e_mail'] . "\r");
-	$message .= (empty($_POST['serial_number']) ? "" : "Serial Number:" . $_POST['serial_number'] . "\r");
-	$message .= (empty($_POST['symptom']) ? "" : "Symptom:" . $_POST['symptom'] . "\r");
-	$message .= (empty($_POST['product']) ? "" : "Product:" . $_POST['product'] . "\r");
-	$message .= (empty($_POST['purchasedate']) ? "" : "Purchase Date:" . $_POST['purchasedate'] . "\r");
-	$message .= (empty($_POST['notes']) ? "" : "Notes:\r" . $_POST['description'] . "\r");
-	$message .= (empty($_POST['address']) ? "" : "Address:\r" . $_POST['address'] . "\r");
-	$message .= (empty($_POST['primary_address_city']) ? "" : "City:" . $_POST['primary_address_city'] . "\r");
-	$message .= (empty($_POST['primary_address_state']) ? "" : "State:" . $_POST['primary_address_state'] . "\r");
-	$message .= (empty($_POST['primary_address_postalcode']) ? "" : "Postal Code:" . $_POST['primary_address_postalcode'] . "\r");
-	$message .= (empty($_POST['primary_address_country']) ? "" : "Country:" . $_POST['primary_address_country'] . "\r");
-
-	$from = $_POST['primary_address_country'] . " <" . $_POST['e_mail'] . ">";
-
-
-	    	if(!empty($_FILES['file']['tmp_name'])){
-			$attachment = chunk_split(base64_encode(file_get_contents($_FILES['file']['tmp_name'])));
-	    	$filename = $_FILES['file']['name'];
-			}
-	    	$boundary =md5(date('r', time())); 
-
-	    	$headers = "From: $from";
-	    	$headers .= "\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"_1_$boundary\"";
-
-
-	    	$headers = "From: $from";
-	    	$headers .= "\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"_1_$boundary\"";
-
-	    	$message="
-
-	--_1_$boundary\r\n"
-	        . "Content-Type: text/html; charset=ISO-8859-1\r\n"
-	        . "Content-Transfer-Encoding: 7bit\r\n"
-	        . "\r\n"
-			. "$message\r\n";
-
-	if(!empty($filename)){
-	$message .= "--_1_$boundary
-	Content-Type: application/octet-stream; name=\"$filename\" 
-	Content-Transfer-Encoding: base64 
-	Content-Disposition: attachment 
-
-	$attachment
-	--_1_$boundary--";}
-
-	    	mail($to, $subject, $message, $headers);
-$thankyou = $_POST['thankyou'];
-if(empty($_POST['thankyou'])){$thankyou = translate("Thank you for your submission");}
-
-echo $thankyou."
-<script src='http://code.jquery.com/jquery-1.9.1.js'></script>
-<script>$(function(){
-    parent.$.colorbox.resize({
-        innerWidth:'300px',
-        innerHeight:'40px'
-    });
-});</script>";
-die();
-}
-
-if($_POST['name'] != ""){
-
-# Create a connection
-$url = $_POST['name'];
-$ch = curl_init($url);
-
-# Form data string
-$postString = http_build_query($_POST, '', '&');
-
-# Setting our options
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, True);
-echo $postString;
-# Get the response
-$response = curl_exec($ch);
-print_r($ch);
-curl_close($ch);
-print_r($response);
-$thankyou = $_POST['thankyou'];
-if(empty($_POST['thankyou'])){
-$thankyou = "Thank you for your submission
-";}
-
-echo $thankyou."
-<script src='http://code.jquery.com/jquery-1.9.1.js'></script>
-<script>$(function(){
-    parent.$.colorbox.resize({
-        innerWidth:'300px',
-        innerHeight:'40px'
-    });
-});</script>";
-die();
-
-}
-else{
-
-	define("ZDAPIKEY", "srU2sx3OY0fK2TDn3CDGblU0yBxDBGIULwSWGVps");
-	define("ZDUSER", "administrator@infocus.com");
-	define("ZDURL", "https://infocuscorp.zendesk.com/api/v2");
-
-	foreach($_POST as $key => $value){
-	if($key != "Troubleshooting" AND $key != "symptom" ){
-	$arr[strip_tags($key)] = strip_tags($value);
-	}}
-
-	$Symptom = split(",",$_POST['symptom']);
-	$SympName = $Symptom[1];
-	$Symptom = $Symptom[0];
-	$type = 'question';
-	$FName = $arr['first_name'];
-	$LName = $arr['last_name'];
-	$name = $FName . ' ' . $LName;
-	$Subject = $name . "/" . $arr['product'] ." Question";
-if($arr['type'] == "RMA"){
-	$type = 'problem';
-	$Subject = $arr['product'] . '/' . $SympName;
-}	
-	$SName = $arr['second_name'];
-	$Semail = $arr['second_email'];
-	$orgName = $arr['account_name'];
-	$email = $arr['email1'];
-	$Country = $arr['primary_address_country'];
-	$Phne = $arr['phone_work'];
-	$serial = $arr['serial_number'];
-	$address = $arr['primary_address_street'];
-	$city = $arr['primary_address_city'];
-	$state = $arr['primary_address_state'];
-	$zip = $arr['primary_address_postalcode']; 
-	$productin = $arr['product']; 
-	$Channel = "email";
-	$description = $arr['description'] . '
-
-	';
-
-	$description .= "\r\r	Contact Name:" . $name;
-	$description .= (empty($orgName) ? "" : "Org:" . $orgName . "\r");
-	$description .= (empty($email) ? "" : "Email:" . $email) . "\r";
-	$description .= (empty($Phne) ? "" : "Phone:" . $Phne) . "\r";
-	$description .= (empty($SName) ? "" : "Secondary Contact:" . $SName) . "\r";
-	$description .= (empty($Semail) ? "" : "Secondary Email:" . $Semail) . "\r";
-	$description .= (empty($address) ? "" : "Address:\r" . $address) . "\r";
-	$description .= (empty($city) ? "" : "City:" . $city) . "\r";
-	$description .= (empty($state) ? "" : "State:" . $state) . "\r";
-	$description .= (empty($zip) ? "" : "Zip:" . $zip) . "\r";
-	$description .= (empty($Country) ? "" : "Country:" . $Country) . "\r";
-
-
-	$Mondopadg = 22747639;
-	$Prog = 22747659;
-	$Projectorg = 22386119;
-	$Salesg = 22811785;
-	$Servicesg = 22747919;
-	$Tabletg = 22811795;
-	$VPhoneg = 22811805;
-
-	$group = $Projectorg;
-
-	$formnum = 34285;
-	if(substr($productin,0,3) == "INF"){
-	$formnum = 34505;
-	$group = $Mondopadg;
-	}
-
-	if(substr($productin,0,3) == "EPW" OR substr($productin,0,5) == "IN121"  OR substr($productin,0,5) == "INF-V" ){
-	$group = $Servicesg;
-	}
-
-	if(substr($productin,0,3) == "MVP"){
-	$group = $VPhoneg;
-	}
-
-	if(substr($productin,0,3) == "INP"){
-	$group = $Tabletg;
-	}
-
-
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, ZDURL.'/search.json?query=' . urlencode("type:user email:$email"));
-	curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
-	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	$output = curl_exec($ch);
-	curl_close($ch);
-	$decoded = json_decode($output);
-
-	$results = $decoded->results;
-	$result = $results[0];
-	if(!empty($result->id)){$uid = $result->id;}
-
-	$Phne = str_replace("-","",str_replace(")","",str_replace("(","",str_replace("+","",$Phne))));
-
-	if(empty($uid)){
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, ZDURL.'/search.json?query=' . urlencode("type:user name:$name"));
-		curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
-		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		$output = curl_exec($ch);
-		curl_close($ch);
-		$decoded = json_decode($output);
-
-		$results = $decoded->results;
-		foreach($results as $result){
-		if('+' .$Phne ==  $result->phone OR '+1' .$Phne ==  $result->phone){
-		$uid = $result->id;
-		}
-		}
-	}
-
-	if(empty($uid)){
-		$create = json_encode(array('user' => array(
-		'name' => $name, 
-		'email' => $email, 
-		'phone' => $Phne, 
-		'user_fields' => array( 
-							"first_name"=> $FName, 
-							"last_name"=> $LName, 
-							"organization"=> $orgName, 
-							"shipping_address"=> $address, 
-							"city"=> $city, 
-							"state"=> $state, 
-							"country"=> $Country, 
-							"zip_code"=> $zip))));
-		$return = curlWrap("/users.json", $create); 
-		$decoded = $return->user;
-		$uid = $decoded->id;
-	}
-
-	if(!empty($_FILES)){
-		$output = post_files("https://infocuscorp.zendesk.com/api/v2/uploads.json?filename=" . urlencode($_FILES['file']['name']),$_FILES['file']);
-		$output = json_decode($output);
-		$ftoken = $output->upload->token;
-	}
-
-
-	if(!empty($uid)){
-		$create = json_encode(array('ticket' => array(
-		'type' => $type, 
-		'subject' => $Subject, 
-		'status' => 'new', 
-		'group_id' => $group, 
-		'comment' => array( "value"=> $description,"uploads" => array($ftoken)), 
-		'requester_id' => $uid,
-		'custom_fields' => 	array( array("id"=> 23473115, "value"=> $orgName), 
-							array("id"=> 23338039, "value"=> $Symptom), 
-							array("id"=> 23415649, "value"=> $productin), 
-							array("id"=> 23278985, "value"=> $serial), 
-							array("id"=> 23394275, "value"=> $productout), ))));
-	}
-	else{
-		$create = json_encode(array('ticket' => array(
-		'type' => $type, 
-		'subject' => $Subject, 
-		'status' => 'new', 
-		'group_id' => $group, 
-		'comment' => array( "value"=> $description,"uploads" => array($ftoken)), 
-		'requester' => array('name' => $FName . ' ' . $LName, 'email' => $email),
-		"uploads" => array($ftoken),
-		'custom_fields' => 	array( array("id"=> 23473115, "value"=> $orgName), 
-							array("id"=> 23338039, "value"=> $Symptom), 
-							array("id"=> 23415649, "value"=> $productin), 
-							array("id"=> 23278985, "value"=> $serial), 
-							array("id"=> 23394275, "value"=> $productout), ))));
-	}
-
-	$return = curlWrap("/tickets.json", $create); 
-	}
-
-echo "<script src='http://code.jquery.com/jquery-1.9.1.js'></script><br>Request submitted<br><br><script>$(function(){
-    parent.$.colorbox.resize({
-        innerWidth:'200px',
-        innerHeight:'100px'
-    });
-});</script>";
-
-
-die();
-}
-
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 
 
@@ -387,7 +38,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 <?php endif; ?>
-<script type="text/javascript" src="/resources/js/WebToLead.js"></script>
 
 <script>
 
@@ -408,20 +58,23 @@ $(document).ready(function () {
 
 function checkSN(Serial){
   if(Serial.search(/[^A-Z^0-9^a-z]/)>0){
- document.getElementById('serial_number').value = Serial.replace(/[^A-Z^0-9^a-z]/g,'');
+ document.getElementById('contactForm_serial_number').value = Serial.replace(/[^A-Z^0-9^a-z]/g,'');
  alert("<?=$pageText['SerialChar']?>. \n<?=$pageText['SerialLong']?>.");
   }
    else if(Serial.length>19){
   alert("<?=$pageText['SerialShort']?>.\n<?=$pageText['SerialLong']?>.");
-  document.getElementById('serial_number').value = Serial.substr(0,19);
+  document.getElementById('contactForm_serial_number').value = Serial.substr(0,19);
  }
   }
  function checkSNShort(Serial){
  if(Serial.length<11 && Serial.length>0 ){
   alert("<?=$pageText['SerialShort']?>.");
-  document.getElementById('serial_number').value = Serial.substr(0,19);
+  document.getElementById('contactForm_serial_number').value = Serial.substr(0,19);
  }
  }
+var abu = "/resources/php/formtozendesk.php";
+var emea = "https://infocuscrm.sugarondemand.com/rest/v10/Web/submit";
+var apac = "https://infocuscrm.sugarondemand.com/rest/v10/Web/submit";
 
   function showForm(formType,spd){
   	var speed = spd!=null ? spd:500;
@@ -430,66 +83,111 @@ function checkSN(Serial){
   	if(formType == "RMA"){
   		if('<?=$pageText["RMA-Alternate"]?>' != ""){window.parent.location='http://<?=$pageText['RMA-Alternate']?>';return;}
  		$('.salesOnly').hide();
-  		document.getElementById('serial_number').placeholder = Required;
-		document.getElementById('purchasedate').placeholder = Optional;
-		document.getElementById('sympOption').innerHTML = Required;
-		document.getElementById('first_name').placeholder = Required;
-		document.getElementById('last_name').placeholder = Required;
-		document.getElementById('organization').placeholder = Optional;
-		document.getElementById('phone_number').placeholder = Required;
-		document.getElementById('email').placeholder = Required;
-		document.getElementById('second_name').placeholder = Optional;
-		document.getElementById('second_email').placeholder = Optional;
-		document.getElementById('product').placeholder = Required;
-		document.getElementById('address').placeholder = Required;
-		document.getElementById('city').placeholder = Required;
-		document.getElementById('primary_address_state').placeholder = Required;
-		document.getElementById('zip_postal_code').placeholder = Required;
-		document.getElementById('notes').placeholder = Required;
-		document.getElementById('req_id').value = 'serial_number;symptom;first_name;last_name;phone_number;email;product;primary_address_country;address;city;notes';
-		document.getElementById('campaign_id').value = "Support";
+		requiredFields = new Array(); 
+		requiredFieldGroups = new Array(); 
+		validatedFields = new Array(); 
+  		document.getElementById('contactForm_serial_number').placeholder = Required;
+		document.getElementById('contactForm_purchasedate').placeholder = Optional;
+		document.getElementById('contactForm_sympOption').innerHTML = Required;
+		document.getElementById('contactForm_first_name').placeholder = Required;
+		document.getElementById('contactForm_last_name').placeholder = Required;
+		document.getElementById('contactForm_organization').placeholder = Optional;
+		document.getElementById('contactForm_phone_number').placeholder = Required;
+		document.getElementById('contactForm_email').placeholder = Required;
+		document.getElementById('contactForm_second_name').placeholder = Optional;
+		document.getElementById('contactForm_second_email').placeholder = Optional;
+		document.getElementById('contactForm_product').placeholder = Required;
+		document.getElementById('contactForm_address').placeholder = Required;
+		document.getElementById('contactForm_city').placeholder = Required;
+		document.getElementById('contactForm_primary_address_state').placeholder = Required;
+		document.getElementById('contactForm_zip_postal_code').placeholder = Required;
+		document.getElementById('contactForm_notes').placeholder = Required;
 		parent.$.colorbox.resize({innerHeight:$('body').height()*1.2});
+		if (typeof(addRequiredField) != 'undefined') { 
+		addRequiredField ('contactForm_serial_number'); 
+		addRequiredField ('contactForm_symptom'); 
+		addRequiredField ('contactForm_first_name'); 
+		addRequiredField ('contactForm_last_name'); 
+		addRequiredField ('contactForm_phone_number');
+		addRequiredField ('contactForm_email');
+		addRequiredField ('contactForm_product'); 
+		addRequiredField ('contactForm_address');
+		addRequiredField ('contactForm_city');
+		addRequiredField ('contactForm_primary_address_state');
+		addRequiredField ('contactForm_zip_postal_code');
+		addRequiredField ('contactForm_notes');
+		addRequiredField ('contactForm_Business Country');
+		}
+		if (typeof(addFieldToValidate) != 'undefined') { 
+		addFieldToValidate ('ContactForm_email', 'EMAIL');
+		}
+		apac = "/resources/php/formtoemail.php?eto=jill.neo@infocus.com&esub=Tech%20Request";
   	}
   	else if(formType == "Sales"){
    		if('<?=$pageText['Sales-Alternate']?>' != ""){window.parent.location='http://<?=$pageText['Sales-Alternate']?>';return;}
  		$('.techOnly').hide();
-		document.getElementById('first_name').placeholder = Required;
-		document.getElementById('last_name').placeholder = Required;
-		document.getElementById('organization').placeholder = Optional;
-		document.getElementById('phone_number').placeholder = Optional;
-		document.getElementById('email').placeholder = Required;
-		document.getElementById('product').placeholder = Optional;
-		document.getElementById('primary_address_state').placeholder = Optional;
-		document.getElementById('notes').placeholder = Required;
-		document.getElementById('req_id').value = 'first_name;last_name;email;notes';
- 		document.getElementById('campaign_id').value = "ContactUs";
+		requiredFields = new Array(); 
+		requiredFieldGroups = new Array(); 
+		validatedFields = new Array(); 
+		document.getElementById('contactForm_first_name').placeholder = Required;
+		document.getElementById('contactForm_last_name').placeholder = Required;
+		document.getElementById('contactForm_organization').placeholder = Optional;
+		document.getElementById('contactForm_phone_number').placeholder = Optional;
+		document.getElementById('contactForm_email').placeholder = Required;
+		document.getElementById('contactForm_product').placeholder = Optional;
+		document.getElementById('contactForm_primary_address_state').placeholder = Optional;
+		document.getElementById('contactForm_notes').placeholder = Required;
+		if (typeof(addRequiredField) != 'undefined') { 
+		addRequiredField ('contactForm_first_name'); 
+		addRequiredField ('contactForm_last_name'); 
+		addRequiredField ('contactForm_email');
+		addRequiredField ('contactForm_notes');
+		addRequiredField ('contactForm_Business Country');
+		}
+		if (typeof(addFieldToValidate) != 'undefined') { 
+		addFieldToValidate ('contactForm_email', 'EMAIL');
+		}
  	}
   	else{
    		if('<?=$pageText['Support-Alternate']?>' != ""){window.parent.location='http://<?=$pageText['Support-Alternate']?>';return;}
  		$('.salesOnly').hide();
- 		document.getElementById('serial_number').placeholder = Optional;
-		document.getElementById('purchasedate').placeholder = Optional;
-		document.getElementById('sympOption').innerHTML = Optional;
-		document.getElementById('first_name').placeholder = Required;
-		document.getElementById('last_name').placeholder = Required;
-		document.getElementById('organization').placeholder = Optional;
-		document.getElementById('phone_number').placeholder = Optional;
-		document.getElementById('email').placeholder = Required;
-		document.getElementById('second_name').placeholder = Optional;
-		document.getElementById('second_email').placeholder = Optional;
-		document.getElementById('product').placeholder = Required;
-		document.getElementById('address').placeholder = Optional;
-		document.getElementById('city').placeholder = Optional;
-		document.getElementById('primary_address_state').placeholder = Optional;
-		document.getElementById('zip_postal_code').placeholder = Optional;
-		document.getElementById('notes').placeholder = Required;
- 		document.getElementById('req_id').value = 'first_name;last_name;email;product;notes';
-		document.getElementById('campaign_id').value = "ContactUs";
+ 		requiredFields = new Array(); 
+		requiredFieldGroups = new Array(); 
+		validatedFields = new Array(); 
+		document.getElementById('contactForm_serial_number').placeholder = Optional;
+		document.getElementById('contactForm_purchasedate').placeholder = Optional;
+		document.getElementById('contactForm_sympOption').innerHTML = Optional;
+		document.getElementById('contactForm_first_name').placeholder = Required;
+		document.getElementById('contactForm_last_name').placeholder = Required;
+		document.getElementById('contactForm_organization').placeholder = Optional;
+		document.getElementById('contactForm_phone_number').placeholder = Optional;
+		document.getElementById('contactForm_email').placeholder = Required;
+		document.getElementById('contactForm_second_name').placeholder = Optional;
+		document.getElementById('contactForm_second_email').placeholder = Optional;
+		document.getElementById('contactForm_product').placeholder = Required;
+		document.getElementById('contactForm_address').placeholder = Optional;
+		document.getElementById('contactForm_city').placeholder = Optional;
+		document.getElementById('contactForm_primary_address_state').placeholder = Optional;
+		document.getElementById('contactForm_zip_postal_code').placeholder = Optional;
+		document.getElementById('contactForm_notes').placeholder = Required;
 		parent.$.colorbox.resize({innerHeight:$('body').height()*1.2});
+		if (typeof(addRequiredField) != 'undefined') { 
+		addRequiredField ('contactForm_first_name'); 
+		addRequiredField ('contactForm_last_name'); 
+		addRequiredField ('contactForm_email');
+		addRequiredField ('contactForm_product');
+		addRequiredField ('contactForm_notes');
+		addRequiredField ('contactForm_Business Country');
+		}
+		if (typeof(addFieldToValidate) != 'undefined') { 
+		addFieldToValidate ('contactForm_email', 'EMAIL');
+		}
+		apac = "/resources/php/formtoemail.php?eto=jill.neo@infocus.com&esub=Tech%20Request";
+
  	}
-	document.getElementById('type').value = formType;
+
   	$('#preForm').slideUp(speed);
-  	$('#contactForm').slideDown(speed);
+  	$('#ContactForm').slideDown(speed);
 
   }
 
@@ -510,10 +208,9 @@ a.subtle{color:darkgrey;}
 }
 </style>
  </HEAD>
-<body style="max-width:1200px;background: #f7f7f7;">
-
-<form action="" id="WebToLeadForm" method="POST" name="WebToLeadForm" enctype="multipart/form-data">
-
+<body style="max-width:1200px;background: #f7f7f7;" >
+<div id="clearContainer" style="padding: 15px;">
+<form>
 <input type="hidden" id="req_id" name="req_id" value="">
 <div class="Row" id="preForm">
 <h3 ><?=translate('Contact InFocus')?></h3><span><?=$pageText['LearnAbout']?></span><br>
@@ -533,7 +230,7 @@ a.subtle{color:darkgrey;}
 
 <div><h6><?=$pageText['Failure']?></h6>
 <p><?=$pageText['Power']?></p>
-<p><button type="button" href="#USCanada-popup" class="colorbox-inline"><?=translate('Create a Service Request')?></button>
+<p><button type="button" <?php if($lang=="en"){echo'href="#USCanada-popup" class="colorbox-inline"';}else{echo 'onclick="showForm(\'RMA\');"';}?>><?=translate('Create a Service Request')?></button>
 </div>
 <div>
 <h6><?=$pageText['General']?></h6>
@@ -561,34 +258,33 @@ table.contact-table{
 <h6><?=translate('Other Resources')?></h6>
 > <a class="subtle" href="/resources/forms/projectioncalculator"><?=translate('Projection Calculator')?></a><br>
 > <a class="subtle" href="/support/warrantyvt.php"><?=translate('Check Status of Your Warranty')?></a><br>
-> <a class="subtle" href="/support/authorized-service-centers#ABU" target="_parent"><?=translate('Find a Service Provider')?></a><br>
+> <a class="subtle" href="/support/authorized-service-centers" target="_parent"><?=translate('Find a Service Provider')?></a><br>
 </div>
 </div>
 </div>
 
+</form>
+<div id="ContactForm" style="display:none">
+<h3 class="techOnly"><?=translate('Contact InFocus Technical Support')?></h3><span class="techOnly"><?=$pageText['TechText']?></span><br>
 
-<div id="contactForm" style="display:none">
-<h3 class="salesOnly"><?=translate('Contact InFocus Technical Support')?></h3><span class="salesOnly"><?=$pageText['TechText']?></span><br>
+<h3 class="salesOnly"><?=translate('Contact InFocus Sales')?></h3><span class="salesOnly"><?=$pageText['SalesText']?></span><br>
 
-<h3 class="techOnly"><?=translate('Contact InFocus Sales')?></h3><span class="techOnly"><?=$pageText['SalesText']?></span><br>
+<form action="" id="contactForm" method="POST" name="ContactForm" enctype="multipart/form-data" >
 
-<form action=""method="POST" enctype="multipart/form-data" onsubmit="submit();">
-
-<input type="hidden" id="reqfields" value="first_name,last_name,e_mail,phone_number,organization,serial_number,symptom,address,city,state,zip_postal_code,primary_address_country,notes">
 <input type="hidden" name="type" id="type" value="">
 
  <ul class="wrap">
 <li class="techOnly">
  <label class="top" for="serial_number"><?=translate('Serial Number')?>: </label>
- <input name="serial_number" id="serial_number" type="text" onkeyup="checkSN(this.value);" onchange="checkSNShort(this.value);" >
+ <input name="serial_number" id="contactForm_serial_number" type="text" onkeyup="checkSN(this.value);" onchange="checkSNShort(this.value);" >
 </li>
 <li class="techOnly"><label class="top" for="purchasedate" >Purchase Date: </label>
-<input id="purchasedate" type="text" name="purchasedate" /></li>
+<input id="contactForm_purchasedate" type="text" name="purchasedate" /></li>
 
 <li class="techOnly"><label class="top" for="symptom" >Symptom: </label>
-<select type="text" name="symptom" id="symptom" >
+<select type="text" name="symptom" id="contactForm_symptom" >
 
-	<option id="sympOption" value="" selected="selected">- Select -</option>
+	<option id="contactForm_sympOption" value="" type="text" selected="selected">- Select -</option>
 	<option value="001,Abused / Dropped">Abused / Dropped</option>
 	<option value="004,Audible Noise">Audible Noise</option>
 	<option value="005,Audio">Audio</option>
@@ -635,49 +331,52 @@ table.contact-table{
 </select></li>
 <li>
  <label class="top" for="first_name"><?=translate('First Name')?>: </label>
- <input name="first_name" id="first_name" type="text" value="<?=$_GET['first_name']?>" >
+ <input name="first_name" id="contactForm_first_name" type="text" value="<?=$_GET['first_name']?>" >
 </li>
 <li>
  <label class="top" for="last_name"><?=translate('Last Name')?>: </label>
- <input name="last_name" id="last_name" type="text" value="<?=$_GET['last_name']?>" >
+ <input name="last_name" id="contactForm_last_name" type="text" value="<?=$_GET['last_name']?>" >
 </li>
 <li>
  <label class="top" for="organization"><?=translate('Organization Name')?>: </label>
- <input name="account_name" id="organization" type="text" value="<?=$_GET['account_name']?>" >
+ <input name="account_name" id="contactForm_organization" type="text" value="<?=$_GET['account_name']?>" >
 </li>
 <li>
  <label class="top" for="phone_number"><?=translate('Phone')?>: </label>
- <input name="phone_work" id="phone_number" type="text" value="<?=$_GET['phone_work']?>" >
+ <input name="phone_work" id="contactForm_phone_number" type="text" value="<?=$_GET['phone_work']?>" >
 </li>
 <li>
- <label class="top" for="email"><?=translate('Email Address')?>: </label>
- <input type="email" id="email" name="email1" type="email" value="<?=$_GET['email1']?>" >
+<li  >
+<label class="top" for = "contactForm_email">
+<?=translate('Email Address')?>:<span style="color: #FF0000; cursor: default" title="Required Field" id="ContactForm_email-Label">
+&nbsp;&nbsp;&nbsp;</span></label>
+<input type="text" id="contactForm_email" name="email1" value="<?=$_GET['email1']?>" onBlur="singleCheck ('ContactForm_email', 'EMAIL', 'ContactForm_email-Label')">
 </li>
 <li class="techOnly">
- <label class="top" for="first_name"><?=translate('Secondary Contact Name')?>: </label>
- <input name="second_name" id="second_name" type="text" value="<?=$_GET['second_name']?>" >
+ <label class="top" for="second_name"><?=translate('Secondary Contact Name')?>: </label>
+ <input name="second_name" id="contactForm_second_name" type="text" value="<?=$_GET['second_name']?>" >
 </li>
 <li class="techOnly">
- <label class="top" for="e_mail"><?=translate('Secondary Contact Email')?>: </label>
- <input type="email" id="second_email" name="second_email" value="<?=$_GET['second_email']?>" >
+ <label class="top" for="second_email"><?=translate('Secondary Contact Email')?>: </label>
+ <input type="email" id="contactForm_second_email" name="second_email" value="<?=$_GET['second_email']?>" >
 </li>
 <li>
  <label class="top" for="product"><?=translate('Product Part #')?>: </label>
-<input name="product" id="product" value="" class="form-text" type="text" >
+<input name="product" id="contactForm_product" value="" class="form-text" type="text" >
 </li>
 
 <li class="techOnly">
  <label class="top" for="address"><?=translate('Address')?>: </label>
- <textarea type="text" cols="30" rows="5" name="primary_address_street" id="address" ><?=$_GET['primary_address_street']?></textarea>
+ <textarea type="text" cols="30" rows="5" name="primary_address_street" id="contactForm_address" ><?=$_GET['primary_address_street']?></textarea>
 </li>
 <li class="techOnly">
  <label class="top" for="city"><?=translate('City')?>: </label>
- <input name="primary_address_city" id="city" type="text" value="<?=$_GET['primary_address_city']?>" >
+ <input name="primary_address_city" id="contactForm_city" type="text" value="<?=$_GET['primary_address_city']?>" >
 </li>
 <li>
 
- <label class="top" for="primary_address_country"><?=translate('Country')?>: </label>
- <select type="text" name="primary_address_country" id="primary_address_country" onchange="if(this.value == 'US' || this.value == 'CA'){$('#stateContainer').show();$('#zipContainer').show();}else{$('#stateContainer').hide();$('#zipContainer').hide();}" >
+ <label class="top" for="Business Country"><?=translate('Country')?>: </label>
+ <select type="text" name="Business Country" id="contactForm_Business Country" onchange="if(this.value == 'US' || this.value == 'CA'){$('#stateContainer').show();$('#zipContainer').show();}else{$('#stateContainer').hide();$('#zipContainer').hide();}" >
  <option value=""><?=translate('Required')?></option>
 <?php  
  foreach($displayedCountries as $cCode){
@@ -689,7 +388,7 @@ table.contact-table{
 </li>
 <li id="stateContainer" style="display:none">
  <label class="top" for="state"><?=translate('State/Province')?>: </label>
- <select name="primary_address_state" id="primary_address_state" type="text" >
+ <select name="primary_address_state" id="contactForm_primary_address_state" type="text" >
  <option value="">Select a State</option>
 <?php  
  foreach($stateList as $sCode => $sValue){
@@ -701,13 +400,13 @@ table.contact-table{
 </li>
 <li id="zipContainer" class="techOnly" style="display:none">
  <label class="top" for="zip_postal_code"><?=translate('Zip/Postalcode')?>: </label>
- <input name="primary_address_postalcode" id="zip_postal_code" type="text" value="<?=$_GET['primary_address_postalcode']?>" >
+ <input name="primary_address_postalcode" id="contactForm_zip_postal_code" type="text" value="<?=$_GET['primary_address_postalcode']?>" >
 </li>
 
 
 
 <li><label class="top" for="notes"><?=translate('Notes')?>: </label>
-<textarea id="notes" type="text" name="description" rows="6" placeholder="Required"></textarea></li>
+<textarea id="contactForm_notes" type="text" name="description" rows="6" placeholder="Required"></textarea></li>
 
 <li class="techOnly"><label class="top" for="file"><?=translate('Attach File')?>: </label>
 <input id="file" type="file" name="file"></li>
@@ -717,25 +416,21 @@ table.contact-table{
 
 <input id="optin" name="optin" class="css-checkbox" type="checkbox" value="Yes"/>
 <label for="optin" style="margin-bottom:1.5em;" class="css-label"><?=translate('Yes, I would like to receive news and special deals from InFocus.')?></label>
-<button onclick="submit_form();" type="button"><?=translate('Submit')?></button>
 
-<br><span class="form-required" style="font-size:70%">* <?= $translate['Denotes a Required field']?>.</span>
+<div id="contactForm_ao_submit_button">
+<button id="contactForm_ao_submit_input" type="button" onClick="doSubmit(document.getElementById('contactForm'),abu,emea,apac)"><?=translate('Send')?></button>
+</div>
+
 <p><?php echo $pageText['PrivacyReview'];?></p>
-<input id="campaign_id" type="hidden" name="campaign_id" value="ContactUs" />
-<input id="assigned_user_id" type="hidden" name="assigned_user_id" value="" />
-<input id="team_id" type="hidden" name="team_id" value="1" />
-<input id="team_set_id" type="hidden" name="team_set_id" value="Global" />
-<input type="hidden" id="human" name="human" value="55">
 <input type="hidden" id="name" name="name">
+<input type="hidden" name="ao_p"      id="ao_p"      value="0">
+<input type="hidden" name="ao_bot"    id="ao_bot"	value="yes">
+<input type="hidden" id="clear" name="clear" value="Someone will be contacting you shortly regarding your request.">
 
 </form>
 
 </div>
-
-
-
-
-
+</div>
 
 <div class="hidden" style="display:none">
 <div id="RMAUSCan-popup">
@@ -745,20 +440,21 @@ table.contact-table{
 </dl>
 </style>
  <base target="_parent" />
-<div id="USCanada-popup" style="text-align:center;  margin-left:auto; margin-right:auto;overflow:hidden;">
+<div id="USCanada-popup" style="cursor: pointer;text-align:center;  margin-left:auto; margin-right:auto;overflow:hidden;">
 <img id="Image-UsCanada" src="/resources/images/USCanadaMap.png" usemap="#Image-UsCanada" border="0"  alt="" />
 <map id="_Image-UsCanada" name="Image-UsCanada">
 <area shape="poly" coords="23,99,45,109,67,119,92,129,105,142,111,153,131,143,140,137,148,145,132,158,124,161,123,165,123,170,120,174,119,174,107,185,107,197,104,200,100,197,100,189,96,185,85,182,68,182,61,181,51,188,45,173,40,173,36,161,21,159,16,148,5,140,2,133,2,130,5,119,10,109,19,103,19,103," class="form-box" onclick="showForm('RMA');$.colorbox.close();" alt="United States" title="United States"   />
 <area shape="poly" coords="28,65,33,51,56,40,60,19,23,10,4,19,5,46,17,64," class="form-box" onclick="showForm('RMA');$.colorbox.close();"  alt="United States" title="United States"   />
 <area shape="poly" coords="31,60,31,54,38,48,46,41,58,37,80,20,107,3,169,1,215,4,226,28,226,47,223,62,208,75,197,92,183,95,174,64,164,51,138,46,135,64,149,84,161,100,176,113,174,119,176,137,162,145,150,148,142,135,111,151,109,139,98,130,18,99,21,77," Target="_parent" href="http://www.repairware.ca/contact-us/" alt="Canada" title="Canada"   />
 </map>
-</div>
+<br>Outside the US/CA?<br>
+<a href="http://service.infocus.info/">Europe & Middle East</a><br>
+<a href="/support/authorized-service-centers">Everywhere Else</a></div>
 </div></div>
 
 <script>
 
-				$(".colorbox-inline").colorbox({inline:true});
-
+$(".colorbox-inline").colorbox({inline:true});
 $(function(){
     resize();
     if("<?=$_GET['preForm']?>" != ""){showForm("<?=$_GET['preForm']?>",0);}

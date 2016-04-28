@@ -9,7 +9,7 @@ mysqli_set_charset($connection, "utf8");
 //$countryList = mysqli_real_escape_string($connection, strtoupper($_POST["countryList"]));
 $countryList = $_POST["countryList"];
 
-$result = mysqli_query($connection,'SELECT * FROM resellers WHERE ' . $countryList . ' AND latitude = "Online" AND products LIKE "%' . $_POST['products'] . '%"');
+$result = mysqli_query($connection,'SELECT * FROM resellers WHERE ' . $countryList . ' AND latitude = "Online" AND products LIKE "%' . $_POST['products'] . '%" ORDER BY ID');
 $currentCountry="";
 while($row = mysqli_fetch_array($result))
 {

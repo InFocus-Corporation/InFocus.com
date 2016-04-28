@@ -429,7 +429,21 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<img class="bgimage" src="/resources/images/EDU_1">
 					<div class="slide-info">
 
-							<div  style="position: relative;" class="info cmsedit"><h3 style="color:#1BA1E2;">EDUCATION</h3><p style="color:black;">Helping students engage, teachers connect and administrators succeed with technology that’s effective, easy and affordable.<br><a href="/videos?wMbxkvcaeXo" href="/videos?wMbxkvcaeXo"><img img="" src="/resources/images/roosevelt-high-play" src="/resources/images/roosevelt-high-play" style="width:100%;padding-top:.5em"></a></p><div style="position:relative"><img id="four-prod" src="/resources/images/EDU_1_Object_2" src="/resources/images/EDU_1_Object_2" style="width:100%;padding-top:.5em"><div style="position:absolute;width:50%;height:47%;top:.5em;left:0"><br></div><div style="position:absolute;width:50%;height:47%;top:.5em;right:0"><br></div><div style="position:absolute;width:50%;white;height:47%;bottom:0;left:0"><br></div><div style="position:absolute;width:50%;height:47%;bottom:0;right:0"><br></div></div></div>
+							<div style="position: relative;" class="info cmsedit"><h3 style="color:#1BA1E2;">EDUCATION</h3>
+
+<p style="color:black;">Helping students engage, teachers connect and administrators succeed with technology that’s effective, easy and affordable.<br>
+<a href="/videos?wMbxkvcaeXo"><img alt="" img="" src="/resources/images/roosevelt-high-play" style="width: 100%; padding-top: 0.5em;"></a></p>
+
+<div style="position:relative"><img alt="" id="four-prod" src="/resources/images/EDU_1_Object_2" style="width: 100%; padding-top: 0.5em;">
+<div style="position:absolute;width:50%;height:47%;top:.5em;left:0">&nbsp;</div>
+
+<div style="position:absolute;width:50%;height:47%;top:.5em;right:0">&nbsp;</div>
+
+<div style="position:absolute;width:50%;white;height:47%;bottom:0;left:0">&nbsp;</div>
+
+<div style="position:absolute;width:50%;height:47%;bottom:0;right:0">&nbsp;</div>
+</div>
+</div>
 					</div>
 					<a style="height: 28px;" href="/displays/MONDOPAD-SERIES"><span class="linkspan" style="position: absolute; top: 59.7625%; width: 11.8175%; height: 17.942%; left: 62.7524%; opacity: 0;"></span></a><a style="height: 28px;" href="/displays/BIGTOUCH-SERIES"><span class="linkspan" style="position: absolute; top: 61.2137%; width: 12.2663%; height: 16.6227%; left: 81.7502%; opacity: 0;"></span></a><a style="height: 28px;" href="/displays/JTOUCH-SERIES"><span class="linkspan" style="position: absolute; top: 81.3984%; width: 11.9671%; height: 15.8311%; left: 62.8272%; opacity: 0;"></span></a><a style="height: 28px;" href="/projectors/"><span class="linkspan" style="position: absolute; top: 79.9472%; width: 11.4435%; height: 17.942%; left: 81.8998%; opacity: 0;"></span></a></div>
 <div class="swiper-slide slide sedit" style="position:relative">
@@ -615,15 +629,16 @@ $.get(
 
 <div id="category" class="cmsedit" style=""><!-- CTAGenerated -->
 <div class="headlines-bar" id="headlines-bar">
-<div class="snippet" style="display:inline-block;text-align:left;"><a href="/resources/documents/Mondo/InFocus-Mondopad-CaseStudy-BirminghamSouthernCollege.pdf"><img src="/resources/images/education-tout-1" style="float:left;padding-right:5px;"> <span class="title cmsedit" >HIGHER ED SUCCESS</span></a>
+<div class="snippet" style="display:inline-block;text-align:left;"><a href="/resources/documents/Mondo/InFocus-Mondopad-CaseStudy-BirminghamSouthernCollege.pdf"><img alt="InFocus Mondopad at College" src="/resources/images/education-tout-1" style="padding-right:5px; float:left"> <span class="title cmsedit" >HIGHER ED SUCCESS</span></a>
+
 <p class="cmsedit" >Alabama college creates a global collaboration classroom with Mondopad<br>
 <a href="/resources/documents/Mondo/InFocus-Mondopad-CaseStudy-BirminghamSouthernCollege.pdf">Read a case study (PDF)</a></p>
 </div>
 
-<div class="snippet" style="padding-top:15px;display:inline-block;text-align:left;"><a href="/reseller-locator"><img src="/resources/images/education-tout-2" style="float:left;padding-right:5px;"> <span class="title cmsedit" >EDUCATION DISCOUNTS</span></a>
+<div class="snippet" style="padding-top:5px;display:inline-block;text-align:left;"><a href="/inspire"><img alt="InFocus Inspire Education Program" src="/resources/images/InFocus-Inspire-Education-Program-BlueLogo-163.jpg" style="padding-right:5px; padding-bottom:5px; padding-left:25px; float:left"> <span class="title cmsedit" >EDUCATION DISCOUNTS</span></a>
 
-<p class="cmsedit" >Public sector customers get discounts! Ask your reseller how much you could save.<br>
-<a href="/reseller-locator">Find a Reseller &gt;</a></p>
+<p class="cmsedit" >Education customers get discounts from our Inspire Education Program dealers. Find a dealer and start saving today!<br>
+<a href="/inspire">Learn about Inspire &gt;</a></p>
 </div>
 </div>
 
@@ -634,41 +649,43 @@ $.get(
 
 <nav class="C6 transformer-tabs tabs-wrapper" role="navigation" style="padding-bottom:30px">
 
-	<li><a href="#products-k12" style="min-width:120px;">K-12</a></li>
-	<li><a class="active" href="#products-uni" style="min-width:120px;">Higher Education</a></li>
+	<li><a class="active" href="#products-k12" style="min-width:120px;">K-12</a></li>
+	<li><a href="#products-uni" style="min-width:120px;">Higher Education</a></li>
 
 </nav>
 
 <div class="tab-shadow">&nbsp;</div>
 
-<div id="products-k12">
+<div class="active" id="products-k12">
 <ul class="verticals">
 	<li class="C10 C5_child Col_child ui-shadow-after">
 	<div class="image-set cmsedit" >
-	<p><a href="/displays/JTOUCH-SERIES"><img alt="InFocus 65-inch JTouch Touchscreen Display" src="/resources/images/InFocus-INF6501A-Front.jpg"></a></p>
+	<p><a href="/displays/JTOUCH-LightCast-Series/INF6501w"><img alt="InFocus 65-inch JTouch Whiteboard and Display" src="/resources/images/InFocus-INF6501W-Hero"></a></p>
 	</div>
 
 	<div class="info cmsedit" >
 	<h3 class="name">ENGAGE WITH TOUCH</h3>
 
-	<h5 class="name">Affordable JTouch 65” Touchscreen Display</h5>
+	<h5 class="name">Affordable JTouch 65” Touchscreen Whiteboard and Display</h5>
 
 	<div class="description">
-	<p>Display your PC’s content on a bright, colorful <a href="/displays/INF6501a">65-inch LCD touchscreen</a> that every student in the class can see and touch.</p>
+	<p>Display your PC’s content on a bright, colorful <a href="/displays/JTOUCH-LightCast-Series/INF6501w">65-inch touch display with built-in whiteboard</a> that every student in the class can see and interact with.</p>
 
-	<p>Create an exciting and engaging classroom that utilizes the assets you already have for a fraction of the cost of an interactive whiteboard.</p>
+	<p>Create an exciting and engaging classroom that utilizes the assets you already have for a fraction of the cost.</p>
 
-	<p><span style="color:#339900;">$1,999 Exclusive Sale Price</span> on the <a href="/displays/INF6501a">65-inch JTouch </a>for K-12 schools only!&nbsp; <a href="http://www.infocusstore.com/InFocus-JTouch-65-inch-Touchscreen-Display/dp/B005JZKUHY" target="_blank">Buy Now &gt;</a></p>
+	<p><span style="color:#339900;">$1,999</span> on the <a href="/displays/JTOUCH-LightCast-Series/INF6501w">65-inch JTouch Whiteboard </a>for K-12 schools only!</p>
+
+	<p>Video: <a href="/videos?3NRe5yzKNPI">JTouch in K-12 FAQ</a></p>
 	<a class="btn" href="/displays/family?series=JTOUCH-Series">Learn more about JTouch</a></div>
 	</div>
 	</li>
 	<li class="C10 C3x7_child Col_child ui-dots-after">
 	<div class="image-set cmsedit" style="float:right;" >
-	<p style="padding:0 45px;"><a href="/projectors/IN120A-Series"><img src="/resources/images/InFocus-IN110A"><img alt="" src="/resources/images/InFocus-IN120A-Back"><img alt="" src="/resources/images/svga-xga-wxga_3"></a></p>
+	<p style="padding:0 45px;"><a href="/projectors/IN120A-Series"><img alt="InFocus IN120a Projector Series with wireless option" src="/resources/images/InFocus-IN124A-Hero" height="523" width="896"><img alt="" src="/resources/images/InFocus-IN120A-Back"><img alt="" src="/resources/images/svga-xga-wxga_3"></a></p>
 	</div>
 
 	<div class="info cmsedit" >
-	<h3 class="name" style="text-transform:capitalize;">Low Cost Wireless Projectors</h3>
+	<h3 class="name" style="text-transform:capitalize;">Go Wireless!</h3>
 
 	<div class="description">The new <a href="/projectors/IN122A">IN122a</a>, <a href="/projectors/IN124A">IN124a</a> and <a href="/projectors/IN126A">IN126a</a> are low-cost, high-brightness projectors with HDMI connectivity, 2GB internal storage, USB wireless option, and more. Optional <a href="/accessories/SP-WIFIUSB-2">wireless USB adapter</a> lets you present from tablets, annotate on documents, and even use your mobile device like a document camera.</div>
 
@@ -719,9 +736,9 @@ $.get(
 			</tr>
 			<tr class="footer">
 				<td>&nbsp;</td>
-				<td><a class="btn buy-now" href="http://www.infocusstore.com/s?defaultSearchTextValue=Search&amp;searchKeywords=IN122a+-lamp+-filter&amp;Action=submit">Buy Now</a> <a class="learn-more" href="/projectors/product?pn=IN122A">Learn More</a></td>
-				<td><a class="btn buy-now" href="http://www.infocusstore.com/s?defaultSearchTextValue=Search&amp;searchKeywords=IN124a+-lamp+-filter&amp;Action=submit">Buy Now</a> <a class="learn-more" href="/projectors/product?pn=IN124A">Learn More</a></td>
-				<td><a class="btn buy-now" href="http://www.infocusstore.com/s?defaultSearchTextValue=Search&amp;searchKeywords=IN126a+-lamp+-filter&amp;Action=submit">Buy Now</a> <a class="learn-more" href="/projectors/product?pn=IN126A">Learn More</a></td>
+				<td><a class="btn buy-now" href="https://www.infocusdirect.com/projectors/in122a-svga-wireless-ready-projector">Buy Now</a> <a class="learn-more" href="/projectors/product?pn=IN122A">Learn More</a></td>
+				<td><a class="btn buy-now" href="https://www.infocusdirect.com/projectors/in124a-xga-wireless-ready-projector">Buy Now</a> <a class="learn-more" href="/projectors/product?pn=IN124A">Learn More</a></td>
+				<td><a class="btn buy-now" href="https://www.infocusdirect.com/projectors/in126a-wxga-wireless-ready-projector">Buy Now</a> <a class="learn-more" href="/projectors/product?pn=IN126A">Learn More</a></td>
 			</tr>
 		</tbody>
 	</table>
@@ -729,29 +746,29 @@ $.get(
 	</li>
 	<li class="C10 C4x6_child Col_child ui-shadow-after">
 	<div class="image-set cmsedit" >
-	<p><a href="/projectors/IN3920-Series"><img src="/resources/images/InFocus-IN3920-Right"></a></p>
+	<p><a href="/projectors/office-classroom/IN110X-Series"><img alt="InFocus IN119HDx HD projector" src="/resources/images/InFocus-IN119HDX-Face-Right" height="524" width="898"></a></p>
 	</div>
 
 	<div class="info cmsedit" >
-	<h3 class="name">INTERACT FROM AROUND THE ROOM</h3>
+	<h3 class="name">Best Low-Cost Options</h3>
 
-	<h5 class="name">Remote wand gets you out of the way of your content</h5>
+	<h5 class="name">Incredible projector values, including HD models</h5>
 
 	<div class="description">
-	<p><a href="/projectors/interactive">InFocus LiteBoard interactive projectors</a> come with a handheld wand that you (or your students) can use to control your PCs content from anywhere in the room.</p>
+	<p><a href="/projectors/office-classroom/IN110X-Series">InFocus IN110x projectors</a> start at prices as low as $289 (USD)! They have HDMI connectivity and cut through ambient light with 3200 lumens.</p>
 
-	<p>Use the wand like a mouse to control your software, browse the web, draw on the screen and more. You can even use two wands at the same time.</p>
-	<a class="btn" href="/projectors/family?series=IN3920-Series">View IN3920 Interactive Projectors</a></div>
+	<p>HD projectors from InFocus are also an incredible value with two low-cost models to choose from, starting at an incredible $499 (US).</p>
+	<a class="btn" href="/projectors/office-classroom/IN110X-Series">View IN110x Projectors</a></div>
 	</div>
 	</li>
 </ul>
 </div>
 
-<div class="active" id="products-uni">
+<div id="products-uni">
 <ul class="verticals">
 	<li class="C10 C5_child Col_child ui-shadow-after">
 	<div class="image-set cmsedit" >
-	<p><a href="/displays/family?series=MONDOPAD-SERIES"><img src="/resources/images/InFocus-INF7021-Hero"></a></p>
+	<p><a href="/displays/MONDOPAD-SERIES"><img alt="InFocus Mondopad in Higher Ed" src="/resources/images/InFocus-Mondopad-Higher-Ed-Medical"></a></p>
 	</div>
 
 	<div class="info cmsedit" >
@@ -764,17 +781,14 @@ $.get(
 
 	<p><a href="http://www.higheredtechdecisions.com/photos/10_infcomm_products_highereducation_techdecisions_recommends_for_your_colle/5" target="_blank">Read why HigherEdTechDecisions recommends Mondopad for your college</a></p>
 
-	<ul class="feature-list">
-		<li>Videoconferencing</li>
-		<li>Whiteboard and annotation</li>
-		<li>Complete Windows PC capability</li>
-	</ul>
-	<a class="btn" href="/displays/family?series=MONDOPAD-Series">Learn more about Mondopad</a></div>
+	<p><a href="http://www.svconline.com/news/education/satellite-collaboration/402642" target="_blank">Read how Brenau University uses Mondopad to reach more students</a></p>
+	<br>
+	<a class="btn" href="/displays/MONDOPAD-Series">Learn more about Mondopad</a></div>
 	</div>
 	</li>
 	<li class="C10 C5_child Col_child ui-dots-after">
 	<div class="image-set cmsedit" style="float:right;" >
-	<p><a href="/resources/documents/Mondopad_Higher_Education_Whitepaper.pdf"><img src="/resources/images/Olin205-Web-Ready"></a></p>
+	<p><a href="/resources/documents/Mondopad_Higher_Education_Whitepaper.pdf"><img alt="" src="/resources/images/Olin205-Web-Ready"></a></p>
 	</div>
 
 	<div class="info cmsedit" >
@@ -783,13 +797,15 @@ $.get(
 	<h5 class="tagline">More efficient, cost-effective collaboration in higher education</h5>
 
 	<div class="description">
-	<p>This brief and informative report examines the benefits and challenges of various videoconferencing and collaboration use cases in higher education, including administrative and faculty collaboration, huddle rooms, and distance learning and collaboration.</p>
+	<p>This brief and informative report examines the benefits and challenges of various video conferencing and collaboration use cases in higher education, including administrative and faculty collaboration, huddle rooms, and distance learning and collaboration.</p>
+
+	<p>Video: <a href="/videos?iFJa8NuS52g">Mondopad in Higher Education FAQ</a></p>
 	<a class="btn" href="/resources/documents/Mondopad_Higher_Education_Whitepaper.pdf">Download White Paper (PDF)</a></div>
 	</div>
 	</li>
 	<li class="C10 C3x7_child Col_child ui-shadow-after">
 	<div class="image-set cmsedit" >
-	<p><a href="/projectors/IN5550-Series"><img src="/resources/images/InFocus-IN5550-Right"></a><a href="/projectors/IN5140-Series"><img src="/resources/images/InFocus-IN5140-Back"></a></p>
+	<p><a href="/projectors/IN5550-Series"><img alt="" src="/resources/images/InFocus-IN5550-Right"></a><a href="/projectors/IN5140-Series"><img alt="" src="/resources/images/InFocus-IN5140-Back"></a></p>
 	</div>
 
 	<div class="info cmsedit" >

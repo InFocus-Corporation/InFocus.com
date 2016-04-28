@@ -1,24 +1,11 @@
 ﻿<?php
 
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
+require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 
 
 ?>
-<!DOCTYPE html>
 
-<!--[if IE 9]>     <html class="ie ie9 lte9"> <![endif]-->
-<!--[if !IE]><!--> <html>             <!--<![endif]-->
-<HEAD>
- 
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<link type="text/css" rel="stylesheet" href="/resources/css/core.css">
-<script type="text/javascript" src="/resources/js/InFocusCollection.js"></script>
-<script type="text/javascript" src="/resources/js/WebToLead.js"></script>
-<!--[if IE]>
-    <link href="/resources/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <![endif]-->
  <script>
 if(self==top){
 var sPath=window.location.pathname;
@@ -41,8 +28,8 @@ window.location = "/#getaquote";
 <body style="max-width:1200px;background: #f7f7f7;line-height: 1em;">
 
 
-<form id="WebToLeadForm" method="POST" name="WebToLeadForm">
-
+<form id="GetAQuote" method="POST" name="GetAQuote">
+<span id="clearContainer">
 <h2 style="text-align: left;"><?php echo translate('Get a Quote');?></h2>
 <p style="text-align: left;"><?php echo $pageText['WorkWithYou'];?></p>
 
@@ -63,35 +50,36 @@ echo '<input id="productofinterest_c" type="text" name="productofinterest_c" >
 }
 else
 {
-echo '<select id="productofinterest_c" type="text" name="productofinterest_c" >
+echo '<select id="GetAQuote_productofinterest_c" type="text" name="productofinterest_c" >
+<option value="ConX Wall">ConX Wall</option>
 </select>
 <script>
-getProductList(" productgroup != ' . "'Accessory'" . ' AND productgroup != ' . "'Series'" . ' AND active != 0 AND active is not null AND active != 9","productofinterest_c");
+getProductList(" productgroup = \'Display\' AND active != 0 AND active is not null AND active != 9","GetAQuote_productofinterest_c",\'<option value="ConX Wall">ConX Wall or ConX Exec</option><option value="Canvas Touch">Canvas Touch</option>\');
 </script>';
 }
 
 ?>
 
-<label class="top" for="quanity_of_units_c"><?=translate('Quantity') ?>: </label>
-<input id="quanity_of_units_c" type="text" name="quanity_of_units_c"/>
+<label class="top" for="quanity_of_units_c"><?=translate('Quantity') ?>: <span class="required" style="color: #ff0000;">*</span></label>
+<input id="GetAQuote_quanity_of_units_c" type="text" name="quanity_of_units_c" required/>
 
 
 <label class="top" for="description"><?=translate('Notes') ?>: <span class="required" style="color: #ff0000;">*</span></label>
-<textarea id="description" type="text" name="description" rows="8" /> </textarea>
+<textarea id="GetAQuote_description" type="text" name="description" rows="8" required/> </textarea>
   </li>
   
 <li>
 <label class="top" for="email1"><?=translate('Email') ?>: <span class="required" style="color: #ff0000;">*</span></label>
-<input id="email1" type="text" name="email1" onchange="validateEmailAdd();" />
+<input id="GetAQuote_email1" type="text" name="email1" required/>
 </li>
 <li>
 
 <label class="top" for="first_name"><?=translate('First Name') ?>: <span class="required" style="color: #ff0000;">*</span></label>
-<input id="first_name" type="text" name="first_name" />
+<input id="GetAQuote_first_name" type="text" name="first_name" required/>
 </li>
 <li>
 <label class="top" for="last_name"><?=translate('Last Name') ?>: <span class="required" style="color: #ff0000;">*</span></label>
-<input id="last_name" type="text" name="last_name"  onchange="validateHuman();"/>
+<input id="GetAQuote_last_name" type="text" name="last_name" required/>
 </li>
 <li>
 <label class="top" for="title"><?=translate('Job Title');?>: </label>
@@ -99,19 +87,19 @@ getProductList(" productgroup != ' . "'Accessory'" . ' AND productgroup != ' . "
 </li>
 <li>
 <label class="top" for="account_name"><?=translate('Organization Name');?>: <span class="required" style="color: #ff0000;">*</span></label>
-<input id="account_name" type="text" name="account_name" />
+<input id="account_name" type="text" name="account_name" required />
 </li>
 <li>
 <label class="top" for="primary_address_street"><?=translate('Address');?>: <span class="required" style="color: #ff0000;">*</span></label>
-<input id="primary_address_street" type="text" name="primary_address_street" />
+<input id="primary_address_street" type="text" name="primary_address_street" required />
 </li>
 <li>
 <label class="top" for="primary_address_city"><?=translate('City');?>: <span class="required" style="color: #ff0000;">*</span></label>
-<input id="primary_address_city" type="text" name="primary_address_city" />
+<input id="primary_address_city" type="text" name="primary_address_city" required/>
 </li>
 <li>
  <label class="top" for="primary_address_country"><?=translate('Country')?>: <span class="required" style="color: #ff0000;">*</span></label>
- <select type="text" name="primary_address_country" id="primary_address_country" onchange="if(this.value == 'US' || this.value == 'CA'){$('#stateContainer').show();$('#zipContainer').show();}else{$('#stateContainer').hide();$('#zipContainer').hide();}" >
+ <select type="text" name="Business Country" id="GetAQuote_Business Country" onchange="if(this.value == 'US' || this.value == 'CA'){$('#stateContainer').show();$('#zipContainer').show();}else{$('#stateContainer').hide();$('#zipContainer').hide();}" required>
  <option value="">Select a Country</option>
 <?php  
  foreach($displayedCountries as $cCode){
@@ -124,7 +112,7 @@ getProductList(" productgroup != ' . "'Accessory'" . ' AND productgroup != ' . "
 <li>
 <li id="stateContainer" style="display:none">
  <label class="top" for="state"><?=translate('State/Province')?>: <span class="required" style="color: #ff0000;">*</span></label>
- <select name="primary_address_state" id="primary_address_state" type="text" >
+ <select name="primary_address_state" id="primary_address_state" type="text" required >
  <option value="">Select a State</option>
 <?php  foreach($stateList as $sCode => $sValue){echo "<option value='$sCode'>{$sValue} ($sCode)</option>";} ?>
  </select>
@@ -136,38 +124,40 @@ getProductList(" productgroup != ' . "'Accessory'" . ' AND productgroup != ' . "
 
 <li>
 <label class="top" for="phone_work"><?php echo $translate['Phone'];?>: <span class="required" style="color: #ff0000;">*</span></label>
-<input id="phone_work" type="text" name="phone_work" />
+<input id="GetAQuote_phone_work" type="text" name="phone_work" required/>
 </li>
 <li>
-<br>
-<button onclick="submit_form();" type="button"><?php echo $translate['Send'];?></button>
-<br><span class="form-required" style="font-size:70%">* <?php echo $translate['Denotes a Required field'];?>.</span></li>
+<div id="GetAQuote_ao_submit_button">
+<button id="GetAQuote_ao_submit_input" type="button" onClick="console.log(requiredFields);doSubmit(document.getElementById('GetAQuote'),'/resources/php/formtoemail.php?eto=GetAQuote@infocus.com&esub=Get%20A%20Quote','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit')"><?=translate('Send')?></button>
+</div>
+<span class="form-required" style="font-size:70%">* <?php echo $translate['Denotes a Required field'];?>.</span></li>
  </ul>
 
 
 <p><?php echo $pageText['PrivacyReview'];?></p>
 
-
-
-
-<input id="campaign_id" type="hidden" name="campaign_id" value="GetAQuote" />
-
-
-<input id="assigned_user_id" type="hidden" name="assigned_user_id" value="" />
-
-<input id="team_id" type="hidden" name="team_id" value="1" />
-<input id="team_set_id" type="hidden" name="team_set_id" value="Global" />
-
-<input id="req_id" type="hidden" name="req_id" value="last_name;email1;primary_address_country;first_name;productofinterest_c" />
-
-<input type="hidden" id="human" name="human" value="0">
-
 <input type="hidden" id="name" name="name">
+<input type="hidden" id="clear" name="clear" value="Thank you for your interest.  Someone will be contacting you shortly.">
 
-
+</span>
 </form>
 
 <script>
+console.log(typeof(addRequiredField));
+if (typeof(addRequiredField) != 'undefined') { 
+console.log("test");
+addRequiredField ('GetAQuote_email1'); 
+addRequiredField ('GetAQuote_first_name'); 
+addRequiredField ('GetAQuote_last_name'); 
+addRequiredField ('GetAQuote_phone_work');
+addRequiredField ('GetAQuote_productofinterest_c'); 
+addRequiredField ('GetAQuote_Business Country');
+addRequiredField ('GetAQuote_description');
+}
+if (typeof(addFieldToValidate) != 'undefined') { 
+addFieldToValidate ('GetAQuote_email1', 'EMAIL');
+}
+
 $(document).ready(function() { 
     parent.$.colorbox.resize({
         innerWidth:$('body').width(),

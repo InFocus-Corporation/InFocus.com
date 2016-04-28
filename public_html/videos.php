@@ -212,7 +212,7 @@ if(!empty($_SERVER['QUERY_STRING'])){
 
 					echo '<div class="video" style="padding-bottom:30px">
 							
-							<iframe id="main-video" src="//www.youtube.com/embed/' . $row[3] . '?vq=hd720" style="width:100%;height:600px" frameborder="0" allowfullscreen ></iframe></div>
+							<iframe id="main-video" src="//www.youtube.com/embed/' . $row[3] . '?vq=hd720&rel=0&modestbranding=1" style="width:100%;height:600px" frameborder="0" allowfullscreen ></iframe></div>
 							
 														<h3 id="videoheader">' . $row[1] . '</h3>
 							<p id="videosummary">' . $row[2] . '</p>
@@ -255,7 +255,7 @@ die();
 					echo '<div class="video" style="padding-bottom:30px">
 														<h3 id="videoheader">' . $row[1] . '</h3>
 							<p id="videosummary">' . $row[0] . '</p>
-							<iframe id="main-video" src="//www.youtube.com/embed/' . $row[3] . '?vq=hd720" style="width:100%;height:600px" frameborder="0" allowfullscreen ></iframe></div>
+							<iframe id="main-video" src="//www.youtube.com/embed/' . $row[3] . '?vq=hd720&rel=0&modestbranding=1" style="width:100%;height:600px" frameborder="0" allowfullscreen ></iframe></div>
 						<div style="text-align:center">	
 				<h4>Filter by Video Type or Industry</h4>
 					<div class="ui-widget">

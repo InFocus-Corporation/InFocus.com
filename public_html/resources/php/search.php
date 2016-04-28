@@ -70,9 +70,10 @@ partnumber LIKE "IN' . $searchString . '" OR
 partnumber LIKE "IN' . $searchString . '-Series" OR 
 partnumber LIKE "INS-' . $searchString . '" OR 
 partnumber LIKE "INS-' . $searchString . '-Series" OR 
+partnumber LIKE "INF-' . $searchString . '" OR 
 partnumber LIKE "INF' . $searchString . '" OR 
 partnumber LIKE "INF' . $searchString . '-Series") 
-AND lang = "' . $lang . '"';
+AND lang = "' . $lang . '" AND producttext.active != 86';
 $result = mysqli_query($connection,$sql);
 if(mysqli_num_rows($result)==0)
 {
@@ -88,7 +89,7 @@ partnumber LIKE "INS-' . $searchString . '%" OR
 partnumber LIKE "INS-' . $searchString . '%-Series" OR 
 partnumber LIKE "INF' . $searchString . '%" OR 
 partnumber LIKE "INF' . $searchString . '%-Series") 
-AND lang = "' . $lang . '"';
+AND lang = "' . $lang . '" AND producttext.active != 86';
 $result = mysqli_query($connection,$sql);
 if(mysqli_num_rows($result)==0)
 {echo 'No Results';
@@ -124,8 +125,8 @@ switch($row[0]){
 	die();
 	Break;
 
-	case 'Video-Communication':
-	echo '/video-communication/' . $partnumber ;	
+	case 'Peripheral':
+	echo '/peripherals/' . $partnumber ;	
 	die();
 	Break;
 

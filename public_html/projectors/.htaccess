@@ -9,6 +9,7 @@ RewriteCond %{HTTP_HOST} !^www\.
 RewriteCond %{HTTP_HOST} !^dev\.
 RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/projectors/$1 [R=301,L]
 
+
 RewriteRule  ^portable-projectors/infocus-in1100er-projektor-serie$ /projectors/IN1100-SERIES [R=301,NC,L]
 
 RewriteRule  ^discontinued(-)?(projectors)?(displays)?.*$ /support [R=301,NC,L]

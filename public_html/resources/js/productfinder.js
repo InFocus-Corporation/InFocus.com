@@ -118,8 +118,7 @@ function fetchMatches(){
 
 
 				var Q1 = document.getElementById('Q1').value;
-				var Q2 = document.getElementById('Q2').value;
-				var Q2a = document.getElementById('Q2a').value;
+if(vLang != "en"){	var Q2 = document.getElementById('Q2').value*.0328084;	var Q2a = document.getElementById('Q2a').value*.0328084;	console.log(Q2);	console.log(Q2a);}else{	var Q2 = document.getElementById('Q2').value;	var Q2a = document.getElementById('Q2a').value;}
 				var Q3 = document.getElementById('Q3').value;
 				var Q4 = document.getElementById('Q4').value;
 				var Q5 = document.getElementById('Q5').value;

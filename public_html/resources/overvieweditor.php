@@ -206,8 +206,8 @@ left: 95px;">to add an embeded video use this: &lt;iframe src="//www.youtube.com
 <form action="" method="get" style="padding:15px 15px;display:block;position:relative;top:-20px;width:80%;margin:auto;">
 <input type="text" name="pn" id="pn" placeholder="Part Number" value="<?php echo $pn; ?>">
 <input style="width:50px;margin-left:20px;" type="text" name="lang" id="lang" value="<?php echo $lang; ?>">
-<input type="submit" value="Load" style="margin-left:15px">
-<button type="button" onclick="submitOverview()" style="margin-left:50px">Submit Changes</button>
+<input type="submit" value="Load" style="width: 90px;margin-left:15px">
+<button type="button" onclick="submitOverview()" style="margin-left:20px">Submit Changes</button>
 <button type="button" onclick="refreshInstances()" style="margin-left:50px;margin-right: 200px;margin-top: 20px;">Refresh WYSIWYG</button>
 <span id="results"></span>
 

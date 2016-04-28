@@ -6,8 +6,9 @@ foreach($_POST as $key=>$value)
 {
 if($key !="submit"){
 
-
-$setList .=  "`$key`=" . '"' . mysqli_real_escape_string($connection,$value) . '" ,';
+if(mysqli_real_escape_string($connection,$value) == ""){$setList .=  "`$key`= NULL ,";
+}
+else{$setList .=  "`$key`=" . '"' . mysqli_real_escape_string($connection,$value) . '" ,';}
 }
 }
 

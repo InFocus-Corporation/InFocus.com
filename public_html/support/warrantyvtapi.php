@@ -4,7 +4,7 @@
 
 extract($_REQUEST);
 
-if ( isset($SN) ) {$connection = mysqli_connect('67.43.0.33','partners_login','InF0cusP@ssw0rd', 'partners_IFC_IB',3306);$SN = mysqli_real_escape_string($connection,$SN);
+if ( isset($SN) ) {$connection = mysqli_connect('localhost','partners_login','InF0cusP@ssw0rd', 'partners_IFC_IB',3306);$SN = mysqli_real_escape_string($connection,$SN);
 mysqli_set_charset($connection, "utf8");
 
 $Serial = $SN;
@@ -26,7 +26,7 @@ $Result .= "<br><strong>Factory Warranty:</strong> From ". $row['FromDate'];
 $Result .= " To " . $row['ToDate'];
 }
 
-$result = mysqli_query($connection,"SELECT * FROM Contracts WHERE `Serial Number`='$SN'");
+$result = mysqli_query($connection,"SELECT ITEMNAME FROM partners_IFC_IB.Contracts JOIN partners_external.items ON `Part Number` = ITEMID WHERE `Serial Number`='$SN'");
 
 if(mysqli_num_rows($result)>0){
 $Result .= "<br><strong>Additional Contracts:</strong>";
@@ -34,7 +34,7 @@ $Result .= "<br><strong>Additional Contracts:</strong>";
 while($row = mysqli_fetch_array($result))
   {
 
-$Result .= "<br>" . $row['Part Number'];
+$Result .= "<br>" . $row['ITEMNAME'];
 }
 
 if (is_null($Result)){
@@ -42,18 +42,8 @@ if (is_null($Result)){
 echo "<strong>No Result Found<br></strong>";
 echo "Older serial numbers (greater than 8 years) may no longer have a record in the database to increase efficiency.<br>";
 
-if (substr($Serial,4,1) == 9){
-
-$year = 2011;
-$week = substr($SN,5,2);
-$start = date("M jS, Y", strtotime("01 Jan ".$year." 00:00:00 GMT + ".$week." weeks"));
-$end = date("M jS, Y", strtotime($start." + 1 week"));
-
-echo "Based on the format of your serial number your warranty most likely expires " . $end;
-}
-else if (substr($Serial,0,1) == 'a' OR substr($Serial,0,1) == 'A'){$year = 2002 + substr($SN,4,1);
-$week = substr($SN,5,2);$start = date("M jS, Y", strtotime("01 Jan ".$year." 00:00:00 GMT + ".$week." weeks"));$end = date("M jS, Y", strtotime($start." + 1 week"));if ($week >= 1){echo "Based on the format of your serial number your warranty most likely expires " . $end;}}else{$year = 2012 + substr($SN,4,1);$week = substr($SN,5,2);$start = date("M jS, Y", strtotime("01 Jan ".$year." 00:00:00 GMT + ".$week." weeks"));$end = date("M jS, Y", strtotime($start." + 1 week"));if ($week >= 1){
-echo "Based on the format of your serial number your warranty most likely expires " . $end;
+preg_match_all("/[0-9]/", $Serial, $matches);if ($matches[0][0] == 9){$year = 2011;$week = $matches[0][1].$matches[0][2];$start = date("M jS, Y", strtotime("01 Jan ".$year." 00:00:00 GMT + ".$week." weeks"));$end = date("M jS, Y", strtotime($start." + 1 week"));echo "Based on the format of your serial number your warranty most likely began " . $start . ".  Standard warranties are 1-2 years depending on the product.";}else if (substr($Serial,0,1) == 'a' OR substr($Serial,0,1) == 'A'){$year = 2002 + $matches[0][0];$week = $matches[0][1].$matches[0][2];$start = date("M jS, Y", strtotime("01 Jan ".$year." 00:00:00 GMT + ".$week." weeks"));$end = date("M jS, Y", strtotime($start." + 1 week"));if ($week >= 1){echo "Based on the format of your serial number your warranty most likely began " . $start . ".  Standard warranties are 1-2 years depending on the product.";}}else{$year = 2012 + $matches[0][0];$week = $matches[0][1].$matches[0][2];$start = date("M jS, Y", strtotime("01 Jan ".$year." 00:00:00 GMT + ".$week." weeks"));$end = date("M jS, Y", strtotime($start." + 1 week"));if ($week >= 1){
+echo "Based on the format of your serial number your warranty most likely began " . $start . ".  Standard warranties are 1-2 years depending on the product.";
 }}
 }else {echo $Result;}}
 ?> 

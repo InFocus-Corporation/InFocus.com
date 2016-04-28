@@ -16,8 +16,8 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 <div class="C9">
 	<h1 class="title">Warranty Documentation</h1>
 		<h3>InFocus Warranty Documents</h3>
-		<a href="/resources/documents/InFocus-Limited-Warranty-Mondopad-BigTouch-All-Languages.pdf">Mondopad and BigTouch Warranty Terms</a><br>
-		<p>Do you need to extend your Mondopad or BigTouch warranty? <a href="/accessories/services">Check out our extended warranty options here</a> or contact your reseller.</p>
+		<a href="/resources/documents/InFocus-Limited-Warranty-Mondopad-BigTouch-All-Languages.pdf">Mondopad, BigTouch and JTouch Warranty Terms</a><br>
+		<p>Do you need to extend your Mondopad, BigTouch or JTouch warranty? <a href="/accessories/services">Check out our extended warranty options here</a> or contact your reseller.</p>
 
 		<a href="/resources/documents/InFocus-Limited-Warranty-LCD_DLP-All-Languages.pdf">DLP & LCD Projector Warranty Terms (pdf)</a><br>
 		<a href="/resources/documents/InFocus-Limited-Warranty-LED-All-Languages.pdf">LED Projector Warranty Terms (pdf)</a>

@@ -7,6 +7,6 @@ header#masthead #brand h3#logo, header#masthead #brand p#title {
 }
 
 
-h4, .h4 {
+h4, .h4, .title {
     text-transform: none;
 }

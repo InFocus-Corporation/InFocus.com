@@ -458,30 +458,35 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<img class="bgimage" src="/resources/images/BUS_1">
 					<div class="slide-info">
 
-							<div class="info cmsedit" style="text-align:right;">
-								<h3 style="color:#1BA1E2;">BUSINESS</h3>
-								<p style="color:black;">Increase your productivity and profitability with cost-effective technology that improves how you communicate and collaborate.
-<br><a href="/mondopad-live-demo"><button class="btn bluebtn">Get a live Mondopad demo</button></a>
-</p>
-<div style="position:relative"><img id="four-prod" style="width:100%;padding-top:.5em" src="/resources/images/EDU_1_Object_2">
-<a href="/displays/family?series=MONDOPAD-Series"><div style="position:absolute;width:50%;height:47%;top:.5em;left:0"></div></a>
-<a href="/displays/family?series=BIGTOUCH-Series"><div style="position:absolute;width:50%;height:47%;top:.5em;right:0"></div></a>
-<a href="/displays/family?series=JTOUCH-Series"><div style="position:absolute;width:50%;white;height:47%;bottom:0;left:0"></div></a>
-<a href="/projectors"><div style="position:absolute;width:50%;height:47%;bottom:0;right:0"></div></a></div>
-						</div>
+							<div class="info cmsedit" style="text-align: right; position: relative;"><h3 style="color:#1BA1E2;">BUSINESS</h3>
+
+<p style="color:black;">Increase your productivity and profitability with cost-effective technology that improves how you communicate and collaborate.<br>
+<button class="btn bluebtn">Get a live Mondopad demo</button></p>
+
+<div style="position:relative"><img alt="" id="four-prod" src="/resources/images/EDU_1_Object_2" style="width: 100%; padding-top: 0.5em;">
+<div style="position:absolute;width:50%;height:47%;top:.5em;left:0">&nbsp;</div>
+
+<div style="position:absolute;width:50%;height:47%;top:.5em;right:0">&nbsp;</div>
+
+<div style="position:absolute;width:50%;white;height:47%;bottom:0;left:0">&nbsp;</div>
+
+<div style="position:absolute;width:50%;height:47%;bottom:0;right:0">&nbsp;</div>
+</div>
+</div>
 					</div>
 					</div>
 					
 <div class="swiper-slide slide sedit" style="position:relative">
 <div>				<img class="bgimage" src="/resources/images/BUS_2">
 					<div class="slide-info">
-					<div style="text-align:right" class="info adjust-right cmsedit">
-								<h6 style="">BUSINESS</h6>
-								<h3 style="color:#ADD238;font-size:300%;font-weight:200;text-shadow: 4px 4px 4px rgba(0,0,0,.25);">PRODUCTIVITY</h3>
-								<p class="Mobile-Color-Swap" style="text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);">Communicating with clarity reduces errors and saves time. Share ideas and solve problems with technology that makes it easy.</p>
-								<br><a href="/displays/"><button class="btn greybtn" style="width:260px;float:right;">See all touch displays</button></a>
-								<br><a href="/projectors/"><button class="btn greybtn" style="width:260px;float:right;">See all projectors</button></a>
-							</div>
+					<div style="text-align: right; position: relative;" class="info adjust-right cmsedit"><h6 style="">BUSINESS</h6>
+
+<h3 style="color:#ADD238;font-size:300%;font-weight:200;text-shadow: 4px 4px 4px rgba(0,0,0,.25);">PRODUCTIVITY</h3>
+
+<p class="Mobile-Color-Swap" style="text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);">Communicating with clarity reduces errors and saves time. Share ideas and solve problems with technology that makes it easy.</p>
+<br>
+<button class="btn greybtn" style="width:260px;float:right;">See all touch displays</button><br>
+<button class="btn greybtn" style="width:260px;float:right;">See all projectors</button></div>
 					</div>
 </div></div>
 
@@ -489,15 +494,13 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 <div>				<img class="wider" src="/resources/images/BUS_3">
 					<div style="" class="slide-info wider">
 
-							<div style="text-align:right;" class="info cmsedit">
-								<h6 style="">BUSINESS</h6>
-								<h3 style="color:#EC126D;font-size:300%;font-weight:200;text-shadow: 4px 4px 4px rgba(0,0,0,.25);">STAY WHERE YOU ARE</h3>
-								<p class="Mobile-Color-Swap" style="text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);">Have meaningful face-to-face meetings with your colleagues at the drop of a hat and save money and time on travel.</p>
-								<br><a href="/displays/family?series=MONDOPAD-Series"><button class="btn greybtn" style="color:#EC126D;width:280px;margin-left: auto;display:block;">Mondopad in conference rooms</button></a>
-								<a href="/video-communication/product?pn=MVP100"><button class="btn greybtn" style="color:#EC126D;width:280px;margin-left: auto;display:block;">Video Phones on desks</button></a>
-								<a href="/ConX"><button class="btn greybtn" style="color:#EC126D;width:280px;margin-left: auto;display:block;">ConX Group Videoconferencing</button></a>
-								
-							</div>
+							<div style="text-align: right; position: relative;" class="info cmsedit"><h6 style="">BUSINESS</h6>
+
+<h3 style="color:#EC126D;font-size:300%;font-weight:200;text-shadow: 4px 4px 4px rgba(0,0,0,.25);">STAY WHERE YOU ARE</h3>
+
+<p class="Mobile-Color-Swap" style="text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);">Have meaningful face-to-face meetings with your colleagues at the drop of a hat and save money and time on travel.</p>
+<br>
+<button class="btn greybtn" style="color:#EC126D;width:280px;margin-left: auto;display:block;">Mondopad in conference rooms</button><button class="btn greybtn" style="color:#EC126D;width:280px;margin-left: auto;display:block;">Video Phones on desks</button><button class="btn greybtn" style="color:#EC126D;width:280px;margin-left: auto;display:block;">ConX Video Meeting</button></div>
 					</div>
 </div></div>
 <div class="swiper-slide slide sedit" style="position:relative">
@@ -506,14 +509,12 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 				<img class="wider" src="/resources/images/BUS_4">
 					<div class="slide-info" style="">
 
-							<div style="text-align:right;height:100%" class="info cmsedit">
-								<h6 style="">BUSINESS</h6>
-							<h3 style="color:#f66d26;font-size:300%;font-weight:200;text-shadow: 4px 4px 4px rgba(0,0,0,.25);">SUCCEED</h3>
-								<p class="Mobile-Color-Swap" style="text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);">From bringing people closer together to making your ideas shine bigger and brighter – we’re here to make you successful.
-																</p>
-																<a href="/product-finder"><button class="btn orangebtn" style="width:340px;margin-left: auto;display:block;">FIND THE PROJECTOR YOU NEED</button></a>
-								<a href="/displays/"><button class="btn orangebtn" style="width:340px;margin-left: auto;display:block;">COMPARE TOUCH SCREEN SOLUTIONS</button></a>
-							</div>
+							<div style="text-align: right; height: 100%; position: relative;" class="info cmsedit"><h6 style="">BUSINESS</h6>
+
+<h3 style="color:#f66d26;font-size:300%;font-weight:200;text-shadow: 4px 4px 4px rgba(0,0,0,.25);">SUCCEED</h3>
+
+<p class="Mobile-Color-Swap" style="text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);">From bringing people closer together to making your ideas shine bigger and brighter – we’re here to make you successful.</p>
+<button class="btn orangebtn" style="width:340px;margin-left: auto;display:block;">FIND THE PROJECTOR YOU NEED</button><button class="btn orangebtn" style="width:340px;margin-left: auto;display:block;">COMPARE TOUCH SCREEN SOLUTIONS</button></div>
 					</div>
 							
 
@@ -660,142 +661,141 @@ $.get(
   </script>
 
 <div id="category" class="cmsedit" style=""><!-- CTAGenerated -->
-  					<div class="headlines-bar" id="headlines-bar">
-									<div class="snippet" style="">
-									<a href="/resources/documents/InFocus-Touchscreen-Solutions-Datasheet-EN.pdf"><img style="float:left;" src="/resources/images/business-tout-1.png">
-										<span class="title cmsedit">COMPARE TOUCHSCREENS</span></a>
-										<p class="cmsedit">See the Mondopad, BigTouch and JTouch solutions and their accessories together in one brochure.<br>
+<div class="headlines-bar" id="headlines-bar">
+<div class="snippet" style=""><a href="/resources/documents/InFocus-Touchscreen-Solutions-Datasheet-EN.pdf"><img alt="" src="/resources/images/business-tout-1.png" style="float:left"> <span class="title cmsedit" >COMPARE TOUCHSCREENS</span></a>
+<p class="cmsedit" >See the Mondopad, BigTouch and JTouch solutions and their accessories together in one brochure.<br>
 <a href="/resources/documents/InFocus-Touchscreen-Solutions-Datasheet-EN.pdf">DOWNLOAD NOW (PDF)</a></p>
-									</div>	
+</div>
 
-									<div class="snippet" style="">
-									<a href="/reseller-locator"><img style="float:left;" src="/resources/images/business-tout-2.png">
-										<span class="title cmsedit">LIVE MONDOPAD DEMO</span></a>
-										<p class="cmsedit">Get a personal, interactive Mondopad demo online from an InFocus expert.<br>
+<div class="snippet" style=""><a href="/mondopad-live-demo"><img alt="" src="/resources/images/business-tout-2.png" style="float:left"> <span class="title cmsedit" >LIVE MONDOPAD DEMO</span></a>
+
+<p class="cmsedit" >Get a personal, interactive Mondopad demo online from an InFocus expert.<br>
 <a href="/mondopad-live-demo">GET YOUR DEMO HERE</a></p>
-									</div>
-					</div>
+</div>
+</div>
+
 <div class="content" style="padding-top:1em;">
 <div class="C9" id="business">
+<ul class="verticals">
+	<li class="C10 C5_child Col_child ui-shadow-after">
+	<div class="image-set cmsedit" >
+	<p><a href="/displays/MONDOPAD-SERIES"><img alt="InFocus Mondopad" src="/resources/images/InFocus-Mondopad-20-INF5720-Annotate-Stack.jpg"></a></p>
+	</div>
 
-				<ul class="verticals">
-					<li class="C10 C5_child Col_child ui-shadow-after">
-						<div class="image-set cmsedit"><p><a href="/displays/family?series=MONDOPAD-SERIES"><img src="/resources/images/Web-Edit-Center"></a></p>
-</div>
-						<div class="info cmsedit"><h3 class="name">MAXIMIZE PROFITABILITY</h3>
+	<div class="info cmsedit" >
+	<h3 class="name">MAXIMIZE PROFITABILITY</h3>
 
-<h5 class="name">Save thousands on travel and waste no time</h5>
+	<h5 class="name">Save thousands on travel and waste no time</h5>
 
-<div class="description">
-<p>Organizations with multiple offices or remote workers can now communicate and collaborate face-to-face without costly travel. <a href="/displays/family?series=MONDOPAD-SERIES">Mondopad</a> allows multiple parties to see and annotate on the same documents and see each other – creating more productive meetings.</p>
+	<div class="description">Organizations with multiple offices or remote workers can now communicate and collaborate face-to-face without costly travel. <a href="/displays/MONDOPAD-SERIES">Mondopad</a> allows multiple parties to see and annotate on the same documents and see each other – creating more productive meetings.</div>
 
-<ul class="feature-list">
-	<li>Videoconference with high quality audio and video</li>
-	<li>Whiteboard on an endless canvas</li>
-	<li>Annotate on documents, web pages and video</li>
+	<ul class="feature-list" style="padding-bottom:50px;">
+		<li>Video conference with high quality audio and video</li>
+		<li>Whiteboard on an endless canvas</li>
+		<li>Annotate on documents, web pages and video</li>
+		<li><a class="btn" href="/displays/MONDOPAD-Series">Learn more about Mondopad</a></li>
+	
+	</div>
+	</li>
+	<li class="C10 C3x7_child Col_child ui-dots-after">
+	<div class="image-set cmsedit" style="float:right;" ><a href="/peripherals/ConX-Series"><img alt="InFocus ConX Video Meeting" src="/resources/images/InFocus-CONX-Meeting.jpeg"></a></div>
+
+	<div class="info cmsedit" >
+	<h3 class="name" style="text-transform:capitalize;">DIAL AND SEE</h3>
+
+	<h5 class="name">Video conferencing made easy</h5>
+
+	<div class="description">Having a video meeting with <a href="/peripherals/ConX-Series">InFocus ConX cloud-based video meeting service</a> is as easy as dialing an audio conference. Your team can dial into the meeting room from any SIP device, H.323 device or any audio phone with a meeting room number and PIN.</div>
+
+	<ul class="feature-list" style="padding-bottom:50px;">
+		<li>See your co-workers and customers in real time</li>
+		<li>Share and collaborate on the same data</li>
+		<li>Buy and expand as you need; up to 25 participants</li>
+		<li><a href="http://infocusconx.com" target="_blank">Free 60-day trial</a></li>
+	</ul>
+	<a class="btn" href="/peripherals/ConX-Series">Learn More About Conx Video Meeting</a></div>
+	</li>
+	<li class="C10 ui-shadow-after">
+	<div class="info cmsedit" >
+	<h3 class="name">BUSINESS PROJECTORS</h3>
+
+	<div class="description">
+	<p>From on-the-road mobility to large conference rooms and small offices, InFocus has the full projector line-up for tight budgets and high expectations.</p>
+	</div>
+
+	<div class="image-set cmsedit C3_child Col_child" >
+	<div><a href="/projectors/ultra-portable">Mobile Projectors<img alt="" src="/resources/images/InFocus-IN1146"></a></div>
+
+	<div><a href="/projectors/office-classroom">Office Projectors<img alt="" src="/resources/images/InFocus-IN110A-Hero"></a></div>
+
+	<div><a href="/projectors/large-venue">Large Venue Projectors<img alt="" src="/resources/images/InFocus-IN5550-Hero"></a></div>
+	</div>
+	</div>
+	</li>
+	<li class="C10 ui-shadow-after">
+	<div class="info cmsedit" >
+	<h3 class="name">1080p RESOLUTION</h3>
+
+	<h5 class="name">HD content deserves HD resolution</h5>
+
+	<div class="description">
+	<p>If your organization displays HD content, you need a display that can show it off accurately without manual adjustments or scaling. InFocus has several models with native 1080p or WUXGA resolution to match many budgets, room sizes and content sources.</p>
+
+	<table id="table-comparison">
+		<thead>
+			<tr>
+				<th class="model">IN2128HDa</th>
+				<th class="model">IN3138HDa</th>
+				<th class="model">IN5316HDa</th>
+				<th class="model">IN5555L</th>
+				<th class="model">JTouch 65-inch</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1080p Resolution</td>
+				<td>1080p Resolution</td>
+				<td>1080p Resolution</td>
+				<td>WUXGA Resolution</td>
+				<td>1080p Resolution</td>
+			</tr>
+			<tr>
+				<td>3500 lumens</td>
+				<td>4000 lumens</td>
+				<td>5000 lumens</td>
+				<td>7000 lumens</td>
+				<td>65-inch LCD Panel</td>
+			</tr>
+			<tr>
+				<td>Built-in file storage, screen blanking, optional wireless</td>
+				<td>1.5x zoom, enhanced 3D features, screen trigger</td>
+				<td>Lens options, lens shift, compact size for 2x2’ ceiling tile</td>
+				<td>Optional lenses, two color wheels, dual lamps, motorized lens shift</td>
+				<td>Multi-point interactive touchscreen, built-in whiteboard</td>
+			</tr>
+			<tr>
+				<td>HDMI, USB, LAN, wireless USB option</td>
+				<td>HDMI, HDMI w/MHL, screen trigger, LAN</td>
+				<td>HDMI 1.4, DVI-D, DisplayPort, USB Power Port, LAN</td>
+				<td>HDMI, DVI-D, 3G-SDI inputs</td>
+				<td>HDMI, USB and Component inputs</td>
+			</tr>
+			<tr class="footer">
+				<td><a class="learn-more" href="/projectors/product?pn=IN2128HDa">Learn More</a></td>
+				<td><a class="learn-more" href="/projectors/product?pn=IN3138HDa">Learn More</a></td>
+				<td><a class="learn-more" href="/projectors/product?pn=IN5316HDa">Learn More</a></td>
+				<td><a class="learn-more" href="/projectors/product?pn=IN5555L">Learn More</a></td>
+				<td><a href="/displays/INF6501wp">Learn More</a></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</div>
+	</li>
 </ul>
-<a class="btn" href="/displays/family?series=MONDOPAD-Series">Learn more about Mondopad</a></div>
-</div>
-					</li>
-					<li class="C10 C3x7_child Col_child ui-dots-after">
-						<div class="image-set cmsedit" style="float:right;"><a href="/accessories/CONX"><img src="/resources/images/CONX"></a></div>
-						<div class="info cmsedit"><h3 class="name" style="text-transform:capitalize;">DIAL AND SEE</h3>
-
-<h5 class="name">Group videoconferencing made easy</h5>
-
-<div class="description">Having a video meeting with <a href="/accessories/CONX">InFocus ConX cloud-based bridging service</a> is as easy as dialing an audio conference. Your team can dial into the meeting room from any SIP device, H.323 device or any audio phone with a meeting room number and PIN.</div>
-
-<ul class="feature-list" style="padding-bottom:50px;">
-	<li>See your co-workers and customers in real time</li>
-	<li>Buy and expand as you need</li>
-	<li>Free 60-day trial</li>
-</ul>
-<a class="btn" href="/accessories/product?pn=CONX">Learn More About Conx Meeting Rooms</a></div>
-
-
-					</li>
-					<li class="C10 ui-shadow-after">
-						<div class="info cmsedit"><h3 class="name">BUSINESS PROJECTORS</h3>
-
-<div class="description">
-<p>From on-the-road mobility to large conference rooms and small offices, InFocus has the full projector line-up for tight budgets and high expectations.</p>
-</div>
-
-<div class="image-set cmsedit C3_child Col_child" >
-<div><a href="/projectors/?mobile">Mobile Projectors<img src="/resources/images/InFocus-IN1146"></a></div>
-
-<div><a href="/projectors/?meeting">Office Projectors<img src="/resources/images/InFocus-IN110A-Hero"></a></div>
-
-<div><a href="/projectors/?large-venue">Large Venue Projectors<img src="/resources/images/InFocus-IN5550-Hero"></a></div>
 </div>
 </div>
-
-					</li>
-
-					<li class="C10 ui-shadow-after">
-
-						<div class="info cmsedit"><h3 class="name">1080p RESOLUTION</h3>
-
-<h5 class="name">HD content deserves HD resolution</h5>
-
-<div class="description">
-<p>If your organization displays HD content, you need a display that can show it off accurately without manual adjustments or scaling. InFocus has several models with native 1080p or WUXGA resolution to match many budgets, room sizes and content sources.</p>
-
-<table id="table-comparison">
-	<thead>
-		<tr>
-			<th class="model">IN3128HD</th>
-			<th class="model">IN3138HD</th>
-			<th class="model">IN5145</th>
-			<th class="model">IN5555L</th>
-			<th class="model">JTouch 65-inch</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>1080p Resolution</td>
-			<td>1080p Resolution</td>
-			<td>WUXGA Resolution</td>
-			<td>WUXGA Resolution</td>
-			<td>1080p Resolution</td>
-		</tr>
-		<tr>
-			<td>4000 lumens</td>
-			<td>4000 lumens</td>
-			<td>5000 lumens</td>
-			<td>7000 lumens</td>
-			<td>65-inch LCD Panel</td>
-		</tr>
-		<tr>
-			<td>20W speakers built-in and microphone input</td>
-			<td>Enhanced 3D features</td>
-			<td>3LCD, lens options, 360-degree projection</td>
-			<td>Optional lenses, two color wheels, dual lamps, motorized lens shift</td>
-			<td>Multi-point interactive touchscreen</td>
-		</tr>
-		<tr>
-			<td>HDMI x 2, USB and Component inputs with wireless USB option</td>
-			<td>HDMI x 1 and DisplayPort inputs</td>
-			<td>HDMI x 2, Component and 5BNC inputs with wireless USB option</td>
-			<td>HDMI, DVI-D, 3G-SDI inputs</td>
-			<td>HDMI, USB and Component inputs</td>
-		</tr>
-		<tr class="footer">
-			<td><a class="learn-more" href="/projectors/product?pn=IN3128HD">Learn More</a></td>
-			<td><a class="learn-more" href="/projectors/product?pn=IN3138HD">Learn More</a></td>
-			<td><a class="learn-more" href="/projectors/product?pn=IN5145">Learn More</a></td>
-			<td><a class="learn-more" href="/projectors/product?pn=IN5555L">Learn More</a></td>
-			<td><a class="learn-more" href="/displays/product?pn=INF6501A">Learn More</a></td>
-		</tr>
-	</tbody>
-</table>
-</div>
-</div></li>
-
-					</ul>
-		</div>
-
-	</div><!-- EndCTAGenerated --></div> 
+<!-- EndCTAGenerated --></div> 
 </div>
  
 

@@ -74,7 +74,7 @@ $priceBuyNow = $product->priceBuyNow($product->pn);
 <script>$('#modid').hide();</script>		
 
 			<div id="overview" class="active">
-			<div id="models" class="active" style="position:relative;top:1.5em;text-align:center;">
+			<div id="models" class="active" style="position:relative;top:1.5em;text-align:center;padding-bottom: 1.5em">
 			<ul class="C10 panels resultsList">
 				<?=$models ?>
 			</ul>

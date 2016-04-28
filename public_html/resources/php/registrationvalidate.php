@@ -1,5 +1,5 @@
 <?PHP
-$connection = mysqli_connect('67.43.0.33','partners_login','InF0cusP@ssw0rd', 'partners_IFC_IB',3306);
+$connection = mysqli_connect('localhost','InternalAdmin','nIinmFd0Aclu', 'partners_IFC_IB',3306);
 mysqli_set_charset($connection, "utf8");
 $Serial = $_POST['serialNumber'];
 $result = mysqli_query($connection,'SELECT 

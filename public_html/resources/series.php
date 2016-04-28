@@ -76,7 +76,7 @@ border-bottom:1px solid #ccc;
 <script>
 
 <?php 
-$sql = 'SELECT * FROM productseries WHERE series LIKE "%' . $_GET['pn'] . '%" LIMIT 20';
+$sql = 'SELECT * FROM productseries WHERE series LIKE "%' . $_GET['pn'] . '%" LIMIT 40';
 
 require_once($_SERVER['DOCUMENT_ROOT'] . "/resources/php/tableQuery.php");
 

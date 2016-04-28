@@ -17,6 +17,7 @@ if(mysqli_num_rows($result)==0)
 die();}
 
 echo "<option value=''>Select a product...</option>";
+echo $_POST['inserttxt'];
 
 while($row = mysqli_fetch_array($result))
 {

@@ -1,495 +1,292 @@
-[22-Oct-2014 11:18:43 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-ger.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[22-Oct-2014 11:18:43 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-ger.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[24-Oct-2014 03:15:00 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-frn.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[24-Oct-2014 03:15:00 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-frn.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[27-Oct-2014 08:46:32 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[27-Oct-2014 08:46:32 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[27-Oct-2014 08:46:32 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[27-Oct-2014 08:46:32 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
-[27-Oct-2014 08:46:32 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
-[27-Oct-2014 08:46:32 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
-[27-Oct-2014 08:46:32 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
-[27-Oct-2014 20:24:30 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-ger.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[27-Oct-2014 20:24:30 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-ger.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[02-Nov-2014 10:40:17 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-frn.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[02-Nov-2014 10:40:17 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-frn.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[07-Nov-2014 14:33:49 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-ger.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[07-Nov-2014 14:33:49 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-ger.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[09-Nov-2014 10:37:45 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-frn.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[09-Nov-2014 10:37:45 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-frn.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[10-Nov-2014 01:50:52 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[10-Nov-2014 01:50:52 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[10-Nov-2014 01:50:52 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[10-Nov-2014 01:50:52 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[10-Nov-2014 01:50:52 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[10-Nov-2014 01:50:52 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[10-Nov-2014 01:50:52 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[10-Nov-2014 01:50:52 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[10-Nov-2014 01:50:52 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[10-Nov-2014 01:50:52 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[10-Nov-2014 01:50:53 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[10-Nov-2014 01:50:53 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[10-Nov-2014 01:50:53 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[10-Nov-2014 01:50:53 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[10-Nov-2014 01:50:53 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[10-Nov-2014 01:50:53 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[10-Nov-2014 01:50:53 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[10-Nov-2014 01:50:53 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[10-Nov-2014 01:50:53 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[10-Nov-2014 01:50:53 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[10-Nov-2014 01:51:09 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[10-Nov-2014 01:51:09 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[10-Nov-2014 01:51:09 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[10-Nov-2014 01:51:09 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[10-Nov-2014 01:51:09 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[10-Nov-2014 01:51:09 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[10-Nov-2014 01:51:09 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[10-Nov-2014 01:51:09 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[10-Nov-2014 01:51:09 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[10-Nov-2014 01:51:09 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[10-Nov-2014 01:51:09 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[10-Nov-2014 01:51:09 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[10-Nov-2014 01:51:09 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[10-Nov-2014 01:51:09 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[10-Nov-2014 01:51:09 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[10-Nov-2014 01:51:10 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[10-Nov-2014 01:51:10 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[10-Nov-2014 01:51:10 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[10-Nov-2014 01:51:10 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[10-Nov-2014 01:51:10 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[10-Nov-2014 01:51:10 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[10-Nov-2014 01:51:10 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[10-Nov-2014 01:51:10 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[10-Nov-2014 01:51:10 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[10-Nov-2014 01:51:10 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[16-Nov-2014 10:40:05 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-frn.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[16-Nov-2014 10:40:05 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-frn.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[17-Nov-2014 22:19:44 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-ger.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[17-Nov-2014 22:19:44 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-ger.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[18-Nov-2014 18:58:42 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-ger.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[18-Nov-2014 18:58:42 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-ger.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[23-Nov-2014 10:38:27 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-frn.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[23-Nov-2014 10:38:27 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-frn.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[24-Nov-2014 10:27:35 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[24-Nov-2014 10:27:35 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[24-Nov-2014 10:27:35 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[24-Nov-2014 10:27:35 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[24-Nov-2014 10:27:35 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[24-Nov-2014 10:27:35 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[24-Nov-2014 10:27:35 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[24-Nov-2014 10:27:35 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[24-Nov-2014 10:27:35 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[24-Nov-2014 10:27:35 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[24-Nov-2014 10:27:35 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[24-Nov-2014 10:27:35 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[24-Nov-2014 10:27:35 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[24-Nov-2014 10:27:35 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[24-Nov-2014 10:27:35 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[29-Nov-2014 05:24:20 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-ger.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[29-Nov-2014 05:24:20 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-ger.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[30-Nov-2014 10:40:05 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-frn.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[30-Nov-2014 10:40:05 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-frn.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[30-Nov-2014 11:03:03 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[30-Nov-2014 11:03:03 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[30-Nov-2014 11:03:03 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[30-Nov-2014 11:03:03 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
-[30-Nov-2014 11:03:03 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
-[30-Nov-2014 11:03:03 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
-[30-Nov-2014 11:03:03 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
-[30-Nov-201[30-Nov-2014 12:36:06 America/New_York] PHP Warning:  mysqli_connect(): (HY000/2003): Can't connect to MySQL server on '67.43.0.33' (111) in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[30-Nov-2014 12:36:06 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[30-Nov-2014 12:36:06 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[30-Nov-2014 12:36:06 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[30-Nov-2014 12:36:06 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[30-Nov-2014 12:36:06 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[30-Nov-2014 12:36:06 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[30-Nov-2014 12:36:06 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[30-Nov-2014 12:36:06 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[30-Nov-2014 12:36:06 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[30-Nov-2014 19:45:53 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[30-Nov-2014 19:45:53 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[30-Nov-2014 19:45:53 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[30-Nov-2014 19:45:53 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
-[30-Nov-2014 19:45:53 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
-[30-Nov-2014 19:45:53 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
-[30-Nov-2014 19:45:53 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
-[30-Nov-2014 19:46:01 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[30-Nov-2014 19:46:01 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[30-Nov-2014 19:46:01 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[30-Nov-2014 19:46:01 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
-[30-Nov-2014 19:46:01 Ameri[01-Dec-2014 09:16:47 America/New_York] PHP Warning:  mysqli_connect(): (HY000/2003): Can't connect to MySQL server on '67.43.0.33' (111) in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[01-Dec-2014 09:16:47 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[01-Dec-2014 09:16:47 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[01-Dec-2014 09:16:47 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
-[01-Dec-2014 09:16:47 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
-[01-Dec-2014 09:16:47 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
-[01-Dec-2014 09:16:47 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
-[03-Dec-2014 15:22:04 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-ger.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[03-Dec-2014 15:22:04 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-ger.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[07-Dec-2014 10:39:34 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-frn.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[07-Dec-2014 10:39:34 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-frn.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[08-Dec-2014 01:19:24 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[08-Dec-2014 01:19:24 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[08-Dec-2014 01:19:24 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[08-Dec-2014 01:19:24 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[08-Dec-2014 01:19:24 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[08-Dec-2014 01:19:25 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[08-Dec-2014 01:19:25 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[08-Dec-2014 01:19:25 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[08-Dec-2014 01:19:25 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[08-Dec-2014 01:19:25 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[08-Dec-2014 05:20:33 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-ger.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[08-Dec-2014 05:20:33 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-ger.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[10-Dec-2014 01:43:54 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-ger.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[10-Dec-2014 01:43:54 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-ger.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[12-Dec-2014 23:21:26 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-ger.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[12-Dec-2014 23:21:26 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-ger.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[14-Dec-2014 10:39:59 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-frn.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[14-Dec-2014 10:39:59 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-frn.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[15-Dec-2014 09:47:02 America/New_York] PHP Warning:  mysqli_connect(): (HY000/2003): Can't connect to MySQL server on '67.43.0.33' (111) in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[15-Dec-2014 09:47:02 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[15-Dec-2014 09:47:02 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[15-Dec-2014 09:47:02 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
-[15-Dec-2014 09:47:02 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
-[15-Dec-2014 09:47:02 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
-[15-Dec-2014 09:47:02 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
-[15-Dec-2014 09:47:19 America/New_York] PHP Warning:  mysqli_connect(): (HY000/2003): Can't connect to MySQL server on '67.43.0.33' (111) in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[15-Dec-2014 09:47:19 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[15-Dec-2014 09:47:19 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[15-Dec-2014 09:47:19 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
-[15-Dec-2014 09:47:19 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
-[15-Dec-2014 09:47:19 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
-[15-Dec-2014 09:47:19 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
-[15-Dec-2014 09:47:19 America/New_York] PHP Warning:  mysqli_connect(): (HY000/2003): Can't connect to MySQL server on '67.43.0.33' (111) in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[15-Dec-2014 09:47:19 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[15-Dec-2014 09:47:19 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[15-Dec-2014 09:47:19 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
-[15-Dec-2014 09:47:19 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
-[15-Dec-2014 09:47:19 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
-[15-Dec-2014 09:47:19 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
-[15-Dec-2014 09:47:22 America/New_York] PHP Warning:  mysqli_connect(): (HY000/2003): Can't connect to MySQL server on '67.43.0.33' (111) in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[15-Dec-2014 09:47:22 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[15-Dec-2014 09:47:22 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[15-Dec-2014 09:47:22 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
-[15-Dec-2014 09:47:22 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
-[15-Dec-2014 09:47:22 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
-[15-Dec-2014 09:47:22 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
-[16-Dec-2014 08:55:59 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[18-Dec-2014 22:55:49 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[21-Dec-2014 11:31:56 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-ger.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[21-Dec-2014 11:31:56 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-ger.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[22-Dec-2014 03:27:43 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-frn.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[22-Dec-2014 03:27:43 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-frn.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[22-Dec-2014 08:10:51 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:10:51 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:10:51 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:10:51 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
-[22-Dec-2014 08:10:51 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
-[22-Dec-2014 08:10:51 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
-[22-Dec-2014 08:10:51 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
-[22-Dec-2014 08:10:52 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:10:52 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:10:52 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:10:52 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
-[22-Dec-2014 08:10:52 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
-[22-Dec-2014 08:10:52 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
-[22-Dec-2014 08:10:52 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
-[22-Dec-2014 08:11:01 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:01 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:01 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:01 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[22-Dec-2014 08:11:01 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[22-Dec-2014 08:11:01 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:01 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:01 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:01 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[22-Dec-2014 08:11:01 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[22-Dec-2014 08:11:02 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[22-Dec-2014 08:11:14 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:14 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:14 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:14 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[22-Dec-2014 08:11:14 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[22-Dec-2014 08:11:14 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:14 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:14 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:14 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[22-Dec-2014 08:11:14 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[22-Dec-2014 08:11:14 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:14 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:14 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:14 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[22-Dec-2014 08:11:14 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[22-Dec-2014 08:11:15 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[22-Dec-2014 08:11:16 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:16 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:16 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:16 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[22-Dec-2014 08:11:16 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[22-Dec-2014 08:11:16 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[22-Dec-2014 08:11:16 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[22-Dec-2014 08:11:16 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[22-Dec-2014 08:11:16 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[22-Dec-2014 08:11:16 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[22-Dec-2014 08:11:16 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[22-Dec-2014 08:11:16 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[22-Dec-2014 08:11:16 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[22-Dec-2014 08:11:16 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[22-Dec-2014 08:11:16 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[24-Dec-2014 20:25:05 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-ger.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[24-Dec-2014 20:25:05 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-ger.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[28-Dec-2014 01:36:34 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-ger.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[28-Dec-2014 01:36:34 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-ger.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[28-Dec-2014 20:28:09 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-ger.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[28-Dec-2014 20:28:09 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-ger.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[01-Jan-2015 04:24:01 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-ger.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[01-Jan-2015 04:24:01 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-ger.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[05-Jan-2015 02:18:58 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[05-Jan-2015 02:18:58 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[05-Jan-2015 02:18:58 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[05-Jan-2015 02:18:58 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[05-Jan-2015 02:18:58 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[05-Jan-2015 02:19:00 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[05-Jan-2015 02:19:00 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[05-Jan-2015 02:19:00 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[05-Jan-2015 02:19:00 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[05-Jan-2015 02:19:00 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[05-Jan-2015 02:19:00 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[05-Jan-2015 02:19:00 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[05-Jan-2015 02:19:00 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[05-Jan-2015 02:19:00 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[05-Jan-2015 02:19:00 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[05-Jan-2015 02:19:00 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[05-Jan-2015 02:19:00 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[05-Jan-2015 02:19:00 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[05-Jan-2015 02:19:00 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[05-Jan-2015 02:19:00 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[09-Jan-2015 10:26:48 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-frn.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[09-Jan-2015 10:26:48 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-frn.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[09-Jan-2015 15:18:04 America/New_York] PHP Warning:  mysqli_connect(): (HY000/2003): Can't connect to MySQL server on '67.43.0.33' (111) in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[09-Jan-2015 15:18:04 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[09-Jan-2015 15:18:04 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[09-Jan-2015 15:18:04 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
-[09-Jan-2015 15:18:04 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
-[09-Jan-2015 15:18:04 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
-[09-Jan-2015 15:18:04 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
-[11-Jan-2015 15:39:12 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-ger.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[11-Jan-2015 15:39:12 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-ger.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[12-Jan-2015 09:10:13 America/New_York] PHP Warning:  mysqli_connect(): (HY000/2003): Can't connect to MySQL server on '67.43.0.33' (111) in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[12-Jan-2015 09:10:13 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[12-Jan-2015 09:10:13 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[12-Jan-2015 09:10:13 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
-[12-Jan-2015 09:10:13 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
-[12-Jan-2015 09:10:13 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
-[12-Jan-2015 09:10:13 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
-[12-Jan-2015 09:10:24 America/New_York] PHP Warning:  mysqli_connect(): (HY000/2003): Can't connect to MySQL server on '67.43.0.33' (111) in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[12-Jan-2015 09:10:24 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[12-Jan-2015 09:10:24 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[12-Jan-2015 09:10:24 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
-[12-Jan-2015 09:10:24 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
-[12-Jan-2015 09:10:24 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
-[12-Jan-2015 09:10:24 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
-[12-Jan-2015 09:11:03 America/New_York] PHP Warning:  mysqli_connect(): (HY000/2003): Can't connect to MySQL server on '67.43.0.33' (111) in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[12-Jan-2015 09:11:03 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[12-Jan-2015 09:11:03 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[12-Jan-2015 09:11:03 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
-[12-Jan-2015 09:11:03 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
-[12-Jan-2015 09:11:03 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
-[12-Jan-2015 09:11:03 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
-[12-Jan-2015 09:11:04 America/New_York] PHP Warning:  mysqli_connect(): (HY000/2003): Can't connect to MySQL server on '67.43.0.33' (111) in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[12-Jan-2015 09:11:04 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[12-Jan-2015 09:11:04 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[12-Jan-2015 09:11:04 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 277
-[12-Jan-2015 09:11:04 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 279
-[12-Jan-2015 09:11:04 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 290
-[12-Jan-2015 09:11:04 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 291
-[16-Jan-2015 09:55:25 America/New_York] PHP Parse error:  syntax error, unexpected ''</head><body style="backgroun' (T_ENCAPSED_AND_WHITESPACE) in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 1299
-[16-Jan-2015 10:27:49 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-frn.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[16-Jan-2015 10:27:49 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-frn.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[19-Jan-2015 02:59:19 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[19-Jan-2015 02:59:22 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[19-Jan-2015 02:59:22 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[19-Jan-2015 02:59:22 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[19-Jan-2015 02:59:22 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 197
-[19-Jan-2015 02:59:22 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 198
-[19-Jan-2015 02:59:22 America/New_York] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/ifcprod/public_html/resources/php/connections.php on line 2
-[19-Jan-2015 02:59:22 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/connections.php on line 3
-[19-Jan-2015 02:59:22 America/New_York] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 11
-[19-Jan-2015 02:59:22 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 127
-[19-Jan-2015 02:59:22 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 129
-[19-Jan-2015 02:59:22 America/New_York] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 131
-[19-Jan-2015 02:59:22 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 132
-[19-Jan-2015 02:59:22 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 134
-[19-Jan-2015 02:59:22 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 136
-[19-Jan-2015 02:59:22 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ifcprod/public_html/resources/php/infocusscripts.php on line 139
-[23-Jan-2015 10:27:43 America/New_York] PHP Warning:  include(/home/ifcprod/public_html/resources/html/mainmenu-frn.html): failed to open stream: No such file or directory in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[23-Jan-2015 10:27:43 America/New_York] PHP Warning:  include(): Failed opening '/home/ifcprod/public_html/resources/html/mainmenu-frn.html' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ifcprod/public_html/resources/html/mainmenu.html on line 51
-[26-Jan-2015 10:54:58 America/New_York] PHP Parse error:  syntax error, unexpected 'require_once' (T_REQUIRE_ONCE) in /home/ifcprod/public_html/404.php on line 3
-[26-Jan-2015 10:54:58 America/New_York] PHP Parse error:  syntax error, unexpected 'require_once' (T_REQUIRE_ONCE) in /home/ifcprod/public_html/404.php on line 3
-[26-Jan-2015 10:55:04 America/New_York] PHP Parse error:  syntax error, unexpected 'require_once' (T_REQUIRE_ONCE) in /home/ifcprod/public_html/404.php on line 3
-[26-Jan-2015 10:55:07 America/New_York] PHP Parse error:  syntax error, unexpected 'require_once' (T_REQUIRE_ONCE) in /home/ifcprod/public_html/404.php on line 3
-[26-Jan-2015 10:55:08 America/New_York] PHP Parse error:  syntax error, unexpected 'require_once' (T_REQUIRE_ONCE) in /home/ifcprod/public_html/404.php on line 3
-[26-Jan-2015 10:55:09 America/New_York] PHP Parse error:  syntax error, unexpected 'require_once' (T_REQUIRE_ONCE) in /home/ifcprod/public_html/404.php on line 3
-[26-Jan-2015 10:55:12 America/New_York] PHP Parse error:  syntax error, unexpected 'require_once' (T_REQUIRE_ONCE) in /home/ifcprod/public_html/404.php on line 3
-[26-Jan-2015 10:55:13 America/New_York] PHP Parse error:  syntax error, unexpected 'require_once' (T_REQUIRE_ONCE) in /home/ifcprod/public_html/404.php on line 3
-[26-Jan-2015 10:55:17 America/New_York] PHP Parse error:  syntax error, unexpected 'require_once' (T_REQUIRE_ONCE) in /home/ifcprod/public_html/404.php on line 3
-[26-Jan-2015 10:55:19 America/New_York] PHP Parse error:  syntax error, unexpected 'require_once' (T_REQUIRE_ONCE) in /home/ifcprod/public_html/404.php on line 3
-[20-Feb-2015 19:45:56 America/New_York] Test
-[22-Feb-2015 08:23:30 America/New_York] Test
-[23-Feb-2015 12:13:30 America/New_York] Test
+[28-Apr-2015 13:41:41 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 348
+[28-Apr-2015 13:41:41 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 349
+[28-Apr-2015 13:44:27 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 348
+[28-Apr-2015 13:44:27 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 349
+[28-Apr-2015 13:46:05 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 348
+[28-Apr-2015 13:46:05 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 349
+[28-Apr-2015 13:49:27 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 349
+[28-Apr-2015 13:49:27 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 350
+[28-Apr-2015 13:57:11 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 349
+[28-Apr-2015 13:57:11 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 350
+[28-Apr-2015 13:57:22 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 349
+[28-Apr-2015 13:57:22 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 350
+[28-Apr-2015 13:58:02 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 349
+[28-Apr-2015 13:58:02 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 350
+[28-Apr-2015 14:01:12 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 349
+[28-Apr-2015 14:01:12 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 350
+[28-Apr-2015 14:01:30 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 349
+[28-Apr-2015 14:01:30 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 350
+[28-Apr-2015 14:01:41 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 349
+[28-Apr-2015 14:01:41 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 350
+[28-Apr-2015 14:05:17 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/OOPproducts.php:46) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 57
+[28-Apr-2015 14:05:17 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/OOPproducts.php:46) in /home/devinfoc/public_html/404.php on line 2
+[28-Apr-2015 15:59:19 America/New_York] Test
+[28-Apr-2015 16:25:03 America/New_York] Test
+[28-Apr-2015 18:56:38 America/New_York] Test
+[29-Apr-2015 12:04:48 America/New_York] Test
+[29-Apr-2015 12:27:05 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 343
+[29-Apr-2015 12:27:05 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 352
+[29-Apr-2015 12:36:47 America/New_York] Test
+[29-Apr-2015 12:44:07 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 342
+[29-Apr-2015 12:44:07 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 351
+[29-Apr-2015 13:15:18 America/New_York] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 451
+[29-Apr-2015 13:17:57 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 342
+[29-Apr-2015 13:17:57 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 351
+[29-Apr-2015 13:17:57 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 396
+[29-Apr-2015 15:39:33 America/New_York] Test
+[29-Apr-2015 19:32:56 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 399
+[29-Apr-2015 21:02:55 America/New_York] Test
+[29-Apr-2015 21:02:56 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 399
+[01-May-2015 22:54:34 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 344
+[01-May-2015 22:54:34 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 354
+[01-May-2015 22:54:34 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 399
+[02-May-2015 01:44:25 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 399
+[02-May-2015 11:17:12 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 399
+[02-May-2015 15:27:38 America/New_York] Test
+[03-May-2015 02:06:19 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 399
+[03-May-2015 06:40:45 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 399
+[03-May-2015 12:43:09 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[03-May-2015 14:16:28 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[03-May-2015 14:36:35 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/html/mainmenu.html on line 31
+[03-May-2015 14:39:23 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[03-May-2015 14:59:16 America/New_York] Test
+[03-May-2015 15:34:56 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/html/mainmenu.html on line 31
+[03-May-2015 15:56:01 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[03-May-2015 15:56:53 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[03-May-2015 16:16:52 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[03-May-2015 17:28:36 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/html/mainmenu.html on line 31
+[03-May-2015 18:42:27 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[03-May-2015 18:52:02 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[03-May-2015 19:10:54 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/html/mainmenu.html on line 31
+[03-May-2015 21:05:57 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[03-May-2015 21:07:03 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/html/mainmenu.html on line 31
+[03-May-2015 21:41:42 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/html/mainmenu.html on line 31
+[03-May-2015 21:42:00 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[03-May-2015 21:42:36 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/html/mainmenu.html on line 31
+[03-May-2015 22:50:26 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[03-May-2015 23:04:48 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[03-May-2015 23:55:52 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[04-May-2015 00:45:15 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[04-May-2015 01:13:51 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[04-May-2015 03:43:06 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[04-May-2015 03:47:50 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 96
+[04-May-2015 09:32:04 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/html/mainmenu.html on line 31
+[04-May-2015 10:38:18 America/New_York] Test
+[04-May-2015 10:38:53 America/New_York] PHP Fatal error:  Call to undefined function translate() in /home/devinfoc/public_html/resources/html/mainmenu.html on line 31
+[04-May-2015 12:51:05 America/New_York] Test
+[04-May-2015 13:03:17 America/New_York] Test
+[04-May-2015 13:06:34 America/New_York] Test
+[04-May-2015 13:12:27 America/New_York] Test
+[04-May-2015 13:13:19 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 13:13:19 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 13:13:19 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 13:13:19 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 13:13:22 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 13:13:22 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 13:13:48 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 13:13:48 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 13:14:00 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 13:14:00 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 13:33:41 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 13:33:41 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 13:49:48 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 13:49:48 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 14:05:49 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 14:05:49 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 14:21:51 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 14:21:51 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 14:39:30 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 14:39:30 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 14:55:42 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 14:55:42 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 15:12:22 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 15:12:22 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 16:40:29 America/New_York] Test
+[04-May-2015 17:55:52 America/New_York] Test
+[04-May-2015 18:42:31 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 18:42:31 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 18:51:47 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 18:51:47 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 19:00:58 America/New_York] Test
+[04-May-2015 19:16:28 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 19:16:28 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 19:16:39 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 19:16:39 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 19:17:55 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 19:17:55 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 19:18:36 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 19:18:36 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 19:19:57 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 19:19:57 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 19:19:58 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 19:19:58 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 19:53:29 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 19:53:29 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 19:54:41 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 19:54:41 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 19:55:04 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 19:55:04 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 19:55:39 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 19:55:39 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 19:55:58 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 19:55:58 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 19:56:44 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 19:56:44 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[04-May-2015 21:00:12 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 123
+[04-May-2015 23:17:11 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[04-May-2015 23:17:11 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 01:02:52 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 123
+[05-May-2015 01:02:52 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 123
+[05-May-2015 09:33:17 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 09:33:17 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 10:07:23 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 10:07:23 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 10:30:37 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 10:30:37 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 10:30:43 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 10:30:43 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 10:35:36 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 10:35:36 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 10:35:51 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 10:35:51 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 10:44:14 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 10:44:14 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 10:57:01 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 10:57:01 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 10:57:02 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 10:57:02 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 10:57:02 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 10:57:02 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 11:19:07 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 11:19:07 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 11:22:52 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 11:22:52 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 11:22:57 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 11:22:57 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 11:23:17 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 11:23:17 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 11:23:55 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 11:23:55 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 11:24:00 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 11:24:00 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 11:25:42 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 11:25:42 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 11:25:49 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 11:25:49 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 11:26:44 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 11:26:44 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 11:34:24 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 11:34:24 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 15:27:57 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[05-May-2015 15:27:57 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[05-May-2015 18:18:17 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 344
+[05-May-2015 18:18:17 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 363
+[05-May-2015 18:18:17 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 394
+[05-May-2015 22:03:38 America/New_York] Test
+[05-May-2015 22:23:39 America/New_York] Test
+[05-May-2015 22:31:11 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 123
+[06-May-2015 01:31:35 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 01:31:35 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 03:06:40 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 03:06:40 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 03:06:40 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 03:06:40 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 03:38:40 America/New_York] Test
+[06-May-2015 03:38:40 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/infocusscripts.php on line 45
+[06-May-2015 03:53:00 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 03:53:00 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 04:43:14 America/New_York] Test
+[06-May-2015 04:44:55 America/New_York] Test
+[06-May-2015 04:44:55 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/infocusscripts.php on line 45
+[06-May-2015 04:45:00 America/New_York] Test
+[06-May-2015 04:45:00 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/infocusscripts.php on line 45
+[06-May-2015 04:45:04 America/New_York] Test
+[06-May-2015 04:45:04 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/infocusscripts.php on line 45
+[06-May-2015 04:51:09 America/New_York] Test
+[06-May-2015 05:13:35 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 05:13:35 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 05:13:35 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 05:13:35 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 05:14:04 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 05:14:04 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 05:14:04 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 05:14:04 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 05:25:19 America/New_York] Test
+[06-May-2015 06:54:43 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 06:54:43 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 06:54:43 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 06:54:43 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 06:55:23 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 06:55:23 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 06:55:24 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 06:55:24 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 07:26:08 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 07:26:08 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 09:09:05 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 09:09:05 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 09:09:05 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 09:09:05 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 09:45:45 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 09:45:45 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 09:45:45 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 09:45:45 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 09:46:18 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 09:46:18 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 09:46:18 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 09:46:18 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 09:59:58 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 09:59:58 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 10:13:18 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 55
+[06-May-2015 10:13:18 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 11:12:15 America/New_York] Test
+[06-May-2015 11:22:36 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 49
+[06-May-2015 11:22:36 America/New_York] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/devinfoc/public_html/resources/php/transfunc.php:12) in /home/devinfoc/public_html/404.php on line 2
+[06-May-2015 16:47:48 America/New_York] Test
+[06-May-2015 17:59:53 America/New_York] Test
+[07-May-2015 00:05:21 America/New_York] Test
+[07-May-2015 00:54:15 America/New_York] Test
+[07-May-2015 01:30:06 America/New_York] Test
+[07-May-2015 01:30:53 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 338
+[07-May-2015 01:30:53 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 357
+[07-May-2015 01:30:53 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 388
+[07-May-2015 01:55:15 America/New_York] Test
+[07-May-2015 04:41:04 America/New_York] Test
+[07-May-2015 08:13:19 America/New_York] Test
+[07-May-2015 12:51:10 America/New_York] Test
+[07-May-2015 13:25:14 America/New_York] Test
+[07-May-2015 16:14:46 America/New_York] Test
+[07-May-2015 19:01:10 America/New_York] Test
+[08-May-2015 02:51:02 America/New_York] Test
+[08-May-2015 07:42:07 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 338
+[08-May-2015 07:42:07 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 357
+[08-May-2015 07:42:07 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 388
+[08-May-2015 09:51:16 America/New_York] Test
+[08-May-2015 10:35:22 America/New_York] Test
+[08-May-2015 14:22:30 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 338
+[08-May-2015 14:22:30 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 357
+[08-May-2015 14:22:30 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 388
+[09-May-2015 05:36:49 America/New_York] Test
+[09-May-2015 05:36:51 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 388
+[09-May-2015 06:47:29 America/New_York] Test
+[09-May-2015 07:35:47 America/New_York] Test
+[09-May-2015 08:13:49 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 338
+[09-May-2015 08:13:49 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 357
+[09-May-2015 08:13:49 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 388
+[09-May-2015 16:41:46 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 338
+[09-May-2015 16:41:46 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 357
+[09-May-2015 16:41:46 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 388
+[10-May-2015 02:31:12 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 388
+[10-May-2015 04:50:53 America/New_York] Test
+[10-May-2015 06:55:48 America/New_York] PHP Warning:  mysqli_query(): Empty query in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 338
+[10-May-2015 06:55:48 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 357
+[10-May-2015 06:55:48 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 388
+[10-May-2015 07:05:02 America/New_York] Test
+[10-May-2015 07:05:03 America/New_York] Test
+[10-May-2015 07:05:04 America/New_York] Test
+[10-May-2015 15:17:53 America/New_York] Test
+[11-May-2015 01:08:32 America/New_York] Test
+[11-May-2015 01:48:14 America/New_York] Test
+[11-May-2015 01:48:17 America/New_York] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/devinfoc/public_html/resources/php/OOPproducts.php on line 388
+[11-May-2015 04:17:45 America/New_York] Test
+[11-May-2015 10:55:03 America/New_York] Test
+[11-May-2015 13:29:37 America/New_York] Test

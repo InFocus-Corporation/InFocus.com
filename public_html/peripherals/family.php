@@ -40,8 +40,6 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 					</ul>
 					<div class="tab-shadow"></div>
 				</nav>
-				<?=$overview ?>
-
 				<div id="models" class="active" style="position:relative">
 					<ul class="C10 panels resultsList">
 						<?=$models ?>

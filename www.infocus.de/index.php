@@ -1,5 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
+require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '"/>' . PHP_EOL;
 ?>
 <title>InFocus | Projektoren & interaktive Smartboards BigTouch und Mondopad</title>
@@ -234,7 +235,7 @@ opacity:0.5;
 	</head>
 	<body class="" style="">
 		<?php include($homedir . "/resources/html/mainmenu.html"); ?>
-<div class="content" style="width:100%;padding-top: 87px;">
+<div class="content" style="width:100%;padding-top: 85px;">
 <div id="ytplayer" class="player"></div>
 
 <div class="device" style="width:100%;">
@@ -245,7 +246,7 @@ opacity:0.5;
 
 
 
-  <div class="swiper-slide" style="position:relative">				
+  <div class="swiper-slide" style="position:relative">	
 <div id="ytcover" onclick="coverClick();" style="
 z-index: 1000;
 position: absolute;
@@ -255,24 +256,46 @@ width: 12.9%;
 height: 7%;
 left: 43.5%;
 opacity: 0;
-cursor: pointer;"  ></div>	
+cursor: pointer;"></div>	
 
 	  
-	 <div id="ytcover2" class="crop"><img id="ytcover3" style="" src="/upload/homepage/InFocus_04_Slider_480x150_RGB_300dpi.jpg"></div>
-
+ <div id="ytcover2" class="crop"> <img id="ytcover3" style="" src="/upload/homepage/InFocus_04_Slider_480x150_RGB_300dpi.jpg" alt="Videokonferenzsystem"></div>
 <a href="/accessories/CONX"><span style="position: absolute;
-bottom: 24%;
+bottom: 12%;
 background-color: #FFF;
-width: 17.9%;
-height: 11.5%;
-left: 3.5%;
-opacity: 0;"></span></a>
+width: 14.9%;
+height: 9.5%;
+left: 44%;
+opacity: 0;"</span></a>
 
 </div>
 
+<div class="swiper-slide" style="position:relative"> <div class="crop"><img style="" src="/upload/homepage/InFocus_Projektoren_Sommer_Special.jpg" alt="Projektoren für Schulen"></div>
+<a href="/upload/NL_Garantie_1/content.html" target="_blank"><span style="position: absolute;
+bottom: 22%;
+background-color: #FFF;
+width: 16.9%;
+height: 10.5%;
+left: 25%;
+opacity: 0;"</span></a>
 
-<div class="swiper-slide" style="position:relative"> <div class="crop"><img style="" src="/upload/homepage/InFocus_03_Slider_480x150_RGB_300dpi.jpg"></div>
-<a href="/displays/JTOUCH-SERIES"><span style="position: absolute;
+</div>
+	
+<div class="swiper-slide" style="position:relative"> <div class="crop"><img style="" src="/upload/homepage/InFocus_05_Slider_Mondopad.jpg" alt="Collaboration"></div>
+<a href="/mondopad20"><span style="position: absolute;
+bottom: 12%;
+background-color: #FFF;
+width: 14.9%;
+height: 9.5%;
+left: 44%;
+opacity: 0;"</span></a>
+
+</div>
+	
+	
+
+<div class="swiper-slide" style="position:relative"> <div class="crop"><img style="" src="/upload/homepage/InFocus_03_Slider_480x150_RGB_300dpi.jpg" alt="Präsentation "></div>
+<a href="/displays/JTOUCH-SERIES" ><span style="position: absolute;
 bottom: 25%;
 background-color: #FFF;
 width: 16.9%;
@@ -281,8 +304,8 @@ left: 3.5%;
 opacity: 0;"></span></a>
 </div>
 	
-<div class="swiper-slide" style="position:relative"> <div class="crop"><img style="" src="/upload/homepage/Thunder-Marquee-03FEB15.jpg"></div>
-<a href="/accessories/INA-TH150"><span style="  position: absolute;
+<div class="swiper-slide" style="position:relative"> <div class="crop"> <img style="" src="/upload/homepage/Thunder-Marquee-03FEB15.jpg" alt="Konferenztelefon"></div>
+<a href="/accessories/INA-TH150"><span style="position: absolute;
   bottom: 59%;
   background-color: #FFF;
   width: 10.9%;
@@ -290,8 +313,6 @@ opacity: 0;"></span></a>
   left: 25.5%;
   opacity: 0;"></span></a>
 </div>
-
-
 
 </div>
 </div>

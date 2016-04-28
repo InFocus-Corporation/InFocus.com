@@ -67,7 +67,7 @@ if(box == null){return;}
 
 var parent = el.parentNode.parentNode;
 
-parent.innerHTML = parent.innerHTML + '<a href="' + box + '"><span class="linkspan" style=" \ position: absolute; \ top: 0%; \ width: 8.97%; \ height: 5%; \ left: 20%; \ opacity: 0;"></span></a>';
+parent.innerHTML = parent.innerHTML + '<a href="' + box + '"><span class="linkspan" style=" \ position: absolute; \ top: 0%; \ width: 8.97%; \ height: 5%; \ left: 20%; \ opacity: 0;"></span></a>';
  $('.linkspan')
 .resizable({ handles: "se", create: setContainerResizer, stop:resizeStop})
 .draggable({ stop:dragStop});

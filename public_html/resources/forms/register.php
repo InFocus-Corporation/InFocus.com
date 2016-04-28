@@ -1,84 +1,78 @@
 <?php
 
+//Check if post value exists
 if(!empty($_POST['first_name'])){
 
-
-    	$filename = $_FILES['file']['name'];
-		
-$connection = mysqli_connect('67.43.0.33','partners_login','InF0cusP@ssw0rd', 'partners_IFC_IB',3306);
-
+$filename = $_FILES['file']['name'];
+$connection = mysqli_connect('localhost','WWW-SIU','1YVSApbt8EOeBanys4HE', 'partners_IFC_IB',3306);
 mysqli_set_charset($connection, "utf8");
 
+//Sanitize Serial Number(SN) for common print additions/typos
 $_POST['serial_number'] = mysqli_real_escape_string($connection,str_replace("-","",str_replace("1S","",str_replace(" ","",$_POST['serial_number']))));
 
-$result = mysqli_query($connection,'SELECT * FROM InstallBase WHERE SerialNumber = "' . $_POST['serial_number'] . '"' );
+	function curlWrap($url, $json='',$request='get')	{
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, ZDURL.$url);
+		curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
+		if($request == 'post'){
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
+			curl_setopt($ch, CURLOPT_MAXREDIRS, 10 );
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
+			curl_setopt($ch, CURLOPT_USERAGENT, "MozillaXYZ/1.0");
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+			curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+		}
+		else curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		$output = curl_exec($ch);
+		$info = curl_getinfo($ch);
+		curl_close($ch);
+		$decoded = json_decode($output);
+		return $decoded;
+	}
 
+	//Upload files to ZD
+    function post_files($url,$filearray) {
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+		curl_setopt($ch, CURLOPT_MAXREDIRS, 10 );
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/binary'));
+		curl_setopt($ch, CURLOPT_POST, true);
+		$file = fopen($filearray['tmp_name'], 'r');
+		$size = filesize($filearray['tmp_name']);
+		$fildata = fread($file,$size);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $fildata);
+		curl_setopt($ch, CURLOPT_INFILE, $file);
+		curl_setopt($ch, CURLOPT_INFILESIZE, $size);
+		curl_setopt($ch, CURLOPT_USERAGENT, "MozillaXYZ/1.0");
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+		curl_setopt($ch, CURLOPT_VERBOSE, true);
+		$response = curl_exec($ch);
+		return $response;
+    }
+//Check whether SN currently exists in the Install Base (IB)
+$result = mysqli_query($connection,'SELECT * FROM InstallBase WHERE SerialNumber = "' . $_POST['serial_number'] . '"' );
+//If SN does not exist, file is attached, or eu warranty is true process into "Pending" IB and create ticket
 if(mysqli_num_rows($result)==0 OR !empty($filename) OR $_GET['euwar'] == 1)
 {
-
-
     define("ZDAPIKEY", "srU2sx3OY0fK2TDn3CDGblU0yBxDBGIULwSWGVps");
     define("ZDUSER", "administrator@infocus.com");
     define("ZDURL", "https://infocuscorp.zendesk.com/api/v2");
 
-    function curlWrap($url, $json)
-    {
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
-    curl_setopt($ch, CURLOPT_MAXREDIRS, 10 );
-    curl_setopt($ch, CURLOPT_URL, ZDURL.$url);
-    curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
-    curl_setopt($ch, CURLOPT_USERAGENT, "MozillaXYZ/1.0");
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-    $output = curl_exec($ch);
+	//Basic Curl function to submit data to Zendesk(ZD)
 
-    $info = curl_getinfo($ch);
-    // echo $output . '<br>';
-    // print_r($info);
-
-    curl_close($ch);
-    $decoded = json_decode($output);
-    return $decoded;
-    }
-
-    function post_files($url,$filearray) {
-
-
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-    curl_setopt($ch, CURLOPT_MAXREDIRS, 10 );
-        curl_setopt($ch, CURLOPT_URL, $url);
-    	curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
-
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/binary'));
-
-    curl_setopt($ch, CURLOPT_POST, true);
-
-    $file = fopen($filearray['tmp_name'], 'r');
-    $size = filesize($filearray['tmp_name']);
-    $fildata = fread($file,$size);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $fildata);
-    curl_setopt($ch, CURLOPT_INFILE, $file);
-    curl_setopt($ch, CURLOPT_INFILESIZE, $size);
-    curl_setopt($ch, CURLOPT_USERAGENT, "MozillaXYZ/1.0");
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-    curl_setopt($ch, CURLOPT_VERBOSE, true);
-        $response = curl_exec($ch);
-        return $response;
-    }
-
+	
+	//Pull post data into variables
     foreach($_POST as $key => $value){
-    if($key != "ewCode"){
-    $arr[strip_tags($key)] = strip_tags($value);
-    }}
+    if($key != "ewCode"){$arr[strip_tags($key)] = strip_tags($value); }
+	}
 
     $Subject = "Registration Review";
-if($_GET['euwar'] == 1){$Subject = "EMEA warranty promo";}
+	if($_GET['euwar'] == 1){$Subject = "EMEA warranty promo";}
     $type = 'Question';
     $FName = $arr['first_name'];
     $LName = $arr['last_name'];
@@ -94,64 +88,59 @@ if($_GET['euwar'] == 1){$Subject = "EMEA warranty promo";}
     $productin = $arr['product']; 
     $Channel = "web";
     $name = $FName . ' ' . $LName;
-
-
-    $description = 'Registration request submitted with the following information:
+    $description = "Registration request submitted with the following information:
 
 
  
 
-    Name:' . $name . '
-    Organization:' . $orgName . '
-    Email:' . $email . '
-    Phone:' . $Phne . '
-    Address:' . $address . '
-    City:' . $city . '
-    State:' . $state . '
-    Zip:' . $zip . '
-    Country:' . $Country . '
+    Name: $name 
+    Organization: $orgName 
+    Email: $email 
+    Phone: $Phne 
+    Address: $address 
+    City: $city 
+    State: $state 
+    Zip: $zip 
+    Country: $Country";
 
-    EW Code(s): ' . implode(", ",$_POST['ewCode']);
+	if(array_key_exists('ewCode', $_POST)){		
+	$description.= '
+
+	EW Code(s): ' . implode(", ",$_POST['ewCode']);}
+
+//Pull prefix and associated company/group/form
+$prefix_result = mysqli_query($connection,'SELECT * FROM SN_Prefix WHERE prefix = "' . substr($_POST['serial_number'],0,3) . '"' );
+
+//If no results default to InFocus form and group
+$group = 22386119;
+$formnum = 42349;
+$brand = 211259;
+$companySwitch=false;
+
+//Assign specific or Default forms and groups
+while($row = mysqli_fetch_assoc($prefix_result)){
+	if($row['company'] == 'Kangaroo') {$companySwitch=true;$group = 23244493;$formnum = 42349;$brand = 3314026;}
+	if($row['zd_group']!= null) $group = $row['zd_group'];
+	if($row['zd_form']!= null) $formnum = $row['zd_form'];
+	}
 
 
-    $group = 22386119;
-    $formnum = 42349;
-
-
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, ZDURL.'/search.json?query=' . urlencode("type:user email:$email"));
-    curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $output = curl_exec($ch);
-    curl_close($ch);
-    $decoded = json_decode($output);
-
-    $results = $decoded->results;
-    $result = $results[0];
-    if(!empty($result->id)){$uid = $result->id;}
+//Check if user email exists in ZD system
+	$results = curlWrap('/search.json?query=' . urlencode("type:user email:$email"));
+    $results = $results->results;
+    if(!empty($results[0]->id)){$uid = $results[0]->id;}
 
     $Phne = str_replace("-","",str_replace(")","",str_replace("(","",str_replace("+","",$Phne))));
 
     if(empty($uid)){
+		//If email address was not found check for exact user name match
+		$results = curlWrap('/search.json?query=' . urlencode("type:user name:$name"));
+		$results = $results->results;
+		//Verify if phone AND name matches
+		foreach($results as $value){if('+' .$Phne ==  $value->phone OR '+1' .$Phne ==  $value->phone) $uid = $value->id;}
+		}
 
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, ZDURL.'/search.json?query=' . urlencode("type:user name:$name"));
-    curl_setopt($ch, CURLOPT_USERPWD, ZDUSER."/token:".ZDAPIKEY);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $output = curl_exec($ch);
-    curl_close($ch);
-    $decoded = json_decode($output);
-
-    $results = $decoded->results;
-    foreach($results as $result){
-    if('+' .$Phne ==  $result->phone OR '+1' .$Phne ==  $result->phone){
-    $uid = $result->id;
-    }
-    }
-    }
-
+	//Create user if no user was found
     if(empty($uid)){
     $create = json_encode(array('user' => array(
     'name' => $name, 
@@ -166,81 +155,70 @@ if($_GET['euwar'] == 1){$Subject = "EMEA warranty promo";}
     					"state"=> $state, 
     					"country"=> $Country, 
     					"zip_code"=> $zip))));
-    $return = curlWrap("/users.json", $create); 
+    $return = curlWrap("/users.json", $create,'post'); 
     $decoded = $return->user;
     $uid = $decoded->id;
     }
 
 
-
-    if(!empty($_FILES)){
+	//Post files if exist and attach file token to ticket
+    if(!empty($filename)){
     $output = post_files("https://infocuscorp.zendesk.com/api/v2/uploads.json?filename=" . urlencode($_FILES['file']['name']),$_FILES['file']);
     $output = json_decode($output);
     $ftoken = $output->upload->token;
     }
 
-
-    if(!empty($uid)){
-    $create = json_encode(array('ticket' => array(
+	//If somehow a user still was not created (post error maybe?) assign a generic requestor
+    if(empty($uid))$uid=array('name' => $FName . ' ' . $LName, 'email' => $email);
+		
+	//Create ticket
+	$create = array('ticket' => array(
     'type' => $type, 
     'subject' => $Subject, 
     'status' => 'new', 
     'group_id' => $group, 
-    'comment' => array( "value"=> $description,"uploads" => array($ftoken)), 
+    'brand_id' => $brand, 
+    'comment' => array( "value"=> $description,
+	"uploads" => array($ftoken)), 
     'tags' => "regreview",
     'requester_id' => $uid,
     'via' =>  array("channel"=> $Channel),
     'custom_fields' => 	array( array("id"=> 23473115, "value"=> $orgName), 
     					array("id"=> 23278985, "value"=> $serial), 
-    					array("id"=> 23415649, "value"=> $productin), ))));
-    }
-    else{
-    $create = json_encode(array('ticket' => array(
-    'type' => $type, 
-    'subject' => $Subject, 
-    'status' => 'new', 
-    'group_id' => $group, 
-    'comment' => array( "value"=> $description,"uploads" => array($ftoken)), 
-    'requester' => array('name' => $FName . ' ' . $LName, 'email' => $email),
-    "tags" => "regreview",
-    "uploads" => array($ftoken),
-    'via' =>  array("channel"=> $Channel),
-    'custom_fields' => 	array( array("id"=> 23473115, "value"=> $orgName), 
-    					array("id"=> 23278985, "value"=> $serial), 
-    					array("id"=> 23415649, "value"=> $productin), ))));
-    }
+    					array("id"=> 23415649, "value"=> $productin), )));
+    $create = json_encode($create);
 
-    $return = curlWrap("/tickets.json", $create); 
 
+    $return = curlWrap("/tickets.json", $create,'post'); 
 
 
 
     $date = new DateTime();
     $timestamp = $date->format('Y-m-d');
 
+	//Insert record into pending IB for review
     $sql='INSERT INTO IB_Pending SET  
-
     ModifiedDate = STR_TO_DATE("' . $timestamp . '","%Y-%m-%d"),
     `First Name` = "' . mysqli_real_escape_string($connection,$_POST['first_name']) . '",
     `Last Name` = "' . mysqli_real_escape_string($connection,$_POST['last_name']) . '",
     `Organization` = "' . mysqli_real_escape_string($connection,$_POST['organization']) . '",';
 
+	//Check for existing record and pull available purchase data.
     if(mysqli_num_rows($result)>0){
-    while($row = mysqli_fetch_array($result))
-    {
-    $sql .= '
-    `Model` = "'. $row['Model'] . '",
-    `INVENTDIM` = "'. $row['INVENTDIM'] . '",
-    `MASTERID` = "'. $row['MASTERID'] . '",
-    `FromDate` = "'. $row['FromDate'] . '",
-    `ToDate` = "'. $row['ToDate'] . '",
-    `SalesID` = "'. $row['SalesID'] . '",
-    `Name` = "'. $row['Name'] . '",
-    `Country` = "'. $row['Country'] . '",
-    `Status` = "'. $row['Status'] . '",
-    ';
-
-    }}
+		while($row = mysqli_fetch_array($result)){
+			$sql .= '
+			`Model` = "'. $row['Model'] . '",
+			`INVENTDIM` = "'. $row['INVENTDIM'] . '",
+			`MASTERID` = "'. $row['MASTERID'] . '",
+			`FromDate` = "'. $row['FromDate'] . '",
+			`ToDate` = "'. $row['ToDate'] . '",
+			`SalesID` = "'. $row['SalesID'] . '",
+			`Name` = "'. $row['Name'] . '",
+			`Country` = "'. $row['Country'] . '",
+			`Status` = "'. $row['Status'] . '",
+			';
+			}
+		}
 
     $sql .= '`Phone` = "' . mysqli_real_escape_string($connection,$_POST['phone_number']) . '",
     `Email` = "' . mysqli_real_escape_string($connection,$_POST['e_mail']) . '",
@@ -258,8 +236,7 @@ if($_GET['euwar'] == 1){$Subject = "EMEA warranty promo";}
     $result = mysqli_query($connection, $sql);
 
 
-
-
+	//Download attached to request.  Not necessary for Kangaroo
     if($_REQUEST['regdl'] == "TRUE"){
     echo "<script src='http://code.jquery.com/jquery-1.9.1.js'></script><br>Request submitted<br><br><a href='/resources/forms/register.php?first_name=" . urlencode($_POST['first_name']) . "&last_name=" . urlencode($_POST['last_name']) . "&phone_number=" . urlencode($_POST['phone_number']) . "&organization=" . urlencode($_POST['organization']) . "&e_mail=" . urlencode($_POST['e_mail']) . "&address=" . urlencode($_POST['address']) . "&city=" . urlencode($_POST['city']) . "&state=" . urlencode($_POST['state']) . "&zip_postal_code=" . urlencode($_POST['zip_postal_code']) . "' onclick='parent.$.colorbox.resize({innerWidth:" . '"80%"' . "});'>Register Another?</a><script>$(function(){
         parent.$.colorbox.resize({
@@ -271,7 +248,9 @@ if($_GET['euwar'] == 1){$Subject = "EMEA warranty promo";}
     die();
     }
     else{
-    echo "<script src='http://code.jquery.com/jquery-1.9.1.js'></script><br>Request submitted<br><br><a href='/resources/forms/register.php?first_name=" . urlencode($_POST['first_name']) . "&last_name=" . urlencode($_POST['last_name']) . "&phone_number=" . urlencode($_POST['phone_number']) . "&organization=" . urlencode($_POST['organization']) . "&e_mail=" . urlencode($_POST['e_mail']) . "&address=" . urlencode($_POST['address']) . "&city=" . urlencode($_POST['city']) . "&state=" . urlencode($_POST['state']) . "&zip_postal_code=" . urlencode($_POST['zip_postal_code']) . "&euwar=" . urlencode($_POST['euwar']) . "' onclick='parent.$.colorbox.resize({innerWidth:" . '"80%"' . "});'>Register Another?</a><script>$(function(){
+		if($companySwitch) header('Location: https://www.surveymonkey.com/r/9SHGYDF') ;
+	//Generates a respone (in the modal view) with a link to auto populate fields for an additional registration
+    echo "<script src='http://code.jquery.com/jquery-1.9.1.js'></script><br>Request submitted<script>$(function(){
         parent.$.colorbox.resize({
             innerWidth:'200px',
             innerHeight:'100px'
@@ -281,85 +260,89 @@ if($_GET['euwar'] == 1){$Subject = "EMEA warranty promo";}
     }
 }
 
-while($row = mysqli_fetch_array($result))
-{
-$date = new DateTime();
-$timestamp = $date->format('Y-m-d');
-$sql='UPDATE InstallBase SET  
-
-ModifiedDate = STR_TO_DATE("' . $timestamp . '","%Y-%m-%d"),
-`First Name` = "' . mysqli_real_escape_string($connection,$_POST['first_name']) . '",
-`Last Name` = "' . mysqli_real_escape_string($connection,$_POST['last_name']) . '",
-`Organization` = "' . mysqli_real_escape_string($connection,$_POST['organization']) . '",
-`Phone` = "' . mysqli_real_escape_string($connection,$_POST['phone_number']) . '",
-`Email` = "' . mysqli_real_escape_string($connection,$_POST['e_mail']) . '",
-`Address` = "' . mysqli_real_escape_string($connection,$_POST['address']) . '",
-`City` = "' . mysqli_real_escape_string($connection,$_POST['city']) . '",
-`State` = "' . mysqli_real_escape_string($connection,$_POST['state']) . '",
-`Zip` = "' . mysqli_real_escape_string($connection,$_POST['zip_postal_code']) . '",
-`Secondary Name` = "' . mysqli_real_escape_string($connection,$_POST['second_name']) . '",
-    `optin` = "' . mysqli_real_escape_string($connection,$_POST['optin']) . '",
-`Secondary Email` = "' . mysqli_real_escape_string($connection,$_POST['second_email']) . '",
-`Registered` = "TRUE",
-`RegCountry` = "' . mysqli_real_escape_string($connection,$_POST['primary_address_country']) . '"
-WHERE SerialNumber = "' . $_POST['serial_number'] . '"';
-
-$result = mysqli_query($connection, $sql);
-
-$result = mysqli_query($connection,'
-SELECT LEFT(`Validation Code`,3) AS vCode, "DisplayWarranties", `Part Number` FROM DisplayWarranties GROUP BY vCode, `Part Number` 
-UNION ALL SELECT LEFT(`Validation Code`,3) AS vCode, "ProjectorWarranties", `Part Number` FROM ProjectorWarranties GROUP BY vCode, `Part Number`
-UNION ALL SELECT LEFT(`Validation Code`,3) AS vCode, "LampWarranties", `Part Number` FROM LampWarranties GROUP BY vCode, `Part Number`
-UNION ALL SELECT LEFT(`Validation Code`,3) AS vCode, "Services", `Part Number` FROM Services GROUP BY vCode, `Part Number` ');
+//IB record was found and should be updated
 while($row = mysqli_fetch_array($result)){
-$table[$row[0]] = $row[1];
-$part[$row[0]] = $row[2];
+	$date = new DateTime();
+	$timestamp = $date->format('Y-m-d');
+	$sql='UPDATE InstallBase SET  
+
+	ModifiedDate = STR_TO_DATE("' . $timestamp . '","%Y-%m-%d"),
+	`First Name` = "' . mysqli_real_escape_string($connection,$_POST['first_name']) . '",
+	`Last Name` = "' . mysqli_real_escape_string($connection,$_POST['last_name']) . '",
+	`Organization` = "' . mysqli_real_escape_string($connection,$_POST['organization']) . '",
+	`Phone` = "' . mysqli_real_escape_string($connection,$_POST['phone_number']) . '",
+	`Email` = "' . mysqli_real_escape_string($connection,$_POST['e_mail']) . '",
+	`Address` = "' . mysqli_real_escape_string($connection,$_POST['address']) . '",
+	`City` = "' . mysqli_real_escape_string($connection,$_POST['city']) . '",
+	`State` = "' . mysqli_real_escape_string($connection,$_POST['state']) . '",
+	`Zip` = "' . mysqli_real_escape_string($connection,$_POST['zip_postal_code']) . '",
+	`Secondary Name` = "' . mysqli_real_escape_string($connection,$_POST['second_name']) . '",
+		`optin` = "' . mysqli_real_escape_string($connection,$_POST['optin']) . '",
+	`Secondary Email` = "' . mysqli_real_escape_string($connection,$_POST['second_email']) . '",
+	`Registered` = "TRUE",
+	`RegCountry` = "' . mysqli_real_escape_string($connection,$_POST['primary_address_country']) . '"
+	WHERE SerialNumber = "' . $_POST['serial_number'] . '"';
+
+	$result = mysqli_query($connection, $sql);
+
+	//Pull list of extended warranty parts
+	$result = mysqli_query($connection,'
+	SELECT LEFT(`Validation Code`,3) AS vCode, "DisplayWarranties", `Part Number` FROM DisplayWarranties GROUP BY vCode, `Part Number` 
+	UNION ALL SELECT LEFT(`Validation Code`,3) AS vCode, "ProjectorWarranties", `Part Number` FROM ProjectorWarranties GROUP BY vCode, `Part Number`
+	UNION ALL SELECT LEFT(`Validation Code`,3) AS vCode, "LampWarranties", `Part Number` FROM LampWarranties GROUP BY vCode, `Part Number`
+	UNION ALL SELECT LEFT(`Validation Code`,3) AS vCode, "Services", `Part Number` FROM Services GROUP BY vCode, `Part Number` ');
+	while($row = mysqli_fetch_array($result)){
+		$table[$row[0]] = $row[1];
+		$part[$row[0]] = $row[2];
+		}
+	$ewCodes=array();
+	//Check each key
+	foreach($_POST['ewCode'] as $Key){
+		$result = mysqli_query($connection,'SELECT Expended FROM `' . $table[substr($Key,0,3)] . '` WHERE `Validation Code` = "' . $Key . '"');
+		if($result != false){
+			if(mysqli_num_rows($result)>0){
+				while($row = mysqli_fetch_array($result)){
+					if($row['Expended'] != "True") array_push($ewCodes,$Key);
+					}
+				}
+			}
+		}
+
+	//Update keys as expended and add contract record associated with SN
+	foreach($ewCodes as $Key){
+		$result = mysqli_query($connection,'UPDATE `' . $table[substr($Key,0,3)] . '` SET Expended = "True", `Date Expended` = CURDATE() WHERE `Validation Code` = "' . $Key . '"');
+		$result = mysqli_query($connection,'INSERT INTO `Contracts` SET `Serial Number` = "' . strtoupper($_POST['serial_number']) . '", DateCreated = CURDATE(), `Key` = "' . $Key . '", `Part Number` = "' . $part[substr($Key,0,3)] . '"');
+		}
+
+
+	//Download attached to request. 
+	if($_POST['regdl'] == "TRUE"){
+		echo "<script src='http://code.jquery.com/jquery-1.9.1.js'></script><br>Request submitted<br><br><a href='/resources/forms/register.php?first_name=" . urlencode($_POST['first_name']) . "&last_name=" . urlencode($_POST['last_name']) . "&phone_number=" . urlencode($_POST['phone_number']) . "&organization=" . urlencode($_POST['organization']) . "&e_mail=" . urlencode($_POST['e_mail']) . "&address=" . urlencode($_POST['address']) . "&city=" . urlencode($_POST['city']) . "&state=" . urlencode($_POST['state']) . "&zip_postal_code=" . urlencode($_POST['zip_postal_code']) . "' onclick='parent.$.colorbox.resize({innerWidth:" . '"80%"' . "});'>Register Another?</a><script>$(function(){
+			parent.$.colorbox.resize({
+				innerWidth:'200px',
+				innerHeight:'100px'
+			});
+			window.location = '/resources/php/pushdownload.php?filename=" . urlencode($_POST['filename']) . "';
+		});</script>";
+		die();
+		}
+		else{
+		//Generates a respone (in the modal view) with a link to auto populate fields for an additional registration
+		if($companySwitch) header('Location: https://www.surveymonkey.com/r/9SHGYDF') ;
+		echo "<script src='http://code.jquery.com/jquery-1.9.1.js'></script><br>Request submitted<script>$(function(){
+			parent.$.colorbox.resize({
+				innerWidth:'200px',
+				innerHeight:'100px'
+			});
+		});</script>";
+		die();
+			}
+	}
+
+
 }
-$ewCodes=array();
-foreach($_POST['ewCode'] as $Key){
 
-$result = mysqli_query($connection,'SELECT Expended FROM `' . $table[substr($Key,0,3)] . '` WHERE `Validation Code` = "' . $Key . '"');
-if($result != false){
-if(mysqli_num_rows($result)>0){
-		while($row = mysqli_fetch_array($result)){
-		if($row['Expended'] != "True"){
-		array_push($ewCodes,$Key);
-		}}
-}}}
-
-
-foreach($ewCodes as $Key){
-$result = mysqli_query($connection,'UPDATE `' . $table[substr($Key,0,3)] . '` SET Expended = "True", `Date Expended` = CURDATE() WHERE `Validation Code` = "' . $Key . '"');
-
-$result = mysqli_query($connection,'INSERT INTO `Contracts` SET `Serial Number` = "' . strtoupper($_POST['serial_number']) . '", DateCreated = CURDATE(), `Key` = "' . $Key . '", `Part Number` = "' . $part[substr($Key,0,3)] . '"');
-
-}
-
-
-if($_POST['regdl'] == "TRUE"){
-echo "<script src='http://code.jquery.com/jquery-1.9.1.js'></script><br>Request submitted<br><br><a href='/resources/forms/register.php?first_name=" . urlencode($_POST['first_name']) . "&last_name=" . urlencode($_POST['last_name']) . "&phone_number=" . urlencode($_POST['phone_number']) . "&organization=" . urlencode($_POST['organization']) . "&e_mail=" . urlencode($_POST['e_mail']) . "&address=" . urlencode($_POST['address']) . "&city=" . urlencode($_POST['city']) . "&state=" . urlencode($_POST['state']) . "&zip_postal_code=" . urlencode($_POST['zip_postal_code']) . "' onclick='parent.$.colorbox.resize({innerWidth:" . '"80%"' . "});'>Register Another?</a><script>$(function(){
-    parent.$.colorbox.resize({
-        innerWidth:'200px',
-        innerHeight:'100px'
-    });
-	window.location = '/resources/php/pushdownload.php?filename=" . urlencode($_POST['filename']) . "';
-});</script>";
-die();
-}
-else{
-echo "<script src='http://code.jquery.com/jquery-1.9.1.js'></script><br>Request submitted<br><br><a href='/resources/forms/register.php?first_name=" . urlencode($_POST['first_name']) . "&last_name=" . urlencode($_POST['last_name']) . "&phone_number=" . urlencode($_POST['phone_number']) . "&organization=" . urlencode($_POST['organization']) . "&e_mail=" . urlencode($_POST['e_mail']) . "&address=" . urlencode($_POST['address']) . "&city=" . urlencode($_POST['city']) . "&state=" . urlencode($_POST['state']) . "&zip_postal_code=" . urlencode($_POST['zip_postal_code']) . "&euwar=" . urlencode($_POST['euwar']) . "' onclick='parent.$.colorbox.resize({innerWidth:" . '"80%"' . "});'>Register Another?</a><script>$(function(){
-    parent.$.colorbox.resize({
-        innerWidth:'200px',
-        innerHeight:'100px'
-    });
-});</script>";
-die();
-}}
-
-
-}
-
-$connection = mysqli_connect('67.43.0.33','InFocus','InF0cusP@ssw0rd', 'InFocus',3306);
+$connection = mysqli_connect('localhost','InFocus','InF0cusP@ssw0rd', 'InFocus',3306);
 mysqli_set_charset($connection, "utf8");
 ini_set('default_charset', 'utf-8');
 require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/langchk.php");
@@ -651,7 +634,7 @@ if($_GET['euwar'] == 1){echo '<span style="position:absolute;right:90px;font-siz
 if($_GET['euwar'] == 1){echo $pageText['euwartxt'];}
     else{echo '<strong>'.$pageText['Processing'].'</strong><br>'.$pageText['StartDate'];}?>
 </section>
-<form action="" style="<?php if($_GET['regdl']=="TRUE"){echo "display:none;";} ?>" id="register" onsubmit="return submit_form()" accept-charset="UTF-8" method="post" enctype="multipart/form-data">
+<form action="" style="<?php if($_GET['regdl']=="TRUE"){echo "display:none;";} ?>" id="register" accept-charset="UTF-8" method="post" enctype="multipart/form-data">
 
 <table id="invoicetable" style="margin-bottom:20px;<?php if($_GET['euwar']==1){echo "display:none;";} ?>">
 <tbody><tr class="odd">
@@ -709,15 +692,15 @@ if($_GET['euwar'] == 1){echo $pageText['euwartxt'];}
  <input type="email" id="email" name="e_mail" size="60" type="e_mail" value="<?php echo $_GET['e_mail']; ?>" required>
 </li>
 <li>
- <label class="top" for="first_name"><?=translate('Secondary Contact Name')?>: </label>
- <input maxlength="128" name="second_name" id="second_name" size="60" type="text" value="<?php echo $_GET['first_name']; ?>" >
+ <label class="top" for="second_name"><?=translate('Secondary Contact Name')?>: </label>
+ <input maxlength="128" name="second_name" id="second_name" size="60" type="text" value="<?php echo $_GET['second_name']; ?>" >
 </li>
 <li>
  <label class="top" for="e_mail"><?=translate('Secondary Contact Email')?>: </label>
  <input type="email" id="second_email" name="second_email" size="60" value="<?php echo $_GET['e_mail']; ?>" >
 </li>
 <li>
- <label class="top" for="product"><?=translate('Product Part #')?>: </label>
+ <label class="top" for="product"><?=translate('Product Part #')?>: <span class="form-required" title="This field is required.">*</span></label>
 <?php
  if($_GET['euwar']==1){echo ' <select name="product" id="product" class="form-text" type="text" required>
  <option value=""></option>

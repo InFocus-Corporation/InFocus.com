@@ -133,18 +133,24 @@ $specfeats .= ' AND specfeatures LIKE "%' . $specf . '%"';
 
 
 if( $aspect == "4:3"){
-$aspect = ' AND nativeaspect = "4x3"';
-$screensize = ($screensize*0.8)*($screensize*0.6);
+$aspect = ' AND (nativeaspect = "4x3" OR nativeaspect = "4:3") ';
+$screensize = ($screensize*0.8)*($screensize*0.6); 
+$lumens = ROUND(($screensize*intval($bright))/500)*500;
+}
+elseif( $aspect == "1080p"){
+$aspect = '';
+$specfeats .= ' AND resolutionname = "1080p"';
+$screensize = ($screensize*0.847998)*($screensize*0.529999);
 $lumens = ROUND(($screensize*intval($bright))/500)*500;
 }
 else{
-$aspect = ' AND ( nativeaspect = "16x9" OR nativeaspect = "16x10")';
+$aspect = ' AND ( nativeaspect = "16x9" OR nativeaspect = "16x10" OR nativeaspect = "16:9" OR nativeaspect = "16:10")';
 $screensize = ($screensize*0.847998)*($screensize*0.529999);
 $lumens = ROUND(($screensize*intval($bright))/500)*500;
 }
 
 
-$connection = mysqli_connect('67.43.0.33','InFocus','InF0cusP@ssw0rd', 'InFocus',3306);
+require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
 
 //$result = mysqli_query($connection,'SELECT ' . $screen . ' FROM brightness WHERE brightval = ' . $lighting . ' AND content = "' . $content . '"');
 
@@ -169,12 +175,15 @@ resolutionname,
 Contrast, 
 list, 
 price FROM projectors LEFT JOIN (optionallenses) ON (optionallenses.`Projector Model`=projectors.partnumber) LEFT JOIN (producttext) ON (producttext.partnumber = projectors.partnumber) 
-WHERE producttext.lang = "' . $lang . '" 
+WHERE 
+producttext.lang = "' . $lang . '" 
+AND projectors.lang = "' . $lang . '" 
 AND ' . $throwh . ' >= if(optionallenses.throwl is null,projectors.throwl,optionallenses.throwl)  
 AND ' . $throwl . ' <= if(optionallenses.throwh is null,projectors.throwh,optionallenses.throwh)  
 AND weight ' . $weight . ' 
-AND lifestatus != "EOSL"
-AND lifestatus != "EOL"
+AND producttext.active != 0
+AND producttext.active IS NOT NULL
+AND producttext.active != 86
 AND lumenshigh >= ' . $lumens . $sqlinputs . $aspect . $specfeats;
 
 $result = mysqli_query($connection,$sql);

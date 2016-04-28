@@ -27,7 +27,7 @@ $to = $email1;
 $subject = "Mondopad 2.0 Beta software";
 $message = "Thank you for requesting Mondopad 2.0 Beta software.<br>
 You can download the software by clicking the link below.<br>
-<a href='https://infocus.box.com/s/ztrfe7i8kjgk02k37dnr3dc8o0c1vn4t'>Click here!</a><br>
+<a href='https://infocus.box.com/s/3nw2cwmkxelrj21k4shztkzcgpcoqf9v'>Click here!</a><br>
 We would love to get your feedback. Please send any issues you have or other comments about the software to support@infocus.com.<br>
 If you need help with installing or using the software, contact our support team at 877-388-8360.<br>
 Thank you for choosing InFocus!
@@ -104,9 +104,8 @@ a.subtle{color:darkgrey;}
 
 <form action="" method="POST" name="mp20Form">
 
-<h5><?=translate('Mondopad 2.0 BETA Software V2')?></h5>
-<p><?=$pageText['Fill out the fields below to receive your Mondopad 2.0 Beta software via email.
-If you need help, contact our support team at 877-388-8360.']?> </p>
+<h5><?=translate('Mondopad 2.0 BETA Software')?></h5>
+<p><?=$pageText['formtext']?> </p>
 
 <div id="contactForm">
 <form action=""method="POST" enctype="multipart/form-data" onsubmit="submit();">

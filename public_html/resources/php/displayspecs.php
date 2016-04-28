@@ -172,7 +172,7 @@ $arrlength=count($colnames);
  }
  
   $rowNum=count($allRow);
-  if($rowNum == 0){echo "No Specifications Found";die();}
+  if($rowNum == 0){echo "No Specifications Found</thead></table></div>";die();}
   $row=transpose(array_reverse($allRow));
    $x=0;
    

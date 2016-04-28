@@ -1,5 +1,7 @@
 <?php
-	$categories = array("ultra-portable","office-classroom","short-throw","large-venue","home-theater","interactive");	
+	//$categories = array("ultra-portable","office-classroom","short-throw","large-venue","home-theater","interactive");	
+	//DE-Mod1//
+	$categories = array("ultra-portable","office-classroom","short-throw","large-venue","home-theater");	
 	if(in_array($_REQUEST['cat'],$categories)){	$category = $_REQUEST['cat'];}
 
 if($_REQUEST['content']=='true'){
@@ -11,7 +13,6 @@ else{
 	require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
 	require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 
-	$categories = array("ultra-portable","office-classroom","short-throw","large-venue","home-theater","interactive");	
 	if(!empty($category)){echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '/projectors/' . $category . '"/>' . PHP_EOL;}
 	else{echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '/projectors/"/>' . PHP_EOL;}	
  echo $pageText[$category.'meta'] .'
@@ -45,7 +46,6 @@ $catarray['interactive']=array('alt'=>'Interactive','url'=>'Interactive-Projecto
 transition:right 1s ease-out;
 webkit-transition:right 1s ease-out;
 moz-transition:right 1s ease-out;
-text-transform:capitalize;
 position:relative;
 }
 #catdesc{
@@ -94,7 +94,7 @@ if(empty($category)) : ?>
 						<div class="description"><?= $pageText["$category-short"];?></div>
 						<span>
 							<a href="/projectors/<?= $category ?>" class="inbound view-all" onclick="showCategory('<?= $category ?>');"><?= translate('View All');?></a>
-							<?php if($lang != "de"){echo "<a href='http://www.infocusstore.com/{$catarray[$category]['alt']}'>". translate('Shop Now') . '</a>';} ?>
+							<?php if($lang != "de"){echo "<a href='http://www.infocusstore.com/{$catarray[$category]['url']}'>". translate('Shop Now') . '</a>';} ?>
 						</span>
 					</div>
 				</li>

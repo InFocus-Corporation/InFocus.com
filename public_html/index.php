@@ -1,5 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
+require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '"/>' . PHP_EOL;
 
 ?>
@@ -108,27 +109,17 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 <a class="arrow-right" href="#"></a>
 <div class="swiper-container" >
 <div id="swiperwrap" class="swiper-wrapper"><!-- SwipeGenerated -->
-<div class="swiper-slide sedit" style="position:relative"> <div style="position: relative;" class="crop cmsedit"><img alt="InFocus 1080p HD Projector Values" src="/resources/images/InFocus-1080p-HD-Projector-Low-Price.png"></div><a style="height: 28px;" href="http://www.infocusstore.com/High-Definition-Projectors/b/10483487011"><span class="linkspan" style="position: absolute; top: 83.2957%; width: 10.8011%; height: 9.25508%; left: 75.8941%; opacity: 0;"></span></a><a style="height: 28px;" href="/hd-projector-lineup"><span class="linkspan" style="position: absolute; top: 83.07%; width: 10.9442%; height: 9.25508%; left: 58.7983%; opacity: 0;"></span></a></div><div class="swiper-slide sedit" style="position:relative"> <div style="position: relative;" class="crop cmsedit"><img alt="InFocus Thunder Speakerphone" src="/resources/images/InFocus-Thunder-Speakerphone-Meetings.png"></div><a style="height: 28px;" href="/peripherals/INA-TH150"><span class="linkspan" style="position: absolute; top: 27.4419%; width: 11.8304%; height: 14.8837%; left: 25.2232%; opacity: 0;"></span></a></div><div class="swiper-slide" style="position:relative">
-<img src="/resources/images/InFocus-MVP100-Video-Phone-Video-Marquee">
-<div id="ytcover" class="" style="width: 35%;
-height: 18%;
-border-radius: 25%;
-position: absolute;
-z-index: 1000;
-overflow: hidden;
-top: 76%;
-left: 0%;
-cursor:pointer;"></div>
-
-</div>
+<div class="swiper-slide sedit" style="position:relative"> <div aria-describedby="" title="Rich Text Editor, editor1" aria-label="Rich Text Editor, editor1" role="textbox" style="position: relative;" spellcheck="false" tabindex="0" class="crop cmsedit "><img alt="InFocus Mondopad Collaboration System" src="/resources/images/InFocus-Mondopad-Renovate-Conference-Room"></div><a style="height: 25px;" href="/displays/MONDOPAD-SERIES"><span class="linkspan" style="position: absolute; top: 82.1053%; width: 10.8424%; height: 8.94737%; left: 6.83903%; opacity: 0;"></span></a><a style="height: 25px;" href="/displays/MONDOPAD-SERIES"><span class="linkspan" style="position: absolute; top: 8.1579%; width: 36.7807%; height: 28.6842%; left: 6.25521%; opacity: 0;"></span></a></div><div class="swiper-slide sedit" style="position:relative"> <div aria-describedby="" title="Rich Text Editor, editor7" aria-label="Rich Text Editor, editor7" role="textbox" style="position: relative;" spellcheck="false" tabindex="0" class="crop cmsedit"><img alt="Free whiteboard and video calling software with BigTouch purchse" src="/resources/images/InFocus-BigTouch-Free-Software-Promo-Home"></div><a style="height: 25px;" href="/bigtouch-free-software"><span class="linkspan" style="position: absolute; top: 79.5812%; width: 10.7705%; height: 8.63874%; left: 55.4267%; opacity: 0;"></span></a><a style="height: 25px;" href="/bigtouch-free-software"><span class="linkspan" style="position: absolute; top: -0.52356%; width: 49.2958%; height: 97.9058%; left: 3.06545%; opacity: 0;"></span></a><a style="height: 25px;" href="/displays/BIGTOUCH-SERIES"><span class="linkspan" style="position: absolute; top: 19.1099%; width: 36.7854%; height: 14.9215%; left: 55.3438%; opacity: 0;"></span></a></div><div class="swiper-slide sedit" style="position:relative"> <div aria-describedby="" title="Rich Text Editor, editor3" aria-label="Rich Text Editor, editor3" role="textbox" spellcheck="false" tabindex="0" style="position: relative;" class="crop cmsedit"><img alt="InFocus Low Cost 1080p HD Projector" src="/resources/images/InFocus-1080p-HD-Projectors-Home"></div><a style="height: 28px;" href="https://www.infocusdirect.com/projectors/high-definition"><span class="linkspan" style="position: absolute; top: 83.2957%; width: 10.8011%; height: 9.25508%; left: 75.8941%; opacity: 0;"></span></a><a style="height: 25px;" href="/hd-projector-lineup"><span class="linkspan" style="position: absolute; top: 83.07%; width: 10.9442%; height: 9.25508%; left: 58.7983%; opacity: 0;"></span></a><a style="height: 25px;" href="/hd-projector-lineup"><span class="linkspan" style="position: absolute; top: 7.81671%; width: 18.4143%; height: 12.6685%; left: 63.6829%; opacity: 0;"></span></a><a style="height: 25px;" href="/hd-projector-lineup"><span class="linkspan" style="position: absolute; top: 32.6146%; width: 24.0409%; height: 38.814%; left: 61.0401%; opacity: 0;"></span></a><a style="height: 25px;" href="/hd-projector-lineup"><span class="linkspan" style="position: absolute; top: 5.92992%; width: 43.4783%; height: 86.7924%; left: 9.37766%; opacity: 0;"></span></a></div>
  
- <div class="swiper-slide" style="position:relative"> <div style="position: relative;" class="crop cmsedit sedit"><img alt="InFocus LightPro IN1146 Mobile LED Projector" src="/resources/images/InFocus-LightPro-IN1146-Reviews.png"></div><a style="height: 25px;" href="/projectors/IN1146"><span class="linkspan" style="position: absolute; top: 61.8037%; width: 9.79557%; height: 7.95756%; left: 73.2538%; opacity: 0;"></span></a><a style="height: 25px;" href="http://www.infocusstore.com/InFocus-LightPro-IN1146-Mobile-Projector/dp/B00H9SKMFE"><span class="linkspan" style="position: absolute; top: 74.8011%; width: 16.5247%; height: 13.5279%; left: 69.7615%; opacity: 0;"></span></a></div>
+ 
+ 
+ 
  
 
 
 
 
-         <!-- EndSwipeGenerated --></div>
+                 <!-- EndSwipeGenerated --></div>
 </div><div class="pagination"></div></div>
 
 
@@ -269,15 +260,15 @@ $.get(
 
 <div id="category" class="C9 cmsedit" style="padding-top:2.5em;max-width:1153px;"><!-- CTAGenerated -->
 <div class="C4 Col image-set large-CTA">
-<div><a href="/mondopad-live-demo"><img alt="See a Live Mondopad Demo" src="/resources/images/InFocus-Mondopad-Live-Demo.gif"></a></div>
+<div><a href="/mondopad-live-demo"><img alt="See a Live Mondopad Demo" src="/resources/images/InFocus-Mondopad2-Live-Demo.gif"></a></div>
 </div>
 
 <div class="C6 Col Col_child C5_child CTA">
 
-	<li class="image-set" style=""><a href="/peripherals/INF-SPTZ-2"><img alt="InFocus RealCam PTZ Camera" src="/resources/images/InFocus-RealCam-PTZ-Camera.png"></a></li>
+	<li class="image-set" style=""><a href="/kangaroo" target="_blank"><img alt="InFocus Kangaroo Mobile Desktop" src="/resources/images/InFocus-Kangaroo-Mobile-PC.png"></a></li>
 	<li class="image-set" style=""><a href="/product-finder"><img alt="Find a projector based on your needs" src="/resources/images/InFocus-Projector-Finder-Help-Choose.png"></a></li>
-	<li class="image-set" style="text-align:center"><a href="http://www.infocusstore.com"><img alt="Shop at the InFocus Store" src="/resources/images/InFocus-Store-Free-Shipping-March.png"></a></li>
-	<li class="image-set"><a href="/peripherals/INLITESHOW4"><img alt="Present wirelessly to any display with LiteShow 4" src="/resources/images/InFocus-LiteShow4-Wireless-Adapter.png"></a></li>
+	<li class="image-set" style="text-align:center"><a href="/inspire"><img alt="InFocus Inspire Education Program" src="/resources/images/InFocus-Inspire-Education-Home.png"></a></li>
+	<li class="image-set"><a href="/projectors/office-classroom/IN3130a-Series"><img alt="InFocus IN3130a Network Projector Series" src="/resources/images/InFocus-IN3130a-Network-Projector.png"></a></li>
 
 </div>
 <!-- EndCTAGenerated --></div> 

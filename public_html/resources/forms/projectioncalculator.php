@@ -32,13 +32,26 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
  <script> //run all scripts and functions from here
-
-if(self==top){window.location = "/#projectioncalculator";}
+ 
+ if(self==top){window.location = "/#projectioncalculator";}
 $(document).ready(function() {
     parent.$.colorbox.resize({
         innerWidth:$('body').width()+20,
         innerHeight:$('body').height()+60
     });	});
+
+/*if(self==top){window.location = "/#projectioncalculator";}
+$(document).ready(function() 
+	{
+		parent.$.colorbox.resize
+		({
+			innerWidth:$('body').width()+20,
+			innerHeight:$('body').height()+60
+		});			
+	});
+	*/
+	
+	
 
 	var whichsection = 0;
 	var dist_max = 300;
@@ -177,7 +190,7 @@ $(document).ready(function() {
 
 	  inches = parseInt($( "#slider-width" ).slider( "value" )) // fill inches with width slider
 	  $( "#text_width_tot_in" ).val(Math.round( $( "#slider-width" ).slider( "value" )));//set distance textbox with slider
-	  $("#text_width_tot_mm").val(Math.round( $( "#slider-width" ).slider( "value" )*2.54));
+	  $("#text_width_tot_mm").val(Math.round( $( "#slider-width" ).slider( "value" )));
 
 	  feet = 0;
 	  while(inches > 11) //convert inches to feet (width)
@@ -203,7 +216,7 @@ $(document).ready(function() {
 
 	  inches = parseInt($( "#slider-height" ).slider( "value" )) // fill inches with width slider
 		$( "#text_height_tot_in" ).val(Math.round( $( "#slider-height" ).slider( "value" )));//set distance textbox with slider
-		$("#text_height_tot_mm").val(Math.round( $( "#slider-height" ).slider( "value" )*2.54));
+		$("#text_height_tot_mm").val(Math.round( $( "#slider-height" ).slider( "value" )));
 	  feet = 0;
 	  while(inches > 11) //convert inches to feet (width)
 
@@ -229,7 +242,7 @@ $(document).ready(function() {
 	 
 	  var inches = parseInt($( "#slider-diag" ).slider( "value" )) // fill inches with slider value for distance
 	  $( "#text_diag_tot_in" ).val(Math.round( $( "#slider-diag" ).slider( "value" )));//set distance textbox with slider
-	  $("#text_diag_tot_mm").val(Math.round( $( "#slider-diag" ).slider( "value" )*2.54));
+	  $("#text_diag_tot_mm").val(Math.round( $( "#slider-diag" ).slider( "value" )));
 	  var feet = 0;
 
 	  while(inches > 11) //convert inches to feet (distance)
@@ -889,10 +902,17 @@ $( "#text_height_tot_in" ).val(parseInt($( "#slider-height" ).slider( "value" ))
 	}
 	function FromWidthText_mm()
 	{
+		
+		//testing-one
 		$( "#slider-zoom" ).slider( "value",(100));
 		  $( "#text_zoom" ).val($( "#slider-zoom" ).slider( "value" ));
 		var mywidthmm = parseInt($( "#text_width_tot_mm" ).val());
+		var myheightmm = parseInt($( "#text_height_tot_mm" ).val());
 		$("#text_width_tot_in").val(mywidthmm/2.54);
+		$("#text_dist_tot_mm").val(Math.round(throwratio_low*$("#text_width_tot_mm").val()));
+		$("#text_height_tot_mm").val(Math.round((mywidthmm*AspectHeight)/AspectWidth));
+		$("#text_diag_tot_mm").val(Math.round(Math.sqrt((mywidthmm*mywidthmm)+(myheightmm*myheightmm))));
+		
 		
 		$( "#slider-width" ).slider( 'value',mywidthmm);
   
@@ -1044,6 +1064,14 @@ ColorSliders();
 		var myhtfeet = parseInt($( "#text_height_ft" ).val().substring(0, $( "#text_height_ft" ).val().length - 1));
 		//var mydg = $( "#slider-diag" ).slider( "value" )
 		
+		
+		var myheightmm = parseInt($( "#text_height_tot_mm" ).val());
+		var mywidthmm = parseInt((myheightmm*AspectWidth)/AspectHeight);
+		var mydistmm = throwratio_low*mywidthmm;
+		$("#text_width_tot_in").val(mywidthmm);
+		$("#text_dist_tot_mm").val(Math.round(mydistmm));
+		$("#text_diag_tot_mm").val(Math.round(Math.sqrt((mywidthmm*mywidthmm)+(myheightmm*myheightmm))));
+		
 		$( "#slider-height" ).slider( 'value',Math.round(myhtinches+(myhtfeet*12)));
 		
 		  
@@ -1194,6 +1222,13 @@ ColorSliders();
 		  $( "#text_zoom" ).val($( "#slider-zoom" ).slider( "value" ));
 		var mywidthmm = parseInt($( "#text_width_tot_mm" ).val());
 		$("#text_width_tot_in").val(mywidthmm/2.54);
+		
+		var myheightmm = parseInt($( "#text_height_tot_mm" ).val());
+		var mywidthmm = parseInt((myheightmm*AspectWidth)/AspectHeight);
+		var mydistmm = throwratio_low*mywidthmm;
+		$("#text_width_tot_mm").val(mywidthmm);
+		$("#text_dist_tot_mm").val(Math.round(mydistmm));
+		$("#text_diag_tot_mm").val(Math.round(Math.sqrt((mywidthmm*mywidthmm)+(myheightmm*myheightmm))));
 		
 		$( "#slider-width" ).slider( 'value',mywidthmm);
   
@@ -1458,11 +1493,22 @@ ColorSliders();
 		//$( "#text_diag_tot_in" ).val(parseInt($( "#text_diag_tot_in" ).val()));
 		var mydiaginches = parseInt($( "#text_diag_tot_mm" ).val());
 		$("#text_diag_tot_in").val(mydiaginches/2.54);
+		
+		//set text values
+		var mydiagmm = parseInt($( "#text_diag_tot_mm" ).val());
+		var myheightmm = ((mydiagmm)*AspectHeight)/(Math.sqrt((AspectWidth*AspectWidth)+(AspectHeight*AspectHeight)));
+		var mywidthmm = (AspectWidth/AspectHeight)*myheightmm;
+		var mydistmm = throwratio_low*mywidthmm;
+		$("#text_width_tot_mm").val(Math.round(mywidthmm));
+		$("#text_dist_tot_mm").val(Math.round(mydistmm));
+		$("#text_height_tot_mm").val(Math.round(myheightmm));
+		
+		
 		$( "#slider-diag" ).slider( 'value',mydiaginches);
 	  
 		  
 		 //SET HEIGHT
-		  	var getheight = ((parseInt($( "#slider-diag" ).slider( "value" )))*AspectHeight)/(Math.sqrt((AspectWidth*AspectWidth)+(AspectHeight*AspectHeight)))
+		  	var getheight = ((parseInt($( "#slider-diag" ).slider( "value" )))*AspectHeight)/(Math.sqrt((AspectWidth*AspectWidth)+(AspectHeight*AspectHeight)));
 			$( "#slider-height" ).slider( 'value',Math.round(getheight) );
 			$( "#text_height_tot_in" ).val(parseInt($( "#slider-height" ).slider( "value" )));
 
@@ -1654,7 +1700,11 @@ $("#llength").text(lengthtype);
 		$("#possibleRange").text("");
 		
 		$("#imageoffset_label").text(Math.round($( "#slider-height" ).slider( "value" )*(offsetvalue/100)) + " (" + offsetvalue + "%)");
-		$("#imageoffset_label_viz").text(Math.round($( "#slider-height" ).slider( "value" )*(offsetvalue/100)) + " (" + offsetvalue + "%)");
+		var baseoffset;
+		baseoffset = Math.round($( "#slider-height" ).slider( "value" )*(offsetvalue/100));
+		if(isNaN() == true)
+		{baseoffset = "0";}
+		$("#imageoffset_label_viz").text(baseoffset + " (" + offsetvalue + "%)");
 		
 		
 	}
@@ -1795,6 +1845,7 @@ $( "#zoomvalue" ).text(Math.round(100*(throwratio_high/throwratio_low)/100) + "x
 
 			var myModel = $("#modelnumber").val();
 			var res = myModel.replace("in","IN");;
+			var res = myModel.replace("sp","SP");;
 
 			var res2 = res.replace("A","a");
 			var res3 = res2.replace("L","l");
@@ -3350,7 +3401,7 @@ getMinMaxDist();
 
 		//{
 			$("li a").click(function(){
-				if ($(this).text().substring(0, 2) == "IN")
+				if ($(this).text().substring(0, 2) == "IN" || $(this).text().substring(0, 2) == "SP")
 				{
 					$("#modelnumber").val($(this).text());
 					$("#modelnumber_tab").val($(this).text());
@@ -3368,12 +3419,14 @@ getMinMaxDist();
 				$('#heighttabs li a').eq(0).tab('show'); 
 				$('#diagtabs li a').eq(0).tab('show'); 
 				OnToggleIn();
+				OnToggleIn();
 			});
 			$("#inchpaneselection_width").click(function(){
 				$('#widthtabs li a').eq(0).tab('show'); 
 				$('#disttabs li a').eq(0).tab('show'); 
 				$('#heighttabs li a').eq(0).tab('show'); 
 				$('#diagtabs li a').eq(0).tab('show'); 
+				OnToggleIn();
 				OnToggleIn();
 			});
 			$("#inchpaneselection_height").click(function(){
@@ -3382,12 +3435,14 @@ getMinMaxDist();
 				$('#heighttabs li a').eq(0).tab('show'); 
 				$('#diagtabs li a').eq(0).tab('show'); 
 				OnToggleIn();
+				OnToggleIn();
 			});
 			$("#inchpaneselection_diag").click(function(){
 				$('#widthtabs li a').eq(0).tab('show'); 
 				$('#disttabs li a').eq(0).tab('show'); 
 				$('#heighttabs li a').eq(0).tab('show'); 
 				$('#diagtabs li a').eq(0).tab('show'); 
+				OnToggleIn();
 				OnToggleIn();
 			});
 			$("#mmpaneselection").click(function(){
@@ -3396,6 +3451,7 @@ getMinMaxDist();
 				$('#heighttabs li a').eq(1).tab('show'); 
 				$('#diagtabs li a').eq(1).tab('show'); 
 				OnToggleCm();
+				OnToggleCm();
 			});
 			$("#mmpaneselection_width").click(function(){
 				$('#widthtabs li a').eq(1).tab('show'); 
@@ -3403,6 +3459,8 @@ getMinMaxDist();
 				$('#heighttabs li a').eq(1).tab('show'); 
 				$('#diagtabs li a').eq(1).tab('show'); 
 				OnToggleCm();
+				OnToggleCm();
+				
 			});
 			$("#mmpaneselection_height").click(function(){
 				$('#widthtabs li a').eq(1).tab('show'); 
@@ -3410,12 +3468,14 @@ getMinMaxDist();
 				$('#heighttabs li a').eq(1).tab('show'); 
 				$('#diagtabs li a').eq(1).tab('show'); 
 				OnToggleCm();
+				OnToggleCm();
 			});
 			$("#mmpaneselection_diag").click(function(){
 				$('#widthtabs li a').eq(1).tab('show'); 
 				$('#disttabs li a').eq(1).tab('show'); 
 				$('#heighttabs li a').eq(1).tab('show'); 
 				$('#diagtabs li a').eq(1).tab('show'); 
+				OnToggleCm();
 				OnToggleCm();
 			});
             /*select: function(event, ui) 
@@ -3505,9 +3565,6 @@ getMinMaxDist();
                         <li class="dropdown-submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Office/Classroom</a>
                             <ul class="dropdown-menu">
-                              <li><a tabindex="-1" href="#">IN112a</a></li>
-                              <li><a href="#">IN114a</a></li>
-                              <li><a href="#">IN116a</a></li>
                               <li><a href="#">IN118HDa</a></li>                       
                               <li><a href="#">IN118HDSTa</a></li>
                               <li><a href="#">IN122a</a></li>
@@ -3552,7 +3609,8 @@ getMinMaxDist();
                         <li class="dropdown-submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home Theater</a>
                             <ul class="dropdown-menu">
-                              <li><a tabindex="-1" href="#">IN8606HD</a></li>                               
+                              <li><a tabindex="-1" href="#">IN8606HD</a></li>   
+							  <li><a tabindex="-1" href="#">SP1080</a></li> 							  
                             </ul>
                         </li>   
                         <li class="divider"></li>                        
@@ -3572,7 +3630,9 @@ getMinMaxDist();
                         <li class="dropdown-submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Legacy Projectors</a>
                             <ul class="dropdown-menu">
-                              <li><a tabindex="-1" href="#">Coming Soon</a></li>                               
+                              <li><a href="#">IN112a</a></li> 
+							<li><a href="#">IN114a</a></li> 
+							<li><a href="#">IN116a</a></li>                               
                             </ul>
                         </li>                            
                     </ul>
@@ -3623,12 +3683,13 @@ getMinMaxDist();
                           </li>  
                           <li class="dropdown-submenu">
                             <a tabindex="-1" href="#">Office/Classroom</a>
-                            <ul class="dropdown-menu">
-                              <li><a tabindex="-1" href="#">IN112a</a></li>
-                              <li><a href="#">IN114a</a></li>
-                              <li><a href="#">IN116a</a></li>
-                              <li><a href="#">IN118HDa</a></li>                       
+                            <ul class="dropdown-menu">                  
                               <li><a href="#">IN118HDSTa</a></li>
+							  <li><a href="#">IN112x</a></li>
+							  <li><a href="#">IN114x</a></li>
+							  <li><a href="#">IN116x</a></li>
+							  <li><a href="#">IN118HDxc</a></li>
+							  <li><a href="#">IN119HDx</a></li>
                               <li><a href="#">IN122a</a></li>
                               <li><a href="#">IN124a</a></li>                        
                               <li><a href="#">IN126a</a></li>
@@ -3642,13 +3703,11 @@ getMinMaxDist();
                               <li><a href="#">IN224</a></li>    
                               <li><a href="#">IN226</a></li>                        
                               <li><a href="#">IN226ST</a></li>
-                              <li><a href="#">IN3124</a></li>
                               <li><a href="#">IN3126</a></li>    
                               <li><a href="#">IN3128HD</a></li>                        
-                              <li><a href="#">IN3128HDa</a></li>
                               <li><a href="#">IN3134a</a></li>
                               <li><a href="#">IN3136a</a></li>                        
-                              <li><a href="#">IN3138HD</a></li>                      
+                              <li><a href="#">IN3138HDa</a></li>                      
                             </ul>
                           </li>  
                           <li class="dropdown-submenu">
@@ -3669,7 +3728,8 @@ getMinMaxDist();
                           <li class="dropdown-submenu">
                             <a tabindex="-1" href="#">Home Theater</a>
                             <ul class="dropdown-menu">
-                              <li><a tabindex="-1" href="#">IN8606HD</a></li>                   
+                              <li><a tabindex="-1" href="#">IN8606HD</a></li>
+							  <li><a tabindex="-1" href="#">SP1080</a></li> 							  
                             </ul>
                           </li>   
                           <li class="dropdown-submenu">
@@ -3687,7 +3747,9 @@ getMinMaxDist();
                           <li class="dropdown-submenu">
                             <a tabindex="-1" href="#">Legacy Projectors</a>
                             <ul class="dropdown-menu">
-                              <li><a tabindex="-1" href="#">Coming Soon</a></li>                   
+                              <li><a href="#">IN112a</a></li> 
+							<li><a href="#">IN114a</a></li> 
+							<li><a href="#">IN116a</a></li>                    
                             </ul>
                           </li>  
                         </ul>
@@ -4000,7 +4062,8 @@ getMinMaxDist();
                   <div class="tab-content">
                     <div role="tabpanel" class="tab-pane fade in active" id="home">
 
-                                <div class="pBlock topRightModel">
+                                
+								<div class="pBlock topRightModel">
                                     <h1>Projector</h1>  
                                      <div class="form-group">
                                         <input type="text" class="form-control" id="modelnumber_tab" placeholder="Model">                          
@@ -4033,13 +4096,20 @@ getMinMaxDist();
                                         </ul>
                                     </div>
                                 </div>  
-                                <div class="pBlock rightOffset">
+                               <!-- <div class="pBlock rightOffset">
                                     <h1>Image offset</h1>
                                     <p>Your image will appear <label id = "imageoffset_label">11"(10%)</label> higher than lens center.</p>
                                 </div>   
+								-->
                                 <div class="pBlock rightSupport">
-                                    <h1>Support</h1>
-                                    <p>Any questions or suggestions can be forwarded to <a href="mailto:support@infocus.com">support@infocus.com</a>.</p>
+                                    <h1>Suggested Accessories</h1>
+									<table>
+									<tr><th colspan = "2">Interactive</th></tr>
+									<tr><td style = "padding: 10px;"><a target="_blank" href = "http://www.infocus.com/accessories/networking/INLIGHTCAST">LightCast</a></td><td style = "padding-left: 10px;">$299</td></tr>
+									<tr><th colspan = "2">Mounting Solution</th></tr>
+									<tr><td style = "padding: 10px;"><a target="_blank" href = "http://www.infocus.com/accessories/mounts">Ceiling Mount</a></td><td style = "padding-left: 10px;">$199 - $249</td></tr>
+									</table>
+                                    
                                 </div>                           
 
                     </div>
@@ -4081,12 +4151,18 @@ getMinMaxDist();
                                           <dd id="llength">None</dd>   
                                         </dl>                                     
                                 </div>  
-                                <div class="pBlock rightSupport">
-                                    <h1>Support</h1>
-                                    <p>Any questions or suggestions can be forwarded to <a href="mailto:support@infocus.com">support@infocus.com</a>.</p>
+								<div class="pBlock rightSupport">
+                                    <h1>Suggested Accessories</h1>
+									<table>
+									<tr><th colspan = "2">Interactive</th></tr>
+									<tr><td style = "padding: 10px;"><a target="_blank" href = "http://www.infocus.com/accessories/networking/INLIGHTCAST">LightCast</a></td><td style = "padding-left: 10px;">$299</td></tr>
+									<tr><th colspan = "2">Mounting Solution</th></tr>
+									<tr><td style = "padding: 10px;"><a target="_blank" href = "http://www.infocus.com/accessories/mounts">Ceiling Mount</a></td><td style = "padding-left: 10px;">$199 - $249</td></tr>
+									</table>
                                 </div>                           
 
                     </div>
+					
                   </div>
 
                 </div>

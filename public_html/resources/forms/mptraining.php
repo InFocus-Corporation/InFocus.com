@@ -1,3 +1,293 @@
+<?php
+if(!empty($_POST['key']))
+{
+$s1train = str_replace("mps1t1","Mondopad 2.0 Overview (2hrs)",$_POST['s1trainings']);
+$s1train = str_replace("mps1t2","Mondopad 2.0 for Admins (2hrs)",$s1train);
+$s1train = str_replace("mps1t3","Upgrading to 2.0 (1hr)",$s1train);
+$s1train = str_replace("mps1t4","Mondopad 1.8 Overview (2hrs)",$s1train);
+$s1train = str_replace("mps1t5","Mondopad 1.8 for Admins (2hrs)",$s1train);
+$s1train = str_replace("mps1t6","InFocus Video Conferencing (1hr)",$s1train);
+//$s1train = str_replace("mps1t7","Mondopad Interactive Whiteboard (30 minutes)",$s1train);
+//$s1train = str_replace("mps1t8","Working with 3rd party Applications (30 minutes)",$s1train);
+
+
+
+$descript = "
+
+>>>InFocus as your Video Conferencing Provider?:
+";
+$descript .= $_POST["service"];
+
+
+$descript .=  "
+
+>>>Products & Service?:
+";
+foreach($_POST["optchk"] as $value){
+$descript .= $value . "
+";
+}
+
+$descript .= "
+
+>>>version of software?:
+";
+$descript .= $_POST["opt1"];
+
+
+
+
+
+
+	if(empty($_POST['org'])){$_POST['org']= $_POST['firstname'] . " " . $_POST['lastname'];}
+
+
+		
+		
+switch($_POST['reqtime1']){
+	case 8:
+$startTime = $_POST['reqdate1'] . " 9:00:00";        
+$endTime = $_POST['reqdate1'] . " 11:00:00";         
+	break;
+	case 10:
+$startTime = $_POST['reqdate1'] . " 11:00:00";        
+$endTime = $_POST['reqdate1'] . " 13:00:00";         
+	break;
+	case 12:
+$startTime = $_POST['reqdate1'] . " 13:00:00";        
+$endTime = $_POST['reqdate1'] . " 15:00:00";         
+	break;
+	case 2:
+$startTime = $_POST['reqdate1'] . " 15:00:00";        
+$endTime = $_POST['reqdate1'] . " 17:00:00";         
+	break;
+}	
+
+$from_name = $_POST['firstname'] . " " . $_POST['lastname'];        
+$from_address = $_POST['email'];        
+$to_name = "MPTraining";        
+$to_address = "MPTraining@infocus.com";        
+$subject = "Mondopad Training Registration: " . $_POST['org'];        
+		
+$description = "Session 1
+Organization: " . $_POST['org'] . "
+Email: " . $_POST['email'] . "
+Phone: " . $_POST['phone'] . "
+Name: " . $_POST['firstname'] . " " . $_POST['lastname'] . "
+
+Customer Notes:" . $_POST['note1'] . "
+
+
+" . $s1train . $descript;
+
+$description = str_replace("
+","<br>",$description);
+
+sendIcalEvent($to_name, $to_address, $to_name, $to_address, $startTime, $endTime, $subject, $description, $location);
+
+  //send email
+
+	
+if(!empty($_POST['reqdate2'])){
+
+$s2train = str_replace("mps2t1","Mondopad 2.0 Overview (2hrs)",$_POST['s1trainings']);
+$s2train = str_replace("mps2t2","Mondopad 2.0 for Admins (2hrs)",$s2train);
+$s2train = str_replace("mps2t3","Upgrading to 2.0 (1hr)",$s2train);
+$s2train = str_replace("mps2t4","Mondopad 1.8 Overview (2hrs)",$s2train);
+$s2train = str_replace("mps2t5","Mondopad 1.8 for Admins (2hrs)",$s2train);
+$s2train = str_replace("mps2t6","InFocus Video Conferencing (1hr)",$s2train);
+//$s2train = str_replace("mps2t7","Mondopad Interactive Whiteboard (30 minutes)",$s2train);
+//$s2train = str_replace("mps2t8","Working with 3rd party Applications (30 minutes)",$s2train);
+
+
+
+
+	if(empty($_POST['org'])){$_POST['org']= $_POST['firstname'] . " " . $_POST['lastname'];}
+
+
+
+		
+switch($_POST['reqtime2']){
+	case 8:
+$startTime = $_POST['reqdate2'] . " 9:00:00";        
+$endTime = $_POST['reqdate2'] . " 11:00:00";         
+	break;
+	case 10:
+$startTime = $_POST['reqdate2'] . " 11:00:00";        
+$endTime = $_POST['reqdate2'] . " 13:00:00";         
+	break;
+	case 12:
+$startTime = $_POST['reqdate2'] . " 13:00:00";        
+$endTime = $_POST['reqdate2'] . " 15:00:00";         
+	break;
+	case 2:
+$startTime = $_POST['reqdate2'] . " 15:00:00";        
+$endTime = $_POST['reqdate2'] . " 17:00:00";         
+	break;
+}	
+
+$from_name = $_POST['firstname'] . " " . $_POST['lastname'];        
+$from_address = $_POST['email'];        
+$to_name = "MPTraining";        
+$to_address = "MPTraining@infocus.com";        
+$subject = "Mondopad Training Registration: " . $_POST['org'];        
+		
+$description = "Session 1
+Organization: " . $_POST['org'] . "
+Email: " . $_POST['email'] . "
+Phone: " . $_POST['phone'] . "
+Name: " . $_POST['firstname'] . " " . $_POST['lastname'] . "
+
+Customer Notes:" . $_POST['note2'] . "
+
+
+" . $s1train . $descript;
+
+$description = str_replace("
+","<br>",$description);
+
+
+sendIcalEvent($to_name, $to_address, $to_name, $to_address, $startTime, $endTime, $subject, $description, $location);
+
+  //send email
+
+}
+
+$thankyou = $_POST['thankyou'];
+if(empty($_POST['thankyou'])){
+$thankyou = "Thank you for your submission
+<script>$(function(){
+    parent.$.colorbox.resize({
+        innerWidth:'300px',
+        innerHeight:'40px'
+    });
+});</script>";}
+
+
+echo "<script src='http://code.jquery.com/jquery-1.9.1.js'></script>
+ $thankyou";
+ die();
+}
+
+
+function sendEmail($emailTo, $emailSubject, $emailBody, SugarBean $relatedBean = null)
+{
+    $emailObj = new Email();
+    $defaults = $emailObj->getSystemDefaultEmail();
+    $mail = new SugarPHPMailer();
+    $mail->setMailerForSystem();
+    $mail->From = $defaults['email'];
+    $mail->FromName = $defaults['name'];
+    $mail->ClearAllRecipients();
+    $mail->ClearReplyTos();
+    $mail->Subject=from_html($emailSubject);
+    $mail->Body=from_html($emailBody);
+    $mail->prepForOutbound();
+    $mail->AddAddress($emailTo);
+
+    //now create email
+    if (@$mail->Send()) {
+        $emailObj->to_addrs= '';
+        $emailObj->type= 'archived';
+        $emailObj->deleted = '0';
+        $emailObj->name = $mail->Subject ;
+        $emailObj->description = $mail->Body;
+        $emailObj->description_html = null;
+        $emailObj->from_addr = $mail->From;
+        if ( $relatedBean instanceOf SugarBean && !empty($relatedBean->id) ) {
+            $emailObj->parent_type = $relatedBean->module_dir;
+            $emailObj->parent_id = $relatedBean->id;
+        }
+        $emailObj->date_sent = TimeDate::getInstance()->nowDb();
+        $emailObj->modified_user_id = '1';
+        $emailObj->created_by = '1';
+        $emailObj->status = 'sent';
+        $emailObj->save();
+    }
+}
+
+
+
+
+function sendIcalEvent($from_name, $from_address, $to_name, $to_address, $startTime, $endTime, $subject, $description, $location)
+{
+    $domain = 'exchangecore.com';
+
+    //Create Email Headers
+    $mime_boundary = "----Meeting Booking----".MD5(TIME());
+
+    $headers = "From: ".$from_name." <".$from_address.">\n";
+    $headers .= "Reply-To: ".$from_name." <".$from_address.">\n";
+    $headers .= "MIME-Version: 1.0\n";
+    $headers .= "Content-Type: multipart/alternative; boundary=\"$mime_boundary\"\n";
+    $headers .= "Content-class: urn:content-classes:calendarmessage\n";
+    
+    //Create Email Body (HTML)
+    $message = "--$mime_boundary\r\n";
+    $message .= "Content-Type: text/html; charset=UTF-8\n";
+    $message .= "Content-Transfer-Encoding: 8bit\n\n";
+    $message .= "<html>\n";
+    $message .= "<body>\n";
+    $message .= '<p>Dear '.$to_name.',</p>';
+    $message .= '<p>'.$description.'</p>';
+    $message .= "</body>\n";
+    $message .= "</html>\n";
+    $message .= "--$mime_boundary\r\n";
+
+    $ical = 'BEGIN:VCALENDAR' . "\r\n" .
+    'PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN' . "\r\n" .
+    'VERSION:2.0' . "\r\n" .
+    'METHOD:REQUEST' . "\r\n" .
+    'BEGIN:VTIMEZONE' . "\r\n" .
+    'TZID:Eastern Time' . "\r\n" .
+    'BEGIN:STANDARD' . "\r\n" .
+    'DTSTART:20091101T020000' . "\r\n" .
+    'RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=1SU;BYMONTH=11' . "\r\n" .
+    'TZOFFSETFROM:-0400' . "\r\n" .
+    'TZOFFSETTO:-0500' . "\r\n" .
+    'TZNAME:EST' . "\r\n" .
+    'END:STANDARD' . "\r\n" .
+    'BEGIN:DAYLIGHT' . "\r\n" .
+    'DTSTART:20090301T020000' . "\r\n" .
+    'RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=2SU;BYMONTH=3' . "\r\n" .
+    'TZOFFSETFROM:-0500' . "\r\n" .
+    'TZOFFSETTO:-0400' . "\r\n" .
+    'TZNAME:EDST' . "\r\n" .
+    'END:DAYLIGHT' . "\r\n" .
+    'END:VTIMEZONE' . "\r\n" .	
+    'BEGIN:VEVENT' . "\r\n" .
+    'ORGANIZER;CN="'.$from_name.'":MAILTO:'.$from_address. "\r\n" .
+    'ATTENDEE;CN="'.$to_name.'";ROLE=REQ-PARTICIPANT;RSVP=TRUE:MAILTO:'.$to_address. "\r\n" .
+    'LAST-MODIFIED:' . date("Ymd\TGis") . "\r\n" .
+    'UID:'.date("Ymd\TGis", strtotime($startTime)).rand()."@".$domain."\r\n" .
+    'DTSTAMP:'.date("Ymd\TGis"). "\r\n" .
+    'DTSTART;TZID="Eastern Time":'.date("Ymd\THis", strtotime($startTime)). "\r\n" .
+    'DTEND;TZID="Eastern Time":'.date("Ymd\THis", strtotime($endTime)). "\r\n" .
+    'TRANSP:OPAQUE'. "\r\n" .
+    'SEQUENCE:1'. "\r\n" .
+    'SUMMARY:' . $subject . "\r\n" .
+    'LOCATION:' . $location . "\r\n" .
+    'CLASS:PUBLIC'. "\r\n" .
+    'PRIORITY:5'. "\r\n" .
+    'BEGIN:VALARM' . "\r\n" .
+    'TRIGGER:-PT15M' . "\r\n" .
+    'ACTION:DISPLAY' . "\r\n" .
+    'DESCRIPTION:Reminder' . "\r\n" .
+    'END:VALARM' . "\r\n" .
+    'END:VEVENT'. "\r\n" .
+    'END:VCALENDAR'. "\r\n";
+    $message .= 'Content-Type: text/calendar;name="meeting.ics";method=REQUEST\n';
+    $message .= "Content-Transfer-Encoding: 8bit\n\n";
+    $message .= $ical;
+
+    $mailsent = mail($to_address, $subject, $message, $headers);
+
+    return ($mailsent)?(true):(false);
+}
+
+
+
+?>
 <!DOCTYPE html>
 <HTML>
 <HEAD>
@@ -218,7 +508,7 @@ span{line-height: 1.6em;}
  </HEAD>
 <body style="width:800px;background: #f7f7f7;" onLoad="collapsePages()">
 
-<form name="trainingsubmit" id="trainingsubmit" action="/resources/forms/crmpostforward.php"  method="post" >
+<form name="trainingsubmit" id="trainingsubmit" action=""  method="post" >
 <!--Page one-->
 <ul id="page_1">
 <h2 style="text-align: left;">Register your Mondopad Training Session</h2>

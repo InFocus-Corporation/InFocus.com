@@ -8,6 +8,7 @@
 <script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 <script type="text/javascript" src="//use.typekit.net/lbn0ick.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/Javascript" src="/resources/js/tagSort.js"></script>
 <script type="text/Javascript" src="/resources/js/InFocusCollection.js"></script>
 <script type="text/Javascript" src="/resources/js/jquery.colorbox.js"></script>
 <link rel="stylesheet" href="/resources/css/colorbox.css" />

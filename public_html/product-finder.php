@@ -36,9 +36,9 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 <label class="top"><?php echo $pageText['DistQ1'];?> <br> <span style="font-size:x-small"
 ><?php echo $pageText['DistQ2'];?></span></label>
 <?php echo translate('From'); ?> &nbsp;<input type="text" name="Q2" id="Q2" style="width:30px" onkeyup="this.value = this.value.replace(/[^0-9]/gi, '')" onchange="fetchMatches();"> <span style="font-size:small"
->&nbsp;ft.</span> &nbsp;&nbsp;
+>&nbsp;<?php echo translate('ft'); ?>.</span> &nbsp;&nbsp;
 <?php echo translate('To'); ?>  &nbsp;<input type="text" name="Q2a" id="Q2a" style="width:30px;" onkeyup="this.value = this.value.replace(/[^0-9]/gi, '')" onchange="fetchMatches();"> <span style="font-size:small"
->&nbsp;ft.</span>
+>&nbsp;<?php echo translate('ft'); ?>.</span>
 <label for="Q3" class="top"><?php echo $pageText['LightQ'];?></label>
 <Select type="text" name="Q3" id="Q3" style="font-size:60%;" onchange="fetchMatches();">
 <option value="" selected></option>
@@ -73,6 +73,7 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
  <ol id="selectable2" name="Q7" >
 <li class="ui-widget-content" style="font-size:x-small;text-align:center;" id="4:3"><img src="/resources/images/4x3" height="80px" /><br><?php echo $pageText['AspectA1'];?></li>
 <li class="ui-widget-content" style="font-size:x-small;text-align:center;" id="16:9"><img src="/resources/images/16x9" height="80px"/><br><?php echo $pageText['AspectA2'];?></li>
+<li class="ui-widget-content" style="font-size:x-small;text-align:center;" id="1080p"><img src="/resources/images/1080p" height="80px"/><br>&nbsp;</li>
 </ol>
 </div>
 </div>

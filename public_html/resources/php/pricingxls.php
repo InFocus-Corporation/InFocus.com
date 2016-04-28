@@ -38,7 +38,7 @@ if($_REQUEST['sheetid'] == "ALL"){
 $groups_allowed	=	"Executive,admin,Pricing";
 require_once($_SERVER['DOCUMENT_ROOT']	.	"/login/ublock.php");
 
-$server = '67.43.7.189';
+$server = 'localhost';
 $login = 'InternalAdmin';
 $password = 'nIinmFd0Aclu';
 $SelectDB = 'infocus_internal';
@@ -61,6 +61,44 @@ if($j == NULL){$j = $i;}
 return str_replace("~",$i,str_replace("`",$j,$sheetScope));
 }
 
+	function curlWrap($url, $json){
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true );
+	curl_setopt($ch, CURLOPT_MAXREDIRS, 10 );
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
+	curl_setopt($ch, CURLOPT_USERAGENT, "MozillaXYZ/1.0");
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+	$output = curl_exec($ch);
+
+	$info = curl_getinfo($ch);
+
+	curl_close($ch);
+	$decoded = json_decode($output);
+	return $decoded;
+}
+
+
+$sql = 'SELECT REPLACE(CalculatedPricing.PartNumber,"-KIT","") AS PartNumber, CalculatedPricing.Category, CurrentBom, MAP, Dist-RegRewards as Dist, CalculatedPricing.Description, listtitle, weight 
+	FROM infocus_internal.CalculatedPricing LEFT JOIN (
+    SELECT producttext.partnumber, listtitle, weight 
+		FROM InFocus.producttext LEFT JOIN (SELECT partnumber, weight FROM InFocus.projectors UNION ALL SELECT partnumber, weight FROM InFocus.displays) as specs on specs.partnumber = producttext.partnumber WHERE lang = "en"
+	) producttext ON producttext.partnumber = REPLACE(CalculatedPricing.PartNumber,"-KIT","") GROUP BY CalculatedPricing.PartNumber
+UNION ALL SELECT CalculatedAccessory.PartNumber, CalculatedAccessory.Category, CurrentBom, MAP, BaseX-RegRewards, CalculatedAccessory.Description, listtitle, NULL
+	FROM infocus_internal.CalculatedAccessory LEFT JOIN InFocus.producttext on producttext.partnumber = CalculatedAccessory.PartNumber WHERE lang = "en"';
+$result	=	mysqli_query($connection,$sql);
+$pricingArray['product']=array();
+$pricingArray['key']='a4 17 fe db 45 31 6c 0a e4 ce';
+while($row	=	mysqli_fetch_assoc($result))
+{
+$pricingArray['product'][] = $row;
+}
+curlWrap("https://infocuscrm.sugarondemand.com/rest/v10/Pricing/submit",json_encode($pricingArray));
+
+if($_REQUEST['sheetid'] == "crmpush"){die();}
 
 if($_REQUEST['sheetid'] != "ALL"){
 $sql = 'SELECT * FROM infocus_internal.Pricing_Sheets WHERE ID LIKE "%' . $_REQUEST['sheetid'] . '%" LIMIT 1';
@@ -96,7 +134,87 @@ $Multiplier[$row['Field']] = $row['Multiplier'];
 $presql = "SELECT partnumber, CONCAT(technology,' ',resolutionname, ' ', lumenshigh, ' lm') as description, weight, accessorypn FROM InFocus.projectors LEFT JOIN (SELECT * FROM InFocus.acc_matrix WHERE accessorypn LIKE '%LAMP%') as accmatrix ON partnumber = productpn 
 UNION ALL SELECT producttext.partnumber, listtitle, weight, NULL FROM InFocus.producttext LEFT JOIN InFocus.displays ON producttext.partnumber = displays.partnumber WHERE productgroup != 'Projector' AND productgroup != 'Series' AND producttext.lang = 'en'";
 
-$USAarray = array("");
+$USAarray = array(
+"EPW1YR-MPA",
+"EPW2YR-MPA",
+"EPWHW40JT1",
+"EPWHW40JT2",
+"EPWHW55JT1",
+"EPWHW55JT2",
+"EPWHW55MP1",
+"EPWHW55MP2",
+"EPWHW57JT1",
+"EPWHW57JT2",
+"EPWHW57MP1",
+"EPWHW57MP2",
+"EPWHW65JT1",
+"EPWHW65JT2",
+"EPWHW70JT1",
+"EPWHW70JT2",
+"EPWHW70MP1",
+"EPWHW70MP2",
+"EPWHW80JT1",
+"EPWHW80JT2",
+"EPWHW80MP1",
+"EPWHW80MP2",
+"EPWPRE55BT1",
+"EPWPRE55BT2",
+"EPWPRE55MP1",
+"EPWPRE55MP2",
+"EPWPRE57BT1",
+"EPWPRE57BT2",
+"EPWPRE57MP1",
+"EPWPRE57MP2",
+"EPWPRE70BT1",
+"EPWPRE70BT2",
+"EPWPRE70MP1",
+"EPWPRE70MP2",
+"EPWPRE80BT1",
+"EPWPRE80BT2",
+"EPWPRE80MP1",
+"EPWPRE80MP2",
+"EPWSOFTPLAN1",
+"EPWSOFTPLAN2",
+"IN121-1Y",
+"IN121-2Y",
+"IN121-3Y",
+"IN121PRM-1Y",
+"IN121PRM-2Y",
+"IN121PRM-3Y",
+"IN121PRM-DOM",
+"IN121PRM-UPG",
+"INCONX12HD1Y",
+"INCONX12HD2Y",
+"INCONX12HD3Y",
+"INCONX12SD1Y",
+"INCONX12SD2Y",
+"INCONX12SD3Y",
+"INCONX25HD1Y",
+"INCONX25HD2Y",
+"INCONX25HD3Y",
+"INCONX6HD1Y",
+"INCONX6HD2Y",
+"INCONX6HD3Y",
+"INCONX6SD1Y",
+"INCONX6SD2Y",
+"INCONX6SD3Y",
+"INF-VT2",
+"INF-VT4",
+"LAMP-EW1YR-H",
+"LAMP-EW1YR-I",
+"LAMP-EW1YR-MC",
+"LAMP-EW1YR-V",
+"LAMP-EW2YR-H",
+"LAMP-EW2YR-I",
+"LAMP-EW2YR-MC",
+"LAMP-EW2YR-V",
+"PROJ-EW1YR-H",
+"PROJ-EW1YR-I",
+"PROJ-EW1YR-MC",
+"PROJ-EW1YR-V",
+"PROJ-EW2YR-I",
+"PROJ-EW2YR-MC",
+"PROJ-EW2YR-V");
 $FreightAarray['INF55WIN8-KIT'] = 200;
 $FreightAarray['INF5720-KIT'] = 200;
 $FreightAarray['INF5520a-NOPC'] = 200;
@@ -116,6 +234,27 @@ $FreightAarray['INF6501cAG'] = 250;
 $FreightAarray['INF7001a'] = 250;
 $FreightAarray['INF4030'] = 150;
 $FreightAarray['INF4032'] = 150;
+$FreightAarray['INF6501w'] = 250;
+$FreightAarray['INF6501wAG'] = 250;
+$FreightAarray['INF8002'] = 499;
+$FreightAarray['INF8012'] = 499;
+$FreightAarray['INF8021K-KIT'] = 499;
+$FreightAarray['INF4030p'] = 150;
+$FreightAarray['INF4032p'] = 150;
+$FreightAarray['INF6501cAGp'] = 250;
+$FreightAarray['INF6501cp'] = 250;
+$FreightAarray['INF6501wAGp'] = 250;
+$FreightAarray['INF6501wp'] = 250;
+$FreightAarray['INF7001ap'] = 250;
+$FreightAarray['INF6502WB'] = 250;
+$FreightAarray['INF6502WBp'] = 250;
+$FreightAarray['INF6501CB'] = 250;
+$FreightAarray['INF6501CBAG'] = 250;
+$FreightAarray['INF6501CBp'] = 250;
+$FreightAarray['INF6501CBAGp'] = 250;
+$FreightAarray['INF4030CB'] = 150;
+$FreightAarray['INF4030CBp'] = 150;
+$FreightAarray['IN5701p'] = 200;
 
 
 $result	=	mysqli_query($connection,$presql);
@@ -508,7 +647,7 @@ else{$ActiveSheet->setCellValue(num_to_letter($j++) . $i, $row[$Field]);}
 }
 $i = $i+1;
 
-$server = '67.43.7.189';
+$server = 'localhost';
 $login = 'InternalAdmin';
 $password = 'nIinmFd0Aclu';
 $SelectDB = 'infocus_internal';
