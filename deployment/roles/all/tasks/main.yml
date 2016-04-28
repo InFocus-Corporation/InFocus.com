@@ -1,0 +1,43 @@
+---
+- name: Install packages
+  apt: pkg={{item}} state=present
+  sudo: yes
+  with_items: global_packages
+
+- name: Ensure resolvconf is gone, because it's evil
+  apt: pkg=resolvconf state=absent
+  sudo: yes
+
+- name: Add admin users
+  user: comment="{{item.name}}" groups=sudo home=/home/{{item.login}} name={{item.login}} shell=/bin/bash password={{item.password}}
+  sudo: yes
+  with_items: admins
+  when: admins is defined
+
+- name: Add authorized keys
+  authorized_key: user={{item.user}} key="{{lookup('file', inventory_dir + '/keys/' + item.key)}}"
+  sudo: yes
+  with_items: admin_keys
+  when: admins is defined
+
+- name: Update NRPE config
+  template: src=nrpe.cfg dest=/etc/nagios/nrpe_local.cfg
+  sudo: yes
+  notify:
+    - Reload NRPE
+  tags:
+    - nagios
+
+- name: Update hosts
+  copy: src=hosts dest=/etc/hosts
+  sudo: yes
+
+- name: Copy Nagios check scripts
+  copy: src=nagios/{{item}} dest=/usr/lib/nagios/plugins/{{item}} mode=0755
+  sudo: yes
+  tags:
+    - nagios
+  with_items:
+    - check_xcache
+    - check_redis
+    - check_mongodb

@@ -1,0 +1,29 @@
+---
+- name: Install supporting packages
+  sudo: yes
+  apt: name={{item}} state=present
+  with_items:
+    - nginx
+    - php5-fpm
+    - php5-mysql
+
+- name: Add install directory 
+  file: path={{ item }} owner={{ app_user }} group={{ app_user }} state=directory mode=0775
+  sudo: yes
+  with_items:
+    - "{{install_dir}}"
+
+- name: Install nginx vhosts
+  sudo: yes
+  action: template src=nginx.conf dest=/etc/nginx/sites-enabled/{{app_name}}_web.conf owner=root
+  notify:
+    - Restart nginx
+
+- name: Sync code up to web servers
+  remote_user: "{{app_user}}"
+  synchronize: delete=yes src={{inventory_dir}}/../public_html/ dest={{install_dir}} rsync_opts=--exclude-from={{inventory_dir}}/rsync-exclude
+  when: is_vagrant is not defined
+  notify:
+    - Restart FastCGI
+  tags:
+    - deploy

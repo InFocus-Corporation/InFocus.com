@@ -1,0 +1,15 @@
+[localhost]
+localhost ansible_connection=local
+
+[app-servers]
+default
+
+[db-servers]
+default
+
+[monitor-servers]
+
+[dev:children]
+app-servers
+db-servers
+monitor-servers

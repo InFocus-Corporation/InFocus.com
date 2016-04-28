@@ -1,0 +1,23 @@
+127.0.0.1       localhost
+
+192.168.1.63 mem1-int mem1
+192.168.1.9 db4-int db4
+192.168.1.32 db3-int db3
+192.168.1.31 db7-int db7
+192.168.1.4 db6-int db6
+192.168.1.13 db9-int db9
+192.168.1.238 web1-int web1
+192.168.1.240 web2-int web2
+192.168.1.53 web3-int web3
+192.168.1.29 web4-int web4
+192.168.1.55 web5-int web5
+192.168.1.26 web6-int web6
+192.168.1.50 lb1-int lb1 www.dream-marriage.com dream-marriage.com
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+

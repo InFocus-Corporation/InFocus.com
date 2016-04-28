@@ -1,0 +1,12 @@
+- name: Install Database Servers
+  hosts: db-servers
+  roles:
+    - all
+    - db-server
+
+- name: Install App Servers
+  hosts: app-servers
+  roles:
+    - all
+    - web-server
+    - php-server

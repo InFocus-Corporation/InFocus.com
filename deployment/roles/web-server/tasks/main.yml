@@ -1,0 +1,22 @@
+---
+- name: Add app user
+  user: name={{ app_user }} state=present
+  sudo: yes
+
+- name: Add app user authorized keys
+  authorized_key: user={{app_user}} key="{{lookup('file', inventory_dir + '/keys/' + item.key)}}"
+  sudo: yes
+  with_items: admin_keys
+
+- name: Add install directory
+  file: path={{ item }} owner={{ app_user }} group={{ app_user }} state=directory mode=0775
+  sudo: yes
+  with_items:
+    - "{{install_dir}}"
+
+- name: Remove default vhost
+  sudo: yes
+  file: path=/etc/nginx/sites-enabled/default state=absent
+  notify:
+    - Restart nginx
+

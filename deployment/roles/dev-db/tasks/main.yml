@@ -1,0 +1,14 @@
+---
+- name: Fail if this isn't a Vagrant box
+  fail: msg="I can't detect this as a Vagrant box. Failing in case you're doing something stupid, like trying to install fixtures in production..."
+  when: not is_vagrant 
+
+- name: Copy fixtures to dev box
+  sudo: yes
+  get_url: url=http://parthenonbox.internal/internal/InFocus/e0VF8DLIH2s4 dest=/tmp/fixtures.sql
+  when: dbs_created.changed
+
+- name: Install fixtures on dev box
+  sudo: yes
+  shell: "cat /tmp/fixtures.sql | mysql -u root {{db.db}}"
+  when: dbs_created.changed

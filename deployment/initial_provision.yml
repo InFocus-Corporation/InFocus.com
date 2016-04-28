@@ -1,0 +1,13 @@
+- name: Prep the dev box
+  hosts: localhost
+  roles:
+    - dev-box
+
+- name: Install dev app server
+  hosts: app-servers
+  roles:
+    - all
+    - db-server
+    - dev-db
+    - web-server
+    - php-server

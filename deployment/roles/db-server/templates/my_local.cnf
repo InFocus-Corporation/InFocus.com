@@ -1,0 +1,6 @@
+[mysqld]
+bind_address=0.0.0.0
+innodb_file_per_table
+innodb_flush_method = O_DIRECT
+innodb_buffer_pool_size = 2G
+
