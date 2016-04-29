@@ -9,4 +9,4 @@
 
 - name: Untar assets on dev box
   sudo: yes
-  unarchive: src=/tmp/images.tar.bz2 dest="{{install_dir}}/resources/images"
+  unarchive: src=/tmp/images.tar.bz2 dest="{{install_dir}}/resources/images" copy=no
