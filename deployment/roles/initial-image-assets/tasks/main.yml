@@ -5,7 +5,7 @@
 
 - name: Copy image assets to dev box
   sudo: yes
-  get_url: url=http://parthenonbox.internal/internal/InFocus/yPgvvJMPbZxE dest=/tmp/images.tar.bz2
+  get_url: url=http://parthenonbox.internal/internal/InFocus/Y7CEfPNCDA8D dest=/tmp/images.tar.bz2
 
 - name: Untar assets on dev box
   sudo: yes
