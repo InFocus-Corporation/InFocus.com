@@ -8,9 +8,11 @@
 
 - name: Create MySQL DB
   mysql_db: name={{item}}
+  sudo: yes
   with_items:
     - "{{db.db}}"
   register: dbs_created
 
 - name: Generate MySQL user
   mysql_user: name={{db.user}} priv={{db.db}}.*:ALL password={{db.password}} host=% state=present
+  sudo: yes
