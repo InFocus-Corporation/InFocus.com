@@ -44,6 +44,14 @@
   tags:
     - deploy
 
+- name: Ensure additional dirs exist
+  remote_user: "{{app_user}}"
+  file: path={{install_dir}}/{{item}} mode=0777 state=directory
+  with_items:
+    - resources/images
+  tags:
+    - deploy
+
 - name: Install config
   remote_user: "{{app_user}}"
   template: src=config-override.php dest="{{install_dir}}/resources/php/config-override.php"
