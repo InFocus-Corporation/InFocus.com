@@ -3,9 +3,19 @@
   sudo: yes
   apt: name={{item}} state=present
   with_items:
-    - nginx
-    - php5-fpm
+    - apache2
+    - php5
     - php5-mysql
+    - php5-gd
+
+- name: Enable Apache modules
+  sudo: yes
+  apache2_module: name="{{item}}" state=present
+  with_items:
+    - headers
+    - rewrite
+  notify:
+    - Restart Apache
 
 - name: Add install directory 
   file: path={{ item }} owner={{ app_user }} group={{ app_user }} state=directory mode=0775
@@ -13,17 +23,21 @@
   with_items:
     - "{{install_dir}}"
 
-- name: Install nginx vhosts
+- name: Install Apache vhosts
   sudo: yes
-  action: template src=nginx.conf dest=/etc/nginx/sites-enabled/{{app_name}}_web.conf owner=root
+  action: template src=apache2.conf dest=/etc/apache2/sites-enabled/{{app_name}}_web.conf owner=root
   notify:
-    - Restart nginx
+    - Restart Apache
 
 - name: Sync code up to web servers
   remote_user: "{{app_user}}"
   synchronize: delete=yes src={{inventory_dir}}/../public_html/ dest={{install_dir}} rsync_opts=--exclude-from={{inventory_dir}}/rsync-exclude
   when: is_vagrant is not defined
-  notify:
-    - Restart FastCGI
+  tags:
+    - deploy
+
+- name: Install config
+  remote_user: "{{app_user}}"
+  template: src=config-override.php dest="{{install_dir}}/resources/php/config-override.php"
   tags:
     - deploy

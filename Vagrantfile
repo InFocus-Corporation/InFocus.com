@@ -8,7 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	config.vm.box = "ubuntu/trusty64"
 
         config.vm.network :private_network, ip: "192.168.111.222"
-        config.vm.synced_folder "./public_html", "/srv/www/infocus", :owner=>1002, :group=>1002
+        config.vm.synced_folder "./public_html", "/srv/www/infocus/public_html", :owner=>1002, :group=>1002
 
         config.vm.hostname = 'default'
 

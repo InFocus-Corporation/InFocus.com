@@ -1,9 +1,8 @@
 app_user: production
 app_name: infocus
 hostname: infocus.vagrant.internal
-install_dir: /srv/www/infocus
+install_dir: /srv/www/infocus/public_html
 logfile: /tmp/{{app_name}}.log
-web_socket: /var/run/php5-fpm.sock
 
 db:
   host: localhost

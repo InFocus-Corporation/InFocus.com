@@ -18,5 +18,5 @@
   sudo: yes
   file: path=/etc/nginx/sites-enabled/default state=absent
   notify:
-    - Restart nginx
+    - Restart Apache
 

@@ -1,13 +1,15 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . "/resources/php/imageprocess.php"); 
+require_once($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php"); 
 
 class InFocus
 {
   public function __construct()
   {
+        global $connection;
   	if( substr($_SERVER['DOCUMENT_ROOT'],-11) == "public_html"){$this->lang = "en";}
   	else{$this->lang = substr($_SERVER['DOCUMENT_ROOT'],-2);}
-	$this->conn = mysqli_connect('67.43.0.33','InFocus','InF0cusP@ssw0rd', 'InFocus',3306);
+	$this->conn = $connection;
 	mysqli_set_charset($this->conn, "utf8");
 	ini_set('default_charset', 'utf-8');
 	}
