@@ -32,8 +32,7 @@
 - name: Remove Sendfile
   sudo: yes
   lineinfile: dest=/etc/apache2/apache2.conf line="EnableSendFile Off" state=present
-  when:
-    is_vagrant is defined and is_vagrant
+  when: is_vagrant is defined and is_vagrant
   notify:
     - Restart Apache
 

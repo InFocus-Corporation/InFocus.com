@@ -1,0 +1,33 @@
+app_user: production
+app_name: infocus
+hostname: infocus.parthenonsoftware.com
+install_dir: /srv/www/infocus/public_html
+logfile: /tmp/{{app_name}}.log
+
+db:
+  host: localhost
+  port: 3306
+  db: InFocus
+  user: infocus
+  password: infocus
+
+admins:
+  - login: aschmitt
+    name: Andy Schmitt
+    password: $6$cN4JzHtM$q8BBUHZJZ8DK8R2khp7BzoZw2pwS/enMOn/npQ8Guduyub2QnE881dpnTEN7/yz0w5AzVXQjSS5A8JLV7lGiw1
+    key: aschmitt.pub
+  - login: cwilson
+    name: Chris Wilson
+    password: $6$wmIJfuA3$HCxv1wBqOoaXNVNxt6m8qk2qEADaMgAxS6lNnOmyEm.fVxjQLPWjNulf0oDXU34lGSHDkDJC3ZdiowplWVQXm0
+    key: cwilson.pub
+
+global_packages:
+  - rsync
+  - screen
+  - strace
+  - tcpdump
+  - telnet
+  - vim
+  - nagios-nrpe-server
+
+debug_email: chris@parthenonsoftware.com

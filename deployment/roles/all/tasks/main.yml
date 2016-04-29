@@ -15,9 +15,9 @@
   when: admins is defined
 
 - name: Add authorized keys
-  authorized_key: user={{item.user}} key="{{lookup('file', inventory_dir + '/keys/' + item.key)}}"
+  authorized_key: user={{item.login}} key="{{lookup('file', inventory_dir + '/keys/' + item.key)}}"
   sudo: yes
-  with_items: admin_keys
+  with_items: admins
   when: admins is defined
 
 - name: Update NRPE config
