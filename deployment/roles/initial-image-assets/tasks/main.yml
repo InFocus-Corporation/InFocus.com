@@ -1,0 +1,12 @@
+---
+- name: Fail if this isn't a Vagrant box
+  fail: msg="I can't detect this as a Vagrant box. Failing in case you're doing something stupid, like trying to install fixtures in production..."
+  when: not is_vagrant 
+
+- name: Copy image assets to dev box
+  sudo: yes
+  get_url: url=http://parthenonbox.internal/internal/InFocus/yPgvvJMPbZxE dest=/tmp/images.tar.bz2
+
+- name: Untar assets on dev box
+  sudo: yes
+  unarchive: src=/tmp/images.tar.bz2 dest="{{install_dir}}/resources/images"
