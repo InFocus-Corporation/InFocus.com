@@ -12,18 +12,7 @@ gulp.task('default', ['sass']);
 
 gulp.task('sass', function(done) {
   gulp.src('./scss/infocus.scss')
-    .on('error', sass.logError)
-    .pipe(minifyCss({
-      keepSpecialComments: 0
-    }))
-    .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest('css/'))
-    .on('end', done);
-});
-
-gulp.task('foundation-sass', function(done) {
-  gulp.src('./scss/vendor/foundation.scss')
-    .pipe(sass({includePaths: ['./node_modules/foundation-sites/scss/']}))
+    .pipe(sass({includePaths: ['./scss/']}))
     .on('error', sass.logError)
     .pipe(minifyCss({
       keepSpecialComments: 0
@@ -34,7 +23,7 @@ gulp.task('foundation-sass', function(done) {
 });
 
 gulp.task('foundation-js', function() {
-  return gulp.src('node_modules/foundation/js/foundation/foundation.js')
+  return gulp.src('./node_modules/foundation/js/foundation/foundation.js')
     .pipe(concat('foundation.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('js/vendor'))

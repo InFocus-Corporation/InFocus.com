@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="icon" href="/favicon.png" type="image/gif" sizes="32x32">
 
-
-
-<!-- obsolete script
+<!-- obsolete scripts
 <script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
@@ -22,9 +20,6 @@ try{$(".flexnav").flexNav();
 end obsolete scripts -->
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="/resources/js/vendor/foundation.min.js"></script>
-
-<!-- these can be removed after -->
-
 
 <script type="text/javascript" src="//use.typekit.net/lbn0ick.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>

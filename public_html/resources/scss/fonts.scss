@@ -1,11 +1,28 @@
 @font-face {
   font-family: GoodPro;
-  src: url("../fonts/goodpro/GoodPro-Bold.otf") format("opentype");
+  src: url("../fonts/GoodPro/GoodPro-Medium.otf") format("opentype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: GoodPro;
-  src: url("../fonts/goodpro/GoodPro-Medium.otf") format("opentype");
+  src: url("../fonts/GoodPro/GoodPro-Bold.otf") format("opentype");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: GoodProWideLight;
+  src: url("../fonts/GoodPro/GoodPro-WideLight.otf") format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: GoodProWideBold;
+  src: url("../fonts/GoodPro/GoodPro-WideBold.otf") format("opentype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: GoodProWideMedium;
+  src: url("../fonts/GoodPro/GoodPro-WideMedium.otf") format("opentype");
   font-weight: normal;
 }

@@ -24,43 +24,71 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<br><br><br><br>
 	<br><br><br><br>
 
-	<div class="row left_bordered">
-		<div class="small-12 medium-5 columns">
-			<h2 class="lead_text headline">Focus on what matters</h2>
-			<p class="lead_text paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </h1>
+	<div class="hero_row">
+		<div class="row">
+			<div class="small-12 medium-5 columns lead_text">
+				<h2 class="lead_text--headline">Focus on	what matters</h2>
+				<p class="lead_text--paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lea commodo consequat. Duis aute irure dolor in reprehenderit in v fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+			</div>
+			<div class="dark_blue color_stripe"></div>
+			<div class="light_blue color_stripe"></div>
+		</div>
 
+	</div>
+	<div class="row">
+		<div class="small-12 medium-10 medium-offset-1 columns text-center">
+			<h3 class="lead_text secondary_headline">Introductory Brand Handshake</h3>
+			<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lea commodo consequat. Duis aute irure dolor in reprehenderit in v fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </h5>
 		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<div class="vertical_accordian">
+				<div class="slide" id="slide1">
+					<a href="#slide1">Title One</a>
+					<h5>Lorem ipsum dolor sit amet.</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur similique deleniti temporibus dolorum facere maxime, officiis, voluptatem quasi minus accusamus, voluptates blanditiis quaerat cupiditate. Modi consequatur, magni! Explicabo, commodi, nisi!</p>
+				</div>
+				<div class="slide" id="slide2">
+					<a href="#slide2">Title One</a>
+					<h5>Lorem ipsum dolor sit amet.</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur similique deleniti temporibus dolorum facere maxime, officiis, voluptatem quasi minus accusamus, voluptates blanditiis quaerat cupiditate. Modi consequatur, magni! Explicabo, commodi, nisi!</p>
+				</div>
+				<div class="slide" id="slide3">
+					<a href="#slide3">Title One</a>
+					<h5>Lorem ipsum dolor sit amet.</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur similique deleniti temporibus dolorum facere maxime, officiis, voluptatem quasi minus accusamus, voluptates blanditiis quaerat cupiditate. Modi consequatur, magni! Explicabo, commodi, nisi!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hero_row hero_row--secondary">
+		<div class="row">
+			<div class="small-12 medium-7 medium-offset-5 columns">
+				<h2 class="lead_text--headline">"We have the power to collaborate anytime, anywhere"</h2>
+				<h5 class="quote_source">- Jane Matthews Entrepeneur</h5>
+				<a href="#TODO" class="button button--primary">watch case study video</a>
+			</div>
+		</div>
+	</div>
+	<div class="row">
 		<div class="small-12 medium-7 columns">
-			<img src="http://placehold.it/804x699">
-		</div>
-	</div>
-		<div class="small-12 medium-6 large-5 columns">
-			<h3>My Awesome Product</h3>
-			<p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in.</p>
-			<label>Size
-				<select>
-					<option value="husker">Small</option>
-					<option value="starbuck">Medium</option>
-					<option value="hotdog">Large</option>
-					<option value="apollo">Yeti</option>
-				</select>
-			</label>
-			<div class="row">
-				<div class="small-3 columns">
-					<label for="middle-label" class="middle">Quantity</label>
-				</div>
-				<div class="small-9 columns">
-					<input type="text" id="middle-label" placeholder="One fish two fish">
-				</div>
-			</div>
-			<a href="#" class="button large expanded">Buy Now</a>
-			<div class="small secondary expanded button-group">
-				<a class="button">Facebook</a>
-				<a class="button">Twitter</a>
-				<a class="button">Yo</a>
+			<div class="panel">
+				<h3>InFocus Unveils ConX, the New Solution for Enterprise Conferencing & Collaboration</h3>
+				<p>The world’s first scalable HD video conferencing and data visualization system combines endpoints, software, and cloud services to enable easy and powerful connection, collaboration and sharing ideas in real time.</p>
 			</div>
 		</div>
+		<div class="small-12 medium-5 columns">
+			<h2 class="lead_text--headline">"We have the power to collaborate anytime, anywhere"</h2>
+			<h5 class="quote_source">- Jane Matthews Entrepeneur</h5>
+			<a href="#TODO" class="button button--primary">watch case study video</a>
+		</div>
 	</div>
+
+
+
+
+
 <div class="content" style="width:100%;padding-top: 87px;">
 <div id="ytplayer" class="player"></div>
 
@@ -98,125 +126,32 @@ z-index:1007;
 ';} ?>
 
 <script>
- var mySwiper;
+	if("true" != "<?php echo $_GET['edit']?>"){
+		$(document).ready(function() {
+		  var hash = window.location.hash;
+		  hash = hash.substring(1);
+		  if(hash.length>0){
+			$.get(
+			   "/resources/forms/" + hash,
+			   function(data, textStatus, jqXHR) {
+			          $.colorbox({iframe: true, href: "/resources/forms/" + hash, innerWidth: "80%", innerHeight: 860});
+			   }
+			);
+	  }
 
-if("true" != "<?php echo $_GET['edit']?>"){
-$(document).ready(function() {
-
-mySwiper = new Swiper('.swiper-container',{
-    pagination: '.pagination',
-    loop:true,
-	speed:750,
-	autoplay: 5000,
-	calculateHeight: true,
-	initialSlide:0,
-	grabCursor:true,
-    paginationClickable: true,
-	onSlideChangeStart: function(){
-		if(typeof player !== 'undefined'){
-		player.pauseVideo();
+		var qstr = "<?php echo $_SERVER['QUERY_STRING']; ?>";
+	  if(qstr.length>0){
+			$.get(
+			   "/resources/forms/" + qstr,
+			   function(data, textStatus, jqXHR) {
+			          $.colorbox({iframe: true, href: "/resources/forms/" + qstr, innerWidth: "80%", innerHeight: 860});
+			   }
+			);
 		}
-},
-	onSlideChangeEnd: function(){
-	$('.device .arrow-right').animate({'opacity':0.5},700).animate({'opacity':0},700);
-	},
-	onSlideClick: function(){
-	  if(mySwiper.activeIndex==2){
 
-
+		});
 	}
-
-	// if(mySwiper.activeIndex == 0 && (mySwiper.touches['current']-mySwiper.touches['start']) > 200){
-	// mySwiper.swipeTo(mySwiper.slides.length-1,1000,false);
-	// }
-	// if(mySwiper.activeIndex == mySwiper.slides.length-1 && (mySwiper.touches['current']-mySwiper.touches['start']) < 200){
-	// mySwiper.swipeTo(0,1000,false);
-	// }
-	}
-  })
-  $('.arrow-left').on('click', function(e){
-    e.preventDefault()
-	// if(mySwiper.activeIndex == 0){
-	// mySwiper.swipeTo(mySwiper.slides.length-1,1000,false);
-	// }
-	// else{
-	if(typeof player !== 'undefined'){
-	player.pauseVideo();
-	}
-    mySwiper.swipePrev()
-	// }
-
-  })
-  $('.arrow-right').on('click', function(e){
-    e.preventDefault()
-	// if(mySwiper.activeIndex == mySwiper.slides.length-1){
-	// mySwiper.swipeTo(0,1000,false);
-	// }
-	// else{
-	if(typeof player !== 'undefined'){
-	player.pauseVideo();
-	}
-    mySwiper.swipeNext()
-	// }
-  })
-
-    $('#ytcover').on('mousedown', function(e) {
-    $(this).data('p0', { x: e.pageX, y: e.pageY });
-}).on('mouseup', function(e) {
-    var p0 = $(this).data('p0'),
-        p1 = { x: e.pageX, y: e.pageY },
-        d = Math.sqrt(Math.pow(p1.x - p0.x, 2) + Math.pow(p1.y - p0.y, 2));
-if(e.which != 1){return;}
-    if (d < 4) {
-		if(typeof player === 'undefined'){
-			loadPlayer();
-
-			  }
-		else{
-		playVideo();
-}
-    }
-	else{
-	player.pauseVideo();
-	}
-
-	$('.pagination').on('click',function(e){player.pauseVideo();});
-
-})
-
-
-$(window).resize(function(){
-  mySwiper.reInit();
-})
-  var hash = window.location.hash;
-  hash = hash.substring(1);
-  if(hash.length>0){
-
-$.get(
-   "/resources/forms/" + hash,
-   function(data, textStatus, jqXHR) {
-          $.colorbox({iframe: true, href: "/resources/forms/" + hash, innerWidth: "80%", innerHeight: 860});
-   }
-);
-  }
-
-var qstr = "<?php echo $_SERVER['QUERY_STRING']; ?>";
-  if(qstr.length>0){
-$.get(
-   "/resources/forms/" + qstr,
-   function(data, textStatus, jqXHR) {
-          $.colorbox({iframe: true, href: "/resources/forms/" + qstr, innerWidth: "80%", innerHeight: 860});
-   }
-);
-}
-
-});
-}
-
-
-
-
-  </script>
+</script>
 
 <div id="category" class="C9 cmsedit" style="padding-top:2.5em;max-width:1153px;"><!-- CTAGenerated -->
 <div class="C4 Col image-set large-CTA">
@@ -236,91 +171,6 @@ $.get(
 
 <script>
     $(document).foundation();
-</script>
-
-<script type="text/javascript">
-  // Load the IFrame Player API code asynchronously.
-  function loadPlayer(){
-  var tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/player_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-}
-  // Replace the 'ytplayer' element with an <iframe> and
-  // YouTube player after the API code downloads.
-  var player;
-  function onYouTubePlayerAPIReady() {
-    player = new YT.Player('ytplayer', {
-      width: '100%',
-      height: $('.device').height(),
-      videoId: 'aGcZS6K92fk',
-	  playerVars: {
-	  'autoplay': 1,
-	  'autohide': 1,
-	  'modestbranding': 1,
-	  'controls': 1,
-	  'showinfo': 0,
-	  'useCSS': 0,
-	  'html5': 1}
-    });
- 			mySwiper.reInit();
-			 player.addEventListener("onStateChange", "onytplayerStateChange");
-			$('#ytplayer').animate({'opacity':'0'},0).animate({'opacity':'1'},500);
-			 mySwiper.stopAutoplay()
-
-
- }
-
-      // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
-        event.target.playVideo();
-
-
-
-      }
-
-      // 5. The API calls this function when the player's state changes.
-      //    The function indicates that when playing a video (state=1),
-      //    the player should play for six seconds and then stop.
-      var done = false;
-function onytplayerStateChange(newState) {
-
-		if(newState.data == 2){
-			$('#ytplayer').animate({'opacity':'0'},500).animate({'width':'0px'},0);
-		}
-}
-      function onStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 6000);
-          done = true;
-        }
-
-		}
-      function stopVideo() {
-        player.stopVideo();
-      }
-       function playVideo() {
-
-	   if(player.getPlayerState() == 1){
-	    player.pauseVideo();
-	   }
-	   else{
-			$('#ytplayer').animate({'width':'100%'},0).animate({'opacity':'1'},500);
-
-			 player.playVideo();
-		}
-
-      }
-
-function coverClick(){
-		if(typeof player === 'undefined'){
-		loadPlayer();
-
-		  }
-		else{
-		playVideo();
-		  }
-}
 </script>
 				<footer id="site-info" >
 				<?php include($homedir . "/resources/html/footer.html"); ?>

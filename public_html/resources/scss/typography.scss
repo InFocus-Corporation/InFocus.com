@@ -1,13 +1,32 @@
 // Typography
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p.lead_text, h5 {
   font-family: GoodPro, Verdana, Geneva, sans-serif;
   font-weight: bold;
   text-transform: none;
-  text-align: left;
+}
+p.lead_text, h5, .secondary_headline {
+  font-weight: normal;
+  font-family: GoodProWideLight, Verdana, Geneva, sans-serif;
 }
 
-.lead_text {
-  font-size: 4rem;
-  &.headline { color: $infocus_blue; font-weight: normal }
-  &.paragraph { color: $dark_gray; }
+h5 { font-size: 1.55rem; line-height: 2.5rem; }
+
+.lead_text--headline {
+  color: $infocus_blue;
+  font-weight: 400;
+  font-size: 4.55rem;
+  line-height: 1.05;
+  margin: 10rem 0 2rem;
+}
+.lead_text--paragraph { color: $dark_gray; font-size: 1.25rem; }
+&.secondary_headline {
+  color: $dark_gray;
+  font-size: 3.75rem;
+  margin-bottom: 2rem;
+}
+.quote_source {
+  color: $infocus_blue;
+  font-weight: bold;
+  font-size: 1.25rem;
+  font-family: GoodProWideBold, Verdana, Geneva, sans-serif;
 }

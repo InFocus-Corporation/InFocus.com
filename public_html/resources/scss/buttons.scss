@@ -1,0 +1,15 @@
+//button-sizes
+.button, .button:focus {
+  padding: .95em 1em;
+  margin: 0 0 1rem;
+  font-size: .85rem;
+  letter-spacing: .1rem;
+  background-color: $infocus_blue;
+  color: $infocus_very_light_blue;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-family: GoodProWideMedium, Verdana, Geneva, sans-serif;
+}
+a.button--primary, a.button--primary:link, a.button--primary:visited {
+  color: $infocus_very_light_blue;
+}
