@@ -45,6 +45,8 @@ $(function () {
 		$('header .submenu').removeClass('open');
 	});
 	$('header .menu > li > a').click(function (e) {
+		if($(this).attr('href')) return;
+
 		e.preventDefault();
 		e.stopPropagation();
 
@@ -61,6 +63,15 @@ $(function () {
 	$('header .submenu').click(function (e) {
 		e.stopPropagation();
 	});
+	$('.fa-search').click(function (e) {
+		console.log($(this).closest('span'));
+		e.preventDefault();
+		$(this).closest('li').find('[name=search]').toggleClass('open');
+	});
+	$('a.contact-us').click(function (e) {
+		e.preventDefault();
+		alert('contact us popup');
+	});
 });
 </script>
 <header id="masthead">
@@ -69,36 +80,36 @@ $(function () {
 		<ul class="menu">
 			<li>
 				<a>Explore</a>
-				<div class="submenu">
+				<div class="submenu explore">
 					<div class="container">
 						<h2>Explore</h2>
-						<p>Beatae laboriosam ut inventore veritatis quia aut dignissimos voluptatibus. Atque velit debitis voluptatum exercitationem architecto. Autem id eveniet in dolorem corporis animi sed.</p>
+						<p>Beatae laboriosam ut inventore veritatis quia aut dignissimos voluptatibus. Atque velit debitis voluptatum exercitationem architecto.</p>
 						<div class="menu-grid">
 							<ul>
 								<li>
 									<a href="/present/">
-										<?php echo file_get_contents("resources/images/svg/explore_present.svg"); ?>
+										<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/images/svg/explore_present.svg'); ?>
 										<h3>Present</h3>
 										<p>Reiciendis facilis repellendus repudiandae eum consequatur quo porro quidem.</p>
 									</a>
 								</li>
 								<li>
 									<a href="/collaborate/">
-										<?php echo file_get_contents("resources/images/svg/explore_collaborate.svg"); ?>
+										<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/images/svg/explore_collaborate.svg'); ?>
 										<h3>Collaborate</h3>
 										<p>Reiciendis facilis repellendus repudiandae eum consequatur quo porro quidem.</p>
 									</a>
 								</li>
 								<li>
 									<a href="/teach/">
-										<?php echo file_get_contents("resources/images/svg/explore_teach_and_train.svg"); ?>
+										<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/images/svg/explore_teach_and_train.svg'); ?>
 										<h3>Teach &amp; Train</h3>
 										<p>Reiciendis facilis repellendus repudiandae eum consequatur quo porro quidem.</p>
 									</a>
 								</li>
 								<li>
 									<a href="/visualize/">
-										<?php echo file_get_contents("resources/images/svg/explore_visualize.svg"); ?>
+										<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/images/svg/explore_visualize.svg'); ?>
 										<h3>Visualize</h3>
 										<p>Reiciendis facilis repellendus repudiandae eum consequatur quo porro quidem.</p>
 									</a>
@@ -110,51 +121,59 @@ $(function () {
 			</li>
 			<li>
 				<a>Products</a>
-				<div class="submenu">
+				<div class="submenu products">
 					<div class="container">
 						<h2>Products</h2>
 						<div class="menu-grid">
 							<ul>
 								<li>
 									<img src="http://placehold.it/195x163">
-									<h3><a href="#">Touchscreens</a></h3>
-									<a href="#">Mondopad</a>
-									<a href="#">Big Touch</a>
-									<a href="#">jTouch</a>
-									<a href="#">QTablet</a>
+									<h3><a href="/displays/">Touchscreens</a></h3>
+									<a href="/displays/MONDOPAD-SERIES">Mondopad</a>
+									<a href="/displays/BIGTOUCH-SERIES">Big Touch</a>
+									<a href="/displays/JTOUCH-SERIES">jTouch</a>
+									<a href="/displays/Q-Tablet-Series">QTablet</a>
 								</li>
 								<li>
 									<img src="http://placehold.it/195x163">
-									<h3><a href="#">Projectors</a></h3>
-									<a href="#">Ultra Portable</a>
-									<a href="#">Office/Classroom</a>
-									<a href="#">Short Throw</a>
-									<a href="#">Large Venue</a>
-									<a href="#">Home Theater</a>
+									<h3><a href="/projectors/">Projectors</a></h3>
+									<a href="/hd-projector-lineup">HD Projectors</a>
+									<a href="/projectors/ultra-portable">Ultra Portable</a>
+									<a href="/projectors/short-throw">Short Throw</a>
+									<a href="/projectors/office">Office/Classroom</a>
+									<a href="/projectors/large-venue">Large Venue</a>
+									<a href="/projectors/home-theater">Home Theater</a>
+									<a href="/projectors/interactive">Interactive</a>
 								</li>
 								<li>
 									<img src="http://placehold.it/195x163">
-									<h3><a href="#">Video Conferencing</a></h3>
-									<a href="#">Mondopad</a>
-									<a href="#"></a>
-									<a href="#"></a>
-									<a href="#"></a>
+									<h3>Video<br> Conferencing</h3>
+									<a href="/displays/MONDOPAD-SERIES">Mondopad</a>
+									<a href="/conx-wall-exec">NEW! ConX Wall &amp; ConX<br> Exec</a>
+									<a href="/peripherals/MVP100">ConX Phone (MVP100)</a>
+									<a href="/peripherals/ConX-Series">ConX Video Meeting</a>
+									<a href="/peripherals/121-Series">121 Video Calling</a>
 								</li>
 								<li>
 									<img src="http://placehold.it/195x163">
 									<h3><a href="#">Display Walls</a></h3>
-									<a href="#"></a>
-									<a href="#"></a>
-									<a href="#"></a>
-									<a href="#"></a>
+									<a href="#">Canvas</a>
+									<a href="#">Canvas CRS-4K</a>
+									<a href="#">Canvas Touch</a>
+									<a href="#">Fusion Catalyst</a>
+									<a href="#">PixelNet</a>
+									<a href="#">StreamCenter</a>
+									<a href="#">VizionPlus II</a>
 								</li>
 								<li>
 									<img src="http://placehold.it/195x163">
-									<h3><a href="#">Peripherals</a></h3>
-									<a href="#"></a>
-									<a href="#"></a>
-									<a href="#"></a>
-									<a href="#"></a>
+									<h3><a href="/peripherals/">Peripherals</a></h3>
+									<a href="/peripherals/INF-SPTZ-2">RealCam PTZ Camera</a>
+									<a href="/peripherals/INA-TH150">Thunder Speakerphone</a>
+									<a href="/peripherals/INF-MCENTER2">MondoCenter<br> Collaboration PC</a>
+									<a href="/peripherals/INLITESHOW4">LiteShow Wireless<br> Presentation Adapter</a>
+									<a href="/peripherals/INS-BCONNECT">Big Connect Video<br> Calling Software</a>
+									<a href="/peripherals/INS-BIGNOTE">BigNote Whiteboarding<br> Software</a>
 								</li>
 							</ul>
 						</div>
@@ -163,7 +182,7 @@ $(function () {
 			</li>
 			<li>
 				<a>Accessories</a>
-				<div class="submenu">
+				<div class="submenu accessories">
 					<h2>Accessories</h2>
 					<div class="container">
 						<div class="menu-grid">
@@ -171,13 +190,13 @@ $(function () {
 								<li>
 									<a href="/accessories/mondopad-accessories">
 										<img src="http://placehold.it/163x163">
-										<h4>Accessories<br>for Displays</h4>
+										<h4>Accessories<br> for Displays</h4>
 									</a>
 								</li>
 								<li>
 									<a href="/accessories/cables">
 										<img src="http://placehold.it/163x163">
-										<h4>Cables and<br>Adapters</h4>
+										<h4>Cables and<br> Adapters</h4>
 									</a>
 								</li>
 								<li>
@@ -209,7 +228,7 @@ $(function () {
 								<li>
 									<a href="/accessories/mounts">
 										<img src="http://placehold.it/163x163">
-										<h4>Mounts and<br>Stands</h4>
+										<h4>Mounts and<br> Stands</h4>
 									</a>
 								</li>
 								<li>
@@ -233,13 +252,13 @@ $(function () {
 								<li>
 									<a href="/accessories/services">
 										<img src="http://placehold.it/163x163">
-										<h4>Warranties<br>and Service</h4>
+										<h4>Warranties<br> and Service</h4>
 									</a>
 								</li>
 								<li>
 									<a href="/accessories/networking">
 										<img src="http://placehold.it/163x163">
-										<h4>Wireless and<br>Networking</h4>
+										<h4>Wireless and<br> Networking</h4>
 									</a>
 								</li>
 							</ul>
@@ -249,25 +268,25 @@ $(function () {
 			</li>
 			<li>
 				<a>About</a>
-				<div class="submenu">
+				<div class="submenu about">
 					<h2>About</h2>
 					<div class="container">
 						<div class="menu-grid">
 							<ul>
 								<li>
-									<a href="#">
+									<a href="/about#overview">
 										<h3>Overview</h3>
 										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
 									</a>
 								</li>
 								<li>
-									<a href="#">
+									<a href="/about#infocus-team">
 										<h3>The InFocus Team</h3>
 										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
 									</a>
 								</li>
 								<li>
-									<a href="#">
+									<a href="/resources/forms/contactus" class="contact-us">
 										<h3>Contact Us</h3>
 										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
 									</a>
@@ -275,19 +294,19 @@ $(function () {
 							</ul>
 							<ul>
 								<li>
-									<a href="#">
+									<a href="/about#careers">
 										<h3>Careers</h3>
 										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
 									</a>
 								</li>
 								<li>
-									<a href="#">
+									<a href="/about#news">
 										<h3>News</h3>
 										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
 									</a>
 								</li>
 								<li>
-									<a href="#">
+									<a href="/about#events">
 										<h3>Events</h3>
 										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
 									</a>
@@ -304,7 +323,7 @@ $(function () {
 				<ul class="submenu">
 					<?php if($lang == "en"):?><li><a href="https://infocusdirect.com/"><?=translate('InFocus Store (US)')?></a></li><?php endif; ?>
 					<li><a href="/resellerlocator"><?=translate('Find a Reseller')?></a></li>
-					<li><a class="form-box" href="/resources/forms/contactus"><?=translate('Contact Us')?></a></li>
+					<li><a class="contact-us" href="/resources/forms/contactus"><?=translate('Contact Us')?></a></li>
 				</ul>
 			</li>
 			<li class="dropdown">
@@ -324,7 +343,10 @@ $(function () {
 				<a href="/support/"><?=translate('Support')?></a>
 			</li>
 			<li>
-				<span class="fa fa-search"></span>
+				<span>
+					<input type="text" class="search" name="search" placeholder="Search">
+					<span class="fa fa-search"></span>
+				</span>
 			</li>
 		</ul>
 	</div>

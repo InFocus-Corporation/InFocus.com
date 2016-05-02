@@ -140,12 +140,44 @@ header#masthead ul.menu > li {
 	width: auto;
 	height: 100%;
 }
-header#masthead ul.menu > li > a {
-	display: block;
+header#masthead ul.menu > li > a,
+header#masthead ul.menu > li > span {
+	display: inline-block;
 	padding: 0 1.6rem;
 	line-height: 6.2rem;
 	color: #3f4a54;
 	font-weight: bold;
+	white-space: nowrap;
+}
+header#masthead ul.menu > li .fa {
+	font-weight: normal;
+	line-height: 6rem;
+	color: #036184;
+	cursor: pointer;
+}
+header#masthead ul.menu > li .search {
+	display: inline-block;
+	background: transparent;
+	border-width: 0 0 1px;
+	border-style: solid;
+	border-color: #acacac;
+	transition: 0.3s width;
+	width: 0;
+}
+header#masthead ul.menu > li .search.open {
+	width: 100px;
+}
+header#masthead ul.menu > li .search::-webkit-input-placeholder{
+	color: #036184;
+	font-family: 'GoodPro-Wide';
+	font-style: italic;
+}
+header#masthead ul.menu > li > .search:-moz-placeholder,
+header#masthead ul.menu > li > .search::-moz-placeholder,
+header#masthead ul.menu > li > .search:-ms-input-placeholder {
+	color: #036184;
+	font-family: 'GoodPro-Wide';
+	font-style: italic;
 }
 header#masthead ul.menu > li > a.active {
 	background-color: #fff;
@@ -156,11 +188,13 @@ header#masthead ul.menu > li > .submenu {
 	left: 0;
 	display: none;
 	width: 100%;
+	min-height: 700px;
 	margin: 0;
 	color: #bbdde6;
 	background-color: rgba(63, 74, 84, 0.98);
-	padding: 2rem 1.8rem 4em;
+	padding: 2rem 0 4em;
 	font-size: 1.1em;
+	box-sizing: border-box;
 }
 header#masthead ul.menu > li > .submenu h2,
 header#masthead ul.menu > li > .submenu h3,
@@ -171,11 +205,29 @@ header#masthead ul.menu > li > .submenu p {
 	color: #bbdde6;
 	text-align: center;
 }
+header#masthead ul.menu > li > .submenu h2 {
+	font-size: 3em;
+	margin: 0 0 2.5rem;
+}
 header#masthead ul.menu > li > .submenu h3 {
 	font-size: 1.2em;
 	font-weight: bold;
 	text-transform: capitalize;
+	margin: 1em 0 0.6em;
+}
+header#masthead ul.menu > li > .submenu.explore h2 {
+	margin: 0 0 1.4rem;
+}
+header#masthead ul.menu > li > .submenu.explore h3 {
+	font-size: 1.7em;
 	margin: 1.6em 0 1em;
+}
+header#masthead ul.menu > li > .submenu.about a {
+	width: 100%;
+	max-width: 250px;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	margin: 0 auto 4em !important;
 }
 header#masthead ul.menu > li > .submenu h4 {
 	font-size: 1.2em;
@@ -183,10 +235,17 @@ header#masthead ul.menu > li > .submenu h4 {
 	margin: 0.4em 0 1em;
 }
 header#masthead ul.menu > li > .submenu p {
-	margin: 0 4em;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	width: 100%;
+	max-width: 250px;
+	box-sizing: border-box;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	margin: 0 auto;
 }
 header#masthead ul.menu > li > .submenu a svg {
-	width: 118px;
+	width: 122px;
 	height: auto;
 }
 header#masthead ul.menu > li > .submenu a:hover,
@@ -201,7 +260,9 @@ header#masthead ul.menu > li > .submenu a:hover svg > * {
 header#masthead ul.menu > li > .submenu .container > p {
 	width: 96%;
 	max-width: 765px;
-	margin: 1em auto 2em;
+	margin: 0em auto 2em;
+	font-size: 1.3em;
+	line-height: 1.8em;
 }
 header#masthead ul.menu > li > .submenu .container .menu-grid {
 	display: table;
@@ -213,6 +274,9 @@ header#masthead ul.menu > li > .submenu .container .menu-grid > ul {
 header#masthead ul.menu > li > .submenu .container .menu-grid > ul > li {
 	display: table-cell;
 }
+header#masthead ul.menu > li > .submenu .container .menu-grid > ul > li a{
+	margin-bottom: 0.5em;
+}
 header#masthead ul.menu > li.dropdown {
 	position: relative;
 }
@@ -221,6 +285,7 @@ header#masthead ul.menu > li.dropdown > .submenu {
 	top: 6.2rem;
 	left: 0;
 	width: auto;
+	min-height: 0;
 	white-space: nowrap;
 	padding: 2rem 1.8rem;
 }
@@ -231,7 +296,7 @@ header#masthead ul.menu > li > .submenu > div.container {
 	text-align: center;
 }
 header#masthead ul.menu > li.dropdown > .submenu li {
-	line-height: 2em;
+	line-height: 1.7em;
 }
 header#masthead ul.menu > li.dropdown > .submenu li a {
 	text-align: left;
@@ -239,17 +304,15 @@ header#masthead ul.menu > li.dropdown > .submenu li a {
 header#masthead ul.menu > li > .submenu.open {
 	display: block;
 }
-
-
 header#masthead ul.menu.small > li > a {
 	font-size: 0.8em;
 }
-
-@media only screen and (max-width: 1100px) {
-   header#masthead #brand p#title {
-		display:none;
+@media only screen and (max-width: 1200px) {
+	header#masthead h3#logo {
+		margin: 36px 0 0 20px;
 	}
 }
+
 @media only screen and (max-width: 799px) {
   /* line 1, ../sass/blocks/_header.scss */
   header#masthead {
@@ -279,12 +342,12 @@ header#masthead ul.menu.small > li > a {
 }
 
 .main-nav {
-position:fixed;
-font-size:90%;
-width:100%;
-z-index:1101;
-top:56px;
-background-color:#24282B;
+	position:fixed;
+	font-size:90%;
+	width:100%;
+	z-index:1101;
+	top:56px;
+	background-color:#24282B;
 }
 
 /* #Typography
