@@ -1,0 +1,15 @@
+[localhost]
+localhost ansible_connection=local
+
+[app-servers]
+infocusstaging
+
+[db-servers]
+infocusstaging
+
+[monitor-servers]
+
+[staging:children]
+app-servers
+db-servers
+monitor-servers

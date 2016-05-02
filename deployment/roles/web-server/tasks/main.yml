@@ -6,7 +6,13 @@
 - name: Add app user authorized keys
   authorized_key: user={{app_user}} key="{{lookup('file', inventory_dir + '/keys/' + item.key)}}"
   sudo: yes
-  with_items: admin_keys
+  with_items: admins
+  when: admins is defined
+
+- name: Add vagrant authorized keys
+  authorized_key: user={{app_user}} key="{{lookup('file', inventory_dir + '/keys/vagrant.key.pub' + )}}"
+  sudo: yes
+  when: is_vagrant is defined and is_vagrant
 
 - name: Add install directory
   file: path={{ item }} owner={{ app_user }} group={{ app_user }} state=directory mode=0775

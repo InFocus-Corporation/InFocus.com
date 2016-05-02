@@ -11,10 +11,6 @@ db:
   user: infocus
   password: infocus
 
-admin_keys:
-  - user: production
-    key: vagrant.key.pub
-
 global_packages:
   - rsync
   - screen
