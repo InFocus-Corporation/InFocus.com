@@ -6,8 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-<script type="text/javascript" src="//use.typekit.net/lbn0ick.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script type="text/Javascript" src="/resources/js/tagSort.js"></script>
 <script type="text/Javascript" src="/resources/js/InFocusCollection.js"></script>
 <script type="text/Javascript" src="/resources/js/jquery.colorbox.js"></script>
@@ -15,10 +13,9 @@
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 <link rel="stylesheet" href="/resources/css/core.css" />
 <?php if($lang != "en"){echo '<link rel="stylesheet" href="/resources/css/Non-en.css" />'; }?>
-<link rel="stylesheet" href="/resources/css/flexnav.css" />
 <script type="text/Javascript" src="/resources/js/jquery.hoverIntent.min.js"></script>
-<script type="text/Javascript" src="/resources/js/jquery.flexnav.min.js"></script>
 <script src="/resources/js/jquery.fitvids.js"></script>
+<link rel="stylesheet" href="/resources/css/font-awesome.min.css" />
 <!--[if IE]>
     <link href="/resources/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <![endif]-->

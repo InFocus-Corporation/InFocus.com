@@ -38,85 +38,294 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <?php endif; ?>
 
+<script>
+$(function () {
+	$(document.body).click(function (e) {
+		$('header .menu > li > a').removeClass('active');
+		$('header .submenu').removeClass('open');
+	});
+	$('header .menu > li > a').click(function (e) {
+		e.preventDefault();
+		e.stopPropagation();
 
-		<header id="masthead" >
-			<div id="brand" class="C9">
-				<h3 id="logo"><a href="/">InFocus</a></h3>
-				<p id="title"><span>|</span><?=translate('Collaboration That Works')?></p>
+		var sub = $(this),
+			isOpen = sub.hasClass('active');
 
-		</header>
-			<div class="menu-button"></div>
-			<nav class="main-nav">
-			<div class="C9">
-							<div class="headerNav">
-				<span class="onlyhidemobile"><ul  class="flexnav onlyhidemobile" data-breakpoint="640">
-<li>
-	<a class="form-box" href="/resources/forms/contactus"><img class="nav-icon" src="/resources/images/bubbleicon.png" /><?=translate('Contact Us')?></a>
-</li>			 			 			 
-	<li><span class="iconMenu touch-button"><i><img class="nav-icon" src="/resources/images/carticon.png" /><?=translate('How to Buy')?></i></span>
-	<ul style="display:none">
-		<li>
-		<?php if($lang == "en"):?>
-			<a href="https://infocusdirect.com/"><?=translate('InFocus Store (US)')?></a>
-		<?php endif; ?>
-			<a href="/reseller-locator"><?=translate('Find a Reseller')?></a>
-			<a class="form-box" href="/resources/forms/contactus"><?=translate('Contact Us')?></a>
-		</li>
-	</ul>
-</li>
+		$('header .menu > li > a').removeClass('active');
+		$('header .submenu').removeClass('open');
 
-	<li><span class="iconMenu touch-button"><i><img class="nav-icon" src="/resources/images/globeicon.png" /><?=translate('Region')?></i></span>
-	<ul style="display:none">
-		<li>
-			<a href="http://www.infocus.com"><?=translate('English (US)')?></a>
-			<a href="http://www.infocus.de"><?=translate('German')?></a>
-			<a href="http://www.infocus.ru"><?=translate('Russian')?></a>
-			<a href="http://www.infocus.pl"><?=translate('Polish')?></a>
-			<!--<a href="http://www.infocus.fr">French</a>
-			<a href="http://www.infocus.nl">Dutch</a>-->
-			<a href="http://www.infocusindia.co.in"><?=translate('English (India)')?></a>
-			<a href="http://www.infocus.com.cn"><?=translate('Chinese')?></a>
-		</li>
-	</ul>
-</li>
-</ul></span>
-
-<input type="text" id="search" class="nav-search" placeholder="<?=translate('search')?>" onsubmit="Search(document.getElementById('search').value);"><span onclick="Search(document.getElementById('search').value);" class="nav-search-icon"><img src="/resources/images/magicon.png" /></span>
-				
-				<!--<a class="onlyhidemobile" href="#" style="margin-left:50px;">Region</a>
-				<input type="text" style="margin-left:50px;"><button type="button">Search</button>-->
-				
-			</div>
-			<ul  class="flexnav" data-breakpoint="800">
-
-			<?php include($_SERVER['DOCUMENT_ROOT']  . "/resources/html/mainmenu-" . $lang . ".html"); ?>
-
-<li  class="hidefs" style="vertical-align:top;">
-	<a class="form-box" href="/resources/forms/contactus"><?=translate('Contact Us')?></a>
-</li>			 			 			 
-	<li class="hidefs"><a><?=translate('How to Buy')?></a>
-	<ul style="display:none">
-		<li>
-		<?php if($lang == "en"):?>
-			<a href="https://infocusdirect.com/"><?=translate('InFocus Store (US)')?></a>
-		<?php endif; ?>
-			<a href="/resellerlocator"><?=translate('Find a Reseller')?></a>
-			<a class="form-box" href="/resources/forms/contactus"><?=translate('Contact Us')?></a>
-		</li>
-	</ul>
-</li>
-
-	<li class="hidefs"><a><?=translate('Region')?></a>
-	<ul style="display:none">
-		<li>
-			<a href="http://www.infocus.com"><?=translate('English (US)')?></a>
-			<a href="http://www.infocus.de"><?=translate('German')?></a>
-			<!--<a href="http://www.infocus.fr">French</a>
-			<a href="http://www.infocus.nl">Dutch</a>-->
-			<a href="http://www.infocusindia.co.in"><?=translate('English (India)')?></a>
-			<a href="http://www.infocus.com.cn"><?=translate('Chinese')?></a>
-		</li>
-	</ul>
-</li>			</ul>
+		if(!isOpen) {
+			$(this).addClass('active').next('.submenu').addClass('open');
+		}
+	});
+	$('header .submenu').click(function (e) {
+		e.stopPropagation();
+	});
+});
+</script>
+<header id="masthead">
+	<div>
+		<h3 id="logo"><a href="/">InFocus</a></h3>
+		<ul class="menu">
+			<li>
+				<a>Explore</a>
+				<div class="submenu">
+					<div class="container">
+						<h2>Explore</h2>
+						<p>Beatae laboriosam ut inventore veritatis quia aut dignissimos voluptatibus. Atque velit debitis voluptatum exercitationem architecto. Autem id eveniet in dolorem corporis animi sed.</p>
+						<div class="menu-grid">
+							<ul>
+								<li>
+									<a href="/present/">
+										<?php echo file_get_contents("resources/images/svg/explore_present.svg"); ?>
+										<h3>Present</h3>
+										<p>Reiciendis facilis repellendus repudiandae eum consequatur quo porro quidem.</p>
+									</a>
+								</li>
+								<li>
+									<a href="/collaborate/">
+										<?php echo file_get_contents("resources/images/svg/explore_collaborate.svg"); ?>
+										<h3>Collaborate</h3>
+										<p>Reiciendis facilis repellendus repudiandae eum consequatur quo porro quidem.</p>
+									</a>
+								</li>
+								<li>
+									<a href="/teach/">
+										<?php echo file_get_contents("resources/images/svg/explore_teach_and_train.svg"); ?>
+										<h3>Teach &amp; Train</h3>
+										<p>Reiciendis facilis repellendus repudiandae eum consequatur quo porro quidem.</p>
+									</a>
+								</li>
+								<li>
+									<a href="/visualize/">
+										<?php echo file_get_contents("resources/images/svg/explore_visualize.svg"); ?>
+										<h3>Visualize</h3>
+										<p>Reiciendis facilis repellendus repudiandae eum consequatur quo porro quidem.</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
-			</nav>
+			</li>
+			<li>
+				<a>Products</a>
+				<div class="submenu">
+					<div class="container">
+						<h2>Products</h2>
+						<div class="menu-grid">
+							<ul>
+								<li>
+									<img src="http://placehold.it/195x163">
+									<h3><a href="#">Touchscreens</a></h3>
+									<a href="#">Mondopad</a>
+									<a href="#">Big Touch</a>
+									<a href="#">jTouch</a>
+									<a href="#">QTablet</a>
+								</li>
+								<li>
+									<img src="http://placehold.it/195x163">
+									<h3><a href="#">Projectors</a></h3>
+									<a href="#">Ultra Portable</a>
+									<a href="#">Office/Classroom</a>
+									<a href="#">Short Throw</a>
+									<a href="#">Large Venue</a>
+									<a href="#">Home Theater</a>
+								</li>
+								<li>
+									<img src="http://placehold.it/195x163">
+									<h3><a href="#">Video Conferencing</a></h3>
+									<a href="#">Mondopad</a>
+									<a href="#"></a>
+									<a href="#"></a>
+									<a href="#"></a>
+								</li>
+								<li>
+									<img src="http://placehold.it/195x163">
+									<h3><a href="#">Display Walls</a></h3>
+									<a href="#"></a>
+									<a href="#"></a>
+									<a href="#"></a>
+									<a href="#"></a>
+								</li>
+								<li>
+									<img src="http://placehold.it/195x163">
+									<h3><a href="#">Peripherals</a></h3>
+									<a href="#"></a>
+									<a href="#"></a>
+									<a href="#"></a>
+									<a href="#"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a>Accessories</a>
+				<div class="submenu">
+					<h2>Accessories</h2>
+					<div class="container">
+						<div class="menu-grid">
+							<ul>
+								<li>
+									<a href="/accessories/mondopad-accessories">
+										<img src="http://placehold.it/163x163">
+										<h4>Accessories<br>for Displays</h4>
+									</a>
+								</li>
+								<li>
+									<a href="/accessories/cables">
+										<img src="http://placehold.it/163x163">
+										<h4>Cables and<br>Adapters</h4>
+									</a>
+								</li>
+								<li>
+									<a href="/accessories/cases">
+										<img src="http://placehold.it/163x163">
+										<h4>Cases</h4>
+									</a>
+								</li>
+								<li>
+									<a href="/accessories/lamps">
+										<img src="http://placehold.it/163x163">
+										<h4>Lamps</h4>
+									</a>
+								</li>
+								<li>
+									<a href="/accessories/lenses">
+										<img src="http://placehold.it/163x163">
+										<h4>Lenses</h4>
+									</a>
+								</li>
+								<li>
+									<a href="/accessories/misc">
+										<img src="http://placehold.it/163x163">
+										<h4>Miscellaneous</h4>
+									</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="/accessories/mounts">
+										<img src="http://placehold.it/163x163">
+										<h4>Mounts and<br>Stands</h4>
+									</a>
+								</li>
+								<li>
+									<a href="/accessories/remotes">
+										<img src="http://placehold.it/163x163">
+										<h4>Remotes</h4>
+									</a>
+								</li>
+								<li>
+									<a href="/accessories/screens">
+										<img src="http://placehold.it/163x163">
+										<h4>Screens</h4>
+									</a>
+								</li>
+								<li>
+									<a href="/accessories/software">
+										<img src="http://placehold.it/163x163">
+										<h4>Software</h4>
+									</a>
+								</li>
+								<li>
+									<a href="/accessories/services">
+										<img src="http://placehold.it/163x163">
+										<h4>Warranties<br>and Service</h4>
+									</a>
+								</li>
+								<li>
+									<a href="/accessories/networking">
+										<img src="http://placehold.it/163x163">
+										<h4>Wireless and<br>Networking</h4>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a>About</a>
+				<div class="submenu">
+					<h2>About</h2>
+					<div class="container">
+						<div class="menu-grid">
+							<ul>
+								<li>
+									<a href="#">
+										<h3>Overview</h3>
+										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h3>The InFocus Team</h3>
+										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h3>Contact Us</h3>
+										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
+									</a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="#">
+										<h3>Careers</h3>
+										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h3>News</h3>
+										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<h3>Events</h3>
+										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul class="menu small right">
+			<li class="dropdown">
+				<a><?=translate('Buy')?></a>
+				<ul class="submenu">
+					<?php if($lang == "en"):?><li><a href="https://infocusdirect.com/"><?=translate('InFocus Store (US)')?></a></li><?php endif; ?>
+					<li><a href="/resellerlocator"><?=translate('Find a Reseller')?></a></li>
+					<li><a class="form-box" href="/resources/forms/contactus"><?=translate('Contact Us')?></a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a><?=translate('Region')?></a>
+				<ul class="submenu">
+					<li><a href="http://www.infocus.com"><?=translate('English (US)')?></a></li>
+					<li><a href="http://www.infocus.de"><?=translate('German')?></a></li>
+					<li><a href="http://www.infocus.ru"><?=translate('Russian')?></a></li>
+					<li><a href="http://www.infocus.pl"><?=translate('Polish')?></a></li>
+					<!--<a href="http://www.infocus.fr">French</a>
+					<a href="http://www.infocus.nl">Dutch</a>-->
+					<li><a href="http://www.infocusindia.co.in"><?=translate('English (India)')?></a></li>
+					<li><a href="http://www.infocus.com.cn"><?=translate('Chinese')?></a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/support/"><?=translate('Support')?></a>
+			</li>
+			<li>
+				<span class="fa fa-search"></span>
+			</li>
+		</ul>
+	</div>
+</header>
