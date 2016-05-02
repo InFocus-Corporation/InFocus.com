@@ -1,0 +1,13 @@
+// Typography
+h1, h2, h3, h4 {
+  font-family: GoodPro, Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  text-transform: none;
+  text-align: left;
+}
+
+.lead_text {
+  font-size: 4rem;
+  &.headline { color: $infocus_blue; font-weight: normal }
+  &.paragraph { color: $dark_gray; }
+}
