@@ -5,11 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="icon" href="/favicon.png" type="image/gif" sizes="32x32">
 
-<!-- obsolete scripts
-<script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<!-- <script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
 <script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<script type="text/Javascript" src="/resources/js/jquery.flexnav.min.js"></script>
 <script>
 window.onbeforeunload = function () {
 try{$(".flexnav").flexNav();
@@ -17,8 +16,7 @@ try{$(".flexnav").flexNav();
 </script>
 
 
-end obsolete scripts -->
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
 <script src="/resources/js/vendor/foundation.min.js"></script>
 
 <script type="text/javascript" src="//use.typekit.net/lbn0ick.js"></script>
@@ -27,11 +25,12 @@ end obsolete scripts -->
 <script type="text/Javascript" src="/resources/js/InFocusCollection.js"></script>
 <script type="text/Javascript" src="/resources/js/jquery.colorbox.js"></script>
 <link rel="stylesheet" href="/resources/css/colorbox.css" />
-
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 <link rel="stylesheet" href="/resources/css/core.css" />
 <?php if($lang != "en"){echo '<link rel="stylesheet" href="/resources/css/Non-en.css" />'; }?>
 <link rel="stylesheet" href="/resources/css/flexnav.css" />
 <script type="text/Javascript" src="/resources/js/jquery.hoverIntent.min.js"></script>
+<script type="text/Javascript" src="/resources/js/jquery.flexnav.min.js"></script>
 <script src="/resources/js/jquery.fitvids.js"></script>
 <!--[if IE]>
   <link href="/resources/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
