@@ -37,32 +37,66 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	</div>
 	<div class="row">
 		<div class="small-12 medium-10 medium-offset-1 columns text-center">
-			<h3 class="lead_text secondary_headline">Introductory Brand Handshake</h3>
+			<h3 class="lead_text--secondary_headline">Introductory Brand Handshake</h3>
 			<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lea commodo consequat. Duis aute irure dolor in reprehenderit in v fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </h5>
 		</div>
 	</div>
 	<div class="row">
 		<div class="small-12 columns">
 			<div class="vertical_accordian">
-				<div class="slide" id="slide1">
-					<a href="#slide1">Title One</a>
-					<h5>Lorem ipsum dolor sit amet.</h5>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur similique deleniti temporibus dolorum facere maxime, officiis, voluptatem quasi minus accusamus, voluptates blanditiis quaerat cupiditate. Modi consequatur, magni! Explicabo, commodi, nisi!</p>
+				<div class="vertical_accordian--slide" id="slide3">
+					<div class="vertical_accordian--slide--background">
+					</div>
+					<div class="vertical_accordian--slide--content">
+						<div class="module--tag">
+							<span>for public sector</span>
+						</div>
+						<a href="#slide3">
+							<h2>Lorem ipsum dolor sit amet.</h2>
+							<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur similique deleniti temporibus dolorum facere maxime, officiis, voluptatem quasi minus accusamus, voluptates blanditiis quaerat cupiditate. Modi consequatur, magni! Explicabo, commodi, nisi!</h5>
+						</a>
+						<div class="module--tag module--tag--bottom">
+							<span>slide cta goes here</span>
+						</div>
+					</div>
 				</div>
-				<div class="slide" id="slide2">
-					<a href="#slide2">Title One</a>
-					<h5>Lorem ipsum dolor sit amet.</h5>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur similique deleniti temporibus dolorum facere maxime, officiis, voluptatem quasi minus accusamus, voluptates blanditiis quaerat cupiditate. Modi consequatur, magni! Explicabo, commodi, nisi!</p>
+				<div class="vertical_accordian--slide" id="slide2">
+					<div class="vertical_accordian--slide--background">
+					</div>
+					<div class="vertical_accordian--slide--content">
+						<div class="module--tag">
+							<span>for education</span>
+						</div>
+						<a href="#slide2">
+							<h2>Lorem ipsum dolor sit amet.</h2>
+							<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur similique deleniti temporibus dolorum facere maxime, officiis, voluptatem quasi minus accusamus, voluptates blanditiis quaerat cupiditate. Modi consequatur, magni! Explicabo, commodi, nisi!</h5>
+						</a>
+						<div class="module--tag module--tag--bottom">
+							<span>slide cta goes here</span>
+						</div>
+					</div>
 				</div>
-				<div class="slide" id="slide3">
-					<a href="#slide3">Title One</a>
-					<h5>Lorem ipsum dolor sit amet.</h5>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur similique deleniti temporibus dolorum facere maxime, officiis, voluptatem quasi minus accusamus, voluptates blanditiis quaerat cupiditate. Modi consequatur, magni! Explicabo, commodi, nisi!</p>
+				<div class="vertical_accordian--slide" id="slide1">
+					<div class="vertical_accordian--slide--background">
+					</div>
+					<div class="vertical_accordian--slide--content">
+						<div class="module--tag">
+							<span>for business</span>
+						</div>
+						<a href="#slide1">
+							<h2>Lorem ipsum dolor sit amet.</h2>
+							<h5>Lorem ihsum dolor sit amet, consectetur adipisicing elit. Pariatur similique deleniti temporibus dolorum facere maxime, officiis, voluptatem quasi minus accusamus, voluptates blanditiis quaerat cupiditate. Modi consequatur, magni! Explicabo, commodi, nisi!</h5>
+						</a>
+						<div class="module--tag module--tag--bottom">
+							<span>slide cta goes here</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="hero_row hero_row--secondary">
+		<div class="white color_stripe"></div>
 		<div class="row">
 			<div class="small-12 medium-7 medium-offset-5 columns">
 				<h2 class="lead_text--headline">"We have the power to collaborate anytime, anywhere"</h2>
@@ -73,20 +107,31 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	</div>
 	<div class="row">
 		<div class="small-12 medium-7 columns">
-			<div class="panel">
-				<h3>InFocus Unveils ConX, the New Solution for Enterprise Conferencing & Collaboration</h3>
-				<p>The world’s first scalable HD video conferencing and data visualization system combines endpoints, software, and cloud services to enable easy and powerful connection, collaboration and sharing ideas in real time.</p>
+			<div class="callout">
+				<div class="module--tag">
+					<span>latest news</span>
+				</div>
+				<div class="callout--heading">
+					<h3>InFocus Unveils ConX, the New Solution for Enterprise Conferencing & Collaboration</h3>
+				</div>
+				<div class="callout--copy">
+					<h5>The world’s first scalable HD video conferencing and data visualization system combines endh5oints, software, and cloud services to enable easy and powerful connection, collaboration and sharing ideas in real time.</h5>
+					<a href="#TODO" class="button button--primary">learn more</a>
+				</div>
 			</div>
 		</div>
 		<div class="small-12 medium-5 columns">
-			<h2 class="lead_text--headline">"We have the power to collaborate anytime, anywhere"</h2>
-			<h5 class="quote_source">- Jane Matthews Entrepeneur</h5>
-			<a href="#TODO" class="button button--primary">watch case study video</a>
+			<div class="callout callout--picture">
+				<div class="callout--heading callout--heading--picture">
+					<img src="http://placehold.it/1311x699" />
+				</div>
+				<div class="callout--copy">
+					<h5>Visit us at InfoComm 2016 Las Vegas Convention Center, June 8-10 Booth N1417</h5>
+					<a href="#TODO" class="link link--primary">learn more</a>
+				</div>
+			</div>
 		</div>
 	</div>
-
-
-
 
 
 <div class="content" style="width:100%;padding-top: 87px;">
@@ -172,9 +217,10 @@ z-index:1007;
 <script>
     $(document).foundation();
 </script>
-				<footer id="site-info" >
-				<?php include($homedir . "/resources/html/footer.html"); ?>
-				</footer>
+<footer id="site-info" >
+<?php include($homedir . "/resources/html/footer.html"); ?>
+</footer>
 
 
-</body></html>
+</body>
+</html>

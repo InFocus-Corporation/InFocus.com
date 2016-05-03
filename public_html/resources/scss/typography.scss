@@ -4,12 +4,23 @@ h1, h2, h3, h4, p.lead_text, h5 {
   font-weight: bold;
   text-transform: none;
 }
-p.lead_text, h5, .secondary_headline {
+p.lead_text,
+h5,
+.callout h5,
+.secondary_headline,
+.vertical_accordian--slide--content h2
+ {
   font-weight: normal;
   font-family: GoodProWideLight, Verdana, Geneva, sans-serif;
 }
 
-h5 { font-size: 1.55rem; line-height: 2.5rem; }
+.callout h3 {
+  font-weight: normal;
+  font-family: GoodProWideBook, Verdana, Geneva, sans-serif;
+  line-height: 1.25em;
+}
+
+.lead_text--secondary_headline + h5 { font-size: 1.55rem; line-height: 2.5rem; }
 
 .lead_text--headline {
   color: $infocus_blue;
@@ -19,14 +30,41 @@ h5 { font-size: 1.55rem; line-height: 2.5rem; }
   margin: 10rem 0 2rem;
 }
 .lead_text--paragraph { color: $dark_gray; font-size: 1.25rem; }
-&.secondary_headline {
+.lead_text--secondary_headline {
   color: $dark_gray;
   font-size: 3.75rem;
   margin-bottom: 2rem;
 }
-.quote_source {
+.quote_source, .module--tag span {
   color: $infocus_blue;
   font-weight: bold;
   font-size: 1.25rem;
   font-family: GoodProWideBold, Verdana, Geneva, sans-serif;
+}
+.callout {
+  h3 { color: $infocus_blue; letter-spacing: -.035em; }
+}
+.module--tag span {
+  text-transform: uppercase;
+  letter-spacing: .35em;
+  font-size: .65em;
+}
+.vertical_accordian--slide {
+  .module--tag span {
+    color: $white;
+  }
+  .vertical_accordian--slide--content {
+    h2 {
+        font-size: 1.75rem;
+        line-height: 1;
+        margin-top: .65em;
+        margin-bottom: .55em;
+        display: inline-block;
+    }
+    @media screen and (min-width: 40em) {
+      h2 {
+          font-size: 4rem;
+      }
+    }
+  }
 }
