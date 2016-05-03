@@ -7,22 +7,17 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 <title>InFocus | Collaboration That Works</title>
 <meta name="description" content="Discover advanced projection equipment offered by InFocus. Global leader in LCD projectors and DLP projection, Mondopad products and projector accessories." />
 <meta name="keywords" content="infocus,mondopad,projector,projection,DLP,LCD,LCD display,digital display,visual communications,projector accessories,infocus company,digital technology,projection equipment,monopad, communication, touchscreen" />
+
+<link rel="stylesheet" href="/resources/css/vendor/foundation.min.css" />
+<link rel="stylesheet" href="/resources/css/infocus.min.css" />
+
 <?php
 if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $homedir.'/resources/overviews/', 'admin,salespublisher,saleseditor,marketingpublisher,marketingeditor,editor', ".src", "overview", "true", "SavePage","overview");}
 
 ?>
 </head>
 <body class="" style="">
-	<div class="top-bar">
-		<div class="row">
-			<div class="top-bar">
-				<?php include($homedir . "/resources/html/mainmenu.html"); ?>
-			</div>
-		</div>
-	</div>
-	<!-- TODO remove these br's when header gets coded -->
-	<br><br><br><br>
-	<br><br><br><br>
+	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
 
 	<div class="hero_row">
 		<div class="row">

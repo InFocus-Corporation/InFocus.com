@@ -7,7 +7,7 @@ $priceBuyNow = $product->priceBuyNow($product->pn);
 <?=$product->productmeta ?>
 
 <style>
-	.blue_btn {
+.blue_btn {
   padding: 0.1em 1em;
   max-width: 60%;
   margin-top: 0.3em;
@@ -16,23 +16,14 @@ $priceBuyNow = $product->priceBuyNow($product->pn);
   margin-bottom: 0em;
   font-size:0.7em;
 }
-.spec-list {
-  text-align: left;
-  margin: 1em 1em .4em 1em;
-  font-size: 0.7em;
-  line-height: 1.2em;
-  padding: 8px 0;
-  border-top: 1px solid #bababa;
-  border-bottom: 1px solid #bababa;
-}
 .panels > li > div {
   padding: 1em .2em;
   margin: 0em .8em;
 }
-	.feature-list  ul {
-		width:46%;  
-		float:left;
-	}​
+.feature-list  ul {
+	width:46%;  
+	float:left;
+}​
 </style>
 <script>
 	$(document).ready(function() {

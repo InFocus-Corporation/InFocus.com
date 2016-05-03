@@ -9,34 +9,22 @@
 <!-- <script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
 <script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<script>
-window.onbeforeunload = function () {
-try{$(".flexnav").flexNav();
- }catch(e){}}
-</script>
-
-
 
 <script src="/resources/js/vendor/foundation.min.js"></script>
-
-<script type="text/javascript" src="//use.typekit.net/lbn0ick.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script type="text/Javascript" src="/resources/js/tagSort.js"></script>
 <script type="text/Javascript" src="/resources/js/InFocusCollection.js"></script>
 <script type="text/Javascript" src="/resources/js/jquery.colorbox.js"></script>
 <link rel="stylesheet" href="/resources/css/colorbox.css" />
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
 <link rel="stylesheet" href="/resources/css/core.css" />
+
 <?php if($lang != "en"){echo '<link rel="stylesheet" href="/resources/css/Non-en.css" />'; }?>
-<link rel="stylesheet" href="/resources/css/flexnav.css" />
 <script type="text/Javascript" src="/resources/js/jquery.hoverIntent.min.js"></script>
-<script type="text/Javascript" src="/resources/js/jquery.flexnav.min.js"></script>
 <script src="/resources/js/jquery.fitvids.js"></script>
+<link rel="stylesheet" href="/resources/css/font-awesome.min.css" />
 <!--[if IE]>
   <link href="/resources/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 <![endif]-->
-<link rel="stylesheet" href="/resources/css/vendor/foundation.min.css" />
-<link rel="stylesheet" href="/resources/css/infocus.min.css" />
 <!-- Start Visual Website Optimizer Asynchronous Code -->
 <script type='text/javascript'>
 var _vwo_code=(function(){
