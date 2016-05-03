@@ -321,6 +321,7 @@ header#masthead ul.menu > li.dropdown > .submenu {
 	min-height: 0;
 	white-space: nowrap;
 	padding: 2rem 1.8rem;
+	list-style-type: none;
 }
 header#masthead ul.menu > li > .submenu > div.container {
 	width: 100%;
