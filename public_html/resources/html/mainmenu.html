@@ -64,7 +64,6 @@ $(function () {
 		e.stopPropagation();
 	});
 	$('.fa-search').click(function (e) {
-		console.log($(this).closest('span'));
 		e.preventDefault();
 		$(this).closest('li').find('[name=search]').toggleClass('open');
 	});
@@ -72,46 +71,56 @@ $(function () {
 		e.preventDefault();
 		alert('contact us popup');
 	});
+	$('.mobile-menu').click(function (e) {
+		$(this).closest('header').toggleClass('open');
+	});
 });
 </script>
 <header id="masthead">
 	<div>
 		<h3 id="logo"><a href="/">InFocus</a></h3>
 		<ul class="menu">
+			<li class="mobile-search">
+				<i class="magnifying-glass"><hr></i>
+				<input type="text" class="search" name="search" placeholder="Search">
+			</li>
 			<li>
-				<a>Explore</a>
+				<a>
+					Explore
+					<i class="toggle"><hr><hr></i>
+				</a>
 				<div class="submenu explore">
 					<div class="container">
 						<h2>Explore</h2>
-						<p>Beatae laboriosam ut inventore veritatis quia aut dignissimos voluptatibus. Atque velit debitis voluptatum exercitationem architecto.</p>
+						<p>Our products and services can help you accomplish a range of tasks more effectively. Discover how InFocus solves the challenges you face every day.</p>
 						<div class="menu-grid">
 							<ul>
 								<li>
 									<a href="/present/">
 										<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/images/svg/explore_present.svg'); ?>
 										<h3>Present</h3>
-										<p>Reiciendis facilis repellendus repudiandae eum consequatur quo porro quidem.</p>
+										<p>Innovative solutions for classrooms, conference rooms, and auditoriums.</p>
 									</a>
 								</li>
 								<li>
 									<a href="/collaborate/">
 										<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/images/svg/explore_collaborate.svg'); ?>
 										<h3>Collaborate</h3>
-										<p>Reiciendis facilis repellendus repudiandae eum consequatur quo porro quidem.</p>
+										<p>Improve communication and productivity for you and your team.</p>
 									</a>
 								</li>
 								<li>
 									<a href="/teach/">
 										<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/images/svg/explore_teach_and_train.svg'); ?>
 										<h3>Teach &amp; Train</h3>
-										<p>Reiciendis facilis repellendus repudiandae eum consequatur quo porro quidem.</p>
+										<p>Sharing information with those near and far has never been easier.</p>
 									</a>
 								</li>
 								<li>
 									<a href="/visualize/">
 										<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/images/svg/explore_visualize.svg'); ?>
 										<h3>Visualize</h3>
-										<p>Reiciendis facilis repellendus repudiandae eum consequatur quo porro quidem.</p>
+										<p>Now your colleagues can view the entire enterprise from anywhere.</p>
 									</a>
 								</li>
 							</ul>
@@ -120,7 +129,10 @@ $(function () {
 				</div>
 			</li>
 			<li>
-				<a>Products</a>
+				<a>
+					Products
+					<i class="toggle"><hr><hr></i>
+				</a>
 				<div class="submenu products">
 					<div class="container">
 						<h2>Products</h2>
@@ -181,7 +193,10 @@ $(function () {
 				</div>
 			</li>
 			<li>
-				<a>Accessories</a>
+				<a>
+					Accessories
+					<i class="toggle"><hr><hr></i>
+				</a>
 				<div class="submenu accessories">
 					<h2>Accessories</h2>
 					<div class="container">
@@ -223,8 +238,6 @@ $(function () {
 										<h4>Miscellaneous</h4>
 									</a>
 								</li>
-							</ul>
-							<ul>
 								<li>
 									<a href="/accessories/mounts">
 										<img src="http://placehold.it/163x163">
@@ -267,7 +280,10 @@ $(function () {
 				</div>
 			</li>
 			<li>
-				<a>About</a>
+				<a>
+					About
+					<i class="toggle"><hr><hr></i>
+				</a>
 				<div class="submenu about">
 					<h2>About</h2>
 					<div class="container">
@@ -276,39 +292,37 @@ $(function () {
 								<li>
 									<a href="/about#overview">
 										<h3>Overview</h3>
-										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
+										<span>We want you to succeed at your work. That’s our mission.</span>
 									</a>
 								</li>
 								<li>
 									<a href="/about#infocus-team">
 										<h3>The InFocus Team</h3>
-										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
+										<span>We’re a team of dedicated professionals. Get to know us.</span>
 									</a>
 								</li>
 								<li>
 									<a href="/resources/forms/contactus" class="contact-us">
 										<h3>Contact Us</h3>
-										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
+										<span>How to reach us with questions, comments, and support requests.</span>
 									</a>
 								</li>
-							</ul>
-							<ul>
 								<li>
 									<a href="/about#careers">
 										<h3>Careers</h3>
-										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
+										<span>Interested in joining our team? We’re always looking for good people.</span>
 									</a>
 								</li>
 								<li>
 									<a href="/about#news">
 										<h3>News</h3>
-										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
+										<span>Your resource for articles, press releases, and other InFocus news.</span>
 									</a>
 								</li>
 								<li>
 									<a href="/about#events">
 										<h3>Events</h3>
-										Inventore eum quaerat eligendi. Culpa et unde error eius enim nihil necessitatibus.
+										<span>We love to meet our customers at trade shows and other events.</span>
 									</a>
 								</li>
 							</ul>
@@ -327,7 +341,7 @@ $(function () {
 				</ul>
 			</li>
 			<li class="dropdown">
-				<a><?=translate('Region')?></a>
+				<a><?=translate('Regions')?></a>
 				<ul class="submenu">
 					<li><a href="http://www.infocus.com"><?=translate('English (US)')?></a></li>
 					<li><a href="http://www.infocus.de"><?=translate('German')?></a></li>
@@ -342,12 +356,13 @@ $(function () {
 			<li>
 				<a href="/support/"><?=translate('Support')?></a>
 			</li>
-			<li>
+			<li class="hide-on-mobile">
 				<span>
 					<input type="text" class="search" name="search" placeholder="Search">
 					<span class="fa fa-search"></span>
 				</span>
 			</li>
 		</ul>
+		<span class="mobile-menu"><hr><hr><hr></span>
 	</div>
 </header>
