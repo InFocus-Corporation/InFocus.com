@@ -163,8 +163,12 @@ header#masthead ul.menu > li .search {
 	border-width: 0 0 1px;
 	border-style: solid;
 	border-color: #acacac;
+	box-shadow: none !important;
 	transition: 0.3s width;
 	width: 0;
+	height: auto;
+	padding: 0;
+	font-size: 0.8rem;
 }
 header#masthead ul.menu > li .search.open {
 	width: 100px;
@@ -317,6 +321,7 @@ header#masthead ul.menu > li.dropdown > .submenu {
 	min-height: 0;
 	white-space: nowrap;
 	padding: 2rem 1.8rem;
+	list-style-type: none;
 }
 header#masthead ul.menu > li > .submenu > div.container {
 	width: 100%;
@@ -368,8 +373,12 @@ header#masthead ul.menu > li.mobile-search {
 	display: none;
 }
 header#masthead i hr {
+	clear: none;
 	position: absolute;
+	top: 0;
+	left: 0;
 	display: block;
+	margin: 0;
 	border-width: 1px 0 0 0;
 	border-style: solid;
 	border-color: #333f48;
@@ -386,28 +395,31 @@ header#masthead .magnifying-glass {
 	height: 18px;
 }
 header#masthead .magnifying-glass hr {
-	top: 11px;
+	top: 19px;
 	left: 14px;
 	width: 10px;
 	height: 0px;
 	transform: rotate(45deg);
 }
 header#masthead .toggle {
-	display: none;
+	position: relative;
 	float: right;
+	display: none;
 	width: 21px;
 	height: 21px;
 	margin-right: 3.8rem;
+    line-height: inherit;
 }
 header#masthead .toggle hr {
+	top: 10px;
 	width: 21px;
 }
 header#masthead .toggle hr:nth-child(2) {
+	top: 0px;
+	left: 10px;
 	width: 0;
 	height: 21px;
 	border-width: 0 0 0 1px;
-	margin-left: 10px;
-	margin-top: 1px;
 }
 header#masthead .active .toggle hr:nth-child(2) {
 	display: none;

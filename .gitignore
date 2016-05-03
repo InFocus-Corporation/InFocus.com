@@ -119,3 +119,9 @@ public_html/projectors/clog.txt
 public_html/projectors/familybak.php
 .vagrant
 public_html/resources/php/config-override.php
+
+# Dynamically built content
+public_html/projectors/newdownload.php
+public_html/resources/php/homepageupdate.php
+public_html/resources/php/htaccesstest.php
+public_html/resources/php/test.php
