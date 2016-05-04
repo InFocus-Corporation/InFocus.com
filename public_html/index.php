@@ -132,14 +132,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 	</div>
 
-
-<script>
-    $(document).foundation();
-</script>
-<footer id="site-info" >
-<?php include($homedir . "/resources/html/footer.html"); ?>
-</footer>
-
-
+	<script>
+	    $(document).foundation();
+	</script>
+	<footer id="site-info" >
+	<?php include($homedir . "/resources/html/footer.html"); ?>
+	</footer>
 </body>
 </html>

@@ -11,7 +11,7 @@ $dark_gray:  #3f4a54;
     background: $color;
     background: rgba($color, $opacity);
 }
-@mixin border-opacity($direction, $width, $color, $opacity: 0.3) {
+@mixin border-opacity($direction, $width, $color, $opacity: 0.7) {
     border-#{$direction}: solid $width $color;
     border-#{$direction}: solid $width rgba($color, $opacity);
 }
@@ -24,9 +24,27 @@ $dark_gray:  #3f4a54;
 body {
   max-width: 1935px;
   margin: 0 auto;
+  // to accomodate the fixed header
+  padding-top: 99px;
 }
 
 .row { margin-top: 3.5em; max-width: 73.13rem;}
+header + .hero_row > .row { margin-top: 0px;}
+
+.color_stripe {
+  height: 699px;
+  float:left;
+  &.dark_blue {
+    @include background-opacity($infocus_blue);
+    width: 77px;
+  }
+  &.white {
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    width: 127px;
+    position: absolute;
+  }
+}
+
 .hero_row{
   position: relative;
   height: 699px;
@@ -35,30 +53,30 @@ body {
   margin-right: auto;
   max-width: initial;
   border-left: 18px solid $infocus_blue;
-  @include border-opacity("right", 30px, $infocus_green, 0.5);
+  @include border-opacity("right", 30px, $infocus_green);
   background: url('../static/images/homepage/homepage-hero-a--wb-bertlitz.jpg') right -160px top no-repeat;
-  .lead_text { height: 699px; background-color: $white; }
-  .color_stripe_column { float: left;}
-  .color_stripe {
+  .lead_text {
+    > :first-child {  margin-top: 10rem; }
     height: 699px;
-    float:left;
-    &.dark_blue {
-      @include background-opacity($infocus_blue);
-      width: 77px;
+    background-color: $white;
+    svg {
+    	width: 140px;
+      height: 85px;
+      display: block;
+      margin-bottom: .85em;
+      * {  stroke: $dark_gray; }
     }
-    &.white {
-      background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-      width: 127px;
-      position: absolute;
-      margin-left: 48px;
-    }
+  }
+  .color_stripe_column { float: left;}
+  .color_stripe.white {
+    margin-left: 48px;
   }
   .lead_text--headline {
     max-width: 420px;
   }
   &.hero_row--secondary {
-    @include border-opacity("left", 60px, $infocus_orange, 0.5);
-    @include border-opacity("right", 38px, $infocus_green, 0.5);
+    @include border-opacity("left", 60px, $infocus_orange);
+    @include border-opacity("right", 38px, $infocus_green);
     background: url('../static/images/homepage/homepage-feature--GettyImages-508079793.jpg') center center no-repeat;
     background-size:cover;
     background-origin: border-box;
@@ -73,6 +91,7 @@ body {
     }
   }
 }
+
 
 
 //Vertical Accordion
@@ -164,8 +183,6 @@ body {
       visibility: hidden;
   }
 }
-
-
 
 //Callouts
 .callout {
