@@ -18,22 +18,23 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 </head>
 <body class="" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
-
 	<div class="hero_row">
 		<div class="row">
-			<div class="small-12 medium-5 columns lead_text">
-				<h2 class="lead_text--headline">Focus on what matters</h2>
-				<p class="lead_text--paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lea commodo consequat. Duis aute irure dolor in reprehenderit in v fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+			<div class="small-11 medium-7 large-5 columns lead_text">
+				<h2 class="lead_text--headline">A better way to work</h2>
+				<p class="lead_text--paragraph">In a perfect world, every meeting is productive and every presentation engages the audience. We make the world a more perfect place.</p>
 			</div>
-			<div class="dark_blue color_stripe"></div>
-			<div class="light_blue color_stripe"></div>
+			<div class="small-1 medium-3 color_stripe_column">
+				<div class="dark_blue color_stripe"></div>
+				<div class="white color_stripe"></div>
+			</div>
 		</div>
 
 	</div>
 	<div class="row">
 		<div class="small-12 medium-10 medium-offset-1 columns text-center">
-			<h3 class="lead_text--secondary_headline">Introductory Brand Handshake</h3>
-			<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lea commodo consequat. Duis aute irure dolor in reprehenderit in v fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </h5>
+			<h3 class="lead_text--secondary_headline">Your work is important</h3>
+			<h5>Whether you’re a schoolteacher or a CEO, a firefighter or a professor, people depend on you every day. At InFocus, we provide the tools you need to achieve your goals. Our innovative display, projection, and conferencing solutions open up new possibilities for sharing information and working together efficiently and effectively.</h5>
 		</div>
 	</div>
 	<div class="row">
@@ -44,11 +45,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 					</div>
 					<div class="vertical_accordian--slide--content">
 						<div class="module--tag">
-							<span>for public sector</span>
+							<span>For Public Sector</span>
 						</div>
 						<a href="#slide3">
 							<h2>Lorem ipsum dolor sit amet.</h2>
-							<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur similique deleniti temporibus dolorum facere maxime, officiis, voluptatem quasi minus accusamus, voluptates blanditiis quaerat cupiditate. Modi consequatur, magni! Explicabo, commodi, nisi!</h5>
+							<h5>Our visualization solutions help emergency, utility, military, and other critical sectors track their operations.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
 							<span>slide cta goes here</span>
@@ -64,7 +65,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 						</div>
 						<a href="#slide2">
 							<h2>Lorem ipsum dolor sit amet.</h2>
-							<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur similique deleniti temporibus dolorum facere maxime, officiis, voluptatem quasi minus accusamus, voluptates blanditiis quaerat cupiditate. Modi consequatur, magni! Explicabo, commodi, nisi!</h5>
+							<h5>Is it possible to share informations with students in a better, more engaging and powerful way? We think so.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
 							<span>slide cta goes here</span>
@@ -80,7 +81,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 						</div>
 						<a href="#slide1">
 							<h2>Lorem ipsum dolor sit amet.</h2>
-							<h5>Lorem ihsum dolor sit amet, consectetur adipisicing elit. Pariatur similique deleniti temporibus dolorum facere maxime, officiis, voluptatem quasi minus accusamus, voluptates blanditiis quaerat cupiditate. Modi consequatur, magni! Explicabo, commodi, nisi!</h5>
+							<h5>From the cubicle to the command center, our technologies can improve the way people at all levels of your company work.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
 							<span>slide cta goes here</span>
@@ -93,9 +94,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<div class="hero_row hero_row--secondary">
 		<div class="white color_stripe"></div>
 		<div class="row">
-			<div class="small-12 medium-7 medium-offset-5 columns">
+			<div class="small-12 medium-10 medium-offset-2 large-7 large-offset-5 columns">
 				<h2 class="lead_text--headline">"We have the power to collaborate anytime, anywhere"</h2>
-				<h5 class="quote_source">- Jane Matthews Entrepeneur</h5>
+				<h5 class="quote_source">- Jane Matthews Entrepreneur</h5>
 				<a href="#TODO" class="button button--primary">watch case study video</a>
 			</div>
 		</div>

@@ -1,10 +1,9 @@
 // Colors
 $white:  #fff;
-$infocus_blue: #125f84;
+$infocus_blue: #006BA6;
 $infocus_light_blue: #c2e3ee;
-$infocus_very_light_blue: #bbdde6;
 $infocus_green: #00ab84;
-$infocus_orange: #ff671f;
+$infocus_orange: #E87722;
 $light_gray: #f2f2f0;
 $dark_gray:  #3f4a54;
 
@@ -21,10 +20,9 @@ $dark_gray:  #3f4a54;
 @import 'typography';
 @import 'buttons';
 
-
 // General Layout
 body {
-  max-width: 1980px;
+  max-width: 1935px;
   margin: 0 auto;
 }
 
@@ -38,19 +36,21 @@ body {
   max-width: initial;
   border-left: 18px solid $infocus_blue;
   @include border-opacity("right", 30px, $infocus_green, 0.5);
-  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
-  background: url('http://placehold.it/1200x699') right top no-repeat;
+  background: url('../static/images/homepage/homepage-hero-a--wb-bertlitz.jpg') right -160px top no-repeat;
   .lead_text { height: 699px; background-color: $white; }
+  .color_stripe_column { float: left;}
   .color_stripe {
     height: 699px;
     float:left;
     &.dark_blue {
       @include background-opacity($infocus_blue);
-      width: 55px;
+      width: 77px;
     }
-    &.light_blue {
-      @include background-opacity($infocus_light_blue);
-      width: 20px;
+    &.white {
+      background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      width: 127px;
+      position: absolute;
+      margin-left: 48px;
     }
   }
   .lead_text--headline {
@@ -59,13 +59,16 @@ body {
   &.hero_row--secondary {
     @include border-opacity("left", 60px, $infocus_orange, 0.5);
     @include border-opacity("right", 38px, $infocus_green, 0.5);
-    background: url('http://placehold.it/1311x699') no-repeat center center;
-    background-size: cover;
+    background: url('../static/images/homepage/homepage-feature--GettyImages-508079793.jpg') center center no-repeat;
+    background-size:cover;
+    background-origin: border-box;
     .lead_text--headline { max-width: none; }
     .color_stripe.white {
       position: absolute;
       left: 0px;
-      margin-left: -22px; background-color: $white; width: 127px;
+      width: 127px;
+      margin-left: -22px;
+      background-color: $white;
       background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     }
   }
