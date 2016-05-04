@@ -7,7 +7,7 @@ $infocus_orange: #E87722;
 $light_gray: #f2f2f0;
 $dark_gray:  #3f4a54;
 
-@mixin background-opacity($color, $opacity: 0.8) {
+@mixin background-opacity($color, $opacity: 0.88) {
     background: $color;
     background: rgba($color, $opacity);
 }
@@ -120,7 +120,7 @@ body {
   }
   #slide1 {
     z-index: 1;
-    background-image: url('http://placehold.it/1311x699');
+    background-image: url('../static/images/homepage/homepage-accordion-a--InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg');
     right: 33.32%;
     .vertical_accordian--slide--background{
        @include background-opacity($infocus_blue);
@@ -128,7 +128,7 @@ body {
   }
   #slide2 {
     z-index: 2;
-    background-image: url('http://placehold.it/1311x699');
+    background-image: url('../static/images/homepage/homepage-accordion-b--InFocus-Lifestyle-DigiEasel-Education-AsianTeacher-300dpi-CMYK');
     right: -33.32%;
     .vertical_accordian--slide--background{
         @include background-opacity($infocus_green);
@@ -138,7 +138,7 @@ body {
   #slide3 {
     z-index: 3;
     right: -49.98%;
-    background-image: url('http://placehold.it/1311x699');
+    background-image: url('../static/images/homepage/homepage-accordion-c--IF-video-capture.jpg');
     .vertical_accordian--slide--background{
        @include background-opacity($infocus_orange);
     }
