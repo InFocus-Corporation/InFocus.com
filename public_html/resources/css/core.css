@@ -524,6 +524,9 @@ header#masthead .active .toggle hr:nth-child(2) {
 	header#masthead ul.menu > li > .submenu.open {
 		display: block;
 	}
+	header#masthead ul.menu.small {
+		padding-left: 4rem;
+	}
 	header#masthead ul.menu.small > li {
 		float: left;
 		display: block;
@@ -533,10 +536,7 @@ header#masthead .active .toggle hr:nth-child(2) {
 	}
 	header#masthead ul.menu.small > li > a {
 		font-size: 1.2rem;
-		padding: 2rem 0 1rem 3rem;
-	}
-	header#masthead ul.menu.small > li:first-child > a {
-		padding-left: 4rem;
+		padding: 2rem 0 1rem 0;
 	}
 	header#masthead ul.menu.small > li.dropdown > .submenu {
 		position: relative;
@@ -547,10 +547,7 @@ header#masthead .active .toggle hr:nth-child(2) {
 		padding: 0 0 2rem;
 	}
 	header#masthead ul.menu.small > li.dropdown > .submenu > li {
-		padding: 0 0 0 3rem;
-	}
-	header#masthead ul.menu.small > li.dropdown:nth-child(1) > .submenu > li {
-		padding-left: 4rem;
+		padding: 0;
 	}
 	header#masthead ul.menu.small > li.dropdown > .submenu > li > a {
 		color: #333f48;
@@ -655,6 +652,13 @@ header#masthead .active .toggle hr:nth-child(2) {
 	 *  Small Phone Fixes
 	 *
 	 */
+
+	header#masthead ul.menu > li > a,
+	header#masthead ul.menu.small {
+		padding-left: 2rem;
+	}
+ 	
+
  	header#masthead ul.menu > li > .submenu.explore .container .menu-grid > ul > li svg {
 		float: left;
 		margin: 0 2rem;
@@ -664,7 +668,11 @@ header#masthead .active .toggle hr:nth-child(2) {
 		width: auto;
 		max-width: none;
 		text-align: left;
-		margin: 0.1em 3rem 1rem 0;
+		font-size: 1em;
+		margin: 0.1em 1rem 0.3rem 0;
+	}
+	header#masthead ul.menu > li > .submenu.explore h3 {
+		font-size:1.2em;
 	}
 
 	header#masthead .products img {
@@ -679,11 +687,18 @@ header#masthead .active .toggle hr:nth-child(2) {
 	header#masthead ul.menu > li > .submenu.accessories .container .menu-grid > ul > li {
 		width: 50%;
 	}
+	header#masthead ul.menu > li > .submenu.accessories .container .menu-grid > ul > li:nth-child(3n-2) {
+		clear: none;
+	}
 	header#masthead ul.menu > li > .submenu.accessories .container .menu-grid > ul > li:nth-child(2n-1) {
-		clear:left;
+		clear: left;
 	}
 	header#masthead ul.menu > li > .submenu.accessories h4 {
 		font-size: 1.3rem;
+	}
+	
+	header#masthead ul.menu > li > .submenu.about a {
+		padding-left: 2rem;
 	}
 }
 
