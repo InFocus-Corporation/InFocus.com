@@ -42,7 +42,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 $(function () {
 	$(document.body).click(function (e) {
 		$('header .menu > li > a').removeClass('active');
-		$('header .submenu').removeClass('open');
+		$('header, header .submenu').removeClass('open');
 	});
 	$('header .menu > li > a').click(function (e) {
 		if($(this).attr('href')) return;
@@ -72,6 +72,7 @@ $(function () {
 		alert('contact us popup');
 	});
 	$('.mobile-menu').click(function (e) {
+		e.stopPropagation();
 		$(this).closest('header').toggleClass('open');
 	});
 });

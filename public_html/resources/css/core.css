@@ -525,6 +525,7 @@ header#masthead .active .toggle hr:nth-child(2) {
 		display: block;
 	}
 	header#masthead ul.menu.small {
+		float: none;
 		padding-left: 4rem;
 	}
 	header#masthead ul.menu.small > li {
@@ -653,9 +654,16 @@ header#masthead .active .toggle hr:nth-child(2) {
 	 *
 	 */
 
+	header#masthead ul.menu > li.mobile-search,
 	header#masthead ul.menu > li > a,
 	header#masthead ul.menu.small {
 		padding-left: 2rem;
+	}
+	header#masthead ul.menu.small > li {
+		width: 34%;
+	}
+	header#masthead ul.menu.small > li:nth-child(3) {
+		width: 32%;
 	}
  	
 
@@ -696,7 +704,7 @@ header#masthead .active .toggle hr:nth-child(2) {
 	header#masthead ul.menu > li > .submenu.accessories h4 {
 		font-size: 1.3rem;
 	}
-	
+
 	header#masthead ul.menu > li > .submenu.about a {
 		padding-left: 2rem;
 	}
@@ -839,7 +847,7 @@ width:auto;
 
 /* #Links
 ================================================== */
-	a, a:link, a:visited { color:#005f83;text-decoration: none; outline: 0; }
+	a, a:link, a:visited { color:#006ba6;text-decoration: none; outline: 0; }
 	a:hover, a:focus { color: #00aff3;text-decoration: none; }
 	p a, p a:visited { line-height: inherit; }
 
@@ -1330,7 +1338,7 @@ border-image: url("/resources/images/svg/dotted_circle_line.svg") 10 repeat;
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	border-bottom: 1px solid #005f83;
+	border-bottom: 1px solid #006ba6;
 }
 .transformer-tabs li {
 	display: inline-block;
@@ -1353,7 +1361,7 @@ border-image: url("/resources/images/svg/dotted_circle_line.svg") 10 repeat;
 .transformer-tabs a.active {
 	position: relative;
 	padding-bottom: .3em;
-	border-bottom: 4px solid #005f83;
+	border-bottom: 4px solid #006ba6;
 }
 @media (max-width: 799px) {
   .transformer-tabs ul {
@@ -1414,7 +1422,7 @@ border-image: url("/resources/images/svg/dotted_circle_line.svg") 10 repeat;
 position:relative;
 margin-bottom:10px;
 border-style:solid;
-border-bottom:thin solid #005f83;
+border-bottom:thin solid #006ba6;
 }
 
 .productheader  h2 {
@@ -1442,7 +1450,7 @@ min-width:30%;
 */}
 
 .btn, a.btn {
-background: #005f83;
+background: #006ba6;
 color: #bbdde6;
 display: inline-block;
 font-family: 'GoodPro', sans-serif;
@@ -1461,7 +1469,7 @@ cursor:pointer;
 
 .btn:hover, a.btn:hover {
 background: #bbdde6;
-color: #005f83;
+color: #006ba6;
 }
 
 .buy-now, a.buy-now {
@@ -1513,7 +1521,7 @@ ul.feature-list li:before {
 	width: 6px;
 	height: 6px;
 	margin-top:-3px;
-	background-color: #ff671f;
+	background-color: #ff6a13;
 	transform: rotate(45deg);
 }
 
@@ -1714,7 +1722,7 @@ margin-left:15px;
 	font-family: 'GoodPro';
 	font-weight: bold;
 	font-size: 0.8em;
-	color: #005f83;
+	color: #006ba6;
 }
 
 .spec-list {
@@ -1723,8 +1731,8 @@ margin-left:15px;
 	font-size: 0.7em;
 	line-height: 2em;
 	padding: 0.4em 0;
-	border-top:1px solid #005f83;
-	border-bottom:1px solid #005f83;
+	border-top:1px solid #006ba6;
+	border-bottom:1px solid #006ba6;
 }
 
 .blue_btn {
