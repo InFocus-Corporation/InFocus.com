@@ -18,7 +18,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 </head>
 <body class="" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
-	<div class="hero_row">
+	<div class="hero_row transparent-border-right-30-green hero-row--homepage">
 		<div class="row">
 			<div class="small-11 medium-7 large-5 columns lead_text">
 				<h2 class="lead_text--headline">A better way to work</h2>
@@ -94,8 +94,10 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			</div>
 		</div>
 	</div>
-	<div class="hero_row hero_row--secondary">
-		<div class="white color_stripe"></div>
+	<div class="hero_row hero_row--secondary transparent-border-left-60-orange transparent-border-right-38-green">
+		<div class="color_stripe_column">
+			<div class="white color_stripe"></div>
+		</div>
 		<div class="row">
 			<div class="small-12 medium-10 medium-offset-2 large-7 large-offset-5 columns">
 				<h2 class="lead_text--headline">"We have the power to collaborate anytime, anywhere"</h2>
@@ -132,14 +134,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 	</div>
 
-
-<script>
-    $(document).foundation();
-</script>
-<footer id="site-info" >
-<?php include($homedir . "/resources/html/footer.html"); ?>
-</footer>
-
-
+	<script>
+	    $(document).foundation();
+	</script>
+	<footer id="site-info" >
+	<?php include($homedir . "/resources/html/footer.html"); ?>
+	</footer>
 </body>
 </html>

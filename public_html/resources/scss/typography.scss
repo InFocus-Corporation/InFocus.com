@@ -7,7 +7,7 @@ h1, h2, h3, h4, p.lead_text, h5 {
 p.lead_text,
 h5,
 .callout h5,
-.secondary_headline,
+.lead_text--secondary_headline,
 .vertical_accordian--slide--content h2
  {
   font-weight: normal;
@@ -30,20 +30,28 @@ h5,
 .lead_text--headline {
   color: $infocus_blue;
   line-height: 1.05;
-  margin: 10rem 0 2rem;
+  margin: 0 0 2rem;
   font-size: 3.25rem;
   @media screen and (min-width: 40em) {
       font-size: 4.55rem;
   }
 }
-.lead_text--paragraph { color: $dark_gray; font-size: 1.25rem; }
+.lead_text--paragraph { color: $dark_gray; font-size: 1.25rem; margin: 1em 0em .35em; }
 .lead_text--secondary_headline {
   color: $dark_gray;
+  line-height: 1.15em;
   margin-bottom: 2rem;
   font-weight: 400;
   font-size: 2.55rem;
   @media screen and (min-width: 40em) {
       font-size: 3.75rem;
+  }
+}
+h3.lead_text--secondary_headline {
+  margin-bottom: .65rem;
+  font-size: 1.95rem;
+  @media screen and (min-width: 40em) {
+      font-size: 2.75rem;
   }
 }
 .quote_source, .module--tag span {
