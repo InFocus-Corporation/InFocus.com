@@ -47,7 +47,7 @@ body {
       width: 77px;
     }
     &.white {
-      background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
       width: 127px;
       position: absolute;
       margin-left: 48px;
@@ -69,7 +69,7 @@ body {
       width: 127px;
       margin-left: -22px;
       background-color: $white;
-      background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
     }
   }
 }
@@ -144,10 +144,9 @@ body {
     }
   }
 
-  #slide2:target { right: 16.66%;}
-  #slide3:target { right: 0%; }
-  #slide3:target + #slide2 { right: 16.66%; }
-
+  #education:target + #slide2 { right: 16.66%;}
+  #public:target + #slide3 { right: 0%; }
+  #public:target ~ #slide2 { right: 16.66%; }
 
   a, a:link, a:visited{
     color: $white;
@@ -157,7 +156,16 @@ body {
     height: 100%;
     text-decoration:none;
   }
+
+  a.anchor {
+      display: block;
+      position: relative;
+      top: -110px;
+      visibility: hidden;
+  }
 }
+
+
 
 //Callouts
 .callout {
@@ -179,6 +187,8 @@ body {
   }
   .callout--heading h3 { margin-top: 1em; display: inline-block;}
 }
+
+// Module Tags
 .module--tag {
   display: inline;
   float: left;
