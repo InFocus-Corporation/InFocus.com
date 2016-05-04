@@ -60,7 +60,7 @@ header#masthead {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 6.2em;
   z-index: 1000;
   background-color: #f2f2f0;
@@ -393,6 +393,8 @@ header#masthead .magnifying-glass {
 	border: 1px solid #333f48;
 	width: 18px;
 	height: 18px;
+	line-height: inherit;
+	box-sizing: content-box;
 }
 header#masthead .magnifying-glass hr {
 	top: 19px;
@@ -400,6 +402,7 @@ header#masthead .magnifying-glass hr {
 	width: 10px;
 	height: 0px;
 	transform: rotate(45deg);
+	box-sizing: content-box;
 }
 header#masthead .toggle {
 	position: relative;
@@ -408,7 +411,7 @@ header#masthead .toggle {
 	width: 21px;
 	height: 21px;
 	margin-right: 3.8rem;
-    line-height: inherit;
+	margin-top: -0.1em;
 }
 header#masthead .toggle hr {
 	top: 10px;
@@ -437,7 +440,7 @@ header#masthead .active .toggle hr:nth-child(2) {
 	}
 }
 
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 1024px) {
 	/*
 	 *  Mobile Header
 	 *
@@ -453,12 +456,20 @@ header#masthead .active .toggle hr:nth-child(2) {
 		background-position: 0 100%;
 	}
 	header#masthead > div {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
 		height: 6.2rem;
-		background-color: #f2f2f0;
 		overflow: hidden;
+		margin: 0;
 	}
 	header#masthead.open > div {
-		overflow: visible;
+		bottom: 0;
+		height: auto;
+
+		overflow-y: scroll;
+		overflow-x: hidden;
 	}
 	header#masthead ul.menu > li.mobile-search  {
 		clear: both;
@@ -505,6 +516,10 @@ header#masthead .active .toggle hr:nth-child(2) {
 		top: 0;
 		left: 0;
 		display: none;
+	    min-height: 0;
+	    padding: 0;
+	    overflow: hidden;
+	    background-color: #333f48;
 	}
 	header#masthead ul.menu > li > .submenu.open {
 		display: block;
@@ -542,8 +557,134 @@ header#masthead .active .toggle hr:nth-child(2) {
 		padding: 0;
 		font-size: 0.7rem;
 	}
+
+	header#masthead .submenu.explore > .container > h2,
+	header#masthead .submenu.explore > .container > p,
+	header#masthead .submenu.products > .container > h2,
+	header#masthead ul.menu > li > .submenu.accessories > h2,
+	header#masthead ul.menu > li > .submenu.about h2,
+	header#masthead ul.menu > li > .submenu.about span {
+		display: none;
+	}
+	header#masthead ul.menu > li > .submenu.explore .container .menu-grid > ul > li,
+	header#masthead ul.menu > li > .submenu.products .container .menu-grid > ul > li,
+	header#masthead ul.menu > li > .submenu.about .container .menu-grid > ul > li {
+		width: 100%;
+		padding: 0;
+		border-bottom: 1px solid #bbdde6;
+	}
+	header#masthead ul.menu > li > .submenu.explore .container .menu-grid > ul > li a {
+		overflow: hidden;
+		padding: 1em 0;
+	}
+	header#masthead ul.menu > li > .submenu.explore .container .menu-grid > ul > li svg {
+		float: left;
+		width: 150px;
+		height: auto;
+		margin: 0 5rem;
+	}
+	header#masthead ul.menu > li > .submenu.explore h3,
+	header#masthead ul.menu > li > .submenu.explore p {
+		width: auto;
+		max-width: none;
+		text-align: left;
+		margin: 0.2em 8rem 1rem 0;
+	}
+
+
+	header#masthead .products img {
+		float: left;
+		width: 25%;
+		margin: 1em 10% 1em 15%;
+	}
+	header#masthead ul.menu > li > .submenu.products h3 {
+		text-align: left;
+	}
+	header#masthead ul.menu > li > .submenu.products a {
+		text-align: left;
+		margin-left: 50%;
+		margin-bottom: 1rem !important;
+		font-size: 1.4em;
+		line-height: 1.2em;
+	}
+
+
+	header#masthead ul.menu > li > .submenu.accessories .container .menu-grid > ul {
+		padding: 2em 0 1em;
+		overflow: hidden;
+	}
+	header#masthead ul.menu > li > .submenu.accessories .container .menu-grid > ul > li {
+		width: 33.3333333333%;
+	}
+	header#masthead ul.menu > li > .submenu.accessories .container .menu-grid > ul > li:nth-child(3n-2) {
+		clear:left;
+	}
+	header#masthead .accessories img {
+		width: 60%;
+	}
+	header#masthead ul.menu > li > .submenu.accessories h4 {
+		font-size: 1.6rem;
+	}
+
+	header#masthead ul.menu > li > .submenu.about .container .menu-grid > ul {
+		padding: 2em 0;
+		overflow: hidden;
+	}
+	header#masthead ul.menu > li > .submenu.about .container .menu-grid > ul > li {
+		border-bottom: 0px;
+	}
+	header#masthead ul.menu > li > .submenu.about a {
+		width: 100%;
+		max-width: 100%;
+		margin: 0 !important;
+		padding: 0.8rem 4rem;
+		box-sizing: border-box;
+	}
+	header#masthead ul.menu > li > .submenu.about h3 {
+		text-align: left;
+		margin: 0;
+	}
+
+
 	.hide-on-mobile { display: none !important; }
 	.show-on-mobile { display: initial; }
+}
+
+@media only screen and (max-width: 600px) {
+	/*
+	 *  Small Phone Fixes
+	 *
+	 */
+ 	header#masthead ul.menu > li > .submenu.explore .container .menu-grid > ul > li svg {
+		float: left;
+		margin: 0 2rem;
+	}
+	header#masthead ul.menu > li > .submenu.explore h3,
+	header#masthead ul.menu > li > .submenu.explore p {
+		width: auto;
+		max-width: none;
+		text-align: left;
+		margin: 0.1em 3rem 1rem 0;
+	}
+
+	header#masthead .products img {
+		width: 30%;
+		margin: 1em 10%;
+	}
+	header#masthead ul.menu > li > .submenu.products a {
+		font-size: 1rem;
+		margin-left: 50%;
+	}
+
+	header#masthead ul.menu > li > .submenu.accessories .container .menu-grid > ul > li {
+		width: 50%;
+	}
+	header#masthead ul.menu > li > .submenu.accessories .container .menu-grid > ul > li:nth-child(2n-1) {
+		clear:left;
+	}
+	header#masthead ul.menu > li > .submenu.accessories h4 {
+		font-size: 1.3rem;
+	}
 }
 
 .main-nav {
