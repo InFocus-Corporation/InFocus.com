@@ -36,7 +36,7 @@ RewriteRule ^resources/js - [L,NC]
 RewriteRule ^resources/misc - [L,NC]
 RewriteRule ^resources/php - [L,NC]
 #
-  
+
 RewriteCond %{HTTP_HOST} !^www\.
 RewriteCond %{HTTP_HOST} !^dev\.
 RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
@@ -69,7 +69,7 @@ RewriteRule (.*?)\s\$([0-9\.]*?)(\*)(\(us\)) $1 [NC]
 RewriteRule ^([A-Za-z0-9-_/]+)\.aspx$ $1 [NC]
 RewriteRule ^([A-Za-z0-9-_/]+)EP\.aspx$ $1 [NC]
 RewriteRule ^([A-Za-z0-9-_/]+)EX\.aspx$ $1 [NC]
- 
+
 RewriteRule  ^qtablet/live /resources/php/test.php [NC,L]
 RewriteRule  ^bigtouch/live /resources/php/test.php [NC,L]
 
@@ -400,6 +400,8 @@ RewriteRule  ^projector(s)?/?$ /projectors/index.php [NC,L]
 
 RewriteRule  ^peripheral(s)?/?$ /peripherals/index.php [NC,L]
 
+RewriteRule  ^video-conferencing(s)?/?$ /video-conferencing/index.php [NC,L]
+
 RewriteRule  ^qtablet/?$ /displays/product.php?pn=INP-110Q [NC,L]
 
 RewriteRule  ^support/?$ /support/index.php [NC,L]
@@ -516,22 +518,22 @@ RewriteRule  ^proav-communications-sign /?proavsignup [NC,L]
 
 RewriteRule  ^freightestimate /?freightestimate [NC,L]
 
-RewriteRule  ^demokeys /?demokeys 
+RewriteRule  ^demokeys /?demokeys
 
 RewriteRule  ^sip2phone /peripherals/INASIP2PHONE [R=301,NC,L]
 
 RewriteRule  ^sip2phone/install /resources/misc/InFocus-SIP2PHONE-Install.msi [R=301,NC,L]
 
-RewriteRule  sellersolutions /sales-partners 
+RewriteRule  sellersolutions /sales-partners
 
-RewriteRule  sellersolution /sales-partners 
+RewriteRule  sellersolution /sales-partners
 
 RewriteRule  ^touchscreen-sale-K12 /displays/JTOUCH-SERIES [R=301,NC,L]
 
 RewriteRule  ^touchscreen-solutions-sale-education /displays/JTOUCH-SERIES [R=301,NC,L]
 #EndGenerated
 
- 
+
  RewriteBase /
 
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -548,15 +550,15 @@ RewriteRule ^resources/documents/([A-Za-z0-9-_]+)/(.*)  /unknown.php?$1  [NC,L]
 
  RewriteCond %{HTTP_HOST} ^209\.59\.161\.112
  RewriteRule (.*) http://dev.infocus.com/$1  [R=301,NC,L]
- 
+
  RewriteRule ^login/$ /login/index.php?phasemsg=Please+login+first.&whence=/  [NC,L]
  RewriteRule ^admin/$ /cgi-bin/userbase.cgi  [NC,L]
- 
+
 RewriteCond %{QUERY_STRING} ^q=(.*)$
 RewriteRule ^(?:site_)?search/? /custompage.php?pagename=%1 [NC,L]
 
 
- 
+
  RewriteRule ^(?:[A-Za-z0-9-_]+)/(?:[A-Za-z0-9-_]+)/(?:[A-Za-z0-9-_]+)/(?:[A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$  /unknown.php?$1   [NC,L]
  RewriteRule ^(?:[A-Za-z0-9-_]+)/(?:[A-Za-z0-9-_]+)/(?:[A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$  /unknown.php?$1   [NC,L]
  RewriteRule ^(?:[A-Za-z0-9-_]+)/(?:[A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$  /unknown.php?$1   [NC,L]
