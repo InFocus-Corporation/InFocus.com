@@ -665,6 +665,9 @@ header#masthead .active .toggle hr:nth-child(2) {
 	header#masthead ul.menu.small > li:nth-child(3) {
 		width: 32%;
 	}
+	header#masthead ul.menu.small > li > a {
+		font-size: 1.1rem;
+	}
  	
 
  	header#masthead ul.menu > li > .submenu.explore .container .menu-grid > ul > li svg {

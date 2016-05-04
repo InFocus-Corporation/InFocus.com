@@ -60,7 +60,7 @@ $(function () {
 			$(this).addClass('active').next('.submenu').addClass('open');
 		}
 	});
-	$('header .submenu').click(function (e) {
+	$('header .submenu, header .mobile-search').click(function (e) {
 		e.stopPropagation();
 	});
 	$('.fa-search').click(function (e) {
