@@ -1,14 +1,13 @@
 // Colors
 $white:  #fff;
-$infocus_blue: #125f84;
+$infocus_blue: #006BA6;
 $infocus_light_blue: #c2e3ee;
-$infocus_very_light_blue: #bbdde6;
 $infocus_green: #00ab84;
-$infocus_orange: #ff671f;
+$infocus_orange: #E87722;
 $light_gray: #f2f2f0;
 $dark_gray:  #3f4a54;
 
-@mixin background-opacity($color, $opacity: 0.8) {
+@mixin background-opacity($color, $opacity: 0.88) {
     background: $color;
     background: rgba($color, $opacity);
 }
@@ -21,10 +20,9 @@ $dark_gray:  #3f4a54;
 @import 'typography';
 @import 'buttons';
 
-
 // General Layout
 body {
-  max-width: 1980px;
+  max-width: 1935px;
   margin: 0 auto;
 }
 
@@ -38,19 +36,21 @@ body {
   max-width: initial;
   border-left: 18px solid $infocus_blue;
   @include border-opacity("right", 30px, $infocus_green, 0.5);
-  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
-  background: url('http://placehold.it/1200x699') right top no-repeat;
+  background: url('../static/images/homepage/homepage-hero-a--wb-bertlitz.jpg') right -160px top no-repeat;
   .lead_text { height: 699px; background-color: $white; }
+  .color_stripe_column { float: left;}
   .color_stripe {
     height: 699px;
     float:left;
     &.dark_blue {
       @include background-opacity($infocus_blue);
-      width: 55px;
+      width: 77px;
     }
-    &.light_blue {
-      @include background-opacity($infocus_light_blue);
-      width: 20px;
+    &.white {
+      background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+      width: 127px;
+      position: absolute;
+      margin-left: 48px;
     }
   }
   .lead_text--headline {
@@ -59,14 +59,17 @@ body {
   &.hero_row--secondary {
     @include border-opacity("left", 60px, $infocus_orange, 0.5);
     @include border-opacity("right", 38px, $infocus_green, 0.5);
-    background: url('http://placehold.it/1311x699') no-repeat center center;
-    background-size: cover;
+    background: url('../static/images/homepage/homepage-feature--GettyImages-508079793.jpg') center center no-repeat;
+    background-size:cover;
+    background-origin: border-box;
     .lead_text--headline { max-width: none; }
     .color_stripe.white {
       position: absolute;
       left: 0px;
-      margin-left: -22px; background-color: $white; width: 127px;
-      background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      width: 127px;
+      margin-left: -22px;
+      background-color: $white;
+      background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
     }
   }
 }
@@ -117,7 +120,7 @@ body {
   }
   #slide1 {
     z-index: 1;
-    background-image: url('http://placehold.it/1311x699');
+    background-image: url('../static/images/homepage/homepage-accordion-a--InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg');
     right: 33.32%;
     .vertical_accordian--slide--background{
        @include background-opacity($infocus_blue);
@@ -125,7 +128,7 @@ body {
   }
   #slide2 {
     z-index: 2;
-    background-image: url('http://placehold.it/1311x699');
+    background-image: url('../static/images/homepage/homepage-accordion-b--InFocus-Lifestyle-DigiEasel-Education-AsianTeacher-300dpi-CMYK');
     right: -33.32%;
     .vertical_accordian--slide--background{
         @include background-opacity($infocus_green);
@@ -135,16 +138,15 @@ body {
   #slide3 {
     z-index: 3;
     right: -49.98%;
-    background-image: url('http://placehold.it/1311x699');
+    background-image: url('../static/images/homepage/homepage-accordion-c--IF-video-capture.jpg');
     .vertical_accordian--slide--background{
        @include background-opacity($infocus_orange);
     }
   }
 
-  #slide2:target { right: 16.66%;}
-  #slide3:target { right: 0%; }
-  #slide3:target + #slide2 { right: 16.66%; }
-
+  #education:target + #slide2 { right: 16.66%;}
+  #public:target + #slide3 { right: 0%; }
+  #public:target ~ #slide2 { right: 16.66%; }
 
   a, a:link, a:visited{
     color: $white;
@@ -154,7 +156,16 @@ body {
     height: 100%;
     text-decoration:none;
   }
+
+  a.anchor {
+      display: block;
+      position: relative;
+      top: -110px;
+      visibility: hidden;
+  }
 }
+
+
 
 //Callouts
 .callout {
@@ -176,6 +187,8 @@ body {
   }
   .callout--heading h3 { margin-top: 1em; display: inline-block;}
 }
+
+// Module Tags
 .module--tag {
   display: inline;
   float: left;

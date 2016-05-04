@@ -20,20 +20,31 @@ h5,
   line-height: 1.25em;
 }
 
-.lead_text--secondary_headline + h5 { font-size: 1.55rem; line-height: 2.5rem; }
+.lead_text--secondary_headline + h5 {
+  font-size: 1.15rem;
+  @media screen and (min-width: 40em) {
+      font-size: 1.55rem; line-height: 2.5rem;
+  }
+}
 
 .lead_text--headline {
   color: $infocus_blue;
-  font-weight: 400;
-  font-size: 4.55rem;
   line-height: 1.05;
   margin: 10rem 0 2rem;
+  font-size: 3.25rem;
+  @media screen and (min-width: 40em) {
+      font-size: 4.55rem;
+  }
 }
 .lead_text--paragraph { color: $dark_gray; font-size: 1.25rem; }
 .lead_text--secondary_headline {
   color: $dark_gray;
-  font-size: 3.75rem;
   margin-bottom: 2rem;
+  font-weight: 400;
+  font-size: 2.55rem;
+  @media screen and (min-width: 40em) {
+      font-size: 3.75rem;
+  }
 }
 .quote_source, .module--tag span {
   color: $infocus_blue;
@@ -60,11 +71,7 @@ h5,
         margin-top: .65em;
         margin-bottom: .55em;
         display: inline-block;
-    }
-    @media screen and (min-width: 40em) {
-      h2 {
-          font-size: 4rem;
-      }
+        @media screen and (min-width: 40em) { font-size: 4rem; }
     }
   }
 }

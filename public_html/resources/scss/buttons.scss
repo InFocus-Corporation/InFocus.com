@@ -5,7 +5,7 @@
   font-size: .85rem;
   letter-spacing: .1rem;
   background-color: $infocus_blue;
-  color: $infocus_very_light_blue;
+  color: $infocus_light_blue;
   text-transform: uppercase;
   border-radius: 4px;
   font-family: GoodProWideMedium, Verdana, Geneva, sans-serif;
@@ -16,7 +16,7 @@ a.button--primary:visited,
 a.link:link,
 a.link:visited,
  {
-  color: $infocus_very_light_blue;
+  color: $infocus_light_blue;
 }
 .callout .button { margin-bottom: 0px; }
 a.link--primary:hover, a.button--primary:hover {
