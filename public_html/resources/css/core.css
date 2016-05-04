@@ -672,6 +672,7 @@ header#masthead .active .toggle hr:nth-child(2) {
 
  	header#masthead ul.menu > li > .submenu.explore .container .menu-grid > ul > li svg {
 		float: left;
+		width: 110px;
 		margin: 0 2rem;
 	}
 	header#masthead ul.menu > li > .submenu.explore h3,
@@ -680,15 +681,15 @@ header#masthead .active .toggle hr:nth-child(2) {
 		max-width: none;
 		text-align: left;
 		font-size: 1em;
-		margin: 0.1em 1rem 0.3rem 0;
+		margin: 0.1em 2rem 0.3rem 0;
 	}
 	header#masthead ul.menu > li > .submenu.explore h3 {
 		font-size:1.2em;
 	}
 
 	header#masthead .products img {
-		width: 30%;
-		margin: 1em 10%;
+		width: 32%;
+		margin: 1em 9%;
 	}
 	header#masthead ul.menu > li > .submenu.products a {
 		font-size: 1rem;
