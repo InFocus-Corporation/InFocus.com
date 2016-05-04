@@ -101,7 +101,7 @@ header#masthead h3#logo {
 }
 /* line 30, ../sass/blocks/_header.scss */
 header#masthead h3#logo a {
-  background: url("/resources/images/logo.png") no-repeat;
+  background: url("/resources/static/images/logo.png") no-repeat;
   background-size: 100% auto;
   background-position: 0 67%;
   display: block;
