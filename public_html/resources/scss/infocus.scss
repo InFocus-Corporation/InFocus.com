@@ -72,6 +72,19 @@ header + .hero_row > .row { margin-top: 0px;}
   &.hero-row--video_conferencing {
     background: url('../static/images/video-conferencing/video-conferencing-hero-a--InFocus-Lifestyle-ConX-Exec-Mtg1-300dpi-CMYK.jpg') right -38px top no-repeat;
   }
+  &.hero-row--present {
+    background: url('../static/images/present/present-hero.jpg') right top no-repeat;
+    background-size: contain;
+    background-color: $dark_gray;
+    border-left-color: $infocus_light_blue;
+    margin-top: 86px;
+    .lead_text {
+      background-color: $dark_gray;
+    }
+    .lead_text--secondary_headline, .lead_text--paragraph {
+      color: $white;
+    }
+  }
   .lead_text {
     > :first-child {  margin-top: 10rem; }
     height: 699px;
