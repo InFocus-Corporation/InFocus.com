@@ -18,7 +18,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 </head>
 <body class="" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
-	<div class="hero_row">
+	<div class="hero_row transparent-border-right-40-orange hero-row--video_conferencing">
 		<div class="row">
 			<div class="small-11 medium-7 large-5 columns lead_text">
 				<h2 class="lead_text--secondary_headline">
@@ -35,58 +35,62 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 
 	</div>
 	<div class="row">
-		<div class="small-12 medium-7 columns">
+		<div class="small-12 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="../resources/static/images/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg" alt="">
+			<img src="/resources/static/images/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg" alt="">
 		</div>
-		<div class="small-12 medium-5 columns">
-			<h2 class="lead_text--secondary_headline">Ultra Portable Projectors</h2>
+		<div class="small-12 medium-4 columns">
+			<h3 class="lead_text--secondary_headline">Ultra Portable Projectors</h3>
 			<p class="lead_text--paragraph">You're on the move. Your taste calls for exceptional, but your budget calls for frugal. You'll find the right mobile projector here.</p>
-			<a href="/displays/MONDOPAD-SERIES" class="button button--primary">learn more</a>
+			<a href="/projectors/ultra-portable" class="button button--primary">learn more</a>
 		</div>
 	</div>
+
 	<div class="row">
-		<div class="small-12 medium-7 columns">
+		<div class="small-12 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="../resources/static/images/InFocus-Lifestyle-IN118HDx-96dpi-RGB.jpg" alt="">
+			<img src="/resources/static/images/InFocus-Lifestyle-IN118HDx-96dpi-RGB.jpg" alt="">
 		</div>
-		<div class="small-12 medium-5 columns">
-			<h2 class="lead_text--secondary_headline">Office/Classroom Projectors</h2>
+		<div class="small-12 medium-4 columns">
+			<h3 class="lead_text--secondary_headline">Office/Classroom Projectors</h3>
 			<p class="lead_text--paragraph">Office and classroom projectors with wireless and networking, broad connectivity, and prices your budget will love.</p>
-			<a href="/displays/MONDOPAD-SERIES" class="button button--primary">learn more</a>
+			<a href="/projectors/office-classroom" class="button button--primary">learn more</a>
 		</div>
 	</div>
+
 	<div class="row">
-		<div class="small-12 medium-7 columns">
+		<div class="small-12 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="../resources/static/images/GettyImages-508065611.jpg" alt="">
+			<img src="/resources/static/images/GettyImages-508065611.jpg" alt="">
 		</div>
-		<div class="small-12 medium-5 columns">
-			<h2 class="lead_text--secondary_headline">Short Throw Projectors</h2>
+		<div class="small-12 medium-4 columns">
+			<h3 class="lead_text--secondary_headline">Short Throw Projectors</h3>
 			<p class="lead_text--paragraph">Get a big image from a short distance and reduce shadows with a low-cost, high-quality short throw projector.</p>
-			<a href="/displays/MONDOPAD-SERIES" class="button button--primary">learn more</a>
+			<a href="/projectors/short-throw" class="button button--primary">learn more</a>
 		</div>
 	</div>
+
 	<div class="row">
-		<div class="small-12 medium-7 columns">
+		<div class="small-12 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="../resources/static/images/GettyImages-172209295.jpg" alt="">
+			<img src="/resources/static/images/GettyImages-172209295.jpg" alt="">
 		</div>
-		<div class="small-12 medium-5 columns">
-			<h2 class="lead_text--secondary_headline">Large Venue Projectors</h2>
+		<div class="small-12 medium-4 columns">
+			<h3 class="lead_text--secondary_headline">Large Venue Projectors</h3>
 			<p class="lead_text--paragraph">InFocus leads the way with HD color performance, installation flexibility, and dynamic design for demanding installations.</p>
-			<a href="/displays/MONDOPAD-SERIES" class="button button--primary">learn more</a>
+			<a href="/projectors/large-venue" class="button button--primary">learn more</a>
 		</div>
 	</div>
+
 	<div class="row">
-		<div class="small-12 medium-7 columns">
+		<div class="small-12 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="../resources/static/images/GettyImages-507832233.jpg" alt="">
+			<img src="/resources/static/images/GettyImages-507832233.jpg" alt="">
 		</div>
-		<div class="small-12 medium-5 columns">
-			<h2 class="lead_text--secondary_headline">Home Theater Projectors</h2>
+		<div class="small-12 medium-4 columns">
+			<h3 class="lead_text--secondary_headline">Home Theater Projectors</h3>
 			<p class="lead_text--paragraph">Bring home the cinematic experience with a 1080p projector from the legend in digital projection.</p>
-			<a href="/displays/MONDOPAD-SERIES" class="button button--primary">learn more</a>
+			<a href="/projectors/home-theater" class="button button--primary">learn more</a>
 		</div>
 	</div>
 
