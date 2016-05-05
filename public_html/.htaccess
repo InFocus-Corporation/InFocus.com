@@ -400,8 +400,6 @@ RewriteRule  ^projector(s)?/?$ /projectors/index.php [NC,L]
 
 RewriteRule  ^peripheral(s)?/?$ /peripherals/index.php [NC,L]
 
-RewriteRule  ^video-conferencing(s)?/?$ /video-conferencing/index.php [NC,L]
-
 RewriteRule  ^qtablet/?$ /displays/product.php?pn=INP-110Q [NC,L]
 
 RewriteRule  ^support/?$ /support/index.php [NC,L]

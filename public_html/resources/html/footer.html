@@ -1,176 +1,76 @@
-    <ul class="footer">
-     <li><a href="/"><?php echo translate('Home'); ?></a></li>
-     <li><a href="/about"><?php echo translate('About Us'); ?></a></li>
-<?php 
-if($lang != "de"){
-echo 	'
-     <li><a id="contact-us" class="form-box" href="/resources/forms/contactus">' . translate('Contact Us') . '</a></li>';
- }
-else{
-echo 	'
-     <li><a id="contact-us" class="form-box" href="/resources/forms/contactus">' . translate('Contact Us') . '</a></li>';
-
-}
-?>
- <li><a href="/privacy-policy"><?php echo translate('Privacy Policy'); ?></a></li>
-     <li><a href="/about#news"><?php echo translate('News'); ?> & </a><a href="/about#events"><?php echo translate('Events'); ?></a></li>
-    </ul>
-    <div style="display:inline-block;vertical-align:top;">
-<span style="display:inline-block;vertical-align:top;padding-top:23px;color:darkgrey"><?php echo translate('InFocus to your inbox'); ?>:</span>
-
-<form id="form_0007" method="post" enctype="multipart/form-data" action="" accept-charset="UTF-8" style="display:inline-block;background:none;border:0px;border-radius:0px;box-shadow:none;padding: 20px; width: 440px; -webkit-column-width: auto;">
-<input type="hidden" name="ao_a" value="16218"	>
-<input type="hidden" name="ao_f" value="0007"	>
-<input type="hidden" name="ao_d"	value="0007:d-0001"	>
-<input type="hidden" name="ao_p" id="ao_p" value="0"	>
-<input type="hidden" name="ao_jstzo"	id="ao_jstzo" value=""	>
-<input type="hidden" name="ao_cuid" value=""	>
-<input type="hidden" name="ao_srcid"	value=""	>
-<input type="hidden" name="ao_bot"	id="ao_bot"	value="yes"	>
-<input type="hidden" name="ao_camp"	value=""	>
-<input type="hidden" name="name" id="name" value=""	>
-<input type="hidden" name="Business Country"	value="<?=$lang;?> "	>
-
-<span><input type="text" class="formFieldText formFieldLarge" id="form_0007_fld_1" name="E-mail Address" placeholder="<?php echo translate('Enter your email here'); ?>" style="float:left;width:50%;"></span>
-<span id="form_0007_ao_submit_button">
-<button id="form_0007_ao_submit_input" type="submit" name="Submit" value="Submit" onClick="doSubmit(document.getElementById('form_0007'),'http://marketing.infocus.com/acton/forms/userSubmit.jsp')" style="margin-left:5px;width:34%;" ><?php echo translate('Submit'); ?></button>
-</span>
-
+<div>
+    <div>
+        <div class="logo"><a href="/">InFocus</a></div>
+        <div class="social">
+            <ul>
+                <li><a href="<?= translate('http://www.facebook.com/InFocusCorp') ?>"><i class="fa fa-facebook-f"></i></a></li>
+                <li><a href="<?= translate('http://twitter.com/InFocusCorp') ?>"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="<?= translate('http://www.youtube.com/user/InFocusCorp') ?>"><i class="fa fa-youtube-play"></i></a></li>
+                <li><a href="<?= translate('http://www.linkedin.com/company/infocus'); ?>"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="prodserv">
+            <h6>Products &amp; Services</h6>
+            <ul>
+                <li><a href="/projectors/"><?= translate('Projectors') ?></a></li>
+                <li><a href="/displays/MONDOPAD-SERIES">Mondopad</a></li>
+                <li><a href="/displays/BIGTOUCH-SERIES">BigTouch</a></li>
+                <li><a href="/displays/JTOUCH-SERIES">JTouch</a></li>
+                <li><a href="/accessories/CONX">ConX</a></li>
+                <li><a href="/video-communication/MVP100"><?= translate('Video Phone'); ?></a></li>
+            </ul>
+        </div>
+        <div class="about">
+            <h6><?= translate('About Us') ?></h6>
+            <ul>
+                <li><a href="/about#overview"><?= translate('Overview') ?></a></li>
+                <li><a href="/about#infocus-team"><?= translate('Events') ?></a></li>
+                <li><a href="/about#team"><?= translate('Team') ?></a></li>
+                <li><a href="/resources/forms/contactus" class="contact-us"><?= translate('Contact Us') ?></a></li>
+                <li><a href="/about#careers"><?= translate('Careers') ?></a></li>
+                <li><a href="/about#news"><?= translate('News') ?></a></li>
+            </ul>
+        </div>
+        <div class="resources">
+            <h6><?= translate('Resources') ?></h6>
+            <ul>
+                <li><a href="/product-finder"><?= translate('Find a Product') ?></a></li>
+                <li><a href="/projectioncalculator"><?= translate('Projection Calculator') ?></a></li>
+                <li><a href="/mondopad-live-demo"><?= translate('Live Mondopad Demo') ?></a></li>
+            </ul>
+        </div>
+        <div class="buy">
+            <h6><?= translate('Buy InFocus') ?></h6>
+            <ul>
+                <?php if($lang == "en"):?><li><a href="https://infocusdirect.com/"><?=translate('InFocus Store (US)')?></a></li><?php endif; ?>
+                <li><a href="/resellerlocator"><?=translate('Find a Reseller')?></a></li>
+                <li><a class="contact-us" href="/resources/forms/contactus"><?=translate('Contact Us')?></a></li>
+            </ul>
+        </div>
+        <div class="copy privacypolicy">&copy; 2016 InFocus Corporation</div>
+    </div>
+</div>
 
 <script type="text/javascript">
-if (typeof(addRequiredField) != 'undefined') { addRequiredField ('form_0007_fld_1'); } 
-if (typeof(addFieldToValidate) != 'undefined') { addFieldToValidate ('form_0007_fld_1', 'EMAIL'); } </script>
-
-<span class="formNegCap" style="display:none;">
-<input type="text" id="ao_form_neg_cap" name="ao_form_neg_cap" value="">
-</span>
-</form>
-
-
-
-
-  <div class="social-inner"  style="display:inline-block;vertical-align:top;; padding: 23px 10px;">
-    <span style="float:left;color:darkgrey"><?php echo translate('Stay InFocus'); ?>:</span>
-    <a href="<?php echo translate('http://www.facebook.com/InFocusCorp'); ?>" target="blank" style="float:left; padding: 0px 6px;"><img src="/resources/images/fbicosmall"/></a>
-    <a href="<?php echo translate('http://twitter.com/InFocusCorp'); ?>" target="blank" style="float:left; padding: 0px 6px;"><img src="/resources/images/twicosmall"/></a>
-    <a href="<?php echo translate('http://www.youtube.com/user/InFocusCorp'); ?>" target="blank" style="float:left; padding: 0px 6px;"><img alt="InFocus YouTube" src="/resources/images/yticosmall"/></a>
-    <a href="<?php echo translate('http://www.linkedin.com/company/infocus'); ?>" target="blank" style="float:left; padding: 0px 6px;"><img alt="LinkedIn" src="/resources/images/linkedinsmall"/></a>
-  </div>
-  
-  <iframe id="f2c00b8d5c" name="f1ff7b2be" scrolling="no" title="Like this content on Facebook." class="fb_ltr" src="http://www.facebook.com/plugins/like.php?api_key=369224146470072&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D28%23cb%3Dfbad13c3c%26domain%3Dwww.infocus.com%26origin%3Dhttp%253A%252F%252Fwww.infocus.com%252Ff11d30a64%26relation%3Dparent.parent&amp;colorscheme=light&amp;extended_social_context=false&amp;font=verdana&amp;href=http%3A%2F%2Fwww.infocus.com%2F&amp;layout=button_count&amp;locale=en_US&amp;node_type=link&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=450" style="border: none; overflow: hidden; height: 20px; width: 87px; display:inline-block;vertical-align:top;padding-top:23px;"></iframe>
- <?php 
-if($lang == "de"){
-echo  '<div data-type="xing/share" data-counter="right"></div>
-<script>
-  ;(function (d, s) {
-    var x = d.createElement(s),
-      s = d.getElementsByTagName(s)[0];
-      x.src = "https://www.xing-share.com/plugins/share.js";
-      s.parentNode.insertBefore(x, s);
-  })(document, "script");
-</script>
-
-
-<!-- FÃ¼gen Sie dieses Tag in den head-Abschnitt oder direkt vor dem schlieÃŸenden body-Tag ein. -->
-<script src="https://apis.google.com/js/platform.js" async defer>
-  {lang: "de"}
-</script>
-
-<!-- FÃ¼gen Sie dieses Tag an der Stelle ein, an der die Teilen-SchaltflÃ¤che erscheinen soll. -->
-<div class="g-plus" data-action="share" data-annotation="bubble"></div>
-';
-}
-?> 
-</div>
-
-<div class="footerblock">
-<div class="innerfooter C9">
-<div class="footer-col">
-<h6><?php echo translate('How to Buy'); ?></h6>
-<ul>
-<?php 
-if($_SERVER['SERVER_NAME'] == "www.infocus.com"){
-echo'
-<li><a href="https://infocusdirect.com/" title="InFocus Store">InFocus Store</a> (US only)</li>';
-} 
-?>
-<li><a href="/reseller-locator"><?php echo translate('Find a Reseller'); ?></a></li>
-<li><a class="form-box" href="/resources/forms/getaquote"><?php echo translate('Get a Quote'); ?></a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h6><?php echo translate('Products and Services'); ?></h6>
-<ul>
-<li><a href="/projectors/"><?php echo translate('Projectors'); ?></a></li>
-<li><a href="/displays/MONDOPAD-SERIES">Mondopad</a></li>
-<li><a href="/displays/BIGTOUCH-SERIES">BigTouch</a></li>
-<li><a href="/displays/JTOUCH-SERIES">JTouch</a></li>
-<li><a href="/accessories/CONX">ConX</a></li>
-<li><a href="/video-communication/MVP100"><?php echo translate('Video Phone'); ?></a></li>
-</ul>
-</div>
-
-<?php 
-if($lang != "de"){
-echo 	'
-
-<div class="footer-col">
-<h6>'. translate('Customers') .'</h6>
-<ul>
-<li><a href="/education">'. translate('Education') .'</a></li>
-<li><a href="/business">'. translate('Business') .'</a></li>
-<li><a href="/first-responders">'. translate('First Responders') .'</a></li>
-</ul>
-</div>';
-}
-?>
-<div class="footer-col">
-<h6><?php echo translate('Resources'); ?></h6>
-<ul>
-<li><a href="/product-finder"><?php echo translate('Find a Product'); ?></a></li>
-<li><a class="form-box" href="/resources/forms/projectioncalculator"><?php echo translate('Projection Calculator'); ?></a></li>
-<li><a href="/mondopad-live-demo"><?php echo translate('Live Mondopad Demo'); ?></a></li>
-<li><a href="/videos"><?php echo translate('Video Gallery'); ?></a></li>
-<li><a href="/sales-partners"><?php echo translate('Partners'); ?></a></li>
-</ul>
-</div>
-</div>
-<div class="privacypolicy">© 2016 InFocus <?php echo translate('Corporation'); ?></div></div>
-  <script type="text/javascript">
-
-    $(".colorbox-inline").colorbox({inline:true});
-    $(".form-box").colorbox({iframe:true, innerWidth:"80%", innerHeight:400});
-    
-$("#search").keyup(function (e) {
-    if (e.keyCode == 13) {
-        Search(document.getElementById('search').value);
-    }
+$(function () {
+    $("input.search").keyup(function (e) {
+        if (e.keyCode == 13) {
+            Search($(this).val());
+        }
+    });
 });
   
-function Search(srchstrng){
-
-
-   jQuery.post("/resources/php/search.php",
-   {searchString: srchstrng},
-   function(response){
-   if(response != "No Results"){
-   window.location= response;
-   //console.log(response);
-   }
-   else alert("<?php echo translate('No Results Found'); ?>");
-   });
- }
- 
- $(document).ready(function(){
- console.log("testready");
-$("iframe.vidframe").parent().addClass("C6");
-$("iframe.vidframe").parent().fitVids();
-try{
-$( "#viddropdownbox" ).dropdownbox();
+function Search(srchstrng) {
+    jQuery.post("/resources/php/search.php", {
+        searchString: srchstrng
+    }, function(response) {
+        if(response != "No Results") {
+            window.location= response;
+        } else {
+            alert("<?php echo translate('No Results Found'); ?>");
+        }
+    });
 }
-catch(e){}
-  });
-
 </script>
 
 <?php if($lang == "de"):?>
