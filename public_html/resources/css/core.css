@@ -1415,7 +1415,6 @@ border-image: url("/resources/images/svg/dotted_circle_line.svg") 10 repeat;
 
 .tabs > div {
   display: none;
-  padding: 1rem;
 }
 .tabs > .active {
   display: block;
@@ -1790,8 +1789,6 @@ margin:0 auto;
 }
 
 .resultsList {margin:0 auto;}
-.resultsList  {
-}
 .resultsList img {
 max-width:100%;
 height:auto;
@@ -2264,12 +2261,17 @@ margin-bottom:1em;
 .resultsList > li {
 	max-width:290px;
 	min-width:125px;
-	padding-left:10px;
-	width:18%;
+	padding-left:0px;
+	width:25%;
 	display:inline-block;
 	vertical-align:top;
 }
-
+.resultsList > li:first-child > div {
+  margin-left: 0px;
+}
+.resultsList > li:last-child > div {
+  margin-right: 0px;
+}
 .bnwp > li:nth-child(1) {
 border: 1px darkgrey solid;
 }

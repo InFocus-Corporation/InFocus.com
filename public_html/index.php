@@ -26,7 +26,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			</div>
 			<div class="small-1 medium-3 color_stripe_column">
 				<div class="dark_blue color_stripe"></div>
-				<div class="white color_stripe"></div>
+				<div class="white color_stripe hide-for-small-only"></div>
 			</div>
 		</div>
 
@@ -96,7 +96,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	</div>
 	<div class="hero_row hero_row--secondary transparent-border-left-60-orange transparent-border-right-38-green">
 		<div class="color_stripe_column">
-			<div class="white color_stripe"></div>
+			<div class="white color_stripe hide-for-small-only"></div>
 		</div>
 		<div class="row">
 			<div class="small-12 medium-10 medium-offset-2 large-7 large-offset-5 columns">
