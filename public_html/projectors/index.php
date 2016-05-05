@@ -10,7 +10,7 @@ $catarray['large-venue']=array('alt'=>'Large Venue','url'=>'Large-Venue-Projecto
 $catarray['home-theater']=array('alt'=>'Home Theater','url'=>'Home-Theater-Projectors/b/7920742011');
 $catarray['interactive']=array('alt'=>'Interactive','url'=>'Interactive-Projectors/b/7288439011');
 
-if(in_array($_REQUEST['cat'],$categories)){
+if(in_array($_REQUEST['cat'], $categories)){
 	$category = $_REQUEST['cat'];
 	$mTitle = substr($pageText[$category.'meta'],7,strpos($pageText[$category.'meta'],"</title>")-7);
 	$mDesc = substr(
@@ -19,11 +19,11 @@ if(in_array($_REQUEST['cat'],$categories)){
 				strpos($pageText[$category.'meta']," />")-(strpos($pageText[$category.'meta'],'<meta name="description" content="')+34));
 }
 
-if($_REQUEST['content']=='true'){
+if($_REQUEST['content']=='true') {
 	require($homedir."/resources/php/connections.php");
 	require($homedir."/resources/php/langchk.php");
 	require($homedir."/resources/php/transfunc.php");
-} else{
+} else {
 	require_once($homedir."/resources/php/infocusscripts.php");
 	require_once($homedir."/resources/php/header.php");
 
@@ -189,7 +189,9 @@ if($category) {
 			<a href="/projectors/home-theater" class="button button--primary">learn more</a>
 		</div>
 	</div>
-<?php } ?>
+<?php }
+
+if($_REQUEST['content']!='true') { ?>
 
 	<script>
 		$(document).foundation();
@@ -199,3 +201,4 @@ if($category) {
 	</footer>
 </body>
 </html>
+<?php }
