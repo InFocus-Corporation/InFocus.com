@@ -7,6 +7,10 @@ $infocus_orange: #E87722;
 $light_gray: #f2f2f0;
 $dark_gray:  #3f4a54;
 
+@import 'fonts';
+@import 'typography';
+@import 'buttons';
+
 @mixin background-opacity($color, $opacity: 0.88) {
     background: $color;
     background: rgba($color, $opacity);
@@ -16,9 +20,19 @@ $dark_gray:  #3f4a54;
     border-#{$direction}: solid $width rgba($color, $opacity);
 }
 
-@import 'fonts';
-@import 'typography';
-@import 'buttons';
+$transparent-border-widths: 30, 38, 40, 60;
+$transparent-border-sides: right left;
+
+@each $side in $transparent-border-sides {
+  @each $width in $transparent-border-widths {
+    .transparent-border-#{$side}-#{$width}-orange {
+      @include border-opacity("#{$side}", #{$width}px, $infocus_orange);
+    }
+    .transparent-border-#{$side}-#{$width}-green {
+      @include border-opacity("#{$side}", #{$width}px, $infocus_green);
+    }
+  }
+}
 
 // General Layout
 body {
@@ -48,7 +62,8 @@ header + .hero_row > .row { margin-top: 0px;}
     float:left;
     &.dark_blue {
       @include background-opacity($infocus_blue);
-      width: 77px;
+      max-width: 77px;
+      width:100%;
     }
     &.white {
       background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
@@ -120,21 +135,6 @@ header + .hero_row > .row { margin-top: 0px;}
   }
 }
 
-//  transparent hero row borders
-.transparent-border-right-38-green {
-  @include border-opacity("right", 38px, $infocus_green);
-}
-.transparent-border-right-40-orange {
-  @include border-opacity("right", 40px, $infocus_orange);
-}
-.transparent-border-left-60-orange {
-  @include border-opacity("left", 60px, $infocus_orange);
-}
-.transparent-border-right-30-green {
-  @include border-opacity("right", 30px, $infocus_green);
-}
-
-
 //Vertical Accordion
 .vertical_accordian {
   margin-left: .9375rem;
@@ -144,7 +144,6 @@ header + .hero_row > .row { margin-top: 0px;}
   min-height: 600px;
   .vertical_accordian--slide {
     padding: 3em;
-
     width: 66.64%;
     position: absolute;
     height: 100%;
