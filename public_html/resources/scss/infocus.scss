@@ -31,6 +31,12 @@ $transparent-border-sides: right left;
     .transparent-border-#{$side}-#{$width}-green {
       @include border-opacity("#{$side}", #{$width}px, $infocus_green);
     }
+    .transparent-border-#{$side}-#{$width}-blue {
+      @include border-opacity("#{$side}", #{$width}px, $infocus_blue);
+    }
+    .transparent-border-#{$side}-#{$width}-light_blue {
+      @include border-opacity("#{$side}", #{$width}px, $infocus_light_blue);
+    }
   }
 }
 
@@ -87,17 +93,51 @@ header + .hero_row > .row { margin-top: 0px;}
   &.hero-row--video_conferencing {
     background: url('../static/images/video-conferencing/video-conferencing-hero-a--InFocus-Lifestyle-ConX-Exec-Mtg1-300dpi-CMYK.jpg') right -38px top no-repeat;
   }
-  &.hero-row--present {
-    background: url('../static/images/present/present-hero.jpg') right top no-repeat;
+  &.hero-row--header_module_c {
+    background: url('../static/images/present/present-hero.jpg') left top no-repeat;
     background-size: contain;
     background-color: $dark_gray;
-    border-left-color: $infocus_light_blue;
-    margin-top: 86px;
+    border-left: none;
+    height: 600px;
+    .lead_text>:first-child {
+        margin-top: 3rem;
+    }
+    .module--tag:before {
+        width: 40px;
+        content: "";
+        border: 2px solid white;
+        display: block;
+    }
+    .module--tag span{
+        color: white;
+        font-family: GoodProWideMedium;
+        font-size: 12px;
+    }
     .lead_text {
-      background-color: $dark_gray;
+      @include background-opacity($dark_gray);
+      height: 600px;
+      padding-left: 95px;
     }
     .lead_text--secondary_headline, .lead_text--paragraph {
       color: $white;
+      clear: both;
+    }
+    .lead_text--secondary_headline {
+      font-size: 60px;
+    }
+    .lead_text--paragraph {
+        font-family: GoodProWideLight;
+        font-size: 20px;
+    }
+    .color_stripe_column {
+        height: 600px;
+    }
+    .color_stripe.dark_blue, .color_stripe.white {
+        max-width: 115px;
+        width: 115px;
+    }
+    .color_stripe.white {
+        margin-left: 86px !important;
     }
   }
   .lead_text {
@@ -133,6 +173,57 @@ header + .hero_row > .row { margin-top: 0px;}
       margin-left: -22px;
     }
   }
+}
+
+.feature_module_a {
+    height: 600px;
+    background: url('../static/images/present/present-module_a.jpg') right top no-repeat;
+    background-size: contain;
+    .feature_text {
+        height: 100%;
+        @include background-opacity($infocus_green);
+        padding: 40px 35px;
+        position: relative;
+    }
+    .white.color_stripe {
+        width: 79px;
+        height: 600px;
+        margin-left: -40px;
+        opacity: .75;
+    }
+    .lead_text--secondary_headline {
+        color: white;
+    }
+    .lead_text--paragraph {
+        color: white;
+    }
+    .feature_link {
+        display: block;
+        position: absolute;
+        bottom: 48px;
+        left: 40px;
+        color: white;
+        font-family: GoodProWideMedium;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+}
+
+.text_module_a {
+    font-family: GoodProWideLight;
+    h1.lead_text--headline {
+        font-size: 60px;
+        color: $dark_gray;
+    }
+    p.lead_text--paragraph {
+        font-size: 20px;
+    }
+    a.text_module_link {
+        font-family: GoodProWideMedium;
+        font-size: 20px;
+        color: $infocus_blue;
+    }
 }
 
 //Vertical Accordion

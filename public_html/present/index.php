@@ -23,32 +23,81 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 </head>
 <body class="" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
-	<div class="hero_row hero-row--present">
+    <!-- HEADER MODULE C -->
+	<div class="hero_row hero-row--header_module_c">
+        <div class="color_stripe_column">
+            <div class="dark_blue color_stripe"></div>
+            <div class="white color_stripe"></div>
+        </div>
 		<div class="row">
-			<div class="small-11 medium-7 large-4 columns lead_text">
-				<h2 class="lead_text--secondary_headline">
-					Command the room. Any room.
-				</h2>
-				<p class="lead_text--paragraph">In a perfect world, every meeting is productive and every presentation engages the audience. We make the world a more perfect place.</p>
-			</div>
-			<div class="small-1 medium-3 color_stripe_column">
-				<div class="dark_blue color_stripe"></div>
-				<div class="white color_stripe"></div>
-			</div>
-		</div>
+            <div class="small-1 medium-2 large-5 columns">
 
+			</div>
+			<div class="small-11 medium-7 large-7 columns lead_text">
+                <div class="module--tag">
+                    <span>Present</span>
+                </div>
+				<h2 class="lead_text--secondary_headline">
+					Your best meetings start now.
+				</h2>
+				<p class="lead_text--paragraph">Whether you're presenting to a handful of colleagues or a full auditorium, InFocus technology will make you shine.</p>
+			</div>
+		</div>
 	</div>
-	<div class="row">
-		<div class="small-12 medium-8 columns color_stripe_column">
+    <!-- END HEADER MODULE C -->
+    <!-- TEXT MODULE A -->
+    <div class="row text_module_a">
+        <div class="small-12 columns text-center lead_text">
+            <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/static/images/present/present-icon.svg'); ?>
+            <h1 class="lead_text--headline">Present from any device</h1>
+            <p class="lead_text--paragraph">
+                You don't have time to mess with technology in a meeting, InFocus lets you, and other in the room share content with flexible wired and wireless options to accommodate any device.
+            </p>
+        </div>
+    </div>
+    <div class="row text_module_a">
+        <div class="small-12 large-4 columns text-center">
+            <p class="lead_text--paragraph">
+                Plug in any notebook, tablet or smartphone to an InFocus projector or display via HDMI, VGA, USB and more.
+            </p>
+            <br>
+            <a class="text_module_link">View Projectors</a>
+            <br>
+            <a class="text_module_link">View Touchscreens</a>
+        </div>
+        <div class="small-12 large-4 columns text-center">
+            <p class="lead_text--paragraph">
+                Project wirelessly from any device with InFocus wireless-ready projectors or a wireless adapter connected to any projector.
+            </p>
+            <br>
+            <a class="text_module_link">Wireless Projectors</a>
+            <br>
+            <a class="text_module_link">LiteShow 4 Wireless Adapter</a>
+        </div>
+        <div class="small-12 large-4 columns text-center">
+            <p class="lead_text--paragraph">
+                Share content on an LCD display in seconds with a wireless-equipped touchscreen display or any LCD display with a wireless adapter.
+            </p>
+            <br>
+            <a class="text_module_link">Wireless Touchscreens</a>
+            <br>
+            <a class="text_module_link">LiteShow 4 Wireless Adapter</a>
+        </div>
+    </div>
+    <!-- END TEXT MODULE A -->
+
+    <!-- FEATURE MODULE A -->
+	<div class="row feature_module_a ">
+        <div class="small-12 medium-6 columns feature_text">
+			<h3 class="lead_text--secondary_headline">PC-less presenting</h3>
+			<p class="lead_text--paragraph">Load your projector's internal memory with common or shared files and quickly present them without a computer. Or project files directly from a USB thumb drive, which is convenient for guests or when traveling.</p>
+			<a href="/displays/MONDOPAD-SERIES" class="feature_link">View large venue projectors</a>
+		</div>
+		<div class="small-12 medium-6 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/video-conferencing/video-conferencing-mondopad--InFocus-Lifestyle-Mondopad-DualScreen-LightOffice-300dpi-CMYK.jpg" alt="">
-		</div>
-		<div class="small-12 medium-4 columns">
-			<h3 class="lead_text--secondary_headline">Mondopad</h3>
-			<p class="lead_text--paragraph">Instantlybring people together from anywhere in the world to visually collaborate on the same content and do better work in less time.</p>
-			<a href="/displays/MONDOPAD-SERIES" class="button button--primary">learn more</a>
 		</div>
 	</div>
+    <!-- END FEATURE MODULE A -->
 
 	<div class="row">
 		<div class="small-12 medium-8 columns color_stripe_column">
