@@ -432,17 +432,22 @@ header#masthead .active .toggle hr:nth-child(2) {
 
 .show-on-mobile { display: none; }
 
-@media only screen and (max-width: 1200px) {
-	header#masthead h3#logo {
-		margin: 36px 0 0 20px;
+@media only screen and (max-width: 1310px) {
+	header#masthead ul.menu {
+		margin-left: 2rem;
 	}
 	header#masthead .products img,
 	header#masthead .accessories img {
 		width: 80%;
 	}
 }
+@media only screen and (max-width: 1190px) {
+	header#masthead h3#logo {
+		margin: 36px 0 0 20px;
+	}
+}
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1090px) {
 	/*
 	 *  Mobile Header
 	 *
