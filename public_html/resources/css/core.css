@@ -650,7 +650,7 @@ header#masthead .active .toggle hr:nth-child(2) {
 	.show-on-mobile { display: initial; }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
 	/*
 	 *  Small Phone Fixes
 	 *
@@ -1564,7 +1564,9 @@ footer ul li {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
+footer h6,
 footer ul li a,
 footer ul li a:link,
 footer ul li a:visited {
@@ -1597,6 +1599,7 @@ footer > div > div {
 footer > div > div > div {
 	float: left;
 	display: block;
+	box-sizing: border-box;
 }
 footer div.logo {
 	width: 23%;
@@ -1649,6 +1652,9 @@ footer div.social li a:hover {
 footer:hover div.social li a {
 	margin-top: -0.2rem;
 }
+footer div.social li a i {
+	margin-top: 5px;
+}
 footer div.social li a i.fa-facebook-f {
     font-size: 1.3rem;
     margin-top: 7px;
@@ -1664,13 +1670,15 @@ footer div.copy {
 	footer {
 		clear: both;
 		height: auto;
+		overflow: hidden !important;
 	}
 	footer > div,
 	footer > div > div {
+		position: relative !important;
 		width: 100%;
 	}
 	footer h6 {
-		padding: 1em 0 0.5rem;
+		padding: 1em 0 0.5rem !important;
 	}
 	footer ul li {
 		padding: 0 0 0.5rem;
@@ -1690,6 +1698,9 @@ footer div.copy {
 	footer div.social ul li {
 		text-align: center;
 	}
+	footer div.social ul li a {
+		margin-top: 0.2rem !important;
+	}
 	footer div.prodserv {
 		width: 43%;
 		padding-left: 15%;
@@ -1705,16 +1716,16 @@ footer div.copy {
 		margin: 1rem 15%;
 	}
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 666px) {
 	footer h6 {
-		padding: 2em 0 0.2rem;
+		padding: 2em 0 0.2rem !important;
 	}
 	footer ul li {
-		padding: 0 0 0.2rem;
+		padding: 0 0 0.2rem !important;
 	}
 	footer div.social {
 		width: 100%;
-		padding: 2rem 22% 0rem;
+		padding: 2rem 22% 0rem !important;
 	}
 	footer div.prodserv,
 	footer div.resources {
