@@ -1,6 +1,6 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/resources/php/imageprocess.php"); 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php"); 
+require_once($_SERVER['DOCUMENT_ROOT'] . "/resources/php/imageprocess.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
 
 class InFocus
 {
@@ -34,10 +34,10 @@ class IFCSeries extends InFocus
 		FROM (SELECT * FROM InFocus.producttext WHERE `lang` = '{$this->lang}' ) as producttext JOIN (
 			SELECT productseries.*, ss.category
 			FROM (SELECT * FROM InFocus.productseries  WHERE `lang` = '{$this->lang}' ) as productseries JOIN (
-				SELECT series, category 
+				SELECT series, category
 					FROM InFocus.productseries JOIN InFocus.producttext ON productseries.series = producttext.partnumber
-					WHERE (productseries.partnumber IN('{$producttest}','IN{$producttest}','INS-{$producttest}') OR series IN('{$producttest}','{$producttest}-Series','IN{$producttest}','IN{$producttest}-Series','INS-{$producttest}','INS-{$producttest}-Series') ) LIMIT 1) AS ss 
-			ON ss.series = productseries.series ) AS s 
+					WHERE (productseries.partnumber IN('{$producttest}','IN{$producttest}','INS-{$producttest}') OR series IN('{$producttest}','{$producttest}-Series','IN{$producttest}','IN{$producttest}-Series','INS-{$producttest}','INS-{$producttest}-Series') ) LIMIT 1) AS ss
+			ON ss.series = productseries.series ) AS s
 		ON s.partnumber = producttext.partnumber AND s.`lang` = producttext.`lang` and producttext.active != 86 ORDER BY partnumber desc";
 
 		$result = mysqli_query($this->conn,$sql);
@@ -129,8 +129,8 @@ class IFCSeries extends InFocus
 	     if($this->isSeries != true AND basename($_SERVER['PHP_SELF']) == "family.php")
 	    {header("HTTP/1.0 301 Moved Permanently"); header("Location: /{$this->productPath}/{$multiCat[0]}/{$this->series}/{$this->pn}"); exit();}
 
-		$sql = "SELECT  * FROM InFocus.producttext WHERE (`lang` = '{$this->lang}' OR `lang` = 'en') AND partnumber = '{$this->pn}' 
-				ORDER BY 
+		$sql = "SELECT  * FROM InFocus.producttext WHERE (`lang` = '{$this->lang}' OR `lang` = 'en') AND partnumber = '{$this->pn}'
+				ORDER BY
 						IF(producttext.`lang` = '{$this->lang}',1,
 						IF(producttext.`lang` = 'en',2,3))";
 		$result = mysqli_query($this->conn,$sql);
@@ -214,7 +214,7 @@ class IFCSeries extends InFocus
 				$infoLink = '<span class="infolink" title="Price displayed in US Dollars from InFocusDirect.com, may vary elsewhere, and is valid only in the US."></span>';
 			}
 			else{
-			$modelLink ="";		
+			$modelLink ="";
 			}
 		//}
 		//else{
@@ -222,8 +222,8 @@ class IFCSeries extends InFocus
 			// if($this->productGroup != "Accessory" AND $this->productGroup != "Peripheral"){
 			// switch($this->modelActive[$model]){
 			// case 6:	case 3:
-			// $this->modelActive[$model] = 3; 
-			// $this->productText['active'] = 3; 
+			// $this->modelActive[$model] = 3;
+			// $this->productText['active'] = 3;
 			// break;
 			// case 0:	case 9:	break;
 			// default:
@@ -302,7 +302,7 @@ class IFCSeries extends InFocus
 		$this->justButtons =  "<li>{$resellerLoc}</li><li>{$requestDemo}</li>";
 		$priceSection .=  "<li>{$resellerLoc}{$requestDemo}</li>";
 		break;
-		case 3: 
+		case 3:
 		$this->justButtons =  "<li>{$getaQuote}</li><li>{$resellerLoc}</li><li>{$requestDemo}</li>";
 		$priceSection .=  $this->justButtons;
 		break;
@@ -314,7 +314,7 @@ class IFCSeries extends InFocus
 		$this->justButtons =  "<li><a class='btn' href='#overview'>" . translate("Download") . '</a></li>';
 		$priceSection .=  $this->justButtons;
 		}
-		$priceSection .=  "</ul></div>"; 
+		$priceSection .=  "</ul></div>";
 		$this->justButtons = str_replace("class=' ","class='btn ",$this->justButtons);
 		return $priceSection;
 	 }
@@ -325,16 +325,16 @@ class IFCSeries extends InFocus
 		$totalCount = COUNT($this->seriesModels);
 		$minusCount = array_count_values($this->modelActive);
 		if(($totalCount-$minusCount[0]-$minusCount[null])>8 AND $this->productGroup == "Display"){
-		
+
 		$sql = "SELECT * FROM panel_features";
 		$panelfeatures = mysqli_query($this->conn,$sql);
 		while($row = mysqli_fetch_assoc($panelfeatures))
 		{
 			$panelfeat[$row['partnumber']]=$row;
 		}
-		$seriesPanels = '<div class="tableWrap">     
+		$seriesPanels = '<div class="tableWrap">
 	<div class="C3_tag">
-		<div class="navWrap">     
+		<div class="navWrap">
 			<h4 class="checkCon">JTouch Models</h4>
 			<small style="position: relative;top: -1em;">Narrow your search</small>
 			<div class="checkCon tags-container tagsort-tags-container"></div>
@@ -349,7 +349,7 @@ class IFCSeries extends InFocus
 					<th>Part #</th>
 					<th>Features</th>
 					<th>Availability</th>
-					<th>Price (US)</th>    
+					<th>Price (US)</th>
 					<th>Learn / Buy</th>
 				</tr>
 			</thead>
@@ -359,15 +359,15 @@ class IFCSeries extends InFocus
 			$seriesPanels .=   "
 			<tr class=\"item\" data-item-id=\"1\" data-item-tags=\"{$panelfeat[$model]['categories']}\">
 <td data-label='Size'>{$panelfeat[$model]['size']}</td>
-<td data-label='Part #'><a href='$model'>$model</a></td>         
-<td data-label='Features'>{$panelfeat[$model]['features']}</td>     
+<td data-label='Part #'><a href='$model'>$model</a></td>
+<td data-label='Features'>{$panelfeat[$model]['features']}</td>
 <td data-label='Availability'>{$panelfeat[$model]['availability']}</td>
-		<td data-label='Price US'>" . $this->modelPrice[$model] . "<span class='infolink' title='Price displayed in US Dollars from InFocusDirect.com, may vary elsewhere, and is valid only in the US.'></span></td>            
+		<td data-label='Price US'>" . $this->modelPrice[$model] . "<span class='infolink' title='Price displayed in US Dollars from InFocusDirect.com, may vary elsewhere, and is valid only in the US.'></span></td>
 <td class='buyLearn' data-label='Buy/Learn'><a href='$model'>Learn More</a><br>";
 if(in_array($this->modelActive[$model],array(1,4,5,7,9))){$seriesPanels .=   "<a class='buyNow'href='https://infocusdirect.com/$model'>Buy Now</a>";}
-$seriesPanels .=   "</td>  
-</tr>";    
-			}  
+$seriesPanels .=   "</td>
+</tr>";
+			}
 		}
 		$seriesPanels .= "</table></div></div>";
 		}
@@ -388,7 +388,7 @@ $seriesPanels .=   "</td>
 			}
 		}
 		}
-		
+
 		return $seriesPanels;
 	 }
 
@@ -433,16 +433,16 @@ $seriesPanels .=   "</td>
 
 		if(!empty($sql)){
 		$results = mysqli_query($this->conn,$sql);
-		if(mysqli_num_rows($results)!=0){ 
+		if(mysqli_num_rows($results)!=0){
 		$specCompare = "<input id='modlist' style='display:none;' value='{$models}' ><br/>
 				<div class='ui-widget' style='padding-bottom:30px;'>
 		" . translate('Compare with other products') . "<br>
 				<select id='combobox' style='height:90px;'>
 				<option value=' ' selected></option>
-				"; 
+				";
 		$results = mysqli_query($this->conn,$sql);
 		while($row = mysqli_fetch_array($results)){$specCompare .= "<option value=',{$row['partnumber']}'>{$row['partnumber']}</option>";}
-		$specCompare .= "		      
+		$specCompare .= "
 		</select><INPUT type='button' id='btn' class='formbutton' style='display:inline;margin-right:10px;' value='+' onclick=' updateSpecs(document.getElementById(" . '"combobox"' . ').value,"' . strtolower($this->productGroup) . 'specs.php"' . ");'  /><br>
 		</div>		";
 		}}
@@ -454,7 +454,7 @@ $seriesPanels .=   "</td>
 		$this->productTabs .= '<li><a href="#specs">' . translate('Specifications') . '</a></li>';
 		$specsTable = "$specCompare<div id='specFrame' style='width:{$count}px'>
 		" . $specsTable . '</div>';
-	
+
 		return $specsTable;
 		}
 	 }
@@ -556,14 +556,14 @@ $seriesPanels .=   "</td>
 		return $allthumbs;
 	 }
 
-	public function accessories(){ 
+	public function accessories(){
 		if($this->productGroup == "Accessory"){return;}
 		$sql = 'SELECT title, acc_matrix.accessorypn, producttext.partnumber, acc_matrix.rank, producttext.productgroup
 		FROM acc_matrix LEFT JOIN producttext ON (producttext.partnumber = acc_matrix.accessorypn) WHERE producttext.lang = "'. $this->lang . '" AND acc_matrix.productpn = "' . $this->pn . '" ORDER BY acc_matrix.rank, acc_matrix.accessorypn';
 		return $this->subProdList("Accessories",$sql);
 	 }
 
-	public function worksWith(){  
+	public function worksWith(){
 		if($this->productGroup == "Display" OR $this->productGroup == "Projector"){return;}
 		$sql = 'SELECT title, acc_matrix.productpn, producttext.partnumber, acc_matrix.rank, producttext.productgroup FROM acc_matrix LEFT JOIN producttext ON (producttext.partnumber = acc_matrix.productpn) WHERE producttext.lang = "'. $this->lang . '" AND acc_matrix.accessorypn = "' . $this->pn . '" ORDER BY acc_matrix.rank, acc_matrix.productpn';
 		return $this->subProdList("Works With",$sql);
@@ -592,7 +592,7 @@ $seriesPanels .=   "</td>
 
 		$dlTable;
 		if($this->isSeries){
-		$sql = 'SELECT Downloadstmp.filename, Downloadstmp.lang, if(DownloadTrans.description is null,Downloadstmp.description,DownloadTrans.description) AS description, filelocation, relatedproducts, extension, if(DownloadTrans.category is null,Downloadstmp.category,DownloadTrans.category) AS category, if(rank is null,999,rank) AS rank, if(DownloadTrans.title is null,Downloadstmp.title,DownloadTrans.title) AS title  FROM Downloadstmp LEFT JOIN (SELECT * FROM DownloadTrans WHERE lang = "' .$this->lang . '") AS DownloadTrans ON DownloadTrans.filename = Downloadstmp.filename 
+		$sql = 'SELECT Downloadstmp.filename, Downloadstmp.lang, if(DownloadTrans.description is null,Downloadstmp.description,DownloadTrans.description) AS description, filelocation, relatedproducts, extension, if(DownloadTrans.category is null,Downloadstmp.category,DownloadTrans.category) AS category, if(rank is null,999,rank) AS rank, if(DownloadTrans.title is null,Downloadstmp.title,DownloadTrans.title) AS title  FROM Downloadstmp LEFT JOIN (SELECT * FROM DownloadTrans WHERE lang = "' .$this->lang . '") AS DownloadTrans ON DownloadTrans.filename = Downloadstmp.filename
 		WHERE (Downloadstmp.filename LIKE "%Datasheet%" OR Downloadstmp.category = "Datasheets" OR Downloadstmp.category = "Success Stories") AND (relatedproducts LIKE "%' . implode(';%" OR relatedproducts LIKE "%', $this->seriesModels) . ';%") ORDER BY rank,title,description';
 		}
 		else{
@@ -617,7 +617,7 @@ $seriesPanels .=   "</td>
 			else{$filename = $row[0];}
 			if($row[8] == null){$dTitle = $row[0];}
 			else{$dTitle = $row[8];}
-			$dlRows[$row['category']][] = '<tr class="' . $row['category'] . '"><td><img  src="/resources/images/'.$row[5].'icon" style="width:45px;vertical-align:top;" /></td><td style="text-align:left;font-size:large;"><a onclick = "ga('. "'send','event','Link','click','" . $row[0] . "'" . ')" href="' . $row[3] . $filename . '.' . $row[5] . '"><span class="title">' . translate($dTitle) . '</span><br><span class="description">' . translate($row[2]) . '</span></a></td><td><ul class="langlist" >
+			$dlRows[$row['category']][] = '<tr class="' . $row['category'] . '"><td><img  src="/resources/images/'.$row[5].'icon" style="width:45px;" /></td><td><a onclick = "ga('. "'send','event','Link','click','" . $row[0] . "'" . ')" href="' . $row[3] . $filename . '.' . $row[5] . '"><span class="title">' . translate($dTitle) . '</span><br><span class="description">' . translate($row[2]) . '</span></a></td><td><ul class="langlist" >
 			<li>'.translate('Choose Language').'<ul>';
 			foreach($languages as $language){
 
@@ -627,7 +627,7 @@ $seriesPanels .=   "</td>
 			}
 			$dlRows[$row['category']][COUNT($dlRows[$row['category']])-1] .= "</ul></ul></td></tr>";
 		}
-		$dtHead = '<div class="rounded" style="margin:auto;max-width:960px;"><table><thead><tr class="HeaderRow"><th style="width:45px">' . translate('Type') . '</th><th>' . translate('File name & Description') . '</th><th style="width: 120px;">' . translate('Language') . '</th></tr></thead><tbody>';
+		$dtHead = '<div class="rounded" style="margin:auto;max-width:960px;"><table><thead><tr class="HeaderRow"><th style="width:45px">' . translate('Type') . '</th><th>' . translate('File name & Description') . '</th><th style="width: 160px;">' . translate('Language') . '</th></tr></thead><tbody>';
 		$dtFoot = 			'</tbody>
 		</table></div>';
 		$dlSetCat = array("Datasheets","Success Stories","User Guides","Firmware");

@@ -6,25 +6,6 @@ $priceBuyNow = $product->priceBuyNow($product->pn);
 <?=$product->canonical ?>
 <?=$product->productmeta ?>
 
-<style>
-.blue_btn {
-  padding: 0.1em 1em;
-  max-width: 60%;
-  margin-top: 0.3em;
-  padding-top: 0.1em;
-  padding-bottom: 0.1em;
-  margin-bottom: 0em;
-  font-size:0.7em;
-}
-.panels > li > div {
-  padding: 1em .2em;
-  margin: 0em .8em;
-}
-.feature-list  ul {
-  width:46%;
-  float:left;
-  }​
-  </style>
   <script>
   $(document).ready(function() {
     try{$( "#viddropdownbox" ).dropdownbox();}catch(e){}
@@ -44,14 +25,13 @@ $priceBuyNow = $product->priceBuyNow($product->pn);
             <li></li>
             <?=$product->justButtons?>
           </ul></div></div>
-          <div class="C10 Col_child C7x3_child">
+          <div class="C10 Col_child C6x4_child">
             <div class="info" style="float:left;">
-
               <strong class="tagline mysqledit" id="header"><?=$product->productText['header'] ?></strong>
               <div class="mysqledit" id="blurb" ><?=$product->productText['blurb'] ?></div>
               <div id="list" class="feature-list half mysqledit" style="font-size:80%"><?=$list ?></div>
             </div>
-            <div class="image-set" style="text-align:center;">
+            <div class="image-set" style="float:right;">
               <image src="<?= imagethumb(str_replace("-Series","",$product->pn) ,'550') ?>"/>
               </div>
             </div>
@@ -65,12 +45,11 @@ $priceBuyNow = $product->priceBuyNow($product->pn);
               <script>$('#modid').hide();</script>
 
               <div id="overview" class="active">
-                <div id="models" class="active" style="position:relative;top:1.5em;text-align:center;padding-bottom: 1.5em">
+                <div id="models" class="active">
                   <ul class="C10 panels resultsList">
                     <?=$models ?>
                   </ul>
                 </div>
-                <hr />
                 <?=$overview ?>
               </div>
 
