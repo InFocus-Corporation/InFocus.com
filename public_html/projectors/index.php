@@ -114,7 +114,7 @@ if($category) {
 
 <?php } else { ?>
 
-	<div class="hero_row transparent-border-right-40-orange hero-row--video_conferencing">
+	<div class="hero_row transparent-border-right-40-orange hero-row--projectors">
 		<div class="row">
 			<div class="small-11 medium-7 large-5 columns lead_text">
 				<h2 class="lead_text--secondary_headline">
