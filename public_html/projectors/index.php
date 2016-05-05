@@ -133,7 +133,7 @@ if($category) {
 	<div class="row">
 		<div class="small-12 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg" alt="">
+			<img src="/resources/static/images/projectors/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg" alt="">
 		</div>
 		<div class="small-12 medium-4 columns">
 			<h3 class="lead_text--secondary_headline">Ultra Portable Projectors</h3>
@@ -145,7 +145,7 @@ if($category) {
 	<div class="row">
 		<div class="small-12 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/InFocus-Lifestyle-IN118HDx-96dpi-RGB.jpg" alt="">
+			<img src="/resources/static/images/projectors/InFocus-Lifestyle-IN118HDx-96dpi-RGB.jpg" alt="">
 		</div>
 		<div class="small-12 medium-4 columns">
 			<h3 class="lead_text--secondary_headline">Office/Classroom Projectors</h3>
@@ -157,7 +157,7 @@ if($category) {
 	<div class="row">
 		<div class="small-12 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/GettyImages-508065611.jpg" alt="">
+			<img src="/resources/static/images/projectors/GettyImages-508065611.jpg" alt="">
 		</div>
 		<div class="small-12 medium-4 columns">
 			<h3 class="lead_text--secondary_headline">Short Throw Projectors</h3>
@@ -169,7 +169,7 @@ if($category) {
 	<div class="row">
 		<div class="small-12 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/GettyImages-172209295.jpg" alt="">
+			<img src="/resources/static/images/projectors/GettyImages-172209295.jpg" alt="">
 		</div>
 		<div class="small-12 medium-4 columns">
 			<h3 class="lead_text--secondary_headline">Large Venue Projectors</h3>
@@ -181,7 +181,7 @@ if($category) {
 	<div class="row">
 		<div class="small-12 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/GettyImages-507832233.jpg" alt="">
+			<img src="/resources/static/images/projectors/GettyImages-507832233.jpg" alt="">
 		</div>
 		<div class="small-12 medium-4 columns">
 			<h3 class="lead_text--secondary_headline">Home Theater Projectors</h3>
