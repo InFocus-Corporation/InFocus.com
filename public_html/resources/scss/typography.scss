@@ -1,6 +1,6 @@
 // Typography
 h1, h2, h3, h4, p.lead_text, h5 {
-  font-family: GoodPro, Verdana, Geneva, sans-serif;
+  font-family: 'GoodPro', Verdana, Geneva, sans-serif;
   font-weight: bold;
   text-transform: none;
 }
@@ -18,12 +18,12 @@ h5,
 .vertical_accordian--slide--content h2
  {
   font-weight: normal;
-  font-family: GoodProWideLight, Verdana, Geneva, sans-serif;
+  font-family: 'GoodPro-WideLight', Verdana, Geneva, sans-serif;
 }
 
 .callout h3 {
   font-weight: normal;
-  font-family: GoodProWideBook, Verdana, Geneva, sans-serif;
+  font-family: 'GoodPro-WideBook', Verdana, Geneva, sans-serif;
   line-height: 1.25em;
 }
 
@@ -65,7 +65,7 @@ h3.lead_text--secondary_headline {
   color: $infocus_blue;
   font-weight: bold;
   font-size: 1.25rem;
-  font-family: GoodProWideBold, Verdana, Geneva, sans-serif;
+  font-family: 'GoodPro-WideBold', Verdana, Geneva, sans-serif;
 }
 .callout {
   h3 { color: $infocus_blue; letter-spacing: -.035em; }
