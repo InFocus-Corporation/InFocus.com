@@ -25,7 +25,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 					<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/static/images/svg/display-walls.svg'); ?>
 					Display Walls
 				</h2>
-				<p class="lead_text--paragraph">In a perfect world, every meeting is productive and every presentation engages the audience. We make the world a more perfect place.</p>
+				<p class="lead_text--paragraph">Ver o eos accusamus et iusto odio dignissimos ducimus qui blanditis praesent volumptatum. Dolores et quas molestais excepturi sint occaecati cupiditate.</p>
 			</div>
 			<div class="small-1 medium-3 color_stripe_column">
 				<div class="dark_blue color_stripe"></div>
