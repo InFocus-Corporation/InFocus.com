@@ -32,6 +32,12 @@ $transparent-border-sides: right left;
     .transparent-border-#{$side}-#{$width}-green {
       @include border-opacity("#{$side}", #{$width}px, $infocus_green);
     }
+    .transparent-border-#{$side}-#{$width}-blue {
+      @include border-opacity("#{$side}", #{$width}px, $infocus_blue);
+    }
+    .transparent-border-#{$side}-#{$width}-light_blue {
+      @include border-opacity("#{$side}", #{$width}px, $infocus_light_blue);
+    }
   }
 }
 
@@ -58,6 +64,11 @@ header + .hero_row > .row { margin-top: 0px;}
       @include background-opacity($infocus_blue);
       width: 77px;
     }
+    &.light_blue {
+      @include background-opacity($infocus_light_blue);
+      max-width: 77px;
+      width:100%;
+    }
     &.white {
       background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
       width: 92px;
@@ -79,6 +90,53 @@ header + .hero_row > .row { margin-top: 0px;}
   }
   &.hero-row--video_conferencing {
     background: url('../static/images/video-conferencing/video-conferencing-hero-a--InFocus-Lifestyle-ConX-Exec-Mtg1-300dpi-CMYK.jpg') right -38px top no-repeat;
+  }
+  &.hero-row--header_module_c {
+    background: url('../static/images/present/present-hero.jpg') left top no-repeat;
+    background-size: contain;
+    background-color: $dark_gray;
+    border-left: none;
+    height: 600px;
+    .lead_text>:first-child {
+        margin-top: 3rem;
+    }
+    .module--tag:before {
+        width: 40px;
+        content: "";
+        border: 2px solid white;
+        display: block;
+    }
+    .module--tag span{
+        color: white;
+        font-family: GoodProWideMedium;
+        font-size: 12px;
+    }
+    .lead_text {
+      @include background-opacity($dark_gray);
+      height: 600px;
+      padding-left: 95px;
+    }
+    .lead_text--secondary_headline, .lead_text--paragraph {
+      color: $white;
+      clear: both;
+    }
+    .lead_text--secondary_headline {
+      font-size: 60px;
+    }
+    .lead_text--paragraph {
+        font-family: GoodProWideLight;
+        font-size: 20px;
+    }
+    .color_stripe_column {
+        height: 600px;
+    }
+    .color_stripe.dark_blue, .color_stripe.white {
+        max-width: 115px;
+        width: 115px;
+    }
+    .color_stripe.white {
+        margin-left: 86px !important;
+    }
   }
   .lead_text {
     > :first-child {  margin-top: 10rem; }
@@ -113,6 +171,108 @@ header + .hero_row > .row { margin-top: 0px;}
       margin-left: -22px;
     }
   }
+}
+
+.feature_module_a {
+    height: 600px;
+    background: url('../static/images/present/present-module_a.jpg') right top no-repeat;
+    background-size: contain;
+    .feature_text {
+        height: 100%;
+        @include background-opacity($infocus_green);
+        padding: 40px 35px;
+        position: relative;
+    }
+    .white.color_stripe {
+        width: 79px;
+        height: 600px;
+        margin-left: -40px;
+        opacity: .75;
+    }
+    .light_blue.color_stripe.float-right {
+        right: 0;
+        margin-right: -15px;
+        width: 40px;
+        height: 600px;
+    }
+    .lead_text--secondary_headline {
+        color: $white;
+    }
+    .lead_text--paragraph {
+        color: $white;
+    }
+    .feature_links {
+        display: block;
+        position: absolute;
+        bottom: 48px;
+        left: 40px;
+    }
+    .feature_link {
+        color: $infocus_light_blue;
+        font-family: GoodProWideMedium;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    .feature_link:hover {
+        color: $white;
+    }
+
+}
+
+.feature_module_b {
+    position: relative;
+    .module_image {
+        height: 600px;
+        width: 100%;
+        background: url('../static/images/present/present-module_b.jpg');
+        background-size: cover;
+    }
+    .feature_text {
+        display: block;
+        position: relative;
+        width: 755px;
+        min-height: 375px;
+        margin: -350px auto 0 auto;
+        padding: 55px 70px 0 70px;
+        @include background-opacity($infocus_blue);
+        clear: both;
+        text-align: center;
+    }
+    .lead_text--secondary_headline {
+        text-align: center;
+        color: $white;
+    }
+    .lead_text--paragraph {
+        color: $white;
+    }
+    .feature_links {
+        padding-bottom: 48px;
+    }
+    .feature_link {
+        color: $infocus_light_blue;
+        font-family: GoodProWideMedium;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    .feature_link:hover {
+        color: $white;
+    }
+}
+
+.text_module_a {
+    font-family: GoodProWideLight;
+    h1.lead_text--headline {
+        font-size: 60px;
+        color: $dark_gray;
+    }
+    p.lead_text--paragraph {
+        font-size: 20px;
+    }
+    a.text_module_link {
+        font-family: GoodProWideMedium;
+        font-size: 20px;
+        color: $infocus_blue;
+    }
 }
 
 //Vertical Accordion
