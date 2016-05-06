@@ -91,10 +91,16 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         <div class="small-12 medium-6 columns feature_text">
 			<h3 class="lead_text--secondary_headline">PC-less presenting</h3>
 			<p class="lead_text--paragraph">Load your projector's internal memory with common or shared files and quickly present them without a computer. Or project files directly from a USB thumb drive, which is convenient for guests or when traveling.</p>
-			<a href="/displays/MONDOPAD-SERIES" class="feature_link">View large venue projectors</a>
+            <div class="feature_links">
+                <a href="/displays/MONDOPAD-SERIES" class="feature_link">IN2120A Network Projectors</a><br>
+                <a href="/displays/MONDOPAD-SERIES" class="feature_link">IN1110 Mobile Projectors</a><br>
+                <a href="/displays/MONDOPAD-SERIES" class="feature_link">IN1146 Mobile LED Projector</a>
+            </div>
 		</div>
 		<div class="small-12 medium-6 columns color_stripe_column">
 			<div class="white color_stripe"></div>
+            <div class="light_blue color_stripe float-right"></div>
+
 		</div>
 	</div>
     <!-- END FEATURE MODULE A -->
