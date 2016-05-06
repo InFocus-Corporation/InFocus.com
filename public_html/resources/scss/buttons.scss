@@ -1,14 +1,14 @@
 //button-sizes
 .link, .button, .button:focus {
-  padding: .95em 1em;
+  padding: 1.15em 1.25em .9em;
   margin: 0 0 1rem;
-  font-size: .85rem;
-  letter-spacing: .1rem;
+  font-size: .75rem;
+  letter-spacing: .2rem;
   background-color: $infocus_blue;
   color: $infocus_light_blue;
   text-transform: uppercase;
   border-radius: 4px;
-  font-family: GoodProWideMedium, Verdana, Geneva, sans-serif;
+  font-family: 'GoodPro-WideBook', Verdana, Geneva, sans-serif;
 }
 a.button--primary,
 a.button--primary:link,
