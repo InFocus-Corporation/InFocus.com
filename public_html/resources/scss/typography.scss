@@ -4,6 +4,13 @@ h1, h2, h3, h4, p.lead_text, h5 {
   font-weight: bold;
   text-transform: none;
 }
+.text--orange {
+  color: $infocus_orange !important;
+}
+.text--white {
+  color: $white !important;
+}
+h2 { font-size: 2em;}
 p.lead_text,
 h5,
 .callout h5,
@@ -42,14 +49,14 @@ h5,
   line-height: 1.15em;
   margin-bottom: 2rem;
   font-weight: 400;
-  font-size: 2.55rem;
+  font-size: 2.35rem;
   @media screen and (min-width: 40em) {
       font-size: 3.75rem;
   }
 }
 h3.lead_text--secondary_headline {
   margin-bottom: .65rem;
-  font-size: 1.95rem;
+  font-size: 1.55rem;
   @media screen and (min-width: 40em) {
       font-size: 2.75rem;
   }
