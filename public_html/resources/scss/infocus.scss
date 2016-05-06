@@ -92,6 +92,9 @@ header + .hero_row > .row { margin-top: 0px;}
   &.hero-row--touchscreens {
       background: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg') right -326px top no-repeat;
   }
+  &.hero-row--display_walls {
+      background: url('../static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg') right -125px top no-repeat;
+  }
   .lead_text {
     > :first-child {  margin-top: 10rem; }
     height: 699px;
