@@ -61,6 +61,13 @@ h3.lead_text--secondary_headline {
       font-size: 2.75rem;
   }
 }
+h4.lead_text--secondary_headline {
+  margin-bottom: .5rem;
+  font-size: 1.4rem;
+  @media screen and (min-width: 40em) {
+      font-size: 1.75rem;
+  }
+}
 .quote_source, .module--tag span {
   color: $infocus_blue;
   font-weight: bold;
