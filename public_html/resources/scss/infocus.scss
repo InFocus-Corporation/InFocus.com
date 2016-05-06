@@ -274,6 +274,22 @@ header + .hero_row > .row { margin-top: 0px;}
         color: $infocus_blue;
     }
 }
+.multicol_icon_text_module {
+    font-family: GoodProWideLight;
+    .lead_text--headline {
+        font-size: 28px;
+        color: $dark_gray;
+    }
+    p.lead_text--paragraph {
+        font-size: 20px;
+    }
+    a.text_module_link {
+        font-family: GoodProWideMedium;
+        font-size: 20px;
+        color: $infocus_blue;
+    }
+
+}
 
 //Vertical Accordion
 .vertical_accordian {

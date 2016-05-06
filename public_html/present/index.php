@@ -88,7 +88,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <div class="row feature_module_b">
         <div class="small-12 columns">
             <div class="module_image">
-                
+
             </div>
             <div class="feature_text text-center">
                 <h2 class="lead_text--secondary_headline">Capture ideas on a digital canvas</h3>
@@ -103,6 +103,49 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     </div>
     <!-- END FEATURE MODULE B -->
     <br><br><br>
+
+    <!-- MULTICOLUMN ICON AND TEXT MODULE -->
+    <div class="row multicol_icon_text_module">
+        <div class="small-12 large-4 columns text-center">
+            <h3 class="lead_text--headline">
+                Huddle Spaces
+            </h3>
+            <p class="lead_text--paragraph">
+                Plug in any notebook, tablet or smartphone to an InFocus projector or display via HDMI, VGA, USB and more.
+            </p>
+            <br>
+            <a href="#" class="text_module_link">View Projectors</a>
+            <br>
+            <a href="#" class="text_module_link">View Touchscreens</a>
+        </div>
+        <div class="small-12 large-4 columns text-center">
+            <h3 class="lead_text--headline">
+                Conference Rooms
+            </h3>
+            <p class="lead_text--paragraph">
+                Project wirelessly from any device with InFocus wireless-ready projectors or a wireless adapter connected to any projector.
+            </p>
+            <br>
+            <a href="#" class="text_module_link">Wireless Projectors</a>
+            <br>
+            <a href="#" class="text_module_link">LiteShow 4 Wireless Adapter</a>
+        </div>
+        <div class="small-12 large-4 columns text-center">
+            <h3 class="lead_text--headline">
+                Auditoriums
+            </h3>
+            <p class="lead_text--paragraph">
+                Share content on an LCD display in seconds with a wireless-equipped touchscreen display or any LCD display with a wireless adapter.
+            </p>
+            <br>
+            <a href="#" class="text_module_link">Wireless Touchscreens</a>
+            <br>
+            <a href="#" class="text_module_link">LiteShow 4 Wireless Adapter</a>
+        </div>
+    </div>
+    <!-- END MULTICOLUMN ICON AND TEXT MODULE -->
+
+
     <!-- FEATURE MODULE A -->
 	<div class="row feature_module_a ">
         <div class="small-12 medium-6 columns feature_text">
