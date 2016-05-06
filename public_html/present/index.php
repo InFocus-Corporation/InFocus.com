@@ -30,10 +30,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             <div class="white color_stripe"></div>
         </div>
 		<div class="row">
-            <div class="small-1 medium-2 large-5 columns">
-
-			</div>
-			<div class="small-11 medium-7 large-7 columns lead_text">
+			<div class="small-11 small-offset-1 medium-7 medium-offset-2 large-7 large-offset-5 columns lead_text">
                 <div class="module--tag">
                     <span>Present</span>
                 </div>
@@ -45,6 +42,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 	</div>
     <!-- END HEADER MODULE C -->
+    <br><br>
     <!-- TEXT MODULE A -->
     <div class="row text_module_a">
         <div class="small-12 columns text-center lead_text">
@@ -61,40 +59,59 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 Plug in any notebook, tablet or smartphone to an InFocus projector or display via HDMI, VGA, USB and more.
             </p>
             <br>
-            <a class="text_module_link">View Projectors</a>
+            <a href="#" class="text_module_link">View Projectors</a>
             <br>
-            <a class="text_module_link">View Touchscreens</a>
+            <a href="#" class="text_module_link">View Touchscreens</a>
         </div>
         <div class="small-12 large-4 columns text-center">
             <p class="lead_text--paragraph">
                 Project wirelessly from any device with InFocus wireless-ready projectors or a wireless adapter connected to any projector.
             </p>
             <br>
-            <a class="text_module_link">Wireless Projectors</a>
+            <a href="#" class="text_module_link">Wireless Projectors</a>
             <br>
-            <a class="text_module_link">LiteShow 4 Wireless Adapter</a>
+            <a href="#" class="text_module_link">LiteShow 4 Wireless Adapter</a>
         </div>
         <div class="small-12 large-4 columns text-center">
             <p class="lead_text--paragraph">
                 Share content on an LCD display in seconds with a wireless-equipped touchscreen display or any LCD display with a wireless adapter.
             </p>
             <br>
-            <a class="text_module_link">Wireless Touchscreens</a>
+            <a href="#" class="text_module_link">Wireless Touchscreens</a>
             <br>
-            <a class="text_module_link">LiteShow 4 Wireless Adapter</a>
+            <a href="#" class="text_module_link">LiteShow 4 Wireless Adapter</a>
         </div>
     </div>
     <!-- END TEXT MODULE A -->
+    <br><br><br>
+    <!-- FEATURE MODULE B -->
+    <div class="row feature_module_b">
+        <div class="small-12 columns">
+            <div class="module_image">
+                
+            </div>
+            <div class="feature_text text-center">
+                <h2 class="lead_text--secondary_headline">Capture ideas on a digital canvas</h3>
+    			<p class="lead_text--paragraph">Take notes, draw and save the work with the same touchscreen device you're presenting on. It's the efficient, economical, and odor-free answer to dry erase.</p>
+                <br><br>
+                <div class="feature_links">
+                    <a href="#" class="feature_link">View Whiteboard Displays</a><br>
+                </div>
 
+            </div>
+        </div>
+    </div>
+    <!-- END FEATURE MODULE B -->
+    <br><br><br>
     <!-- FEATURE MODULE A -->
 	<div class="row feature_module_a ">
         <div class="small-12 medium-6 columns feature_text">
 			<h3 class="lead_text--secondary_headline">PC-less presenting</h3>
 			<p class="lead_text--paragraph">Load your projector's internal memory with common or shared files and quickly present them without a computer. Or project files directly from a USB thumb drive, which is convenient for guests or when traveling.</p>
             <div class="feature_links">
-                <a href="/displays/MONDOPAD-SERIES" class="feature_link">IN2120A Network Projectors</a><br>
-                <a href="/displays/MONDOPAD-SERIES" class="feature_link">IN1110 Mobile Projectors</a><br>
-                <a href="/displays/MONDOPAD-SERIES" class="feature_link">IN1146 Mobile LED Projector</a>
+                <a href="#" class="feature_link">IN2120A Network Projectors</a><br>
+                <a href="#" class="feature_link">IN1110 Mobile Projectors</a><br>
+                <a href="#" class="feature_link">IN1146 Mobile LED Projector</a>
             </div>
 		</div>
 		<div class="small-12 medium-6 columns color_stripe_column">
@@ -104,7 +121,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 	</div>
     <!-- END FEATURE MODULE A -->
-
 	<div class="row">
 		<div class="small-12 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
