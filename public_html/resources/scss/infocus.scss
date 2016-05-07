@@ -69,6 +69,11 @@ header + .hero_row > .row { margin-top: 0px;}
       max-width: 77px;
       width:100%;
     }
+    &.orange {
+      @include background-opacity($infocus_orange);
+      max-width: 77px;
+      width:100%;
+    }
     &.white {
       background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
       width: 92px;
@@ -132,6 +137,10 @@ header + .hero_row > .row { margin-top: 0px;}
         height: 600px;
     }
     .color_stripe.dark_blue, .color_stripe.white {
+        max-width: 115px;
+        width: 115px;
+    }
+    .color_stripe.orange, .color_stripe.white {
         max-width: 115px;
         width: 115px;
     }
