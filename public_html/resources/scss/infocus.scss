@@ -21,7 +21,7 @@ $dark_gray:  #3f4a54;
     border-#{$direction}: solid $width rgba($color, $opacity);
 }
 
-$transparent-border-widths: 30, 38, 40, 60;
+$transparent-border-widths: 30, 38, 40, 60, 125;
 $transparent-border-sides: right left;
 
 @each $side in $transparent-border-sides {
@@ -85,12 +85,17 @@ header + .hero_row > .row { margin-top: 0px;}
   margin-left: auto;
   margin-right: auto;
   max-width: initial;
-  border-left: 18px solid $infocus_blue;
   &.hero-row--homepage {
     background: url('../static/images/homepage/homepage-hero-a--wb-bertlitz.jpg') right -160px top no-repeat;
+    border-left: 18px solid $infocus_blue;
   }
   &.hero-row--video_conferencing {
     background: url('../static/images/video-conferencing/video-conferencing-hero-a--InFocus-Lifestyle-ConX-Exec-Mtg1-300dpi-CMYK.jpg') right -38px top no-repeat;
+  }
+  &.hero-row--jupiter {
+    background: url('../static/images/jupiter/jupiter-hero-a.jpg') left top no-repeat;
+    background-size:cover;
+    background-origin: border-box;
   }
   &.hero-row--header_module_c {
     background: url('../static/images/present/present-hero.jpg') left top no-repeat;
@@ -162,9 +167,11 @@ header + .hero_row > .row { margin-top: 0px;}
     max-width: 420px;
   }
   &.hero_row--secondary {
-    background: url('../static/images/homepage/homepage-feature--GettyImages-508079793.jpg') center center no-repeat;
-    background-size:cover;
-    background-origin: border-box;
+    &.hero_row--secondary--homepage {
+      background: url('../static/images/homepage/homepage-feature--GettyImages-508079793.jpg') center center no-repeat;
+      background-size:cover;
+      background-origin: border-box;
+    }
     .lead_text--headline { max-width: none; margin-top: 2em;}
     .color_stripe.white {
       left: 0px;
@@ -276,6 +283,23 @@ header + .hero_row > .row { margin-top: 0px;}
     }
 }
 
+.collage {
+  img {
+    width: 100%;
+    border-top: 4px solid $white;
+  }
+  .columns:first-child {
+    @media screen and (min-width: 40em) {
+      padding-right: 2px;
+      img { height: 50%; }
+    }
+  }
+  .columns:last-child {
+    @media screen and (min-width: 40em) {
+      padding-left: 2px;
+    }
+  }
+}
 //Vertical Accordion
 .vertical_accordian {
   margin-left: .9375rem;

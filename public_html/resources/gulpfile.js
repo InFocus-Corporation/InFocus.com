@@ -23,7 +23,7 @@ gulp.task('sass', function(done) {
 });
 
 gulp.task('foundation-js', function() {
-  return gulp.src('./node_modules/foundation/js/foundation/foundation.js')
+  return gulp.src('./node_modules/foundation-sites/dist/foundation.min.js')
     .pipe(concat('foundation.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('js/vendor'))

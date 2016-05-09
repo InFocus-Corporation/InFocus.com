@@ -3,11 +3,6 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '"/>' . PHP_EOL;
 ?>
-<style>
-    .hero_row{
-        border-left:
-    }
-</style>
 
 <title>InFocus | Present</title>
 <meta name="description" content="Discover advanced projection equipment offered by InFocus. Global leader in LCD projectors and DLP projection, Mondopad products and projector accessories." />
@@ -88,7 +83,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <div class="row feature_module_b">
         <div class="small-12 columns">
             <div class="module_image">
-                
+
             </div>
             <div class="feature_text text-center">
                 <h2 class="lead_text--secondary_headline">Capture ideas on a digital canvas</h3>
