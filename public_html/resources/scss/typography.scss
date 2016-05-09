@@ -10,6 +10,9 @@ h1, h2, h3, h4, p.lead_text, h5 {
 .text--white {
   color: $white !important;
 }
+.text--gray {
+  color: $dark_gray !important;
+}
 h2 { font-size: 2em;}
 p.lead_text,
 h5,
