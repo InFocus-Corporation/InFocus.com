@@ -1,0 +1,54 @@
+<svg id="present-icon" data-name="present-icon" xmlns="http://www.w3.org/2000/svg" width="111px" height="121px" viewBox="0 0 39.51 46.33">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke: #f26727;
+      }
+
+      .cls-1, .cls-7 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-6 {
+        stroke-width: 0.94px;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke-linecap: round;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke-width: 0.52px;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        stroke-width: 0.97px;
+      }
+
+      .cls-5 {
+        stroke-width: 1.05px;
+      }
+    </style>
+  </defs>
+  <title>present-icon</title>
+  <rect class="cls-1" x="13.64" y="28.5" width="9.09" height="17.36" rx="4.35" ry="4.35"/>
+  <circle class="cls-2" cx="19.75" cy="13.5" r="8.11"/>
+  <rect class="cls-3" x="3.96" y="17.77" width="12.15" height="22.13" rx="1.36" ry="1.36"/>
+  <circle class="cls-2" cx="10.02" cy="26.51" r="3.22"/>
+  <circle class="cls-4" cx="10.03" cy="36.14" r="1.24"/>
+  <line class="cls-5" x1="13.64" y1="33.39" x2="13.64" y2="41.41"/>
+  <line class="cls-6" x1="18.21" y1="28.9" x2="18.21" y2="36.14"/>
+  <line class="cls-6" x1="20.29" y1="28.9" x2="20.29" y2="36.14"/>
+  <path class="cls-7" d="M509,63.42V42.57A2.58,2.58,0,0,1,511.54,40h33.35a2.58,2.58,0,0,1,2.58,2.58V63.42A2.58,2.58,0,0,1,544.89,66H528.75" transform="translate(-508.47 -39.49)"/>
+  <polyline class="cls-2" points="19.75 5.4 19.75 14.01 25.7 8"/>
+  <polyline class="cls-2" points="9.99 23.29 9.99 26.94 12.51 24.39"/>
+</svg>
