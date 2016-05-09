@@ -106,8 +106,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="small-12 medium-7 columns">
+
+	<div class="row homepage--callouts" data-equalizer data-equalize-on="medium">
+		<div class="small-12 medium-7 columns" data-equalizer-watch>
 			<?php $latest_news = mysqli_fetch_array(mysqli_query($connection, 'SELECT id, title, teaser FROM articles WHERE postdate<NOW() AND lang="'.$lang.'" ORDER BY postdate DESC')); ?>
 			<div class="callout">
 				<div class="module--tag">
@@ -122,7 +123,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 				</div>
 			</div>
 		</div>
-		<div class="small-12 medium-5 columns">
+		<div class="small-12 medium-5 columns" data-equalizer-watch>
 			<div class="callout callout--picture">
 				<div class="callout--heading callout--heading--picture">
 					<img src="http://placehold.it/1311x699" />
