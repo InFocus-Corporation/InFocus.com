@@ -7,6 +7,7 @@ $infocus_orange: #E87722;
 $light_gray: #f2f2f0;
 $dark_gray:  #3f4a54;
 
+//Imports and Mixins
 @import 'fonts';
 @import 'typography';
 @import 'buttons';
@@ -31,6 +32,12 @@ $transparent-border-sides: right left;
     .transparent-border-#{$side}-#{$width}-green {
       @include border-opacity("#{$side}", #{$width}px, $infocus_green);
     }
+    .transparent-border-#{$side}-#{$width}-blue {
+      @include border-opacity("#{$side}", #{$width}px, $infocus_blue);
+    }
+    .transparent-border-#{$side}-#{$width}-light_blue {
+      @include border-opacity("#{$side}", #{$width}px, $infocus_light_blue);
+    }
   }
 }
 
@@ -41,19 +48,12 @@ body {
   // to accomodate the fixed header
   padding-top: 99px;
 }
-.paragraph-link {
-  color: $infocus_blue;
-  clear: both;
-  font-weight: bold;
-  float: left;
-  display: inline-block;
-  text-transform: capitalize;
-  margin-bottom: 1em;
-  font-size: 1.2em;
-}
-.row { margin-top: 3.5em; max-width: 73.13rem;}
-header + .hero_row > .row { margin-top: 0px;}
 
+.row { margin-top: 3.5em; max-width: 73.13rem; }
+header + .hero_row > .row { margin-top: 0px;}
+.hero_row.row--full-height {
+  height: 100%;
+}
 .color_stripe_column {
   position: relative;
   float: left;
@@ -64,6 +64,11 @@ header + .hero_row > .row { margin-top: 0px;}
       @include background-opacity($infocus_blue);
       width: 77px;
     }
+    &.light_blue {
+      @include background-opacity($infocus_light_blue);
+      max-width: 77px;
+      width:100%;
+    }
     &.white {
       background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
       width: 92px;
@@ -72,6 +77,7 @@ header + .hero_row > .row { margin-top: 0px;}
   }
 }
 
+//Modules
 .hero_row{
   position: relative;
   height: 699px;
@@ -90,10 +96,57 @@ header + .hero_row > .row { margin-top: 0px;}
     background: url('../static/images/projectors/InFocus-Lifestyle-Projector-Screen-2-300dpi-96dpi-RGB.jpg') right -326px top no-repeat;
   }
   &.hero-row--touchscreens {
-      background: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg') right -326px top no-repeat;
+    background: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg') right -326px top no-repeat;
   }
   &.hero-row--display_walls {
-      background: url('../static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg') right -125px top no-repeat;
+    background: url('../static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg') right -125px top no-repeat;
+  }
+  &.hero-row--header_module_c {
+    background: url('../static/images/present/present-hero.jpg') left top no-repeat;
+    background-size: contain;
+    background-color: $dark_gray;
+    border-left: none;
+    height: 600px;
+    .lead_text>:first-child {
+        margin-top: 3rem;
+    }
+    .module--tag:before {
+        width: 40px;
+        content: "";
+        border: 2px solid white;
+        display: block;
+    }
+    .module--tag span{
+        color: white;
+        font-family: 'GoodPro-WideBook';
+        font-size: 12px;
+    }
+    .lead_text {
+      @include background-opacity($dark_gray);
+      height: 600px;
+      padding-left: 95px;
+    }
+    .lead_text--secondary_headline, .lead_text--paragraph {
+      color: $white;
+      clear: both;
+    }
+    .lead_text--secondary_headline {
+      font-size: 60px;
+    }
+    .lead_text--paragraph {
+        font-family: 'GoodPro-WideLight';
+        font-size: 20px;
+    }
+    .color_stripe_column {
+        height: 600px;
+    }
+    .color_stripe.dark_blue, .color_stripe.white {
+        max-width: 115px;
+        width: 115px;
+    }
+    .color_stripe.white {
+        margin-left: 86px !important;
+    }
   }
   .lead_text {
     > :first-child {  margin-top: 10rem; }
@@ -128,6 +181,108 @@ header + .hero_row > .row { margin-top: 0px;}
       margin-left: -22px;
     }
   }
+}
+
+.feature_module_a {
+    height: 600px;
+    background: url('../static/images/present/present-module_a.jpg') right top no-repeat;
+    background-size: contain;
+    .feature_text {
+        height: 100%;
+        @include background-opacity($infocus_green);
+        padding: 40px 35px;
+        position: relative;
+    }
+    .white.color_stripe {
+        width: 79px;
+        height: 600px;
+        margin-left: -40px;
+        opacity: .75;
+    }
+    .light_blue.color_stripe.float-right {
+        right: 0;
+        margin-right: -15px;
+        width: 40px;
+        height: 600px;
+    }
+    .lead_text--secondary_headline {
+        color: $white;
+    }
+    .lead_text--paragraph {
+        color: $white;
+    }
+    .feature_links {
+        display: block;
+        position: absolute;
+        bottom: 48px;
+        left: 40px;
+    }
+    .feature_link {
+        color: $infocus_light_blue;
+        font-family: 'GoodPro-WideBook';
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    .feature_link:hover {
+        color: $white;
+    }
+
+}
+
+.feature_module_b {
+    position: relative;
+    .module_image {
+        height: 600px;
+        width: 100%;
+        background: url('../static/images/present/present-module_b.jpg');
+        background-size: cover;
+    }
+    .feature_text {
+        display: block;
+        position: relative;
+        width: 755px;
+        min-height: 375px;
+        margin: -350px auto 0 auto;
+        padding: 55px 70px 0 70px;
+        @include background-opacity($infocus_blue);
+        clear: both;
+        text-align: center;
+    }
+    .lead_text--secondary_headline {
+        text-align: center;
+        color: $white;
+    }
+    .lead_text--paragraph {
+        color: $white;
+    }
+    .feature_links {
+        padding-bottom: 48px;
+    }
+    .feature_link {
+        color: $infocus_light_blue;
+        font-family: 'GoodPro-WideBook';
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    .feature_link:hover {
+        color: $white;
+    }
+}
+
+.text_module_a {
+    font-family: 'GoodPro-WideLight';
+    h1.lead_text--headline {
+        font-size: 60px;
+        color: $dark_gray;
+    }
+    p.lead_text--paragraph {
+        font-size: 20px;
+    }
+    a.text_module_link {
+        font-family: 'GoodPro-WideBook';
+        font-size: 20px;
+        color: $infocus_blue;
+    }
 }
 
 //Vertical Accordion
@@ -254,4 +409,30 @@ header + .hero_row > .row { margin-top: 0px;}
 }
 .vertical_accordian--slide .module--tag:before {
   border: 2px solid $white;
+}
+
+//Product Pages
+.paragraph-link {
+  color: $infocus_blue;
+  clear: both;
+  font-weight: bold;
+  float: left;
+  display: inline-block;
+  text-transform: capitalize;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}
+
+//Page Specific CSS
+//404 Page
+.page--404 {
+  /*puts footer at bottom because page is so short. */
+  footer { margin-top: -99px;}
+  .hero-row--404 {
+    background: url('../static/images/other/404-background--shutterstock_272479613.jpg') no-repeat top -100px left;
+    background-size: cover, cover;
+    border: 0px;
+    box-shadow: inset 0 0 0 1000px rgba(51,63,72,.78);
+    padding-top: 10%;
+  }
 }

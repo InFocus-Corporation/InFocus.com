@@ -26,7 +26,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			</div>
 			<div class="small-1 medium-3 color_stripe_column">
 				<div class="dark_blue color_stripe"></div>
-				<div class="white color_stripe"></div>
+				<div class="white color_stripe hide-for-small-only"></div>
 			</div>
 		</div>
 
@@ -96,7 +96,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	</div>
 	<div class="hero_row hero_row--secondary transparent-border-left-60-orange transparent-border-right-38-green">
 		<div class="color_stripe_column">
-			<div class="white color_stripe"></div>
+			<div class="white color_stripe hide-for-small-only"></div>
 		</div>
 		<div class="row">
 			<div class="small-12 medium-10 medium-offset-2 large-7 large-offset-5 columns">
@@ -108,16 +108,17 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	</div>
 	<div class="row">
 		<div class="small-12 medium-7 columns">
+			<?php $latest_news = mysqli_fetch_array(mysqli_query($connection, 'SELECT id, title, teaser FROM articles WHERE postdate<NOW() AND lang="'.$lang.'" ORDER BY postdate DESC')); ?>
 			<div class="callout">
 				<div class="module--tag">
 					<span>latest news</span>
 				</div>
 				<div class="callout--heading">
-					<h3>InFocus Unveils ConX, the New Solution for Enterprise Conferencing &amp; Collaboration</h3>
+					<h3><?= $latest_news['title'] ?></h3>
 				</div>
 				<div class="callout--copy">
-					<h5>The world’s first scalable HD video conferencing and data visualization system combines endh5oints, software, and cloud services to enable easy and powerful connection, collaboration and sharing ideas in real time.</h5>
-					<a href="#TODO" class="button button--primary">learn more</a>
+					<h5><?= $latest_news['teaser'] ?></h5>
+					<a href="/articles?<?= $latest_news['id'] ?>" class="button button--primary">learn more</a>
 				</div>
 			</div>
 		</div>
