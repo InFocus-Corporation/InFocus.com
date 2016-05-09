@@ -46,7 +46,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- TEXT MODULE A -->
     <div class="row text_module_a">
         <div class="small-12 columns text-center lead_text">
-            <?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/static/images/present/present-icon.svg'); ?>
+            <img src="/resources/static/images/present/present-icon.svg">
             <h1 class="lead_text--headline">Present from any device</h1>
             <p class="lead_text--paragraph">
                 You don't have time to mess with technology in a meeting, InFocus lets you, and other in the room share content with flexible wired and wireless options to accommodate any device.
