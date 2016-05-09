@@ -4,7 +4,7 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 
 
 if($lang == "de"):?>
-	<script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,11 +13,9 @@ if($lang == "de"):?>
   ga('create', 'UA-35128719-1', 'infocus.de');
   ga ('set', 'anonymizeIp', true);
   ga('send', 'pageview');
-
 </script>
 <?php elseif($lang == "en"):?>
-
-	<script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -36,57 +34,57 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-M927XK');</script>
 <!-- End Google Tag Manager -->
-
 <?php endif; ?>
 
 <script>
+if(self==top) {
+	var sPath=window.location.pathname;
+	var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
 
-if(self==top){
-var sPath=window.location.pathname;
-var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
-if(sPage.lastIndexOf('.')>0){sPage = sPage.substring(0,sPage.lastIndexOf('.'));}
-
-window.location = "/support/#contactus";
+	if(sPage.lastIndexOf('.')>0) {
+		sPage = sPage.substring(0,sPage.lastIndexOf('.'));
+	}
+	window.location = "/support/#contactus";
 }
 
 
 $(document).ready(function () {
-    $("#WebToLeadForm").submit(function (e) {
-        e.preventDefault(); //prevent default form submit
-    });});
+	$("#WebToLeadForm").submit(function (e) {
+		e.preventDefault(); //prevent default form submit
+	});
+});
 
 
 function checkSN(Serial){
-  if(Serial.search(/[^A-Z^0-9^a-z]/)>0){
- document.getElementById('contactForm_serial_number').value = Serial.replace(/[^A-Z^0-9^a-z]/g,'');
- alert("<?=$pageText['SerialChar']?>. \n<?=$pageText['SerialLong']?>.");
-  }
-   else if(Serial.length>19){
-  alert("<?=$pageText['SerialShort']?>.\n<?=$pageText['SerialLong']?>.");
-  document.getElementById('contactForm_serial_number').value = Serial.substr(0,19);
- }
-  }
- function checkSNShort(Serial){
- if(Serial.length<11 && Serial.length>0 ){
-  alert("<?=$pageText['SerialShort']?>.");
-  document.getElementById('contactForm_serial_number').value = Serial.substr(0,19);
- }
- }
+	if(Serial.search(/[^A-Z^0-9^a-z]/)>0){
+		document.getElementById('contactForm_serial_number').value = Serial.replace(/[^A-Z^0-9^a-z]/g,'');
+		alert("<?=$pageText['SerialChar']?>. \n<?=$pageText['SerialLong']?>.");
+	} else if(Serial.length>19) {
+		alert("<?=$pageText['SerialShort']?>.\n<?=$pageText['SerialLong']?>.");
+		document.getElementById('contactForm_serial_number').value = Serial.substr(0,19);
+	}
+}
+function checkSNShort(Serial){
+	if(Serial.length<11 && Serial.length>0 ){
+		alert("<?=$pageText['SerialShort']?>.");
+		document.getElementById('contactForm_serial_number').value = Serial.substr(0,19);
+	}
+}
 var abu = "/resources/php/formtozendesk.php";
 var emea = "https://infocuscrm.sugarondemand.com/rest/v10/Web/submit";
 var apac = "https://infocuscrm.sugarondemand.com/rest/v10/Web/submit";
 
-  function showForm(formType,spd){
-  	var speed = spd!=null ? spd:500;
-  	var Optional = '<?=translate('Optional')?>';
-  	var Required = '<?=translate('Required')?>';
-  	if(formType == "RMA"){
-  		if('<?=$pageText["RMA-Alternate"]?>' != ""){window.parent.location='http://<?=$pageText['RMA-Alternate']?>';return;}
- 		$('.salesOnly').hide();
+function showForm(formType,spd){
+	var speed = spd!=null ? spd:500;
+	var Optional = '<?=translate('Optional')?>';
+	var Required = '<?=translate('Required')?>';
+	if(formType == "RMA"){
+		if('<?=$pageText["RMA-Alternate"]?>' != ""){window.parent.location='http://<?=$pageText['RMA-Alternate']?>';return;}
+		$('.salesOnly').hide();
 		requiredFields = new Array(); 
 		requiredFieldGroups = new Array(); 
 		validatedFields = new Array(); 
-  		document.getElementById('contactForm_serial_number').placeholder = Required;
+		document.getElementById('contactForm_serial_number').placeholder = Required;
 		document.getElementById('contactForm_purchasedate').placeholder = Optional;
 		document.getElementById('contactForm_sympOption').innerHTML = Required;
 		document.getElementById('contactForm_first_name').placeholder = Required;
@@ -104,28 +102,27 @@ var apac = "https://infocuscrm.sugarondemand.com/rest/v10/Web/submit";
 		document.getElementById('contactForm_notes').placeholder = Required;
 		parent.$.colorbox.resize({innerHeight:$('body').height()*1.2});
 		if (typeof(addRequiredField) != 'undefined') { 
-		addRequiredField ('contactForm_serial_number'); 
-		addRequiredField ('contactForm_symptom'); 
-		addRequiredField ('contactForm_first_name'); 
-		addRequiredField ('contactForm_last_name'); 
-		addRequiredField ('contactForm_phone_number');
-		addRequiredField ('contactForm_email');
-		addRequiredField ('contactForm_product'); 
-		addRequiredField ('contactForm_address');
-		addRequiredField ('contactForm_city');
-		addRequiredField ('contactForm_primary_address_state');
-		addRequiredField ('contactForm_zip_postal_code');
-		addRequiredField ('contactForm_notes');
-		addRequiredField ('contactForm_Business Country');
+			addRequiredField ('contactForm_serial_number'); 
+			addRequiredField ('contactForm_symptom'); 
+			addRequiredField ('contactForm_first_name'); 
+			addRequiredField ('contactForm_last_name'); 
+			addRequiredField ('contactForm_phone_number');
+			addRequiredField ('contactForm_email');
+			addRequiredField ('contactForm_product'); 
+			addRequiredField ('contactForm_address');
+			addRequiredField ('contactForm_city');
+			addRequiredField ('contactForm_primary_address_state');
+			addRequiredField ('contactForm_zip_postal_code');
+			addRequiredField ('contactForm_notes');
+			addRequiredField ('contactForm_Business Country');
 		}
-		if (typeof(addFieldToValidate) != 'undefined') { 
-		addFieldToValidate ('ContactForm_email', 'EMAIL');
+		if (typeof(addFieldToValidate) != 'undefined') {
+			addFieldToValidate ('ContactForm_email', 'EMAIL');
 		}
 		apac = "/resources/php/formtoemail.php?eto=jill.neo@infocus.com&esub=Tech%20Request";
-  	}
-  	else if(formType == "Sales"){
-   		if('<?=$pageText['Sales-Alternate']?>' != ""){window.parent.location='http://<?=$pageText['Sales-Alternate']?>';return;}
- 		$('.techOnly').hide();
+	} else if(formType == "Sales") {
+		if('<?=$pageText['Sales-Alternate']?>' != ""){window.parent.location='http://<?=$pageText['Sales-Alternate']?>';return;}
+		$('.techOnly').hide();
 		requiredFields = new Array(); 
 		requiredFieldGroups = new Array(); 
 		validatedFields = new Array(); 
@@ -138,20 +135,19 @@ var apac = "https://infocuscrm.sugarondemand.com/rest/v10/Web/submit";
 		document.getElementById('contactForm_primary_address_state').placeholder = Optional;
 		document.getElementById('contactForm_notes').placeholder = Required;
 		if (typeof(addRequiredField) != 'undefined') { 
-		addRequiredField ('contactForm_first_name'); 
-		addRequiredField ('contactForm_last_name'); 
-		addRequiredField ('contactForm_email');
-		addRequiredField ('contactForm_notes');
-		addRequiredField ('contactForm_Business Country');
+			addRequiredField ('contactForm_first_name'); 
+			addRequiredField ('contactForm_last_name'); 
+			addRequiredField ('contactForm_email');
+			addRequiredField ('contactForm_notes');
+			addRequiredField ('contactForm_Business Country');
 		}
 		if (typeof(addFieldToValidate) != 'undefined') { 
-		addFieldToValidate ('contactForm_email', 'EMAIL');
+			addFieldToValidate ('contactForm_email', 'EMAIL');
 		}
- 	}
-  	else{
-   		if('<?=$pageText['Support-Alternate']?>' != ""){window.parent.location='http://<?=$pageText['Support-Alternate']?>';return;}
- 		$('.salesOnly').hide();
- 		requiredFields = new Array(); 
+	} else {
+		if('<?=$pageText['Support-Alternate']?>' != ""){window.parent.location='http://<?=$pageText['Support-Alternate']?>';return;}
+		$('.salesOnly').hide();
+		requiredFields = new Array(); 
 		requiredFieldGroups = new Array(); 
 		validatedFields = new Array(); 
 		document.getElementById('contactForm_serial_number').placeholder = Optional;
@@ -172,76 +168,88 @@ var apac = "https://infocuscrm.sugarondemand.com/rest/v10/Web/submit";
 		document.getElementById('contactForm_notes').placeholder = Required;
 		parent.$.colorbox.resize({innerHeight:$('body').height()*1.2});
 		if (typeof(addRequiredField) != 'undefined') { 
-		addRequiredField ('contactForm_first_name'); 
-		addRequiredField ('contactForm_last_name'); 
-		addRequiredField ('contactForm_email');
-		addRequiredField ('contactForm_product');
-		addRequiredField ('contactForm_notes');
-		addRequiredField ('contactForm_Business Country');
+			addRequiredField ('contactForm_first_name'); 
+			addRequiredField ('contactForm_last_name'); 
+			addRequiredField ('contactForm_email');
+			addRequiredField ('contactForm_product');
+			addRequiredField ('contactForm_notes');
+			addRequiredField ('contactForm_Business Country');
 		}
 		if (typeof(addFieldToValidate) != 'undefined') { 
-		addFieldToValidate ('contactForm_email', 'EMAIL');
+			addFieldToValidate ('contactForm_email', 'EMAIL');
 		}
 		apac = "/resources/php/formtoemail.php?eto=jill.neo@infocus.com&esub=Tech%20Request";
 
  	}
 
-  	$('#preForm').slideUp(speed);
-  	$('#ContactForm').slideDown(speed);
-
-  }
-
+	$('#preForm').slideUp(speed);
+	$('#ContactForm').slideDown(speed);
+}
 </script>
 <style>
-  form {
-	background: #f7f7f7;
+h3, h5, h6, div {
+	color: #3f4a54;
+}
+h3 {
+	text-align: center;
+	text-transform: initial;
+}
+h6 {
+	text-transform: uppercase;
+	font-size: 0.7rem;
+	margin-bottom: 0.8rem;
+	letter-spacing: 2px;
+}
+h6:before {
+	display: block;
+	content: ' ';
+	border-width: 4px 0 0;
+	border-style: solid;
+	border-color: #3f4a54;
+	width: 40px;
+	height: 0px;
+	margin-bottom: 0.6rem;
+}
+form {
 	padding: 20px;
-	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 0px 0px 0px rgba(255, 255, 255, 1);
-	border: 0px solid #B2B2B2;
+	box-shadow: none;
+	border: none;
+	background: transparent;
 }
-a.subtle{color:darkgrey;}
-@media (min-width: 640px){
-.contact-support{
-	border-left:1px solid grey;
-	padding-left:1%;
+.subtle {
+	line-height: 1.8em;
 }
+p.contact-about,
+p.techOnly,
+p.salesOnly {
+	padding: 1rem 6rem 2rem;
+	text-align: center;
 }
-</style>
- </HEAD>
-<body style="max-width:1200px;background: #f7f7f7;" >
-<div id="clearContainer" style="padding: 15px;">
-<form>
-<input type="hidden" id="req_id" name="req_id" value="">
-<div class="Row" id="preForm">
-<h3 ><?=translate('Contact InFocus')?></h3><span><?=$pageText['LearnAbout']?></span><br>
-<div class="C5 Col"><h5><?=translate('Sales and General Inquiries')?></h5>
-<div><?=$pageText['Help']?>
-</div>
-<p><button type="button" onclick="showForm('Sales');"><?=translate('Send Sales a Question')?></button></p>
-
-<div>
-<h6><?=translate('Other Resources')?></h6>
-> <a class="subtle" href="/reseller-locator" target="_parent"><?=translate('Find a Reseller')?></a><br>
-> <a class="subtle" href="/product-finder" target="_parent"><?=translate('Find a Product')?></a><br>
-</div>
-</div><div class="C5 Col contact-support" >
-<h5><?=translate('Support')?></h5>
-<p><?=$pageText['Own']?> </p>
-
-<div><h6><?=$pageText['Failure']?></h6>
-<p><?=$pageText['Power']?></p>
-<p><button type="button" <?php if($lang=="en"){echo'href="#USCanada-popup" class="colorbox-inline"';}else{echo 'onclick="showForm(\'RMA\');"';}?>><?=translate('Create a Service Request')?></button>
-</div>
-<div>
-<h6><?=$pageText['General']?></h6>
-<p><?=$pageText['Lumens']?></p>
-<p><button type="button" onclick="showForm('TS');"><?=translate('Send Tech Support a Question')?></button> </p>
-</div>
-<p><?=translate('Or call us at 877-388-8360 (US and Canada)')?></p>
-
-<p><a onclick="$('#phoneHours').toggle(500)"><?=translate('See phone numbers and hours for worldwide tech support')?> &darr;</a></p>
-<style>
-
+.C5 {
+	float: left;
+	display: block;
+	width: 33.33333333% !important;
+	box-sizing: border-box;
+}
+@media screen and (max-width: 1090px) {
+	h3 {
+		text-align: left;
+    	padding-right: 2em;
+    	padding-left: 0.5em;
+	}
+	h5 {
+		padding-top: 1rem;
+	}
+	.C5 {
+		width: 100% !important;
+	}
+	p.contact-about,
+	p.techOnly,
+	p.salesOnly {
+		text-align: left;
+		padding: 1rem 1rem 0rem;
+	}
+}
 table.contact-table tr:nth-child(n+3) td:first-child{padding-left:40px;}
 table.contact-table tr td:first-child{width:60px;}
 table.contact-table td{ padding: 1px 6px;}
@@ -250,30 +258,59 @@ table.contact-table{
 	margin-bottom:20px;
 }
 </style>
- <div id="phoneHours" style="display:none">
-<?=$contactTables?>
-</div>
-<br>
-<div>
-<h6><?=translate('Other Resources')?></h6>
-> <a class="subtle" href="/resources/forms/projectioncalculator"><?=translate('Projection Calculator')?></a><br>
-> <a class="subtle" href="/support/warrantyvt.php"><?=translate('Check Status of Your Warranty')?></a><br>
-> <a class="subtle" href="/support/authorized-service-centers" target="_parent"><?=translate('Find a Service Provider')?></a><br>
-</div>
-</div>
-</div>
-
-</form>
-<div id="ContactForm" style="display:none">
-<h3 class="techOnly"><?=translate('Contact InFocus Technical Support')?></h3><span class="techOnly"><?=$pageText['TechText']?></span><br>
-
-<h3 class="salesOnly"><?=translate('Contact InFocus Sales')?></h3><span class="salesOnly"><?=$pageText['SalesText']?></span><br>
-
-<form action="" id="contactForm" method="POST" name="ContactForm" enctype="multipart/form-data" >
-
-<input type="hidden" name="type" id="type" value="">
-
- <ul class="wrap">
+ </HEAD>
+<body style="max-width:1200px;background: #f2f2f0;" >
+	<div id="clearContainer" style="padding: 15px;">
+		<form>
+			<input type="hidden" id="req_id" name="req_id" value="">
+			<div class="Row" id="preForm">
+				<h3><?=translate('Contact InFocus')?></h3>
+				<p class="contact-about"><?=$pageText['LearnAbout']?></p>
+				<div class="C5 Col">
+					<h5><?=translate('Sales and General Inquiries')?></h5>
+					<div><?=$pageText['Help']?></div>
+					<p><button type="button" onclick="showForm('Sales');"><?=translate('Send Sales a Question')?></button></p>
+					<div>
+						<h6><?=translate('Other Resources')?></h6>
+						<a class="subtle" href="/reseller-locator" target="_parent"><?=translate('Find a Reseller')?></a><br>
+						<a class="subtle" href="/product-finder" target="_parent"><?=translate('Find a Product')?></a><br>
+					</div>
+				</div>
+				<div class="C5 Col contact-support">
+					<h5><?=translate('Support')?></h5>
+					<p><?=$pageText['Own']?></p>
+					<p><b><?=$pageText['Failure']?></b> <?=$pageText['Power']?></p>
+					<p>
+						<button type="button" <?php if($lang=="en"){echo'href="#USCanada-popup" class="colorbox-inline"';}else{echo 'onclick="showForm(\'RMA\');"';}?>><?=translate('Create a Service Request')?></button>
+					</p>
+					<p><b><?=$pageText['General']?></b> <?=$pageText['Lumens']?></p>
+					<p><button type="button" onclick="showForm('TS');"><?=translate('Send Tech Support a Question')?></button> </p>
+				</div>
+				<div class="C5 Col">
+					<h5><?=translate('Get in Touch') ?></h5>
+					<p><?=translate('Or call us at 877-388-8360 (US and Canada)')?></p>
+					<p><button onclick="$('#phoneHours').toggle(500);return false;"><?=translate('See Full Directory')?></button></p>
+ 					<div id="phoneHours" style="display:none">
+						<?=$contactTables?>
+					</div>
+					<br>
+					<div>
+						<h6><?=translate('Other Resources')?></h6>
+						<a class="subtle" href="/resources/forms/projectioncalculator"><?=translate('Projection Calculator')?></a><br>
+						<a class="subtle" href="/support/warrantyvt.php"><?=translate('Check Status of Your Warranty')?></a><br>
+						<a class="subtle" href="/support/authorized-service-centers" target="_parent"><?=translate('Find a Service Provider')?></a><br>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div id="ContactForm" style="display:none">
+			<h3 class="techOnly"><?=translate('Contact InFocus Technical Support')?></h3>
+			<p class="techOnly"><?=$pageText['TechText']?></p>
+			<h3 class="salesOnly"><?=translate('Contact InFocus Sales')?></h3>
+			<p class="salesOnly"><?=$pageText['SalesText']?></p><br>
+			<form action="" id="contactForm" method="POST" name="ContactForm" enctype="multipart/form-data" >
+				<input type="hidden" name="type" id="type" value="">
+				<ul class="wrap">
 <li class="techOnly">
  <label class="top" for="serial_number"><?=translate('Serial Number')?>: </label>
  <input name="serial_number" id="contactForm_serial_number" type="text" onkeyup="checkSN(this.value);" onchange="checkSNShort(this.value);" >
@@ -416,12 +453,12 @@ table.contact-table{
 
 <input id="optin" name="optin" class="css-checkbox" type="checkbox" value="Yes"/>
 <label for="optin" style="margin-bottom:1.5em;" class="css-label"><?=translate('Yes, I would like to receive news and special deals from InFocus.')?></label>
+<p class="privacy"><?php echo $pageText['PrivacyReview'];?></p>
 
 <div id="contactForm_ao_submit_button">
 <button id="contactForm_ao_submit_input" type="button" onClick="doSubmit(document.getElementById('contactForm'),abu,emea,apac)"><?=translate('Send')?></button>
 </div>
 
-<p><?php echo $pageText['PrivacyReview'];?></p>
 <input type="hidden" id="name" name="name">
 <input type="hidden" name="ao_p"      id="ao_p"      value="0">
 <input type="hidden" name="ao_bot"    id="ao_bot"	value="yes">
