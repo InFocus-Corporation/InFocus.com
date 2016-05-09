@@ -7,6 +7,26 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
     .hero_row{
         border-left:
     }
+    div.hero_row.hero-row--header_module_c {
+        background-image: url('/resources/static/images/teach/InFocus-Lifestyle-JTouch-K12-MuscleDiagram-300dpi-CMYK.jpg');
+    }
+    div.feature_module_jtouch {
+        position: relative;
+        background: url('/resources/static/images/teach/JTouch-classroom.jpg');
+        background-size: cover;
+        height: 825px;
+    }
+    div.feature_module_jtouch h2.lead_text--secondary_headline {
+        position: absolute;
+        top: 50%;
+        margin: -70px 2em 0;
+        color: #FFF;
+        background: url('/resources/static/images/teach/play_button.png') left center no-repeat;
+        padding-left: 2em;
+    }
+    div.feature_module_a {
+        background: url('/resources/static/images/teach/distance-learning-fire.jpg') right -45px top no-repeat;
+    }
     .feature_module_a .feature_text.orange {
         background-color: rgba(232,119,34,.88);
     }
@@ -21,8 +41,28 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
         font-weight: 300;
         padding: 0 1em;
     }
-    .feature_module_b .feature_text.grey {
+    div.feature_module_b .module_image {
+        background: url('/resources/static/images/teach/InFocus-Lifestyle-JTouch-Whiteboard-Classroom-Molecules-300dpi-CMYK.jpg') no-repeat;
+        background-size: cover;
+        height: 615px;
+    }
+    div.feature_module_b .medium-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    div.feature_module_b .feature_text.grey {
+        padding-top: 30px;
+        margin-top: -290px;
         background-color: rgba(63,74,84,.88)      
+    }
+    div.feature_module_b .feature_links {
+        margin-bottom: 35px;
+    }
+    div.feature_module_b .lead_text--secondary_headline {
+        margin-bottom: 1.3rem;
+    }
+    div.feature_module_b .lead_text--paragraph {
+        line-height: 1.4;
     }
     .text_module_a h1.lead_text--headline {
         font-weight: 300;
@@ -96,8 +136,16 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     </div>
     <!-- END TEXT MODULE A -->
     <br><br><br>
+    <!-- FEATURE MODULE JTOUCH -->
+    <div class="feature_module_jtouch">
+        <div class="row">
+            <h2 class="lead_text--secondary_headline">See how JTouch invigorated<br>a 5th grade classroom</h2>
+        </div>
+    </div>
+    <!-- END FEATURE MODULE JTOUCH -->
+    <br><br>
     <!-- FEATURE MODULE A -->
-    <div class="row feature_module_a ">
+    <div class="row feature_module_a">
         <div class="small-12 medium-6 columns feature_text orange">
             <h3 class="lead_text--secondary_headline">Distance<br>learning within<br>reach</h3>
             <p class="lead_text--paragraph">Students, teachers or guest speakers can join your class or training from remote locations with high-quality, reliable and affordable video conferencing solutions.</p>
@@ -116,7 +164,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <br><br><br>
     <!-- FEATURE MODULE B -->
     <div class="row feature_module_b">
-        <div class="small-12 columns">
+        <div class="small-12 medium-12 columns">
             <div class="module_image">
                 
             </div>
