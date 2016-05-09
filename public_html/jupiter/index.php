@@ -4,7 +4,7 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '"/>' . PHP_EOL;
 ?>
 
-<title>InFocus | Present</title>
+<title>InFocus | Jupiter Systems</title>
 <meta name="description" content="Discover advanced projection equipment offered by InFocus. Global leader in LCD projectors and DLP projection, Mondopad products and projector accessories." />
 <meta name="keywords" content="infocus,mondopad,projector,projection,DLP,LCD,LCD display,digital display,visual communications,projector accessories,infocus company,digital technology,projection equipment,monopad, communication, touchscreen" />
 
@@ -78,7 +78,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
           <a href="http://www.jupiter.com/support/faq/general" class="text_module_link">FAQ</a>
       </div>
       <div class="small-12 large-4 columns text-center">
-          <h4 class="text--gray">We're here for you</h4>
+          <h4 class="text--gray"><br>We're here for you</h4>
           <p class="lead_text--paragraph">
               If you haven't found what you need, please call us at 877-388-8360
           </p>
