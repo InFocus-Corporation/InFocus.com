@@ -53,27 +53,27 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 Plug in any notebook, tablet or smartphone to an InFocus projector or display via HDMI, VGA, USB and more.
             </p>
             <br>
-            <a href="#" class="text_module_link">View Projectors</a>
+            <a href="/projectors/" class="text_module_link">View Projectors</a>
             <br>
-            <a href="#" class="text_module_link">View Touchscreens</a>
+            <a href="/displays/" class="text_module_link">View Touchscreens</a>
         </div>
         <div class="small-12 large-4 columns text-center">
             <p class="lead_text--paragraph">
                 Project wirelessly from any device with InFocus wireless-ready projectors or a wireless adapter connected to any projector.
             </p>
             <br>
-            <a href="#" class="text_module_link">Wireless Projectors</a>
+            <a href="/wireless-projector-lineup/" class="text_module_link">Wireless Projectors</a>
             <br>
-            <a href="#" class="text_module_link">LiteShow 4 Wireless Adapter</a>
+            <a href="/peripherals/INLITESHOW4" class="text_module_link">LiteShow 4 Wireless Adapter</a>
         </div>
         <div class="small-12 large-4 columns text-center">
             <p class="lead_text--paragraph">
                 Share content on an LCD display in seconds with a wireless-equipped touchscreen display or any LCD display with a wireless adapter.
             </p>
             <br>
-            <a href="#" class="text_module_link">Wireless Touchscreens</a>
+            <a href="/displays/JTOUCH-LightCast-SERIES" class="text_module_link">Wireless Touchscreens</a>
             <br>
-            <a href="#" class="text_module_link">LiteShow 4 Wireless Adapter</a>
+            <a href="/peripherals/INLITESHOW4" class="text_module_link">LiteShow 4 Wireless Adapter</a>
         </div>
     </div>
     <!-- END MULTICOLUMN TEXT MODULE -->
@@ -89,7 +89,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     			<p class="lead_text--paragraph">Take notes, draw and save the work with the same touchscreen device you're presenting on. It's the efficient, economical, and odor-free answer to dry erase.</p>
                 <br><br>
                 <div class="feature_links">
-                    <a href="#" class="feature_link">View Whiteboard Displays</a><br>
+                    <a href="/displays/JTOUCH-Series" class="feature_link">View Whiteboard Displays</a><br>
                 </div>
 
             </div>
@@ -109,9 +109,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             <p class="lead_text--paragraph">
                 Share and capture vital information in small spaces with compact short throw projectors or 40" rotate-able whiteboard displays.
             </p>
-            <a href="#" class="text_module_link">Short Throw Projectors</a>
+            <a href="/projectors/short-throw" class="text_module_link">Short Throw Projectors</a>
             <br>
-            <a href="#" class="text_module_link">DigiEasel Whiteboard Display</a>
+            <a href="/displays/DigiEasel-Series" class="text_module_link">DigiEasel Whiteboard Display</a>
         </div>
         <div class="small-12 large-4 columns text-center">
             <img src="/resources/static/images/present/present-conference.svg" alt="" class="present-page-icon"/>
@@ -122,9 +122,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             <p class="lead_text--paragraph">
                 Find the ideal display device from our broad selection to fit your unique meeting room, budget, and workflow.
             </p>
-            <a href="#" class="text_module_link">Office Projectors</a>
+            <a href="/projectors/office-classroom" class="text_module_link">Office Projectors</a>
             <br>
-            <a href="#" class="text_module_link">Touchscreen Displays</a>
+            <a href="/displays/" class="text_module_link">Touchscreen Displays</a>
         </div>
         <div class="small-12 large-4 columns text-center">
             <img src="/resources/static/images/present/present-auditoriums.svg" alt="" class="present-page-icon"/>
@@ -135,7 +135,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             <p class="lead_text--paragraph">
                 Install these powerfully bright and feature-packed projectors in large rooms that demand the best image quality.
             </p>
-            <a href="#" class="text_module_link">Large Venue Projectors </a>
+            <a href="/projectors/large-venue" class="text_module_link">Large Venue Projectors </a>
         </div>
     </div>
     <!-- END MULTICOLUMN ICON AND TEXT MODULE -->
@@ -146,9 +146,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<h3 class="lead_text--secondary_headline">PC-less presenting</h3>
 			<p class="lead_text--paragraph">Load your projector's internal memory with common or shared files and quickly present them without a computer. Or project files directly from a USB thumb drive, which is convenient for guests or when traveling.</p>
             <div class="feature_links">
-                <a href="#" class="feature_link">IN2120A Network Projectors</a><br>
-                <a href="#" class="feature_link">IN1110 Mobile Projectors</a><br>
-                <a href="#" class="feature_link">IN1146 Mobile LED Projector</a>
+                <a href="/projectors/IN2120a-Series" class="feature_link">IN2120A Network Projectors</a><br>
+                <a href="/projectors/IN1110" class="feature_link">IN1110 Mobile Projectors</a><br>
+                <a href="/projectors/IN1146" class="feature_link">IN1146 Mobile LED Projector</a>
             </div>
 		</div>
 		<div class="small-12 medium-6 columns color_stripe_column">
@@ -174,7 +174,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 </p>
             </div>
             <div class="module_links">
-                <a href="#" class="promo_module_link">
+                <a href="/product-finder" class="promo_module_link">
                     Projector Finder
                 </a>
             </div>
@@ -189,11 +189,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 </p>
             </div>
             <div class="module_links">
-                <a href="#" class="promo_module_link first_link">
+                <a href="/teach/" class="promo_module_link first_link">
                     Teaching &amp; <br>
                     Training Solutions
                 </a>
-                <a href="#" class="promo_module_link">
+                <a href="/collaborate/" class="promo_module_link">
                     Collaboration <br>
                     Solutions
                 </a>
@@ -209,7 +209,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             <p class="lead_text--paragraph">
                 Sharing your ideas takes courage. Our technology works with you and helps you do your best. Plus, our US-based support team is here to help you, as we have been since we pioneered the digital projector nearly 30 years ago.
             </p>
-            <a href="#" class="text_module_link">
+            <a href="/about" class="text_module_link">
                 Learn more about us
             </a>
         </div>
