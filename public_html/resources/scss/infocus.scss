@@ -96,7 +96,10 @@ header + .hero_row > .row { margin-top: 0px;}
     background: url('../static/images/projectors/InFocus-Lifestyle-Projector-Screen-2-300dpi-96dpi-RGB.jpg') right -326px top no-repeat;
   }
   &.hero-row--touchscreens {
-      background: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg') right -326px top no-repeat;
+    background: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg') right -326px top no-repeat;
+  }
+  &.hero-row--display_walls {
+    background: url('../static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg') right -125px top no-repeat;
   }
   &.hero-row--header_module_c {
     background: url('../static/images/present/present-hero.jpg') left top no-repeat;
