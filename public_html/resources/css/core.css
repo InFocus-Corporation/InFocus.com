@@ -1154,7 +1154,9 @@ form li{
 form p.privacy {
 	font-size: 0.8rem;
 }
-
+form span.required {
+	color: #f00;
+}
 
 
 

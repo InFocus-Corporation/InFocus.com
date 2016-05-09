@@ -380,7 +380,13 @@ return { input: input, inputSelector: inputSelector, textarea: valueSelector, se
 };
 var requiredFields = new Array(); 
 var requiredFieldGroups = new Array(); 
-addRequiredField = function (id) { requiredFields.push (id); };
+addRequiredField = function (id) {
+  requiredFields.push (id);
+  var $label = $('#'+id).closest('li').find('label');
+  if(!$label.find('span.required').length) {
+    $label.append('<span class="required">*</span>');
+  }
+};
 addRequiredFieldGroup = function (id, count) { requiredFieldGroups.push ([id, count]); };
 missing = function (fieldName) { 
   var f = document.getElementById(fieldName); 

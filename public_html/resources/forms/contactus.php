@@ -384,10 +384,11 @@ table.contact-table{
 </li>
 <li>
 <li  >
-<label class="top" for = "contactForm_email">
-<?=translate('Email Address')?>:<span style="color: #FF0000; cursor: default" title="Required Field" id="ContactForm_email-Label">
-&nbsp;&nbsp;&nbsp;</span></label>
-<input type="text" id="contactForm_email" name="email1" value="<?=$_GET['email1']?>" onBlur="singleCheck ('ContactForm_email', 'EMAIL', 'ContactForm_email-Label')">
+	<label class="top" for = "contactForm_email">
+		<?=translate('Email Address')?>:
+		<span style="color: #FF0000; cursor: default" title="Required Field" id="ContactForm_email-Label">&nbsp;&nbsp;&nbsp;</span>
+	</label>
+	<input type="text" id="contactForm_email" name="email1" value="<?=$_GET['email1']?>" onBlur="singleCheck ('ContactForm_email', 'EMAIL', 'ContactForm_email-Label')">
 </li>
 <li class="techOnly">
  <label class="top" for="second_name"><?=translate('Secondary Contact Name')?>: </label>
@@ -412,7 +413,7 @@ table.contact-table{
 </li>
 <li>
 
- <label class="top" for="Business Country"><?=translate('Country')?>: </label>
+ <label class="top" for="Business Country"><?=translate('Country')?>: <span class="required">*</span></label>
  <select type="text" name="Business Country" id="contactForm_Business Country" onchange="if(this.value == 'US' || this.value == 'CA'){$('#stateContainer').show();$('#zipContainer').show();}else{$('#stateContainer').hide();$('#zipContainer').hide();}" >
  <option value=""><?=translate('Required')?></option>
 <?php  
@@ -442,7 +443,7 @@ table.contact-table{
 
 
 
-<li><label class="top" for="notes"><?=translate('Notes')?>: </label>
+<li><label class="top" for="notes"><?=translate('Notes')?>: <span class="required">*</span></label>
 <textarea id="contactForm_notes" type="text" name="description" rows="6" placeholder="Required"></textarea></li>
 
 <li class="techOnly"><label class="top" for="file"><?=translate('Attach File')?>: </label>
