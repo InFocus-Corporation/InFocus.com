@@ -91,6 +91,8 @@ header + .hero_row > .row { margin-top: 0px;}
   }
   &.hero-row--video_conferencing {
     background: url('../static/images/video-conferencing/video-conferencing-hero-a--InFocus-Lifestyle-ConX-Exec-Mtg1-300dpi-CMYK.jpg') right -38px top no-repeat;
+    background-size: 1055px 799px;
+
   }
   &.hero-row--header_module_c {
     background: url('../static/images/present/present-hero.jpg') left top no-repeat;
