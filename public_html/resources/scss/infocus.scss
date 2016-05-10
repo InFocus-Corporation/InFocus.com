@@ -69,6 +69,11 @@ header + .hero_row > .row { margin-top: 0px;}
       max-width: 77px;
       width:100%;
     }
+    &.orange {
+      @include background-opacity($infocus_orange);
+      max-width: 77px;
+      width:100%;
+    }
     &.white {
       background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
       width: 92px;
@@ -151,10 +156,15 @@ header + .hero_row > .row { margin-top: 0px;}
         max-width: 115px;
         width: 115px;
     }
+    .color_stripe.orange, .color_stripe.white {
+        max-width: 115px;
+        width: 115px;
+    }
     .color_stripe.white {
         margin-left: 86px !important;
     }
   }
+
   .lead_text {
     > :first-child {  margin-top: 10rem; }
     height: 699px;
@@ -413,6 +423,22 @@ header + .hero_row > .row { margin-top: 0px;}
     }
 }
 
+div.video_module {
+  position: relative;
+  background: url('/resources/static/images/teach/JTouch-classroom.jpg');
+  background-size: cover;
+  height: 825px;
+  h2.lead_text--secondary_headline {
+    position: absolute;
+    top: 50%;
+    margin: -70px 2em 0;
+    color: #FFF;
+    background: url('/resources/static/images/teach/play_button.png') left center no-repeat;
+    padding-left: 2em;
+  }
+}
+
+
 //Vertical Accordion
 .vertical_accordian {
   margin-left: .9375rem;
@@ -575,4 +601,124 @@ header + .hero_row > .row { margin-top: 0px;}
 // Present page
 .present-page-icon {
     stroke: $infocus_orange;
+}
+
+// Peripherals Page
+.peripherals_home {
+    .hero-row--peripherals_home {
+      background: url('../static/images/peripherals/peripherals_cam.jpg') right -125px top no-repeat;
+    }
+    .dark_blue.color_stripe {
+        width: 70px;
+    }
+    .product_shot {
+        margin-bottom: 20px;
+    }
+
+}
+
+// Support Page
+.support-page {
+
+  h6 {
+    font-family: 'GoodPro-WideBook';
+    font-weight: bold;
+  }
+
+  .ui-widget {
+    .custom-combobox-input {
+      border: 1px solid #b7b7b7;
+      background: #fff !important;
+      font-family: 'GoodPro-Wide';
+      border-radius: 2px 0 0 2px;
+      height: 33px;
+    }
+    .custom-combobox-toggle {
+      position: relative;
+      top: 0;
+      left: 0;
+      background-image: none;
+      background-color: #8c8c8c;
+      border: none;
+      border-radius: 0px 2px 2px 0px;
+      width: 32px;
+      height: 33px;
+      padding: 0;
+      margin: 0 0 0 -1px;
+      vertical-align: top;
+
+      &>.ui-icon-triangle-1-s {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        font-family: 'FontAwesome';
+        font-size: 1rem;
+        line-height: normal;
+        color: #fff;
+        background-image: none;
+
+        width: 32px;
+        height: 32px;
+        font-size: 1.4rem;
+        text-align: center;
+        margin: 5px 0 0;
+        text-indent: 0;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        &::before {
+          content: "\f107";
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .Button-1 {
+    background: transparent;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:2px solid #006fba;
+    display:inline-block;
+    color:#006fba;
+    font-family: 'GoodPro-Wide', Arial, sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    padding: 8px 24px;
+    margin: 0;
+    text-transform: uppercase;
+    text-decoration:none;
+    letter-spacing: 1px;
+  }
+
+  table {
+    border:none;
+
+    tbody {
+      border: none;
+
+      tr {
+        border: none;
+
+        &>td {
+          border: none;
+          color: #343e48;
+          text-align: left;
+          background-color: #fff;
+        }
+        &:nth-child(2n-1)>td {
+          background-color: #f2f2f2;
+
+        }
+        &>th {
+          font-weight: bold;
+          background-color: #fff;
+          padding: 1rem .625rem 1rem;
+        }
+      }
+    }
+  }
 }
