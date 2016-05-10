@@ -85,6 +85,23 @@ $(function () {
 			href: href
 		});
 	});
+	$('a[href="/resources/forms/projectioncalculator"]').click(function (e) {
+		e.preventDefault();
+
+		var width = "80%",
+			height= 400;
+		if(window.screen.width<1090) {
+			width = "100%";
+			height= window.screen.height;
+		}
+
+		$.colorbox({
+			iframe: true,
+			innerWidth: width,
+			innerHeight:height,
+			href: "/resources/forms/projectioncalculator"
+		});
+	});
 	$('.mobile-menu').click(function (e) {
 		e.stopPropagation();
 		$(this).closest('header').toggleClass('open');
