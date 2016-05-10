@@ -49,7 +49,7 @@ body {
 $(document).ready(function() {
     parent.$.colorbox.resize({
         innerWidth:$('body').width()+20,
-        innerHeight:$('body').height()+60
+        innerHeight:$('body').height()
     });	});
 
 /*if(self==top){window.location = "/#projectioncalculator";}
@@ -4183,12 +4183,6 @@ getMinMaxDist();
             </div>
         </div>
     </div>
-
-    <footer class="footer">
-      <div class="container">
-      </div>
-    </footer>
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
