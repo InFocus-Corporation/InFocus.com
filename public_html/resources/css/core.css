@@ -1077,6 +1077,7 @@ form select:focus {
 	background-position: right center;
 	background-size: auto auto;
 	background-repeat: no-repeat;
+    padding-right: 45px;
 }
 form select::-ms-expand {
     display: none;
