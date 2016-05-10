@@ -50,7 +50,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<span>For Public Sector</span>
 						</div>
 						<a href="#public">
-							<h2>Lorem ipsum dolor sit amet.</h2>
+							<h2>Enable full situational awareness</h2>
 							<h5>Our visualization solutions help emergency, utility, military, and other critical sectors track their operations.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
@@ -67,7 +67,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<span>for education</span>
 						</div>
 						<a href="#education">
-							<h2>Lorem ipsum dolor sit amet.</h2>
+							<h2>Elevate the classroom experience</h2>
 							<h5>Is it possible to share informations with students in a better, more engaging and powerful way? We think so.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
@@ -84,7 +84,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<span>for business</span>
 						</div>
 						<a href="#business">
-							<h2>Lorem ipsum dolor sit amet.</h2>
+							<h2>Improve profitability and teamwork</h2>
 							<h5>From the cubicle to the command center, our technologies can improve the way people at all levels of your company work.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
