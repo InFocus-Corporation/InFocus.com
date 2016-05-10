@@ -1,5 +1,4 @@
 <?php
-
 //Check if post value exists
 if(!empty($_POST['first_name'])){
 
@@ -612,54 +611,63 @@ function checkSN(Serial){
 background-color:transparent;
 }
 </style>
- </HEAD>
+<link type="text/css" rel="stylesheet" href="/resources/css/font-awesome.min.css">
+</HEAD>
 <body style="max-width:1200px;background: #f7f7f7;">
 <?php 
-if($_GET['euwar'] == 1){echo '<span style="position:absolute;right:90px;font-size:75%;">Language:<a href="?euwar=1&lang=DE"> DE </a><a href="?euwar=1&lang=EN"> EN </a><a href="?euwar=1&lang=ES"> ES </a><a href="?euwar=1&lang=FR"> FR </a><a href="?euwar=1&lang=IT"> IT </a><a href="?euwar=1&lang=SV"> SV </a></span>';}
-?>
+if($_GET['euwar'] == 1){
+	echo '<span style="position:absolute;right:90px;font-size:75%;">Language:<a href="?euwar=1&lang=DE"> DE </a><a href="?euwar=1&lang=EN"> EN </a><a href="?euwar=1&lang=ES"> ES </a><a href="?euwar=1&lang=FR"> FR </a><a href="?euwar=1&lang=IT"> IT </a><a href="?euwar=1&lang=SV"> SV </a></span>';
+} ?>
 
 <div id="predownload" style="<?php if($_GET['regdl']!="TRUE"){echo "display:none;";} ?>">
-<?php echo $pageText['First'];?><br>
- <input maxlength="128" name="serial_numberpre" id="serial_numberpre" size="60" type="text" onchange="isRegistered(this.value);" required>
+	<?php echo $pageText['First'];?><br>
+	<input maxlength="128" name="serial_numberpre" id="serial_numberpre" size="60" type="text" onchange="isRegistered(this.value);" required>
 	<br><button><?=translate('Check')?></button>
- </div>
+</div>
 
 <section id="mpheaders" style="display:none;">
-<?php echo $pageText['registerMP'];?>
+	<?php echo $pageText['registerMP'];?>
 </section>
 
 <section  id="headers" style="margin-left:40px;<?php if($_GET['regdl']=="TRUE"){echo "display:none;";} ?>">
-<h3 style="text-transform: capitalize" ><?=translate('Product Registration')?></h3>
-<?php 
-if($_GET['euwar'] == 1){echo $pageText['euwartxt'];}
-    else{echo '<strong>'.$pageText['Processing'].'</strong><br>'.$pageText['StartDate'];}?>
+	<h3 style="text-transform: capitalize;margin-top:3rem;" ><?=translate('Product Registration')?></h3>
+	<?php
+	if($_GET['euwar'] == 1) {
+		echo $pageText['euwartxt'];
+	} else {
+    	echo '<strong>'.$pageText['Processing'].'</strong><br>'.$pageText['StartDate'];
+	}?>
 </section>
 <form action="" style="<?php if($_GET['regdl']=="TRUE"){echo "display:none;";} ?>" id="register" accept-charset="UTF-8" method="post" enctype="multipart/form-data">
 
 <table id="invoicetable" style="margin-bottom:20px;<?php if($_GET['euwar']==1){echo "display:none;";} ?>">
-<tbody><tr class="odd">
-<td align="Left" width="50"></td>
-<td style="text-align:Left"><?php echo $pageText['POP'];?>:</td>
-<td rowspan="5" style="vertical-align:middle"><label class="top" for="invoice"><?=translate('Invoice')?>: </label>
- <input name="file" id="invoice" size="60" type="file"></td>
-</tr>
-<tr>
-<td></td>
-<td><?php echo $pageText['Price'];?></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><?=translate('Date')?></td>
-</tr>
-<tr>
-<td></td>
-<td><?php echo $pageText['Vendor'];?></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td><?php echo $pageText['SerialNumber'];?></td>
-</tr>
-</tbody></table>
+	<tbody>
+		<tr>
+			<td></td>
+			<td><?= $pageText['POP'] ?>:</td>
+			<td rowspan="5">
+				<label class="top" for="invoice"><?=translate('Invoice')?>:</label>
+				<input name="file" id="invoice" size="60" type="file">
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><?= $pageText['Price']?></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><?= translate('Date')?></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><?= $pageText['Vendor']?></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><?= $pageText['SerialNumber']?></td>
+		</tr>
+	</tbody>
+</table>
 
 
  <span id="notification"></span>
@@ -756,27 +764,38 @@ $displayedCountries = array('AF','SA','BH','AE','IQ','DZ','KW','MA','JO','YE','A
  </select>
 </li>
 <li style="<?php if($_GET['euwar']==1){echo "display:none;";} ?>">
-     <TABLE class="rounded-corner" id="dataTable">
-   <TR><TH width="225px"><label class="top" for="ewCode"><?=translate('Warranty Extension')?><br><?=translate('Or Service Code(s)')?> </label></TH></TR>
-       <TR style="">
-            <TD><INPUT type="text" name="ewCode[]" class="ewCode" onkeyup="document.getElementById('submit').disabled=true;" onchange="	   if(this.value.substr(0,3)=='MPT'){this.value='';alert('The key you entered is for a Training session and cannot be registered on this form. Please go to http://www.infocus.com/mptraining');}else{validate();}"/><br>
+	<TABLE class="rounded-corner" id="dataTable">
+		<TR>
+			<TH>
+				<label class="top" for="ewCode"><?=translate('Warranty Extension')?><br><?=translate('Or Service Code(s)')?></label>
+			</TH>
+		</TR>
+		<TR style="">
+			<TD style="text-align:left">
+				<INPUT type="text" 
+					   name="ewCode[]" 
+					   class="ewCode"
+					   onkeyup="document.getElementById('submit').disabled=true;"
+					   onchange="if(this.value.substr(0,3)=='MPT'){this.value='';alert('The key you entered is for a Training session and cannot be registered on this form. Please go to http://www.infocus.com/mptraining');}else{validate();}"/>
+				<br>
 			</TD>
-        </TR>
-   </TABLE>
-   
+		</TR>
+	</TABLE>
 
-<div style="">
-<button type="button" id="btn" class="formbutton" style="" value="+" onclick="addRow('dataTable')"  >+
-<button type="button" style="" value="-" id="deletebtn" class="formbutton" onclick="deleteRow('dataTable');validate();" >-</button>
+	<button type="button" id="btn" class="formbutton" value="+" onclick="addRow('dataTable')">+</button>
+	<button type="button" id="deletebtn" class="formbutton" value="-" onclick="deleteRow('dataTable');validate();" >-</button>
+	</li>
+</ul>
 
- 
- 
- </li></ul>
-
-<input id="optin" name="optin" class="css-checkbox" type="checkbox" value="Yes"/>
-<label for="optin" class="css-label"><?=translate('Yes, I would like to receive news and special deals from InFocus.')?></label>
-<input  id="submit" value="<?= $translate['Submit']?>" type="Submit" onclick="">
-<br><span class="form-required" style="font-size:70%">* <?= $translate['Denotes a Required field']?>.</span>
+<div style="text-align:center;">
+	<input id="optin" name="optin" class="css-checkbox" type="checkbox" value="Yes"/>
+	<label for="optin" class="css-label"><?=translate('Yes, I would like to receive news and special deals from InFocus.')?></label>
+	<br><br>
+	<button id="submit" type="submit"><?= translate('Submit')?></button>
+	<br><br>
+	<br><span class="form-required" style="font-size:70%">* <?= translate('Denotes a Required field')?>.</span>
+</div>
+	
 <p><?php echo $pageText['PrivacyReview'];?></p>
 
  <input name="reqfields" id="reqfields" type="hidden" value="first_name,last_name">

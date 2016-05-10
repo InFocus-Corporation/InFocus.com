@@ -1,4 +1,12 @@
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<link rel="stylesheet" href="/resources/css/core.css" />
+</head>
+<body style="width: 600px;background:#f2f2f0;">
+
+<h3 style="margin-top:3rem;">Warranty</h3>
 
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 
@@ -109,9 +117,11 @@ echo $Result;
 <script>
 $(document).ready(function() { 
     parent.$.colorbox.resize({
-        innerWidth:$('body').width()+16,
-        innerHeight:$('body').height()+55
+        innerWidth: $('body').width()+16,
+        innerHeight: $('body').height()+55
     });
 });
-	
 </script>
+
+</body>
+</html>
