@@ -69,6 +69,11 @@ header + .hero_row > .row { margin-top: 0px;}
       max-width: 77px;
       width:100%;
     }
+    &.orange {
+      @include background-opacity($infocus_orange);
+      max-width: 77px;
+      width:100%;
+    }
     &.white {
       background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
       width: 92px;
@@ -151,10 +156,15 @@ header + .hero_row > .row { margin-top: 0px;}
         max-width: 115px;
         width: 115px;
     }
+    .color_stripe.orange, .color_stripe.white {
+        max-width: 115px;
+        width: 115px;
+    }
     .color_stripe.white {
         margin-left: 86px !important;
     }
   }
+
   .lead_text {
     > :first-child {  margin-top: 10rem; }
     height: 699px;
@@ -413,6 +423,22 @@ header + .hero_row > .row { margin-top: 0px;}
     }
 }
 
+div.video_module {
+  position: relative;
+  background: url('/resources/static/images/teach/JTouch-classroom.jpg');
+  background-size: cover;
+  height: 825px;
+  h2.lead_text--secondary_headline {
+    position: absolute;
+    top: 50%;
+    margin: -70px 2em 0;
+    color: #FFF;
+    background: url('/resources/static/images/teach/play_button.png') left center no-repeat;
+    padding-left: 2em;
+  }
+}
+
+
 //Vertical Accordion
 .vertical_accordian {
   margin-left: .9375rem;
@@ -577,6 +603,21 @@ header + .hero_row > .row { margin-top: 0px;}
     stroke: $infocus_orange;
 }
 
+// Peripherals Page
+.peripherals_home {
+    .hero-row--peripherals_home {
+      background: url('../static/images/peripherals/peripherals_cam.jpg') right -125px top no-repeat;
+    }
+    .dark_blue.color_stripe {
+        width: 70px;
+    }
+    .product_shot {
+        margin-bottom: 20px;
+    }
+
+}
+
+// Support Page
 .support-page {
 
   h6 {
