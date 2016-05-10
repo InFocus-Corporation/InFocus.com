@@ -16,6 +16,9 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
     div.hero_row.hero-row--header_module_c {
         background-image: url('/resources/static/images/teach/InFocus-Lifestyle-JTouch-K12-MuscleDiagram-300dpi-CMYK.jpg');
     }
+    .text_module_a a.text_module_link {
+        font-weight: 700;
+    }
     div.feature_module_a.orange {
         background: url('/resources/static/images/teach/distance-learning-fire.jpg') right -45px top no-repeat;
     }
@@ -27,6 +30,7 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
     }
     .feature_module_a.blue .feature_text {
         background-color: rgba(194,227,238,.88);
+        padding-left: 4em;
     }
     .feature_module_a.blue .feature_text .lead_text--secondary_headline, .feature_module_a.blue .feature_text .lead_text--paragraph {
         color: #333F48;
@@ -37,6 +41,13 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
     }
     .feature_module_a.blue .feature_text .lead_text--paragraph {
         margin-bottom: 1.2em;
+    }
+    .feature_module_a.blue ul li {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+    .feature_module_a.blue .feature_links {
+        left: 4em;
     }
     .feature_module_a .feature_links .feature_link {
         font-size: 14px;
@@ -256,12 +267,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             </div>
         </div>
         <div class="small-12 medium-6 columns color_stripe_column">
-            <div class="white color_stripe"></div>
             <div class="light_blue color_stripe float-right"></div>
         </div>
     </div>
     <!-- END FEATURE MODULE A -->
-    <br><br>
+    <br><br><br>
     <!-- TEXT MODULE -->
     <div class="row text_module">
         <div class="small-8 small-offset-2 columns text-center lead_text">
@@ -275,7 +285,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END TEXT MODULE -->
-    <br><br><br>
+    <br><br><br><br>
 
 	<script>
 	    $(document).foundation();
