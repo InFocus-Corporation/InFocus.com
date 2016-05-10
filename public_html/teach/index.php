@@ -154,7 +154,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 Roll your whiteboard where it's needed most, within the room or between rooms, when you mount the display on a mobile cart.
             </p>
             <br>
-            <a href="/accessories/mondopad-accessories" class="text_module_link">View Mobile Cart</a>
+            <a href="/accessories/mounts/INF-MOBCART" class="text_module_link">View Mobile Cart</a>
         </div>
     </div>
     <!-- END TEXT MODULE A -->
@@ -162,7 +162,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- FEATURE MODULE JTOUCH -->
     <div class="video_module">
         <div class="row">
-            <a href="/displays/JTOUCH-SERIES#videos">
+            <a href="/videos?1GWVuww_dXw">
                 <h2 class="lead_text--secondary_headline">See how JTouch invigorated<br>a 5th grade classroom</h2>
             </a>
         </div>
