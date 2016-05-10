@@ -422,6 +422,22 @@ header + .hero_row > .row { margin-top: 0px;}
     }
 }
 
+div.video_module {
+  position: relative;
+  background: url('/resources/static/images/teach/JTouch-classroom.jpg');
+  background-size: cover;
+  height: 825px;
+  h2.lead_text--secondary_headline {
+    position: absolute;
+    top: 50%;
+    margin: -70px 2em 0;
+    color: #FFF;
+    background: url('/resources/static/images/teach/play_button.png') left center no-repeat;
+    padding-left: 2em;
+  }
+}
+
+
 //Vertical Accordion
 .vertical_accordian {
   margin-left: .9375rem;

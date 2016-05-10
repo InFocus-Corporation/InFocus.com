@@ -7,34 +7,42 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
     .hero_row{
         border-left:
     }
+    .no-pad-left {
+        padding-left: 0 !important;
+    }
+    .no-pad-right {
+        padding-right: 0!important;
+    }
     div.hero_row.hero-row--header_module_c {
         background-image: url('/resources/static/images/teach/InFocus-Lifestyle-JTouch-K12-MuscleDiagram-300dpi-CMYK.jpg');
     }
-    div.feature_module_jtouch {
-        position: relative;
-        background: url('/resources/static/images/teach/JTouch-classroom.jpg');
-        background-size: cover;
-        height: 825px;
-    }
-    div.feature_module_jtouch h2.lead_text--secondary_headline {
-        position: absolute;
-        top: 50%;
-        margin: -70px 2em 0;
-        color: #FFF;
-        background: url('/resources/static/images/teach/play_button.png') left center no-repeat;
-        padding-left: 2em;
-    }
-    div.feature_module_a {
+    div.feature_module_a.orange {
         background: url('/resources/static/images/teach/distance-learning-fire.jpg') right -45px top no-repeat;
     }
-    .feature_module_a .feature_text.orange {
+    div.feature_module_a.blue {
+        background: url('/resources/static/images/teach/166273198.jpg') right -45px top no-repeat;
+    }
+    .feature_module_a.orange .feature_text {
         background-color: rgba(232,119,34,.88);
+    }
+    .feature_module_a.blue .feature_text {
+        background-color: rgba(194,227,238,.88);
+    }
+    .feature_module_a.blue .feature_text .lead_text--secondary_headline, .feature_module_a.blue .feature_text .lead_text--paragraph {
+        color: #333F48;
     }
     .feature_module_a .lead_text--secondary_headline {
         font-size: 3.75rem;
+        line-height: 1em;
+    }
+    .feature_module_a.blue .feature_text .lead_text--paragraph {
+        margin-bottom: 1.2em;
     }
     .feature_module_a .feature_links .feature_link {
         font-size: 14px;
+    }
+    .feature_module_a.blue .feature_links .feature_link {
+        color: #006ba6;
     }
     h4.lead_text--paragraph {
         font-size: 2.3rem;
@@ -45,10 +53,6 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
         background: url('/resources/static/images/teach/InFocus-Lifestyle-JTouch-Whiteboard-Classroom-Molecules-300dpi-CMYK.jpg') no-repeat;
         background-size: cover;
         height: 615px;
-    }
-    div.feature_module_b .medium-12 {
-        padding-left: 0;
-        padding-right: 0;
     }
     div.feature_module_b .feature_text.grey {
         padding-top: 30px;
@@ -66,6 +70,14 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
     }
     .text_module_a h1.lead_text--headline {
         font-weight: 300;
+    }
+    div.promo_modules .promo_module_c .module_image {
+        background: url('/resources/static/images/teach/GettyImages-140872375.jpg') no-repeat;
+        background-size: cover;
+    }
+    div.promo_modules .promo_module_d .module_image {
+        background: url('/resources/static/images/teach/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg') no-repeat;
+        background-size: cover;
     }
 </style>
 
@@ -137,16 +149,18 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- END TEXT MODULE A -->
     <br><br><br>
     <!-- FEATURE MODULE JTOUCH -->
-    <div class="feature_module_jtouch">
+    <div class="video_module">
         <div class="row">
-            <h2 class="lead_text--secondary_headline">See how JTouch invigorated<br>a 5th grade classroom</h2>
+            <a href="#">
+                <h2 class="lead_text--secondary_headline">See how JTouch invigorated<br>a 5th grade classroom</h2>
+            </a>
         </div>
     </div>
     <!-- END FEATURE MODULE JTOUCH -->
     <br><br>
     <!-- FEATURE MODULE A -->
-    <div class="row feature_module_a">
-        <div class="small-12 medium-6 columns feature_text orange">
+    <div class="row feature_module_a orange">
+        <div class="small-12 medium-6 columns feature_text">
             <h3 class="lead_text--secondary_headline">Distance<br>learning within<br>reach</h3>
             <p class="lead_text--paragraph">Students, teachers or guest speakers can join your class or training from remote locations with high-quality, reliable and affordable video conferencing solutions.</p>
             <div class="feature_links">
@@ -164,12 +178,12 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <br><br><br>
     <!-- FEATURE MODULE B -->
     <div class="row feature_module_b">
-        <div class="small-12 medium-12 columns">
+        <div class="small-12 medium-12 columns no-pad-left no-pad-right">
             <div class="module_image">
                 
             </div>
             <div class="feature_text text-center grey">
-                <h2 class="lead_text--secondary_headline">Utilize your hardware and software</h3>
+                <h2 class="lead_text--secondary_headline">Utilize your hardware and software</h2>
     			<p class="lead_text--paragraph">Your IT and finance departments will appreciate that our JTouch Whiteboards and displays work with the computers, tablets and software you already use.</p>
                 <br><br>
                 <div class="feature_links">
@@ -180,40 +194,88 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END FEATURE MODULE B -->
+    <br>
+    <!-- PROMO MODULES C & D-->
+    <div class="row promo_modules">
+        <div class="small-12 large-6 columns promo_module_d">
+            <div class="module_image">
 
-	<div class="row">
-		<div class="small-12 medium-8 columns color_stripe_column">
-			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/video-conferencing/video-conference-conx-wall-conx-exec--ConXWall-Hero-Image-3x4-1B-96dpi-RGB.jpg" alt="">
-		</div>
-		<div class="small-12 medium-4 columns">
-			<h3 class="lead_text--secondary_headline">ConX Wall and ConX Exec</h3>
-			<p class="lead_text--paragraph">Instantlybring people together from anywhere in the world to visually collaborate on the same content and do better work in less time.</p>
-			<a href="/conx-wall-exec" class="button button--primary">learn more</a>
-		</div>
-	</div>
+            </div>
+            <div class="module_text">
+                <p class="lead_text--headline">
+                    Find the projector that's right for you.
+                </p>
+                <p class="lead_text--paragraph">
+                    Search by your size, ambient light, connectivity, and more.
+                </p>
+            </div>
+            <div class="module_links">
+                <a href="/product-finder" class="promo_module_link">
+                    Projector Finder
+                </a>
+            </div>
+        </div>
+        <div class="small-12 large-6 columns promo_module_c">
+            <div class="module_image">
 
-
-	<div class="row">
-		<div class="small-12 medium-8 columns color_stripe_column">
-			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/video-conferencing/video-conferencing-conx-phone--ConXWall-Hero-Image-3x4-1B-96dpi-RGB.jpg" alt="">
-		</div>
-		<div class="small-12 medium-4 columns">
-			<h3 class="lead_text--secondary_headline">ConX Phone</h3>
-			<p class="lead_text--paragraph">Instantlybring people together from anywhere in the world to visually collaborate on the same content and do better work in less time.</p>
-			<a href="/peripherals/MVP100" class="button button--primary">learn more</a>
-		</div>
-	</div>
-
-    <div class="row text_module_a">
-        <div class="small-12 columns text-center lead_text">
-            <h1 class="lead_text--headline">Inspire Education Program</h1>
-            <p class="lead_text--paragraph">
-                See engagement and grades go up when the touch technology your students know and love occupies the front of your classroom.
-            </p>
+            </div>
+            <div class="module_text">
+                <p class="lead_text--headline">
+                    Increase your brightness and resolution with a new projector for your interactive board.
+                </p>
+            </div>
+            <div class="module_links">
+                <a href="/teach/" class="promo_module_link first_link">
+                    View Short Throw <br>
+                    Projectors
+                </a>
+                <a href="/collaborate/" class="promo_module_link">
+                    View Smart&trade; Mount <br>
+                    Adapter
+                </a>
+            </div>
         </div>
     </div>
+    <!-- END PROMO MODULES C & D -->
+
+    <br><br><br><br>
+    <!-- FEATURE MODULE A -->
+    <div class="row feature_module_a blue">
+        <div class="small-12 medium-6 columns feature_text">
+            <h3 class="lead_text--secondary_headline">Wireless<br>freedom and<br>flexibility</h3>
+            <p class="lead_text--paragraph">Share content wirelessly from computers and <br> tablets to any projector or display with a VGA or <br> HDMI input with our powerful wireless adapter.</p>
+            <ul>
+                <li>Display up to 4 devices at the same time</li>
+                <li>Moderate who can share their screen</li>
+                <li>Use your smartphone as a document camera</li>
+                <li>Create a secure wireless network access point</li>
+            </ul>
+            <div class="feature_links">
+                <a href="#" class="feature_link">View Lightshow 4 Wireless Adapter</a><br>
+                <a href="#" class="feature_link">Read How A Teacher Uses Liteshow 4</a>
+            </div>
+        </div>
+        <div class="small-12 medium-6 columns color_stripe_column">
+            <div class="white color_stripe"></div>
+            <div class="light_blue color_stripe float-right"></div>
+        </div>
+    </div>
+    <!-- END FEATURE MODULE A -->
+    <br><br>
+    <!-- TEXT MODULE -->
+    <div class="row text_module">
+        <div class="small-8 small-offset-2 columns text-center lead_text">
+            <h1 class="lead_text--headline">Inspire Education Program</h1>
+            <p class="lead_text--paragraph">
+                Your school can get special pricing, extended warranties and complimentary training when you buy select touchscreens or projectors from and authorized Inspire Dealer.
+            </p>
+            <a href="/about" class="text_module_link">
+                Learn how your school can save
+            </a>
+        </div>
+    </div>
+    <!-- END TEXT MODULE -->
+    <br><br><br>
 
 	<script>
 	    $(document).foundation();
