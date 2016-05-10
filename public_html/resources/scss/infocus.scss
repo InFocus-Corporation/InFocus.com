@@ -155,6 +155,7 @@ header + .hero_row > .row { margin-top: 0px;}
         margin-left: 86px !important;
     }
   }
+
   .lead_text {
     > :first-child {  margin-top: 10rem; }
     height: 699px;
@@ -575,4 +576,18 @@ header + .hero_row > .row { margin-top: 0px;}
 // Present page
 .present-page-icon {
     stroke: $infocus_orange;
+}
+
+// Peripherals Page
+.peripherals_home {
+    .hero-row--peripherals_home {
+      background: url('../static/images/peripherals/peripherals_cam.jpg') right -125px top no-repeat;
+    }
+    .dark_blue.color_stripe {
+        width: 70px;
+    }
+    .product_shot {
+        margin-bottom: 20px;
+    }
+
 }
