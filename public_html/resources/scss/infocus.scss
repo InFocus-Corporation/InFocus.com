@@ -23,7 +23,7 @@ $box_shadow_gray: inset 0 0 0 1000px rgba(51,63,72,.78);
     border-#{$direction}: solid $width rgba($color, $opacity);
 }
 
-$transparent-border-widths: 30, 38, 40, 60, 125;
+$transparent-border-widths: 24, 30, 38, 40, 60, 125;
 $transparent-border-sides: right left;
 
 @each $side in $transparent-border-sides {
@@ -43,7 +43,7 @@ $transparent-border-sides: right left;
   }
 }
 
-$solid-border-widths: 30, 38, 40, 60, 125;
+$solid-border-widths: 24, 30, 38, 40, 60, 125;
 $solid-border-sides: right left;
 
 @each $side in $solid-border-sides {
@@ -152,6 +152,18 @@ header + .hero_row > .row {
         padding-right: 100px;
     }
   }
+  &.hero-row--peripherals_home {
+    background: url('../static/images/peripherals/peripherals_cam.jpg') right -125px top no-repeat;
+    .lead_text>:first-child {
+        margin-top: 88px;
+        padding-left: 100px;
+    }
+    .lead_text--paragraph {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+  }
+
   &.hero-row--projectors {
     background: url('../static/images/projectors/InFocus-Lifestyle-Projector-Screen-2-300dpi-96dpi-RGB.jpg') right -326px top no-repeat;
   }
@@ -160,6 +172,14 @@ header + .hero_row > .row {
   }
   &.hero-row--display_walls {
     background: url('../static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg') right -125px top no-repeat;
+    .lead_text>:first-child {
+        margin-top: 88px;
+        padding-left: 100px;
+    }
+    .lead_text--paragraph {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
   }
   &.hero-row--jupiter {
     background: url('../static/images/jupiter/jupiter-hero-a.jpg') left top no-repeat;
@@ -714,9 +734,6 @@ div.video_module {
 
 // Peripherals Page
 .peripherals_home {
-    .hero-row--peripherals_home {
-      background: url('../static/images/peripherals/peripherals_cam.jpg') right -125px top no-repeat;
-    }
     .dark_blue.color_stripe {
         width: 70px;
     }
