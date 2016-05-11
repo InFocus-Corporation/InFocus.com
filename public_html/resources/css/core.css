@@ -1195,7 +1195,7 @@ form div {
 form div > div {
 	padding: 4px;
 }
-form button {
+form button, button.formbutton {
 	background: transparent;
 	-moz-border-radius:6px;
 	-webkit-border-radius:6px;
@@ -1211,6 +1211,7 @@ form button {
 	text-transform: uppercase;
 	text-decoration:none;
 	letter-spacing: 1px;
+    cursor: pointer;
 }form button:hover {
 }form button:active {
 }
