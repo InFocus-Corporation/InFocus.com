@@ -19,6 +19,11 @@ Primary: #006699, #1D5773, #00557F, #1BA1E2, #5CA7CC, #E1EEF4
   src:  url("../fonts/GoodPro-Light.otf") format("opentype");
 }
 @font-face {
+  font-family: 'GoodPro-WideLight';
+  src:  url("../fonts/GoodPro-WideLight.otf") format("opentype");
+  font-weight: normal;
+}
+@font-face {
   font-family: 'GoodPro';
   src:  url("../fonts/GoodPro-Medium.otf") format("opentype");
   font-weight: bold;
