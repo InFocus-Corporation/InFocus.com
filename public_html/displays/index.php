@@ -35,9 +35,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 
 	</div>
 	<div class="row product_module">
-		<div class="small-8 columns">
+		<div class="small-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="../resources/static/images/touchscreens/InFocus-Lifestyle-Mondopad-DualScreen-LightOffice-300dpi-CMYK.jpg" alt="">
+			<img src="/resources/static/images/touchscreens/InFocus-Lifestyle-Mondopad-DualScreen-LightOffice-300dpi-CMYK.jpg" alt="">
 		</div>
 		<div class="small-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">Mondopad</h3>
@@ -46,7 +46,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 	</div>
 	<div class="row product_module">
-		<div class="small-8 columns">
+		<div class="small-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
 			<img src="../resources/static/images/touchscreens/InFocus-Lifestyle-JTouch-K12-MuscleDiagram-300dpi-CMYK.jpg" alt="">
 		</div>
@@ -57,9 +57,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 	</div>
 	<div class="row product_module">
-		<div class="small-8 columns">
+		<div class="small-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="../resources/static/images/touchscreens/InFocus-DigiEasel-Business-Presentation.jpg" alt="">
+			<img src="/resources/static/images/touchscreens/InFocus-DigiEasel-Business-Presentation.jpg" alt="">
 		</div>
 		<div class="small-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">DigiEasel</h3>
@@ -68,9 +68,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 	</div>
 	<div class="row product_module">
-		<div class="small-8 columns">
+		<div class="small-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="../resources/static/images/touchscreens/InFocus-Lifestyle-QTablet-Construction-300dpi-CMYK.jpg" alt="">
+			<img src="/resources/static/images/touchscreens/InFocus-Lifestyle-QTablet-Construction-300dpi-CMYK.jpg" alt="">
 		</div>
 		<div class="small-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">QTablet</h3>
@@ -79,9 +79,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 	</div>
 	<div class="row product_module">
-		<div class="small-8 columns">
+		<div class="small-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="../resources/static/images/touchscreens/InFocus-INF5711-Win8-Front.jpg" alt="">
+			<img src="/resources/static/images/touchscreens/InFocus-INF5711-Win8-Front.jpg" alt="">
 		</div>
 		<div class="small-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">BigTouch</h3>

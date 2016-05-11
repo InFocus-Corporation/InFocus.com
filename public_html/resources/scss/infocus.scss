@@ -110,7 +110,7 @@ header + .hero_row > .row { margin-top: 0px;}
   &.hero-row--touchscreens {
     background-image: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg');
     background-size: cover;
-    background-position: left 200px 0;
+    background-position: left 280px 0;
     background-repeat: no-repeat;
     @media screen and (min-width: 40em) {
       background-position: left 310px top;
@@ -191,13 +191,47 @@ header + .hero_row > .row { margin-top: 0px;}
       height: 100%;
     }
     .lead_text > :first-child {
-      margin-top: 20%;
+      margin-top: 10%;
+      margin-bottom: 10%;
+      font-size: 1.2rem;
+      @media screen and (min-width: 40em) {
+        margin-top: 20%;
+        margin-bottom: 10%;
+        font-size: 2.2rem;
+      }
       @media screen and (min-width: 64em) {
         margin-top: 10rem;
+        font-size: 3.75rem;
+      }
+      svg {
+        width: 20%;
+        height: 20%;
+        max-width: 140px;
+        max-height: 85px;
+        @media screen and (min-width: 40em) {
+          width: 20%;
+          height: 20%;
+        }
+        @media screen and (min-width: 64em) {
+          width: 140px;
+          height: 85px;
+        }
       }
     }
     .color_stripe_column {
       height: 100%;
+    }
+    .lead_text--paragraph {
+      font-size: .75em;
+      line-height: 1.1;
+      @media screen and (min-width: 40em) {
+        font-size: 1.2em;
+        line-height: 1.5;
+      }
+      @media screen and (min-width: 64em) {
+        font-size: 1.25em;
+        line-height: 1.6;
+      }
     }
   }
 
