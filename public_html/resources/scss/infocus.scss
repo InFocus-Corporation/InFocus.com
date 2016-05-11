@@ -85,11 +85,17 @@ header + .hero_row > .row { margin-top: 0px;}
 //Modules
 .hero_row{
   position: relative;
-  height: 699px;
+  height: 0;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   max-width: initial;
+  padding-bottom: 60%;
+  background-size: cover;
+  @media screen and (min-width: 64em) {
+    padding-bottom: 0;
+    height: 699px;
+  }
   &.hero-row--homepage {
     background: url('../static/images/homepage/homepage-hero-a--wb-bertlitz.jpg') right -160px top no-repeat;
     border-left: 18px solid $infocus_blue;
@@ -97,13 +103,22 @@ header + .hero_row > .row { margin-top: 0px;}
   &.hero-row--video_conferencing {
     background: url('../static/images/video-conferencing/video-conferencing-hero-a--InFocus-Lifestyle-ConX-Exec-Mtg1-300dpi-CMYK.jpg') right -38px top no-repeat;
     background-size: 1055px 799px;
-
   }
   &.hero-row--projectors {
     background: url('../static/images/projectors/InFocus-Lifestyle-Projector-Screen-2-300dpi-96dpi-RGB.jpg') right -326px top no-repeat;
   }
   &.hero-row--touchscreens {
-    background: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg') right -326px top no-repeat;
+    background-image: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg');
+    background-size: cover;
+    background-position: left 200px 0;
+    background-repeat: no-repeat;
+    @media screen and (min-width: 40em) {
+      background-position: left 310px top;
+    }
+    @media screen and (min-width: 64em) {
+      background-size: auto;
+      background-position: right -326px top;
+    }
   }
   &.hero-row--display_walls {
     background: url('../static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg') right -125px top no-repeat;
@@ -165,6 +180,27 @@ header + .hero_row > .row { margin-top: 0px;}
     }
   }
 
+  .hero_inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @media screen and (min-width: 64em) {
+      position: static;
+    }
+    .lead_text {
+      height: 100%;
+    }
+    .lead_text > :first-child {
+      margin-top: 20%;
+      @media screen and (min-width: 64em) {
+        margin-top: 10rem;
+      }
+    }
+    .color_stripe_column {
+      height: 100%;
+    }
+  }
+
   .lead_text {
     > :first-child {  margin-top: 10rem; }
     height: 699px;
@@ -198,6 +234,40 @@ header + .hero_row > .row { margin-top: 0px;}
       left: 0px;
       width: 127px;
       margin-left: -22px;
+    }
+  }
+}
+
+.product_module {
+  .product_text {
+    padding-left: 0;
+  }
+  @media screen and (min-width: 40em) {
+    .product_text {
+      padding-left: .625rem;
+    }
+  }
+  h3.lead_text--secondary_headline {
+    margin-bottom: .65rem;
+    font-size: 1.25rem;
+    @media screen and (min-width: 40em) {
+        font-size: 2.75rem;
+    }
+  }
+  .lead_text--paragraph {
+    font-size: .75rem;
+    line-height: 1.1;
+    @media screen and (min-width: 40em) {
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+  }
+  a.button--primary, a.button--primary:link, a.button--primary:visited, a.link:link, a.link:visited {
+    font-size: .5rem;
+    letter-spacing: .1rem;
+    @media screen and (min-width: 40em) {
+      font-size: .75rem;
+      letter-spacing: .2rem;
     }
   }
 }
@@ -572,7 +642,6 @@ div.video_module {
   border: 2px solid $white;
 }
 
-//Product Pages
 .paragraph-link {
   color: $infocus_blue;
   clear: both;
