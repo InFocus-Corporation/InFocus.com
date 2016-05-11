@@ -222,7 +222,7 @@ form {
 p.contact-about,
 p.techOnly,
 p.salesOnly {
-	padding: 1rem 6rem 2rem;
+	padding: 1rem 6rem 0;
 	text-align: center;
 }
 .C5 {
@@ -307,7 +307,7 @@ table.contact-table{
 			<h3 class="techOnly"><?=translate('Contact InFocus Technical Support')?></h3>
 			<p class="techOnly"><?=$pageText['TechText']?></p>
 			<h3 class="salesOnly"><?=translate('Contact InFocus Sales')?></h3>
-			<p class="salesOnly"><?=$pageText['SalesText']?></p><br>
+			<p class="salesOnly"><?=$pageText['SalesText']?></p>
 			<form action="" id="contactForm" method="POST" name="ContactForm" enctype="multipart/form-data" >
 				<input type="hidden" name="type" id="type" value="">
 				<ul class="wrap">
@@ -454,10 +454,12 @@ table.contact-table{
 
 <input id="optin" name="optin" class="css-checkbox" type="checkbox" value="Yes"/>
 <label for="optin" style="margin-bottom:1.5em;" class="css-label"><?=translate('Yes, I would like to receive news and special deals from InFocus.')?></label>
-<p class="privacy"><?php echo $pageText['PrivacyReview'];?></p>
 
-<div id="contactForm_ao_submit_button">
-<button id="contactForm_ao_submit_input" type="button" onClick="doSubmit(document.getElementById('contactForm'),abu,emea,apac)"><?=translate('Send')?></button>
+<div style="padding-left:10px">
+	<p class="privacy"><?php echo $pageText['PrivacyReview'];?></p>
+	<div id="contactForm_ao_submit_button" style="padding:0">
+	<button id="contactForm_ao_submit_input" type="button" onClick="doSubmit(document.getElementById('contactForm'),abu,emea,apac)"><?=translate('Send')?></button>
+	</div>
 </div>
 
 <input type="hidden" id="name" name="name">
