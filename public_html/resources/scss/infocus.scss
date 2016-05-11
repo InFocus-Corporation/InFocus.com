@@ -61,9 +61,9 @@ header + .hero_row > .row { margin-top: 0px;}
   height: 100%;
 }
 .color_stripe_column {
-  position: relative;
   float: left;
   .color_stripe {
+    position: absolute;
     height: 100%;
     float:left;
     &.dark_blue {
@@ -615,7 +615,7 @@ div.video_module {
 
 .callout {
   overflow: hidden;
-  padding: 2.5;
+  padding: 2.5em;
   background-color: $infocus_light_blue;
   border: 0px;
   border-radius: 3px;
