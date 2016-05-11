@@ -1081,6 +1081,7 @@ form select:focus {
 	background-position: right center;
 	background-size: auto auto;
 	background-repeat: no-repeat;
+    padding-right: 45px;
 }
 form select::-ms-expand {
     display: none;
@@ -1190,8 +1191,7 @@ form div {
 form div > div {
 	padding: 4px;
 }
-form button {
-	cursor: pointer;
+form button, button.formbutton {
 	background: transparent;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
@@ -1202,12 +1202,12 @@ form button {
 	font-family: 'GoodPro', sans-serif;
 	font-weight: bold;
 	font-size:12px;
-	font-weight:bold;
 	padding: 8px 24px;
 	margin: 0;
 	text-transform: uppercase;
 	text-decoration:none;
 	letter-spacing: 1px;
+    cursor: pointer;
 }form button:hover {
 }form button:active {
 }
