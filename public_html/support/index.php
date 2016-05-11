@@ -298,13 +298,8 @@ $(function() {
 
 <div class="hidden" style="display:none;">
   <div id="RMAWorldMap-popup">
-    <style type="text/css">
-    	dl.image_map {display:block; width:648px; height:413px; background:url(/resources/images/WorldMap.png); position:relative; margin:2px auto 2px auto;}
-      <dl class="image_map">
-      </dl>
-    </style>
     <base target="_parent" />
-    <div id="WorldMap-popup" style="text-align:center; width:648px; margin-left:auto; margin-right:auto;">
+    <div id="WorldMap-popup" style="text-align:center; width:648px; margin:50px 130px 30px 40px;">
     <img id="Image-WorldMap" src="/resources/images/WorldMap.png" usemap="#Image-WorldMap" border="0" width="648" height="413" alt="" />
     <map id="_Image-WorldMap" name="Image-WorldMap">
     <area shape="poly" coords="23,99,45,109,67,119,92,129,105,142,111,153,131,143,140,137,148,145,132,158,124,161,123,165,123,170,120,174,119,174,107,185,107,197,104,200,100,197,100,189,96,185,85,182,68,182,61,181,51,188,45,173,40,173,36,161,21,159,16,148,5,140,2,133,2,130,5,119,10,109,19,103,19,103," class="btn form-box" href="/resources/forms/online-rma"  alt="United States"alt="United States" title="United States"   />
@@ -324,7 +319,7 @@ $(function() {
 <div class="hidden" style="display:none">
   <div id="RMAUSCan-popup">
   <base target="_parent" />
-  <div id="USCanada-popup" style="text-align:center; margin: 5rem auto;">
+  <div id="USCanada-popup" style="text-align:center;margin-left:auto;margin-right:auto;padding:50px 80px 30px 40px;">
   <img id="Image-UsCanada" src="/resources/images/USCanadaMap.png" usemap="#Image-UsCanada" border="0"  alt="" />
   <map id="_Image-UsCanada" name="Image-UsCanada">
   <area shape="poly" coords="23,99,45,109,67,119,92,129,105,142,111,153,131,143,140,137,148,145,132,158,124,161,123,165,123,170,120,174,119,174,107,185,107,197,104,200,100,197,100,189,96,185,85,182,68,182,61,181,51,188,45,173,40,173,36,161,21,159,16,148,5,140,2,133,2,130,5,119,10,109,19,103,19,103," class="btn form-box" href="/resources/forms/online-rma" alt="United States" title="United States"   />
@@ -337,7 +332,7 @@ $(function() {
 
 
 <div class="hidden" style="display:none">
-<div id="AreYouSure-popup" style="background-color:white;padding:10px;">
+<div id="AreYouSure-popup" style="background-color:#f2f2f0;padding:50px 130px 30px 40px;">
 <h4>Are you experiencing a product failure?</h4>
 <h6>For Example:</h6> your projector won't power on?<br>
 <a href="#RMAUSCan-popup" id="open-RMAUSCan" class="colorbox-inline">Click Here</a>
