@@ -154,7 +154,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		<div class="small-12 medium-6 columns color_stripe_column">
 			<div class="white color_stripe"></div>
             <div class="light_blue color_stripe float-right"></div>
-
 		</div>
 	</div>
     <!-- END FEATURE MODULE A -->
