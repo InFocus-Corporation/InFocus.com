@@ -144,12 +144,43 @@ header + .hero_row > .row { margin-top: 0px;}
         font-family: 'GoodPro-WideLight';
         font-size: 20px;
     }
-    .color_stripe_column {
-        height: 600px;
-    }
     .color_stripe.dark_blue, .color_stripe.white {
         max-width: 115px;
         width: 115px;
+    }
+    .color_stripe.white {
+        margin-left: 86px !important;
+    }
+  }
+  &.hero-row--header_module_collaborate {
+    background: $dark_gray url('../static/images/collaborate/collaborate-hero-a.jpg') left top no-repeat;
+    height: 600px;
+    .lead_text>:first-child {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .module--tag:before {
+        border: 2px solid white;
+    }
+    .module--tag span{
+        color: white;
+        font-family: 'GoodPro-WideBook';
+        font-size: 12px;
+    }
+    .lead_text {
+      @include background-opacity($dark_gray);
+      height: 600px;
+      padding-left: 45px;
+      @media screen and (min-width: 40em) { padding-left: 95px; }
+
+    }
+    .lead_text--secondary_headline, .lead_text--paragraph {
+      color: $white;
+      clear: both;
+    }
+    .color_stripe.dark_blue, .color_stripe.white {
+        width: 20px;
+        @media screen and (min-width: 40em) { width: 115px; }
     }
     .color_stripe.white {
         margin-left: 86px !important;
@@ -168,7 +199,7 @@ header + .hero_row > .row { margin-top: 0px;}
     }
   }
   .color_stripe_column {
-    height: 699px;
+    height: 100%;
     .color_stripe.white {
       margin-left: 48px;
       width: 127px;
@@ -246,6 +277,10 @@ header + .hero_row > .row { margin-top: 0px;}
         background: url('../static/images/present/present-module_b.jpg');
         background-size: cover;
     }
+    &.feature_module_b--collaborate .module_image {
+        background: url('../static/images/collaborate/collaborate-feature-module-b.jpg');
+        background-size: cover;
+    }
     .feature_text {
         display: block;
         position: relative;
@@ -256,6 +291,10 @@ header + .hero_row > .row { margin-top: 0px;}
         @include background-opacity($infocus_blue);
         clear: both;
         text-align: center;
+    }
+    &.feature_module_b--collaborate .feature_text {
+        @include background-opacity($infocus_green);
+        margin: -270px auto 0;
     }
     .lead_text--secondary_headline {
         text-align: center;
@@ -280,11 +319,12 @@ header + .hero_row > .row { margin-top: 0px;}
 
 .text_module {
     font-family: 'GoodPro-WideLight';
-    .lead_text--headline {
-        font-size: 60px;
-        color: $dark_gray;
-        font-weight: normal;
+    h1.lead_text--headline, h2.lead_text--headline{
+      font-size: 60px;
+      color: $dark_gray;
+      font-weight: normal;
     }
+    h2.lead_text--headline { font-size: 40px; }
     .lead_text--paragraph {
         font-size: 24px;
     }
@@ -297,11 +337,12 @@ header + .hero_row > .row { margin-top: 0px;}
 
 .multicolumn_text_module {
     font-family: 'GoodPro-WideLight';
-    .lead_text--headline {
-        font-weight: normal;
-        font-size: 60px;
-        color: $dark_gray;
+    h1.lead_text--headline, h2.lead_text--headline{
+      font-size: 60px;
+      color: $dark_gray;
+      font-weight: normal;
     }
+    h2.lead_text--headline { font-size: 40px; }
     .lead_text--paragraph {
         font-size: 20px;
     }
@@ -309,6 +350,10 @@ header + .hero_row > .row { margin-top: 0px;}
         font-family: 'GoodPro-WideBook';
         font-size: 20px;
         color: $infocus_blue;
+    }
+    .svg {
+      width:121px;
+      * {  stroke: $infocus_orange; }
     }
 }
 
