@@ -1,10 +1,11 @@
 <?php
+require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
+
 $response = "no reply";
 $value=$_GET['value'];
 $type=$_GET['type'];
 $groups_allowed = "admin,Service";
 
-$connection = mysqli_connect('67.43.0.33','InFocus','InF0cusP@ssw0rd', 'InFocus',3306);
 mysqli_set_charset($connection, "utf8");
 ini_set('default_charset', 'utf-8');
 
@@ -71,12 +72,12 @@ if($row = mysqli_fetch_assoc($result))
 			$response = "N/A";
 		}
 		echo $response;
+		exit(0);
 	}
 }
 else
 {
 }
 
-die();
-//}
-?>
+header('HTTP/1.0 400 Bad Request');
+echo 'Bad Request';
