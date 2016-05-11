@@ -19,15 +19,15 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
 	  <!-- HEADER MODULE C -->
 		<div class="hero_row hero-row--header_module_collaborate">
-	        <div class="color_stripe_column">
-	            <div class="dark_blue color_stripe"></div>
-	            <div class="white color_stripe hide-for-small-only"></div>
-	        </div>
+      <div class="color_stripe_column">
+          <div class="dark_blue color_stripe"></div>
+          <div class="white color_stripe hide-for-small-only"></div>
+      </div>
 			<div class="row">
 				<div class="small-10 medium-7 medium-offset-2 large-6 large-offset-4 columns lead_text">
-	                <div class="module--tag">
-	                    <span>Connect & Collaborate</span>
-	                </div>
+          <div class="module--tag">
+              <span>Connect & Collaborate</span>
+          </div>
 					<h2 class="lead_text--secondary_headline">
 						Get it done together.
 					</h2>
@@ -121,15 +121,30 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END MULTICOLUMN TEXT MODULE -->
+		<br><br>
+    <!-- VIDEO MODULE -->
+		<div class="hero_row hero-row--video_row hero-row--video_row_collaborate-a">
+			<div class="row">
+				<div class="small-12 medium-10 medium-offset-1 columns lead_text">
+					<h2 class="lead_text--secondary_headline">
+						<img src="/resources/static/images/video-icon.png" />
+						See how ConX Video Meeting brings teams together
+					</h2>
+				</div>
+			</div>
+		</div>
+    <!-- END VIDEO MODULE -->
+		<br><br>
+
 
     <!-- FEATURE MODULE A -->
-		<div class="row feature_module_a ">
-	        <div class="small-12 medium-6 columns feature_text">
-				<h3 class="lead_text--secondary_headline">View & interact with all your critical information</h3>
-				<p class="lead_text--paragraph">Display all of your data sources and HD video conferencing feeds on up to 96 screens – customized for your board room, CxO office, or training center.</p>
-	            <div class="feature_links">
-	                <a href="/projectors/IN2120a-Series" class="feature_link">View ConX Wall</a>
-	            </div>
+		<div class="row feature_module_a feature_module_a--collaborate">
+      <div class="small-12 medium-6 columns feature_text">
+					<h2 class="lead_text--secondary_headline">View & interact with all your critical information</h2>
+					<p class="lead_text--paragraph">Display all of your data sources and HD video conferencing feeds on up to 96 screens – customized for your board room, CxO office, or training center.</p>
+          <div class="feature_links">
+              <a href="/projectors/IN2120a-Series" class="feature_link">View ConX Wall</a>
+          </div>
 			</div>
 			<div class="small-12 medium-6 columns color_stripe_column">
 				<div class="white color_stripe"></div>
@@ -141,7 +156,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <br><br><br>
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">
-        <div class="small-12 large-6 columns promo_module_d">
+        <div class="small-12 large-6 columns promo_module_d collaborate--promo_module_d">
             <div class="module_image">
 
             </div>
@@ -156,13 +171,14 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 </a>
             </div>
         </div>
-        <div class="small-12 large-6 columns promo_module_c">
+        <div class="small-12 large-6 columns promo_module_c collaborate--promo_module_c">
             <div class="module_image">
 
             </div>
             <div class="module_text">
                 <p class="lead_text--headline">
-                    Hear every word. See every face.
+                    Hear every word.<br/>
+										See every face.
                 </p>
             </div>
             <div class="module_links">
@@ -176,7 +192,21 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END PROMO MODULES C & D -->
-    <br><br>
+		<br><br>
+
+    <!-- VIDEO MODULE -->
+		<div class="hero_row hero-row--video_row hero-row--video_row_collaborate-b">
+			<div class="row">
+				<div class="small-12 medium-10 medium-offset-1 columns lead_text">
+					<h2 class="lead_text--secondary_headline">
+						<img src="/resources/static/images/video-icon.png" />
+						<span class="single_line_span">See how collaboration is done</span>
+					</h2>
+				</div>
+			</div>
+		</div>
+    <!-- END VIDEO MODULE -->
+		<br><br>
 		<script>
 		    $(document).foundation();
 		</script>

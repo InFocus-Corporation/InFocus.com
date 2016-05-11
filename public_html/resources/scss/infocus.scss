@@ -6,6 +6,8 @@ $infocus_green: #00ab84;
 $infocus_orange: #E87722;
 $light_gray: #f2f2f0;
 $dark_gray:  #3f4a54;
+$med_gray: #c5c5c5;
+$box_shadow_gray: inset 0 0 0 1000px rgba(51,63,72,.78);
 
 //Imports and Mixins
 @import 'fonts';
@@ -89,10 +91,25 @@ header + .hero_row > .row { margin-top: 0px;}
     background: url('../static/images/homepage/homepage-hero-a--wb-bertlitz.jpg') right -160px top no-repeat;
     border-left: 18px solid $infocus_blue;
   }
+  &.hero-row--video_row {
+    height: 720px;
+    img { float: left; padding: .45em .45em 2em 0; }
+    .lead_text { padding-top: 11%; *{ color: $white; } background-color: transparent; }
+    span.single_line_span { display: inline-block; margin-top: 30px;}
+    &.hero-row--video_row_collaborate-a {
+        background: url('../static/images/collaborate/collaborate-video-a.jpg') right top no-repeat;
+        background-size: cover;
+        box-shadow: $box_shadow_gray;
+    }
+    &.hero-row--video_row_collaborate-b {
+        background: url('../static/images/collaborate/collaborate-video-b.jpg') right top no-repeat;
+        background-size: cover;
+        box-shadow: $box_shadow_gray;
+    }
+  }
   &.hero-row--video_conferencing {
     background: url('../static/images/video-conferencing/video-conferencing-hero-a--InFocus-Lifestyle-ConX-Exec-Mtg1-300dpi-CMYK.jpg') right -38px top no-repeat;
     background-size: 1055px 799px;
-
   }
   &.hero-row--projectors {
     background: url('../static/images/projectors/InFocus-Lifestyle-Projector-Screen-2-300dpi-96dpi-RGB.jpg') right -326px top no-repeat;
@@ -227,11 +244,17 @@ header + .hero_row > .row { margin-top: 0px;}
     height: 600px;
     background: url('../static/images/present/present-module_a.jpg') right top no-repeat;
     background-size: contain;
+    &.feature_module_a--collaborate {
+        background: $med_gray url('../static/images/collaborate/collaborate-feature-module-a.jpg') bottom right no-repeat;
+    }
     .feature_text {
         height: 100%;
         @include background-opacity($infocus_green);
         padding: 40px 35px;
         position: relative;
+    }
+    &.feature_module_a--collaborate .feature_text {
+        @include background-opacity($infocus_orange);
     }
     .white.color_stripe {
         width: 79px;
@@ -284,7 +307,7 @@ header + .hero_row > .row { margin-top: 0px;}
     .feature_text {
         display: block;
         position: relative;
-        width: 755px;
+        width: 65%;
         min-height: 375px;
         margin: -350px auto 0 auto;
         padding: 55px 70px 0 70px;
@@ -309,8 +332,9 @@ header + .hero_row > .row { margin-top: 0px;}
     .feature_link {
         color: $infocus_light_blue;
         font-family: 'GoodPro-WideBook';
-        font-size: 12px;
+        font-size: 13px;
         text-transform: uppercase;
+        letter-spacing: 0.25em;
     }
     .feature_link:hover {
         color: $white;
@@ -397,9 +421,7 @@ header + .hero_row > .row { margin-top: 0px;}
     .module_text {
         height: 140px;
         margin-top: -140px;
-        padding-top: 30px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding: 45px 45px 0px 45px;
         text-align: center;
         @include background-opacity($dark_gray);
         .lead_text--headline {
@@ -416,15 +438,18 @@ header + .hero_row > .row { margin-top: 0px;}
         }
     }
     .module_links {
-        @include background-opacity($dark_gray);
-        height: 70px;
+        @include background-opacity($dark_gray, .55);
+        height: 65px;
+        padding-top: 20px;
         text-align: center;
         .promo_module_link {
             color: $infocus_light_blue;
             text-transform: uppercase;
             font-family: 'GoodPro-WideBook';
             font-size: 12px;
+            letter-spacing: 0.15em;
         }
+
     }
     .promo_module_c {
         padding: 0 0 0 15px;
@@ -433,8 +458,9 @@ header + .hero_row > .row { margin-top: 0px;}
             background: url('../static/images/present/present-promo_module_c.jpg') right;
             background-size: cover;
         }
-        .module_links {
-            padding-top: 15px;
+        &.collaborate--promo_module_c .module_image {
+            background: url('../static/images/collaborate/collaborate-promo_module_c.jpg');
+            background-size: cover;
         }
         .promo_module_link {
             width: 49%;
@@ -452,8 +478,9 @@ header + .hero_row > .row { margin-top: 0px;}
             background: url('../static/images/present/present-promo_module_d.jpg');
             background-size: cover;
         }
-        .module_links {
-            padding-top: 20px;
+        &.collaborate--promo_module_d .module_image {
+            background: url('../static/images/collaborate/collaborate-promo_module_d.jpg');
+            background-size: cover;
         }
     }
 }
@@ -612,7 +639,7 @@ header + .hero_row > .row { margin-top: 0px;}
     background: url('../static/images/other/404-background--shutterstock_272479613.jpg') no-repeat top -100px left;
     background-size: cover, cover;
     border: 0px;
-    box-shadow: inset 0 0 0 1000px rgba(51,63,72,.78);
+    box-shadow: $box_shadow_gray;
     padding-top: 10%;
   }
 }
