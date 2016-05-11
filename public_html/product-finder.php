@@ -13,7 +13,7 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
     <?php include($homedir . "/resources/html/mainmenu.html"); ?>
     <div class="content">
         <div class="C9">
-            <h2 class="title"><?php echo translate('Product Finder'); ?></h2>
+            <h2 class="lead_text--secondary_headline"><?php echo translate('Product Finder'); ?></h2>
             <div class="C5 Col">
                 <form name="prodfind" action=""  method="post" class="liresults" >
                     <fieldset>
