@@ -1,4 +1,12 @@
 <?php
+$headclass = '';
+$uri = $_SERVER['REQUEST_URI'];
+$catregx = "/\/(accessories|hd\-projector\-lineup)\/?/i";
+$subcatregx = "/\/(products|displays|peripherals|accessories)\/.*/i";
+if(preg_match($catregx, $uri) || preg_match($subcatregx, $uri)) {
+	$headclass = 'blue';
+}
+
 if($lang == "de"):?>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -80,7 +88,7 @@ $(function () {
 	});
 	$('.fa-search').click(function (e) {
 		e.preventDefault();
-		$(this).closest('li').find('[name=search]').toggleClass('open');
+		$(this).closest('li').find('[name=search]').toggleClass('open').focus();
 	});
 	$('a.contact-us').click(function (e) {
 		e.preventDefault();
@@ -102,7 +110,7 @@ $(function () {
 	});
 });
 </script>
-<header id="masthead">
+<header id="masthead" class="<?= $headclass ?>">
 	<div>
 		<h3 id="logo"><a href="/">InFocus</a></h3>
 		<ul class="menu">
