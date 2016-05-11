@@ -127,8 +127,10 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<div class="row">
 				<div class="small-12 medium-10 medium-offset-1 columns lead_text">
 					<h2 class="lead_text--secondary_headline">
-						<img src="/resources/static/images/video-icon.png" />
-						See how ConX Video Meeting brings teams together
+						<a href="http://www.infocus.vagrant.internal/videos?aGcZS6K92fk">
+							<img src="/resources/static/images/video-icon.png" />
+							See how ConX Video Meeting brings teams together
+						</a>
 					</h2>
 				</div>
 			</div>
@@ -148,8 +150,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			</div>
 			<div class="small-12 medium-6 columns color_stripe_column">
 				<div class="white color_stripe"></div>
-	            <div class="light_blue color_stripe float-right"></div>
-
+	      <div class="light_blue color_stripe float-right"></div>
 			</div>
 		</div>
     <!-- END FEATURE MODULE A -->
@@ -199,8 +200,10 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<div class="row">
 				<div class="small-12 medium-10 medium-offset-1 columns lead_text">
 					<h2 class="lead_text--secondary_headline">
-						<img src="/resources/static/images/video-icon.png" />
-						<span class="single_line_span">See how collaboration is done</span>
+						<a href="http://www.infocus.vagrant.internal/videos?SNMjzPRQUA8">
+							<img src="/resources/static/images/video-icon.png" />
+							<span class="single_line_span">See how collaboration is done</span>
+						</a>
 					</h2>
 				</div>
 			</div>
