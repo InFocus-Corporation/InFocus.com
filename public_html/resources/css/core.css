@@ -1191,14 +1191,16 @@ form div > div {
 	padding: 4px;
 }
 form button {
+	cursor: pointer;
 	background: transparent;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
 	border:2px solid #006fba;
 	display:inline-block;
 	color:#006fba;
-	font-family: 'GoodPro-Wide', Arial, sans-serif;
+	font-family: 'GoodPro', sans-serif;
+	font-weight: bold;
 	font-size:12px;
 	font-weight:bold;
 	padding: 8px 24px;

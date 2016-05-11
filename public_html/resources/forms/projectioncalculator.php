@@ -34,13 +34,18 @@
 <style>
 body {
 	background: #f2f2f0;
+	padding-top: 3rem;
 }
 .navbar-default {
+	display: none;
     background: transparent;
     border: none;
 }
-.navbar-header {
-	display: none;
+.container-fluid {
+	clear: both;
+}
+.rightSpecs {
+	padding-right: 40px;
 }
 </style>
 
@@ -3661,8 +3666,8 @@ getMinMaxDist();
 
 
     <!-- Begin page content -->
-    <div class="container">
-        <div class="row">
+    <div class="container-fluid">
+        <div class="row-fluid">
             <div class="col-md-8">
                 
                 <ul class="projDropList">

@@ -16,10 +16,20 @@ window.location = "/#mpdemo";
 </script>
 <style>
   form {
-	background: #f7f7f7;
 	padding: 20px;
-	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 0px 0px 0px rgba(255, 255, 255, 1);
-	border: 0px solid #B2B2B2;
+	box-shadow: none;
+	border: 0px;
+}
+p.page-text {
+	text-align:center;
+	padding-left:5rem;
+	padding-right:5rem;
+}
+p.page-text br {
+	display: none;
+}
+p.page-text a {
+	margin-left: 6px;
 }
 </style>
  </HEAD>
@@ -47,16 +57,15 @@ window.location = "/#mpdemo";
 		<input type="hidden" name="ao_campid"  value="">		
 		<!-- -------------------------------------------------------------------------------------------- -->
 
-<h2 style="text-align: left;"><?php echo $pageText['MPAction'];?></h2>
-<p style="text-align: left;"><?php echo $pageText['ManyWays'];?><br>
+<h2 style="text-align: center;text-transform:capitalize;"><?php echo $pageText['MPAction'];?></h2>
+<p class="page-text"><?php echo $pageText['ManyWays'];?><br>
 <?php echo $pageText['LiveDemo'];?>
 </p>
-<p style="text-align: left;font-size: 12px;"><?php echo $pageText['FillOut'];?></p>
+<p style="text-align: center;font-size: 12px;"><?php echo $pageText['FillOut'];?></p>
 <ul class="wrap">
 <li  >
 <label class="top" for = "form_0002_fld_1_2">
-Email Address:<span style="color: #FF0000; cursor: default" title="Required Field" id="form_0002_fld_1_2-Label">
-*&nbsp;&nbsp;&nbsp;</span></label>
+Email Address:<span style="color: #FF0000; cursor: default" title="Required Field" id="form_0002_fld_1_2-Label"></span></label>
 <input type="text" id="form_0002_fld_1_2" name="E-mail Address" value="" onBlur="singleCheck ('form_0002_fld_1_2', 'EMAIL', 'form_0002_fld_1_2-Label')">
 </li>
 <li>
@@ -122,18 +131,14 @@ Email Address:<span style="color: #FF0000; cursor: default" title="Required Fiel
 <textarea id="Description" type="text" name="Description" rows="8" /> </textarea>
 </li>
 </ul>
-<p><?php echo $pageText['PrivacyReview'];?></p>
-<p> </p>
+<div style="padding-left: 10px">
+	<p class="privacy"><?php echo $pageText['PrivacyReview'];?></p>
+	<div id="form_0002_ao_submit_button" style="padding:0;">
+		<button id="form_0002_ao_submit_input" type="button" onClick="doSubmit(document.getElementById('form_0002'),'http://marketing.infocus.com/acton/forms/userSubmit.jsp','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit')"><?=translate('Send')?></button>
+	</div>
 
-
-
-<br><br>
-<div id="form_0002_ao_submit_button">
-<button id="form_0002_ao_submit_input" type="button" onClick="doSubmit(document.getElementById('form_0002'),'http://marketing.infocus.com/acton/forms/userSubmit.jsp','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit')"><?=translate('Send')?></button>
+	<br><span class="form-required" style="font-size:70%">* <?=translate('Denotes a Required field');?>.</span>
 </div>
-
-<br><span class="form-required" style="font-size:70%">* <?=translate('Denotes a Required field');?>.</span>
-
 <input type="hidden" id="name" name="name">
 <input type="hidden" id="clear" name="clear" value="Thank you for your interest.  Someone will be contacting you shortly to schedule your demo.">
 </section>
