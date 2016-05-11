@@ -1,4 +1,5 @@
 <?php
+require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
 
 if(!empty($_POST['first_name'])){
 
@@ -335,6 +336,7 @@ die();
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 <link type="text/css" rel="stylesheet" href="/resources/css/core.css">
+<link type="text/css" rel="stylesheet" href="/resources/css/font-awesome.min.css">
 <!--[if IE]>
     <link href="/resources/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <![endif]-->
@@ -752,37 +754,46 @@ document.getElementById("onlinerma").submit();
 
 <form action="" id="onlinerma" method="POST" name="onlinerma" enctype="multipart/form-data">
 
-<h3 ><!--Trans-Marker-->Online RMA</h3><span >Need support or documentation for your product? Please visit our <a href="/support"> Support site.</a> </span><br>
+<h3 style="margin-top:2.5rem;"><!--Trans-Marker-->Online RMA</h3>
+<span >Need support or documentation for your product? Please visit our <a href="/support"> Support site.</a> </span><br>
 <input type="hidden" id="reqfields" value="first_name,last_name,e_mail,phone_number,organization,serial_number,symptom,address,city,state,zip_postal_code,primary_address_country,notes">
-<div style="width:190px;float:left;">
 
+<ul class="wrap">
+<li>
 <label class="top" for="first_name" >First Name: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="first_name" type="text" name="first_name" />
-
+</li>
+<li>
 <label class="top" for="last_name" >Last Name: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="last_name" type="text" name="last_name"/>
-
+</li>
+<li>
 <label class="top" for="e_mail" >Email Address: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="e_mail" type="text" name="e_mail"/>
-
+</li>
+<li>
 <label class="top" for="phone_number" >Phone: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="phone_number" type="text" name="phone_number" />
-
+</li>
+<li>
 <label class="top" for="organization" >Organization: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="organization" type="text" name="organization" />
-
+</li>
+<li>
 <label class="top" for="serial_number" >Serial Number: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="serial_number" type="text" name="serial_number" />
-
+</li>
+<li>
 <label class="top" for="product" >Product: </label>
 <input id="product" type="text" name="product" />
-
+</li>
+<li>
 <label class="top" for="purchasedate" >Purchase Date: </label>
 <input id="purchasedate" type="text" name="purchasedate" />
-
+</li>
+<li>
 <label class="top" for="symptom" >Symptom: <span class="required" style="color: #ff0000;">*</span></label>
 <select type="text" name="symptom" id="symptom" onchange="showTS();" >
-
 	<option value="" selected="selected">- Select -</option>
 	<option value="001,Abused / Dropped">Abused / Dropped</option>
 	<option value="004,Audible Noise">Audible Noise</option>
@@ -828,84 +839,69 @@ document.getElementById("onlinerma").submit();
 	<option value="048,Wireless Functionality">Wireless Functionality</option>
 	<option value="049,Won&#039;t retain user settings">Won&#039;t retain user settings</option>
 </select>
-</div>
-<div style="width:250px;float:left;">
-
-
-<br><br>
-
 <div id="completetroub" style="display:none;color:red;"><!--Trans-Marker-->Please complete the following troubleshooting:</div>
-
-
 <?php
-$connection = mysqli_connect('67.43.0.33','InFocus','InF0cusP@ssw0rd', 'InFocus',3306);
-
-$result=mysqli_query($connection,"SELECT sympid, tstext FROM troubleshooting WHERE tstext IS NOT null");
+$result=mysqli_query($connection, "SELECT sympid, tstext FROM troubleshooting WHERE tstext IS NOT NULL ORDER BY sympid");
 $i=1;
 
 while($row = mysqli_fetch_array($result))
 {
 	if($row[0]==$lastsymp){
-	echo '<input id="ts' . $i . '" name="troubleshooting[]" class="css-checkbox" type="checkbox" value="' . $row[1] . '"/>
-	<label for="ts' . $i . '" class="css-label" style="float:left"></label><label for="ts' . $i . '" >' . $row[1] . '</label>
-	<br>';
-	}
-	else{
-	if($lastsymp!=null){echo '</div>';}
-	echo '<div id="' . $row[0] . '" style="display:none;">';	
-	echo '<input id="ts' . $i . '" name="troubleshooting[]" class="css-checkbox" type="checkbox" value="' . $row[1] . '"/>
-	<label for="ts' . $i . '" class="css-label" style="float:left"></label><label for="ts' . $i . '" >' . $row[1] . '</label>
-	<br>';
-
+		echo '<input id="ts' . $i . '" name="troubleshooting[]" class="css-checkbox" type="checkbox" value="' . $row[1] . '"/>
+		<label for="ts' . $i . '">' . $row[1] . '</label>
+		<br>';
+	} else {
+		if($lastsymp!=null){ echo '</div>'; }
+		echo '<div id="' . $row[0] . '" style="display:none;">';	
+		echo '<input id="ts' . $i . '" name="troubleshooting[]" class="css-checkbox" type="checkbox" value="' . $row[1] . '"/>
+		<label for="ts' . $i . '">' . $row[1] . '</label>
+		<br>';
 	}
 
 	$lastsymp = $row[0];
 	$i++;
 }
-
 echo '
 </div>';
-
 ?>
-
 </div>
-
-<div style="width:190px;float:left;margin-left:15px;">
-
-
+</li>
+<li>
 <label class="top" for="address" >Address: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="address" type="text" name="address" />
-
+</li>
+<li>
 <label class="top" for="city" >City: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="city" type="text" name="city" />
-
+</li>
+<li>
 <label class="top" for="state" >State: <span class="required" style="color: #ff0000;">*</span></label>
 <input maxlength="2" id="state" type="text" name="state" />
-
+</li>
+<li>
 <label class="top" for="zip_postal_code" >Postal Code: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="zip_postal_code" type="text" name="zip_postal_code" />
-
+</li>
+<li>
 <label class="top" for="primary_address_country">Country: <span class="required" style="color: #ff0000;">*</span></label>
-<Select id="primary_address_country" type="text" name="primary_address_country">
+<select id="primary_address_country" type="text" name="primary_address_country">
 <option value="AD">AD</option><option value="AE">AE</option><option value="AF">AF</option><option value="AG">AG</option><option value="AI">AI</option><option value="AL">AL</option><option value="AM">AM</option><option value="AO">AO</option><option value="AQ">AQ</option><option value="AR">AR</option><option value="AS">AS</option><option value="AT">AT</option><option value="AU">AU</option><option value="AW">AW</option><option value="AX">AX</option><option value="AZ">AZ</option><option value="BA">BA</option><option value="BB">BB</option><option value="BD">BD</option><option value="BE">BE</option><option value="BF">BF</option><option value="BG">BG</option><option value="BH">BH</option><option value="BI">BI</option><option value="BJ">BJ</option><option value="BL">BL</option><option value="BM">BM</option><option value="BN">BN</option><option value="BO">BO</option><option value="BQ">BQ</option><option value="BR">BR</option><option value="BS">BS</option><option value="BT">BT</option><option value="BV">BV</option><option value="BW">BW</option><option value="BY">BY</option><option value="BZ">BZ</option><option value="canada">CA</option><option value="CC">CC</option><option value="CD">CD</option><option value="CF">CF</option><option value="CG">CG</option><option value="CH">CH</option><option value="CI">CI</option><option value="CK">CK</option><option value="CL">CL</option><option value="CM">CM</option><option value="CN">CN</option><option value="CO">CO</option><option value="CR">CR</option><option value="CU">CU</option><option value="CV">CV</option><option value="CW">CW</option><option value="CX">CX</option><option value="CY">CY</option><option value="CZ">CZ</option><option value="DE">DE</option><option value="DJ">DJ</option><option value="DK">DK</option><option value="DM">DM</option><option value="DO">DO</option><option value="DZ">DZ</option><option value="EC">EC</option><option value="EE">EE</option><option value="EG">EG</option><option value="EH">EH</option><option value="ER">ER</option><option value="ES">ES</option><option value="ET">ET</option><option value="FI">FI</option><option value="FJ">FJ</option><option value="FK">FK</option><option value="FM">FM</option><option value="FO">FO</option><option value="FR">FR</option><option value="GA">GA</option><option value="GB">GB</option><option value="GD">GD</option><option value="GE">GE</option><option value="GF">GF</option><option value="GG">GG</option><option value="GH">GH</option><option value="GI">GI</option><option value="GL">GL</option><option value="GM">GM</option><option value="GN">GN</option><option value="GP">GP</option><option value="GQ">GQ</option><option value="GR">GR</option><option value="GS">GS</option><option value="GT">GT</option><option value="GU">GU</option><option value="GW">GW</option><option value="GY">GY</option><option value="HK">HK</option><option value="HM">HM</option><option value="HN">HN</option><option value="HR">HR</option><option value="HT">HT</option><option value="HU">HU</option><option value="ID">ID</option><option value="IE">IE</option><option value="IL">IL</option><option value="IM">IM</option><option value="IN">IN</option><option value="IO">IO</option><option value="IQ">IQ</option><option value="IR">IR</option><option value="IS">IS</option><option value="IT">IT</option><option value="JE">JE</option><option value="JM">JM</option><option value="JO">JO</option><option value="JP">JP</option><option value="KE">KE</option><option value="KG">KG</option><option value="KH">KH</option><option value="KI">KI</option><option value="KM">KM</option><option value="KN">KN</option><option value="KP">KP</option><option value="KR">KR</option><option value="KW">KW</option><option value="KY">KY</option><option value="KZ">KZ</option><option value="LA">LA</option><option value="LB">LB</option><option value="LC">LC</option><option value="LI">LI</option><option value="LK">LK</option><option value="LR">LR</option><option value="LS">LS</option><option value="LT">LT</option><option value="LU">LU</option><option value="LV">LV</option><option value="LY">LY</option><option value="MA">MA</option><option value="MC">MC</option><option value="MD">MD</option><option value="ME">ME</option><option value="MF">MF</option><option value="MG">MG</option><option value="MH">MH</option><option value="MK">MK</option><option value="ML">ML</option><option value="MM">MM</option><option value="MN">MN</option><option value="MO">MO</option><option value="MP">MP</option><option value="MQ">MQ</option><option value="MR">MR</option><option value="MS">MS</option><option value="MT">MT</option><option value="MU">MU</option><option value="MV">MV</option><option value="MW">MW</option><option value="MX">MX</option><option value="MY">MY</option><option value="MZ">MZ</option><option value="NA">NA</option><option value="NC">NC</option><option value="NE">NE</option><option value="NF">NF</option><option value="NG">NG</option><option value="NI">NI</option><option value="NL">NL</option><option value="NO">NO</option><option value="NP">NP</option><option value="NR">NR</option><option value="NU">NU</option><option value="NZ">NZ</option><option value="OM">OM</option><option value="PA">PA</option><option value="PE">PE</option><option value="PF">PF</option><option value="PG">PG</option><option value="PH">PH</option><option value="PK">PK</option><option value="PL">PL</option><option value="PM">PM</option><option value="PN">PN</option><option value="PR">PR</option><option value="PS">PS</option><option value="PT">PT</option><option value="PW">PW</option><option value="PY">PY</option><option value="QA">QA</option><option value="RE">RE</option><option value="RO">RO</option><option value="RS">RS</option><option value="RU">RU</option><option value="RW">RW</option><option value="SA">SA</option><option value="SB">SB</option><option value="SC">SC</option><option value="SD">SD</option><option value="SE">SE</option><option value="SG">SG</option><option value="SH">SH</option><option value="SI">SI</option><option value="SJ">SJ</option><option value="SK">SK</option><option value="SL">SL</option><option value="SM">SM</option><option value="SN">SN</option><option value="SO">SO</option><option value="SR">SR</option><option value="SS">SS</option><option value="ST">ST</option><option value="SV">SV</option><option value="SX">SX</option><option value="SY">SY</option><option value="SZ">SZ</option><option value="TC">TC</option><option value="TD">TD</option><option value="TF">TF</option><option value="TG">TG</option><option value="TH">TH</option><option value="TJ">TJ</option><option value="TK">TK</option><option value="TL">TL</option><option value="TM">TM</option><option value="TN">TN</option><option value="TO">TO</option><option value="TR">TR</option><option value="TT">TT</option><option value="TV">TV</option><option value="TW">TW</option><option value="TZ">TZ</option><option value="UA">UA</option><option value="UG">UG</option><option value="UM">UM</option><option value="unitedstates" selected="selected">US</option><option value="UY">UY</option><option value="UZ">UZ</option><option value="VA">VA</option><option value="VC">VC</option><option value="VE">VE</option><option value="VG">VG</option><option value="VI">VI</option><option value="VN">VN</option><option value="VU">VU</option><option value="WF">WF</option><option value="WS">WS</option><option value="YE">YE</option><option value="YT">YT</option><option value="ZA">ZA</option><option value="ZM">ZM</option><option value="ZW">ZW</option>
 </select>
-
-
-
+</li>
+<li>
 <label class="top" for="notes">Notes: <span class="required" style="color: #ff0000;">*</span></label>
 <textarea id="notes" type="text" name="notes" rows="6"> </textarea>
-
+</li>
+<li>
 <label class="top" for="file">Attach File: </label>
 <input id="file" type="file" name="file">
-
-<br><br>
-<br><br>
+</li>
+<li>
+<br>
 <button onclick="submit_form();" type="button">Submit</button>
-
 <br><span class="form-required" style="font-size:70%">* Denotes a Required field.</span>
-
-</div>
-<div style="clear:both"></div>
+</li>
+</ul>
 </form>
 
 <script>
