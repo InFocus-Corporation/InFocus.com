@@ -39,6 +39,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <?php endif; ?>
 
 <script>
+function responsiveColorbox(link, defaultWidth) {
+	var width = defaultWidth||"80%",
+		height= 400;
+	if(window.screen.width<1090) {
+		width = "100%";
+		height= window.screen.height;
+	}
+
+	$.colorbox({
+		iframe: true,
+		innerWidth: width,
+		innerHeight:height,
+		href: $(link).attr('href')
+	});
+}
 $(function () {
 	$(document.body).click(function (e) {
 		$('header .menu > li > a').removeClass('active');
@@ -69,38 +84,17 @@ $(function () {
 	});
 	$('a.contact-us').click(function (e) {
 		e.preventDefault();
-
-		var width = "80%",
-			height= 400;
-		if(window.screen.width<1090) {
-			width = "100%";
-			height= window.screen.height;
-		}
-
-		var href = $(this).attr('href');
-		$.colorbox({
-			iframe: true,
-			innerWidth: width,
-			innerHeight:height,
-			href: href
-		});
+		responsiveColorbox(this);
 	});
 	$('a[href="/resources/forms/projectioncalculator"]').click(function (e) {
 		e.preventDefault();
-
-		var width = "80%",
-			height= 400;
-		if(window.screen.width<1090) {
-			width = "100%";
-			height= window.screen.height;
-		}
-
-		$.colorbox({
-			iframe: true,
-			innerWidth: width,
-			innerHeight:height,
-			href: "/resources/forms/projectioncalculator"
-		});
+		responsiveColorbox(this, '1170px');
+	});
+	$('a[href="/resources/forms/mpdemo"]').click(function (e) {
+		console.log('what is going on?')
+		e.preventDefault();
+		e.stopPropagation();
+		responsiveColorbox(this);
 	});
 	$('.mobile-menu').click(function (e) {
 		e.stopPropagation();
