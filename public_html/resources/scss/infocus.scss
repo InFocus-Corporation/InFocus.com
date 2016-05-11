@@ -43,7 +43,7 @@ $transparent-border-sides: right left;
   }
 }
 
-$solid-border-widths: 30, 38, 40, 60, 125;
+$solid-border-widths: 24, 30, 38, 40, 60, 125;
 $solid-border-sides: right left;
 
 @each $side in $solid-border-sides {
@@ -157,6 +157,14 @@ header + .hero_row > .row {
   }
   &.hero-row--touchscreens {
     background: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg') right -326px top no-repeat;
+    .lead_text>:first-child {
+        margin-top: 88px;
+        padding-left: 100px;
+    }
+    .lead_text--paragraph {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
   }
   &.hero-row--display_walls {
     background: url('../static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg') right -125px top no-repeat;
