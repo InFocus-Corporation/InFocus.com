@@ -57,11 +57,12 @@ header + .hero_row > .row { margin-top: 0px;}
   height: 100%;
 }
 .color_stripe_column {
-  position: relative;
+  min-height: 699px;
   float: left;
   .color_stripe {
     height: 100%;
     float:left;
+    position: absolute;
     &.dark_blue {
       @include background-opacity($infocus_blue);
       width: 77px;
