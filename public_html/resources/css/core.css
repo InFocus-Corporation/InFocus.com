@@ -433,6 +433,33 @@ header#masthead .active .toggle hr:nth-child(2) {
 	display: none;
 }
 
+
+header#masthead.blue {
+	background-color: #006BA6;
+}
+header#masthead.blue h3#logo a {
+	background-position: 0 0;
+}
+header#masthead.blue ul.menu > li > a,
+header#masthead.blue ul.menu > li > span,
+header#masthead.blue ul.menu > li .fa {
+	color: #fff;
+}
+header#masthead.blue ul.menu > li > a.active {
+	background-color: #c2e3ee;
+	color: #3f4a54;
+}
+header#masthead.blue span.mobile-menu hr {
+	border-color: #fff;
+}
+header#masthead.blue ul.menu.small > li .search {
+	background-color: #fff;
+	border: none;
+	text-indent: 4px;
+	padding: 5px 0;
+	border-radius: 3px;
+}
+
 .show-on-mobile { display: none; }
 
 @media only screen and (max-width: 1310px) {
@@ -447,6 +474,13 @@ header#masthead .active .toggle hr:nth-child(2) {
 @media only screen and (max-width: 1190px) {
 	header#masthead h3#logo {
 		margin: 36px 0 0 20px;
+	}
+	header#masthead.blue ul.menu > li > a {
+		color: #3f4a54;
+	}
+	header#masthead.blue ul.menu > li > a.active {
+		background-color: #fff;
+		color: #3f4a54;
 	}
 }
 
@@ -1081,6 +1115,7 @@ form select:focus {
 	background-position: right center;
 	background-size: auto auto;
 	background-repeat: no-repeat;
+    padding-right: 45px;
 }
 form select::-ms-expand {
     display: none;
@@ -1190,22 +1225,23 @@ form div {
 form div > div {
 	padding: 4px;
 }
-form button {
+form button, button.formbutton {
 	background: transparent;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
 	border:2px solid #006fba;
 	display:inline-block;
 	color:#006fba;
-	font-family: 'GoodPro-Wide', Arial, sans-serif;
+	font-family: 'GoodPro', sans-serif;
+	font-weight: bold;
 	font-size:12px;
-	font-weight:bold;
 	padding: 8px 24px;
 	margin: 0;
 	text-transform: uppercase;
 	text-decoration:none;
 	letter-spacing: 1px;
+    cursor: pointer;
 }form button:hover {
 }form button:active {
 }
