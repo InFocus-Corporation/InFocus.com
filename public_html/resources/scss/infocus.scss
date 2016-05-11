@@ -43,6 +43,26 @@ $transparent-border-sides: right left;
   }
 }
 
+$solid-border-widths: 30, 38, 40, 60, 125;
+$solid-border-sides: right left;
+
+@each $side in $solid-border-sides {
+  @each $width in $solid-border-widths {
+    .solid-border-#{$side}-#{$width}-orange {
+      @include border-opacity("#{$side}", #{$width}px, $infocus_orange, 1);
+    }
+    .solid-border-#{$side}-#{$width}-green {
+      @include border-opacity("#{$side}", #{$width}px, $infocus_green, 1);
+    }
+    .solid-border-#{$side}-#{$width}-blue {
+      @include border-opacity("#{$side}", #{$width}px, $infocus_blue, 1);
+    }
+    .solid-border-#{$side}-#{$width}-light_blue {
+      @include border-opacity("#{$side}", #{$width}px, $infocus_light_blue,1 );
+    }
+  }
+}
+
 // General Layout
 body {
   margin: 0 auto;
@@ -56,7 +76,11 @@ body {
   max-width: 71.13rem;
   @media screen and (min-width: 2200px) {max-width: none; }
 }
-header + .hero_row > .row { margin-top: 0px;}
+header + .hero_row > .row {
+    height: 100%;
+    margin-top: 0px;
+    max-width: 100%;
+}
 .hero_row.row--full-height {
   height: 100%;
 }
@@ -119,6 +143,14 @@ header + .hero_row > .row { margin-top: 0px;}
   &.hero-row--video_conferencing {
     background: url('../static/images/video-conferencing/video-conferencing-hero-a--InFocus-Lifestyle-ConX-Exec-Mtg1-300dpi-CMYK.jpg') right -38px top no-repeat;
     background-size: 1055px 799px;
+    .lead_text>:first-child {
+        margin-top: 88px;
+        padding-left: 100px;
+    }
+    .lead_text--paragraph {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
   }
   &.hero-row--projectors {
     background: url('../static/images/projectors/InFocus-Lifestyle-Projector-Screen-2-300dpi-96dpi-RGB.jpg') right -326px top no-repeat;
