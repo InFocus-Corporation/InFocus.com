@@ -78,7 +78,9 @@ header#masthead > div {
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1245px;
+
 }
+@media screen and (min-width: 2200px) { header#masthead > div {max-width: none; } }
 
 /* line 17, ../sass/blocks/_header.scss */
 header#masthead h3#logo,
@@ -148,8 +150,9 @@ header#masthead ul.menu > li > span {
 	padding: 0 1.6rem;
 	line-height: 6.2rem;
 	color: #3f4a54;
-	font-weight: bold;
+	font-weight: normal;
 	white-space: nowrap;
+  font-family: 'GoodPro-WideLight';
 }
 header#masthead ul.menu > li .fa {
 	font-weight: normal;
@@ -226,6 +229,7 @@ header#masthead ul.menu > li > .submenu h3 {
 	font-weight: bold;
 	text-transform: capitalize;
 	margin: 1em 0 0.6em;
+  font-family: 'GoodPro-WideBook';
 }
 header#masthead ul.menu > li > .submenu.explore h2 {
 	margin: 0 0 1.4rem;
@@ -1715,7 +1719,7 @@ footer {
 	overflow: hidden;
 	box-sizing: border-box;
 	font-size: 0.9rem;
-	margin-top: 1.5rem;
+	margin-top: 8rem;
 }
 footer h6 {
 	font-family: 'GoodPro-Wide';

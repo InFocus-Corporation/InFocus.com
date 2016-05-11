@@ -45,13 +45,17 @@ $transparent-border-sides: right left;
 
 // General Layout
 body {
-  max-width: 1935px;
   margin: 0 auto;
   // to accomodate the fixed header
   padding-top: 99px;
 }
 
-.row { margin-top: 3.5em; max-width: 71.13rem; }
+.row {
+  margin-top: 6em;
+  margin-bottom: 4em;
+  max-width: 71.13rem;
+  @media screen and (min-width: 2200px) {max-width: none; }
+}
 header + .hero_row > .row { margin-top: 0px;}
 .hero_row.row--full-height {
   height: 100%;
@@ -236,6 +240,8 @@ header + .hero_row > .row { margin-top: 0px;}
     max-width: 420px;
   }
   &.hero_row--secondary {
+    margin-top: 8em;
+    margin-bottom: 8em;
     &.hero_row--secondary--homepage {
       background: url('../static/images/homepage/homepage-feature--GettyImages-508079793.jpg') center center no-repeat;
       background-size:cover;
@@ -523,11 +529,11 @@ div.video_module {
     width: 66.64%;
     position: absolute;
     height: 100%;
-    -webkit-transition: all 1s ease;
-  	-moz-transition: all 1s ease;
-  	-ms-transition: all 1s ease;
-  	-o-transition: all 1s ease;
-  	transition: all 1s ease;
+    -webkit-transition: all .5s ease;
+  	-moz-transition: all .5s ease;
+  	-ms-transition: all .5s ease;
+  	-o-transition: all .5s ease;
+  	transition: all .5s ease;
     .vertical_accordian--slide--background{
       position: absolute;
       top: 0;
@@ -602,7 +608,6 @@ div.video_module {
 
 //Callouts
 .homepage--callouts {
-    margin-bottom: 2em;
   .callout {
     height: 100%;
   }
@@ -610,7 +615,7 @@ div.video_module {
 
 .callout {
   overflow: hidden;
-  padding: 2em 1.25em 1.25em;
+  padding: 2.5;
   background-color: $infocus_light_blue;
   border: 0px;
   border-radius: 3px;
