@@ -35,7 +35,7 @@
             <h6><?= translate('Resources') ?></h6>
             <ul>
                 <li><a href="/product-finder"><?= translate('Find a Product') ?></a></li>
-                <li><a href="/projectioncalculator"><?= translate('Projection Calculator') ?></a></li>
+                <li><a href="/resources/forms/projectioncalculator"><?= translate('Projection Calculator') ?></a></li>
                 <li><a href="/mondopad-live-demo"><?= translate('Live Mondopad Demo') ?></a></li>
             </ul>
         </div>
@@ -43,33 +43,12 @@
             <h6><?= translate('Buy InFocus') ?></h6>
             <ul>
                 <?php if($lang == "en"):?><li><a href="https://infocusdirect.com/"><?=translate('InFocus Store (US)')?></a></li><?php endif; ?>
-                <li><a href="/resellerlocator"><?=translate('Find a Reseller')?></a></li>
+                <li><a href="/reseller-locator"><?=translate('Find a Reseller')?></a></li>
                 <li><a class="contact-us" href="/resources/forms/contactus"><?=translate('Contact Us')?></a></li>
             </ul>
         </div>
-        <div class="copy privacypolicy">&copy; 2016 InFocus Corporation</div>
+        <div class="copy privacypolicy"><a href="/privacy-policy">&copy; 2016 InFocus Corporation</a></div>
     </div>
-    <script type="text/javascript">
-    $(function () {
-        $("input.search").keyup(function (e) {
-            if (e.keyCode == 13) {
-                Search($(this).val());
-            }
-        });
-    });
-
-    function Search(srchstrng) {
-        jQuery.post("/resources/php/search.php", {
-            searchString: srchstrng
-        }, function(response) {
-            if(response != "No Results") {
-                window.location= response;
-            } else {
-                alert("<?php echo translate('No Results Found'); ?>");
-            }
-        });
-    }
-    </script>
 
     <?php if($lang == "de"):?>
     <script type="text/javascript">
@@ -129,3 +108,24 @@
     <!-- End of infocuscorp Zendesk Widget script -->
     <?php endif; ?>
 </div>
+<script type="text/javascript">
+    $(function () {
+        $("input.search").keyup(function (e) {
+            if (e.keyCode == 13) {
+                Search($(this).val());
+            }
+        });
+    });
+
+    function Search(srchstrng) {
+        jQuery.post("/resources/php/search.php", {
+            searchString: srchstrng
+        }, function(response) {
+            if(response != "No Results") {
+                window.location= response;
+            } else {
+                alert("<?php echo translate('No Results Found'); ?>");
+            }
+        });
+    }
+</script>

@@ -21,7 +21,7 @@ $dark_gray:  #3f4a54;
     border-#{$direction}: solid $width rgba($color, $opacity);
 }
 
-$transparent-border-widths: 30, 38, 40, 60;
+$transparent-border-widths: 30, 38, 40, 60, 125;
 $transparent-border-sides: right left;
 
 @each $side in $transparent-border-sides {
@@ -49,7 +49,7 @@ body {
   padding-top: 99px;
 }
 
-.row { margin-top: 3.5em; max-width: 73.13rem; }
+.row { margin-top: 3.5em; max-width: 71.13rem; }
 header + .hero_row > .row { margin-top: 0px;}
 .hero_row.row--full-height {
   height: 100%;
@@ -69,6 +69,11 @@ header + .hero_row > .row { margin-top: 0px;}
       max-width: 77px;
       width:100%;
     }
+    &.orange {
+      @include background-opacity($infocus_orange);
+      max-width: 77px;
+      width:100%;
+    }
     &.white {
       background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
       width: 92px;
@@ -85,12 +90,28 @@ header + .hero_row > .row { margin-top: 0px;}
   margin-left: auto;
   margin-right: auto;
   max-width: initial;
-  border-left: 18px solid $infocus_blue;
   &.hero-row--homepage {
     background: url('../static/images/homepage/homepage-hero-a--wb-bertlitz.jpg') right -160px top no-repeat;
+    border-left: 18px solid $infocus_blue;
   }
   &.hero-row--video_conferencing {
     background: url('../static/images/video-conferencing/video-conferencing-hero-a--InFocus-Lifestyle-ConX-Exec-Mtg1-300dpi-CMYK.jpg') right -38px top no-repeat;
+    background-size: 1055px 799px;
+
+  }
+  &.hero-row--projectors {
+    background: url('../static/images/projectors/InFocus-Lifestyle-Projector-Screen-2-300dpi-96dpi-RGB.jpg') right -326px top no-repeat;
+  }
+  &.hero-row--touchscreens {
+    background: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg') right -326px top no-repeat;
+  }
+  &.hero-row--display_walls {
+    background: url('../static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg') right -125px top no-repeat;
+  }
+  &.hero-row--jupiter {
+    background: url('../static/images/jupiter/jupiter-hero-a.jpg') left top no-repeat;
+    background-size:cover;
+    background-origin: border-box;
   }
   &.hero-row--header_module_c {
     background: url('../static/images/present/present-hero.jpg') left top no-repeat;
@@ -135,10 +156,15 @@ header + .hero_row > .row { margin-top: 0px;}
         max-width: 115px;
         width: 115px;
     }
+    .color_stripe.orange, .color_stripe.white {
+        max-width: 115px;
+        width: 115px;
+    }
     .color_stripe.white {
         margin-left: 86px !important;
     }
   }
+
   .lead_text {
     > :first-child {  margin-top: 10rem; }
     height: 699px;
@@ -162,9 +188,11 @@ header + .hero_row > .row { margin-top: 0px;}
     max-width: 420px;
   }
   &.hero_row--secondary {
-    background: url('../static/images/homepage/homepage-feature--GettyImages-508079793.jpg') center center no-repeat;
-    background-size:cover;
-    background-origin: border-box;
+    &.hero_row--secondary--homepage {
+      background: url('../static/images/homepage/homepage-feature--GettyImages-508079793.jpg') center center no-repeat;
+      background-size:cover;
+      background-origin: border-box;
+    }
     .lead_text--headline { max-width: none; margin-top: 2em;}
     .color_stripe.white {
       left: 0px;
@@ -312,6 +340,24 @@ header + .hero_row > .row { margin-top: 0px;}
     }
 }
 
+.collage {
+  img {
+    width: 100%;
+    border-top: 4px solid $white;
+  }
+  .columns:first-child {
+    @media screen and (min-width: 40em) {
+      padding-right: 2px;
+      img { height: 50%; }
+    }
+  }
+  .columns:last-child {
+    @media screen and (min-width: 40em) {
+      padding-left: 2px;
+    }
+  }
+}
+
 .promo_modules {
     .module_text {
         height: 140px;
@@ -376,6 +422,22 @@ header + .hero_row > .row { margin-top: 0px;}
         }
     }
 }
+
+div.video_module {
+  position: relative;
+  background: url('/resources/static/images/teach/JTouch-classroom.jpg');
+  background-size: cover;
+  height: 825px;
+  h2.lead_text--secondary_headline {
+    position: absolute;
+    top: 50%;
+    margin: -70px 2em 0;
+    color: #FFF;
+    background: url('/resources/static/images/teach/play_button.png') left center no-repeat;
+    padding-left: 2em;
+  }
+}
+
 
 //Vertical Accordion
 .vertical_accordian {
@@ -467,6 +529,13 @@ header + .hero_row > .row { margin-top: 0px;}
 }
 
 //Callouts
+.homepage--callouts {
+    margin-bottom: 2em;
+  .callout {
+    height: 100%;
+  }
+}
+
 .callout {
   overflow: hidden;
   padding: 2em 1.25em 1.25em;
@@ -532,4 +601,124 @@ header + .hero_row > .row { margin-top: 0px;}
 // Present page
 .present-page-icon {
     stroke: $infocus_orange;
+}
+
+// Peripherals Page
+.peripherals_home {
+    .hero-row--peripherals_home {
+      background: url('../static/images/peripherals/peripherals_cam.jpg') right -125px top no-repeat;
+    }
+    .dark_blue.color_stripe {
+        width: 70px;
+    }
+    .product_shot {
+        margin-bottom: 20px;
+    }
+
+}
+
+// Support Page
+.support-page {
+
+  h6 {
+    font-family: 'GoodPro-WideBook';
+    font-weight: bold;
+  }
+
+  .ui-widget {
+    .custom-combobox-input {
+      border: 1px solid #b7b7b7;
+      background: #fff !important;
+      font-family: 'GoodPro-Wide';
+      border-radius: 2px 0 0 2px;
+      height: 33px;
+    }
+    .custom-combobox-toggle {
+      position: relative;
+      top: 0;
+      left: 0;
+      background-image: none;
+      background-color: #8c8c8c;
+      border: none;
+      border-radius: 0px 2px 2px 0px;
+      width: 32px;
+      height: 33px;
+      padding: 0;
+      margin: 0 0 0 -1px;
+      vertical-align: top;
+
+      &>.ui-icon-triangle-1-s {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        font-family: 'FontAwesome';
+        font-size: 1rem;
+        line-height: normal;
+        color: #fff;
+        background-image: none;
+
+        width: 32px;
+        height: 32px;
+        font-size: 1.4rem;
+        text-align: center;
+        margin: 5px 0 0;
+        text-indent: 0;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        &::before {
+          content: "\f107";
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .Button-1 {
+    background: transparent;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:2px solid #006fba;
+    display:inline-block;
+    color:#006fba;
+    font-family: 'GoodPro-Wide', Arial, sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    padding: 8px 24px;
+    margin: 0;
+    text-transform: uppercase;
+    text-decoration:none;
+    letter-spacing: 1px;
+  }
+
+  table {
+    border:none;
+
+    tbody {
+      border: none;
+
+      tr {
+        border: none;
+
+        &>td {
+          border: none;
+          color: #343e48;
+          text-align: left;
+          background-color: #fff;
+        }
+        &:nth-child(2n-1)>td {
+          background-color: #f2f2f2;
+
+        }
+        &>th {
+          font-weight: bold;
+          background-color: #fff;
+          padding: 1rem .625rem 1rem;
+        }
+      }
+    }
+  }
 }

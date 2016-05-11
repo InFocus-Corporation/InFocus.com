@@ -69,7 +69,38 @@ $(function () {
 	});
 	$('a.contact-us').click(function (e) {
 		e.preventDefault();
-		alert('contact us popup');
+
+		var width = "80%",
+			height= 400;
+		if(window.screen.width<1090) {
+			width = "100%";
+			height= window.screen.height;
+		}
+
+		var href = $(this).attr('href');
+		$.colorbox({
+			iframe: true,
+			innerWidth: width,
+			innerHeight:height,
+			href: href
+		});
+	});
+	$('a[href="/resources/forms/projectioncalculator"]').click(function (e) {
+		e.preventDefault();
+
+		var width = "80%",
+			height= 400;
+		if(window.screen.width<1090) {
+			width = "100%";
+			height= window.screen.height;
+		}
+
+		$.colorbox({
+			iframe: true,
+			innerWidth: width,
+			innerHeight:height,
+			href: "/resources/forms/projectioncalculator"
+		});
 	});
 	$('.mobile-menu').click(function (e) {
 		e.stopPropagation();
@@ -140,7 +171,7 @@ $(function () {
 						<div class="menu-grid">
 							<ul>
 								<li>
-									<img src="http://placehold.it/195x163">
+									<img src="/resources/static/images/elements/header-menu-icon--touchscreens.jpg">
 									<h3><a href="/displays/">Touchscreens</a></h3>
 									<a href="/displays/MONDOPAD-SERIES">Mondopad</a>
 									<a href="/displays/BIGTOUCH-SERIES">Big Touch</a>
@@ -148,7 +179,7 @@ $(function () {
 									<a href="/displays/Q-Tablet-Series">QTablet</a>
 								</li>
 								<li>
-									<img src="http://placehold.it/195x163">
+									<img src="/resources/static/images/elements/header-menu-icon--projectors.jpg">
 									<h3><a href="/projectors/">Projectors</a></h3>
 									<a href="/hd-projector-lineup">HD Projectors</a>
 									<a href="/projectors/ultra-portable">Ultra Portable</a>
@@ -159,8 +190,8 @@ $(function () {
 									<a href="/projectors/interactive">Interactive</a>
 								</li>
 								<li>
-									<img src="http://placehold.it/195x163">
-									<h3><a href="/video-conferencing">Video<br> Conferencing</a></h3>
+									<img src="/resources/static/images/elements/header-menu-icon--video_conferencing.jpg">
+									<h3><a href="/video-conferencing/">Video<br> Conferencing</a></h3>
 									<a href="/displays/MONDOPAD-SERIES">Mondopad</a>
 									<a href="/conx-wall-exec">NEW! ConX Wall &amp; ConX<br> Exec</a>
 									<a href="/peripherals/MVP100">ConX Phone (MVP100)</a>
@@ -168,8 +199,8 @@ $(function () {
 									<a href="/peripherals/121-Series">121 Video Calling</a>
 								</li>
 								<li>
-									<img src="http://placehold.it/195x163">
-									<h3><a href="#">Display Walls</a></h3>
+									<img src="/resources/static/images/elements/header-menu-icon--display_walls.jpg">
+									<h3><a href="/display-walls/">Display Walls</a></h3>
 									<a href="#">Canvas</a>
 									<a href="#">Canvas CRS-4K</a>
 									<a href="#">Canvas Touch</a>
@@ -179,7 +210,7 @@ $(function () {
 									<a href="#">VizionPlus II</a>
 								</li>
 								<li>
-									<img src="http://placehold.it/195x163">
+									<img src="/resources/static/images/elements/header-menu-icon--peripherals.jpg">
 									<h3><a href="/peripherals/">Peripherals</a></h3>
 									<a href="/peripherals/INF-SPTZ-2">RealCam PTZ Camera</a>
 									<a href="/peripherals/INA-TH150">Thunder Speakerphone</a>
@@ -205,73 +236,73 @@ $(function () {
 							<ul>
 								<li>
 									<a href="/accessories/mondopad-accessories">
-										<img src="http://placehold.it/163x163">
+										<img src="/resources/static/images/elements/header-menu-icon--accessories_for_displays.png">
 										<h4>Accessories<br> for Displays</h4>
 									</a>
 								</li>
 								<li>
 									<a href="/accessories/cables">
-										<img src="http://placehold.it/163x163">
+										<img src="/resources/static/images/elements/header-menu-icon--cables_and_adapters.png">
 										<h4>Cables and<br> Adapters</h4>
 									</a>
 								</li>
 								<li>
 									<a href="/accessories/cases">
-										<img src="http://placehold.it/163x163">
+										<img src="/resources/static/images/elements/header-menu-icon--cases.png">
 										<h4>Cases</h4>
 									</a>
 								</li>
 								<li>
 									<a href="/accessories/lamps">
-										<img src="http://placehold.it/163x163">
+										<img src="/resources/static/images/elements/header-menu-icon--lamps.png">
 										<h4>Lamps</h4>
 									</a>
 								</li>
 								<li>
 									<a href="/accessories/lenses">
-										<img src="http://placehold.it/163x163">
+										<img src="/resources/static/images/elements/header-menu-icon--lenses.png">
 										<h4>Lenses</h4>
 									</a>
 								</li>
 								<li>
 									<a href="/accessories/misc">
-										<img src="http://placehold.it/163x163">
+										<img src="/resources/static/images/elements/header-menu-icon--miscellaneous.png">
 										<h4>Miscellaneous</h4>
 									</a>
 								</li>
 								<li>
 									<a href="/accessories/mounts">
-										<img src="http://placehold.it/163x163">
+										<img src="/resources/static/images/elements/header-menu-icon--mounts_and_stands.png">
 										<h4>Mounts and<br> Stands</h4>
 									</a>
 								</li>
 								<li>
 									<a href="/accessories/remotes">
-										<img src="http://placehold.it/163x163">
+										<img src="/resources/static/images/elements/header-menu-icon--remotes.png">
 										<h4>Remotes</h4>
 									</a>
 								</li>
 								<li>
 									<a href="/accessories/screens">
-										<img src="http://placehold.it/163x163">
+										<img src="/resources/static/images/elements/header-menu-icon--screens.png">
 										<h4>Screens</h4>
 									</a>
 								</li>
 								<li>
 									<a href="/accessories/software">
-										<img src="http://placehold.it/163x163">
+										<img src="/resources/static/images/elements/header-menu-icon--software.png">
 										<h4>Software</h4>
 									</a>
 								</li>
 								<li>
 									<a href="/accessories/services">
-										<img src="http://placehold.it/163x163">
+										<img src="/resources/static/images/elements/header-menu-icon--warranties_and_service.png">
 										<h4>Warranties<br> and Service</h4>
 									</a>
 								</li>
 								<li>
 									<a href="/accessories/networking">
-										<img src="http://placehold.it/163x163">
+										<img src="/resources/static/images/elements/header-menu-icon--wireless_and_networking.png">
 										<h4>Wireless and<br> Networking</h4>
 									</a>
 								</li>
@@ -337,7 +368,7 @@ $(function () {
 				<a><?=translate('Buy')?></a>
 				<ul class="submenu">
 					<?php if($lang == "en"):?><li><a href="https://infocusdirect.com/"><?=translate('InFocus Store (US)')?></a></li><?php endif; ?>
-					<li><a href="/resellerlocator"><?=translate('Find a Reseller')?></a></li>
+					<li><a href="/reseller-locator"><?=translate('Find a Reseller')?></a></li>
 					<li><a class="contact-us" href="/resources/forms/contactus"><?=translate('Contact Us')?></a></li>
 				</ul>
 			</li>
