@@ -64,7 +64,10 @@ header + .hero_row > .row { margin-top: 0px;}
     position: absolute;
     &.dark_blue {
       @include background-opacity($infocus_blue);
-      width: 77px;
+      width: 7%;
+      @media screen and (min-width: 62em) {
+          width: 77px;
+      }
     }
     &.light_blue {
       @include background-opacity($infocus_light_blue);
@@ -98,6 +101,15 @@ header + .hero_row > .row { margin-top: 0px;}
     padding-bottom: 0;
     height: 699px;
   }
+  &.transparent-border-right-40-orange {
+      border-width: 7px;
+      @media screen and (min-width: 40em) {
+          border-width: 20px;
+      }
+      @media screen and (min-width: 62em) {
+          border-width: 40px;
+      }
+  }
   &.hero-row--homepage {
     background: url('../static/images/homepage/homepage-hero-a--wb-bertlitz.jpg') right -160px top no-repeat;
     border-left: 18px solid $infocus_blue;
@@ -128,10 +140,16 @@ header + .hero_row > .row { margin-top: 0px;}
   &.hero-row--touchscreens {
     background-image: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg');
     background-size: cover;
-    background-position: left 280px 0;
+    background-position: left 250px top;
     background-repeat: no-repeat;
+    @media screen and (min-width: 30em) {
+      background-position: left 280px top;
+    }
     @media screen and (min-width: 40em) {
       background-position: left 310px top;
+    }
+    @media screen and (min-width: 50em) {
+      background-position: right -350px top;
     }
     @media screen and (min-width: 64em) {
       background-size: auto;
@@ -230,58 +248,72 @@ header + .hero_row > .row { margin-top: 0px;}
   }
 
   .hero_inner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    @media screen and (min-width: 64em) {
-      position: static;
-    }
-    .lead_text {
+      position: absolute;
+      width: 100%;
       height: 100%;
-    }
-    .lead_text > :first-child {
-      margin-top: 10%;
-      margin-bottom: 10%;
-      font-size: 1.2rem;
-      @media screen and (min-width: 40em) {
-        margin-top: 20%;
-        margin-bottom: 10%;
-        font-size: 2.2rem;
-      }
       @media screen and (min-width: 64em) {
-        margin-top: 10rem;
-        font-size: 3.75rem;
+          position: static;
       }
-      svg {
-        width: 20%;
-        height: 20%;
-        max-width: 140px;
-        max-height: 85px;
-        @media screen and (min-width: 40em) {
-          width: 20%;
-          height: 20%;
-        }
-        @media screen and (min-width: 64em) {
-          width: 140px;
-          height: 85px;
-        }
+      .lead_text {
+          height: 100%;
       }
-    }
-    .color_stripe_column {
-      height: 100%;
-    }
-    .lead_text--paragraph {
-      font-size: .75em;
-      line-height: 1.1;
-      @media screen and (min-width: 40em) {
-        font-size: 1.2em;
-        line-height: 1.5;
+      .lead_text > :first-child {
+          margin-top: 10%;
+          margin-bottom: 10%;
+          font-size: 1.2rem;
+          @media screen and (min-width: 30em) {
+              margin-top: 20%;
+              margin-bottom: 10%;
+              font-size: 1.9rem;
+          }
+          @media screen and (min-width: 40em) {
+              font-size: 2.3rem;
+          }      
+          @media screen and (min-width: 52em) {
+              font-size: 3rem;
+          }
+          @media screen and (min-width: 64em) {
+              margin-top: 10rem;
+              font-size: 3.75rem;
+          }
+          svg {
+              width: 20%;
+              height: 20%;
+              max-width: 140px;
+              max-height: 85px;
+              @media screen and (min-width: 40em) {
+                width: 20%;
+                height: 20%;
+              }
+              @media screen and (min-width: 64em) {
+                width: 140px;
+                height: 85px;
+              }
+          }
+       }
+      .color_stripe_column {
+          height: 100%;
       }
-      @media screen and (min-width: 64em) {
-        font-size: 1.25em;
-        line-height: 1.6;
+      .lead_text--paragraph {
+          font-size: .75em;
+          line-height: 1.1;
+          @media screen and (min-width: 30em) {
+              font-size: .9em;
+              line-height: 1.2;
+          }
+          @media screen and (min-width: 40em) {
+              font-size: 1em;
+              line-height: 1.4;
+          }
+          @media screen and (min-width: 40em) {
+              font-size: 1em;
+              line-height: 1.5;
+          }
+          @media screen and (min-width: 64em) {
+              font-size: 1.25em;
+              line-height: 1.6;
+          }
       }
-    }
   }
 
   .lead_text {
@@ -299,8 +331,12 @@ header + .hero_row > .row { margin-top: 0px;}
   .color_stripe_column {
     height: 100%;
     .color_stripe.white {
-      margin-left: 48px;
-      width: 127px;
+      margin-left: 4%;
+      width: 11%;
+      @media screen and (min-width: 62em) {
+          margin-left: 48px;
+          width: 127px;
+      }
     }
   }
   .lead_text--headline {
@@ -322,37 +358,68 @@ header + .hero_row > .row { margin-top: 0px;}
 }
 
 .product_module {
-  .product_text {
-    padding-left: 0;
-  }
-  @media screen and (min-width: 40em) {
+    .color_stripe_column {
+        min-height: 0;
+        height: 100%;
+        .color_stripe.white {
+            width: 7%;
+            @media screen and (min-width: 64em) {
+                width: 92px;
+            }
+        }
+    }
     .product_text {
-      padding-left: .625rem;
+        padding-left: 0;
     }
-  }
-  h3.lead_text--secondary_headline {
-    margin-bottom: .65rem;
-    font-size: 1.25rem;
     @media screen and (min-width: 40em) {
-        font-size: 2.75rem;
+        .product_text {
+          padding-left: .625rem;
+        }
     }
-  }
-  .lead_text--paragraph {
-    font-size: .75rem;
-    line-height: 1.1;
-    @media screen and (min-width: 40em) {
-      font-size: 1.25rem;
-      line-height: 1.6;
+    h3.lead_text--secondary_headline {
+        margin-bottom: .65rem;
+        font-size: 1.25rem;
+        @media screen and (min-width: 30em) {
+            font-size: 1.7rem;
+        }
+        @media screen and (min-width: 40em) {
+            font-size: 2rem;
+        }
+        @media screen and (min-width: 50em) {
+            font-size: 2.3rem;
+        }
+        @media screen and (min-width: 64em) {
+            font-size: 2.75rem;
+        }
     }
-  }
-  a.button--primary, a.button--primary:link, a.button--primary:visited, a.link:link, a.link:visited {
-    font-size: .5rem;
-    letter-spacing: .1rem;
-    @media screen and (min-width: 40em) {
-      font-size: .75rem;
-      letter-spacing: .2rem;
+    .lead_text--paragraph {
+        font-size: .70rem;
+        line-height: 1.1;
+        @media screen and (min-width: 30em) {
+            font-size: .9rem;
+            line-height: 1.2;
+        }
+        @media screen and (min-width: 40em) {
+            font-size: 1rem;
+            line-height: 1.3;
+        }
+        @media screen and (min-width: 50em) {
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+        @media screen and (min-width: 64em) {
+            font-size: 1.25rem;
+            line-height: 1.6;
+        }
     }
-  }
+    a.button--primary, a.button--primary:link, a.button--primary:visited, a.link:link, a.link:visited {
+        font-size: .5rem;
+        letter-spacing: .1rem;
+        @media screen and (min-width: 40em) {
+          font-size: .75rem;
+          letter-spacing: .2rem;
+        }
+    }
 }
 
 .feature_module_a {
