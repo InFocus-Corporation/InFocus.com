@@ -1,66 +1,109 @@
-<!DOCTYPE html>
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
-
+echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '"/>' . PHP_EOL;
 ?>
+<title>InFocus | Laptop Display Shortcuts</title>
+<meta name="description" content="Discover advanced projection equipment offered by InFocus. Global leader in LCD projectors and DLP projection, Mondopad products and projector accessories." />
+<meta name="keywords" content="infocus,mondopad,projector,projection,DLP,LCD,LCD display,digital display,visual communications,projector accessories,infocus company,digital technology,projection equipment,monopad, communication, touchscreen" />
 
-<script>
-</script>
+<link rel="stylesheet" href="/resources/css/font-awesome.min.css" />
+<link rel="stylesheet" href="/resources/css/vendor/foundation.min.css" />
+<link rel="stylesheet" href="/resources/css/infocus.min.css" />
+
+<?php
+if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $homedir.'/resources/overviews/', 'admin,salespublisher,saleseditor,marketingpublisher,marketingeditor,editor', ".src", "overview", "true", "SavePage","overview");}
+?>
 <style>
-        </style>
-	</head>
-	<body class="">
-		<?php include($homedir . "/resources/html/mainmenu.html"); ?>
-		<div id="layout">
-			<section id="content">
-				
-<div id="locator" class="content-i">
-
-
-
-<h2 class="pane-title">Laptop Activation Chart</h2>
-  
-  
-  <div class="content">
-    <style type="text/css">
-.bottomborder {
-				border-bottom-style: solid;
-				border-bottom-width: 1px;
-                               text-align:left;
-}
+	.table-search {
+		position:relative;
+	}
+	.table-search .fa-search {
+		color: #aaa;
+		position: absolute;
+		top: 8px;
+		left: 10px;
+		font-size: 1.2rem;
+	}
+	input[name=laptop_search],
+	input[name=laptop_search]:focus {
+	    outline: none;
+	    background-color: #fff;
+	    border: 2px solid #d1d3d3;
+	    border-radius: 3px;
+	    color: #3f4a54;
+	    box-shadow: none;
+	    font-family: 'GoodPro-Wide';
+	    padding-left: 40px;
+	}
+	#infotable {
+		border-collapse: collapse;
+	}
+	#infotable th,
+	#infotable td {
+		border: 1px solid #ccc;
+	}
+	#infotable tbody th,
+	#infotable tbody td {
+		color: #666;
+	}
+	#infotable li {
+		list-style-type: square;
+		font-size: 1rem;
+		line-height: 1.3em;
+	}
 </style>
+<script>
+$(function () {
+	$('input[name=laptop_search]').on('input', function (e) {
+		var search = $(this).val().trim().toLowerCase(),
+			text = '';
 
-<p style="text-align:left">Most laptop computers require a function key or software command to activate/deactivate the laptop video output signal. The chart below lists the video activation commands for common laptop manufacturers. Many manufacturers use different commands for different models. If none of the commands for your brand listed do not work, consult with the manufacturer for the proper command. With most laptops, the activation/deactivation command acts as a toggle switch: repeat the command to display the image on the internal laptop display, the external display (projector) or both displays simultaneously. In some cases, the simultaneous display setting will not work properly if the native resolution of the projector does not match the native resolution of the laptop LCD display. This means that the internal display of some laptops will need to be turned OFF to achieve optimal image quality on the projector.</p>
-<br></br>
+		$('#infotable tbody tr').each(function (idx, el) {
+			text = $(el.cells[0]).text().toLowerCase();
+			if(text.indexOf(search)>-1) {
+				$(el).show();
+			} else {
+				$(el).hide();
+			}
+		});
+	});
+});
+</script>
+</head>
+<body class="">
+	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
 
-		
-		
-		<table  style="text-align:left" >
-				<tr>
+	<div class="row">
+		<div class="small-12 medium-10 medium-offset-1 columns">
+			<h2 class="lead_text--secondary_headline">Laptop Display Shortcuts</h2>
+			<p style="text-align:left">Most laptop computers require a function key or software command to activate/deactivate the laptop video output signal. The chart below lists the video activation commands for common laptop manufacturers. Many manufacturers use different commands for different models. If none of the commands for your brand listed do not work, consult with the manufacturer for the proper command.</p>
+			<p>With most laptops, the activation/deactivation command acts as a toggle switch: repeat the command to display the image on the internal laptop display, the external display (projector) or both displays simultaneously. In some cases, the simultaneous display setting will not work properly if the native resolution of the projector does not match the native resolution of the laptop LCD display. This means that the internal display of some laptops will need to be turned OFF to achieve optimal image quality on the projector.</p>
 
+		<div class="table-search">
+			<i class="fa fa-search"></i>
+			<input type="text" name="laptop_search" placeholder="Search List By Laptop Brand Name">
+		</div>
+
+		<table id="infotable" style="text-align:left" >
+			<thead>
+				<tr class="HeaderRow">
 					<th class="bottomborder" >Computer</th>
 					<th class="bottomborder" >Key Command to Activate Port</th>
 				</tr>
-
-
+			</thead>
+			<tbody>
 		    <tr>
-
 		        <th class="bottomborder">Acer</th>
 				<td class="bottomborder">
-  
-    <li>Ctrl-Alt-ESC while computer boots activates the setup menu; system config; advanced sys config; display device; LCD/CRT
-    </li>
-    <li>FN + F5 </li>
-  
-</td>
+					<li>Ctrl-Alt-ESC while computer boots activates the setup menu; system config; advanced sys config; display device; LCD/CRT
+					</li>
+					<li>FN + F5 </li>
+				</td>
 		    </tr>
-		
 		    <tr>
 		        <th class="bottomborder">Advanced Logic Research</th>
-
 				<td class="bottomborder">
-  
     <li>Ctrl + Alt + V </li>
   
 </td>
@@ -103,18 +146,6 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 		    </tr>
 		
 		    <tr>
-		        <th class="bottomborder">Acer</th>
-
-				<td class="bottomborder">
-  
-    <li>Ctrl-Alt-ESC while computer boots activates the setup menu; system config; advanced sys config; display device; LCD/CRT
-    </li>
-    <li>FN + F5 </li>
-  
-</td>
-		    </tr>
-		
-		    <tr>
 		        <th class="bottomborder">AMT</th>
 				<td class="bottomborder">
 
@@ -126,7 +157,12 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 		
 		    <tr>
 		        <th class="bottomborder">Apple</th>
-				<td class="bottomborder"><li>See Macintosh</li></td>
+				<td class="bottomborder">
+					<li>Select Monitor Icon on Control Strip; Select Resolution to match display device</li>
+					<li>Control Panel folder; Display folder; Activate Video Mirroring; warm reboot</li>
+					<li>Control Panel folder; Monitors; switch primary display by dragging white menu bar to Monitor 2</li>
+					<li>Many Macintosh computers are not compatible and have no external video port; in these cases there sometimes is a third party device available</li>
+				</td>
 		    </tr>
 		
 		    <tr>
@@ -947,24 +983,20 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
   <li>FN + F1 </li>
 </td>
 		    </tr>
-
+		</tbody>
 		</table>  
 
-
 		</div>
-			</section>
-		</div>
-				<footer id="site-info" >
-				<script>
-				$.get( "/resources/html/footer.html", function( data ) {$('#site-info').html( data );});
-				</script>
-				</footer>
-<script>
+	</div>
 
-</script>
-
-
-</body></html>
+	<script>
+	    $(document).foundation();
+	</script>
+	<footer id="site-info" >
+	<?php include($homedir . "/resources/html/footer.html"); ?>
+	</footer>
+</body>
+</html>
 
 
 
