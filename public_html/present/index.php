@@ -15,6 +15,15 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 
 ?>
 </head>
+<script>
+    $(function() {
+        $(window).resize(function () {
+            var bTextHeight = $('.feature_module_b .feature_text').height();
+            var bModule = $('.feature_module_b');
+            bModule.css('margin-bottom',bTextHeight-100);
+        })
+    });
+</script>
 <body id="present_page" class="present_page" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
     <!-- HEADER MODULE C -->
@@ -80,7 +89,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <br><br><br>
     <!-- FEATURE MODULE B -->
     <div class="row feature_module_b">
-        <div class="small-12 columns">
+        <div class="small-12 columns hero_inner">
             <div class="module_image">
 
             </div>
