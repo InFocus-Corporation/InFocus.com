@@ -363,9 +363,9 @@ class IFCSeries extends InFocus
 <td data-label='Features'>{$panelfeat[$model]['features']}</td>
 <td data-label='Availability'>{$panelfeat[$model]['availability']}</td>
 		<td data-label='Price US'>" . $this->modelPrice[$model] . "<span class='infolink' title='Price displayed in US Dollars from InFocusDirect.com, may vary elsewhere, and is valid only in the US.'></span></td>
-<td class='buyLearn' data-label='Buy/Learn'><a href='$model' class='table_button'>Learn More</a>";
+<td class='buyLearn' data-label='Buy/Learn'>";
 if(in_array($this->modelActive[$model],array(1,4,5,7,9))){$seriesPanels .=   "<a class='buyNow table_button' href='https://infocusdirect.com/$model'>Buy Now</a>";}
-$seriesPanels .=   "</td>
+$seriesPanels .=   "<a href='$model'>Learn More</a></td>
 </tr>";
 			}
 		}
