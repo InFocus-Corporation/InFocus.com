@@ -169,7 +169,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <br><br><br>
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">
-        <div class="small-12 large-6 columns promo_module_d">
+        <div class="small-12 medium-6 columns promo_module_d">
             <div class="module_image">
 
             </div>
@@ -187,7 +187,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 </a>
             </div>
         </div>
-        <div class="small-12 large-6 columns promo_module_c">
+        <div class="small-12 medium-6 columns promo_module_c">
             <div class="module_image">
 
             </div>

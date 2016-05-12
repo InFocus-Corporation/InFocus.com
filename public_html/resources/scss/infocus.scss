@@ -627,6 +627,11 @@ header + .hero_row > .row { margin-top: 0px;}
 }
 
 .promo_modules {
+    position: relative;
+    @media screen and (min-width: 40em) {
+        height: 0;
+        padding-bottom: 39%;
+    }
     .module_text {
         height: 140px;
         margin-top: -140px;
@@ -663,11 +668,25 @@ header + .hero_row > .row { margin-top: 0px;}
 
     }
     .promo_module_c {
-        padding: 0 0 0 15px;
+        margin-bottom: 1em;
+            @media screen and (min-width: 40em) {
+                margin-bottom: 0;
+                padding: 0 15px 0 0;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+        }
         .module_image {
             height: 387px;
             background: url('../static/images/present/present-promo_module_c.jpg') right;
             background-size: cover;
+            @media screen and (min-width: 40em) {
+                height: 100%;             
+            }
+            @media screen and (min-width: 64em) {
+                height: 387px;             
+            }
         }
         &.collaborate--promo_module_c .module_image {
             background: url('../static/images/collaborate/collaborate-promo_module_c.jpg');
@@ -683,11 +702,24 @@ header + .hero_row > .row { margin-top: 0px;}
 
     }
     .promo_module_d {
-        padding: 0 15px 0 0;
+        margin-bottom: 1em;
+            @media screen and (min-width: 40em) {
+                margin-bottom: 0;
+                padding: 0 15px 0 0;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+            }
         .module_image {
             height: 387px;
             background: url('../static/images/present/present-promo_module_d.jpg');
             background-size: cover;
+            @media screen and (min-width: 40em) {
+                height: 100%;             
+            }
+            @media screen and (min-width: 64em) {
+                height: 387px;             
+            }
         }
         &.collaborate--promo_module_d .module_image {
             background: url('../static/images/collaborate/collaborate-promo_module_d.jpg');
@@ -702,12 +734,12 @@ div.video_module {
   background-size: cover;
   height: 825px;
   h2.lead_text--secondary_headline {
-    position: absolute;
-    top: 50%;
-    margin: -70px 2em 0;
-    color: #FFF;
-    background: url('/resources/static/images/teach/play_button.png') left center no-repeat;
-    padding-left: 2em;
+      position: absolute;
+      top: 50%;
+      margin: -70px 2em 0;
+      color: #FFF;
+      background: url('/resources/static/images/teach/play_button.png') left center no-repeat;
+      padding-left: 2em;
   }
 }
 
