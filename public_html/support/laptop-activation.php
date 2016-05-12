@@ -51,6 +51,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		list-style-type: square;
 		font-size: 1rem;
 		line-height: 1.3em;
+	    text-indent: -14px;
+    	padding-left: 14px;
+    	margin-bottom: 0.25em;
 	}
 </style>
 <script>
