@@ -406,7 +406,7 @@ RewriteRule  ^support/?$ /support/index.php [NC,L]
 
 RewriteRule  ^la-promo /custompages/index.php?pagename=sales-partners [R=301,NC,L]
 
-RewriteRule  authorized(-)?service(-)?(center)?(s)?$ /custompages/index.php?pagename=authorized-service-centers [NC,L]
+#RewriteRule  authorized(-)?service(-)?(center)?(s)?$ /custompages/index.php?pagename=authorized-service-centers [NC,L]
 
 RewriteRule  ^404 /custompages/index.php?404 [NC,L]
 

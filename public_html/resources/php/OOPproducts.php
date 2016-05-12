@@ -340,7 +340,7 @@ class IFCSeries extends InFocus
 			<div class="checkCon tags-container tagsort-tags-container"></div>
 		</div>
 	</div>
-	<div class="C7_tag">
+	<div class="C8_tag">
 		<div class="infocusTable">
 		<table class="rwd-table-large">
 			<thead>
@@ -363,8 +363,8 @@ class IFCSeries extends InFocus
 <td data-label='Features'>{$panelfeat[$model]['features']}</td>
 <td data-label='Availability'>{$panelfeat[$model]['availability']}</td>
 		<td data-label='Price US'>" . $this->modelPrice[$model] . "<span class='infolink' title='Price displayed in US Dollars from InFocusDirect.com, may vary elsewhere, and is valid only in the US.'></span></td>
-<td class='buyLearn' data-label='Buy/Learn'><a href='$model'>Learn More</a><br>";
-if(in_array($this->modelActive[$model],array(1,4,5,7,9))){$seriesPanels .=   "<a class='buyNow'href='https://infocusdirect.com/$model'>Buy Now</a>";}
+<td class='buyLearn' data-label='Buy/Learn'><a href='$model' class='table_button'>Learn More</a>";
+if(in_array($this->modelActive[$model],array(1,4,5,7,9))){$seriesPanels .=   "<a class='buyNow table_button' href='https://infocusdirect.com/$model'>Buy Now</a>";}
 $seriesPanels .=   "</td>
 </tr>";
 			}
