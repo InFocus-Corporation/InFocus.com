@@ -1686,9 +1686,9 @@ ul.feature-list li {
 
 .feature-list ul li:after,
 ul.feature-list li:after {
-    content: '';
-    height: .4em;
-    width: .4em;
+    content: ' ';
+    width: 6px;
+	height: 6px;
     background: #ff6a13;
     display: block;
     position: absolute;
