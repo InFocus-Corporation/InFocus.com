@@ -2094,14 +2094,15 @@ margin-left:15px;
 }
 
 .panels > li > div {
+	position: relative;
+	min-height: 345px;
 	background: #bbdde6;
-	padding: 1em;
 	color: #333f48;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-  padding: 1em .2em;
-  margin: 0em .8em;
+	padding: 1em .2em;
+	margin: 0em .8em;
 }
 .panels > li > div h6.title {
 	margin-top: 0.6em;
@@ -2110,11 +2111,51 @@ margin-left:15px;
 	font-size: 0.8em;
 	color: #006ba6;
 }
+.panels > li > div small.price {
+	position: absolute;
+	bottom: 5rem;
+	left: 0;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0 1.4em;
+	box-sizing: border-box;
+	text-align: left;
+	font-family: 'GoodPro-Wide';
+	font-weight: bold;
+	font-size: 0.9rem;
+	color: #333f48;
+}
+.panels > li > div small.price a {
+	float: right;
+	font-family: 'GoodPro-Wide';
+	font-weight: normal;
+	color: #333f48;
+	font-size: 0.9rem !important;
+}
+.panels > li > div small.price a > span {
+	font-size: 0.9rem !important;
+}
+.panels > li > div a.blue_btn {
+	position: absolute;
+	bottom: 2em;
+	left: 50%;
+	width: 150px !important;
+	background-color: #006ba6;
+	font-family: 'GoodPro';
+	font-weight: bold;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transform: translate(-50%,0);
+	-webkit-transform: translate(-50%,0);
+	-moz-transform: translate(-50%,0);
+}
 
 .spec-list {
 	text-align: left;
 	margin: 0.6em 1em 1em 1em;
-	font-size: 0.7em;
+	font-size: 0.9rem;
 	line-height: 2em;
 	padding: 0.4em 0;
 	border-top:1px solid #006ba6;
@@ -2476,7 +2517,7 @@ margin-bottom:1em;
 }
 
 .resultsList > li {
-	max-width:290px;
+	max-width:260px;
 	min-width:125px;
 	padding-left:0px;
 	width:25%;
