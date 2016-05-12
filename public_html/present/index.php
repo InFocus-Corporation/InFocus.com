@@ -151,7 +151,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <br><br><br>
     <!-- FEATURE MODULE A -->
 	<div class="row feature_module_a ">
-        <div class="small-12 medium-6 columns feature_text">
+        <div class="small-6 columns feature_text">
 			<h3 class="lead_text--secondary_headline widelight">PC-less presenting</h3>
 			<p class="lead_text--paragraph">Load your projector's internal memory with common or shared files and quickly present them without a computer. Or project files directly from a USB thumb drive, which is convenient for guests or when traveling.</p>
             <div class="feature_links">
@@ -160,7 +160,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <a href="/projectors/IN1146" class="feature_link">IN1146 Mobile LED Projector</a>
             </div>
 		</div>
-		<div class="small-12 medium-6 columns color_stripe_column">
+		<div class="small-6 columns color_stripe_column">
 			<div class="white color_stripe"></div>
             <div class="light_blue color_stripe float-right"></div>
 		</div>

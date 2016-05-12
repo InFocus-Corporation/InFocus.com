@@ -361,35 +361,71 @@ header + .hero_row > .row { margin-top: 0px;}
 }
 
 .feature_module_a {
-    height: 600px;
+    position: relative;
+    height: 0;
+    padding-bottom: 60%;
     background: url('../static/images/present/present-module_a.jpg') right top no-repeat;
     background-size: contain;
     &.feature_module_a--collaborate {
         background: $med_gray url('../static/images/collaborate/collaborate-feature-module-a.jpg') bottom right no-repeat;
     }
+    @media screen and (min-width: 64em) {
+      height: 600px;
+      padding-bottom: 0;
+    }
     .feature_text {
-        height: 100%;
+        position: absolute;
+        height: auto;
+        padding: 20px;
+        bottom: 0;
+        top: 0;
         @include background-opacity($infocus_green);
-        padding: 40px 35px;
-        position: relative;
+        @media screen and (min-width: 64em) {
+          padding: 40px 35px;
+          position: relative;
+          height: 100%;
+        }
     }
     &.feature_module_a--collaborate .feature_text {
         @include background-opacity($infocus_orange);
     }
+    .color_stripe_column {
+      min-height: 0;
+      height: 100%;
+    }
     .white.color_stripe {
-        width: 79px;
-        height: 600px;
+        width: 40px;
+        height: 100%;
         margin-left: -40px;
         opacity: .75;
+        @media screen and (min-width: 40em) {
+          width: 60px;
+        }
+        @media screen and (min-width: 64em) {
+          width: 79px;
+        }
     }
     .light_blue.color_stripe.float-right {
         right: 0;
         margin-right: -15px;
-        width: 40px;
-        height: 600px;
+        width: 25px;
+        height: 100%;
+        @media screen and (min-width: 40em) {
+          width: 35px;
+        }
+        @media screen and (min-width: 64em) {
+          width: 40px;
+        }
     }
     .lead_text--secondary_headline {
         color: $white;
+        font-size: 1.5rem;
+        @media screen and (min-width: 40em) {
+          font-size: 2rem;
+        }
+        @media screen and (min-width: 64em) {
+          font-size: 2.75rem;
+        }
     }
     .lead_text--paragraph {
         color: $white;
