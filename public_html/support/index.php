@@ -159,7 +159,7 @@ $(function() {
     <p>
       <a href="http://www.infocusstore.com/Lamps-Accessories/b/7448620011?ie=UTF8&title=Lamps">Buy a Lamp (US)</a><br>
       <a href="#AreYouSure-popup" class="colorbox-inline">Contact Support</a><br>
-      <a href="/calculator">Projector Calculator</a><br>
+      <a href="/resources/forms/projectioncalculator">Projector Calculator</a><br>
       <a href="https://infocuscorp.zendesk.com/hc/en-us">Frequently Asked Questions</a>
     </p>
     <div>
