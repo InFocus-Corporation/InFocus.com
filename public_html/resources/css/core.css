@@ -860,9 +860,17 @@ width:auto;
 
 */
 table { border-collapse: collapse; text-align: left; width:100%;}
-.rounded {background: #fff; overflow: hidden; border: 1px solid #ccc; -webkit-border-radius: 12px; -moz-border-radius: 12px; border-radius: 12px; }
+.rounded, .infocusTable {
+  background: #fff;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+}
+.rounded {  margin-top: 1em !important; }
 table td,
-table th { padding: 4px 6px; }
+table th {
+  padding: 4px 6px;
+}
 table thead th {
   background-color:#006ba6;
   padding: 14px 20px;
@@ -880,12 +888,13 @@ table tbody td {
   border-bottom: 1px solid #ccc;font-size: 12px;font-weight: normal;
   padding: 0px;
   vertical-align: middle;
+  line-height: 14px;
 }
 table tbody td > a {
-    width: 100%;
-    display: block;
-    box-sizing: border-box;
-    font-size: 18px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  font-size: 18px;
 }
 table tbody td > a span {
   padding: 18px 30px;
@@ -894,7 +903,7 @@ table tbody td > a span {
   box-sizing: border-box;
 }
 
-table tbody td:first-child { border-left: none; text-align: center;  vertical-align: middle;  }
+table tbody td:first-child { border-left: none; text-align: center; vertical-align: middle;  }
 table tbody td:first-child img {
   margin: 0 auto;
 !
@@ -916,18 +925,27 @@ table tfoot li a {
 }
 table tfoot ul.active,
 table tfoot ul a:hover { text-decoration: none;border-color: #ccc; color: #FFFFFF; background: none; background-color:#777777;}
-/*table tbody tr:nth-child(even) {
-    background: #F4F4F4; color: #777777;
-}*/
-
 
 table.square {
-border: 1px solid #999999;
-position:relative;
-width:auto;
+  border: 1px solid #999999;
+  position:relative;
+  width:auto;
 }
-#datasheets .rounded { border-radius: 0px;}
-.rounded {  margin-top: 1em !important; }
+.infocusTable table tbody td {
+  text-align: center;
+  padding: .55em;
+}
+.infocusTable table tbody td a.table_button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #00AB84;
+    padding: .35em .55em;
+    width: auto;
+    border: 1px solid #aaaaaa;
+    min-width: 120px;
+    margin: .55em 0em .55em;
+}
+.infocusTable td[data-label='Price US'] { min-width: 128px; }
 /* #Links
 ================================================== */
 	a, a:link, a:visited { color:#006ba6;text-decoration: none; outline: 0; }
@@ -2563,7 +2581,7 @@ line-height:1.3em;
 .infolink::before
 {
 content: "?";
-font-size: 43%;
+font-size: 85%;
 font-family: 'GoodPro-Wide', sans-serif;
 vertical-align: middle;
 font-weight: bold;
@@ -2576,7 +2594,8 @@ border-radius: 1ex;
 color: #A9A9A9;
 background: none repeat scroll 0% 0% #FFF;
 border: thin solid #A9A9A9;
-top: -1.5em;
+top: -.35em;
+left: .35em;
 position: relative;
 }
 
