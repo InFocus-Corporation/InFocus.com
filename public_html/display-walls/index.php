@@ -54,7 +54,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 		<div class="small-12 medium-4 columns">
 			<h3 class="lead_text--secondary_headline">Canvas CRS-4K</h3>
-			<p class="lead_text--paragraph">The Canvas CRS-4K system is a small, quiet box that can be located anywhere in the room. What it enables is enormous. - See more at: http://www.jupiter.com/solutions/canvas-crs-4k#sthash.oxI9wDds.dpuf</p>
+			<p class="lead_text--paragraph">The Canvas CRS-4K system is a small, quiet box that can be located anywhere in the room. What it enables is enormous.</p>
 			<a href="/display-walls/canvas-crs4k" class="button button--primary">learn more</a>
 		</div>
 	</div>
