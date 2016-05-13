@@ -4,9 +4,6 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '"/>' . PHP_EOL;
 ?>
 <style>
-    .hero_row{
-        border-left:
-    }
     .no-pad-left {
         padding-left: 0 !important;
     }
@@ -68,7 +65,7 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
     div.feature_module_b .feature_text.grey {
         padding-top: 30px;
         margin-top: -290px;
-        background-color: rgba(63,74,84,.88)      
+        background-color: rgba(63,74,84,.88)
     }
     div.feature_module_b .feature_links {
         margin-bottom: 35px;
@@ -191,7 +188,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <div class="row feature_module_b">
         <div class="small-12 medium-12 columns no-pad-left no-pad-right">
             <div class="module_image">
-                
+
             </div>
             <div class="feature_text text-center grey">
                 <h2 class="lead_text--secondary_headline">Utilize your hardware and software</h2>
@@ -275,6 +272,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- TEXT MODULE -->
     <div class="row text_module">
         <div class="small-8 small-offset-2 columns text-center lead_text">
+            <a id="inspire" name="inspire"></a>
             <h1 class="lead_text--headline">Inspire Education Program</h1>
             <p class="lead_text--paragraph">
                 Your school can get special pricing, extended warranties and complimentary training when you buy select touchscreens or projectors from and authorized Inspire Dealer.
