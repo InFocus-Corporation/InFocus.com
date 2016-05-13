@@ -14,7 +14,7 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $homedir.'/resources/overviews/', 'admin,salespublisher,saleseditor,marketingpublisher,marketingeditor,editor', ".src", "overview", "true", "SavePage","overview");}
 ?>
 <style>
-div.info .tagline {
+/*div.info .tagline {
     font-family: 'GoodPro';
     font-weight: bold;
 }
@@ -36,7 +36,7 @@ div.info #blurb {
 #downloads .HeaderRow th:nth-child(3) { width: 160px; }
 #downloads table tbody tr td img {
     width: 45px;
-}
+}*/
 </style>
 <script>
     $(function () {
@@ -73,23 +73,18 @@ div.info #blurb {
                 </div>
             </div>
             <div class="C10 Col_child C6x4_child">
-                <div class="info" style="float:left;">
-                    <strong class="tagline mysqledit" id="header">The world's most powerful collaborative visualization tool.</strong>
-                    <span>No matter what needs attention or who sees it first, any situation captured in a stream can be shared quickly and easily with team members, regardless of their location.</span>
-                    <div class="mysqledit" id="blurb">
-                        <p>
-                            Sharing a common operating picture is essential to effective management. Canvas enables video, data, applications, and more to be shared with colleagues anywhere, on any device, delivering end-to-end collaboration. Live H.264 video streams, VNC viewer windows, active web browser windows, and desktop presentation screens.
-                        </p>
-                        <p>
-                            Users can share streams and collaborate from anywhere in the network: at the main display wall, on PCs, and on iOS and Android smartphones and tablets. Canvas brings a rich set of familiar tools for collaboration and allows them to be used in ways that no other system can. And, unique in the industry, Canvas allows users to annotate directly on live video streams. Create shared whiteboards for brainstorming.
-                        </p>
-                        <p>
-                            With Canvas, smartphones and tablets can also be sources. Point the mobile device camera at anything and share live video with remote colleagues. View the scene in front of you as well as an overlay of information from experts at other sites.
-                        </p>
-                    </div>
-                </div>
                 <div class="image-set" style="float:right;">
                     <img src="/resources/static/images/display-walls/160775957.jpg">
+                </div>
+                <div class="info" style="float:left;">
+                    <strong class="tagline mysqledit" id="header">The world's most powerful collaborative visualization tool.</strong>
+                    <div class="mysqledit" id="blurb">
+                        <p><strong>See and engage every corner of the enterprise, from anywhere, on any device.</strong></p>
+                        <p>Sharing a common operating picture is essential to effective management. Canvas enables video, data, applications, and more to be shared with colleagues anywhere, on any device, delivering end-to-end collaboration. Live H.264 video streams, VNC viewer windows, active web browser windows, and desktop presentation screens.</p>
+                        <p>Users can share streams and collaborate from anywhere in the network: at the main display wall, on PCs, and on iOS and Android smartphones and tablets. Canvas brings a rich set of familiar tools for collaboration and allows them to be used in ways that no other system can. And, unique in the industry, Canvas allows users to annotate directly on live video streams. Create shared whiteboards for brainstorming.</p>
+                        <p>With Canvas, smartphones and tablets can also be sources. Point the mobile device camera at anything and share live video with remote colleagues. View the scene in front of you as well as an overlay of information from experts at other sites.</p>
+                        <p>No matter what needs attention or who sees it first, any situation captured in a stream can be shared quickly and easily with team members, regardless of their location.</p>
+                    </div>
                 </div>
             </div>
             <div class="tabs">
@@ -102,27 +97,88 @@ div.info #blurb {
                 </nav>
                 <div id="overview" class="active">
                     <div class="C10 alternateDivChildL2">
-                        <div>
-                            <div class="image-set cmsedit">
-                                <img src="/resources/static/images/display-walls/canvas.jpg" >
-                            </div>
-                            <div class="info cmsedit">
-                                overview
-                            </div>
-                        </div>
+
+                      <div class="info cmsedit">
+                          <div class="image-set cmsedit" style="float: right; padding: 1em;">
+                              <img src="/resources/static/images/display-walls/canvas.jpg" >
+                          </div>
+                    			<h2 class="name">New in Canvas 3.1</h2>
+                    			<strong class="tagline"></strong>
+                          <p>Canvas 3.1 delivers new, advanced communications and presentation features, as well as integrations with major unified communication and collaboration platforms, to make this edition of Canvas the most powerful solution of its kind.</p>
+                          <p>New features of the updated Canvas 3.1 software include:</p>
+                          <ul class="feature-list">
+                          	<li><strong>Shared voice chat</strong> - All Canvas participants are automatically enrolled in a shared voice chat room to facilitate collaboration and teamwork.</li>
+                            <li><strong>Microsoft Lync&reg; integration</strong> - Integration with the leading UCC platform means that users can escalate to Canvas from the Lync client or start a Lync conversation from Canvas.</li>
+                            <li><strong>Connect with remote non-Canvas users</strong> - Remote colleagues who do not have Canvas at their location can participate in collaborative sessions with Canvas users.  With this new version, Canvas users can dial out to users of SIP-based conferencing systems, and allows users of SIP-based conferencing systems to dial into a canvas.</li>
+                            <li><strong>Supports Canvas CRS-4K</strong> - Jupiter’s new conference room system for Canvas, the Canvas CRS-4K, turns any conference room or huddle room into a Canvas workspace for teams. The new SimpleShare™ feature employs WebRTC technology to allow anyone with a laptop, even one without Canvas installed, to easily and instantly present content to local and remote Canvas users without downloading software, connecting cables, or attaching a dongle.</li>
+                          </ul>
+                          <hr/>
+			                </div>
                     </div>
                 </div>
                 <div id="details">
-                    <div class="C10 alternateDivChildL2">
-                        <div>
-                            <div class="image-set cmsedit">
-                                <img src="/resources/static/images/display-walls/canvas.jpg" >
-                            </div>
-                            <div class="info cmsedit">
-                                details
-                            </div>
+                    <div class="C5 alternateDivChildL2" style="float:right;">
+                        <div class="image-set cmsedit">
+                            <img src="/resources/static/images/display-walls/canvas.jpg" >
                         </div>
                     </div>
+                    <div class="C5 alternateDivChildL2" style="float:left;">
+                        <div class="info cmsedit">
+                      			<h2 class="name">Instant connection and access</h2>
+                      			<strong class="tagline"></strong>
+                            <p>Canvas transforms your computer, tablet or smartphone into a portable video wall to provide instant connection and access to essential visual information from anywhere. Share camera feeds, web pages, application screens and real time data for rapid, well-informed decision making.</p>
+                            <hr/>
+    			              </div>
+                        <div class="info cmsedit">
+                      			<h2 class="name">End-to-end collaboration</h2>
+                      			<strong class="tagline"></strong>
+                            <p>Canvas elevates teamwork to a level previously unimagined by enabling remote users to be both sources and destinations for visual information. Colleagues can annotate directly on live video streams as events unfold, empowering true end-to-end collaboration.</p>
+                            <hr/>
+  			                </div>
+                        <div class="info cmsedit">
+                      			<h2 class="name">Collaboration, evolved</h2>
+                      			<strong class="tagline"></strong>
+                            <p>Canvas enables managers to annotate directly on live video shared with remote colleagues across a broad array of devices.</p>
+                            <ul class="feature-list">
+                            	<li>Circle, label, identify, or annotate areas of interest on live video</li>
+                              <li>Use the keyboard to type comments directly on live video</li>
+                              <li>Drag shapes from the toolbar to any area in the video to be resized, colored and titled</li>
+                              <li>Create whiteboards for brainstorming</li>
+                            </ul>
+  			                </div>
+                      </div>
+                      <div style="clear: both; width:100%; display: block;"></div>
+                      <hr>
+                      <div class="C5 alternateDivChildL2" style="float:right;">
+                            <div class="info cmsedit">
+                          			<h2 class="name">Watch the Canvas video</h2>
+                                <a href="http://www.jupiter.com/vef/load/a65fcace882c229ea0a725ce25fc65e6?width=640px&amp;height=365" class="colorbox-load init-colorbox-load-processed cboxElement"><img class="video_thumbnail img-responsive" typeof="foaf:Image" src="http://www.jupiter.com/system/files/styles/video_thumbnail/private/video-thumbnails/Video_Still_Canvas2_1.jpg?itok=bxT7uDqe" width="740" height="415" alt=""></a>
+      			                </div>
+                        </div>
+                        <div class="C5 alternateDivChildL2" style="float:left;">
+                            <div class="info cmsedit">
+                          			<h2 class="name">A secure system</h2>
+                          			<strong class="tagline"></strong>
+                                <p>Canvas authenticates users via the customer’s own Windows Active Directory. User permissions, including access to specific sources and features are assigned and managed by the system administrator. Role-based security makes management of large numbers of users and permissions easy and flexible, according privileges to cadres of users sharing a common role in the enterprise.</p>
+                                <p>Employing a superior security design, Canvas provides object-level security for all sources, eliminating inadvertent disclosure of restricted content. The system actively prevents users from sharing sources with any other user lacking appropriate permission.</p>
+                                <p>Content and communications to and from mobile devices are encrypted, because you should feel as secure working in the field as you do in your office. Upstream video from mobile devices is encrypted with AES 128/256 encryption, including SHA-1, 80-bit authentication. Video sent downstream to mobile devices is protected with HTTP basic authentication and SSL encryption.</p>
+      			                </div>
+    			              </div>
+                        <div style="clear: both; width:100%; display: block;"></div>
+                        <hr>
+                        <div class="C10 alternateDivChildL2">
+                          <div class="info cmsedit">
+                              <h2 class="name">Use your Canvas video wall for in-room presentations, too</h2>
+                              <strong class="tagline"></strong>
+                              <p>Your Canvas video wall can be used for displaying content for a local audience when not in a Canvas session. DVI inputs can be connected to a Fusion Catalyst display wall processor running Canvas for display on the attached video wall. Now the local video wall can be used for making in-room presentations or viewing other sources not intended for sharing and collaboration.    </p>
+                              <hr/>
+                          </div>
+                          <div class="info cmsedit">
+                              <h2 class="name">The Canvas system</h2>
+                              <strong class="tagline"></strong>
+                              <img alt="" class="img-responsive" src="http://www.jupiter.com/system/files/Canvas%20ecosystem%20diagram_Jan_2016.jpg">
+                          </div>
+                        </div>
                 </div>
                 <div id="downloads">
                     <h2>Datasheets</h2>
