@@ -163,60 +163,139 @@ header + .hero_row > .row {
   &.hero-row--video_conferencing {
     background: url('../static/images/video-conferencing/video-conferencing-hero-a--InFocus-Lifestyle-ConX-Exec-Mtg1-300dpi-CMYK.jpg') right -40px top no-repeat;
     background-size: auto 839px;
-;    .lead_text>:first-child {
-        margin-top: 88px;
-        padding-left: 100px;
+    .lead_text>:first-child {
+        padding-left: 0;
+        margin-top: 0;
+        @media screen and (min-width: 75em) {
+            padding-left: 15%;
+            padding-right: 15%;
+            margin-top: 88px;
+        }
+        @media screen and (min-width: 100em) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
     }
     .lead_text--paragraph {
-        padding-left: 100px;
-        padding-right: 100px;
+        padding: 0;
+        @media screen and (min-width: 75em) {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+        @media screen and (min-width: 100em) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
     }
   }
   &.hero-row--peripherals_home {
     background: url('../static/images/peripherals/peripherals_cam.jpg') right -195px top no-repeat;
     .lead_text>:first-child {
-        margin-top: 88px;
-        padding-left: 100px;
+        padding-left: 0;
+        margin-top: 0;
+        @media screen and (min-width: 75em) {
+            padding-left: 15%;
+            padding-right: 15%;
+            margin-top: 88px;
+        }
+        @media screen and (min-width: 100em) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
     }
     .lead_text--paragraph {
-        padding-left: 100px;
-        padding-right: 100px;
+        padding: 0;
+        @media screen and (min-width: 75em) {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+        @media screen and (min-width: 100em) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
     }
   }
 
   &.hero-row--projectors {
     background: url('../static/images/projectors/InFocus-Lifestyle-Projector-Screen-2-300dpi-96dpi-RGB.jpg') right -246px top no-repeat;
     .lead_text>:first-child {
-        margin-top: 88px;
-        padding-left: 100px;
+        padding-left: 0;
+        margin-top: 0;
+        @media screen and (min-width: 75em) {
+            padding-left: 15%;
+            padding-right: 15%;
+            margin-top: 88px;
+        }
+        @media screen and (min-width: 100em) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
     }
     .lead_text--paragraph {
-        padding-left: 100px;
-        padding-right: 100px;
+        padding: 0;
+        @media screen and (min-width: 75em) {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+        @media screen and (min-width: 100em) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
     }
   }
   &.hero-row--touchscreens {
     background: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg') right -47px top no-repeat;
     .lead_text>:first-child {
-        margin-top: 88px;
-        padding-left: 100px;
+        padding-left: 0;
+        margin-top: 0;
+        @media screen and (min-width: 75em) {
+            padding-left: 15%;
+            padding-right: 15%;
+            margin-top: 88px;
+        }
+        @media screen and (min-width: 100em) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
     }
     .lead_text--paragraph {
-        padding-left: 100px;
-        padding-right: 100px;
+        padding: 0;
+        @media screen and (min-width: 75em) {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+        @media screen and (min-width: 100em) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
     }
   }
   &.hero-row--display_walls {
     background: url('../static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg') right -40px top no-repeat;
     background-size: auto 110%;
-
     .lead_text>:first-child {
-        margin-top: 88px;
-        padding-left: 100px;
+        padding-left: 0;
+        margin-top: 0;
+        @media screen and (min-width: 75em) {
+            padding-left: 15%;
+            padding-right: 15%;
+            margin-top: 88px;
+        }
+        @media screen and (min-width: 100em) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
     }
     .lead_text--paragraph {
-        padding-left: 100px;
-        padding-right: 100px;
+        padding: 0;
+        @media screen and (min-width: 75em) {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+        @media screen and (min-width: 100em) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
     }
   }
   &.hero-row--jupiter {
