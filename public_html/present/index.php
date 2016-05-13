@@ -15,7 +15,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 
 ?>
 </head>
-<body class="" style="">
+<body id="present_page" class="present_page" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
     <!-- HEADER MODULE C -->
 	<div class="hero_row hero-row--header_module_c">
@@ -28,7 +28,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <div class="module--tag">
                     <span>Present</span>
                 </div>
-				<h2 class="lead_text--secondary_headline">
+				<h2 class="lead_text--secondary_headline widelight">
 					Your best meetings start now.
 				</h2>
 				<p class="lead_text--paragraph">Whether you're presenting to a handful of colleagues or a full auditorium, InFocus technology will make you shine.</p>
@@ -40,7 +40,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <div class="row multicolumn_text_module">
         <div class="small-12 columns text-center lead_text">
             <img src="/resources/static/images/present/present-icon.svg" alt="Present" />
-            <h1 class="lead_text--headline">Present from any device</h1>
+            <h1 class="lead_text--headline widelight">Present from any device</h1>
             <p class="lead_text--paragraph">
                 You don't have time to mess with technology in a meeting, InFocus lets you, and other in the room share content with flexible wired and wireless options to accommodate any device.
             </p>
@@ -83,7 +83,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 
             </div>
             <div class="feature_text text-center">
-                <h2 class="lead_text--secondary_headline">Capture ideas on a digital canvas</h3>
+                <h2 class="lead_text--secondary_headline widelight">Capture ideas on a digital canvas</h3>
     			<p class="lead_text--paragraph">Take notes, draw and save the work with the same touchscreen device you're presenting on. It's the efficient, economical, and odor-free answer to dry erase.</p>
                 <br><br>
                 <div class="feature_links">
@@ -137,21 +137,21 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     </div>
     <!-- END MULTICOLUMN ICON AND TEXT MODULE -->
     <!-- FEATURE MODULE A -->
-		<div class="row feature_module_a ">
-	        <div class="small-12 medium-6 columns feature_text">
-						<h3 class="lead_text--secondary_headline">PC-less presenting</h3>
-						<p class="lead_text--paragraph">Load your projector's internal memory with common or shared files and quickly present them without a computer. Or project files directly from a USB thumb drive, which is convenient for guests or when traveling.</p>
-			      <div class="feature_links">
-			          <a href="/projectors/IN2120a-Series" class="feature_link">IN2120A Network Projectors</a><br>
-			          <a href="/projectors/IN1110" class="feature_link">IN1110 Mobile Projectors</a><br>
-			          <a href="/projectors/IN1146" class="feature_link">IN1146 Mobile LED Projector</a>
-			      </div>
-					</div>
-			<div class="small-12 medium-6 columns color_stripe_column">
-				<div class="white color_stripe"></div>
-	      <div class="light_blue color_stripe float-right"></div>
-			</div>
+	<div class="row feature_module_a ">
+        <div class="small-12 medium-6 columns feature_text">
+			<h3 class="lead_text--secondary_headline">PC-less presenting</h3>
+			<p class="lead_text--paragraph">Load your projector's internal memory with common or shared files and quickly present them without a computer. Or project files directly from a USB thumb drive, which is convenient for guests or when traveling.</p>
+            <div class="feature_links">
+                <a href="/projectors/IN2120a-Series" class="feature_link">IN2120A Network Projectors</a><br>
+                <a href="/projectors/IN1110" class="feature_link">IN1110 Mobile Projectors</a><br>
+                <a href="/projectors/IN1146" class="feature_link">IN1146 Mobile LED Projector</a>
+            </div>
 		</div>
+		<div class="small-12 medium-6 columns color_stripe_column">
+			<div class="white color_stripe"></div>
+            <div class="light_blue color_stripe float-right"></div>
+		</div>
+    </div>
     <!-- END FEATURE MODULE A -->
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">
@@ -196,7 +196,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- TEXT MODULE -->
     <div class="row text_module">
         <div class="small-8 small-offset-2 columns text-center lead_text">
-            <h1 class="lead_text--headline">Making the meeting room a productive place to be</h1>
+            <h1 class="lead_text--headline widelight">Making the meeting room a productive place to be</h1>
             <p class="lead_text--paragraph">
                 Sharing your ideas takes courage. Our technology works with you and helps you do your best. Plus, our US-based support team is here to help you, as we have been since we pioneered the digital projector nearly 30 years ago.
             </p>
