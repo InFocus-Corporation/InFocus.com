@@ -116,6 +116,7 @@ if($category) {
 
 	<div class="hero_row transparent-border-right-40-orange solid-border-left-24-blue hero-row--projectors">
 		<div class="row hero_inner">
+			<div class="hero_image"><img src="/resources/static/images/projectors/InFocus-Lifestyle-Projector-Screen-2-300dpi-96dpi-RGB.jpg" /></div>
 			<div class="small-6 medium-5 columns lead_text">
 				<h2 class="lead_text--secondary_headline">
 					<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/static/images/svg/icon-projectors.svg'); ?>

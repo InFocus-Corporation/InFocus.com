@@ -20,6 +20,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
 	<div class="hero_row transparent-border-right-40-orange solid-border-left-24-blue hero-row--peripherals_home">
 		<div class="row hero_inner">
+			<div class="hero_image"><img src="/resources/static/images/peripherals/peripherals_cam.jpg" /></div>
 			<div class="small-6 medium-5 columns lead_text">
 				<h2 class="lead_text--secondary_headline">
                     <img src="/resources/static/images/peripherals/peripherals_icon_temp.png" alt="" />
