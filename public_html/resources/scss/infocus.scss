@@ -190,7 +190,7 @@ header + .hero_row > .row {
   &.hero-row--display_walls {
     background: url('../static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg') right -40px top no-repeat;
     background-size: auto 110%;
-    
+
     .lead_text>:first-child {
         margin-top: 88px;
         padding-left: 100px;
@@ -631,7 +631,7 @@ div.video_module {
       &:before {
         border: 0px;
       }
-      position: relative;
+      position: absolute;
       bottom: 50px;
     }
   }
@@ -671,10 +671,7 @@ div.video_module {
 
   a, a:link, a:visited{
     color: $white;
-    clear:both;
-    display: block;
-    width: 100%;
-    height: 100%;
+
     text-decoration:none;
   }
 
@@ -683,6 +680,10 @@ div.video_module {
       position: relative;
       top: -110px;
       visibility: hidden;
+      width: 100%;
+      height: 100%;
+      clear:both;
+      display: block;
   }
 }
 

@@ -87,7 +87,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<h5>From the cubicle to the command center, our technologies can improve the way people at all levels of your company work.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
-							<span>slide cta goes here</span>
+							<span><a href="/present/">Solutions for presentations</a> / <a href="/collaborate/">Solutions for collaboration</a></span>
 						</div>
 					</div>
 				</div>
