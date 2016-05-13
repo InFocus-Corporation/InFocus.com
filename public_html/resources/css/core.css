@@ -2480,7 +2480,9 @@ padding-left: 0px;
 text-align:left;
 z-index:10;
 }
-
+.info ul.action-links > li  {
+  margin-left: 0px;
+}
 .cover{
 position:relative;
 }
@@ -2590,16 +2592,15 @@ height:auto;
 }
 
 .floatList > li {
-max-width: 220px;
+max-width: 520px;
 min-width: 125px;
-padding-left: 10px;
-width: 18%;
+padding: 2em 1em 2em 1em;
+width: 32%;
 display: inline-block;
 vertical-align: top;
 position: relative;
-padding-bottom: 10px;
-padding-top: 20px;
-text-align: center;
+text-align: left;
+box-sizing: border-box;
 }
 #categories .floatList > li > div {
 padding-bottom:40px;
@@ -2618,7 +2619,11 @@ display: table-cell;
 }
 
 .floatList > li > div > a > span.title{
-display:block;
+  display:table-cell;
+  vertical-align:bottom;
+  width: 100%;
+  height: 52px;
+  min-height: 52px;
 }
 
 .floatList > li > div > a > div img{
@@ -2629,11 +2634,17 @@ margin:auto;
 text-align:left;
 margin-top:15px;
 border-top: 1px solid #e6e6e6;
-width:85%;
+width:99%;
 margin:auto;
 line-height:1.3em;
 }
-
+.accesories_button_wrapper {
+  display: inline-block;
+  clear: both;
+  width: 100%;
+  overflow: hidden;
+  margin-left: 0px !important;
+}
 .infolink::before
 {
 content: "?";
@@ -2901,7 +2912,7 @@ table.contact-table{
 .accsr #catdesc {margin-bottom:20px;}
 .proj .action-links[style], .accsr .action-links[style]{padding:0 !important;}
 .proj .sub-title, .accsr .sub-title {font-weight:400; color:#6d6d6d; font-size:90%;}
-.accsr .floatList {text-align:center;}
+.accsr .floatList {text-align:center; margin-left: -2em;}
 .accsr-sub .subcat-desc {font-size: 16px; padding-top: 10px; font-weight:100; color: #6d6d6d;}
 .accsr-sub .action-links[style] {padding: 1em 1em 1em 0 !important;}
 .accsr-sub .subprod-desc {font-size: 16px; padding-top: 10px; font-weight:100;}
