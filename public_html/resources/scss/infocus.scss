@@ -143,8 +143,8 @@ header + .hero_row > .row {
   }
   &.hero-row--video_conferencing {
     background: url('../static/images/video-conferencing/video-conferencing-hero-a--InFocus-Lifestyle-ConX-Exec-Mtg1-300dpi-CMYK.jpg') right -38px top no-repeat;
-    background-size: 1055px 799px;
-    .lead_text>:first-child {
+    background-size: 1055px 799px
+;    .lead_text>:first-child {
         margin-top: 88px;
         padding-left: 100px;
     }
@@ -169,11 +169,19 @@ header + .hero_row > .row {
     background: url('../static/images/projectors/InFocus-Lifestyle-Projector-Screen-2-300dpi-96dpi-RGB.jpg') right -326px top no-repeat;
   }
   &.hero-row--touchscreens {
-    background: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg') right -326px top no-repeat;
+    background: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg') right -47px top no-repeat;
+    .lead_text>:first-child {
+        margin-top: 88px;
+        padding-left: 100px;
+    }
+    .lead_text--paragraph {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
   }
   &.hero-row--display_walls {
-    background: url('../static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg') right top no-repeat;
-    background-size: auto 107%;
+    background: url('../static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg') right -40px top no-repeat;
+    background-size: auto 110%;
     
     .lead_text>:first-child {
         margin-top: 88px;
