@@ -296,8 +296,8 @@ table.contact-table{
 					<br>
 					<div>
 						<h6><?=translate('Other Resources')?></h6>
-						<a class="subtle" href="/resources/forms/projectioncalculator"><?=translate('Projection Calculator')?></a><br>
-						<a class="subtle" href="/support/warrantyvt.php"><?=translate('Check Status of Your Warranty')?></a><br>
+						<a class="subtle" href="/resources/forms/projectioncalculator" target="_self"><?=translate('Projection Calculator')?></a><br>
+						<a class="subtle" href="/support/warrantyvt.php" target="_self"><?=translate('Check Status of Your Warranty')?></a><br>
 						<a class="subtle" href="/support/authorized-service-centers" target="_parent"><?=translate('Find a Service Provider')?></a><br>
 					</div>
 				</div>
@@ -474,13 +474,8 @@ table.contact-table{
 
 <div class="hidden" style="display:none">
 <div id="RMAUSCan-popup">
-<style type="text/css">
-	dl.image_map {display:block; width="178px" height="194px" background:url(/resources/images/USCanadaMap.png); position:relative; margin:2px auto 2px auto;}
-<dl class="image_map">
-</dl>
-</style>
  <base target="_parent" />
-<div id="USCanada-popup" style="cursor: pointer;text-align:center;  margin-left:auto; margin-right:auto;overflow:hidden;">
+<div id="USCanada-popup" style="cursor: pointer;text-align:center;margin-left:auto;margin-right:auto;padding:50px 80px 30px 40px;">
 <img id="Image-UsCanada" src="/resources/images/USCanadaMap.png" usemap="#Image-UsCanada" border="0"  alt="" />
 <map id="_Image-UsCanada" name="Image-UsCanada">
 <area shape="poly" coords="23,99,45,109,67,119,92,129,105,142,111,153,131,143,140,137,148,145,132,158,124,161,123,165,123,170,120,174,119,174,107,185,107,197,104,200,100,197,100,189,96,185,85,182,68,182,61,181,51,188,45,173,40,173,36,161,21,159,16,148,5,140,2,133,2,130,5,119,10,109,19,103,19,103," class="form-box" onclick="showForm('RMA');$.colorbox.close();" alt="United States" title="United States"   />

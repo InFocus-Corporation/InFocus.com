@@ -23,7 +23,7 @@ $box_shadow_gray: inset 0 0 0 1000px rgba(51,63,72,.78);
     border-#{$direction}: solid $width rgba($color, $opacity);
 }
 
-$transparent-border-widths: 30, 38, 40, 60, 125;
+$transparent-border-widths: 24, 30, 38, 40, 60, 125;
 $transparent-border-sides: right left;
 
 @each $side in $transparent-border-sides {
@@ -43,7 +43,7 @@ $transparent-border-sides: right left;
   }
 }
 
-$solid-border-widths: 30, 38, 40, 60, 125;
+$solid-border-widths: 24, 30, 38, 40, 60, 125;
 $solid-border-sides: right left;
 
 @each $side in $solid-border-sides {
@@ -85,11 +85,12 @@ header + .hero_row > .row {
   height: 100%;
 }
 .color_stripe_column {
-  position: relative;
+  min-height: 699px;
   float: left;
   .color_stripe {
     height: 100%;
     float:left;
+    position: absolute;
     &.dark_blue {
       @include background-opacity($infocus_blue);
       width: 77px;
@@ -141,8 +142,19 @@ header + .hero_row > .row {
     }
   }
   &.hero-row--video_conferencing {
-    background: url('../static/images/video-conferencing/video-conferencing-hero-a--InFocus-Lifestyle-ConX-Exec-Mtg1-300dpi-CMYK.jpg') right -38px top no-repeat;
-    background-size: 1055px 799px;
+    background: url('../static/images/video-conferencing/video-conferencing-hero-a--InFocus-Lifestyle-ConX-Exec-Mtg1-300dpi-CMYK.jpg') right -40px top no-repeat;
+    background-size: auto 839px;
+;    .lead_text>:first-child {
+        margin-top: 88px;
+        padding-left: 100px;
+    }
+    .lead_text--paragraph {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+  }
+  &.hero-row--peripherals_home {
+    background: url('../static/images/peripherals/peripherals_cam.jpg') right -125px top no-repeat;
     .lead_text>:first-child {
         margin-top: 88px;
         padding-left: 100px;
@@ -152,14 +164,41 @@ header + .hero_row > .row {
         padding-right: 100px;
     }
   }
+
   &.hero-row--projectors {
-    background: url('../static/images/projectors/InFocus-Lifestyle-Projector-Screen-2-300dpi-96dpi-RGB.jpg') right -326px top no-repeat;
+    background: url('../static/images/projectors/InFocus-Lifestyle-Projector-Screen-2-300dpi-96dpi-RGB.jpg') right -246px top no-repeat;
+    .lead_text>:first-child {
+        margin-top: 88px;
+        padding-left: 100px;
+    }
+    .lead_text--paragraph {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
   }
   &.hero-row--touchscreens {
-    background: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg') right -326px top no-repeat;
+    background: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg') right -47px top no-repeat;
+    .lead_text>:first-child {
+        margin-top: 88px;
+        padding-left: 100px;
+    }
+    .lead_text--paragraph {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
   }
   &.hero-row--display_walls {
-    background: url('../static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg') right -125px top no-repeat;
+    background: url('../static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg') right -40px top no-repeat;
+    background-size: auto 110%;
+    
+    .lead_text>:first-child {
+        margin-top: 88px;
+        padding-left: 100px;
+    }
+    .lead_text--paragraph {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
   }
   &.hero-row--jupiter {
     background: url('../static/images/jupiter/jupiter-hero-a.jpg') left top no-repeat;
@@ -187,7 +226,7 @@ header + .hero_row > .row {
         font-size: 12px;
     }
     .lead_text {
-      @include background-opacity($dark_gray);
+      background-color: $dark_gray;
       height: 600px;
       padding-left: 95px;
     }
@@ -330,8 +369,9 @@ header + .hero_row > .row {
     }
     .feature_link {
         color: $infocus_light_blue;
-        font-family: 'GoodPro-WideBook';
+        font-family: 'GoodPro-WideMedium';
         font-size: 12px;
+        letter-spacing: .25em;
         text-transform: uppercase;
     }
     .feature_link:hover {
@@ -375,14 +415,14 @@ header + .hero_row > .row {
         color: $white;
     }
     .feature_links {
-        padding-bottom: 48px;
+        padding-bottom: 35px;
     }
     .feature_link {
         color: $infocus_light_blue;
-        font-family: 'GoodPro-WideBook';
-        font-size: 13px;
+        font-family: 'GoodPro-WideMedium';
+        font-size: 12px;
         text-transform: uppercase;
-        letter-spacing: 0.25em;
+        letter-spacing: .25em;
     }
     .feature_link:hover {
         color: $white;
@@ -401,7 +441,9 @@ header + .hero_row > .row {
         font-size: 24px;
     }
     .text_module_link {
-        font-family: 'GoodPro-WideBook';
+        font-family: 'GoodPro-WideMedium';
+        -webkit-font-feature-settings: "liga" 0;
+        letter-spacing: .25em;
         font-size: 24px;
         color: $infocus_blue;
     }
@@ -419,8 +461,10 @@ header + .hero_row > .row {
         font-size: 20px;
     }
     .text_module_link {
-        font-family: 'GoodPro-WideBook';
         font-size: 20px;
+        font-family: 'GoodPro-WideMedium';
+        -webkit-font-feature-settings: "liga" 0;
+        letter-spacing: .25em;
         color: $infocus_blue;
     }
     .svg {
@@ -441,8 +485,10 @@ header + .hero_row > .row {
         font-size: 20px;
     }
     .text_module_link {
-        font-family: 'GoodPro-WideBook';
         font-size: 20px;
+        font-family: 'GoodPro-WideMedium';
+        -webkit-font-feature-settings: "liga" 0;
+        letter-spacing: .25em;
         color: $infocus_blue;
     }
 }
@@ -493,7 +539,9 @@ header + .hero_row > .row {
         .promo_module_link {
             color: $infocus_light_blue;
             text-transform: uppercase;
-            font-family: 'GoodPro-WideBook';
+            font-family: 'GoodPro-WideMedium';
+            -webkit-font-feature-settings: "liga" 0;
+            letter-spacing: .25em;
             font-size: 12px;
             letter-spacing: 0.15em;
         }
@@ -708,15 +756,18 @@ div.video_module {
 }
 
 // Present page
-.present-page-icon {
-    stroke: $infocus_orange;
+#present_page {
+    .present-page-icon {
+        stroke: $infocus_orange;
+    }
+    .widelight {
+        font-weight: normal;
+        font-family: 'GoodPro-WideLight';
+    }
 }
 
 // Peripherals Page
 .peripherals_home {
-    .hero-row--peripherals_home {
-      background: url('../static/images/peripherals/peripherals_cam.jpg') right -125px top no-repeat;
-    }
     .dark_blue.color_stripe {
         width: 70px;
     }
