@@ -128,14 +128,14 @@ if($category) {
 				<div class="white color_stripe"></div>
 			</div>
 		</div>
-
+		
 	</div>
 	<div class="row product_module">
-		<div class="small-8 columns color_stripe_column">
+		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
 			<img src="/resources/static/images/projectors/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg" alt="">
 		</div>
-		<div class="small-4 columns product_text">
+		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">Ultra Portable Projectors</h3>
 			<p class="lead_text--paragraph">You're on the move. Your taste calls for exceptional, but your budget calls for frugal. You'll find the right mobile projector here.</p>
 			<a href="/projectors/ultra-portable" class="button button--primary">learn more</a>
@@ -143,11 +143,11 @@ if($category) {
 	</div>
 
 	<div class="row product_module">
-		<div class="small-8 columns color_stripe_column">
+		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
 			<img src="/resources/static/images/projectors/InFocus-Lifestyle-IN118HDx-96dpi-RGB.jpg" alt="">
 		</div>
-		<div class="small-4 columns product_text">
+		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">Office/Classroom Projectors</h3>
 			<p class="lead_text--paragraph">Office and classroom projectors with wireless and networking, broad connectivity, and prices your budget will love.</p>
 			<a href="/projectors/office-classroom" class="button button--primary">learn more</a>
@@ -155,11 +155,11 @@ if($category) {
 	</div>
 
 	<div class="row product_module">
-		<div class="small-8 columns color_stripe_column">
+		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
 			<img src="/resources/static/images/projectors/GettyImages-508065611.jpg" alt="">
 		</div>
-		<div class="small-4 columns product_text">
+		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">Short Throw Projectors</h3>
 			<p class="lead_text--paragraph">Get a big image from a short distance and reduce shadows with a low-cost, high-quality short throw projector.</p>
 			<a href="/projectors/short-throw" class="button button--primary">learn more</a>
@@ -167,11 +167,11 @@ if($category) {
 	</div>
 
 	<div class="row product_module">
-		<div class="small-8 columns color_stripe_column">
+		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
 			<img src="/resources/static/images/projectors/GettyImages-172209295.jpg" alt="">
 		</div>
-		<div class="small-4 columns product_text">
+		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">Large Venue Projectors</h3>
 			<p class="lead_text--paragraph">InFocus leads the way with HD color performance, installation flexibility, and dynamic design for demanding installations.</p>
 			<a href="/projectors/large-venue" class="button button--primary">learn more</a>
@@ -179,11 +179,11 @@ if($category) {
 	</div>
 
 	<div class="row product_module">
-		<div class="small-8 columns color_stripe_column">
+		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
 			<img src="/resources/static/images/projectors/GettyImages-507832233.jpg" alt="">
 		</div>
-		<div class="small-4 columns product_text">
+		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">Home Theater Projectors</h3>
 			<p class="lead_text--paragraph">Bring home the cinematic experience with a 1080p projector from the legend in digital projection.</p>
 			<a href="/projectors/home-theater" class="button button--primary">learn more</a>

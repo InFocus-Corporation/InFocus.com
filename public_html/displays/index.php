@@ -45,6 +45,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<a href="/displays/MONDOPAD-SERIES" class="button button--primary">learn more</a>
 		</div>
 	</div>
+
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
@@ -56,6 +57,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<a href="/displays/JTOUCH-Series" class="button button--primary">learn more</a>
 		</div>
 	</div>
+	
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>

@@ -826,14 +826,27 @@ div.video_module {
 }
 
 .paragraph-link {
-  color: $infocus_blue;
-  clear: both;
-  font-weight: bold;
-  float: left;
-  display: inline-block;
-  text-transform: capitalize;
-  margin-bottom: 1em;
-  font-size: 1.2em;
+    color: $infocus_blue;
+    clear: both;
+    font-weight: bold;
+    float: left;
+    display: inline-block;
+    text-transform: capitalize;
+    margin-bottom: .8em;
+    font-size: .8em;
+    @media screen and (min-width: 30em) {
+        font-size: .9em;
+    }
+    @media screen and (min-width: 40em) {
+        font-size: 1em;
+    }
+    @media screen and (min-width: 40em) {
+        font-size: 1.1em;
+    }
+    @media screen and (min-width: 64em) {
+        margin-bottom: 1em;
+        font-size: 1.2em;
+    }
 }
 
 //Page Specific CSS
