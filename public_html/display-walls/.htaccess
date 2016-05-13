@@ -1,0 +1,10 @@
+ErrorDocument 404 /404.php
+
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks -Indexes
+Options -Indexes
+
+RewriteEngine On
+RewriteRule  ^/display-walls/([A-Za-z0-9-]+)?$ /display-walls/$1.php [NC,L]
+
+</IfModule>

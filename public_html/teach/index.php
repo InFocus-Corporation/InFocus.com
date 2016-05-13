@@ -3,91 +3,6 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '"/>' . PHP_EOL;
 ?>
-<style>
-    .no-pad-left {
-        padding-left: 0 !important;
-    }
-    .no-pad-right {
-        padding-right: 0!important;
-    }
-    div.hero_row.hero-row--header_module_c {
-        background-image: url('/resources/static/images/teach/InFocus-Lifestyle-JTouch-K12-MuscleDiagram-300dpi-CMYK.jpg');
-    }
-    .text_module_a a.text_module_link {
-        font-weight: 700;
-    }
-    div.feature_module_a.orange {
-        background: url('/resources/static/images/teach/distance-learning-fire.jpg') right -45px top no-repeat;
-    }
-    div.feature_module_a.blue {
-        background: url('/resources/static/images/teach/166273198.jpg') right -45px top no-repeat;
-    }
-    .feature_module_a.orange .feature_text {
-        background-color: rgba(232,119,34,.88);
-    }
-    .feature_module_a.blue .feature_text {
-        background-color: rgba(194,227,238,.88);
-        padding-left: 4em;
-    }
-    .feature_module_a.blue .feature_text .lead_text--secondary_headline, .feature_module_a.blue .feature_text .lead_text--paragraph {
-        color: #333F48;
-    }
-    .feature_module_a .lead_text--secondary_headline {
-        font-size: 3.75rem;
-        line-height: 1em;
-    }
-    .feature_module_a.blue .feature_text .lead_text--paragraph {
-        margin-bottom: 1.2em;
-    }
-    .feature_module_a.blue ul li {
-        font-size: 1.2rem;
-        line-height: 1.7rem;
-    }
-    .feature_module_a.blue .feature_links {
-        left: 4em;
-    }
-    .feature_module_a .feature_links .feature_link {
-        font-size: 14px;
-    }
-    .feature_module_a.blue .feature_links .feature_link {
-        color: #006ba6;
-    }
-    h4.lead_text--paragraph {
-        font-size: 2.3rem;
-        font-weight: 300;
-        padding: 0 1em;
-    }
-    div.feature_module_b .module_image {
-        background: url('/resources/static/images/teach/InFocus-Lifestyle-JTouch-Whiteboard-Classroom-Molecules-300dpi-CMYK.jpg') no-repeat;
-        background-size: cover;
-        height: 615px;
-    }
-    div.feature_module_b .feature_text.grey {
-        padding-top: 30px;
-        margin-top: -290px;
-        background-color: rgba(63,74,84,.88)
-    }
-    div.feature_module_b .feature_links {
-        margin-bottom: 35px;
-    }
-    div.feature_module_b .lead_text--secondary_headline {
-        margin-bottom: 1.3rem;
-    }
-    div.feature_module_b .lead_text--paragraph {
-        line-height: 1.4;
-    }
-    .text_module_a h1.lead_text--headline {
-        font-weight: 300;
-    }
-    div.promo_modules .promo_module_c .module_image {
-        background: url('/resources/static/images/teach/GettyImages-140872375.jpg') no-repeat;
-        background-size: cover;
-    }
-    div.promo_modules .promo_module_d .module_image {
-        background: url('/resources/static/images/teach/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg') no-repeat;
-        background-size: cover;
-    }
-</style>
 
 <title>InFocus | Present</title>
 <meta name="description" content="Discover advanced projection equipment offered by InFocus. Global leader in LCD projectors and DLP projection, Mondopad products and projector accessories." />
@@ -101,7 +16,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 
 ?>
 </head>
-<body class="" style="">
+<body class="page--teach" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
     <!-- HEADER MODULE C -->
 	<div class="hero_row hero-row--header_module_c">
@@ -112,7 +27,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		<div class="row">
 			<div class="small-11 small-offset-1 medium-7 medium-offset-2 large-7 large-offset-5 columns lead_text">
                 <div class="module--tag">
-                    <span>Teach & Train</span>
+                    <span>Teach &amp; Train</span>
                 </div>
 				<h2 class="lead_text--secondary_headline">
 					Your students will thank you
