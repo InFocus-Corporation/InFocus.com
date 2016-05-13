@@ -2,7 +2,7 @@
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 
-$categories = array("mpbtaccessories","cables","cases","lamps","lenses","misc","mounts","remotes","screens","software","networking","services");	
+$categories = array("mpbtaccessories","cables","cases","lamps","lenses","misc","mounts","remotes","screens","software","networking","services");
 
 if(in_array($_SERVER['QUERY_STRING'],$categories)){
 
@@ -51,7 +51,7 @@ for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
 rowDivs[currentDiv].height(currentTallest);
 }
 });
-}	 
+}
 
 
 window.onresize = function(event) {
@@ -95,7 +95,7 @@ cursor:pointer;
 <ul class="action-links Col_child" style="padding:1em;text-align:left;"><li><a class="btn" href="/reseller-locator">
 <?= translate('Where to Buy');?>
 					</a></li></ul>
-						</div></div>				
+						</div></div>
 
 
 	<a id="categoriesstart"></a>
@@ -103,10 +103,10 @@ cursor:pointer;
 
 	<div id="details" class="C10 tabs-wrapper" style="min-height:600px;overflow:hidden;padding-top:50px;">
 	<div class="tab-shadow"></div>
-			
 
 
-<div  id="-<?= $category;?>" style="float:left;"><a style="font-size:110%;padding-bottom:5px;cursor:pointer;" onclick="window.location='/accessories'"> &lt;Back</a>
+
+<!-- <div  id="-<?= $category;?>" style="float:left;"><a style="font-size:110%;padding-bottom:5px;cursor:pointer;" onclick="window.location='/accessories'"> &lt;Back</a> -->
 <ul class="floatList">
 
 <?PHP
@@ -133,9 +133,9 @@ echo 'src="' . imagethumb( $row[0], '192') . '" alt="InFocus ' . $row[0] . '" />
 		</div>
 		<script>
 		$('.inbound').click(function(e) {
-			e.preventDefault();		
+			e.preventDefault();
 		})
-		
+
 function showCategory(catSelected){
 
 			   $('#-' + catSelected + " img").reveal("show", 0);
@@ -143,7 +143,7 @@ function showCategory(catSelected){
 			   $('#-' + catSelected).animate({width:0}, 0,function(){$('#-' + catSelected).show()});
 			   $('#-' + catSelected).animate({width:"100%"}, 1000);
 			   $('#categories').animate({width:0}, 990,function(){
-			   
+
 			   $('#categories').hide()
 
 
