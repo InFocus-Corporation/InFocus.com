@@ -20,6 +20,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
 	<div class="hero_row transparent-border-right-40-orange solid-border-left-24-blue hero-row--display_walls">
 		<div class="row hero_inner">
+			<div class="hero_image"><img src="/resources/static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg" /></div>
 			<div class="small-6 medium-5 columns lead_text">
 				<h2 class="lead_text--secondary_headline">
 					<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/static/images/svg/display-walls.svg'); ?>
