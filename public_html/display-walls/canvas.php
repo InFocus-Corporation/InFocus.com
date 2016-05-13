@@ -17,7 +17,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 div.info p, .cmsedit p:first-of-type, .cmsedit p:first-of-type a {
     font-size: 18px;
 }
-h5 { font-weight: normal; margin-bottom: 1em; }
+h5 { font-weight: normal; margin-bottom: 1em; text-transform: capitalize;}
 #downloads .rounded {
     margin:auto;
     max-width:960px;
