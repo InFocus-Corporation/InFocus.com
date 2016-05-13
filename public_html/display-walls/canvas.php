@@ -9,29 +9,11 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 <meta name="keywords" content="infocus,mondopad,projector,projection,DLP,LCD,LCD display,digital display,visual communications,projector accessories,infocus company,digital technology,projection equipment,monopad, communication, touchscreen" />
 
 <link rel="stylesheet" href="/resources/css/core.css" />
+<link rel="stylesheet" href="/resources/css/jupiter_pages.css" />
 
 <?php
 if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $homedir.'/resources/overviews/', 'admin,salespublisher,saleseditor,marketingpublisher,marketingeditor,editor', ".src", "overview", "true", "SavePage","overview");}
 ?>
-<style>
-div.info p, .cmsedit p:first-of-type, .cmsedit p:first-of-type a {
-    font-size: 18px;
-}
-h5 { font-weight: normal; margin-bottom: 1em; text-transform: capitalize;}
-#downloads .rounded {
-    margin:auto;
-    max-width:960px;
-}
-#downloads h2 {
-    margin-top:40px;
-    text-align:center;
-}
-#downloads .HeaderRow th:nth-child(1) { width: 45px; }
-#downloads .HeaderRow th:nth-child(3) { width: 160px; }
-#downloads table tbody tr td img {
-    width: 45px;
-}
-</style>
 <script>
     $(function () {
         // Datasheet Download Languages
