@@ -103,6 +103,10 @@ $(function () {
 		e.stopPropagation();
 		responsiveColorbox(this);
 	});
+	$('a[href="/resources/forms/getaquote"]').click(function (e) {
+		e.preventDefault();
+		responsiveColorbox(this);
+	});
 	$('.mobile-menu').click(function (e) {
 		e.stopPropagation();
 		$(this).closest('header').toggleClass('open');
@@ -202,13 +206,13 @@ $(function () {
 								<li>
 									<img src="/resources/static/images/elements/header-menu-icon--display_walls.jpg">
 									<h3><a href="/display-walls/">Display Walls</a></h3>
-									<a href="#">Canvas</a>
-									<a href="#">Canvas CRS-4K</a>
-									<a href="#">Canvas Touch</a>
-									<a href="#">Fusion Catalyst</a>
-									<a href="#">PixelNet</a>
-									<a href="#">StreamCenter</a>
-									<a href="#">VizionPlus II</a>
+									<a href="/display-walls/canvas">Canvas</a>
+									<a href="/display-walls/canvas-crs4k">Canvas CRS-4K</a>
+									<a href="/display-walls/canvas-touch">Canvas Touch</a>
+									<a href="/display-walls/fusion-catalyst">Fusion Catalyst</a>
+									<a href="/display-walls/pixelnet">PixelNet</a>
+									<a href="/display-walls/streamcenter">StreamCenter</a>
+									<a href="/display-walls/vizionplus-ii">VizionPlus II</a>
 								</li>
 								<li>
 									<img src="/resources/static/images/elements/header-menu-icon--peripherals.jpg">
