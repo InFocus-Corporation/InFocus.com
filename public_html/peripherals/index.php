@@ -18,7 +18,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 </head>
 <body class="peripherals_home" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
-	<div class="hero_row transparent-border-right-40-orange hero-row--peripherals_home">
+	<div class="hero_row transparent-border-right-40-orange solid-border-left-24-blue hero-row--peripherals_home">
 		<div class="row hero_inner">
 			<div class="small-6 medium-5 columns lead_text">
 				<h2 class="lead_text--secondary_headline">
@@ -30,6 +30,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			</div>
 			<div class="small-3 color_stripe_column">
 				<div class="dark_blue color_stripe"></div>
+				<div class="white color_stripe"></div>
 			</div>
 		</div>
 

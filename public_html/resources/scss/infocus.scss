@@ -23,7 +23,7 @@ $box_shadow_gray: inset 0 0 0 1000px rgba(51,63,72,.78);
     border-#{$direction}: solid $width rgba($color, $opacity);
 }
 
-$transparent-border-widths: 30, 38, 40, 60, 125;
+$transparent-border-widths: 24, 30, 38, 40, 60, 125;
 $transparent-border-sides: right left;
 
 @each $side in $transparent-border-sides {
@@ -43,6 +43,26 @@ $transparent-border-sides: right left;
   }
 }
 
+$solid-border-widths: 24, 30, 38, 40, 60, 125;
+$solid-border-sides: right left;
+
+@each $side in $solid-border-sides {
+  @each $width in $solid-border-widths {
+    .solid-border-#{$side}-#{$width}-orange {
+      @include border-opacity("#{$side}", #{$width}px, $infocus_orange, 1);
+    }
+    .solid-border-#{$side}-#{$width}-green {
+      @include border-opacity("#{$side}", #{$width}px, $infocus_green, 1);
+    }
+    .solid-border-#{$side}-#{$width}-blue {
+      @include border-opacity("#{$side}", #{$width}px, $infocus_blue, 1);
+    }
+    .solid-border-#{$side}-#{$width}-light_blue {
+      @include border-opacity("#{$side}", #{$width}px, $infocus_light_blue,1 );
+    }
+  }
+}
+
 // General Layout
 body {
   margin: 0 auto;
@@ -50,10 +70,20 @@ body {
   padding-top: 99px;
 }
 
-.row { margin-top: 3.5em; max-width: 71.13rem; }
-header + .hero_row > .row { margin-top: 0px;}
+.row {
+  margin-top: 6em;
+  margin-bottom: 4em;
+  max-width: 71.13rem;
+  @media screen and (min-width: 2200px) {max-width: none; }
+}
+header + .hero_row > .row {
+    height: 100%;
+    margin-top: 0px;
+    max-width: 100%;
+}
 .hero_row.row--full-height {
-  height: 100%;
+  height: auto;
+  min-height: 100%;
 }
 .color_stripe_column {
   min-height: 699px;
@@ -131,33 +161,63 @@ header + .hero_row > .row { margin-top: 0px;}
     }
   }
   &.hero-row--video_conferencing {
-    background: url('../static/images/video-conferencing/video-conferencing-hero-a--InFocus-Lifestyle-ConX-Exec-Mtg1-300dpi-CMYK.jpg') right -38px top no-repeat;
-    background-size: 1055px 799px;
+    background: url('../static/images/video-conferencing/video-conferencing-hero-a--InFocus-Lifestyle-ConX-Exec-Mtg1-300dpi-CMYK.jpg') right -40px top no-repeat;
+    background-size: auto 839px;
+;    .lead_text>:first-child {
+        margin-top: 88px;
+        padding-left: 100px;
+    }
+    .lead_text--paragraph {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
   }
+  &.hero-row--peripherals_home {
+    background: url('../static/images/peripherals/peripherals_cam.jpg') right -195px top no-repeat;
+    .lead_text>:first-child {
+        margin-top: 88px;
+        padding-left: 100px;
+    }
+    .lead_text--paragraph {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+  }
+
   &.hero-row--projectors {
-    background: url('../static/images/projectors/InFocus-Lifestyle-Projector-Screen-2-300dpi-96dpi-RGB.jpg') right -326px top no-repeat;
+    background: url('../static/images/projectors/InFocus-Lifestyle-Projector-Screen-2-300dpi-96dpi-RGB.jpg') right -246px top no-repeat;
+    .lead_text>:first-child {
+        margin-top: 88px;
+        padding-left: 100px;
+    }
+    .lead_text--paragraph {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
   }
   &.hero-row--touchscreens {
-    background-image: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg');
-    background-size: cover;
-    background-position: left 250px top;
-    background-repeat: no-repeat;
-    @media screen and (min-width: 30em) {
-      background-position: left 280px top;
+    background: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg') right -47px top no-repeat;
+    .lead_text>:first-child {
+        margin-top: 88px;
+        padding-left: 100px;
     }
-    @media screen and (min-width: 40em) {
-      background-position: left 310px top;
-    }
-    @media screen and (min-width: 50em) {
-      background-position: right -350px top;
-    }
-    @media screen and (min-width: 64em) {
-      background-size: auto;
-      background-position: right -326px top;
+    .lead_text--paragraph {
+        padding-left: 100px;
+        padding-right: 100px;
     }
   }
   &.hero-row--display_walls {
-    background: url('../static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg') right -125px top no-repeat;
+    background: url('../static/images/display-walls/TMC_REMKES_AND_LUCERO_1.jpg') right -40px top no-repeat;
+    background-size: auto 110%;
+
+    .lead_text>:first-child {
+        margin-top: 88px;
+        padding-left: 100px;
+    }
+    .lead_text--paragraph {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
   }
   &.hero-row--jupiter {
     background: url('../static/images/jupiter/jupiter-hero-a.jpg') left top no-repeat;
@@ -343,6 +403,8 @@ header + .hero_row > .row { margin-top: 0px;}
     max-width: 420px;
   }
   &.hero_row--secondary {
+    margin-top: 8em;
+    margin-bottom: 8em;
     &.hero_row--secondary--homepage {
       background: url('../static/images/homepage/homepage-feature--GettyImages-508079793.jpg') center center no-repeat;
       background-size:cover;
@@ -704,11 +766,11 @@ div.video_module {
     width: 66.64%;
     position: absolute;
     height: 100%;
-    -webkit-transition: all 1s ease;
-  	-moz-transition: all 1s ease;
-  	-ms-transition: all 1s ease;
-  	-o-transition: all 1s ease;
-  	transition: all 1s ease;
+    -webkit-transition: all .5s ease;
+  	-moz-transition: all .5s ease;
+  	-ms-transition: all .5s ease;
+  	-o-transition: all .5s ease;
+  	transition: all .5s ease;
     .vertical_accordian--slide--background{
       position: absolute;
       top: 0;
@@ -726,7 +788,7 @@ div.video_module {
       &:before {
         border: 0px;
       }
-      position: relative;
+      position: absolute;
       bottom: 50px;
     }
   }
@@ -778,12 +840,16 @@ div.video_module {
       position: relative;
       top: -110px;
       visibility: hidden;
+
+  }
+  a.cta {
+    display: inline;
+    font-family: 'GoodPro-WideBold';
   }
 }
 
 //Callouts
 .homepage--callouts {
-    margin-bottom: 2em;
   .callout {
     height: 100%;
   }
@@ -791,7 +857,7 @@ div.video_module {
 
 .callout {
   overflow: hidden;
-  padding: 2em 1.25em 1.25em;
+  padding: 2.5;
   background-color: $infocus_light_blue;
   border: 0px;
   border-radius: 3px;
@@ -852,8 +918,13 @@ div.video_module {
 //Page Specific CSS
 //404 Page
 .page--404 {
-  /*puts footer at bottom because page is so short. */
-  footer { margin-top: -99px;}
+  footer {
+    @media screen and (min-width: 1024px) {
+        margin-top: 0px;
+        position: absolute;
+        bottom: 0;
+    }
+  }
   .hero-row--404 {
     background: url('../static/images/other/404-background--shutterstock_272479613.jpg') no-repeat top -100px left;
     background-size: cover, cover;
@@ -876,9 +947,6 @@ div.video_module {
 
 // Peripherals Page
 .peripherals_home {
-    .hero-row--peripherals_home {
-      background: url('../static/images/peripherals/peripherals_cam.jpg') right -125px top no-repeat;
-    }
     .dark_blue.color_stripe {
         width: 70px;
     }
@@ -993,3 +1061,90 @@ div.video_module {
     }
   }
 }
+
+//Teach page--404
+.page--teach {
+    .no-pad-left {
+        padding-left: 0 !important;
+    }
+    .no-pad-right {
+        padding-right: 0!important;
+    }
+    div.hero_row.hero-row--header_module_c {
+        background-image: url('/resources/static/images/teach/InFocus-Lifestyle-JTouch-K12-MuscleDiagram-300dpi-CMYK.jpg');
+    }
+    .text_module_a a.text_module_link {
+        font-weight: 700;
+    }
+    div.feature_module_a.orange {
+        background: url('/resources/static/images/teach/distance-learning-fire.jpg') right -45px top no-repeat;
+    }
+    div.feature_module_a.blue {
+        background: url('/resources/static/images/teach/166273198.jpg') right -45px top no-repeat;
+    }
+    .feature_module_a.orange .feature_text {
+        background-color: rgba(232,119,34,.88);
+    }
+    .feature_module_a.blue .feature_text {
+        background-color: rgba(194,227,238,.88);
+        padding-left: 4em;
+    }
+    .feature_module_a.blue .feature_text .lead_text--secondary_headline, .feature_module_a.blue .feature_text .lead_text--paragraph {
+        color: #333F48;
+    }
+    .feature_module_a .lead_text--secondary_headline {
+        font-size: 3.75rem;
+        line-height: 1em;
+    }
+    .feature_module_a.blue .feature_text .lead_text--paragraph {
+        margin-bottom: 1.2em;
+    }
+    .feature_module_a.blue ul li {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+    .feature_module_a.blue .feature_links {
+        left: 4em;
+    }
+    .feature_module_a .feature_links .feature_link {
+        font-size: 14px;
+    }
+    .feature_module_a.blue .feature_links .feature_link {
+        color: #006ba6;
+    }
+    h4.lead_text--paragraph {
+        font-size: 2.3rem;
+        font-weight: 300;
+        padding: 0 1em;
+    }
+    div.feature_module_b .module_image {
+        background: url('/resources/static/images/teach/InFocus-Lifestyle-JTouch-Whiteboard-Classroom-Molecules-300dpi-CMYK.jpg') no-repeat;
+        background-size: cover;
+        height: 615px;
+    }
+    div.feature_module_b .feature_text.grey {
+        padding-top: 30px;
+        margin-top: -290px;
+        background-color: rgba(63,74,84,.88)
+    }
+    div.feature_module_b .feature_links {
+        margin-bottom: 35px;
+    }
+    div.feature_module_b .lead_text--secondary_headline {
+        margin-bottom: 1.3rem;
+    }
+    div.feature_module_b .lead_text--paragraph {
+        line-height: 1.4;
+    }
+    .text_module_a h1.lead_text--headline {
+        font-weight: 300;
+    }
+    div.promo_modules .promo_module_c .module_image {
+        background: url('/resources/static/images/teach/GettyImages-140872375.jpg') no-repeat;
+        background-size: cover;
+    }
+    div.promo_modules .promo_module_d .module_image {
+        background: url('/resources/static/images/teach/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg') no-repeat;
+        background-size: cover;
+    }
+  }

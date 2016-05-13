@@ -18,27 +18,24 @@ window.location = "/#getaquote";
 
 <style>
   form {
-	background: #f7f7f7;
+	background: #f2f2f0;
 	padding: 20px;
-	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 0px 0px 0px rgba(255, 255, 255, 1);
-	border: 0px solid #B2B2B2;
+	box-shadow: none;
+	border: none;
 }
 </style>
  </HEAD>
-<body style="max-width:1200px;background: #f7f7f7;line-height: 1em;">
+<body style="max-width:1200px;background: #f2f2f0;line-height: 1em;">
 
 
 <form id="GetAQuote" method="POST" name="GetAQuote">
 <span id="clearContainer">
-<h2 style="text-align: left;"><?php echo translate('Get a Quote');?></h2>
-<p style="text-align: left;"><?php echo $pageText['WorkWithYou'];?></p>
-
+<h2 style="text-align: center;margin-top:3rem;"><?php echo translate('Get a Quote');?></h2>
+<p style="text-align: center;padding:1rem 4rem 0rem;"><?php echo $pageText['WorkWithYou'];?></p>
+<p style="text-align: center;"><?php echo $pageText['TellUs'];?></p>
 
 <ul class="wrap">
-
  <li>
-
-<p><?php echo $pageText['TellUs'];?></p>
 <label class="top" for="productofinterest_c"><?php echo translate('Product');?>: <span class="required" style="color: #ff0000;">*</span></label>
 
 <?php 
@@ -51,10 +48,9 @@ echo '<input id="productofinterest_c" type="text" name="productofinterest_c" >
 else
 {
 echo '<select id="GetAQuote_productofinterest_c" type="text" name="productofinterest_c" >
-<option value="ConX Wall">ConX Wall</option>
 </select>
 <script>
-getProductList(" productgroup = \'Display\' AND active != 0 AND active is not null AND active != 9","GetAQuote_productofinterest_c",\'<option value="ConX Wall">ConX Wall or ConX Exec</option><option value="Canvas Touch">Canvas Touch</option>\');
+getProductList(" productgroup = \'Display\' AND active != 0 AND active is not null AND active != 9","GetAQuote_productofinterest_c",\'<option value="Canvas">Canvas</option><option value="Canvas CRS-4K">Canvas CRS-4K</option><option value="Canvas Touch">Canvas Touch</option><option value="Fusion Catalyst">Fusion Catalyst</option><option value="PixelNet">PixelNet</option><option value="StreamCenter">StreamCenter</option><option value="VizionPlus II">VizionPlus II</option><option value="ConX Wall">ConX Wall or ConX Exec</option>\');
 </script>';
 }
 
@@ -126,15 +122,15 @@ getProductList(" productgroup = \'Display\' AND active != 0 AND active is not nu
 <label class="top" for="phone_work"><?php echo $translate['Phone'];?>: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="GetAQuote_phone_work" type="text" name="phone_work" required/>
 </li>
-<li>
-<div id="GetAQuote_ao_submit_button">
-<button id="GetAQuote_ao_submit_input" type="button" onClick="console.log(requiredFields);doSubmit(document.getElementById('GetAQuote'),'/resources/php/formtoemail.php?eto=GetAQuote@infocus.com&esub=Get%20A%20Quote','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit')"><?=translate('Send')?></button>
+</ul>
+
+<div style="padding-left: 10px;">
+	<p class="privacy"><?php echo $pageText['PrivacyReview'];?></p>
+	<div id="GetAQuote_ao_submit_button" style="padding: 0;">
+		<button id="GetAQuote_ao_submit_input" type="button" onClick="console.log(requiredFields);doSubmit(document.getElementById('GetAQuote'),'/resources/php/formtoemail.php?eto=GetAQuote@infocus.com&esub=Get%20A%20Quote','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit')"><?=translate('Send')?></button>
+	</div>
+	<span class="form-required" style="font-size:70%">* <?php echo $translate['Denotes a Required field'];?>.</span>
 </div>
-<span class="form-required" style="font-size:70%">* <?php echo $translate['Denotes a Required field'];?>.</span></li>
- </ul>
-
-
-<p><?php echo $pageText['PrivacyReview'];?></p>
 
 <input type="hidden" id="name" name="name">
 <input type="hidden" id="clear" name="clear" value="Thank you for your interest.  Someone will be contacting you shortly.">

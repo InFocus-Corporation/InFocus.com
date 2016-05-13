@@ -18,7 +18,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 </head>
 <body class="" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
-	<div class="hero_row transparent-border-right-40-orange hero-row--display_walls">
+	<div class="hero_row transparent-border-right-40-orange solid-border-left-24-blue hero-row--display_walls">
 		<div class="row hero_inner">
 			<div class="small-6 medium-5 columns lead_text">
 				<h2 class="lead_text--secondary_headline">
@@ -42,7 +42,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">Canvas</h3>
 			<p class="lead_text--paragraph">Canvas enables video, data, applications, and more to be shared with colleagues anywhere, on any device, delivering end-to-end collaboration.</p>
-			<a href="#" class="button button--primary">learn more</a>
+			<a href="/display-walls/canvas" class="button button--primary">learn more</a>
 		</div>
 	</div>
 
@@ -53,8 +53,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">Canvas CRS-4K</h3>
-			<p class="lead_text--paragraph">The Canvas CRS-4K system is a small, quiet box that can be located anywhere in the room. What it enables is enormous. - See more at: http://www.jupiter.com/solutions/canvas-crs-4k#sthash.oxI9wDds.dpuf</p>
-			<a href="#" class="button button--primary">learn more</a>
+			<p class="lead_text--paragraph">The Canvas CRS-4K system is a small, quiet box that can be located anywhere in the room. What it enables is enormous.</p>
+			<a href="/display-walls/canvas-crs4k" class="button button--primary">learn more</a>
 		</div>
 	</div>
 
@@ -66,7 +66,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">Canvas Touch</h3>
 			<p class="lead_text--paragraph">Canvas Touch extends the power of Canvas’ award-winning visualization solution to conference rooms, huddle spaces, personal offices, or anywhere else groups meet and collaborate.</p>
-			<a href="/canvas-touch" class="button button--primary">learn more</a>
+			<a href="/display-walls/canvas-touch" class="button button--primary">learn more</a>
 		</div>
 	</div>
 
@@ -90,7 +90,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">Fusion Catalyst</h3>
 			<p class="lead_text--paragraph">Fusion Catalyst™ ushers in a new era of performance and flexibility for display wall processors.</p>
-			<a href="#" class="button button--primary">learn more</a>
+			<a href="/display-walls/fusion-catalyst" class="button button--primary">learn more</a>
 		</div>
 	</div>
 
@@ -102,7 +102,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">PixelNet</h3>
 			<p class="lead_text--paragraph">PixelNet adopts Gigabit Ethernet technology to create a network of input and output nodes to drive high resolution, real time video walls. </p>
-			<a href="#" class="button button--primary">learn more</a>
+			<a href="/display-walls/pixelnet" class="button button--primary">learn more</a>
 		</div>
 	</div>
 
@@ -114,7 +114,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">StreamCenter</h3>
 			<p class="lead_text--paragraph">StreamCenter™ is the most fully featured multistream decoder anywhere.</p>
-			<a href="#" class="button button--primary">learn more</a>
+			<a href="/display-walls/streamcenter" class="button button--primary">learn more</a>
 		</div>
 	</div>
 
@@ -126,7 +126,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">VisionPlus II</h3>
 			<p class="lead_text--paragraph">VizionPlus II™ is the newest version of the go-to display wall processor already deployed in thousands of US military installations worldwide.</p>
-			<a href="#" class="button button--primary">learn more</a>
+			<a href="/display-walls/vizionplus-ii" class="button button--primary">learn more</a>
 		</div>
 	</div>
 
