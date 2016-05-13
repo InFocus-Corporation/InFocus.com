@@ -35,7 +35,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 
 	</div>
 	<div class="row">
-		<div class="small-12 medium-7 columns">
+		<div class="small-12 medium-7 columns color_stripe_column">
 			<div class="white color_stripe"></div>
 			<img src="../resources/static/images/touchscreens/InFocus-Lifestyle-Mondopad-DualScreen-LightOffice-300dpi-CMYK.jpg" alt="">
 		</div>
@@ -46,7 +46,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 	</div>
 	<div class="row">
-		<div class="small-12 medium-7 columns">
+		<div class="small-12 medium-7 columns color_stripe_column">
 			<div class="white color_stripe"></div>
 			<img src="../resources/static/images/touchscreens/InFocus-Lifestyle-JTouch-K12-MuscleDiagram-300dpi-CMYK.jpg" alt="">
 		</div>
@@ -57,7 +57,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 	</div>
 	<div class="row">
-		<div class="small-12 medium-7 columns">
+		<div class="small-12 medium-7 columns color_stripe_column">
 			<div class="white color_stripe"></div>
 			<img src="../resources/static/images/touchscreens/InFocus-DigiEasel-Business-Presentation.jpg" alt="">
 		</div>
@@ -68,7 +68,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 	</div>
 	<div class="row">
-		<div class="small-12 medium-7 columns">
+		<div class="small-12 medium-7 columns color_stripe_column">
 			<div class="white color_stripe"></div>
 			<img src="../resources/static/images/touchscreens/InFocus-Lifestyle-QTablet-Construction-300dpi-CMYK.jpg" alt="">
 		</div>
@@ -79,7 +79,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 	</div>
 	<div class="row">
-		<div class="small-12 medium-7 columns">
+		<div class="small-12 medium-7 columns color_stripe_column">
 			<div class="white color_stripe"></div>
 			<img src="../resources/static/images/touchscreens/InFocus-INF5711-Win8-Front.jpg" alt="">
 		</div>
