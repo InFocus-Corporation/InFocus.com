@@ -14,16 +14,10 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $homedir.'/resources/overviews/', 'admin,salespublisher,saleseditor,marketingpublisher,marketingeditor,editor', ".src", "overview", "true", "SavePage","overview");}
 ?>
 <style>
-/*div.info .tagline {
-    font-family: 'GoodPro';
-    font-weight: bold;
+div.info p, .cmsedit p:first-of-type, .cmsedit p:first-of-type a {
+    font-size: 18px;
 }
-div.info span {
-    font-size: 1.3rem;
-}
-div.info #blurb {
-    font-size: 1rem;
-}
+h5 { font-weight: normal; margin-bottom: 1em; }
 #downloads .rounded {
     margin:auto;
     max-width:960px;
@@ -36,7 +30,7 @@ div.info #blurb {
 #downloads .HeaderRow th:nth-child(3) { width: 160px; }
 #downloads table tbody tr td img {
     width: 45px;
-}*/
+}
 </style>
 <script>
     $(function () {
@@ -97,12 +91,11 @@ div.info #blurb {
                 </nav>
                 <div id="overview" class="active">
                     <div class="C10 alternateDivChildL2">
-
                       <div class="info cmsedit">
                           <div class="image-set cmsedit" style="float: right; padding: 1em;">
                               <img src="/resources/static/images/display-walls/canvas.jpg" >
                           </div>
-                    			<h2 class="name">New in Canvas 3.1</h2>
+                    			<h5 class="name">New in Canvas 3.1</h5>
                     			<strong class="tagline"></strong>
                           <p>Canvas 3.1 delivers new, advanced communications and presentation features, as well as integrations with major unified communication and collaboration platforms, to make this edition of Canvas the most powerful solution of its kind.</p>
                           <p>New features of the updated Canvas 3.1 software include:</p>
@@ -124,19 +117,19 @@ div.info #blurb {
                     </div>
                     <div class="C5 alternateDivChildL2" style="float:left;">
                         <div class="info cmsedit">
-                      			<h2 class="name">Instant connection and access</h2>
+                      			<h5 class="name">Instant connection and access</h5>
                       			<strong class="tagline"></strong>
                             <p>Canvas transforms your computer, tablet or smartphone into a portable video wall to provide instant connection and access to essential visual information from anywhere. Share camera feeds, web pages, application screens and real time data for rapid, well-informed decision making.</p>
                             <hr/>
     			              </div>
                         <div class="info cmsedit">
-                      			<h2 class="name">End-to-end collaboration</h2>
+                      			<h5 class="name">End-to-end collaboration</h5>
                       			<strong class="tagline"></strong>
                             <p>Canvas elevates teamwork to a level previously unimagined by enabling remote users to be both sources and destinations for visual information. Colleagues can annotate directly on live video streams as events unfold, empowering true end-to-end collaboration.</p>
                             <hr/>
   			                </div>
                         <div class="info cmsedit">
-                      			<h2 class="name">Collaboration, evolved</h2>
+                      			<h5 class="name">Collaboration, evolved</h5>
                       			<strong class="tagline"></strong>
                             <p>Canvas enables managers to annotate directly on live video shared with remote colleagues across a broad array of devices.</p>
                             <ul class="feature-list">
@@ -151,13 +144,13 @@ div.info #blurb {
                       <hr>
                       <div class="C5 alternateDivChildL2" style="float:right;">
                             <div class="info cmsedit">
-                          			<h2 class="name">Watch the Canvas video</h2>
+                          			<h5 class="name">Watch the Canvas video</h5>
                                 <a href="http://www.jupiter.com/vef/load/a65fcace882c229ea0a725ce25fc65e6?width=640px&amp;height=365" class="colorbox-load init-colorbox-load-processed cboxElement"><img class="video_thumbnail img-responsive" typeof="foaf:Image" src="http://www.jupiter.com/system/files/styles/video_thumbnail/private/video-thumbnails/Video_Still_Canvas2_1.jpg?itok=bxT7uDqe" width="740" height="415" alt=""></a>
       			                </div>
                         </div>
                         <div class="C5 alternateDivChildL2" style="float:left;">
                             <div class="info cmsedit">
-                          			<h2 class="name">A secure system</h2>
+                          			<h5 class="name">A secure system</h5>
                           			<strong class="tagline"></strong>
                                 <p>Canvas authenticates users via the customer’s own Windows Active Directory. User permissions, including access to specific sources and features are assigned and managed by the system administrator. Role-based security makes management of large numbers of users and permissions easy and flexible, according privileges to cadres of users sharing a common role in the enterprise.</p>
                                 <p>Employing a superior security design, Canvas provides object-level security for all sources, eliminating inadvertent disclosure of restricted content. The system actively prevents users from sharing sources with any other user lacking appropriate permission.</p>
@@ -168,13 +161,13 @@ div.info #blurb {
                         <hr>
                         <div class="C10 alternateDivChildL2">
                           <div class="info cmsedit">
-                              <h2 class="name">Use your Canvas video wall for in-room presentations, too</h2>
+                              <h5 class="name">Use your Canvas video wall for in-room presentations, too</h5>
                               <strong class="tagline"></strong>
                               <p>Your Canvas video wall can be used for displaying content for a local audience when not in a Canvas session. DVI inputs can be connected to a Fusion Catalyst display wall processor running Canvas for display on the attached video wall. Now the local video wall can be used for making in-room presentations or viewing other sources not intended for sharing and collaboration.    </p>
                               <hr/>
                           </div>
                           <div class="info cmsedit">
-                              <h2 class="name">The Canvas system</h2>
+                              <h5 class="name">The Canvas system</h5>
                               <strong class="tagline"></strong>
                               <img alt="" class="img-responsive" src="http://www.jupiter.com/system/files/Canvas%20ecosystem%20diagram_Jan_2016.jpg">
                           </div>
