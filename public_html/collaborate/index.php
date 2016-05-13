@@ -36,7 +36,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			</div>
 		</div>
     <!-- END HEADER MODULE C -->
-    <br><br>
     <!-- MULTICOLUMN TEXT MODULE -->
     <div class="row multicolumn_text_module">
         <div class="small-11 small-offset-1 medium-8 medium-offset-2 columns text-center lead_text">
@@ -79,7 +78,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END MULTICOLUMN TEXT MODULE -->
-    <br><br><br>
     <!-- FEATURE MODULE B -->
     <div class="row feature_module_b feature_module_b--collaborate">
         <div class="small-12 columns">
@@ -96,7 +94,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END FEATURE MODULE B -->
-    <br><br><br>
     <!-- MULTICOLUMN TEXT MODULE -->
     <div class="row multicolumn_text_module">
         <div class="small-12 medium-10 medium-offset-1 columns lead_text">
@@ -121,7 +118,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END MULTICOLUMN TEXT MODULE -->
-		<br><br>
     <!-- VIDEO MODULE -->
 		<div class="hero_row hero-row--video_row hero-row--video_row_collaborate-a">
 			<div class="row">
@@ -136,9 +132,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			</div>
 		</div>
     <!-- END VIDEO MODULE -->
-		<br><br>
-
-
     <!-- FEATURE MODULE A -->
 		<div class="row feature_module_a feature_module_a--collaborate">
       <div class="small-12 medium-6 columns feature_text">
@@ -154,7 +147,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			</div>
 		</div>
     <!-- END FEATURE MODULE A -->
-    <br><br><br>
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">
         <div class="small-12 large-6 columns promo_module_d collaborate--promo_module_d">
@@ -193,7 +185,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END PROMO MODULES C & D -->
-		<br><br>
 
     <!-- VIDEO MODULE -->
 		<div class="hero_row hero-row--video_row hero-row--video_row_collaborate-b">
@@ -209,7 +200,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			</div>
 		</div>
     <!-- END VIDEO MODULE -->
-		<br><br>
 		<script>
 		    $(document).foundation();
 		</script>
