@@ -18,7 +18,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 </head>
 <body class="peripherals_home" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
-	<div class="hero_row transparent-border-right-40-orange hero-row--peripherals_home">
+	<div class="hero_row transparent-border-right-40-orange solid-border-left-24-blue hero-row--peripherals_home">
 		<div class="row">
 			<div class="small-11 medium-7 large-5 columns lead_text">
 				<h2 class="lead_text--secondary_headline">

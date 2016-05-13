@@ -2,7 +2,7 @@
 $headclass = '';
 $uri = $_SERVER['REQUEST_URI'];
 $catregx = "/\/(accessories|hd\-projector\-lineup)\/?/i";
-$subcatregx = "/\/(products|peripherals|accessories)\/.*/i";
+$subcatregx = "/\/(products|displays|projectors|peripherals|accessories)\/.+/i";
 if(preg_match($catregx, $uri) || preg_match($subcatregx, $uri)) {
 	$headclass = 'blue';
 }
