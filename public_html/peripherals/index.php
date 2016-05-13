@@ -30,6 +30,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			</div>
 			<div class="small-1 medium-3 color_stripe_column">
 				<div class="dark_blue color_stripe"></div>
+				<div class="white color_stripe"></div>
 			</div>
 		</div>
 
