@@ -43,7 +43,7 @@ if($_REQUEST['content']=='true') {
 }
 
 
-if($category) { 
+if($category) {
 	$result = mysqli_query($connection,'SELECT producttext.partnumber, listtitle, description, category FROM producttext WHERE `active` != 0 and `active` IS NOT NULL AND category LIKE "%' . $category . '%" AND lang="' . $lang . '" ORDER BY partnumber');
 
 	?><script id="metaValues">
@@ -114,7 +114,7 @@ if($category) {
 
 <?php } else { ?>
 
-	<div class="hero_row transparent-border-right-40-orange hero-row--projectors">
+	<div class="hero_row transparent-border-right-40-orange solid-border-left-24-blue hero-row--projectors">
 		<div class="row">
 			<div class="small-11 medium-7 large-5 columns lead_text">
 				<h2 class="lead_text--secondary_headline">

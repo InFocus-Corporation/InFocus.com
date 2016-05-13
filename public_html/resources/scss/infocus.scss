@@ -166,7 +166,15 @@ header + .hero_row > .row {
   }
 
   &.hero-row--projectors {
-    background: url('../static/images/projectors/InFocus-Lifestyle-Projector-Screen-2-300dpi-96dpi-RGB.jpg') right -326px top no-repeat;
+    background: url('../static/images/projectors/InFocus-Lifestyle-Projector-Screen-2-300dpi-96dpi-RGB.jpg') right -246px top no-repeat;
+    .lead_text>:first-child {
+        margin-top: 88px;
+        padding-left: 100px;
+    }
+    .lead_text--paragraph {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
   }
   &.hero-row--touchscreens {
     background: url('../static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg') right -47px top no-repeat;
