@@ -82,7 +82,8 @@ header + .hero_row > .row {
     max-width: 100%;
 }
 .hero_row.row--full-height {
-  height: 100%;
+  height: auto;
+  min-height: 100%;
 }
 .color_stripe_column {
   min-height: 699px;
@@ -631,7 +632,7 @@ div.video_module {
       &:before {
         border: 0px;
       }
-      position: relative;
+      position: absolute;
       bottom: 50px;
     }
   }
@@ -683,6 +684,11 @@ div.video_module {
       position: relative;
       top: -110px;
       visibility: hidden;
+
+  }
+  a.cta {
+    display: inline;
+    font-family: 'GoodPro-WideBold';
   }
 }
 
@@ -744,8 +750,13 @@ div.video_module {
 //Page Specific CSS
 //404 Page
 .page--404 {
-  /*puts footer at bottom because page is so short. */
-  footer { margin-top: -99px;}
+  footer {
+    @media screen and (min-width: 1024px) {
+        margin-top: 0px;
+        position: absolute;
+        bottom: 0;
+    }
+  }
   .hero-row--404 {
     background: url('../static/images/other/404-background--shutterstock_272479613.jpg') no-repeat top -100px left;
     background-size: cover, cover;

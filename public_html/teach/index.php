@@ -27,7 +27,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		<div class="row">
 			<div class="small-11 small-offset-1 medium-7 medium-offset-2 large-7 large-offset-5 columns lead_text">
                 <div class="module--tag">
-                    <span>Teach & Train</span>
+                    <span>Teach &amp; Train</span>
                 </div>
 				<h2 class="lead_text--secondary_headline">
 					Your students will thank you
@@ -187,6 +187,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- TEXT MODULE -->
     <div class="row text_module">
         <div class="small-8 small-offset-2 columns text-center lead_text">
+            <a id="inspire" name="inspire"></a>
             <h1 class="lead_text--headline">Inspire Education Program</h1>
             <p class="lead_text--paragraph">
                 Your school can get special pricing, extended warranties and complimentary training when you buy select touchscreens or projectors from and authorized Inspire Dealer.
