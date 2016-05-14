@@ -82,7 +82,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     <div class="C10 alternateDivChildL2">
                       <div class="info cmsedit">
                           <div class="image-set cmsedit" style="float: right; padding: 1em;">
-                              <img src="/resources/static/images/display-walls/canvas.jpg" >
+                              <img src="/resources/static/images/display-walls/Canvas-Touch-Hero.png" style="width:500px" >
                           </div>
                                 <h5 class="name">Real Collaboration, Real Work</h5>
                                 <strong class="tagline"></strong>
