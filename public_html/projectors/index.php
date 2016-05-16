@@ -122,14 +122,14 @@ if($category) {
 					<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/static/images/svg/icon-projectors.svg'); ?>
 					Projectors
 				</h2>
-				<p class="lead_text--paragraph">Ver o eos accusamus et iusto odio dignissimos ducimus qui blanditis praesent volumptatum. Dolores et quas molestais excepturi sint occaecati cupiditate.</p>
+				<p class="lead_text--paragraph">Whether you’re looking for a projector small enough to fit in your briefcase or one powerful enough for an auditorium, InFocus has you covered.</p>
 			</div>
 			<div class="small-3 color_stripe_column">
 				<div class="dark_blue color_stripe"></div>
 				<div class="white color_stripe"></div>
 			</div>
 		</div>
-		
+
 	</div>
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">

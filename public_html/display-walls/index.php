@@ -26,7 +26,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 					<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/static/images/svg/display-walls.svg'); ?>
 					Display Walls
 				</h2>
-				<p class="lead_text--paragraph">Ver o eos accusamus et iusto odio dignissimos ducimus qui blanditis praesent volumptatum. Dolores et quas molestais excepturi sint occaecati cupiditate.</p>
+				<p class="lead_text--paragraph">The ability to see everything that’s important at once is invaluable. Our technologies display all your data sources and video-conferencing feeds together on a single wall.</p>
 			</div>
 			<div class="small-3 color_stripe_column">
 				<div class="dark_blue color_stripe"></div>

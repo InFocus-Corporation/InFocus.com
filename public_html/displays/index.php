@@ -26,7 +26,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 					<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/static/images/svg/icon-touchscreens.svg'); ?>
 					Touchscreens
 				</h2>
-				<p class="lead_text--paragraph">Ver o eos accusamus et iusto odio dignissimos ducimus qui blanditis praesent volumptatum. Dolores et quas molestais excepturi sint occaecati cupiditate.</p>
+				<p class="lead_text--paragraph">Boost collaboration and engage your audience in the meeting room, the classroom, and beyond with a touchscreen display perfectly suited to your needs.</p>
 			</div>
 			<div class="small-3 color_stripe_column">
 				<div class="dark_blue color_stripe"></div>
@@ -58,7 +58,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<a href="/displays/JTOUCH-Series" class="button button--primary">learn more</a>
 		</div>
 	</div>
-	
+
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
