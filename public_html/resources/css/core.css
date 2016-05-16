@@ -1775,7 +1775,7 @@ footer h6 {
 }
 footer:hover h6 {
 	padding-top: 0.2rem;
-	padding-bottom: 0rem;
+	padding-bottom: .55rem;
 }
 footer ul,
 footer ul li {
@@ -1784,6 +1784,8 @@ footer ul li {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+  margin-top: 8px;
+  font-size:13px;
 }
 footer h6,
 footer a,
@@ -1852,6 +1854,7 @@ footer div.social li {
 	float: left;
 	width: 25%;
 	text-align: right;
+  margin-top: 0px;
 }
 footer div.social li a {
 	display: inline-block;
