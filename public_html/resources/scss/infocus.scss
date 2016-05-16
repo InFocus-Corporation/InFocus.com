@@ -141,7 +141,16 @@ header + .hero_row > .row {
       }
   }
   &.hero-row--homepage {
-    border-left: 18px solid $infocus_blue;
+    border-left: 7px solid $infocus_blue;
+    border-right-width: 10px;
+    @media screen and (min-width: 40em) {
+        border-left-width: 10px;
+        border-right-width: 18px;
+    }
+    @media screen and (min-width: 62em) {
+        border-left-width: 18px;
+        border-right-width: 30px;
+    }
     .hero_image {
         img {
             left: -30%;
