@@ -26,7 +26,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 					<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/static/images/svg/icon-video-conferencing.svg'); ?>
 					Video Conferencing
 				</h2>
-				<p class="lead_text--paragraph">In a perfect world, every meeting is productive and every presentation engages the audience. We make the world a more perfect place.</p>
+				<p class="lead_text--paragraph">Video conferencing makes communicating and connecting from different locations easier. It’s a must if you want to keep your team aligned at all times.</p>
 			</div>
 			<div class="small-3 color_stripe_column">
 				<div class="dark_blue color_stripe"></div>
