@@ -235,7 +235,7 @@ p.salesOnly {
 	h3 {
 		text-align: left;
     	padding-right: 2em;
-    	padding-left: 0.5em;
+    	padding-left: 0em;
 	}
 	h5 {
 		padding-top: 1rem;
@@ -247,7 +247,10 @@ p.salesOnly {
 	p.techOnly,
 	p.salesOnly {
 		text-align: left;
-		padding: 1rem 1rem 0rem;
+		padding: 1rem 0rem 0rem;
+	}
+	form div > div {
+		padding: 0;
 	}
 }
 table.contact-table tr:nth-child(n+3) td:first-child{padding-left:40px;}
