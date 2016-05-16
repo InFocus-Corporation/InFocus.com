@@ -86,9 +86,9 @@ header + .hero_row > .row {
   min-height: 100%;
 }
 .color_stripe_column {
-  min-height: 699px;
   float: left;
   .color_stripe {
+    position: absolute;
     height: 100%;
     float:left;
     position: absolute;
@@ -696,8 +696,8 @@ header + .hero_row > .row {
         color: $infocus_light_blue;
         font-family: 'GoodPro-WideMedium';
         font-size: 12px;
-        letter-spacing: .25em;
         text-transform: uppercase;
+        letter-spacing: .15em;
     }
     .feature_link:hover {
         color: $white;
@@ -745,7 +745,7 @@ header + .hero_row > .row {
     .feature_link {
         color: $infocus_light_blue;
         font-family: 'GoodPro-WideMedium';
-        font-size: 12px;
+        font-size: 13px;
         text-transform: uppercase;
         letter-spacing: .25em;
     }
@@ -768,7 +768,6 @@ header + .hero_row > .row {
     .text_module_link {
         font-family: 'GoodPro-WideMedium';
         -webkit-font-feature-settings: "liga" 0;
-        letter-spacing: .25em;
         font-size: 24px;
         color: $infocus_blue;
     }
@@ -786,10 +785,9 @@ header + .hero_row > .row {
         font-size: 20px;
     }
     .text_module_link {
-        font-size: 20px;
         font-family: 'GoodPro-WideMedium';
+        font-size: 20px;
         -webkit-font-feature-settings: "liga" 0;
-        letter-spacing: .25em;
         color: $infocus_blue;
     }
     .svg {
@@ -810,10 +808,9 @@ header + .hero_row > .row {
         font-size: 20px;
     }
     .text_module_link {
-        font-size: 20px;
         font-family: 'GoodPro-WideMedium';
+        font-size: 20px;
         -webkit-font-feature-settings: "liga" 0;
-        letter-spacing: .25em;
         color: $infocus_blue;
     }
 }
@@ -840,7 +837,7 @@ header + .hero_row > .row {
     .module_text {
         height: 140px;
         margin-top: -140px;
-        padding: 45px 45px 0px 45px;
+        padding: 41px 45px 0px 45px;
         text-align: center;
         @include background-opacity($dark_gray);
         .lead_text--headline {
@@ -858,17 +855,23 @@ header + .hero_row > .row {
     }
     .module_links {
         @include background-opacity($dark_gray, .55);
+        position: relative;
         height: 65px;
-        padding-top: 20px;
         text-align: center;
+
         .promo_module_link {
+            display: inline-block;
             color: $infocus_light_blue;
             text-transform: uppercase;
             font-family: 'GoodPro-WideMedium';
             -webkit-font-feature-settings: "liga" 0;
-            letter-spacing: .25em;
             font-size: 12px;
             letter-spacing: 0.15em;
+            margin-top: 32px;
+            transform: translate(0,-50%);
+            -webkit-transform: translate(0,-50%);
+            -moz-transform: translate(0,-50%);
+            -ms-transform: translate(0,-50%);
         }
 
     }
@@ -890,6 +893,12 @@ header + .hero_row > .row {
         .promo_module_link.first_link {
             border-right: solid 1px #c5c5c5;
         }
+        .module_text {
+          padding-top: 70px;
+          .lead_text--headline {
+            transform: translate(0,-50%);
+          }
+        }
 
     }
     .promo_module_d {
@@ -902,6 +911,10 @@ header + .hero_row > .row {
         &.collaborate--promo_module_d .module_image {
             background: url('../static/images/collaborate/collaborate-promo_module_d.jpg');
             background-size: cover;
+        }
+        .module_text {
+          padding-left: 15px;
+          padding-right: 15px;
         }
     }
 }
@@ -1025,7 +1038,7 @@ div.video_module {
 
 .callout {
   overflow: hidden;
-  padding: 2.5;
+  padding: 2.5em;
   background-color: $infocus_light_blue;
   border: 0px;
   border-radius: 3px;
@@ -1242,7 +1255,7 @@ div.video_module {
         background-image: url('/resources/static/images/teach/InFocus-Lifestyle-JTouch-K12-MuscleDiagram-300dpi-CMYK.jpg');
     }
     .text_module_a a.text_module_link {
-        font-weight: 700;
+        font-family: 'GoodPro-WideMedium';
     }
     div.feature_module_a.orange {
         background: url('/resources/static/images/teach/distance-learning-fire.jpg') right -45px top no-repeat;
