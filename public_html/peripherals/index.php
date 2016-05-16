@@ -27,7 +27,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     <br><br>
 					Peripherals
 				</h2>
-				<p class="lead_text--paragraph">Ver o eos et accusamus et iusto odio dignissimos ducimus qui blanditis praesent voluptatum. Dolores et quas molestais excepturi sint occaecati cupiditate</p>
+				<p class="lead_text--paragraph">Audio and video quality can be the difference between a productive conference call and frustration. Our camera, speakerphone, and other peripherals can help.</p>
 			</div>
 			<div class="small-3 color_stripe_column">
 				<div class="dark_blue color_stripe"></div>
