@@ -141,14 +141,29 @@ header + .hero_row > .row {
       }
   }
   &.hero-row--homepage {
-    background: url('../static/images/homepage/homepage-hero-a--wb-bertlitz.jpg') right -160px top no-repeat;
-    border-left: 18px solid $infocus_blue;
-    & .lead_text>:first-child, .lead_text--paragraph {
-      @media screen and (min-width: 136em) {
-          padding-left: 100px;
-          padding-right: 100px;
-          max-width: none;
-      }
+    border-left: 7px solid $infocus_blue;
+    border-right-width: 10px;
+    @media screen and (min-width: 40em) {
+        border-left-width: 10px;
+        border-right-width: 18px;
+    }
+    @media screen and (min-width: 62em) {
+        border-left-width: 18px;
+        border-right-width: 30px;
+    }
+    .hero_image {
+        img {
+            left: -30%;
+            height: 106%;
+            @media screen and (min-width: 90em) {
+                left: auto;
+                right: 0;
+            }
+            @media screen and (min-width: 112em) {
+                right: 0%;
+                height: 110%;
+            }
+        }
     }
   }
   &.hero-row--video_row {
@@ -171,7 +186,6 @@ header + .hero_row > .row {
       position: absolute;
       right: -45px;
       height: 100%;
-      max-width: 985px;
       width: 63%;
       overflow: hidden;
       z-index: -1;
@@ -188,6 +202,10 @@ header + .hero_row > .row {
             @media screen and (min-width: 90em) {
                 left: auto;
                 right: 0;
+            }
+            @media screen and (min-width: 99em) {
+                right: 0%;
+                height: 120%;
             }
         }
     }
@@ -221,10 +239,6 @@ header + .hero_row > .row {
         img {
             left: -5%;
             height: 100%;
-            @media screen and (min-width: 120em) {
-                left: auto;
-                right: -28%;
-            }
         }
     }
     .lead_text>:first-child {
@@ -262,6 +276,9 @@ header + .hero_row > .row {
                 left: auto;
                 right: -28%;
             }
+            @media screen and (min-width: 99em) {
+                height: 112%;
+            }
         }
     }
     .lead_text>:first-child {
@@ -298,6 +315,10 @@ header + .hero_row > .row {
                 left: auto;
                 right: -21%;
             }
+            @media screen and (min-width: 99em) {
+                right: -14%;
+                height: 113%;
+            }
         }
     }
     .lead_text>:first-child {
@@ -333,6 +354,9 @@ header + .hero_row > .row {
             @media screen and (min-width: 90em) {
                 left: auto;
                 right: 0;
+            }
+            @media screen and (min-width: 99em) {
+                height: 110%;
             }
         }
     }
