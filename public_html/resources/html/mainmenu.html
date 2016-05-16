@@ -2,7 +2,7 @@
 $headclass = '';
 $uri = $_SERVER['REQUEST_URI'];
 $catregx = "/\/(accessories|hd\-projector\-lineup)\/?/i";
-$subcatregx = "/\/(products|displays|peripherals|accessories)\/.*/i";
+$subcatregx = "/\/(products|displays|projectors|peripherals|accessories)\/.+/i";
 if(preg_match($catregx, $uri) || preg_match($subcatregx, $uri)) {
 	$headclass = 'blue';
 }
@@ -103,6 +103,10 @@ $(function () {
 		e.stopPropagation();
 		responsiveColorbox(this);
 	});
+	$('a[href="/resources/forms/getaquote"]').click(function (e) {
+		e.preventDefault();
+		responsiveColorbox(this);
+	});
 	$('.mobile-menu').click(function (e) {
 		e.stopPropagation();
 		$(this).closest('header').toggleClass('open');
@@ -172,7 +176,7 @@ $(function () {
 						<div class="menu-grid">
 							<ul>
 								<li>
-									<img src="/resources/static/images/elements/header-menu-icon--touchscreens.jpg">
+									<a href="/displays/"><img src="/resources/static/images/elements/header-menu-icon--touchscreens.jpg"></a>
 									<h3><a href="/displays/">Touchscreens</a></h3>
 									<a href="/displays/MONDOPAD-SERIES">Mondopad</a>
 									<a href="/displays/BIGTOUCH-SERIES">Big Touch</a>
@@ -180,7 +184,7 @@ $(function () {
 									<a href="/displays/Q-Tablet-Series">QTablet</a>
 								</li>
 								<li>
-									<img src="/resources/static/images/elements/header-menu-icon--projectors.jpg">
+									<a href="/projectors/"><img src="/resources/static/images/elements/header-menu-icon--projectors.jpg"></a>
 									<h3><a href="/projectors/">Projectors</a></h3>
 									<a href="/hd-projector-lineup">HD Projectors</a>
 									<a href="/projectors/ultra-portable">Ultra Portable</a>
@@ -191,7 +195,7 @@ $(function () {
 									<a href="/projectors/interactive">Interactive</a>
 								</li>
 								<li>
-									<img src="/resources/static/images/elements/header-menu-icon--video_conferencing.jpg">
+									<a href="/video-conferencing/"><img src="/resources/static/images/elements/header-menu-icon--video_conferencing.jpg"></a>
 									<h3><a href="/video-conferencing/">Video<br> Conferencing</a></h3>
 									<a href="/displays/MONDOPAD-SERIES">Mondopad</a>
 									<a href="/conx-wall-exec">NEW! ConX Wall &amp; ConX<br> Exec</a>
@@ -200,18 +204,18 @@ $(function () {
 									<a href="/peripherals/121-Series">121 Video Calling</a>
 								</li>
 								<li>
-									<img src="/resources/static/images/elements/header-menu-icon--display_walls.jpg">
+									<a href="/display-walls/"><img src="/resources/static/images/elements/header-menu-icon--display_walls.jpg"></a>
 									<h3><a href="/display-walls/">Display Walls</a></h3>
-									<a href="#">Canvas</a>
-									<a href="#">Canvas CRS-4K</a>
-									<a href="#">Canvas Touch</a>
-									<a href="#">Fusion Catalyst</a>
-									<a href="#">PixelNet</a>
-									<a href="#">StreamCenter</a>
-									<a href="#">VizionPlus II</a>
+									<a href="/display-walls/canvas">Canvas</a>
+									<a href="/display-walls/canvas-crs4k">Canvas CRS-4K</a>
+									<a href="/display-walls/canvas-touch">Canvas Touch</a>
+									<a href="/display-walls/fusion-catalyst">Fusion Catalyst</a>
+									<a href="/display-walls/pixelnet">PixelNet</a>
+									<a href="/display-walls/streamcenter">StreamCenter</a>
+									<a href="/display-walls/vizionplus-ii">VizionPlus II</a>
 								</li>
 								<li>
-									<img src="/resources/static/images/elements/header-menu-icon--peripherals.jpg">
+									<a href="/peripherals/"><img src="/resources/static/images/elements/header-menu-icon--peripherals.jpg"></a>
 									<h3><a href="/peripherals/">Peripherals</a></h3>
 									<a href="/peripherals/INF-SPTZ-2">RealCam PTZ Camera</a>
 									<a href="/peripherals/INA-TH150">Thunder Speakerphone</a>

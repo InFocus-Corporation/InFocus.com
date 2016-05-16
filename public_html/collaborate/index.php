@@ -149,7 +149,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- END FEATURE MODULE A -->
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">
-        <div class="small-12 large-6 columns promo_module_d collaborate--promo_module_d">
+        <div class="small-12 large-6 columns promo_module_c collaborate--promo_module_d">
             <div class="module_image">
 
             </div>

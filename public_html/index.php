@@ -32,9 +32,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	</div>
 	<div class="row">
 		<div class="small-12 medium-10 medium-offset-1 columns text-center">
-			<h2 class="lead_text--secondary_headline text-center">Your work is important</h2>
+			<h2 class="lead_text--secondary_headline text-center"></h2>
 			<br/>
-			<h5>Whether you’re a schoolteacher or a CEO, a firefighter or a professor, people depend on you every day. At InFocus, we provide the tools you need to achieve your goals. Our innovative display, projection, and conferencing solutions open up new possibilities for sharing information and working together efficiently and effectively.</h5>
+			<h5>Whether you’re a schoolteacher or a CEO, a firefighter or someone who puts out fires every day at the office, people depend on you. We respect that and know the work you do is important.</h5>
+			<br/>
+			<h5>InFocus provides the tools you need for success. Our display, projection, and conferencing solutions improve communication and collaboration so you can make an even bigger impact every single day.</h5>
 		</div>
 	</div>
 	<div class="row">
@@ -53,7 +55,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<h5>Our visualization solutions help emergency, utility, military, and other critical sectors track their operations.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
-							<span>slide cta goes here</span>
+							<span><a class="cta" href="/visualize/">Solutions for visualization</a> / <a class="cta" href="/display-walls/">Our display walls</a></span>
 						</div>
 					</div>
 				</div>
@@ -70,7 +72,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<h5>Is it possible to share informations with students in a better, more engaging and powerful way? We think so.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
-							<span>slide cta goes here</span>
+								<span><a class="cta" href="/teach/">Solutions to teach & train</a> / <a class="cta" href="/teach/#inspire">Our Inspire education program</a></span>
 						</div>
 					</div>
 				</div>
@@ -87,7 +89,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<h5>From the cubicle to the command center, our technologies can improve the way people at all levels of your company work.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
-							<span>slide cta goes here</span>
+							<span><a class="cta" href="/present/">Solutions for presentations</a> / <a class="cta" href="/collaborate/">Solutions for collaboration</a></span>
 						</div>
 					</div>
 				</div>
