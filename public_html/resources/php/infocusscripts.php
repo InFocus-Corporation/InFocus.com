@@ -38,30 +38,28 @@ $emeaCountries=array("AF", "AL", "DZ", "AD", "AO", "AQ", "AM", "AT", "AZ", "BH",
 $apacCountries=array("AS", "AI", "AG", "AR", "AW", "MO", "TW", "AU", "BD", "BT", "BN", "KH", "FJ", "IN", "JP", "KP", "KR", "LA", "FM", "NP", "NZ", "PK", "PW", "PN", "SG", "TH", "TP", "TK", "VN","CN");
 $stateList = array('AB' => 'Alberta ','AK' => 'ALASKA','AL' => 'ALABAMA','AR' => 'ARKANSAS','AS' => 'AMERICAN SAMOA','AZ' => 'ARIZONA','BC' => 'British Columbia','CA' => 'CALIFORNIA','CO' => 'COLORADO','CT' => 'CONNECTICUT','DC' => 'WASHINGTON, DC','DE' => 'DELAWARE','FL' => 'FLORIDA','FM' => 'FEDERATED STATES OF MICRONESIA','GA' => 'GEORGIA','GU' => 'GUAM','HI' => 'HAWAII','IA' => 'IOWA','ID' => 'IDAHO','IL' => 'ILLINOIS','IN' => 'INDIANA','KS' => 'KANSAS','KY' => 'KENTUCKY','LA' => 'LOUISIANA','MA' => 'MASSACHUSETTS','MB' => 'Manitoba ','MD' => 'MARYLAND','ME' => 'MAINE','MH' => 'MARSHALL ISLANDS','MI' => 'MICHIGAN','MN' => 'MINNESOTA','MO' => 'MISSOURI','MP' => 'NORTHERN MARIANA ISLANDS','MS' => 'MISSISSIPPI','MT' => 'MONTANA','NB' => 'New Brunswick','NC' => 'NORTH CAROLINA','ND' => 'NORTH DAKOTA','NE' => 'NEBRASKA','NF' => 'Newfoundland ','NH' => 'NEW HAMPSHIRE','NJ' => 'NEW JERSEY','NM' => 'NEW MEXICO','NS' => 'Nova Scotia','NT' => 'Northwest Territories','NV' => 'NEVADA','NY' => 'NEW YORK','OH' => 'OHIO','OK' => 'OKLAHOMA','ON' => 'Ontario ','OR' => 'OREGON','PA' => 'PENNSYLVANIA','PE' => 'Prince Edward Island','PR' => 'PUERTO RICO','PW' => 'PALAU','QC' => 'Quebec','RI' => 'RHODE ISLAND','SC' => 'SOUTH CAROLINA','SD' => 'SOUTH DAKOTA','SK' => 'Saskatchewan','TN' => 'TENNESSEE','TX' => 'TEXAS','UT' => 'UTAH','VA' => 'VIRGINIA','VI' => 'VIRGIN ISLANDS','VT' => 'VERMONT','WA' => 'WASHINGTON','WI' => 'WISCONSIN','WV' => 'WEST VIRGINIA','WY' => 'WYOMING','YT' => 'Yukon ');
 
-if(basename($_SERVER['PHP_SELF']) == "product.php" OR basename($_SERVER['PHP_SELF']) == "family.php" OR basename($_SERVER['PHP_SELF']) == "unknown.php"){
+if(basename($_SERVER['PHP_SELF']) == "product.php" OR basename($_SERVER['PHP_SELF']) == "family.php" OR basename($_SERVER['PHP_SELF']) == "unknown.php") {
     $pn=strtoupper($_GET['series']);
     if(empty($pn)){$pn=strtoupper($_GET['pn']);}
     if(empty($pn)){$pn=strtoupper($_SERVER['QUERY_STRING']);}
 
-require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/OOPproducts.php");
+    require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/OOPproducts.php");
     $product = new IFCSeries($pn);
     $overview = $product->overview();
-if($product->isSeries){
-$list = $product->sList();
-$models = $product->models();
-}
-else{
-$thumbnails = $product->thumbnails();
-$reviews = $product->reviews();
-$priceBuyNow = $product->priceBuyNow($product->pn);
-}
+    if($product->isSeries) {
+        $list = $product->sList();
+        $models = $product->models();
+    } else {
+        $thumbnails = $product->thumbnails();
+        $reviews = $product->reviews();
+        $priceBuyNow = $product->priceBuyNow($product->pn);
+    }
     $specs = $product->specs();
     $videos = $product->videos();
     $accessories = $product->accessories();
     $worksWith = $product->worksWith();
     $downloads = $product->downloads();
- }
-elseif(basename($_SERVER['PHP_SELF']) == "custompage.php"){
+ } elseif(basename($_SERVER['PHP_SELF']) == "custompage.php") {
     if(empty($_GET['pagename'])){$_GET['pagename'] = $_SERVER['QUERY_STRING'];}
     $pn = str_replace("_","-",$pn);
     if(strpos($pn,"$")>0){$pn = substr($pn,0,strpos($pn,"$")-1);}

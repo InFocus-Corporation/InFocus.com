@@ -2237,6 +2237,8 @@ margin-left:15px;
     font-size: 1rem;
     font-family: 'GoodPro';
     padding: 0.25rem 1rem;
+    line-height: 1.2em;
+    color: #444;
 }
 #specFrame table thead tr th {
 	position: relative;
