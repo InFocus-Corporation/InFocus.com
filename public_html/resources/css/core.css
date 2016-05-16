@@ -965,6 +965,9 @@ table#table-comparison .btn.buy-now  {
 }
 .infocusTable td[data-label='Price US'] { min-width: 128px; }
 table#table-comparison td:first-child {  text-align: right; }
+
+
+
 /* #Links
 ================================================== */
 	a, a:link, a:visited { color:#006ba6;text-decoration: none; outline: 0; }
@@ -2165,9 +2168,113 @@ margin-left:15px;
 	border-top:1px solid #006ba6;
 	border-bottom:1px solid #006ba6;
 }
+
+
+
 #specs #specFrame {
   width: 100% !important;
 }
+
+#specs > div.ui-widget {
+    font-family: 'GoodPro-Wide';
+    font-size: 2.2rem;
+	font-weight: 100;
+    line-height: 1.6em;
+    padding-bottom: 10px !important;
+    margin-bottom: 0.2em;
+    text-align: left;
+}
+#specs .custom-combobox {
+	display: inline-block;
+	background-color: #fff;
+	border: 1px solid #b7b7b7;
+	border-radius: 3px;
+	overflow: hidden;
+    height: 35px;
+    font-size: 1rem;
+    vertical-align: top;
+}
+#specs .custom-combobox input.custom-combobox-input {
+    vertical-align: top;
+	background: transparent;
+	margin-bottom: 0;
+	border: none;
+	padding: 0.4rem 1rem;
+	font-family: 'GoodPro-Wide';
+	font-weight: normal;
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+}
+#specs .custom-combobox a.custom-combobox-toggle,
+#specs .custom-combobox a.custom-combobox-toggle.ui-state-hover {
+    top: 0px;
+	right: -3px;
+	width: 56px;
+	border: none;
+	margin-bottom: 0;
+	background-image: url('/resources/static/images/form/select.png');
+	background-color: transparent;
+	border-radius: 0;
+}
+#specs .custom-combobox a.custom-combobox-toggle .ui-icon-triangle-1-s {
+	display: none;
+}
+#specs input.formbutton {
+	cursor: pointer;
+	display: inline-block;
+	border: 2px solid #006fba;
+	border-radius: 3px;
+	background: #fff;
+	color: #006fba;
+	font-size: 24px;
+	font-family: 'GoodPro-Wide';
+	font-weight: bold;
+	padding: 2px 24px;
+    vertical-align: top;
+}
+
+#specFrame table tbody tr td {
+    font-size: 1rem;
+    font-family: 'GoodPro';
+    padding: 0.25rem 1rem;
+    line-height: 1.2em;
+    color: #444;
+}
+#specFrame table thead tr th {
+	position: relative;
+}
+#specFrame table thead tr th:not(:first-child) img {
+	position: relative;
+	opacity: 0.001;
+	cursor: pointer;
+	z-index:99;
+}
+#specFrame table thead tr th:not(:first-child):before,
+#specFrame table thead tr th:not(:first-child):after {
+	cursor: pointer;
+	content: ' ';
+	position: absolute;
+	top: 24px;
+	right: 20px;
+	display: block;
+	width: 20px;
+	height: 0px;
+	border-top: 2px solid #fff;
+}
+#specFrame table thead tr th:not(:first-child):before {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+#specFrame table thead tr th:not(:first-child):after {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+}
+
+
 
 .blue_btn {
 background: #1BA1E2;
