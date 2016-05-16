@@ -53,7 +53,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<h5>Our visualization solutions help emergency, utility, military, and other critical sectors track their operations.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
-							<span>slide cta goes here</span>
+							<span><a class="cta" href="/visualize/">Solutions for visualization</a> / <a class="cta" href="/display-walls/">Our display walls</a></span>
 						</div>
 					</div>
 				</div>
@@ -70,7 +70,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<h5>Is it possible to share informations with students in a better, more engaging and powerful way? We think so.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
-							<span>slide cta goes here</span>
+								<span><a class="cta" href="/teach/">Solutions to teach & train</a> / <a class="cta" href="/teach/#inspire">Our Inspire education program</a></span>
 						</div>
 					</div>
 				</div>
@@ -87,7 +87,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<h5>From the cubicle to the command center, our technologies can improve the way people at all levels of your company work.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
-							<span>slide cta goes here</span>
+							<span><a class="cta" href="/present/">Solutions for presentations</a> / <a class="cta" href="/collaborate/">Solutions for collaboration</a></span>
 						</div>
 					</div>
 				</div>
