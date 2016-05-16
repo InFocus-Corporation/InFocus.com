@@ -99,6 +99,13 @@ header + .hero_row > .row { margin-top: 0px;}
   &.hero-row--homepage {
     background: url('../static/images/homepage/homepage-hero-a--wb-bertlitz.jpg') right -160px top no-repeat;
     border-left: 18px solid $infocus_blue;
+    & .lead_text>:first-child, .lead_text--paragraph {
+      @media screen and (min-width: 136em) {
+          padding-left: 100px;
+          padding-right: 100px;
+          max-width: none;
+      }
+    }
   }
   &.hero-row--video_row {
     height: 720px;
