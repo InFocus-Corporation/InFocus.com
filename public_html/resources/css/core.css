@@ -19,9 +19,19 @@ Primary: #006699, #1D5773, #00557F, #1BA1E2, #5CA7CC, #E1EEF4
   src:  url("../fonts/GoodPro-Light.otf") format("opentype");
 }
 @font-face {
+  font-family: 'GoodPro-WideLight';
+  src:  url("../fonts/GoodPro-WideLight.otf") format("opentype");
+  font-weight: normal;
+}
+@font-face {
   font-family: 'GoodPro';
   src:  url("../fonts/GoodPro-Medium.otf") format("opentype");
   font-weight: bold;
+}
+@font-face {
+  font-family: 'GoodPro-WideMedium';
+  src: url("../fonts/GoodPro-WideMedium.otf") format("opentype");
+  font-weight: normal;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
