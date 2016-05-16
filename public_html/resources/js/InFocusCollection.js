@@ -276,16 +276,17 @@ function getProductList(where,elemId,insert){
 }
 
 function updateSpecs(modelList, phpFile){
-var n = document.getElementById('modlist').value.indexOf(modelList);
-if(n>0){
-<!--Trans-Marker-->
-// alert("Model already present in the table");
-return;
-}
+  var n = document.getElementById('modlist').value.indexOf(modelList);
 
-document.getElementById('modlist').value = document.getElementById('modlist').value +  modelList;
-modelList = document.getElementById('modlist').value;
-	var tableWidth = 250 + (modelList.split(",").length*215)
+  if(n>0){
+    <!--Trans-Marker-->
+    // alert("Model already present in the table");
+    return;
+  }
+
+  document.getElementById('modlist').value = document.getElementById('modlist').value +  modelList;
+  modelList = document.getElementById('modlist').value;
+  var tableWidth = 250 + (modelList.split(",").length*215);
 	jQuery.post("/resources/php/" + phpFile,
 			{pn: modelList},
 			function(response){
@@ -294,9 +295,9 @@ modelList = document.getElementById('modlist').value;
 }
 
 function removeSpecs(removeModel, phpFile){
-var modelList = document.getElementById('modlist').value;
-modelList = modelList.replace(removeModel,"");
-document.getElementById('modlist').value = modelList;
+  var modelList = document.getElementById('modlist').value;
+  modelList = modelList.replace(removeModel,"");
+  document.getElementById('modlist').value = modelList;
 	var tableWidth = 200 + (modelList.split(",").length*165)
 	jQuery.post("/resources/php/" + phpFile,
 			{pn: modelList},
@@ -306,8 +307,8 @@ document.getElementById('modlist').value = modelList;
 }
 
 $(function() {
-$( "#tabs-min" ).tabs();
-if($(".flexnav").length>0){$(".flexnav").flexNav();}
+  $( "#tabs-min" ).tabs();
+  if($(".flexnav").length>0){$(".flexnav").flexNav();}
 });
 
 
