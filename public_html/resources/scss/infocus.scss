@@ -141,8 +141,17 @@ header + .hero_row > .row {
       }
   }
   &.hero-row--homepage {
-    background: url('../static/images/homepage/homepage-hero-a--wb-bertlitz.jpg') right -160px top no-repeat;
     border-left: 18px solid $infocus_blue;
+    .hero_image {
+        img {
+            left: -30%;
+            height: 106%;
+            @media screen and (min-width: 90em) {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
   }
   &.hero-row--video_row {
     height: 720px;
