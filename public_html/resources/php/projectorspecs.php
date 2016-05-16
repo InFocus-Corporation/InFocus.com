@@ -3,70 +3,73 @@
 $localdir = dirname(__FILE__);
 $homedir = $_SERVER['DOCUMENT_ROOT']; 
 require_once($homedir . "/resources/php/imageprocess.php"); 
-require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
+require($homedir . "/resources/php/connections.php");
+
 mysqli_set_charset($connection, "utf8");
 ini_set('default_charset', 'utf-8');
 
-if(substr($_SERVER['SERVER_NAME'], -2)=="de"){
-$lang = "de";
-}
-else{
-$lang = "en";
+if(substr($_SERVER['SERVER_NAME'], -2)=="de") {
+	$lang = "de";
+} else {
+	$lang = "en";
 } 
 
 
-$sql = "SELECT keygroup, transtext FROM (SELECT transkey as keygroup FROM InFocus.labeltranslation GROUP BY transkey) as KeyList LEFT JOIN (SELECT transkey, transtext FROM InFocus.labeltranslation where labeltranslation.lang = '" . $lang . "') as labeltrans ON keygroup = transkey;";
+$sql = "SELECT keygroup, transtext FROM (
+			SELECT transkey as keygroup FROM InFocus.labeltranslation GROUP BY transkey) as KeyList 
+		LEFT JOIN (
+			SELECT transkey, transtext FROM InFocus.labeltranslation where labeltranslation.lang = '" . $lang . "') as labeltrans ON keygroup = transkey;";
 $results = mysqli_query($connection,$sql);
 
 while($row = mysqli_fetch_array($results)){
-
-if($row[1] == null){$translate[$row[0]] = $row[0];}
-else{$translate[$row[0]] = $row[1];}
-
+	if($row[1] == null){
+		$translate[$row[0]] = $row[0];
+	} else{
+		$translate[$row[0]] = $row[1];
+	}
 }
-$homedir=$_SERVER['DOCUMENT_ROOT']; 
-				$partnumbers = str_replace(" ","",$_REQUEST['pn']);
-				$partnumbers = explode(",",$partnumbers);
-				$colnum = count($partnumbers);
-				//echo '<div class="rounded" >';
-				echo '<table class="square" style="width:100%"><thead>';
-				$partnumbers = implode("' OR partnumber LIKE '",$partnumbers);
-			
-				
-				echo PrintVerticalTable("projectors",array("ALL"),"SELECT 
-				partnumber AS ' ',
-				partnumber AS '  ',
-				nativeaspect AS 'Native Aspect Ratio', 
-				Technology, 
-				CONCAT(`resolutionname`,'(',resolution,')') as 'Resolution', 
-				CONCAT(`lumenslow`,'/',lumenshigh) AS 'Lumens (Eco/High)', 
-				Contrast, 
-				3d AS '3D', 
-				closecap AS 'Closed Captioning', 
-				Speakers, 
-				CONCAT(`Noiselow`,'/',NoiseHigh) AS 'Audible Noise (Eco/High, dBA)', 
-				Keystone, 
-				lamppn AS `Lamp`,
-				CONCAT(`lamphigh`,'/',lamplow) AS `Lamp Hours (Eco/High)`, 
-				Connections, 
-				offset AS 'Image Offset', 
-				otherspecs AS 'Lens Shift: Horz (min/max)',
-				otherspecs AS 'Lens Shift: Vert (min/max)',
-				CONCAT(`throwh`,'~',throwl) AS `Throw Ratio`, 
-				CONCAT(`weight`,'/',ROUND(`weight`/2.2,1)) as 'Weight(lbs/kg)',
-				`dimensions` as 'Product Dimensions HxWxD',
-				CONCAT(`shipweight`,'/',ROUND(`shipweight`/2.2,1)) as 'Shipping Weight(lbs/kg)',
-				`shipdimensions` as 'Shipping Dimensions HxWxD',
-				otherspecs AS 'Power consumption (Max, Watts)',
-				prodwarranty AS 'Product Warranty',
-				lampwarranty AS 'Lamp Warranty',
-				accwarranty AS 'Accessory Warranty',
-				otherspecs AS 'Approvals'
-				FROM (SELECT * from InFocus.projectors WHERE lang = '" . $lang . "' AND (partnumber LIKE '" . $partnumbers ."') UNION ALL 
-SELECT * from InFocus.projectors WHERE partnumber NOT IN (
-SELECT partnumber FROM InFocus.projectors WHERE lang = '" . $lang . "' AND (partnumber LIKE '" . $partnumbers ."')) 
-AND lang = 'en' 
-AND (partnumber LIKE '" . $partnumbers ."')) as selectprojectors","false");
+
+$partnumbers = str_replace(" ","",$_REQUEST['pn']);
+$partnumbers = explode(",",$partnumbers);
+$colnum = count($partnumbers);
+//echo '<div class="rounded" >';
+echo '<table class="square" style="width:100%"><thead>';
+
+$partnumbers = "('".strtoupper(join("','", $partnumbers))."')";
+
+$sql = "SELECT 
+	partnumber AS ' ',
+	partnumber AS '  ',
+	nativeaspect AS 'Native Aspect Ratio', 
+	Technology, 
+	CONCAT(`resolutionname`,'(',resolution,')') as 'Resolution', 
+	CONCAT(`lumenslow`,'/',lumenshigh) AS 'Lumens (Eco/High)', 
+	Contrast, 
+	3d AS '3D', 
+	closecap AS 'Closed Captioning', 
+	Speakers, 
+	CONCAT(`Noiselow`,'/',NoiseHigh) AS 'Audible Noise (Eco/High, dBA)', 
+	Keystone, 
+	lamppn AS `Lamp`,
+	CONCAT(`lamphigh`,'/',lamplow) AS `Lamp Hours (Eco/High)`, 
+	Connections, 
+	offset AS 'Image Offset', 
+	otherspecs AS 'Lens Shift: Horz (min/max)',
+	otherspecs AS 'Lens Shift: Vert (min/max)',
+	CONCAT(`throwh`,'~',throwl) AS `Throw Ratio`, 
+	CONCAT(`weight`,'/',ROUND(`weight`/2.2,1)) as 'Weight(lbs/kg)',
+	`dimensions` as 'Product Dimensions HxWxD',
+	CONCAT(`shipweight`,'/',ROUND(`shipweight`/2.2,1)) as 'Shipping Weight(lbs/kg)',
+	`shipdimensions` as 'Shipping Dimensions HxWxD',
+	otherspecs AS 'Power consumption (Max, Watts)',
+	prodwarranty AS 'Product Warranty',
+	lampwarranty AS 'Lamp Warranty',
+	accwarranty AS 'Accessory Warranty',
+	otherspecs AS 'Approvals'
+FROM InFocus.projectors WHERE lang = '".$lang."' AND partnumber IN $partnumbers
+ORDER BY partnumber";
+
+echo PrintVerticalTable("projectors", array("ALL"), $sql,"false");
 
 
 function transpose($array) {
@@ -86,8 +89,7 @@ return $transposed_array;
 }
 }
 
-function PrintVerticalTable($tname, $colnames, $SQLst = 'false', $IncHeader = 'true', $SelectDB = 'InFocus')
-{
+function PrintVerticalTable($tname, $colnames, $SQLst = 'false', $IncHeader = 'true', $SelectDB = 'InFocus') {
 /* connect to the db */
 
 global $homedir;
