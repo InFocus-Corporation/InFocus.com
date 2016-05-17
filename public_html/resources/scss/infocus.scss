@@ -494,7 +494,7 @@ header + .hero_row > .row {
           }
           @media screen and (min-width: 40em) {
               font-size: 2.3rem;
-          }      
+          }
           @media screen and (min-width: 52em) {
               font-size: 3rem;
           }
@@ -587,7 +587,7 @@ header + .hero_row > .row {
 
 .product_module {
     position: relative;
-    
+
     .color_stripe_column {
         min-height: 0;
         height: 100%;
@@ -778,6 +778,7 @@ header + .hero_row > .row {
     h1.lead_text--headline, h2.lead_text--headline{
       font-size: 60px;
       color: $dark_gray;
+      font-family: 'GoodPro-WideLight';
       font-weight: normal;
     }
     h2.lead_text--headline { font-size: 40px; }
@@ -785,7 +786,7 @@ header + .hero_row > .row {
         font-size: 20px;
     }
     .text_module_link {
-        font-family: 'GoodPro-WideMedium';
+        font-family: 'GoodPro-WideBook';
         font-size: 20px;
         -webkit-font-feature-settings: "liga" 0;
         color: $infocus_blue;
@@ -808,7 +809,7 @@ header + .hero_row > .row {
         font-size: 20px;
     }
     .text_module_link {
-        font-family: 'GoodPro-WideMedium';
+        font-family: 'GoodPro-WideBook';
         font-size: 20px;
         -webkit-font-feature-settings: "liga" 0;
         color: $infocus_blue;
