@@ -42,12 +42,12 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	</div>
 	<div class="row">
 		<div class="small-12 columns">
-			<div class="vertical_accordian">
+			<div class="vertical_accordion">
 				<a class="anchor" id="public"></a>
-				<div class="vertical_accordian--slide" id="slide3">
-					<div class="vertical_accordian--slide--background">
+				<div class="vertical_accordion--slide" id="slide3">
+					<div class="vertical_accordion--slide--background">
 					</div>
-					<div class="vertical_accordian--slide--content">
+					<div class="vertical_accordion--slide--content">
 						<div class="module--tag">
 							<span>For Public Sector</span>
 						</div>
@@ -56,15 +56,16 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<h5>Our visualization solutions help emergency, utility, military, and other critical sectors track their operations.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
-							<span><a class="cta" href="/visualize/">Solutions for visualization</a> / <a class="cta" href="/display-walls/">Our display walls</a></span>
+							<span><a class="cta" href="/visualize/">Solutions for visualization</a></span><br/>
+							<span><a class="cta" href="/display-walls/">Our display walls</a></span>
 						</div>
 					</div>
 				</div>
 				<a class="anchor" id="education"></a>
-				<div class="vertical_accordian--slide" id="slide2">
-					<div class="vertical_accordian--slide--background">
+				<div class="vertical_accordion--slide" id="slide2">
+					<div class="vertical_accordion--slide--background">
 					</div>
-					<div class="vertical_accordian--slide--content">
+					<div class="vertical_accordion--slide--content">
 						<div class="module--tag">
 							<span>for education</span>
 						</div>
@@ -73,15 +74,16 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<h5>Is it possible to share informations with students in a better, more engaging and powerful way? We think so.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
-								<span><a class="cta" href="/teach/">Solutions to teach & train</a> / <a class="cta" href="/teach/#inspire">Our Inspire education program</a></span>
+								<span><a class="cta" href="/teach/">Solutions to teach & train</a></span><br/>
+								<span><a class="cta" href="/teach/#inspire">Our Inspire education program</a></span>
 						</div>
 					</div>
 				</div>
 				<a class="anchor" id="business"></a>
-				<div class="vertical_accordian--slide" id="slide1">
-					<div class="vertical_accordian--slide--background">
+				<div class="vertical_accordion--slide" id="slide1">
+					<div class="vertical_accordion--slide--background">
 					</div>
-					<div class="vertical_accordian--slide--content">
+					<div class="vertical_accordion--slide--content">
 						<div class="module--tag">
 							<span>for business</span>
 						</div>
@@ -90,7 +92,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<h5>From the cubicle to the command center, our technologies can improve the way people at all levels of your company work.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
-							<span><a class="cta" href="/present/">Solutions for presentations</a> / <a class="cta" href="/collaborate/">Solutions for collaboration</a></span>
+							<span><a class="cta" href="/present/">Solutions for presentations</a></span><br/>
+							<span><a class="cta" href="/collaborate/">Solutions for collaboration</a></span>
 						</div>
 					</div>
 				</div>

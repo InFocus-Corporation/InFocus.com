@@ -18,23 +18,24 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 <body class="" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
 	  <!-- HEADER MODULE C -->
-		<div class="hero_row hero-row--header_module_collaborate">
-      <div class="color_stripe_column">
-          <div class="dark_blue color_stripe"></div>
-          <div class="white color_stripe hide-for-small-only"></div>
-      </div>
-			<div class="row">
-				<div class="small-10 medium-7 medium-offset-2 large-6 large-offset-4 columns lead_text">
-          <div class="module--tag">
-              <span>Connect & Collaborate</span>
-          </div>
-					<h2 class="lead_text--secondary_headline">
-						Get it done together.
-					</h2>
-					<p class="lead_text--paragraph">Great things can happen when everyone is informed and able to contribute. InFocus improves your ability to work as a team.</p>
-				</div>
+	<div class="hero_row hero-row--header_module_c">
+        <div class="row hero_inner_c">
+            <div class="hero_image connect"><img src="/resources/static/images/collaborate/collaborate-hero-a.jpg" /></div>
+            <div class="color_stripe_column">
+                <div class="dark_blue color_stripe"></div>
+                <div class="white color_stripe"></div>
+            </div>
+			<div class="small-6 small-offset-6 columns lead_text">
+                <div class="module--tag">
+                  <span>Connect & Collaborate</span>
+                </div>
+				<h2 class="lead_text--secondary_headline">
+					Get it done together.
+				</h2>
+				<p class="lead_text--paragraph">Great things can happen when everyone is informed and able to contribute. InFocus improves your ability to work as a team.</p>
 			</div>
-		</div>
+        </div>
+	</div>
     <!-- END HEADER MODULE C -->
     <!-- MULTICOLUMN TEXT MODULE -->
     <div class="row multicolumn_text_module">
@@ -133,19 +134,19 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
     <!-- END VIDEO MODULE -->
     <!-- FEATURE MODULE A -->
-		<div class="row feature_module_a feature_module_a--collaborate">
-      <div class="small-12 medium-6 columns feature_text">
-					<h2 class="lead_text--secondary_headline">View & interact with all your critical information</h2>
-					<p class="lead_text--paragraph">Display all of your data sources and HD video conferencing feeds on up to 96 screens – customized for your board room, CxO office, or training center.</p>
-          <div class="feature_links">
-              <a href="/projectors/IN2120a-Series" class="feature_link">View ConX Wall</a>
-          </div>
-			</div>
-			<div class="small-12 medium-6 columns color_stripe_column">
-				<div class="white color_stripe"></div>
-	      <div class="light_blue color_stripe float-right"></div>
-			</div>
+	<div class="row feature_module_a feature_module_a--collaborate">
+        <div class="small-6 columns feature_text">
+			<h2 class="lead_text--secondary_headline">View & interact with all your critical information</h2>
+			<p class="lead_text--paragraph">Display all of your data sources and HD video conferencing feeds on up to 96 screens – customized for your board room, CxO office, or training center.</p>
+            <div class="feature_links">
+                <a href="/projectors/IN2120a-Series" class="feature_link">View ConX Wall</a>
+            </div>
 		</div>
+		<div class="small-6 columns color_stripe_column">
+			<div class="white color_stripe"></div>
+            <div class="light_blue color_stripe float-right"></div>
+		</div>
+	</div>
     <!-- END FEATURE MODULE A -->
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">

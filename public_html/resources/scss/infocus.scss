@@ -391,13 +391,55 @@ header + .hero_row > .row {
     background-origin: border-box;
   }
   &.hero-row--header_module_c {
-    background: url('../static/images/present/present-hero.jpg') left top no-repeat;
     background-size: contain;
-    background-color: $dark_gray;
     border-left: none;
-    height: 600px;
+    height: 0;
+    padding-bottom: 60%;
+    @media screen and (min-width: 64em) {
+      padding-bottom: 0;
+      height: 600px;
+    }
+    .hero_inner_c {
+      position: absolute;
+      width: 100%;
+      overflow: hidden;
+      .hero_image {
+        right: auto;
+        height: 100%;
+        width: 60%;
+        @media screen and (min-width: 64em) {
+          width: 55%;
+        }
+        img {
+          height: 100%;
+          right: 0;
+        }
+        &.present img {
+      
+        }
+        &.connect img {
+          @media screen and (min-width: 1717px) {
+            width: 100%;
+            height: auto;
+            bottom: 0;
+          }
+        }
+        &.teach img {
+          @media screen and (min-width: 1530px) {
+            width: 100%;
+            height: auto;
+            top: 0;
+          }
+        }
+      }
+    }
     .lead_text>:first-child {
+      margin-top: 7%;
+      margin-bottom: 0.4rem;
+      line-height: 1rem;
+      @media screen and (min-width: 64em) {
         margin-top: 3rem;
+      }
     }
     .module--tag:before {
         width: 40px;
@@ -409,67 +451,87 @@ header + .hero_row > .row {
         color: white;
         font-family: 'GoodPro-WideBook';
         font-size: 12px;
+        letter-spacing: .2em;
+        @media screen and (min-width: 30em) {
+          letter-spacing: .35em;
+        }
     }
     .lead_text {
-      background-color: $dark_gray;
-      height: 600px;
-      padding-left: 95px;
+      @include background-opacity($dark_gray);
+      height: 100%;
+      padding-left: 5%;
+      @media screen and (min-width: 64em) {
+
+      }
+      @media screen and (min-width: 90em) {
+        position: absolute;
+        left: 50%;
+        margin-left: 0;
+        width: 100%;
+        padding-left: 95px;
+      }
     }
     .lead_text--secondary_headline, .lead_text--paragraph {
       color: $white;
       clear: both;
     }
     .lead_text--secondary_headline {
-      font-size: 60px;
+      max-width: 600px;
+      font-size: 14px;
+      margin-bottom: 1rem;
+      @media screen and (min-width: 30em) {
+        font-size: 24px;
+      }
+      @media screen and (min-width: 40em) {
+        font-size: 32px;
+      }
+      @media screen and (min-width: 52em) {
+        font-size: 40px;
+      }
+      @media screen and (min-width: 64em) {
+        margin-bottom: 2rem;
+        font-size: 60px;
+      }
     }
     .lead_text--paragraph {
         font-family: 'GoodPro-WideLight';
-        font-size: 20px;
+        font-size: 12px;
+        line-height: 1.2;
+        max-width: 500px;
+        @media screen and (min-width: 30em) {
+          font-size: 14px;
+          line-height: 1.4;
+        }
+        @media screen and (min-width: 40em) {
+          font-size: 16px;
+        }
+        @media screen and (min-width: 52em) {
+          font-size: 18px;
+        }
+        @media screen and (min-width: 64em) {
+          font-size: 20px;
+          line-height: 1.6;
+        }
     }
     .color_stripe.dark_blue, .color_stripe.white {
         max-width: 115px;
-        width: 115px;
+        width: 7%;
+        @media screen and (min-width: 64em) {
+          width: 115px;
+        }
     }
     .color_stripe.orange, .color_stripe.white {
         max-width: 115px;
-        width: 115px;
+        width: 7%;
+        @media screen and (min-width: 64em) {
+          width: 115px;
+        }
     }
     .color_stripe.white {
+      margin-left: 4%;
+      @media screen and (min-width: 64em) {
         margin-left: 86px !important;
-    }
-  }
-  &.hero-row--header_module_collaborate {
-    background: $dark_gray url('../static/images/collaborate/collaborate-hero-a.jpg') left top no-repeat;
-    height: 600px;
-    .lead_text>:first-child {
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-    }
-    .module--tag:before {
-        border: 2px solid white;
-    }
-    .module--tag span{
-        color: white;
-        font-family: 'GoodPro-WideBook';
-        font-size: 12px;
-    }
-    .lead_text {
-      @include background-opacity($dark_gray);
-      height: 600px;
-      padding-left: 45px;
-      @media screen and (min-width: 40em) { padding-left: 95px; }
-
-    }
-    .lead_text--secondary_headline, .lead_text--paragraph {
-      color: $white;
-      clear: both;
-    }
-    .color_stripe.dark_blue, .color_stripe.white {
-        width: 20px;
-        @media screen and (min-width: 40em) { width: 115px; }
-    }
-    .color_stripe.white {
-        margin-left: 86px !important;
+      }
     }
   }
 
@@ -653,51 +715,130 @@ header + .hero_row > .row {
 }
 
 .feature_module_a {
-    height: 600px;
+    position: relative;
+    height: 0;
+    padding-bottom: 60%;
     background: url('../static/images/present/present-module_a.jpg') right top no-repeat;
     background-size: contain;
     &.feature_module_a--collaborate {
         background: $med_gray url('../static/images/collaborate/collaborate-feature-module-a.jpg') bottom right no-repeat;
     }
+    @media screen and (min-width: 64em) {
+      height: 600px;
+      padding-bottom: 0;
+    }
     .feature_text {
-        height: 100%;
+        position: absolute;
+        height: auto;
+        padding: 10px;
+        padding-right: 20px;
+        bottom: 0;
+        top: 0;
         @include background-opacity($infocus_green);
-        padding: 40px 35px;
-        position: relative;
+        @media screen and (min-width: 30em) {
+          padding: 30px;
+        }
+        @media screen and (min-width: 64em) {
+          padding: 40px 35px;
+          position: relative;
+          height: 100%;
+        }
     }
     &.feature_module_a--collaborate .feature_text {
         @include background-opacity($infocus_orange);
     }
+    .color_stripe_column {
+      min-height: 0;
+      height: 100%;
+    }
     .white.color_stripe {
-        width: 79px;
-        height: 600px;
+        width: 7%;
+        height: 100%;
         margin-left: -40px;
         opacity: .75;
+        @media screen and (min-width: 40em) {
+          width: 60px;
+        }
+        @media screen and (min-width: 64em) {
+          width: 79px;
+        }
     }
     .light_blue.color_stripe.float-right {
         right: 0;
         margin-right: -15px;
-        width: 40px;
-        height: 600px;
+        width: 25px;
+        height: 100%;
+        @media screen and (min-width: 40em) {
+          width: 35px;
+        }
+        @media screen and (min-width: 64em) {
+          width: 40px;
+        }
     }
     .lead_text--secondary_headline {
         color: $white;
+        font-size: 1rem;
+        @media screen and (min-width: 30em) {
+          font-size: 1.3rem;
+        }
+        @media screen and (min-width: 40em) {
+          font-size: 1.7rem;
+        }
+        @media screen and (min-width: 50em) {
+          font-size: 2rem;
+        }
+        @media screen and (min-width: 64em) {
+          font-size: 2.75rem;
+        }
     }
     .lead_text--paragraph {
         color: $white;
+        font-size: .7rem;
+        line-height: 1.2;
+        @media screen and (min-width: 30em) {
+          font-size: .8rem;
+        }
+        @media screen and (min-width: 40em) {
+          font-size: 1rem;
+          line-height: 1.4;
+        }
+        @media screen and (min-width: 50em) {
+          font-size: 1.1rem;
+        }
+        @media screen and (min-width: 64em) {
+          font-size: 1.25rem;
+          line-height: 1.6;
+        }
     }
     .feature_links {
         display: block;
         position: absolute;
-        bottom: 48px;
-        left: 40px;
+        bottom: 10px;
+        left: 10px;
+        @media screen and (min-width: 30em) {
+          bottom: 30px;
+          left: 30px;
+        }
+        @media screen and (min-width: 64em) {
+          bottom: 48px;
+          left: 40px;
+        }
     }
     .feature_link {
+        display: block;
+        font-size: 10px;
         color: $infocus_light_blue;
         font-family: 'GoodPro-WideMedium';
-        font-size: 12px;
         text-transform: uppercase;
-        letter-spacing: .15em;
+        @media screen and (min-width: 30em) {
+          font-size: 12px;
+        }
+        @media screen and (min-width: 40em) {
+          margin: 5px 0;
+        }
+        @media screen and (min-width: 64em) {
+          letter-spacing: .15em;
+        }
     }
     .feature_link:hover {
         color: $white;
@@ -707,11 +848,31 @@ header + .hero_row > .row {
 
 .feature_module_b {
     position: relative;
+    height: 0;
+    padding-bottom: 60%;
+    margin-bottom: 40%;
+    @media screen and (min-width: 64em) {
+      height: auto;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
     .module_image {
-        height: 600px;
         width: 100%;
         background: url('../static/images/present/present-module_b.jpg');
         background-size: cover;
+        height: 600px;
+        margin-bottom: 0;
+    }
+    .hero_inner {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      @media screen and (min-width: 64em) {
+        position: static;
+        padding-left: .625rem;
+        padding-right: .625rem;
+      }
     }
     &.feature_module_b--collaborate .module_image {
         background: url('../static/images/collaborate/collaborate-feature-module-b.jpg');
@@ -720,13 +881,25 @@ header + .hero_row > .row {
     .feature_text {
         display: block;
         position: relative;
-        width: 65%;
-        min-height: 375px;
-        margin: -350px auto 0 auto;
-        padding: 55px 70px 0 70px;
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        margin: 30% auto 0;
+        padding: 10px;
         @include background-opacity($infocus_blue);
         clear: both;
         text-align: center;
+        @media screen and (min-width: 40em) {
+          width: 65%;
+          min-width: 40em;
+          padding: 30px 40px 0;
+        }
+        @media screen and (min-width: 64em) {
+          min-height: 375px;
+          padding: 55px 70px 0;
+          position: relative;
+          margin: -350px auto 0 auto;
+        }
     }
     &.feature_module_b--collaborate .feature_text {
         @include background-opacity($infocus_green);
@@ -735,6 +908,13 @@ header + .hero_row > .row {
     .lead_text--secondary_headline {
         text-align: center;
         color: $white;
+        font-size: 2rem;
+        @media screen and (min-width: 40em) {
+          font-size: 3rem;
+        }
+        @media screen and (min-width: 64em) {
+          font-size: 3.75rem;
+        }
     }
     .lead_text--paragraph {
         color: $white;
@@ -835,6 +1015,11 @@ header + .hero_row > .row {
 }
 
 .promo_modules {
+    position: relative;
+    @media screen and (min-width: 40em) {
+        height: 0;
+        padding-bottom: 39%;
+    }
     .module_text {
         height: 140px;
         margin-top: -140px;
@@ -877,11 +1062,25 @@ header + .hero_row > .row {
 
     }
     .promo_module_c {
-        padding: 0 0 0 15px;
+        margin-bottom: 1em;
+            @media screen and (min-width: 40em) {
+                margin-bottom: 0;
+                padding: 0 15px 0 0;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+        }
         .module_image {
             height: 387px;
             background: url('../static/images/present/present-promo_module_c.jpg') right;
             background-size: cover;
+            @media screen and (min-width: 40em) {
+                height: 100%;
+            }
+            @media screen and (min-width: 64em) {
+                height: 387px;
+            }
         }
         &.collaborate--promo_module_c .module_image {
             background: url('../static/images/collaborate/collaborate-promo_module_c.jpg');
@@ -903,11 +1102,24 @@ header + .hero_row > .row {
 
     }
     .promo_module_d {
-        padding: 0 15px 0 0;
+        margin-bottom: 1em;
+            @media screen and (min-width: 40em) {
+                margin-bottom: 0;
+                padding: 0 15px 0 0;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+            }
         .module_image {
             height: 387px;
             background: url('../static/images/present/present-promo_module_d.jpg');
             background-size: cover;
+            @media screen and (min-width: 40em) {
+                height: 100%;
+            }
+            @media screen and (min-width: 64em) {
+                height: 387px;
+            }
         }
         &.collaborate--promo_module_d .module_image {
             background: url('../static/images/collaborate/collaborate-promo_module_d.jpg');
@@ -926,24 +1138,24 @@ div.video_module {
   background-size: cover;
   height: 825px;
   h2.lead_text--secondary_headline {
-    position: absolute;
-    top: 50%;
-    margin: -70px 2em 0;
-    color: #FFF;
-    background: url('/resources/static/images/teach/play_button.png') left center no-repeat;
-    padding-left: 2em;
+      position: absolute;
+      top: 50%;
+      margin: -70px 2em 0;
+      color: #FFF;
+      background: url('/resources/static/images/teach/play_button.png') left center no-repeat;
+      padding-left: 2em;
   }
 }
 
 
 //Vertical Accordion
-.vertical_accordian {
+.vertical_accordion {
   margin-left: .9375rem;
   margin-right: .9375rem;
   position: relative;
   overflow: hidden;
-  min-height: 600px;
-  .vertical_accordian--slide {
+  min-height: 575px;
+  .vertical_accordion--slide {
     padding: 3em;
     width: 66.64%;
     position: absolute;
@@ -953,7 +1165,7 @@ div.video_module {
   	-ms-transition: all .5s ease;
   	-o-transition: all .5s ease;
   	transition: all .5s ease;
-    .vertical_accordian--slide--background{
+    .vertical_accordion--slide--background{
       position: absolute;
       top: 0;
       left: 0;
@@ -961,7 +1173,7 @@ div.video_module {
       height: 100%;
       z-index: 1;
     }
-    .vertical_accordian--slide--content{
+    .vertical_accordion--slide--content{
       position: relative;
       z-index: 2;
       height: 100%;
@@ -971,10 +1183,10 @@ div.video_module {
         border: 0px;
       }
       position: absolute;
-      bottom: 50px;
+      bottom: -11px;
     }
   }
-  .vertical_accordian--slide:not(:target) {
+  .vertical_accordion--slide:not(:target) {
     background-image: none;
     background-color: white;
   }
@@ -982,7 +1194,7 @@ div.video_module {
     z-index: 1;
     background-image: url('../static/images/homepage/homepage-accordion-a--InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg');
     right: 33.32%;
-    .vertical_accordian--slide--background{
+    .vertical_accordion--slide--background{
        @include background-opacity($infocus_blue);
     }
   }
@@ -990,7 +1202,7 @@ div.video_module {
     z-index: 2;
     background-image: url('../static/images/homepage/homepage-accordion-b--InFocus-Lifestyle-DigiEasel-Education-AsianTeacher-300dpi-CMYK');
     right: -33.32%;
-    .vertical_accordian--slide--background{
+    .vertical_accordion--slide--background{
         @include background-opacity($infocus_green);
     }
   }
@@ -999,7 +1211,7 @@ div.video_module {
     z-index: 3;
     right: -49.98%;
     background-image: url('../static/images/homepage/homepage-accordion-c--IF-video-capture.jpg');
-    .vertical_accordian--slide--background{
+    .vertical_accordion--slide--background{
        @include background-opacity($infocus_orange);
     }
   }
@@ -1069,7 +1281,7 @@ div.video_module {
       display: block;
   }
 }
-.vertical_accordian--slide .module--tag:before {
+.vertical_accordion--slide .module--tag:before {
   border: 2px solid $white;
 }
 
@@ -1253,7 +1465,7 @@ div.video_module {
         padding-right: 0!important;
     }
     div.hero_row.hero-row--header_module_c {
-        background-image: url('/resources/static/images/teach/InFocus-Lifestyle-JTouch-K12-MuscleDiagram-300dpi-CMYK.jpg');
+
     }
     .text_module_a a.text_module_link {
         font-family: 'GoodPro-WideMedium';
@@ -1274,10 +1486,6 @@ div.video_module {
     .feature_module_a.blue .feature_text .lead_text--secondary_headline, .feature_module_a.blue .feature_text .lead_text--paragraph {
         color: #333F48;
     }
-    .feature_module_a .lead_text--secondary_headline {
-        font-size: 3.75rem;
-        line-height: 1em;
-    }
     .feature_module_a.blue .feature_text .lead_text--paragraph {
         margin-bottom: 1.2em;
     }
@@ -1287,9 +1495,6 @@ div.video_module {
     }
     .feature_module_a.blue .feature_links {
         left: 4em;
-    }
-    .feature_module_a .feature_links .feature_link {
-        font-size: 14px;
     }
     .feature_module_a.blue .feature_links .feature_link {
         color: #006ba6;
