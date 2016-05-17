@@ -408,18 +408,27 @@ header + .hero_row > .row {
         height: 100%;
         width: 60%;
         @media screen and (min-width: 64em) {
-          width: 56%;
-        }
-        @media screen and (min-width: 90em) {
-          width: 830px;
+          width: 55%;
         }
         img {
           height: 100%;
           right: 0;
-          @media scren and (min-width: 106em) {
-            height: auto;
+        }
+        &.present img {
+      
+        }
+        &.connect img {
+          @media screen and (min-width: 1717px) {
             width: 100%;
+            height: auto;
             bottom: 0;
+          }
+        }
+        &.teach img {
+          @media screen and (min-width: 1530px) {
+            width: 100%;
+            height: auto;
+            top: 0;
           }
         }
       }
@@ -456,7 +465,7 @@ header + .hero_row > .row {
       }
       @media screen and (min-width: 90em) {
         position: absolute;
-        left: 47em;
+        left: 50%;
         margin-left: 0;
         width: 100%;
         padding-left: 95px;
