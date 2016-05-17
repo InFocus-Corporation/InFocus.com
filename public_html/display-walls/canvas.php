@@ -170,7 +170,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Jupiter-Canvas-Datasheet" href="/resources/static/documents/canvas/LR_4pCanvas brochure_030116.pdf">
+                                        <a data-event="Jupiter-Canvas-Datasheet" href="/resources/documents/InFocus-Jupiter-Canvas-Datasheet-EN.pdf">
                                             <span class="title">Canvas Brochure</span><br>
                                             <span class="description">Benefits and specifications for Canvas</span>
                                         </a>
@@ -180,10 +180,10 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                             <li>
                                                 Choose Language
                                                 <ul>
-                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="/resources/static/documents/canvas/LR_4pCanvas brochure_030116.pdf">English</a></li>
-                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="/resources/static/documents/canvas/SPA JUP_Canvas_Brochure_150126.pdf">Español</a></li>
-                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="/resources/static/documents/canvas/Arabic Canvas brochure 2014.pdf">العربية</a></li>
-                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="/resources/static/documents/canvas/JUP_Canvas_Brochure_150126_ru-RU.pdf">русский</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="/resources/documents/InFocus-Jupiter-Canvas-Datasheet-EN.pdf">English</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="/resources/documents/InFocus-Jupiter-Canvas-Datasheet-ES.pdf">Español</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="/resources/documents/InFocus-Jupiter-Canvas-Datasheet-AR.pdf">العربية</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="/resources/documents/InFocus-Jupiter-Canvas-Datasheet-RU.pdf">русский</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -192,7 +192,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Jupiter-Canvas-Customer-Sample" href="/resources/static/documents/canvas/Canvas Customers, A Sample List - 7 Apr 2015.pdf">
+                                        <a data-event="Jupiter-Canvas-Customer-Sample" href="/resources/documents/InFocus-Jupiter-Canvas-Customer-List-EN.pdf">
                                             <span class="title">Canvas Customers</span><br>
                                             <span class="description">Canvas Customers Sample List</span>
                                         </a>
@@ -202,7 +202,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                             <li>
                                                 Choose Language
                                                 <ul>
-                                                    <li><a data-event="Jupiter-Canvas-Customer-Sample" href="/resources/static/documents/canvas/Canvas Customers, A Sample List - 7 Apr 2015.pdf">English</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-Customer-Sample" href="/resources/documents/InFocus-Jupiter-Canvas-Customer-List-EN.pdf">English</a></li>
                                                 </ul>
                                             </li>
                                         </ul>

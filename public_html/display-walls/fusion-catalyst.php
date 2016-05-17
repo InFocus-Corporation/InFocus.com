@@ -215,7 +215,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Fusion-Catalyst-Brochure" href="/resources/static/documents/fusion-catalyst/Fusion Catalyst 4000_8000 brochure_Feb2015.pdf">
+                                        <a data-event="Fusion-Catalyst-Brochure" href="/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4000-8000-Datasheet-EN.pdf">
                                             <span class="title">Fusion Catalyst 4000 & 8000</span><br>
                                             <span class="description">Brochure</span>
                                         </a>
@@ -225,7 +225,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                             <li>
                                                 Choose Language
                                                 <ul>
-                                                    <li><a data-event="Fusion-Catalyst-Brochure" href="/resources/static/documents/fusion-catalyst/Fusion Catalyst 4000_8000 brochure_Feb2015.pdf">English</a></li>
+                                                    <li><a data-event="Fusion-Catalyst-Brochure" href="/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4000-8000-Datasheet-EN.pdf">English</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -234,7 +234,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Fusion-4500B" href="/resources/static/documents/fusion-catalyst/LR_Fusion Catalyst 4500B datasheet_Mar2015_0.pdf">
+                                        <a data-event="Fusion-4500B" href="/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4500B-Datasheet-EN.pdf">
                                             <span class="title">Fusion Catalyst 4500B</span><br>
                                             <span class="description">Datasheet</span>
                                         </a>
@@ -244,9 +244,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                             <li>
                                                 Choose Language
                                                 <ul>
-                                                    <li><a data-event="Fusion-4500B" href="/resources/static/documents/fusion-catalyst/LR_Fusion Catalyst 4500B datasheet_Mar2015_0.pdf">English</a></li>
-                                                    <li><a data-event="Fusion-4500B" href="/resources/static/documents/fusion-catalyst/Fusion Catalyst 4500B datasheet_Jan2015_ru-RU.pdf">Pусский</a></li>
-                                                    <li><a data-event="Fusion-4500B" href="/resources/static/documents/fusion-catalyst/SPA Fusion Catalyst 4500B datasheet_Jan2015.pdf">Español</a></li>
+                                                    <li><a data-event="Fusion-4500B" href="/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4500B-Datasheet-EN.pdf">English</a></li>
+                                                    <li><a data-event="Fusion-4500B" href="/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4500B-Datasheet-RU.pdf">Pусский</a></li>
+                                                    <li><a data-event="Fusion-4500B" href="/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4500B-Datasheet-ES.pdf">Español</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -255,7 +255,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Fusion-4500C" href="/resources/static/documents/fusion-catalyst/LR_Fusion Catalyst 4500C datasheet_Mar2015_0.pdf">
+                                        <a data-event="Fusion-4500C" href="/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4500C-Datasheet-EN.pdf">
                                             <span class="title">Fusion Catalyst 4500C</span><br>
                                             <span class="description">Datasheet</span>
                                         </a>
@@ -265,9 +265,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                             <li>
                                                 Choose Language
                                                 <ul>
-                                                    <li><a data-event="Fusion-4500C" href="/resources/static/documents/fusion-catalyst/LR_Fusion Catalyst 4500C datasheet_Mar2015_0.pdf">English</a></li>
-                                                    <li><a data-event="Fusion-4500C" href="/resources/static/documents/fusion-catalyst/Fusion Catalyst 4500C datasheet_Jan2015_ru-RU_0.pdf">Pусский</a></li>
-                                                    <li><a data-event="Fusion-4500C" href="/resources/static/documents/fusion-catalyst/SPA Fusion Catalyst 4500C datasheet_Jan2015.pdf">Español</a></li>
+                                                    <li><a data-event="Fusion-4500C" href="/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4500C-Datasheet-EN.pdf">English</a></li>
+                                                    <li><a data-event="Fusion-4500C" href="/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4500C-Datasheet-RU.pdf">Pусский</a></li>
+                                                    <li><a data-event="Fusion-4500C" href="/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4500C-Datasheet-ES.pdf">Español</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -276,7 +276,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Fusion-4500H" href="/resources/static/documents/fusion-catalyst/LR_Fusion Catalyst 4500H datasheet_Mar2015_0.pdf">
+                                        <a data-event="Fusion-4500H" href="/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4500H-Datasheet-EN.pdf">
                                             <span class="title">Fusion Catalyst 4500H</span><br>
                                             <span class="description">Datasheet</span>
                                         </a>
@@ -286,9 +286,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                             <li>
                                                 Choose Language
                                                 <ul>
-                                                    <li><a data-event="Fusion-4500H" href="/resources/static/documents/fusion-catalyst/LR_Fusion Catalyst 4500H datasheet_Mar2015_0.pdf">English</a></li>
-                                                    <li><a data-event="Fusion-4500H" href="/resources/static/documents/fusion-catalyst/Fusion Catalyst 4500H datasheet_Jan2015_ru-RU.pdf">Pусский</a></li>
-                                                    <li><a data-event="Fusion-4500H" href="/resources/static/documents/fusion-catalyst/SPA Fusion Catalyst 4500H datasheet_Jan2015.pdf">Español</a></li>
+                                                    <li><a data-event="Fusion-4500H" href="/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4500H-Datasheet-EN.pdf">English</a></li>
+                                                    <li><a data-event="Fusion-4500H" href="/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4500H-Datasheet-RU.pdf">Pусский</a></li>
+                                                    <li><a data-event="Fusion-4500H" href="/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4500H-Datasheet-ES.pdf">Español</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -297,7 +297,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Fusion-Catalyst-Quad-HD" href="/resources/static/documents/fusion-catalyst/Quad HD Decoder card (rev 201-110).pdf">
+                                        <a data-event="Fusion-Catalyst-Quad-HD" href="/resources/documents/InFocus-Jupiter-Quad-HD-Decoder-Card-Datasheet-EN.pdf">
                                             <span class="title">Quad HD Decoder Card</span><br>
                                             <span class="description">Datasheet</span>
                                         </a>
@@ -307,7 +307,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                             <li>
                                                 Choose Language
                                                 <ul>
-                                                    <li><a data-event="Fusion-Catalyst-Quad-HD" href="/resources/static/documents/fusion-catalyst/Quad HD Decoder card (rev 201-110).pdf">English</a></li>
+                                                    <li><a data-event="Fusion-Catalyst-Quad-HD" href="/resources/documents/InFocus-Jupiter-Quad-HD-Decoder-Card-Datasheet-EN.pdf">English</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
