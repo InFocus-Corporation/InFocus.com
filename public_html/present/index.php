@@ -17,14 +17,16 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 </head>
 <body id="present_page" class="present_page" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
+    
     <!-- HEADER MODULE C -->
 	<div class="hero_row hero-row--header_module_c">
-        <div class="color_stripe_column">
-            <div class="dark_blue color_stripe"></div>
-            <div class="white color_stripe"></div>
-        </div>
-		<div class="row">
-			<div class="small-11 small-offset-1 medium-7 medium-offset-2 large-7 large-offset-5 columns lead_text">
+        <div class="row hero_inner_c">
+            <div class="hero_image"><img src="/resources/static/images/present/present-hero.jpg" /></div>
+            <div class="color_stripe_column">
+                <div class="dark_blue color_stripe"></div>
+                <div class="white color_stripe"></div>
+            </div>
+			<div class="small-6 small-offset-6 columns lead_text">
                 <div class="module--tag">
                     <span>Present</span>
                 </div>
@@ -33,7 +35,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 				</h2>
 				<p class="lead_text--paragraph">Whether you're presenting to a handful of colleagues or a full auditorium, InFocus technology will make you shine.</p>
 			</div>
-		</div>
+        </div>
 	</div>
     <!-- END HEADER MODULE C -->
     <!-- MULTICOLUMN TEXT MODULE -->
@@ -78,7 +80,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- END MULTICOLUMN TEXT MODULE -->
     <!-- FEATURE MODULE B -->
     <div class="row feature_module_b">
-        <div class="small-12 columns">
+        <div class="small-12 columns hero_inner">
             <div class="module_image">
 
             </div>
@@ -137,25 +139,25 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     </div>
     <!-- END MULTICOLUMN ICON AND TEXT MODULE -->
     <!-- FEATURE MODULE A -->
-	<div class="row feature_module_a ">
-        <div class="small-12 medium-6 columns feature_text">
-			<h3 class="lead_text--secondary_headline">PC-less presenting</h3>
-			<p class="lead_text--paragraph">Load your projector's internal memory with common or shared files and quickly present them without a computer. Or project files directly from a USB thumb drive, which is convenient for guests or when traveling.</p>
+    <div class="row feature_module_a ">
+        <div class="small-6 columns feature_text">
+            <h3 class="lead_text--secondary_headline">PC-less presenting</h3>
+            <p class="lead_text--paragraph">Load your projector's internal memory with common or shared files and quickly present them without a computer. Or project files directly from a USB thumb drive, which is convenient for guests or when traveling.</p>
             <div class="feature_links">
-                <a href="/projectors/IN2120a-Series" class="feature_link">IN2120A Network Projectors</a><br>
-                <a href="/projectors/IN1110" class="feature_link">IN1110 Mobile Projectors</a><br>
+                <a href="/projectors/IN2120a-Series" class="feature_link">IN2120A Network Projectors</a>
+                <a href="/projectors/IN1110" class="feature_link">IN1110 Mobile Projectors</a>
                 <a href="/projectors/IN1146" class="feature_link">IN1146 Mobile LED Projector</a>
             </div>
-		</div>
-		<div class="small-12 medium-6 columns color_stripe_column">
-			<div class="white color_stripe"></div>
+        </div>
+        <div class="small-6 columns color_stripe_column">
+            <div class="white color_stripe"></div>
             <div class="light_blue color_stripe float-right"></div>
-		</div>
+        </div>
     </div>
     <!-- END FEATURE MODULE A -->
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">
-        <div class="small-12 large-6 columns promo_module_d">
+        <div class="small-12 medium-6 columns promo_module_d">
             <div class="module_image"></div>
             <div class="module_text">
                 <p class="lead_text--headline">
@@ -171,7 +173,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 </a>
             </div>
         </div>
-        <div class="small-12 large-6 columns promo_module_c">
+        <div class="small-12 medium-6 columns promo_module_c">
             <div class="module_image">
 
             </div>
