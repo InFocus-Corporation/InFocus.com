@@ -37,7 +37,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     <a href="/display-walls/">Display Walls</a> &gt;
                     <a href="/display-walls/fusion-catalyst">Fusion Catalyst</a> &gt;
                     <a href="/display-walls/fusion-catalyst-4500">Fusion Catalyst 4500</a>
-
                 </ol>
             </div>
             <div class="productheader C10 Col_child C6x4_child">
@@ -74,7 +73,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     </ul>
                 </nav>
                 <div id="overview" class="active">
-                    <div class="C6 alternateDivChildL2" style="float: left;">
+                    <div class="C6" style="float: left;">
                       <div class="info cmsedit">
                           <h5 class="name"></h5>
                           <strong class="tagline">Expansive Capabilities</strong>
@@ -99,7 +98,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     <div style="display: block; clear: both; width: 100%;"></div>
                 </div>
                 <div id="specs">
-                    <div class="C6 alternateDivChildL2" style='float: left;'>
+                    <div class="C6" style='float: left;'>
                       <div class="info cmsedit">
                           <h5 class="name">Fusion Catalyst 4500 Specifications</h5>
                           <strong class="tagline">CPU Chassis</strong>

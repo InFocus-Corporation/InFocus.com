@@ -116,10 +116,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                             <li>Support for MPEG-2, MPEG-4, H.264, and MJPEG formats.</li>
                             <li>All display wall processors in the Fusion Catalyst™ product line are supported</li>
                           </ul>
-                          <a href="quad-hd-decoder-card-fusion-catalyst" class="blue_btn" style="width:80%;">Learn More</a>
+                          <a href="fusion-catalyst-quad-hd-decoder-card" class="blue_btn" style="width:80%;">Learn More</a>
               			     </div>
               			  </li>
                     </ul>
+                    <hr/>
                   </div>
                     <div class="C10 alternateDivChildL2">
                       <div class="info cmsedit">
@@ -288,6 +289,25 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                                     <li><a data-event="Fusion-4500H" href="/resources/static/documents/fusion-catalyst/LR_Fusion Catalyst 4500H datasheet_Mar2015_0.pdf">English</a></li>
                                                     <li><a data-event="Fusion-4500H" href="/resources/static/documents/fusion-catalyst/Fusion Catalyst 4500H datasheet_Jan2015_ru-RU.pdf">Pусский</a></li>
                                                     <li><a data-event="Fusion-4500H" href="/resources/static/documents/fusion-catalyst/SPA Fusion Catalyst 4500H datasheet_Jan2015.pdf">Español</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <td><img src="/resources/images/pdficon"></td>
+                                    <td>
+                                        <a data-event="Fusion-Catalyst-Quad-HD" href="/resources/static/documents/fusion-catalyst/Quad HD Decoder card (rev 201-110).pdf">
+                                            <span class="title">Quad HD Decoder Card</span><br>
+                                            <span class="description">Datasheet</span>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <ul class="langlist">
+                                            <li>
+                                                Choose Language
+                                                <ul>
+                                                    <li><a data-event="Fusion-Catalyst-Quad-HD" href="/resources/static/documents/fusion-catalyst/Quad HD Decoder card (rev 201-110).pdf">English</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
