@@ -20,7 +20,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- HEADER MODULE C -->
 	<div class="hero_row hero-row--header_module_c">
         <div class="row hero_inner_c">
-            <div class="hero_image"><img src="/resources/static/images/teach/InFocus-Lifestyle-JTouch-K12-MuscleDiagram-300dpi-CMYK.jpg" /></div>
+            <div class="hero_image teach"><img src="/resources/static/images/teach/InFocus-Lifestyle-JTouch-K12-MuscleDiagram-300dpi-CMYK.jpg" /></div>
             <div class="color_stripe_column">
                 <div class="orange color_stripe"></div>
                 <div class="white color_stripe"></div>
