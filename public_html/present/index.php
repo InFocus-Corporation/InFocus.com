@@ -28,12 +28,13 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
     <!-- HEADER MODULE C -->
 	<div class="hero_row hero-row--header_module_c">
-        <div class="color_stripe_column">
-            <div class="dark_blue color_stripe"></div>
-            <div class="white color_stripe"></div>
-        </div>
-		<div class="row">
-			<div class="small-11 small-offset-1 medium-7 medium-offset-2 large-7 large-offset-5 columns lead_text">
+        <div class="row hero_inner_c">
+            <div class="hero_image"><img src="/resources/static/images/present/present-hero.jpg" /></div>
+            <div class="color_stripe_column">
+                <div class="dark_blue color_stripe"></div>
+                <div class="white color_stripe"></div>
+            </div>
+			<div class="small-6 small-offset-6 columns lead_text">
                 <div class="module--tag">
                     <span>Present</span>
                 </div>
@@ -42,7 +43,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 				</h2>
 				<p class="lead_text--paragraph">Whether you're presenting to a handful of colleagues or a full auditorium, InFocus technology will make you shine.</p>
 			</div>
-		</div>
+        </div>
 	</div>
     <!-- END HEADER MODULE C -->
     <!-- MULTICOLUMN TEXT MODULE -->
@@ -147,7 +148,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- END MULTICOLUMN ICON AND TEXT MODULE -->
     <!-- FEATURE MODULE A -->
 	<div class="row feature_module_a ">
-        <div class="small-12 medium-6 columns feature_text">
+        <div class="small-6 columns feature_text">
 			<h3 class="lead_text--secondary_headline">PC-less presenting</h3>
 			<p class="lead_text--paragraph">Load your projector's internal memory with common or shared files and quickly present them without a computer. Or project files directly from a USB thumb drive, which is convenient for guests or when traveling.</p>
             <div class="feature_links">
@@ -164,7 +165,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- END FEATURE MODULE A -->
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">
-        <div class="small-12 large-6 columns promo_module_d">
+        <div class="small-12 medium-6 columns promo_module_d">
             <div class="module_image"></div>
             <div class="module_text">
                 <p class="lead_text--headline">
