@@ -18,23 +18,24 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 <body class="" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
 	  <!-- HEADER MODULE C -->
-		<div class="hero_row hero-row--header_module_collaborate">
-      <div class="color_stripe_column">
-          <div class="dark_blue color_stripe"></div>
-          <div class="white color_stripe hide-for-small-only"></div>
-      </div>
-			<div class="row">
-				<div class="small-10 medium-7 medium-offset-2 large-6 large-offset-4 columns lead_text">
-          <div class="module--tag">
-              <span>Connect & Collaborate</span>
-          </div>
-					<h2 class="lead_text--secondary_headline">
-						Get it done together.
-					</h2>
-					<p class="lead_text--paragraph">Great things can happen when everyone is informed and able to contribute. InFocus improves your ability to work as a team.</p>
-				</div>
+	<div class="hero_row hero-row--header_module_c">
+        <div class="row hero_inner_c">
+            <div class="hero_image"><img src="/resources/static/images/collaborate/collaborate-hero-a.jpg" /></div>
+            <div class="color_stripe_column">
+                <div class="dark_blue color_stripe"></div>
+                <div class="white color_stripe"></div>
+            </div>
+			<div class="small-6 small-offset-6 columns lead_text">
+                <div class="module--tag">
+                  <span>Connect & Collaborate</span>
+                </div>
+				<h2 class="lead_text--secondary_headline">
+					Get it done together.
+				</h2>
+				<p class="lead_text--paragraph">Great things can happen when everyone is informed and able to contribute. InFocus improves your ability to work as a team.</p>
 			</div>
-		</div>
+        </div>
+	</div>
     <!-- END HEADER MODULE C -->
     <!-- MULTICOLUMN TEXT MODULE -->
     <div class="row multicolumn_text_module">
