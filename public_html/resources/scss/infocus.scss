@@ -848,18 +848,11 @@ header + .hero_row > .row {
       margin-bottom: 0;
     }
     .module_image {
-        height: 100%;
         width: 100%;
         background: url('../static/images/present/present-module_b.jpg');
         background-size: cover;
-        position: absolute;
-        right: 0;
-        @media screen and (min-width: 64em) {
-          position: static;
-          height: 600px;
-          right: auto;
-          margin-bottom: 0;
-        }
+        height: 600px;
+        margin-bottom: 0;
     }
     .hero_inner {
       position: absolute;
