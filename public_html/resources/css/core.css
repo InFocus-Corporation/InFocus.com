@@ -64,6 +64,7 @@ body {
 	font-weight: normal;
 	font-size: 100%;
 	margin:0 auto;
+	overflow-x: hidden;
 }
 
 header#masthead {
@@ -1884,8 +1885,8 @@ footer div.social {
 footer div.social li {
 	float: left;
 	width: 25%;
-	text-align: right;
-  margin-top: 0px;
+	text-align: left;
+	margin-top: 0px;
 }
 footer div.social li a {
 	display: inline-block;
