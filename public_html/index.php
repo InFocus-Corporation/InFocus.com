@@ -19,8 +19,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 <body class="" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
 	<div class="hero_row transparent-border-right-30-green hero-row--homepage">
-		<div class="row">
-			<div class="small-11 medium-7 large-5 columns lead_text">
+		<div class="row hero_inner">
+			<div class="hero_image"><img src="/resources/static/images/homepage/homepage-hero-a--wb-bertlitz.jpg" /></div>
+			<div class="small-6 medium-5 columns lead_text">
 				<h2 class="lead_text--headline">A better way to work</h2>
 				<p class="lead_text--paragraph">In a perfect world, every meeting is productive and every presentation engages the audience. We make the world a more perfect place.</p>
 			</div>
@@ -32,9 +33,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	</div>
 	<div class="row">
 		<div class="small-12 medium-10 medium-offset-1 columns text-center">
-			<h2 class="lead_text--secondary_headline text-center">Your work is important</h2>
+			<h2 class="lead_text--secondary_headline text-center"></h2>
 			<br/>
-			<h5>Whether you’re a schoolteacher or a CEO, a firefighter or a professor, people depend on you every day. At InFocus, we provide the tools you need to achieve your goals. Our innovative display, projection, and conferencing solutions open up new possibilities for sharing information and working together efficiently and effectively.</h5>
+			<h5>Whether you’re a schoolteacher or a CEO, a firefighter or someone who puts out fires every day at the office, people depend on you. We respect that and know the work you do is important.</h5>
+			<br/>
+			<h5>InFocus provides the tools you need for success. Our display, projection, and conferencing solutions improve communication and collaboration so you can make an even bigger impact every single day.</h5>
 		</div>
 	</div>
 	<div class="row">
@@ -53,7 +56,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<h5>Our visualization solutions help emergency, utility, military, and other critical sectors track their operations.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
-							<span>slide cta goes here</span>
+							<span><a class="cta" href="/visualize/">Solutions for visualization</a> / <a class="cta" href="/display-walls/">Our display walls</a></span>
 						</div>
 					</div>
 				</div>
@@ -70,7 +73,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<h5>Is it possible to share informations with students in a better, more engaging and powerful way? We think so.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
-							<span>slide cta goes here</span>
+								<span><a class="cta" href="/teach/">Solutions to teach & train</a> / <a class="cta" href="/teach/#inspire">Our Inspire education program</a></span>
 						</div>
 					</div>
 				</div>
@@ -87,7 +90,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<h5>From the cubicle to the command center, our technologies can improve the way people at all levels of your company work.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
-							<span>slide cta goes here</span>
+							<span><a class="cta" href="/present/">Solutions for presentations</a> / <a class="cta" href="/collaborate/">Solutions for collaboration</a></span>
 						</div>
 					</div>
 				</div>

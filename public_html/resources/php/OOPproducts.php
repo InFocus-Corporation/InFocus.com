@@ -394,26 +394,21 @@ $seriesPanels .=   "<a href='$model'>Learn More</a></td>
 
 	public function specs(){
 
-		switch($this->productGroup){
+		switch($this->productGroup) {
 
-		case Projector:
+		case 'Projector':
 			$sql = "SELECT partnumber FROM projectors GROUP BY partnumber";
 			break;
-		case Display:
+		case 'Display':
 			$sql = "SELECT partnumber FROM displays GROUP BY partnumber";
 			break;
-		case Accessory:
-
+		case 'Accessory':
 			break;
-		case Peripheral:
-
-			break;
-
-
+		case 'Peripheral':
 			break;
 		}
 
-		if($this->isSeries){
+		if($this->isSeries) {
 			$count = 0;
 			foreach($this->seriesModels as $model){
 				if(($this->productText['active'] != 0 AND $this->modelActive[$model] != 0) OR $this->productText['active'] == 0){
@@ -431,31 +426,43 @@ $seriesPanels .=   "<a href='$model'>Learn More</a></td>
 		$count = 495 + (215*$count);
 		if($count>1490)($count=1490);
 
-		if(!empty($sql)){
-		$results = mysqli_query($this->conn,$sql);
-		if(mysqli_num_rows($results)!=0){
-		$specCompare = "<input id='modlist' style='display:none;' value='{$models}' ><br/>
-				<div class='ui-widget' style='padding-bottom:30px;'>
-		" . translate('Compare with other products') . "<br>
-				<select id='combobox' style='height:90px;'>
-				<option value=' ' selected></option>
-				";
-		$results = mysqli_query($this->conn,$sql);
-		while($row = mysqli_fetch_array($results)){$specCompare .= "<option value=',{$row['partnumber']}'>{$row['partnumber']}</option>";}
-		$specCompare .= "
-		</select><INPUT type='button' id='btn' class='formbutton' style='display:inline;margin-right:10px;' value='+' onclick=' updateSpecs(document.getElementById(" . '"combobox"' . ').value,"' . strtolower($this->productGroup) . 'specs.php"' . ");'  /><br>
-		</div>		";
-		}}
-		$postdata = http_build_query(array('pn' => $models,'lang' => $this->lang));
-		$opts = array('http' => array('method'  => 'POST','header'  => 'Content-type: application/x-www-form-urlencoded','content' => $postdata));
-		$context  = stream_context_create($opts);
-		$specsTable = file_get_contents("http://" . $_SERVER['HTTP_HOST'] . "/resources/php/" . strtolower($this->productGroup) . "specs.php",false,$context);
-		if(strlen($specsTable) >12){
-		$this->productTabs .= '<li><a href="#specs">' . translate('Specifications') . '</a></li>';
-		$specsTable = "$specCompare<div id='specFrame' style='width:{$count}px'>
-		" . $specsTable . '</div>';
+		if(!empty($sql)) {
+			$results = mysqli_query($this->conn,$sql);
+			if(mysqli_num_rows($results)!=0) {
+				$specCompare = "<input id='modlist' style='display:none;' value='{$models}' ><br/>
+						<div class='ui-widget' style='padding-bottom:30px;'>
+				" . translate('Compare with other products') . "<br>
+						<select id='combobox' style='height:90px;'>
+						<option value=' ' selected></option>
+						";
+				$results = mysqli_query($this->conn,$sql);
+				while($row = mysqli_fetch_array($results)) {
+					$specCompare .= "<option value=',{$row['partnumber']}'>{$row['partnumber']}</option>";
+				}
+				$specCompare .= "
+				</select><INPUT type='button' id='btn' class='formbutton' style='display:inline;margin-right:10px;' value='+' onclick=' updateSpecs(document.getElementById(" . '"combobox"' . ').value,"' . strtolower($this->productGroup) . 'specs.php"' . ");'  /><br>
+				</div>";
+			}
+		}
 
-		return $specsTable;
+		$authorization = '';
+		if($_SERVER['HTTP_HOST']=='www.infocus.parthenonsoftware.com') {
+			$authorization = "\nAuthorization: Basic aW5mb2N1czppbmZvY3VzMTIz";
+		}
+
+		$postdata = http_build_query(array('pn' => $models,'lang' => $this->lang));
+		$opts = array('http' => array(
+					'method'  => 'POST',
+					'header'  => "Content-type: application/x-www-form-urlencoded".$authorization,
+					'content' => $postdata));
+		$context  = stream_context_create($opts);
+		$specsTable = file_get_contents("http://" . $_SERVER['HTTP_HOST'] . "/resources/php/" . strtolower($this->productGroup) . "specs.php", false, $context);
+
+		if(strlen($specsTable) > 12) {
+			$this->productTabs .= '<li><a href="#specs">' . translate('Specifications') . '</a></li>';
+			$specsTable = "$specCompare<div id='specFrame' style='width:{$count}px'>" . $specsTable . '</div>';
+
+			return $specsTable;
 		}
 	 }
 

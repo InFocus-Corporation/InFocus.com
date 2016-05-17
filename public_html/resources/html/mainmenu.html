@@ -66,6 +66,7 @@ $(function () {
 	$(document.body).click(function (e) {
 		$('header .menu > li > a').removeClass('active');
 		$('header, header .submenu').removeClass('open');
+		$('header > div').get(0).scrollTop = 0;
 	});
 	$('header .menu > li > a').click(function (e) {
 		if($(this).attr('href')) return;
@@ -82,6 +83,10 @@ $(function () {
 		if(!isOpen) {
 			$(this).addClass('active').next('.submenu').addClass('open');
 		}
+	});
+	$('header .submenu .close').click(function (e){
+		$('header .menu > li > a').removeClass('active');
+		$('header .submenu').removeClass('open');
 	});
 	$('header .submenu, header .mobile-search').click(function (e) {
 		e.stopPropagation();
@@ -127,6 +132,7 @@ $(function () {
 					<i class="toggle"><hr><hr></i>
 				</a>
 				<div class="submenu explore">
+					<span class="close"><hr><hr></span>
 					<div class="container">
 						<h2>Explore</h2>
 						<p>Our products and services can help you accomplish a range of tasks more effectively. Discover how InFocus solves the challenges you face every day.</p>
@@ -171,12 +177,13 @@ $(function () {
 					<i class="toggle"><hr><hr></i>
 				</a>
 				<div class="submenu products">
+					<span class="close"><hr><hr></span>
 					<div class="container">
 						<h2>Products</h2>
 						<div class="menu-grid">
 							<ul>
 								<li>
-									<img src="/resources/static/images/elements/header-menu-icon--touchscreens.jpg">
+									<a href="/displays/"><img src="/resources/static/images/elements/header-menu-icon--touchscreens.jpg"></a>
 									<h3><a href="/displays/">Touchscreens</a></h3>
 									<a href="/displays/MONDOPAD-SERIES">Mondopad</a>
 									<a href="/displays/BIGTOUCH-SERIES">Big Touch</a>
@@ -184,7 +191,7 @@ $(function () {
 									<a href="/displays/Q-Tablet-Series">QTablet</a>
 								</li>
 								<li>
-									<img src="/resources/static/images/elements/header-menu-icon--projectors.jpg">
+									<a href="/projectors/"><img src="/resources/static/images/elements/header-menu-icon--projectors.jpg"></a>
 									<h3><a href="/projectors/">Projectors</a></h3>
 									<a href="/hd-projector-lineup">HD Projectors</a>
 									<a href="/projectors/ultra-portable">Ultra Portable</a>
@@ -195,7 +202,7 @@ $(function () {
 									<a href="/projectors/interactive">Interactive</a>
 								</li>
 								<li>
-									<img src="/resources/static/images/elements/header-menu-icon--video_conferencing.jpg">
+									<a href="/video-conferencing/"><img src="/resources/static/images/elements/header-menu-icon--video_conferencing.jpg"></a>
 									<h3><a href="/video-conferencing/">Video<br> Conferencing</a></h3>
 									<a href="/displays/MONDOPAD-SERIES">Mondopad</a>
 									<a href="/conx-wall-exec">NEW! ConX Wall &amp; ConX<br> Exec</a>
@@ -204,7 +211,7 @@ $(function () {
 									<a href="/peripherals/121-Series">121 Video Calling</a>
 								</li>
 								<li>
-									<img src="/resources/static/images/elements/header-menu-icon--display_walls.jpg">
+									<a href="/display-walls/"><img src="/resources/static/images/elements/header-menu-icon--display_walls.jpg"></a>
 									<h3><a href="/display-walls/">Display Walls</a></h3>
 									<a href="/display-walls/canvas">Canvas</a>
 									<a href="/display-walls/canvas-crs4k">Canvas CRS-4K</a>
@@ -215,7 +222,7 @@ $(function () {
 									<a href="/display-walls/vizionplus-ii">VizionPlus II</a>
 								</li>
 								<li>
-									<img src="/resources/static/images/elements/header-menu-icon--peripherals.jpg">
+									<a href="/peripherals/"><img src="/resources/static/images/elements/header-menu-icon--peripherals.jpg"></a>
 									<h3><a href="/peripherals/">Peripherals</a></h3>
 									<a href="/peripherals/INF-SPTZ-2">RealCam PTZ Camera</a>
 									<a href="/peripherals/INA-TH150">Thunder Speakerphone</a>
@@ -235,6 +242,7 @@ $(function () {
 					<i class="toggle"><hr><hr></i>
 				</a>
 				<div class="submenu accessories">
+					<span class="close"><hr><hr></span>
 					<h2>Accessories</h2>
 					<div class="container">
 						<div class="menu-grid">
@@ -322,6 +330,7 @@ $(function () {
 					<i class="toggle"><hr><hr></i>
 				</a>
 				<div class="submenu about">
+					<span class="close"><hr><hr></span>
 					<h2>About</h2>
 					<div class="container">
 						<div class="menu-grid">

@@ -15,6 +15,10 @@ if(strlen($_SERVER['QUERY_STRING'])>0){
 cursor:pointer;
 }
 
+.tabs > .active {
+    text-align: left;
+}
+
 </style>
 	</head>
 	<body>
@@ -85,7 +89,7 @@ cursor:pointer;
 			<div class="C8 Col">
 
 					<?php echo $pageText['careers'];?>
-					
+
 				<p>
 <!-- HiringThing Jobs Widget -->
 <script type="text/javascript">
@@ -102,7 +106,7 @@ cursor:pointer;
     <small>Job listings brought to you by <a href="http://www.hiringthing.com">HiringThing</a>.</small>
 </noscript>
 <!-- end HiringThing Jobs Widget -->
-					
+
 					</p>
 
 				<p><?php echo translate('InFocus is an equal opportunity employer'); ?>.</p>
@@ -129,7 +133,7 @@ var datestart = "2020-01-01";
 		function(response){
 		document.getElementById('newsarticles').innerHTML = response;
 	});
-	
+
 
 	jQuery.post("/resources/php/fetcharticles.php",
 		{category: "event",

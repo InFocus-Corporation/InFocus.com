@@ -19,16 +19,17 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 <body class="peripherals_home" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
 	<div class="hero_row transparent-border-right-40-orange solid-border-left-24-blue hero-row--peripherals_home">
-		<div class="row">
-			<div class="small-11 medium-7 large-5 columns lead_text">
+		<div class="row hero_inner">
+			<div class="hero_image"><img src="/resources/static/images/peripherals/peripherals_cam.jpg" /></div>
+			<div class="small-6 medium-5 columns lead_text">
 				<h2 class="lead_text--secondary_headline">
                     <img src="/resources/static/images/peripherals/peripherals_icon_temp.png" alt="" />
                     <br><br>
 					Peripherals
 				</h2>
-				<p class="lead_text--paragraph">Ver o eos et accusamus et iusto odio dignissimos ducimus qui blanditis praesent voluptatum. Dolores et quas molestais excepturi sint occaecati cupiditate</p>
+				<p class="lead_text--paragraph">Audio and video quality can be the difference between a productive conference call and frustration. Our camera, speakerphone, and other peripherals can help.</p>
 			</div>
-			<div class="small-1 medium-3 color_stripe_column">
+			<div class="small-3 color_stripe_column">
 				<div class="dark_blue color_stripe"></div>
 				<div class="white color_stripe"></div>
 			</div>
