@@ -19,9 +19,19 @@ Primary: #006699, #1D5773, #00557F, #1BA1E2, #5CA7CC, #E1EEF4
   src:  url("../fonts/GoodPro-Light.otf") format("opentype");
 }
 @font-face {
+  font-family: 'GoodPro-WideLight';
+  src:  url("../fonts/GoodPro-WideLight.otf") format("opentype");
+  font-weight: normal;
+}
+@font-face {
   font-family: 'GoodPro';
   src:  url("../fonts/GoodPro-Medium.otf") format("opentype");
   font-weight: bold;
+}
+@font-face {
+  font-family: 'GoodPro-WideMedium';
+  src: url("../fonts/GoodPro-WideMedium.otf") format("opentype");
+  font-weight: normal;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -54,6 +64,7 @@ body {
 	font-weight: normal;
 	font-size: 100%;
 	margin:0 auto;
+	overflow-x: hidden;
 }
 
 header#masthead {
@@ -209,6 +220,34 @@ header#masthead ul.menu > li > .submenu {
 	font-size: 1.1em;
 	box-sizing: border-box;
 }
+header#masthead ul.menu > li > .submenu .close {
+	position: absolute;
+	top: 2.5rem;
+	right: 3rem;
+	cursor: pointer;
+}
+header#masthead ul.menu > li > .submenu .close hr {
+	vertical-align: top;
+	border-width: 2px 0 0;
+	border-style: solid;
+	border-color: #fff;
+	width: 50px;
+	height: 0px;
+}
+header#masthead ul.menu > li > .submenu .close hr:nth-child(1) {
+	position: absolute;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+header#masthead ul.menu > li > .submenu .close hr:nth-child(2) {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+}
+
 header#masthead ul.menu > li > .submenu h2,
 header#masthead ul.menu > li > .submenu h3,
 header#masthead ul.menu > li > .submenu h4,
@@ -571,6 +610,9 @@ header#masthead.blue ul.menu.small > li .search {
 	}
 	header#masthead ul.menu > li > .submenu.open {
 		display: block;
+	}
+	header#masthead ul.menu > li > .submenu .close {
+		display: none;
 	}
 	header#masthead ul.menu.small {
 		float: none;
@@ -1208,7 +1250,7 @@ form textarea.error {
 	background-size: auto auto;
 	background-position: right 8px center;
 	background-repeat: no-repeat;
-	border: 2px solid #ff4a54;
+	border: 2px solid #ff4a54 !important;
 }
 form textarea.valid,
 form textarea.error {
@@ -1765,7 +1807,7 @@ footer h6 {
 }
 footer:hover h6 {
 	padding-top: 0.2rem;
-	padding-bottom: 0rem;
+	padding-bottom: .55rem;
 }
 footer ul,
 footer ul li {
@@ -1774,6 +1816,8 @@ footer ul li {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+  margin-top: 8px;
+  font-size:13px;
 }
 footer h6,
 footer a,
@@ -1841,7 +1885,8 @@ footer div.social {
 footer div.social li {
 	float: left;
 	width: 25%;
-	text-align: right;
+	text-align: left;
+	margin-top: 0px;
 }
 footer div.social li a {
 	display: inline-block;
@@ -1874,8 +1919,41 @@ footer div.copy {
 	margin-top: -1.3rem;
 }
 
+footer form#form_0007 {
+	clear: both;
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	padding-top: 40px;
+}
+footer form#form_0007 label {
+	display: block;
+	color: #bbdde6;
+	padding: 0;
+	font-size: 0.9rem;
+}
+footer form#form_0007 input {
+	display: block;
+	border: 2px solid #fff;
+	font-size: 1rem;
+	height: 2.2rem;
+	opacity: 1;
+}
+footer form#form_0007 button {
+	display: block;
+	border-radius: 3px;
+	border: none;
+	color: #bbdde6;
+	background-color: #006ba6;
+	padding: 0.7rem 2rem;
+}
+footer form#form_0007 button:hover {
+	color: #006ba6;
+	background-color: #bbdde6;
+}
 
-@media screen and (max-width: 1024px) {
+
+@media screen and (max-width: 1090px) {
 	footer {
 		clear: both;
 		height: auto;
@@ -1902,6 +1980,8 @@ footer div.copy {
 	}
 	footer div.social {
 		width: 100%;
+	}
+	footer div.social ul {
 		padding: 1rem 35%;
 	}
 	footer div.social ul li {
@@ -1924,6 +2004,16 @@ footer div.copy {
 	footer div.copy {
 		margin: 1rem 15%;
 	}
+	footer form#form_0007 {
+		width: 100%;
+		text-align: center;
+		padding-top: 20px;
+	}
+	footer form#form_0007 label,
+	footer form#form_0007 input,
+	footer form#form_0007 button {
+		display: inline-block;
+	}
 }
 @media screen and (max-width: 666px) {
 	footer h6 {
@@ -1934,6 +2024,8 @@ footer div.copy {
 	}
 	footer div.social {
 		width: 100%;
+	}
+	footer div.social ul {
 		padding: 2rem 22% 0rem !important;
 	}
 	footer div.prodserv,
@@ -1947,6 +2039,12 @@ footer div.copy {
 	}
 	footer div.copy {
 		margin: 2rem 5%;
+	}
+	footer form#form_0007 {
+		padding: 10px 5% 0;
+	}
+	footer form#form_0007 input {
+	    width: 55%;
 	}
 }
 

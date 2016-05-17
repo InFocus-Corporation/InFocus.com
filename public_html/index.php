@@ -19,8 +19,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 <body class="" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
 	<div class="hero_row transparent-border-right-30-green hero-row--homepage">
-		<div class="row">
-			<div class="small-11 medium-7 large-5 columns lead_text">
+		<div class="row hero_inner">
+			<div class="hero_image"><img src="/resources/static/images/homepage/homepage-hero-a--wb-bertlitz.jpg" /></div>
+			<div class="small-6 medium-5 columns lead_text">
 				<h2 class="lead_text--headline">A better way to work</h2>
 				<p class="lead_text--paragraph">In a perfect world, every meeting is productive and every presentation engages the audience. We make the world a more perfect place.</p>
 			</div>
