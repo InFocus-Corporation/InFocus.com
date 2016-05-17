@@ -134,19 +134,19 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
     <!-- END VIDEO MODULE -->
     <!-- FEATURE MODULE A -->
-		<div class="row feature_module_a feature_module_a--collaborate">
-      <div class="small-12 medium-6 columns feature_text">
-					<h2 class="lead_text--secondary_headline">View & interact with all your critical information</h2>
-					<p class="lead_text--paragraph">Display all of your data sources and HD video conferencing feeds on up to 96 screens – customized for your board room, CxO office, or training center.</p>
-          <div class="feature_links">
-              <a href="/projectors/IN2120a-Series" class="feature_link">View ConX Wall</a>
-          </div>
-			</div>
-			<div class="small-12 medium-6 columns color_stripe_column">
-				<div class="white color_stripe"></div>
-	      <div class="light_blue color_stripe float-right"></div>
-			</div>
+	<div class="row feature_module_a feature_module_a--collaborate">
+        <div class="small-6 columns feature_text">
+			<h2 class="lead_text--secondary_headline">View & interact with all your critical information</h2>
+			<p class="lead_text--paragraph">Display all of your data sources and HD video conferencing feeds on up to 96 screens – customized for your board room, CxO office, or training center.</p>
+            <div class="feature_links">
+                <a href="/projectors/IN2120a-Series" class="feature_link">View ConX Wall</a>
+            </div>
 		</div>
+		<div class="small-6 columns color_stripe_column">
+			<div class="white color_stripe"></div>
+            <div class="light_blue color_stripe float-right"></div>
+		</div>
+	</div>
     <!-- END FEATURE MODULE A -->
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">
