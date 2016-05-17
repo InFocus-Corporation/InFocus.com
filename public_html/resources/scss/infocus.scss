@@ -494,40 +494,6 @@ header + .hero_row > .row {
       }
     }
   }
-  &.hero-row--header_module_collaborate {
-    background: $dark_gray url('../static/images/collaborate/collaborate-hero-a.jpg') left top no-repeat;
-    height: 600px;
-    .lead_text>:first-child {
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-    }
-    .module--tag:before {
-        border: 2px solid white;
-    }
-    .module--tag span{
-        color: white;
-        font-family: 'GoodPro-WideBook';
-        font-size: 12px;
-    }
-    .lead_text {
-      @include background-opacity($dark_gray);
-      height: 600px;
-      padding-left: 45px;
-      @media screen and (min-width: 40em) { padding-left: 95px; }
-
-    }
-    .lead_text--secondary_headline, .lead_text--paragraph {
-      color: $white;
-      clear: both;
-    }
-    .color_stripe.dark_blue, .color_stripe.white {
-        width: 20px;
-        @media screen and (min-width: 40em) { width: 115px; }
-    }
-    .color_stripe.white {
-        margin-left: 86px !important;
-    }
-  }
 
   .hero_inner {
       position: absolute;
