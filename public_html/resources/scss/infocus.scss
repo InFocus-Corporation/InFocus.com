@@ -408,27 +408,18 @@ header + .hero_row > .row {
         height: 100%;
         width: 60%;
         @media screen and (min-width: 64em) {
-          width: 55%;
+          width: 56%;
+        }
+        @media screen and (min-width: 90em) {
+          width: 830px;
         }
         img {
           height: 100%;
           right: 0;
-        }
-        &.present img {
-      
-        }
-        &.connect img {
-          @media screen and (min-width: 1717px) {
-            width: 100%;
+          @media scren and (min-width: 106em) {
             height: auto;
+            width: 100%;
             bottom: 0;
-          }
-        }
-        &.teach img {
-          @media screen and (min-width: 1530px) {
-            width: 100%;
-            height: auto;
-            top: 0;
           }
         }
       }
@@ -465,7 +456,7 @@ header + .hero_row > .row {
       }
       @media screen and (min-width: 90em) {
         position: absolute;
-        left: 50%;
+        left: 47em;
         margin-left: 0;
         width: 100%;
         padding-left: 95px;
@@ -1156,7 +1147,7 @@ div.video_module {
   overflow: hidden;
   min-height: 575px;
   .vertical_accordion--slide {
-    padding: 3em;
+    padding: 0em;
     width: 66.64%;
     position: absolute;
     height: 100%;
@@ -1177,13 +1168,15 @@ div.video_module {
       position: relative;
       z-index: 2;
       height: 100%;
+      & > a {padding: 2.35em;}
     }
     .module--tag--bottom {
       &:before {
         border: 0px;
       }
       position: absolute;
-      bottom: -11px;
+      bottom: 2.35em;
+      left: 2.35em;
     }
   }
   .vertical_accordion--slide:not(:target) {
