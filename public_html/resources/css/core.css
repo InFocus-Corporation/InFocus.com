@@ -275,7 +275,7 @@ header#masthead ul.menu > li > .submenu.explore h2 {
 }
 header#masthead ul.menu > li > .submenu.explore h3 {
 	font-size: 1.7em;
-	margin: 1.6em 0 1em;
+	margin: 1.2em 0 0.8em;
 }
 header#masthead ul.menu > li > .submenu.about a {
 	width: 100%;
@@ -301,7 +301,7 @@ header#masthead ul.menu > li > .submenu p {
 }
 header#masthead ul.menu > li > .submenu a svg {
 	width: auto;
-	height: 140px;
+	height: 120px;
 }
 header#masthead ul.menu > li > .submenu a:hover,
 header#masthead ul.menu > li > .submenu a:hover h3,
@@ -340,8 +340,14 @@ header#masthead ul.menu > li > .submenu.explore .container .menu-grid > ul > li 
 header#masthead ul.menu > li > .submenu.products .container .menu-grid > ul > li {
 	width: 20%;
 }
+header#masthead ul.menu > li > .submenu.products .container .menu-grid img {
+	height: 140px;
+}
 header#masthead ul.menu > li > .submenu.accessories .container .menu-grid > ul > li {
 	width: 16.666666667%;
+}
+header#masthead ul.menu > li > .submenu.accessories .container .menu-grid img {
+	height: 140px;
 }
 header#masthead ul.menu > li > .submenu.accessories .container .menu-grid > ul > li:nth-child(7) {
 	clear: left;
@@ -352,8 +358,9 @@ header#masthead ul.menu > li > .submenu.about .container .menu-grid > ul > li {
 header#masthead ul.menu > li > .submenu.about .container .menu-grid > ul > li:nth-child(4) {
 	clear: left;
 }
-header#masthead ul.menu > li > .submenu .container .menu-grid > ul > li a{
-	margin-bottom: 0.5em;
+header#masthead ul.menu > li > .submenu .container .menu-grid > ul > li a {
+	margin-bottom: 0.5rem;
+	line-height: 1.3rem;
 }
 header#masthead ul.menu > li > .submenu .container .menu-grid > ul > li a img{
 	background-color: white;
@@ -511,7 +518,7 @@ header#masthead.blue ul.menu.small > li .search {
 	}
 	header#masthead .products img,
 	header#masthead .accessories img {
-		width: 80%;
+		height: 100px;
 	}
 }
 @media only screen and (max-width: 1190px) {
@@ -683,12 +690,13 @@ header#masthead.blue ul.menu.small > li .search {
 	header#masthead .products img {
 		float: left;
 		width: 25%;
+		height: auto !important;
 		margin: 1em 10% 1em 15%;
 	}
-	header#masthead ul.menu > li > .submenu.products h3 {
+	header#masthead ul.menu > li > .submenu.products h3 a {
 		text-align: left;
 	}
-	header#masthead ul.menu > li > .submenu.products a {
+	header#masthead ul.menu > li > .submenu.products a:not(:first-child) {
 		text-align: left;
 		margin-left: 50%;
 		margin-bottom: 1rem !important;
@@ -709,6 +717,7 @@ header#masthead.blue ul.menu.small > li .search {
 	}
 	header#masthead .accessories img {
 		width: 60%;
+		height: auto !important;
 	}
 	header#masthead ul.menu > li > .submenu.accessories h4 {
 		font-size: 1.6rem;
@@ -763,7 +772,7 @@ header#masthead.blue ul.menu.small > li .search {
  	header#masthead ul.menu > li > .submenu.explore .container .menu-grid > ul > li svg {
 		float: left;
 		width: 110px;
-		margin: 0 2rem;
+		margin: 0 2rem 1rem;
 	}
 	header#masthead ul.menu > li > .submenu.explore h3,
 	header#masthead ul.menu > li > .submenu.explore p {
@@ -781,7 +790,7 @@ header#masthead.blue ul.menu.small > li .search {
 		width: 32%;
 		margin: 1em 9%;
 	}
-	header#masthead ul.menu > li > .submenu.products a {
+	header#masthead ul.menu > li > .submenu.products a:not(:first-child) {
 		font-size: 1rem;
 		margin-left: 50%;
 	}
@@ -2729,7 +2738,7 @@ margin-bottom:1em;
 
 .resultsList > li {
 	max-width:260px;
-	min-width:125px;
+	min-width:200px;
 	padding-left:0px;
 	width:25%;
 	display:inline-block;
