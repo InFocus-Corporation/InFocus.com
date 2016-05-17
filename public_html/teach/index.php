@@ -3,7 +3,6 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '"/>' . PHP_EOL;
 ?>
-
 <title>InFocus | Present</title>
 <meta name="description" content="Discover advanced projection equipment offered by InFocus. Global leader in LCD projectors and DLP projection, Mondopad products and projector accessories." />
 <meta name="keywords" content="infocus,mondopad,projector,projection,DLP,LCD,LCD display,digital display,visual communications,projector accessories,infocus company,digital technology,projection equipment,monopad, communication, touchscreen" />
@@ -20,12 +19,13 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
     <!-- HEADER MODULE C -->
 	<div class="hero_row hero-row--header_module_c">
-        <div class="color_stripe_column">
-            <div class="orange color_stripe"></div>
-            <div class="white color_stripe"></div>
-        </div>
-		<div class="row">
-			<div class="small-11 small-offset-1 medium-7 medium-offset-2 large-7 large-offset-5 columns lead_text">
+        <div class="row hero_inner_c">
+            <div class="hero_image"><img src="/resources/static/images/teach/InFocus-Lifestyle-JTouch-K12-MuscleDiagram-300dpi-CMYK.jpg" /></div>
+            <div class="color_stripe_column">
+                <div class="orange color_stripe"></div>
+                <div class="white color_stripe"></div>
+            </div>
+			<div class="small-6 small-offset-6 columns lead_text">
                 <div class="module--tag">
                     <span>Teach &amp; Train</span>
                 </div>
@@ -34,7 +34,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 				</h2>
 				<p class="lead_text--paragraph">Create an engaged classroom or training room with affordable technology that brings out the best in you and your students.</p>
 			</div>
-		</div>
+        </div>
 	</div>
     <!-- END HEADER MODULE C -->
     <br><br>
