@@ -132,12 +132,14 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 		<div class="small-12 medium-5 columns" data-equalizer-watch>
 			<div class="callout callout--picture">
-				<div class="callout--heading callout--heading--picture">
+				<!-- <div class="callout--heading callout--heading--picture">
 					<img src="http://placehold.it/1311x699" />
-				</div>
+				</div> -->
 				<div class="callout--copy">
-					<h5>Visit us at InfoComm 2016<br> Las Vegas Convention Center, June 8-10<br> Booth N1417</h5>
-					<a href="/about#events" class="link link--primary">learn more</a>
+					<h5><a href="http://www.infocommshow.org/">InfoComm</a><br> June 8 - 10, 2016<br> Las Vegas, NV</h5>
+					<h5><a href="http://www.ifsec.co.uk/Content/Welcome">IFSEC</a><br> June 21 - 23, 2016<br> London, England</h5>
+					<h5><a href="http://conference.iste.org/2016/">ISTE</a><br> June 27 - 29, 2016<br> Denver, CO</h5>
+					<a href="/about#events" class="link link--primary">View all events</a>
 				</div>
 			</div>
 		</div>

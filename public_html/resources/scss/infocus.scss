@@ -1249,6 +1249,13 @@ div.video_module {
     height: 100%;
   }
   .right {  float: right;}
+  h5 {
+    margin-bottom: 1em;
+    a {
+      color: $infocus_light_blue;
+      &:hover { color: $white; }
+    }
+  }
 }
 
 .callout {
@@ -1257,13 +1264,13 @@ div.video_module {
   background-color: $infocus_light_blue;
   border: 0px;
   border-radius: 3px;
-  .callout--copy h5 { margin-bottom: 2.55em;}
+  // .callout--copy h5 { margin-bottom: 2.55em;}
   &.callout--picture {
     padding: 0px;
     .callout--copy {
       text-align:center; color: $white;
       padding: 2em;
-      h5 { margin-bottom: 0em; }
+      // h5 { margin-bottom: 0em; }
       .link { margin: 1em 0em 0em; display: inline-block;}
     }
     background-color: $infocus_blue;
