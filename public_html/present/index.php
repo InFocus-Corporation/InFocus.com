@@ -38,6 +38,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
 	</div>
     <!-- END HEADER MODULE C -->
+
     <!-- MULTICOLUMN TEXT MODULE -->
     <div class="row multicolumn_text_module">
         <div class="small-12 columns text-center lead_text">
@@ -160,12 +161,14 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         <div class="small-12 medium-6 columns promo_module_d">
             <div class="module_image"></div>
             <div class="module_text">
-                <p class="lead_text--headline">
-                    Find the projector that's right for you.
-                </p>
-                <p class="lead_text--paragraph">
-                    Search by your room size, ambient light, connectivity, and more.
-                </p>
+                <div class="module_text_inner">
+                    <p class="lead_text--headline">
+                        Find the projector that's right for you.
+                    </p>
+                    <p class="lead_text--paragraph">
+                        Search by your room size, ambient light, connectivity, and more.
+                    </p>
+                </div>
             </div>
             <div class="module_links">
                 <a href="/product-finder" class="promo_module_link">
@@ -174,14 +177,14 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             </div>
         </div>
         <div class="small-12 medium-6 columns promo_module_c">
-            <div class="module_image">
-
-            </div>
-            <div class="module_text">
-                <p class="lead_text--headline">
-                    Explore solutions for teachers or video conferencing
-                </p>
-            </div>
+            <div class="module_image"></div>
+                <div class="module_text">
+                    <div class="module_text_inner">
+                        <p class="lead_text--headline">
+                            Explore solutions for teachers or video conferencing
+                        </p>
+                    </div>
+                </div>
             <div class="module_links">
                 <a href="/teach/" class="promo_module_link first_link">
                     Teaching &amp; <br>
