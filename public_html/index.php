@@ -115,7 +115,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 
 	<div class="row homepage--callouts" data-equalizer data-equalize-on="medium">
 		<div class="small-12 medium-7 columns" data-equalizer-watch>
-			<?php $latest_news = mysqli_fetch_array(mysqli_query($connection, 'SELECT id, title, teaser FROM articles WHERE postdate<NOW() AND lang="'.$lang.'" ORDER BY postdate DESC')); ?>
+			<?php $latest_news = mysqli_fetch_array(mysqli_query($connection, 'SELECT id, title, teaser FROM articles WHERE categories LIKE "%news%" AND postdate<NOW() AND lang="'.$lang.'" ORDER BY postdate DESC')); ?>
 			<div class="callout">
 				<div class="module--tag">
 					<span>latest news</span>
@@ -126,6 +126,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 				<div class="callout--copy">
 					<h5><?= $latest_news['teaser'] ?></h5>
 					<a href="/articles?<?= $latest_news['id'] ?>" class="button button--primary">learn more</a>
+					<a href="/about#news" class="right">View All News</a>
 				</div>
 			</div>
 		</div>
