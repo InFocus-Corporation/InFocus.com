@@ -75,7 +75,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 						</a>
 						<div class="module--tag module--tag--bottom">
 								<span><a class="cta" href="/teach/">Solutions to teach & train</a></span><br/>
-								<span><a class="cta" href="/teach/#inspire">Our Inspire education program</a></span>
+								<span><a class="cta" href="/inspire">Our Inspire education program</a></span>
 						</div>
 					</div>
 				</div>
