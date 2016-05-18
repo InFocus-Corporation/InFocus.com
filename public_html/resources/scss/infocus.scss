@@ -152,6 +152,14 @@ header + .hero_row > .row {
         border-right-width: 30px;
     }
     .hero_image {
+        right: -30px;
+        @media screen and (max-width: 62em) {
+          right: -18px;
+        }
+        @media screen and (max-width: 40em) {
+          right: -10px;
+        }
+
         img {
             left: -30%;
             height: 106%;
@@ -790,7 +798,7 @@ header + .hero_row > .row {
     }
     .light_blue.color_stripe.float-right {
         right: 0;
-        margin-right: -15px;
+        margin-right: 0;
         width: 25px;
         height: 100%;
         @media screen and (min-width: 40em) {
@@ -1041,9 +1049,8 @@ header + .hero_row > .row {
 
 .promo_modules {
     position: relative;
-    @media screen and (min-width: 40em) {
-        height: 0;
-        padding-bottom: 39%;
+    @media screen and (min-width: 62em) {
+        height: 500px;
     }
     .module_text {
         height: 140px;
@@ -1090,7 +1097,7 @@ header + .hero_row > .row {
         margin-bottom: 1em;
             @media screen and (min-width: 40em) {
                 margin-bottom: 0;
-                padding: 0 15px 0 0;
+                padding: 0;
                 position: absolute;
                 top: 0;
                 bottom: 0;
