@@ -33,7 +33,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	</div>
 	<div class="row">
 		<div class="small-12 medium-10 medium-offset-1 columns text-center">
-			<h2 class="lead_text--secondary_headline text-center"></h2>
+			<h2 class="lead_text--secondary_headline text-center">Supporting Your Success</h2>
 			<br/>
 			<h5>Whether you’re a schoolteacher or a CEO, a firefighter or someone who puts out fires every day at the office, people depend on you. We respect that and know the work you do is important.</h5>
 			<br/>
@@ -52,8 +52,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<div class="module--tag">
 								<span>For Public Sector</span>
 							</div>
-							<h2>Enable full situational awareness</h2>
-							<h5>Our visualization solutions help emergency, utility, military, and other critical sectors track their operations.</h5>
+							<h2>See everything, control everything</h2>
+							<h5>Our video conference and visualization solutions enable emergency, utility, military and other critical operations to monitor and connect any time, all the time, from anywhere.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
 							<span><a class="cta" href="/visualize/">Solutions for visualization</a></span><br/>
@@ -71,11 +71,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 								<span>for education</span>
 							</div>
 							<h2>Elevate the classroom experience</h2>
-							<h5>Is it possible to share informations with students in a better, more engaging and powerful way? We think so.</h5>
+							<h5>Is it possible to share and inspire students in a better, more engaging and more impactful way? Absolutely.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
 								<span><a class="cta" href="/teach/">Solutions to teach & train</a></span><br/>
-								<span><a class="cta" href="/teach/#inspire">Our Inspire education program</a></span>
+								<span><a class="cta" href="/inspire">Our Inspire education program</a></span>
 						</div>
 					</div>
 				</div>
@@ -88,8 +88,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<div class="module--tag">
 								<span>for business</span>
 							</div>
-							<h2>Improve profitability and teamwork</h2>
-							<h5>From the cubicle to the command center, our technologies can improve the way people at all levels of your company work.</h5>
+							<h2>Work smarter, better, faster</h2>
+							<h5>From the cubicle to the conference room to the command center, our solutions improve the way people work at all levels of your company.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
 							<span><a class="cta" href="/present/">Solutions for presentations</a></span><br/>
@@ -115,7 +115,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 
 	<div class="row homepage--callouts" data-equalizer data-equalize-on="medium">
 		<div class="small-12 medium-7 columns" data-equalizer-watch>
-			<?php $latest_news = mysqli_fetch_array(mysqli_query($connection, 'SELECT id, title, teaser FROM articles WHERE postdate<NOW() AND lang="'.$lang.'" ORDER BY postdate DESC')); ?>
+			<?php $latest_news = mysqli_fetch_array(mysqli_query($connection, 'SELECT id, title, teaser FROM articles WHERE categories LIKE "%news%" AND postdate<NOW() AND lang="'.$lang.'" ORDER BY postdate DESC')); ?>
 			<div class="callout">
 				<div class="module--tag">
 					<span>latest news</span>
@@ -126,17 +126,20 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 				<div class="callout--copy">
 					<h5><?= $latest_news['teaser'] ?></h5>
 					<a href="/articles?<?= $latest_news['id'] ?>" class="button button--primary">learn more</a>
+					<a href="/about#news" class="right">View All News</a>
 				</div>
 			</div>
 		</div>
 		<div class="small-12 medium-5 columns" data-equalizer-watch>
 			<div class="callout callout--picture">
-				<div class="callout--heading callout--heading--picture">
+				<!-- <div class="callout--heading callout--heading--picture">
 					<img src="http://placehold.it/1311x699" />
-				</div>
+				</div> -->
 				<div class="callout--copy">
-					<h5>Visit us at InfoComm 2016<br> Las Vegas Convention Center, June 8-10<br> Booth N1417</h5>
-					<a href="/about#events" class="link link--primary">learn more</a>
+					<h5><a href="http://www.infocommshow.org/">InfoComm</a><br> June 8 - 10, 2016<br> Las Vegas, NV</h5>
+					<h5><a href="http://www.ifsec.co.uk/Content/Welcome">IFSEC</a><br> June 21 - 23, 2016<br> London, England</h5>
+					<h5><a href="http://conference.iste.org/2016/">ISTE</a><br> June 27 - 29, 2016<br> Denver, CO</h5>
+					<a href="/about#events" class="link link--primary">View all events</a>
 				</div>
 			</div>
 		</div>
