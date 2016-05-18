@@ -205,6 +205,11 @@ header + .hero_row > .row {
         background: url('../static/images/collaborate/collaborate-video-b.jpg') right top no-repeat;
         background-size: cover;
         box-shadow: $box_shadow_gray;
+        span.single_line_span {
+          float: right;
+          max-width: 88%;
+          letter-spacing: -.01em;
+        }
     }
   }
   .hero_image {
