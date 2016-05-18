@@ -122,7 +122,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="/resources/documents/InFocus-Jupiter-Canvas-CRS-4K-Datasheet-EN.pdf">
+                                        <a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-CRS-4K-Datasheet-EN.pdf">
                                             <span class="title">Canvas CRS-4K</span><br>
                                             <span class="description">Conference Room System</span>
                                         </a>
@@ -132,9 +132,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                             <li>
                                                 Choose Language
                                                 <ul>
-                                                    <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="/resources/documents/InFocus-Jupiter-Canvas-CRS-4K-Datasheet-EN.pdf">English</a></li>
-                                                    <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="/resources/documents/InFocus-Jupiter-Canvas-CRS-4K-Datasheet-ES.pdf">Español</a></li>
-                                                    <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="/resources/documents/InFocus-Jupiter-Canvas-CRS-4K-Datasheet-RU.pdf">русский</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-CRS-4K-Datasheet-EN.pdf">English</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-CRS-4K-Datasheet-ES.pdf">Español</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-CRS-4K-Datasheet-RU.pdf">русский</a></li>
                                                 </ul>
                                             </li>
                                         </ul>

@@ -548,7 +548,7 @@ div.info #blurb {
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Jupiter-PixelNet-Datasheet" href="/resources/documents/InFocus-Jupiter-PixelNet-Datasheet-EN.pdf">
+                                        <a data-event="Jupiter-PixelNet-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-PixelNet-Datasheet-EN.pdf">
                                             <span class="title">PixelNet® Product Line Brochure</span><br>
                                             <span class="description">Benefits and specifications for PixelNet</span>
                                         </a>
@@ -557,7 +557,7 @@ div.info #blurb {
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Jupiter-PixelNet-Datasheet" href="/resources/documents/InFocus-Jupiter-PixelNet-DVI-Input-Node-Datasheet-EN.pdf">
+                                        <a data-event="Jupiter-PixelNet-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-PixelNet-DVI-Input-Node-Datasheet-EN.pdf">
                                             <span class="title">PixelNet® DVI Input Node Data Sheet</span><br>
                                         </a>
                                     </td>
@@ -565,7 +565,7 @@ div.info #blurb {
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Jupiter-PixelNet-Datasheet" href="/resources/documents/InFocus-Jupiter-PixelNet-Analog-HD-Input-Node-Datasheet-EN.pdf">
+                                        <a data-event="Jupiter-PixelNet-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-PixelNet-Analog-HD-Input-Node-Datasheet-EN.pdf">
                                             <span class="title">PixelNet® Analog HD Input Node Data Sheet</span><br>
                                         </a>
                                     </td>
@@ -573,7 +573,7 @@ div.info #blurb {
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Jupiter-PixelNet-Datasheet" href="/resources/documents/InFocus-Jupiter-PixelNet-Quad-SD-Input-Node-Datasheet-EN.pdf">
+                                        <a data-event="Jupiter-PixelNet-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-PixelNet-Quad-SD-Input-Node-Datasheet-EN.pdf">
                                             <span class="title">PixelNet® Quad SD Input Node Data Sheet</span><br>
                                         </a>
                                     </td>
@@ -581,7 +581,7 @@ div.info #blurb {
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Jupiter-PixelNet-Datasheet" href="/resources/documents/InFocus-Jupiter-PixelNet-3G-SDI-Input-Node-Datasheet-EN.pdf">
+                                        <a data-event="Jupiter-PixelNet-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-PixelNet-3G-SDI-Input-Node-Datasheet-EN.pdf">
                                             <span class="title">PixelNet® 3G-SDI Input Node Data Sheet</span><br>
                                         </a>
                                     </td>
@@ -589,7 +589,7 @@ div.info #blurb {
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Jupiter-PixelNet-Datasheet" href="/resources/documents/InFocus-Jupiter-PixelNet-Teammate-Output-Node-Datasheet-EN.pdf">
+                                        <a data-event="Jupiter-PixelNet-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-PixelNet-Teammate-Output-Node-Datasheet-EN.pdf">
                                             <span class="title">PixelNet® Teammate Output Node Data Sheet</span><br>
                                         </a>
                                     </td>
@@ -597,7 +597,7 @@ div.info #blurb {
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Jupiter-PixelNet-Datasheet" href="/resources/documents/InFocus-Jupiter-PixelNet-Audio-Output-Node-Datasheet-EN.pdf">
+                                        <a data-event="Jupiter-PixelNet-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-PixelNet-Audio-Output-Node-Datasheet-EN.pdf">
                                             <span class="title">PixelNet® Audio Output Node Data Sheet</span><br>
                                         </a>
                                     </td>
@@ -605,7 +605,7 @@ div.info #blurb {
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Jupiter-PixelNet-Datasheet" href="/resources/documents/InFocus-Jupiter-PixelNet-Warp-Blend-Node-Datasheet-EN.pdf">
+                                        <a data-event="Jupiter-PixelNet-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-PixelNet-Warp-Blend-Node-Datasheet-EN.pdf">
                                             <span class="title">PixelNet® Warp/Blend Node™ Data Sheet</span><br>
                                         </a>
                                     </td>

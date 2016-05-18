@@ -93,7 +93,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <p>Fusion Catalyst™ processors ship with ControlPoint Security™, airtight security tools indigenous to Jupiter’s ControlPoint™ wall management software suite.</p>
                           <p>ControlPoint Security features LDAP integration, pro­viding secure login with the standard user name and password controlled by the customer’s IT department.</p>
                           <p>With security defined at the object level, managers can create discrete management and access permissions for wall segments, layouts, inputs, applications, and remote cursor control. User activity and event logging are performed at sub-second resolution, allowing thorough forensic analysis.</p>
-                          <a href="/resources/documents/InFocus-Jupiter-ControlPoint-with-ControlPoint-Security-Datasheet-EN.pdf">Download ControlPoint with ControlPoint Security Data Sheet</a>
+                          <a href="//www.infocus.com/resources/documents/InFocus-Jupiter-ControlPoint-with-ControlPoint-Security-Datasheet-EN.pdf">Download ControlPoint with ControlPoint Security Data Sheet</a>
                           <hr/>
                       </div>
                     </div>
@@ -230,8 +230,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                   <tr class="">
                                       <td><img src="/resources/images/pdficon"></td>
                                       <td>
-                                          <a data-event="Fusion-Catalyst-Brochure" href="/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4000-8000-Datasheet-EN.pdf">
-                                              <span class="title">Fusion Catalyst 4000 & 8000</span><br>
+                                          <a data-event="Fusion-Catalyst-Brochure" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4000-8000-Datasheet-EN.pdf">
+                                              <span class="title">Fusion Catalyst 4000 &amp; 8000</span><br>
                                               <span class="description">Brochure</span>
                                           </a>
                                       </td>
@@ -240,7 +240,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                               <li>
                                                   Choose Language
                                                   <ul>
-                                                      <li><a data-event="Fusion-Catalyst-Brochure" href="/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4000-8000-Datasheet-EN.pdf">English</a></li>
+                                                      <li><a data-event="Fusion-Catalyst-Brochure" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Fusion-Catalyst-4000-8000-Datasheet-EN.pdf">English</a></li>
                                                   </ul>
                                               </li>
                                           </ul>
