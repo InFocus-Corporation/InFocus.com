@@ -1254,10 +1254,18 @@ div.video_module {
     background: url('/resources/static/images/teach/JTouch-classroom.jpg') left center no-repeat;
     background-size: cover;
   }
-  &.video_module_collaborate {
+  &.video_module_collaborate-a {
     background: url('/resources/static/images/collaborate/collaborate-video-a.jpg') left center no-repeat;
     background-size: cover;
     box-shadow: $box_shadow_gray;
+  }
+  &.video_module_collaborate-b {
+    background: url('/resources/static/images/collaborate/collaborate-video-b.jpg') left center no-repeat;
+    background-size: cover;
+    box-shadow: $box_shadow_gray;
+    h2 {
+      line-height: 1.7em;
+    }
   }
   .video_link {
     position: absolute;
