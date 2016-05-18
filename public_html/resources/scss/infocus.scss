@@ -152,6 +152,14 @@ header + .hero_row > .row {
         border-right-width: 30px;
     }
     .hero_image {
+        right: -30px;
+        @media screen and (max-width: 62em) {
+          right: -18px;
+        }
+        @media screen and (max-width: 40em) {
+          right: -10px;
+        }
+
         img {
             left: -30%;
             height: 106%;
@@ -163,6 +171,31 @@ header + .hero_row > .row {
                 right: 0%;
                 height: 110%;
             }
+        }
+    }
+    .lead_text>:first-child {
+        padding-left: 0;
+        margin-top: 0;
+        max-width: none;
+        @media screen and (min-width: 75em) {
+            padding-left: 15%;
+            padding-right: 15%;
+            margin-top: 88px;
+        }
+        @media screen and (min-width: 100em) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+    .lead_text--paragraph {
+        padding: 0;
+        @media screen and (min-width: 75em) {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+        @media screen and (min-width: 100em) {
+            padding-left: 100px;
+            padding-right: 100px;
         }
     }
   }
@@ -415,7 +448,7 @@ header + .hero_row > .row {
           right: 0;
         }
         &.present img {
-      
+
         }
         &.connect img {
           @media screen and (min-width: 1717px) {
@@ -780,7 +813,7 @@ header + .hero_row > .row {
     }
     .light_blue.color_stripe.float-right {
         right: 0;
-        margin-right: -15px;
+        margin-right: 0;
         width: 25px;
         height: 100%;
         @media screen and (min-width: 40em) {
@@ -1127,9 +1160,8 @@ header + .hero_row > .row {
 
 .promo_modules {
     position: relative;
-    @media screen and (min-width: 40em) {
-        height: 0;
-        padding-bottom: 39%;
+    @media screen and (min-width: 62em) {
+        height: 500px;
     }
     .module_text {
         height: 140px;
@@ -1176,7 +1208,7 @@ header + .hero_row > .row {
         margin-bottom: 1em;
             @media screen and (min-width: 40em) {
                 margin-bottom: 0;
-                padding: 0 15px 0 0;
+                padding: 0;
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -1306,7 +1338,7 @@ div.video_module {
   overflow: hidden;
   min-height: 575px;
   .vertical_accordion--slide {
-    padding: 3em;
+    padding: 0em;
     width: 66.64%;
     position: absolute;
     height: 100%;
@@ -1327,13 +1359,15 @@ div.video_module {
       position: relative;
       z-index: 2;
       height: 100%;
+      & > a {padding: 2.35em;}
     }
     .module--tag--bottom {
       &:before {
         border: 0px;
       }
       position: absolute;
-      bottom: -11px;
+      bottom: 2.35em;
+      left: 2.35em;
     }
   }
   .vertical_accordion--slide:not(:target) {
@@ -1360,7 +1394,8 @@ div.video_module {
   #slide3 {
     z-index: 3;
     right: -49.98%;
-    background-image: url('../static/images/homepage/homepage-accordion-c--IF-video-capture.jpg');
+    background-image: url('../static/images/homepage/homepage-accordion-c--1.jpg');
+    background-size: contain;
     .vertical_accordion--slide--background{
        @include background-opacity($infocus_orange);
     }
@@ -1397,6 +1432,14 @@ div.video_module {
   .callout {
     height: 100%;
   }
+  .right {  float: right;}
+  h5 {
+    margin-bottom: 1em;
+    a {
+      color: $infocus_light_blue;
+      &:hover { color: $white; }
+    }
+  }
 }
 
 .callout {
@@ -1405,13 +1448,13 @@ div.video_module {
   background-color: $infocus_light_blue;
   border: 0px;
   border-radius: 3px;
-  .callout--copy h5 { margin-bottom: 2.55em;}
+  // .callout--copy h5 { margin-bottom: 2.55em;}
   &.callout--picture {
     padding: 0px;
     .callout--copy {
       text-align:center; color: $white;
       padding: 2em;
-      h5 { margin-bottom: 0em; }
+      // h5 { margin-bottom: 0em; }
       .link { margin: 1em 0em 0em; display: inline-block;}
     }
     background-color: $infocus_blue;
@@ -1653,3 +1696,11 @@ div.video_module {
         background-size: cover;
     }
   }
+
+#kangaroo_page {
+    #kangaroo_hero {
+        .logo h1 {
+            color: #1BA1E2;
+        }
+    }
+}

@@ -49,6 +49,9 @@ RewriteCond %{HTTPS} on
 RewriteCond %{HTTP_HOST} ^infocus(.*)$ [NC]
 RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
 
+RewriteCond %{HTTP_HOST} !^www\.infocus\.com
+RewriteRule ^resources/documents/(.*) http://www.infocus.com/resources/documents/$1 [R=301,L]
+
 RewriteCond %{ENV:REDIRECT_STATUS} ^$
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^resources/documents/(.*?)-EN\.(.*)$ /resources/documents/$1.$2 [NC]

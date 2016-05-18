@@ -71,7 +71,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END TEXT MODULE A -->
-    <br><br><br>
     <!-- FEATURE MODULE JTOUCH -->
     <div class="video_module video_module_teach">
         <a href="/videos?1GWVuww_dXw">
@@ -81,7 +80,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </a>
     </div>
     <!-- END FEATURE MODULE JTOUCH -->
-    <br><br>
     <!-- FEATURE MODULE A -->
     <div class="row feature_module_a orange feature_module_a--orange">
         <div class="small-6 columns feature_text">
@@ -98,7 +96,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END FEATURE MODULE A -->
-    <br><br><br>
     <!-- FEATURE MODULE B -->
     <div class="row feature_module_b">
         <div class="small-12 medium-12 columns no-pad-left no-pad-right">
@@ -117,7 +114,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END FEATURE MODULE B -->
-    <br>
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">
         <div class="small-12 large-6 columns promo_module_d">
@@ -160,8 +156,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END PROMO MODULES C & D -->
-
-    <br><br><br><br>
     <!-- FEATURE MODULE A -->
     <div class="row feature_module_a feature_module_a--teach_blue">
         <div class="small-6 columns feature_text">
@@ -183,7 +177,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END FEATURE MODULE A -->
-    <br><br><br>
     <!-- TEXT MODULE -->
     <div class="row text_module">
         <div class="small-8 small-offset-2 columns text-center lead_text">
@@ -198,7 +191,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END TEXT MODULE -->
-    <br><br><br><br>
+    <br><br>
 
 	<script>
 	    $(document).foundation();
