@@ -52,8 +52,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<div class="module--tag">
 								<span>For Public Sector</span>
 							</div>
-							<h2>Enable full situational awareness</h2>
-							<h5>Our visualization solutions help emergency, utility, military, and other critical sectors track their operations.</h5>
+							<h2>See everything, control everything</h2>
+							<h5>Our video conference and visualization solutions enable emergency, utility, military and other critical operations to monitor and connect any time, all the time, from anywhere.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
 							<span><a class="cta" href="/visualize/">Solutions for visualization</a></span><br/>
@@ -71,7 +71,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 								<span>for education</span>
 							</div>
 							<h2>Elevate the classroom experience</h2>
-							<h5>Is it possible to share informations with students in a better, more engaging and powerful way? We think so.</h5>
+							<h5>Is it possible to share and inspire students in a better, more engaging and more impactful way? Absolutely.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
 								<span><a class="cta" href="/teach/">Solutions to teach & train</a></span><br/>
@@ -88,8 +88,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<div class="module--tag">
 								<span>for business</span>
 							</div>
-							<h2>Improve profitability and teamwork</h2>
-							<h5>From the cubicle to the command center, our technologies can improve the way people at all levels of your company work.</h5>
+							<h2>Work smarter, better, faster</h2>
+							<h5>From the cubicle to the conference room to the command center, our solutions improve the way people work at all levels of your company.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
 							<span><a class="cta" href="/present/">Solutions for presentations</a></span><br/>
