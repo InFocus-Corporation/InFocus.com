@@ -1245,16 +1245,47 @@ header + .hero_row > .row {
 
 div.video_module {
   position: relative;
-  background: url('/resources/static/images/teach/JTouch-classroom.jpg');
-  background-size: cover;
-  height: 825px;
+  height: 0;
+  padding-bottom: 60%;
+  @media screen and (min-width: 64em) {
+    height: 825px;
+  }
+  &.video_module_teach {
+    background: url('/resources/static/images/teach/JTouch-classroom.jpg') left center no-repeat;
+    background-size: cover;
+  }
+  &.video_module_collaborate {
+    background: url('/resources/static/images/collaborate/collaborate-video-a.jpg') left center no-repeat;
+    background-size: cover;
+    box-shadow: $box_shadow_gray;
+  }
+  .video_link {
+    position: absolute;
+    top: 45%;
+    transform: translateX(-50%);
+    left: 50%;
+  }
   h2.lead_text--secondary_headline {
-      position: absolute;
+      margin-bottom: 0;
+      white-space: nowrap;
       top: 50%;
-      margin: -70px 2em 0;
       color: #FFF;
       background: url('/resources/static/images/teach/play_button.png') left center no-repeat;
+      background-size: 10%;
       padding-left: 2em;
+      font-size: 1.2rem;
+      @media screen and (min-width: 30em) {
+        font-size: 1.8rem;
+      }
+      @media screen and (min-width: 50em) {
+        font-size: 2.5rem;
+      }
+      @media screen and (min-width: 64em) {
+        font-size: 3rem;
+      }
+      @media screen and (min-width: 74em) {
+        font-size: 3.75rem;
+      }
   }
 }
 

@@ -73,12 +73,12 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- END TEXT MODULE A -->
     <br><br><br>
     <!-- FEATURE MODULE JTOUCH -->
-    <div class="video_module">
-        <div class="row">
-            <a href="/videos?1GWVuww_dXw">
+    <div class="video_module video_module_teach">
+        <a href="/videos?1GWVuww_dXw">
+            <div class="video_link">
                 <h2 class="lead_text--secondary_headline">See how JTouch invigorated<br>a 5th grade classroom</h2>
-            </a>
-        </div>
+            </div>
+        </a>
     </div>
     <!-- END FEATURE MODULE JTOUCH -->
     <br><br>

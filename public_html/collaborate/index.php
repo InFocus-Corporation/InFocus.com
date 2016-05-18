@@ -120,18 +120,13 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     </div>
     <!-- END MULTICOLUMN TEXT MODULE -->
     <!-- VIDEO MODULE -->
-		<div class="hero_row hero-row--video_row hero-row--video_row_collaborate-a">
-			<div class="row">
-				<div class="small-12 medium-10 medium-offset-1 columns lead_text">
-					<h2 class="lead_text--secondary_headline">
-						<a href="http://www.infocus.vagrant.internal/videos?aGcZS6K92fk">
-							<img src="/resources/static/images/video-icon.png" />
-							See how ConX Video Meeting brings teams together
-						</a>
-					</h2>
-				</div>
-			</div>
-		</div>
+    <div class="video_module video_module_collaborate">
+        <a href="http://www.infocus.vagrant.internal/videos?aGcZS6K92fk">
+            <div class="video_link">
+                <h2 class="lead_text--secondary_headline">See how ConX Video Meeting<br>brings teams together</h2>
+            </div>
+        </a>
+    </div>
     <!-- END VIDEO MODULE -->
     <!-- FEATURE MODULE A -->
 	<div class="row feature_module_a feature_module_a--collaborate">
