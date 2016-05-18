@@ -165,6 +165,31 @@ header + .hero_row > .row {
             }
         }
     }
+    .lead_text>:first-child {
+        padding-left: 0;
+        margin-top: 0;
+        max-width: none;
+        @media screen and (min-width: 75em) {
+            padding-left: 15%;
+            padding-right: 15%;
+            margin-top: 88px;
+        }
+        @media screen and (min-width: 100em) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+    .lead_text--paragraph {
+        padding: 0;
+        @media screen and (min-width: 75em) {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+        @media screen and (min-width: 100em) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
   }
   &.hero-row--video_row {
     height: 720px;
@@ -415,7 +440,7 @@ header + .hero_row > .row {
           right: 0;
         }
         &.present img {
-      
+
         }
         &.connect img {
           @media screen and (min-width: 1717px) {
@@ -1156,7 +1181,7 @@ div.video_module {
   overflow: hidden;
   min-height: 575px;
   .vertical_accordion--slide {
-    padding: 3em;
+    padding: 0em;
     width: 66.64%;
     position: absolute;
     height: 100%;
@@ -1177,13 +1202,15 @@ div.video_module {
       position: relative;
       z-index: 2;
       height: 100%;
+      & > a {padding: 2.35em;}
     }
     .module--tag--bottom {
       &:before {
         border: 0px;
       }
       position: absolute;
-      bottom: -11px;
+      bottom: 2.35em;
+      left: 2.35em;
     }
   }
   .vertical_accordion--slide:not(:target) {
@@ -1535,3 +1562,11 @@ div.video_module {
         background-size: cover;
     }
   }
+
+#kangaroo_page {
+    #kangaroo_hero {
+        .logo h1 {
+            color: #1BA1E2;
+        }
+    }
+}
