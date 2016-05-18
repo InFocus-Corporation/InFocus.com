@@ -42,7 +42,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">Mondopad</h3>
-			<p class="lead_text--paragraph">Instantly bring people together from anywhere in the world to visually collaborate on the same content and do better work in less time.</p>
+			<p class="lead_text--paragraph">Work better together with Mondopad, the smart and easy touchscreen system for video conferencing, whiteboarding, data sharing and more.</p>
 			<a href="/displays/MONDOPAD-SERIES" class="button button--primary">learn more</a>
 		</div>
 	</div>
@@ -54,7 +54,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">ConX Wall and ConX Exec</h3>
-			<p class="lead_text--paragraph">Two highly-configurable solutions — ConX Wall or ConX Exec — perfect for board rooms, conference rooms, huddle rooms, CxO offices, training centers, and almost any other facility.</p>
+			<p class="lead_text--paragraph">Display all of your data sources and HD video conferencing feeds on up to 96 screens with this highly-configurable collaboration solution for board rooms, CxO offices, training centers and more.</p>
 			<a href="/conx-wall-exec" class="button button--primary">learn more</a>
 		</div>
 	</div>
@@ -67,7 +67,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">ConX Phone</h3>
-			<p class="lead_text--paragraph">This HD video phone enables effective visual communication with the ease of a standard phone so you can be more productive in your business interactions.</p>
+			<p class="lead_text--paragraph">Be more productive in your business interactions with the HD video phone that enables effective visual communication with the ease of a standard phone.</p>
 			<a href="/peripherals/MVP100" class="button button--primary">learn more</a>
 		</div>
 	</div>

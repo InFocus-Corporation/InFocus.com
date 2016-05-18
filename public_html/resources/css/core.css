@@ -520,7 +520,9 @@ header#masthead.blue ul.menu.small > li .search {
 }
 
 .show-on-mobile { display: none; }
-
+.img-responsive {
+  width: 100%;
+}
 @media only screen and (max-width: 1310px) {
 	header#masthead ul.menu {
 		margin-left: 2rem;
