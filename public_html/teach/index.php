@@ -70,7 +70,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END TEXT MODULE A -->
-    <br><br><br>
     <!-- FEATURE MODULE JTOUCH -->
     <div class="video_module">
         <div class="row">
@@ -80,7 +79,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END FEATURE MODULE JTOUCH -->
-    <br><br>
     <!-- FEATURE MODULE A -->
     <div class="row feature_module_a orange">
         <div class="small-6 columns feature_text">
@@ -97,7 +95,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END FEATURE MODULE A -->
-    <br><br><br>
     <!-- FEATURE MODULE B -->
     <div class="row feature_module_b">
         <div class="small-12 medium-12 columns no-pad-left no-pad-right">
@@ -116,7 +113,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END FEATURE MODULE B -->
-    <br>
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">
         <div class="small-12 large-6 columns promo_module_d">
@@ -159,8 +155,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END PROMO MODULES C & D -->
-
-    <br><br><br><br>
     <!-- FEATURE MODULE A -->
     <div class="row feature_module_a blue">
         <div class="small-12 medium-6 columns feature_text">
@@ -173,7 +167,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <li>Create a secure wireless network access point</li>
             </ul>
             <div class="feature_links">
-                <a href="/peripherals/INLITESHOW4" class="feature_link">View Lightshow 4 Wireless Adapter</a><br>
+                <a href="/peripherals/INLITESHOW4" class="feature_link">View Lightshow 4 Wireless Adapter</a>
                 <a href="http://www.thenerdyteacher.com/2015/03/infocus-liteshow4-makes-collaboration.html" target="blank" class="feature_link">Read How A Teacher Uses Liteshow 4</a>
             </div>
         </div>
@@ -182,7 +176,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END FEATURE MODULE A -->
-    <br><br><br>
     <!-- TEXT MODULE -->
     <div class="row text_module">
         <div class="small-8 small-offset-2 columns text-center lead_text">
@@ -197,7 +190,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END TEXT MODULE -->
-    <br><br><br><br>
+    <br><br>
 
 	<script>
 	    $(document).foundation();
