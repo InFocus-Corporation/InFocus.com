@@ -166,7 +166,6 @@ $(function() {
 
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">
-<<<<<<< HEAD
         <div class="small-12 medium-6 columns promo_module_d collaborate--promo_module_d">
             <div class="module_image"></div>
             <div class="module_text">
@@ -182,39 +181,17 @@ $(function() {
                         conx phone
                     </a>
                 </div>
-=======
-        <div class="small-12 large-6 columns promo_module_d collaborate--promo_module_d">
-            <div class="module_image">
-
-            </div>
-            <div class="module_text center-headline">
-                <p class="lead_text--headline">
-                    Video calling as easy as voice calling
-                </p>
-            </div>
-            <div class="module_links">
-                <a href="/peripherals/MVP100" class="promo_module_link">
-                    conx phone
-                </a>
->>>>>>> development
             </div>
         </div>
         <div class="small-12 medium-6 columns promo_module_c collaborate--promo_module_c">
             <div class="module_image"></div>
             <div class="module_text">
-<<<<<<< HEAD
                 <div class="module_text_inner">
                     <p class="lead_text--headline">
                         Hear every word.<br/>
     					See every face.
                     </p>
                 </div>
-=======
-                <p class="lead_text--headline">
-                    Hear every word.<br/>
-                                        See every face.
-                </p>
->>>>>>> development
             </div>
             <div class="module_links">
                 <div class="module_link_l">
