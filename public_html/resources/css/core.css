@@ -38,9 +38,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 0px;
     padding: 0px;
     border: 0px none;
-	font-family: 'GoodPro-Wide', sans-serif;
-	font-weight: normal;
-	font-size: 100%;
+  	font-family: 'GoodPro-Wide', sans-serif;
+  	font-weight: normal;
+  	font-size: 100%;
     font-style: inherit;
     font-variant: inherit;
     line-height: inherit;
@@ -1059,7 +1059,18 @@ color: #f66d26;
 	ul.large li {  }
 	li p {  }
 
-
+/* #Video Embed
+================================================== */
+iframe.vidframe {
+    height: 200px;
+    width: auto;
+}
+@media only screen and (min-width:945px){
+  iframe.vidframe {
+    height: 315px;
+    width: 560px;
+  }
+}
 /* #Forms
 ================================================== */
 form {
@@ -1530,6 +1541,10 @@ html{line-height:1em;}
   font-size: 60%;
   width: 100%;
 }
+.alternateDivChildL2 > li > div.image-set {
+max-width:55%;
+min-width:30%;
+}
 .C10, .C9, .C8, .C7, .C6, .C5, .C4, .C3, .C2, .C1, .C5_child > li:nth-child(odd),  .C5_child > div:nth-child(odd), .C5_child > li:nth-child(even),  .C5_child > div:nth-child(even), .C6x4_child > li:nth-child(odd),  .C6x4_child > div:nth-child(odd), .C6x4_child > li:nth-child(even),  .C6x4_child > div:nth-child(even), .C4x6_child > li:nth-child(odd),  .C4x6_child > div:nth-child(odd), .C4x6_child > li:nth-child(even),  .C4x6_child > div:nth-child(even), .C7x3_child > li:nth-child(odd),  .C7x3_child > div:nth-child(odd), .C7x3_child > li:nth-child(even),  .C7x3_child > div:nth-child(even), .C3x7_child > li:nth-child(odd),  .C3x7_child > div:nth-child(odd), .C3x7_child > li:nth-child(even),  .C3x7_child > div:nth-child(even), .C8x2_child > li:nth-child(odd),  .C8x2_child > div:nth-child(odd), .C8x2_child > li:nth-child(even), .C8x2_child > li:nth-child(odd),  .C8x2_child > div:nth-child(odd), .C8x2_child > li:nth-child(even),  .C8x2_child > div:nth-child(even) {width: 98%;}
 html{line-height:1em;}
 .alternateDivChildL2 > li > div:first-child, .alternateDivChildL2 > div > div:first-child {
@@ -1682,6 +1697,12 @@ border-image: url("/resources/images/svg/dotted_circle_line.svg") 10 repeat;
   border-top: 1px solid #ccc;
   margin-bottom: 3.15em;
 }
+.tabs > .active ul.C10.alternateDivChildL2 li:first-child {
+  border-top: 0px solid #ccc;
+}
+.tabs  #models.active {
+  border-bottom: 1px solid #ccc;
+}
 .tabs > .active {
   display: block;
   position: relative;
@@ -1718,11 +1739,6 @@ height:auto;
 .image-set {
 text-align:center;
 z-index: 10;
-}
-
-.alternateDivChildL2 > li > div.image-set {
-max-width:55%;
-min-width:30%;
 }
 
 .btn, a.btn {
