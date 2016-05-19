@@ -806,7 +806,11 @@ header + .hero_row > .row {
         background: url('/resources/static/images/teach/distance-learning-fire.jpg') right -45px top no-repeat;
         background-size: contain;
     }
-    &.feature_module_a--visualize .feature_text {  padding: 40px 124px 40px 35px; }
+    &.feature_module_a--visualize .feature_text {
+      @media screen and (min-width: 64em) {
+        padding: 40px 124px 40px 35px;
+      } 
+    }
 
     .color_stripe_column {
       min-height: 0;
@@ -1095,8 +1099,10 @@ header + .hero_row > .row {
     }
     &.feature_module_b--visualize .feature_text {
         @include background-opacity($infocus_blue);
-        margin: -303px auto 0;
-        padding: 50px 33px 0;
+        @media screen and (min-width: 64em) {
+          margin: -303px auto 0;
+          padding: 50px 33px 0;
+        }
     }
     .lead_text--secondary_headline {
         text-align: center;
@@ -1115,6 +1121,11 @@ header + .hero_row > .row {
         }
     }
     &.feature_module_b--teach .lead_text--secondary_headline {
+        @media screen and (min-width: 64em) {
+          font-size: 3.2rem;
+        }
+    }
+    &.feature_module_b--visualize .lead_text--secondary_headline {
         @media screen and (min-width: 64em) {
           font-size: 3.2rem;
         }
