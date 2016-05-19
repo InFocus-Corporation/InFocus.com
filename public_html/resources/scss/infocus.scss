@@ -73,13 +73,15 @@ body {
 .row {
   margin-top: 6em;
   margin-bottom: 4em;
-  max-width: 71.13rem;
-  @media screen and (min-width: 2200px) {max-width: none; }
+  max-width: 1174px;
 }
 header + .hero_row > .row {
     height: 100%;
     margin-top: 0px;
     max-width: 100%;
+}
+.hero_row {
+  @media screen and (min-width: 2200px) {max-width: none; }
 }
 .hero_row.row--full-height {
   height: auto;
@@ -152,6 +154,14 @@ header + .hero_row > .row {
         border-right-width: 30px;
     }
     .hero_image {
+        right: -30px;
+        @media screen and (max-width: 62em) {
+          right: -18px;
+        }
+        @media screen and (max-width: 40em) {
+          right: -10px;
+        }
+
         img {
             left: -30%;
             height: 106%;
@@ -795,7 +805,7 @@ header + .hero_row > .row {
     }
     .light_blue.color_stripe.float-right {
         right: 0;
-        margin-right: -15px;
+        margin-right: 0;
         width: 25px;
         height: 100%;
         @media screen and (min-width: 40em) {
@@ -1046,9 +1056,8 @@ header + .hero_row > .row {
 
 .promo_modules {
     position: relative;
-    @media screen and (min-width: 40em) {
-        height: 0;
-        padding-bottom: 39%;
+    @media screen and (min-width: 62em) {
+        height: 500px;
     }
     .module_text {
         height: 140px;
@@ -1095,7 +1104,7 @@ header + .hero_row > .row {
         margin-bottom: 1em;
             @media screen and (min-width: 40em) {
                 margin-bottom: 0;
-                padding: 0 15px 0 0;
+                padding: 0;
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -1180,8 +1189,6 @@ div.video_module {
 
 //Vertical Accordion
 .vertical_accordion {
-  margin-left: .9375rem;
-  margin-right: .9375rem;
   position: relative;
   overflow: hidden;
   min-height: 575px;
@@ -1225,6 +1232,7 @@ div.video_module {
   #slide1 {
     z-index: 1;
     background-image: url('../static/images/homepage/homepage-accordion-a--InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg');
+    background-size: cover;
     right: 33.32%;
     .vertical_accordion--slide--background{
        @include background-opacity($infocus_blue);
@@ -1233,6 +1241,7 @@ div.video_module {
   #slide2 {
     z-index: 2;
     background-image: url('../static/images/homepage/homepage-accordion-b--InFocus-Lifestyle-DigiEasel-Education-AsianTeacher-300dpi-CMYK');
+    background-size: cover;
     right: -33.32%;
     .vertical_accordion--slide--background{
         @include background-opacity($infocus_green);
@@ -1242,7 +1251,8 @@ div.video_module {
   #slide3 {
     z-index: 3;
     right: -49.98%;
-    background-image: url('../static/images/homepage/homepage-accordion-c--IF-video-capture.jpg');
+    background-image: url('../static/images/homepage/homepage-accordion-c--1.jpg');
+    background-size: contain;
     .vertical_accordion--slide--background{
        @include background-opacity($infocus_orange);
     }
@@ -1279,6 +1289,14 @@ div.video_module {
   .callout {
     height: 100%;
   }
+  .right {  float: right;}
+  h5 {
+    margin-bottom: 1em;
+    a {
+      color: $infocus_light_blue;
+      &:hover { color: $white; }
+    }
+  }
 }
 
 .callout {
@@ -1287,13 +1305,13 @@ div.video_module {
   background-color: $infocus_light_blue;
   border: 0px;
   border-radius: 3px;
-  .callout--copy h5 { margin-bottom: 2.55em;}
+  // .callout--copy h5 { margin-bottom: 2.55em;}
   &.callout--picture {
     padding: 0px;
     .callout--copy {
       text-align:center; color: $white;
       padding: 2em;
-      h5 { margin-bottom: 0em; }
+      // h5 { margin-bottom: 0em; }
       .link { margin: 1em 0em 0em; display: inline-block;}
     }
     background-color: $infocus_blue;
