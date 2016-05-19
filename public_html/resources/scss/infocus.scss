@@ -994,6 +994,13 @@ header + .hero_row > .row {
 }
 
 .multicolumn_text_module {
+    & > div {
+      position: relative;
+
+      .svg + p {
+        margin-top: 128px;
+      }
+    }
     font-family: 'GoodPro-WideLight';
     h1.lead_text--headline, h2.lead_text--headline{
       font-size: 60px;
@@ -1012,6 +1019,13 @@ header + .hero_row > .row {
         color: $infocus_blue;
     }
     .svg {
+      position: absolute;
+      top: 64px;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
       width:121px;
       * {  stroke: $infocus_orange; }
     }
@@ -1056,7 +1070,7 @@ header + .hero_row > .row {
 
 .promo_modules {
     position: relative;
-    @media screen and (min-width: 62em) {
+    @media screen and (min-width: 64em) {
         height: 500px;
     }
     .module_text {
@@ -1065,6 +1079,17 @@ header + .hero_row > .row {
         padding: 41px 45px 0px 45px;
         text-align: center;
         @include background-opacity($dark_gray);
+        
+        &.center-headline {
+          padding-top: 70px;
+          .lead_text--headline {
+            transform: translate(0,-50%);
+            -webkit-transform: translate(0,-50%);
+            -moz-transform: translate(0,-50%);
+            -ms-transform: translate(0,-50%);
+          }
+        }
+
         .lead_text--headline {
             font-size: 28px;
             font-family: 'GoodPro-WideLight';
@@ -1163,6 +1188,7 @@ header + .hero_row > .row {
         &.collaborate--promo_module_d .module_image {
             background: url('../static/images/collaborate/collaborate-promo_module_d.jpg');
             background-size: cover;
+            background-position: right bottom;
         }
         .module_text {
           padding-left: 15px;
