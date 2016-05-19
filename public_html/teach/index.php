@@ -3,7 +3,7 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '"/>' . PHP_EOL;
 ?>
-<title>InFocus | Present</title>
+<title>InFocus | Teach & Train</title>
 <meta name="description" content="Discover advanced projection equipment offered by InFocus. Global leader in LCD projectors and DLP projection, Mondopad products and projector accessories." />
 <meta name="keywords" content="infocus,mondopad,projector,projection,DLP,LCD,LCD display,digital display,visual communications,projector accessories,infocus company,digital technology,projection equipment,monopad, communication, touchscreen" />
 
@@ -79,7 +79,7 @@ $(function() {
         </div>
         <div class="small-12 large-4 columns text-center">
             <p class="lead_text--paragraph">
-                Connect devices wirelessly to your display and create a collaborative environment with an interactive whiteboard that also has a built-in web browser.
+                Connect devices wirelessly to your display and create a collaborative environment with an interactive whiteboard.
             </p>
             <br>
             <a href="/displays/JTOUCH-LightCast-SERIES" class="text_module_link">View Wireless Whiteboards</a>
@@ -193,7 +193,6 @@ $(function() {
                 <li>Display up to 4 devices at the same time</li>
                 <li>Moderate who can share their screen</li>
                 <li>Use your smartphone as a document camera</li>
-                <li>Create a secure wireless network access point</li>
             </ul>
             <div class="feature_links">
                 <a href="/peripherals/INLITESHOW4" class="feature_link">View Lightshow 4 Wireless Adapter</a>
@@ -211,7 +210,7 @@ $(function() {
             <a id="inspire" name="inspire"></a>
             <h1 class="lead_text--headline">Inspire Education Program</h1>
             <p class="lead_text--paragraph">
-                Your school can get special pricing, extended warranties and complimentary training when you buy select touchscreens or projectors from and authorized Inspire Dealer.
+                Your school can get special pricing, extended warranties and complimentary training when you buy select touchscreens or projectors from an authorized Inspire Dealer.
             </p>
             <a href="/inspire" class="text_module_link">
                 Learn how your school can save
