@@ -23,7 +23,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<div class="hero_image"><img src="/resources/static/images/homepage/homepage-hero-a--wb-bertlitz.jpg" /></div>
 			<div class="small-6 medium-5 columns lead_text">
 				<h2 class="lead_text--headline">A better way to work</h2>
-				<p class="lead_text--paragraph">In a perfect world, every meeting is productive and every presentation engages the audience. We make the world a more perfect place.</p>
+				<p class="lead_text--paragraph">What if every meeting were productive and every presentation delivered impact? They can be. Let us show you how we power great work.</p>
 			</div>
 			<div class="small-1 medium-3 color_stripe_column">
 				<div class="dark_blue color_stripe"></div>
