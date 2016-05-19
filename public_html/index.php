@@ -100,7 +100,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- VIDEO MODULE -->
 	<div class="video_module video_module_collaborate-b">
 	    <a href="http://www.infocus.vagrant.internal/videos?SNMjzPRQUA8">
@@ -124,7 +124,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 				<div class="callout--copy">
 					<h5><?= $latest_news['teaser'] ?></h5>
 					<a href="/articles?<?= $latest_news['id'] ?>" class="button button--primary">learn more</a>
-					<a href="/about#news" class="right">View All News</a>
+					<a href="/about#news" class="link link--primary link--inverted">View all news</a>
 				</div>
 			</div>
 		</div>
