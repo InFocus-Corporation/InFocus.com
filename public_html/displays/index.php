@@ -38,7 +38,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/touchscreens/InFocus-Lifestyle-Mondopad-DualScreen-LightOffice-300dpi-CMYK.jpg" alt="">
+			<img src="/resources/static/images/touchscreens/InFocus-Lifestyle-Mondopad-HallwayMeeting-Arch-Annotation-300dpi-CMYK.jpg" alt="">
 		</div>
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">Mondopad</h3>
@@ -54,7 +54,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">JTouch</h3>
-			<p class="lead_text--paragraph">Connect the InFocus JTouch touchscreen display to your notebook to create a bright, colorful touch experience that engages audiences in classrooms and beyond.</p>
+			<p class="lead_text--paragraph">Share your content on a bright, colorful touch experience that engages audiences in the classroom or meeting room with a JTouch flat panel touchscreen display.</p>
 			<a href="/displays/JTOUCH-Series" class="button button--primary">learn more</a>
 		</div>
 	</div>
@@ -66,8 +66,19 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">DigiEasel</h3>
-			<p class="lead_text--paragraph">Draw, write, and capture notes or share your device’s screen on a professional, high-tech interactive touch display that's affordable, fun to use and impressive to visitors.</p>
+			<p class="lead_text--paragraph">Draw, write, and capture notes or share your device’s screen on a professional interactive touch display that's affordable, fun to use and impressive to visitors.</p>
 			<a href="/displays/DigiEasel-Series" class="button button--primary">learn more</a>
+		</div>
+	</div>
+	<div class="row product_module">
+		<div class="small-7 medium-8 columns color_stripe_column">
+			<div class="white color_stripe"></div>
+			<img src="/resources/static/images/touchscreens/InFocus-Lifestyle-BigTouch-INF8012-Win10-2-300dpi-CMYK.jpg" alt="">
+		</div>
+		<div class="small-5 medium-4 columns product_text">
+			<h3 class="lead_text--secondary_headline">BigTouch</h3>
+			<p class="lead_text--paragraph">Utilize your software to customize this giant touch display with built-in PC for the specific needs of your shared work space.</p>
+			<a href="/displays/BIGTOUCH-Series" class="button button--primary">learn more</a>
 		</div>
 	</div>
 	<div class="row product_module">
@@ -77,19 +88,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">QTablet</h3>
-			<p class="lead_text--paragraph">InFocus Q Tablets have the power and features to be productive at work or school and entertained at home – all at great low prices.</p>
+			<p class="lead_text--paragraph">Be productive at work or school and entertained at home with a powerful, portable and feature-rich QTablet from InFocus.</p>
 			<a href="/displays/Q-Tablet-Series" class="button button--primary">learn more</a>
-		</div>
-	</div>
-	<div class="row product_module">
-		<div class="small-7 medium-8 columns color_stripe_column">
-			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/touchscreens/InFocus-INF5711-Win8-Front.jpg" alt="">
-		</div>
-		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline">BigTouch</h3>
-			<p class="lead_text--paragraph">Windows 8 combines the fun of a tablet with the productivity of a PC, and the InFocus BigTouch amplifies that beautiful, fast and fluid touch experience for your shared work space.</p>
-			<a href="/displays/BIGTOUCH-Series" class="button button--primary">learn more</a>
 		</div>
 	</div>
 

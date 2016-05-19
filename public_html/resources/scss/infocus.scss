@@ -73,13 +73,15 @@ body {
 .row {
   margin-top: 6em;
   margin-bottom: 4em;
-  max-width: 71.13rem;
-  @media screen and (min-width: 2200px) {max-width: none; }
+  max-width: 1174px;
 }
 header + .hero_row > .row {
     height: 100%;
     margin-top: 0px;
     max-width: 100%;
+}
+.hero_row {
+  @media screen and (min-width: 2200px) {max-width: none; }
 }
 .hero_row.row--full-height {
   height: auto;
@@ -152,6 +154,14 @@ header + .hero_row > .row {
         border-right-width: 30px;
     }
     .hero_image {
+        right: -30px;
+        @media screen and (max-width: 62em) {
+          right: -18px;
+        }
+        @media screen and (max-width: 40em) {
+          right: -10px;
+        }
+
         img {
             left: -30%;
             height: 106%;
@@ -163,6 +173,31 @@ header + .hero_row > .row {
                 right: 0%;
                 height: 110%;
             }
+        }
+    }
+    .lead_text>:first-child {
+        padding-left: 0;
+        margin-top: 0;
+        max-width: none;
+        @media screen and (min-width: 75em) {
+            padding-left: 15%;
+            padding-right: 15%;
+            margin-top: 88px;
+        }
+        @media screen and (min-width: 100em) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+    .lead_text--paragraph {
+        padding: 0;
+        @media screen and (min-width: 75em) {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+        @media screen and (min-width: 100em) {
+            padding-left: 100px;
+            padding-right: 100px;
         }
     }
   }
@@ -180,6 +215,11 @@ header + .hero_row > .row {
         background: url('../static/images/collaborate/collaborate-video-b.jpg') right top no-repeat;
         background-size: cover;
         box-shadow: $box_shadow_gray;
+        span.single_line_span {
+          float: right;
+          max-width: 88%;
+          letter-spacing: -.01em;
+        }
     }
   }
   .hero_image {
@@ -403,6 +443,7 @@ header + .hero_row > .row {
       position: absolute;
       width: 100%;
       overflow: hidden;
+      min-height: 250px;
       .hero_image {
         right: auto;
         height: 100%;
@@ -414,10 +455,7 @@ header + .hero_row > .row {
           height: 100%;
           right: 0;
         }
-        &.present img {
-      
-        }
-        &.connect img {
+        &.connect img, &.visualize img {
           @media screen and (min-width: 1717px) {
             width: 100%;
             height: auto;
@@ -491,6 +529,7 @@ header + .hero_row > .row {
       @media screen and (min-width: 64em) {
         margin-bottom: 2rem;
         font-size: 60px;
+        margin-top: 1.75em;
       }
     }
     .lead_text--paragraph {
@@ -510,7 +549,7 @@ header + .hero_row > .row {
         }
         @media screen and (min-width: 64em) {
           font-size: 20px;
-          line-height: 1.6;
+          line-height: 1.5;
         }
     }
     .color_stripe.dark_blue, .color_stripe.white {
@@ -729,6 +768,9 @@ header + .hero_row > .row {
     &.feature_module_a--collaborate {
         background: $med_gray url('../static/images/collaborate/collaborate-feature-module-a.jpg') bottom right no-repeat;
     }
+    &.feature_module_a--visualize {
+        background: $med_gray url('../static/images/visualize/visualize-feature-module-a.jpg') bottom right no-repeat;
+    }
     @media screen and (min-width: 64em) {
       height: 600px;
       padding-bottom: 0;
@@ -750,7 +792,10 @@ header + .hero_row > .row {
           height: 100%;
         }
     }
-    &.feature_module_a--orange .feature_text, &.feature_module_a--collaborate .feature_text {
+
+    &.feature_module_a--orange .feature_text,
+    &.feature_module_a--collaborate .feature_text,
+    &.feature_module_a--visualize .feature_text {
         @include background-opacity($infocus_orange);
     }
     &.feature_module_a--teach_blue {
@@ -761,6 +806,8 @@ header + .hero_row > .row {
         background: url('/resources/static/images/teach/distance-learning-fire.jpg') right -45px top no-repeat;
         background-size: contain;
     }
+    &.feature_module_a--visualize .feature_text {  padding: 40px 124px 40px 35px; }
+
     .color_stripe_column {
       min-height: 0;
       height: 100%;
@@ -780,7 +827,7 @@ header + .hero_row > .row {
     }
     .light_blue.color_stripe.float-right {
         right: 0;
-        margin-right: -15px;
+        margin-right: 0;
         width: 25px;
         height: 100%;
         @media screen and (min-width: 40em) {
@@ -989,6 +1036,10 @@ header + .hero_row > .row {
         background: url('../static/images/collaborate/collaborate-feature-module-b.jpg');
         background-size: cover;
     }
+    &.feature_module_b--visualize .module_image {
+        background: url('../static/images/visualize/visualize-feature-module-b.jpg');
+        background-size: cover;
+    }
     .feature_text {
         display: block;
         position: relative;
@@ -1015,6 +1066,12 @@ header + .hero_row > .row {
     &.feature_module_b--collaborate .feature_text {
         @include background-opacity($infocus_green);
         margin: -270px auto 0;
+
+    }
+    &.feature_module_b--visualize .feature_text {
+        @include background-opacity($infocus_blue);
+        margin: -303px auto 0;
+        padding: 50px 33px 0;
     }
     .lead_text--secondary_headline {
         text-align: center;
@@ -1065,6 +1122,13 @@ header + .hero_row > .row {
 }
 
 .multicolumn_text_module {
+    & > div {
+      position: relative;
+
+      .svg + p {
+        margin-top: 128px;
+      }
+    }
     font-family: 'GoodPro-WideLight';
     h1.lead_text--headline, h2.lead_text--headline{
       font-size: 60px;
@@ -1075,6 +1139,7 @@ header + .hero_row > .row {
     h2.lead_text--headline { font-size: 40px; }
     .lead_text--paragraph {
         font-size: 20px;
+        line-height: 1.5;
     }
     .text_module_link {
         font-family: 'GoodPro-WideBook';
@@ -1083,7 +1148,15 @@ header + .hero_row > .row {
         color: $infocus_blue;
     }
     .svg {
+      position: absolute;
+      top: 64px;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
       width:121px;
+      height: 121px;
       * {  stroke: $infocus_orange; }
     }
 }
@@ -1127,9 +1200,8 @@ header + .hero_row > .row {
 
 .promo_modules {
     position: relative;
-    @media screen and (min-width: 40em) {
-        height: 0;
-        padding-bottom: 39%;
+    @media screen and (min-width: 64em) {
+        height: 500px;
     }
     .module_text {
         height: 140px;
@@ -1137,6 +1209,17 @@ header + .hero_row > .row {
         padding: 41px 45px 0px 45px;
         text-align: center;
         @include background-opacity($dark_gray);
+        
+        &.center-headline {
+          padding-top: 70px;
+          .lead_text--headline {
+            transform: translate(0,-50%);
+            -webkit-transform: translate(0,-50%);
+            -moz-transform: translate(0,-50%);
+            -ms-transform: translate(0,-50%);
+          }
+        }
+
         .lead_text--headline {
             font-size: 28px;
             font-family: 'GoodPro-WideLight';
@@ -1176,7 +1259,7 @@ header + .hero_row > .row {
         margin-bottom: 1em;
             @media screen and (min-width: 40em) {
                 margin-bottom: 0;
-                padding: 0 15px 0 0;
+                padding: 0;
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -1223,7 +1306,7 @@ header + .hero_row > .row {
             }
         .module_image {
             height: 387px;
-            background: url('../static/images/present/present-promo_module_d.jpg');
+            background: url('../static/images/teach/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg');
             background-size: cover;
             @media screen and (min-width: 40em) {
                 height: 100%;
@@ -1235,6 +1318,7 @@ header + .hero_row > .row {
         &.collaborate--promo_module_d .module_image {
             background: url('../static/images/collaborate/collaborate-promo_module_d.jpg');
             background-size: cover;
+            background-position: right bottom;
         }
         .module_text {
           padding-left: 15px;
@@ -1300,13 +1384,11 @@ div.video_module {
 
 //Vertical Accordion
 .vertical_accordion {
-  margin-left: .9375rem;
-  margin-right: .9375rem;
   position: relative;
   overflow: hidden;
   min-height: 575px;
   .vertical_accordion--slide {
-    padding: 3em;
+    padding: 0em;
     width: 66.64%;
     position: absolute;
     height: 100%;
@@ -1327,13 +1409,15 @@ div.video_module {
       position: relative;
       z-index: 2;
       height: 100%;
+      & > a {padding: 2.35em;}
     }
     .module--tag--bottom {
       &:before {
         border: 0px;
       }
       position: absolute;
-      bottom: -11px;
+      bottom: 2.35em;
+      left: 2.35em;
     }
   }
   .vertical_accordion--slide:not(:target) {
@@ -1343,6 +1427,7 @@ div.video_module {
   #slide1 {
     z-index: 1;
     background-image: url('../static/images/homepage/homepage-accordion-a--InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg');
+    background-size: cover;
     right: 33.32%;
     .vertical_accordion--slide--background{
        @include background-opacity($infocus_blue);
@@ -1351,6 +1436,7 @@ div.video_module {
   #slide2 {
     z-index: 2;
     background-image: url('../static/images/homepage/homepage-accordion-b--InFocus-Lifestyle-DigiEasel-Education-AsianTeacher-300dpi-CMYK');
+    background-size: cover;
     right: -33.32%;
     .vertical_accordion--slide--background{
         @include background-opacity($infocus_green);
@@ -1360,7 +1446,8 @@ div.video_module {
   #slide3 {
     z-index: 3;
     right: -49.98%;
-    background-image: url('../static/images/homepage/homepage-accordion-c--IF-video-capture.jpg');
+    background-image: url('../static/images/homepage/homepage-accordion-c--1.jpg');
+    background-size: contain;
     .vertical_accordion--slide--background{
        @include background-opacity($infocus_orange);
     }
@@ -1397,6 +1484,14 @@ div.video_module {
   .callout {
     height: 100%;
   }
+  .right {  float: right;}
+  h5 {
+    margin-bottom: 1em;
+    a {
+      color: $infocus_light_blue;
+      &:hover { color: $white; }
+    }
+  }
 }
 
 .callout {
@@ -1405,13 +1500,13 @@ div.video_module {
   background-color: $infocus_light_blue;
   border: 0px;
   border-radius: 3px;
-  .callout--copy h5 { margin-bottom: 2.55em;}
+  // .callout--copy h5 { margin-bottom: 2.55em;}
   &.callout--picture {
     padding: 0px;
     .callout--copy {
       text-align:center; color: $white;
       padding: 2em;
-      h5 { margin-bottom: 0em; }
+      // h5 { margin-bottom: 0em; }
       .link { margin: 1em 0em 0em; display: inline-block;}
     }
     background-color: $infocus_blue;
@@ -1653,3 +1748,11 @@ div.video_module {
         background-size: cover;
     }
   }
+
+#kangaroo_page {
+    #kangaroo_hero {
+        .logo h1 {
+            color: #1BA1E2;
+        }
+    }
+}
