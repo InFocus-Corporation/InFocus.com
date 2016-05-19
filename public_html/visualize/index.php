@@ -78,7 +78,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     						<p class="lead_text--paragraph">Make well-informed decisions faster when your teams understand and share a common operating picture consisting of real-time video and data. </p>
                 <br><br>
                 <div class="feature_links">
-                    <a href="/displays/MONDOPAD-SERIES" class="feature_link">Watch Video</a><br>
+                    <a href="http://www.infocus.com/videos?kjVCe1-mZ9g" class="feature_link">Watch Video</a><br>
                 </div>
 
             </div>
