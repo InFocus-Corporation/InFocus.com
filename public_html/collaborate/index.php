@@ -143,40 +143,47 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 	</div>
     <!-- END FEATURE MODULE A -->
+
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">
-        <div class="small-12 large-6 columns promo_module_d collaborate--promo_module_d">
-            <div class="module_image">
-
-            </div>
+        <div class="small-12 medium-6 columns promo_module_d collaborate--promo_module_d">
+            <div class="module_image"></div>
             <div class="module_text">
-                <p class="lead_text--headline">
-                    Video calling as easy as voice calling
-                </p>
+                <div class="module_text_inner">
+                    <p class="lead_text--headline">
+                        Video calling as easy as voice calling
+                    </p>
+                </div>
             </div>
             <div class="module_links">
-                <a href="/product-finder" class="promo_module_link">
-                    conx phone
-                </a>
+                <div>
+                    <a href="/product-finder" class="promo_module_link">
+                        conx phone
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="small-12 large-6 columns promo_module_c collaborate--promo_module_c">
-            <div class="module_image">
-
-            </div>
+        <div class="small-12 medium-6 columns promo_module_c collaborate--promo_module_c">
+            <div class="module_image"></div>
             <div class="module_text">
-                <p class="lead_text--headline">
-                    Hear every word.<br/>
-										See every face.
-                </p>
+                <div class="module_text_inner">
+                    <p class="lead_text--headline">
+                        Hear every word.<br/>
+    					See every face.
+                    </p>
+                </div>
             </div>
             <div class="module_links">
-                <a href="/teach/" class="promo_module_link">
-                    Thunder speakerphone
-                </a>
-                <a href="/collaborate/" class="promo_module_link">
-                    realcam ptz camera
-                </a>
+                <div class="module_link_l">
+                    <a href="/teach/" class="promo_module_link first_link">
+                        Thunder speakerphone
+                    </a>
+                </div>
+                <div class="module_link_r">
+                    <a href="/collaborate/" class="promo_module_link">
+                        realcam ptz camera
+                    </a>
+                </div>
             </div>
         </div>
     </div>

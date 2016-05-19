@@ -1238,8 +1238,17 @@ header + .hero_row > .row {
         position: relative;
         height: 65px;
         text-align: center;
-
+        div {
+          display: inline-block;
+          width: 100%;
+          position: absolute;
+          top: 44%;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
         .promo_module_link {
+            padding: 0 6px;
             display: inline-block;
             color: $infocus_light_blue;
             text-transform: uppercase;
@@ -1247,11 +1256,7 @@ header + .hero_row > .row {
             -webkit-font-feature-settings: "liga" 0;
             font-size: 10px;
             letter-spacing: 0.15em;
-            margin-top: 32px;
-            transform: translate(0,-50%);
-            -webkit-transform: translate(0,-50%);
-            -moz-transform: translate(0,-50%);
-            -ms-transform: translate(0,-50%);
+            transform: translateY(-50%);
             @media screen and (min-width: 30em) {
               font-size: 12px;
             }
@@ -1259,7 +1264,6 @@ header + .hero_row > .row {
               font-size: 10px;
             }
         }
-
     }
     .promo_module_c {
         padding: 0;
@@ -1302,8 +1306,27 @@ header + .hero_row > .row {
             }
           }
         }
+        .module_links {
+          div {
+            width: 50%;
+          }
+          .module_link_l {
+            top: 44%;
+            bottom: 0;
+            right: 50%;
+            left: 0;
+            position: absolute;
+          }
+          .module_link_r {
+            top: 44%;
+            bottom: 0;
+            right: 0;
+            left: 50%;
+            position: absolute;
+          }
+        }
         .promo_module_link {
-            width: 49%;
+            width: 100%;
             display: inline-block;
         }
         .promo_module_link.first_link {
@@ -1313,8 +1336,9 @@ header + .hero_row > .row {
     .promo_module_d {
         padding: 0;
         position: relative;
-        margin-bottom: 1em;
+        margin-bottom: 3em;
         @media screen and (min-width: 40em) {
+            margin-bottom: 1em;
             margin-bottom: 0;
             padding-left: .625rem;
             padding-right: .625rem;
@@ -1336,9 +1360,21 @@ header + .hero_row > .row {
                 height: 387px;
             }
         }
-        &.collaborate--promo_module_d .module_image {
+        &.collaborate--promo_module_d {
+          .module_image {
             background: url('../static/images/collaborate/collaborate-promo_module_d.jpg');
             background-size: cover;
+          }
+          .module_text_inner {
+            top: 0;
+            height: 100%;
+            .lead_text--headline {
+              top: 45%;
+              transform: translateY(-50%);
+              position: absolute;
+              width: 94%;
+            }
+          }
         }
     }
 }

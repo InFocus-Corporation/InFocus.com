@@ -156,6 +156,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END FEATURE MODULE A -->
+
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">
         <div class="small-12 medium-6 columns promo_module_d">
@@ -171,9 +172,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 </div>
             </div>
             <div class="module_links">
-                <a href="/product-finder" class="promo_module_link">
-                    Projector Finder
-                </a>
+                <div>
+                    <a href="/product-finder" class="promo_module_link">
+                        Projector Finder
+                    </a>
+                </div>
             </div>
         </div>
         <div class="small-12 medium-6 columns promo_module_c">
@@ -186,14 +189,18 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     </div>
                 </div>
             <div class="module_links">
-                <a href="/teach/" class="promo_module_link first_link">
-                    Teaching &amp; <br>
-                    Training Solutions
-                </a>
-                <a href="/collaborate/" class="promo_module_link">
-                    Collaboration <br>
-                    Solutions
-                </a>
+                <div class="module_link_l">
+                    <a href="/teach/" class="promo_module_link first_link">
+                        Teaching &amp; <br>
+                        Training Solutions
+                    </a>
+                </div>
+                <div class="module_link_r">
+                    <a href="/collaborate/" class="promo_module_link">
+                        Collaboration <br>
+                        Solutions
+                    </a>
+                </div>
             </div>
         </div>
     </div>
