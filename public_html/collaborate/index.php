@@ -14,6 +14,28 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $homedir.'/resources/overviews/', 'admin,salespublisher,saleseditor,marketingpublisher,marketingeditor,editor', ".src", "overview", "true", "SavePage","overview");}
 
 ?>
+
+<script>
+var moduleBHeight = function() {
+    var width = $(window).width();
+    var featureModule = $('.feature_module_b');
+    var featureTextHeight = featureModule.find('.feature_text').height();
+
+    if (width < 1025) {
+        var newMargin = featureTextHeight;
+        featureModule.css('margin-bottom', newMargin);
+    } else {
+        featureModule.css('margin-bottom','');
+    }
+}
+
+$(function() {
+    moduleBHeight();
+    $(window).resize(function() {
+        moduleBHeight();
+    });
+});
+</script>
 </head>
 <body class="" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
@@ -81,16 +103,14 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- END MULTICOLUMN TEXT MODULE -->
     <!-- FEATURE MODULE B -->
     <div class="row feature_module_b feature_module_b--collaborate">
-        <div class="small-12 columns">
+        <div class="small-12 columns hero_inner">
             <div class="module_image"></div>
             <div class="feature_text text-center">
-                <h2 class="lead_text--secondary_headline">Work better together</h3>
-    						<p class="lead_text--paragraph">Get more from your meetings with the award-winning touchscreen solution for presenting, video conferencing, whiteboarding, and more.</p>
-                <br><br>
+                <h2 class="lead_text--secondary_headline">Work better together</h2>
+    			<p class="lead_text--paragraph">Get more from your meetings with the award-winning touchscreen solution for presenting, video conferencing, whiteboarding, and more.</p>
                 <div class="feature_links">
                     <a href="/displays/MONDOPAD-SERIES" class="feature_link">View Mondopad collaboration displays</a><br>
                 </div>
-
             </div>
         </div>
     </div>

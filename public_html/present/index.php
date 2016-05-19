@@ -103,16 +103,13 @@ $(function() {
     <!-- FEATURE MODULE B -->
     <div class="row feature_module_b">
         <div class="small-12 columns hero_inner">
-            <div class="module_image">
-
-            </div>
+            <div class="module_image"></div>
             <div class="feature_text text-center">
-                <h2 class="lead_text--secondary_headline widelight">Capture ideas on a<br>digital canvas</h3>
+                <h2 class="lead_text--secondary_headline widelight">Capture ideas on a<br>digital canvas</h2>
                 <p class="lead_text--paragraph">Take notes, draw and save the work with the same touchscreen device you're presenting on. It's the efficient, economical, and odor-free answer to dry erase.</p>
                 <div class="feature_links">
                     <a href="/displays/JTOUCH-Series" class="feature_link">View Whiteboard Displays</a><br>
                 </div>
-
             </div>
         </div>
     </div>

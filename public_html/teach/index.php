@@ -14,6 +14,28 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $homedir.'/resources/overviews/', 'admin,salespublisher,saleseditor,marketingpublisher,marketingeditor,editor', ".src", "overview", "true", "SavePage","overview");}
 
 ?>
+
+<script>
+var moduleBHeight = function() {
+    var width = $(window).width();
+    var featureModule = $('.feature_module_b');
+    var featureTextHeight = featureModule.find('.feature_text').height();
+
+    if (width < 1025) {
+        var newMargin = featureTextHeight;
+        featureModule.css('margin-bottom', newMargin);
+    } else {
+        featureModule.css('margin-bottom','');
+    }
+}
+
+$(function() {
+    moduleBHeight();
+    $(window).resize(function() {
+        moduleBHeight();
+    });
+});
+</script>
 </head>
 <body class="page--teach" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
@@ -96,20 +118,17 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END FEATURE MODULE A -->
-    <!-- FEATURE MODULE B -->
-    <div class="row feature_module_b">
-        <div class="small-12 medium-12 columns no-pad-left no-pad-right">
-            <div class="module_image">
 
-            </div>
-            <div class="feature_text text-center grey">
-                <h2 class="lead_text--secondary_headline">Utilize your hardware and software</h2>
+    <!-- FEATURE MODULE B -->
+    <div class="row feature_module_b feature_module_b--teach">
+        <div class="small-12 columns hero_inner">
+            <div class="module_image"></div>
+            <div class="feature_text text-center">
+                <h2 class="lead_text--secondary_headline">Utilize your hardware<br>and software</h2>
     			<p class="lead_text--paragraph">Your IT and finance departments will appreciate that our JTouch Whiteboards and displays work with the computers, tablets and software you already use.</p>
-                <br><br>
                 <div class="feature_links">
                     <a href="/displays/JTOUCH-Whiteboard-SERIES" class="feature_link">View Whiteboard Displays</a><br>
                 </div>
-
             </div>
         </div>
     </div>

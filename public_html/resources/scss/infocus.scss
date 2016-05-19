@@ -1026,6 +1026,10 @@ header + .hero_row > .row {
         background: url('../static/images/collaborate/collaborate-feature-module-b.jpg');
         background-size: cover;
     }
+    &.feature_module_b--teach .module_image {
+        background: url('../static/images/teach/InFocus-Lifestyle-JTouch-Whiteboard-Classroom-Molecules-300dpi-CMYK.jpg');
+        background-size: cover;
+    }
     .feature_text {
         display: block;
         position: relative;
@@ -1040,10 +1044,11 @@ header + .hero_row > .row {
         @media screen and (min-width: 40em) {
           min-width: 40em;
           padding: 30px 40px 0;
-          margin: -155px auto 0;
+          margin-top: -155px;
         }
         @media screen and (min-width: 44em) {
           width: 80%;
+          margin: -155px auto 0;
         }
         @media screen and (min-width: 64em) {
           width: 65%;
@@ -1055,7 +1060,20 @@ header + .hero_row > .row {
     }
     &.feature_module_b--collaborate .feature_text {
         @include background-opacity($infocus_green);
-        margin: -270px auto 0;
+        margin-top: -55px;
+        @media screen and (min-width: 40em) {
+          margin-top: -105px
+        }
+        @media screen and (min-width: 64em) {
+          margin: -245px auto 0;
+        }
+    }
+    &.feature_module_b--teach .feature_text {
+      @include background-opacity($dark_gray);
+      @media screen and (min-width: 64em) {
+        padding-top: 30px;
+        margin-top: -280px;
+      }
     }
     .lead_text--secondary_headline {
         text-align: center;
@@ -1065,7 +1083,17 @@ header + .hero_row > .row {
           font-size: 3rem;
         }
         @media screen and (min-width: 64em) {
-          font-size: 3.75rem;
+          font-size: 3.5rem;
+        }
+    }
+    &.feature_module_b--collaborate .lead_text--secondary_headline {
+        @media screen and (min-width: 64em) {
+          font-size: 3.2rem;
+        }
+    }
+    &.feature_module_b--teach .lead_text--secondary_headline {
+        @media screen and (min-width: 64em) {
+          font-size: 3.2rem;
         }
     }
     .lead_text--paragraph {
@@ -1784,12 +1812,6 @@ div.video_module {
 
 //Teach page--404
 .page--teach {
-    .no-pad-left {
-        padding-left: 0 !important;
-    }
-    .no-pad-right {
-        padding-right: 0!important;
-    }
     .text_module_a a.text_module_link {
         font-family: 'GoodPro-WideMedium';
     }
@@ -1797,25 +1819,6 @@ div.video_module {
         font-size: 2.3rem;
         font-weight: 300;
         padding: 0 1em;
-    }
-    div.feature_module_b .module_image {
-        background: url('/resources/static/images/teach/InFocus-Lifestyle-JTouch-Whiteboard-Classroom-Molecules-300dpi-CMYK.jpg') no-repeat;
-        background-size: cover;
-        height: 615px;
-    }
-    div.feature_module_b .feature_text.grey {
-        padding-top: 30px;
-        margin-top: -290px;
-        background-color: rgba(63,74,84,.88)
-    }
-    div.feature_module_b .feature_links {
-        margin-bottom: 35px;
-    }
-    div.feature_module_b .lead_text--secondary_headline {
-        margin-bottom: 1.3rem;
-    }
-    div.feature_module_b .lead_text--paragraph {
-        line-height: 1.4;
     }
     .text_module_a h1.lead_text--headline {
         font-weight: 300;
