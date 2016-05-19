@@ -44,14 +44,14 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             <img src="/resources/static/images/present/present-icon.svg" alt="Present" />
             <h1 class="lead_text--headline widelight">Present from any device</h1>
             <p class="lead_text--paragraph">
-                You don't have time to mess with technology in a meeting, InFocus lets you, and other in the room share content with flexible wired and wireless options to accommodate any device.
+                You don't have time to mess with technology in a meeting. InFocus lets you, and anyone in the room, share content with flexible wired and wireless options to accommodate any device.
             </p>
         </div>
     </div>
     <div class="row multicolumn_text_module">
         <div class="small-12 large-4 columns text-center">
             <p class="lead_text--paragraph">
-                Plug in any notebook, tablet or smartphone to an InFocus projector or display via HDMI, VGA, USB and more.
+                Plug in any notebook, tablet or smartphone to an InFocus projector or display via HDMI, VGA, USB and more. 
             </p>
             <br>
             <a href="/projectors/" class="text_module_link">View Projectors</a>
@@ -60,7 +60,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
         <div class="small-12 large-4 columns text-center">
             <p class="lead_text--paragraph">
-                Project wirelessly from any device with InFocus wireless-ready projectors or a wireless adapter connected to any projector.
+                Project wirelessly from any device with InFocus wireless projectors and adapters.
             </p>
             <br>
             <a href="/wireless-projector-lineup/" class="text_module_link">Wireless Projectors</a>
@@ -69,7 +69,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
         <div class="small-12 large-4 columns text-center">
             <p class="lead_text--paragraph">
-                Share content on an LCD display in seconds with a wireless-equipped touchscreen display or any LCD display with a wireless adapter.
+                Share content on an LCD display in seconds with an InFocus wireless touch display or any LCD display with a wireless adapter.
             </p>
             <br>
             <a href="/displays/JTOUCH-LightCast-SERIES" class="text_module_link">Wireless Touchscreens</a>
@@ -86,7 +86,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             </div>
             <div class="feature_text text-center">
                 <h2 class="lead_text--secondary_headline widelight">Capture ideas on a digital canvas</h3>
-    			<p class="lead_text--paragraph">Take notes, draw and save the work with the same touchscreen device you're presenting on. It's the efficient, economical, and odor-free answer to dry erase.</p>
+    			<p class="lead_text--paragraph">Take notes, draw, save and share the work with the same touchscreen you're presenting on. It's the efficient, economical, and odor-free answer to dry erase.</p>
                 <br><br>
                 <div class="feature_links">
                     <a href="/displays/JTOUCH-Series" class="feature_link">View Whiteboard Displays</a><br>
@@ -106,7 +106,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 Huddle Spaces
             </p>
             <p class="lead_text--paragraph">
-                Share and capture vital information in small spaces with compact short throw projectors or 40" rotate-able whiteboard displays.
+                Share and capture vital information with compact short throw projectors or 40" landscape and portrait whiteboard displays.
             </p>
             <a href="/projectors/short-throw" class="text_module_link">Short Throw Projectors</a>
             <br>
@@ -119,7 +119,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 Conference Rooms
             </p>
             <p class="lead_text--paragraph">
-                Find the ideal display device from our broad selection to fit your unique meeting room, budget, and workflow.
+                Find the ideal display from our broad selection to fit your unique meeting room, budget, and workflow.
             </p>
             <a href="/projectors/office-classroom" class="text_module_link">Office Projectors</a>
             <br>
@@ -129,7 +129,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             <img src="/resources/static/images/present/present-auditoriums.svg" alt="" class="present-page-icon"/>
             <br><br>
             <p class="lead_text--headline">
-                Auditoriums
+                Large Venues
             </p>
             <p class="lead_text--paragraph">
                 Install these powerfully bright and feature-packed projectors in large rooms that demand the best image quality.
@@ -141,8 +141,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- FEATURE MODULE A -->
     <div class="row feature_module_a ">
         <div class="small-6 columns feature_text">
-            <h3 class="lead_text--secondary_headline">PC-less presenting</h3>
-            <p class="lead_text--paragraph">Load your projector's internal memory with common or shared files and quickly present them without a computer. Or project files directly from a USB thumb drive, which is convenient for guests or when traveling.</p>
+            <h3 class="lead_text--secondary_headline">Device-less presenting</h3>
+            <p class="lead_text--paragraph">Load your projector's internal memory with common or shared files and quickly present them without a computer. Or project files directly from a USB thumb drive, which is ideal for guests and travelers.</p>
             <div class="feature_links">
                 <a href="/projectors/IN2120a-Series" class="feature_link">IN2120A Network Projectors</a>
                 <a href="/projectors/ultra-portable/IN1110-Series" class="feature_link">IN1110 Mobile Projectors</a>

@@ -189,49 +189,34 @@ cursor:pointer;
 }
 
 </style>
-	<body class="">
-		<?php include($homedir . "/resources/html/mainmenu.html"); ?>
-		<div class="content">
-<div class="C9">
-	<h1 class="title">InFocus Videos</h2>
-
+<body class="">
+	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
+	<div class="content">
+		<div class="C9">
+			<h1 class="title">InFocus Videos</h2>
 			<a id="vidtop"></a>
-			
 <?php
 
 if(!empty($_SERVER['QUERY_STRING'])){
+	$result = mysqli_query($connection,'SELECT Summary, title, body, vidid, about, industry FROM videos WHERE vidid = "' . $_SERVER['QUERY_STRING'] . '"');
+	$x=0;
+	if(mysqli_num_rows ($result)>0){
+		while($row = mysqli_fetch_array($result)) {
+			echo  "<title>$row[1]</title>";
+			echo '<div class="video" style="padding-bottom:30px">
+					<iframe id="main-video" src="//www.youtube.com/embed/' . $row[3] . '?vq=hd720&rel=0&modestbranding=1" style="width:100%;height:600px" frameborder="0" allowfullscreen ></iframe></div>
+					<h3 id="videoheader">' . $row[1] . '</h3>
+					<p id="videosummary">' . $row[2] . '</p>
+				</div>';
+		}
+	} else {
+		echo 'Video not found.';
+	}
 
-
-			$result = mysqli_query($connection,'SELECT Summary, title, body, vidid, about, industry FROM videos WHERE vidid = "' . $_SERVER['QUERY_STRING'] . '"');
-			$x=0;
-			if(mysqli_num_rows ($result)>0){
-			while($row = mysqli_fetch_array($result))
-				{
-				echo  "<title>$row[1]</title>";
-	
-
-					echo '<div class="video" style="padding-bottom:30px">
-							
-							<iframe id="main-video" src="//www.youtube.com/embed/' . $row[3] . '?vq=hd720&rel=0&modestbranding=1" style="width:100%;height:600px" frameborder="0" allowfullscreen ></iframe></div>
-							
-														<h3 id="videoheader">' . $row[1] . '</h3>
-							<p id="videosummary">' . $row[2] . '</p>
-							
-<footer id="site-info" >
-				';
-
-				}
-				}
-				else{echo 'Video not found.
-				
-<footer id="site-info" >
-				';}
-
-
-include($homedir . "/resources/html/footer.html");
-
-echo "</footer></body></html>";
-die();
+	echo '</div></div><footer id="site-info">';
+	include($homedir . "/resources/html/footer.html");
+	echo "</footer></body></html>";
+	die();
 }
 
 
@@ -361,11 +346,12 @@ die();
 
 
 			</section>
-		</div>
+	</div>
+</div>
 
-				<footer id="site-info" >
-				<?php include($homedir . "/resources/html/footer.html"); ?>
-				</footer>
+<footer id="site-info" >
+<?php include($homedir . "/resources/html/footer.html"); ?>
+</footer>
 
 <script>
 
