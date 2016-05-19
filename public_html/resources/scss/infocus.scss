@@ -754,11 +754,17 @@ header + .hero_row > .row {
 }
 
 .feature_module_a {
+  margin-top: 5%;
+  margin-bottom: 4%;
     position: relative;
     height: 0;
     padding-bottom: 60%;
     background: url('../static/images/present/present-module_a.jpg') right top no-repeat;
     background-size: contain;
+    @media screen and (min-width: 64em) {
+      margin-top: 6em;
+      margin-bottom: 4em;
+    }
     &.feature_module_a--collaborate {
         background: $med_gray url('../static/images/collaborate/collaborate-feature-module-a.jpg') bottom right no-repeat;
     }
@@ -786,11 +792,22 @@ header + .hero_row > .row {
           height: 100%;
         }
     }
+
+    &.feature_module_a--orange .feature_text,
     &.feature_module_a--collaborate .feature_text,
     &.feature_module_a--visualize .feature_text {
         @include background-opacity($infocus_orange);
     }
+    &.feature_module_a--teach_blue {
+        background: url('/resources/static/images/teach/166273198.jpg') right -45px top no-repeat;
+        background-size: contain;
+    }
+    &.feature_module_a--orange {
+        background: url('/resources/static/images/teach/distance-learning-fire.jpg') right -45px top no-repeat;
+        background-size: contain;
+    }
     &.feature_module_a--visualize .feature_text {  padding: 40px 124px 40px 35px; }
+
     .color_stripe_column {
       min-height: 0;
       height: 100%;
@@ -798,9 +815,10 @@ header + .hero_row > .row {
     .white.color_stripe {
         width: 7%;
         height: 100%;
-        margin-left: -40px;
+        margin-left: -6%;
         opacity: .75;
         @media screen and (min-width: 40em) {
+          margin-left: -40px;
           width: 60px;
         }
         @media screen and (min-width: 64em) {
@@ -835,6 +853,11 @@ header + .hero_row > .row {
           font-size: 2.75rem;
         }
     }
+    &.feature_module_a--orange .lead_text--secondary_headline {
+      @media screen and (max-width: 30em) {
+        font-size: .8rem;
+      }
+    }
     .lead_text--paragraph {
         color: $white;
         font-size: .7rem;
@@ -852,6 +875,11 @@ header + .hero_row > .row {
         @media screen and (min-width: 64em) {
           font-size: 1.25rem;
           line-height: 1.6;
+        }
+    }
+    &.feature_module_a--orange .feature_text .lead_text--paragraph {
+        @media screen and (max-width: 30em) {
+          font-size: .6rem;
         }
     }
     .feature_links {
@@ -884,10 +912,96 @@ header + .hero_row > .row {
           letter-spacing: .15em;
         }
     }
+    &.feature_module_a--orange .feature_link {
+      @media screen and (max-width: 30em) {
+        font-size: 8px;
+      }
+    }
     .feature_link:hover {
         color: $white;
     }
-
+    &.feature_module_a--teach_blue .feature_text {
+        @include background-opacity($infocus_light_blue);
+        padding-left: 4em;
+        padding: 10px;
+        @media screen and (min-width: 40em) {
+          padding: 20px;
+        }
+        @media screen and (min-width: 64em) {
+          padding: 40px 35px;
+        }
+    }
+    &.feature_module_a--teach_blue ul {
+      @media screen and (max-width: 30em) {
+        margin-left: 8px;
+      } 
+    }
+    &.feature_module_a--teach_blue ul li {
+      font-size: .3rem;
+      @media screen and (min-width: 22em) {
+        font-size: 7px;
+      }
+      @media screen and (min-width: 30em) {
+        font-size: .6rem;
+      }
+      @media screen and (min-width: 40em) {
+        font-size: .8rem;
+      }
+      @media screen and (min-width: 50em) {
+        font-size: 1rem;
+      }
+      @media screen and (min-width: 64em) {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+      }
+    }
+    &.feature_module_a--teach_blue .feature_text .lead_text--secondary_headline, &.feature_module_a--teach_blue .feature_text .lead_text--paragraph {
+        color: #333F48;
+    }
+    &.feature_module_a--teach_blue .feature_text .lead_text--secondary_headline {
+      max-width: 300px;
+    }
+    &.feature_module_a--teach_blue .feature_text .lead_text--paragraph {
+        margin-bottom: 1.2em;
+        font-size: 7px;
+        @media screen and (min-width: 30em) {
+          font-size: .7rem;
+        }
+        @media screen and (min-width: 40em) {
+          font-size: .9rem;
+          line-height: 1.4;
+        }
+        @media screen and (min-width: 50em) {
+          font-size: 1.1rem;
+        }
+        @media screen and (min-width: 64em) {
+          font-size: 1.25rem;
+          line-height: 1.6;
+        }
+    }
+    &.feature_module_a--teach_blue .feature_links {
+        left: 10px;
+        @media screen and (min-width: 40em) {
+         left: 1.5em;
+        }
+        @media screen and (min-width: 64em) {
+          left: 3em;
+        }
+    }
+    &.feature_module_a--teach_blue .feature_links .feature_link {
+        color: #006ba6;
+        font-size: 7px;
+        @media screen and (min-width: 30em) {
+          font-size: 10px;
+        }
+        @media screen and (min-width: 40em) {
+          margin: 5px 0;
+          font-size: 12px;
+        }
+        @media screen and (min-width: 64em) {
+          letter-spacing: .15em;
+        }
+    }
 }
 
 .feature_module_b {
@@ -1215,16 +1329,55 @@ header + .hero_row > .row {
 
 div.video_module {
   position: relative;
-  background: url('/resources/static/images/teach/JTouch-classroom.jpg');
-  background-size: cover;
-  height: 825px;
+  height: 0;
+  padding-bottom: 60%;
+  @media screen and (min-width: 64em) {
+    height: 825px;
+  }
+  &.video_module_teach {
+    background: url('/resources/static/images/teach/JTouch-classroom.jpg') left center no-repeat;
+    background-size: cover;
+  }
+  &.video_module_collaborate-a {
+    background: url('/resources/static/images/collaborate/collaborate-video-a.jpg') left center no-repeat;
+    background-size: cover;
+    box-shadow: $box_shadow_gray;
+  }
+  &.video_module_collaborate-b {
+    background: url('/resources/static/images/collaborate/collaborate-video-b.jpg') left center no-repeat;
+    background-size: cover;
+    box-shadow: $box_shadow_gray;
+    h2 {
+      line-height: 1.7em;
+    }
+  }
+  .video_link {
+    position: absolute;
+    top: 45%;
+    transform: translateX(-50%);
+    left: 50%;
+  }
   h2.lead_text--secondary_headline {
-      position: absolute;
+      margin-bottom: 0;
+      white-space: nowrap;
       top: 50%;
-      margin: -70px 2em 0;
       color: #FFF;
       background: url('/resources/static/images/teach/play_button.png') left center no-repeat;
+      background-size: 10%;
       padding-left: 2em;
+      font-size: 1.2rem;
+      @media screen and (min-width: 30em) {
+        font-size: 1.8rem;
+      }
+      @media screen and (min-width: 50em) {
+        font-size: 2.5rem;
+      }
+      @media screen and (min-width: 64em) {
+        font-size: 3rem;
+      }
+      @media screen and (min-width: 74em) {
+        font-size: 3.75rem;
+      }
   }
 }
 
@@ -1556,40 +1709,8 @@ div.video_module {
     .no-pad-right {
         padding-right: 0!important;
     }
-    div.hero_row.hero-row--header_module_c {
-
-    }
     .text_module_a a.text_module_link {
         font-family: 'GoodPro-WideMedium';
-    }
-    div.feature_module_a.orange {
-        background: url('/resources/static/images/teach/distance-learning-fire.jpg') right -45px top no-repeat;
-    }
-    div.feature_module_a.blue {
-        background: url('/resources/static/images/teach/166273198.jpg') right -45px top no-repeat;
-    }
-    .feature_module_a.orange .feature_text {
-        background-color: rgba(232,119,34,.88);
-    }
-    .feature_module_a.blue .feature_text {
-        background-color: rgba(194,227,238,.88);
-        padding-left: 4em;
-    }
-    .feature_module_a.blue .feature_text .lead_text--secondary_headline, .feature_module_a.blue .feature_text .lead_text--paragraph {
-        color: #333F48;
-    }
-    .feature_module_a.blue .feature_text .lead_text--paragraph {
-        margin-bottom: 1.2em;
-    }
-    .feature_module_a.blue ul li {
-        font-size: 1.2rem;
-        line-height: 1.7rem;
-    }
-    .feature_module_a.blue .feature_links {
-        left: 4em;
-    }
-    .feature_module_a.blue .feature_links .feature_link {
-        color: #006ba6;
     }
     h4.lead_text--paragraph {
         font-size: 2.3rem;

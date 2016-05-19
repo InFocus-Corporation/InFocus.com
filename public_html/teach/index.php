@@ -17,6 +17,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 </head>
 <body class="page--teach" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
+
     <!-- HEADER MODULE C -->
 	<div class="hero_row hero-row--header_module_c">
         <div class="row hero_inner_c">
@@ -71,16 +72,16 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     </div>
     <!-- END TEXT MODULE A -->
     <!-- FEATURE MODULE JTOUCH -->
-    <div class="video_module">
-        <div class="row">
-            <a href="/videos?1GWVuww_dXw">
+    <div class="video_module video_module_teach">
+        <a href="/videos?1GWVuww_dXw">
+            <div class="video_link">
                 <h2 class="lead_text--secondary_headline">See how JTouch invigorated<br>a 5th grade classroom</h2>
-            </a>
-        </div>
+            </div>
+        </a>
     </div>
     <!-- END FEATURE MODULE JTOUCH -->
     <!-- FEATURE MODULE A -->
-    <div class="row feature_module_a orange">
+    <div class="row feature_module_a orange feature_module_a--orange">
         <div class="small-6 columns feature_text">
             <h3 class="lead_text--secondary_headline">Distance<br>learning within<br>reach</h3>
             <p class="lead_text--paragraph">Students, teachers or guest speakers can join your class or training from remote locations with high-quality, reliable and affordable video conferencing solutions.</p>
@@ -156,10 +157,10 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     </div>
     <!-- END PROMO MODULES C & D -->
     <!-- FEATURE MODULE A -->
-    <div class="row feature_module_a blue">
-        <div class="small-12 medium-6 columns feature_text">
-            <h3 class="lead_text--secondary_headline">Wireless<br>freedom and<br>flexibility</h3>
-            <p class="lead_text--paragraph">Share content wirelessly from computers and <br> tablets to any projector or display with a VGA or <br> HDMI input with our powerful wireless adapter.</p>
+    <div class="row feature_module_a feature_module_a--teach_blue">
+        <div class="small-6 columns feature_text">
+            <h3 class="lead_text--secondary_headline">Wireless freedom and flexibility</h3>
+            <p class="lead_text--paragraph">Share content wirelessly from computers and tablets to any projector or display with a VGA or HDMI input with our powerful wireless adapter.</p>
             <ul>
                 <li>Display up to 4 devices at the same time</li>
                 <li>Moderate who can share their screen</li>
@@ -170,7 +171,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <a href="http://www.thenerdyteacher.com/2015/03/infocus-liteshow4-makes-collaboration.html" target="blank" class="feature_link">Read How A Teacher Uses Liteshow 4</a>
             </div>
         </div>
-        <div class="small-12 medium-6 columns color_stripe_column">
+        <div class="small-6 columns color_stripe_column">
             <div class="light_blue color_stripe float-right"></div>
         </div>
     </div>
