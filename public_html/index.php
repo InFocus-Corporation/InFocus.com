@@ -100,18 +100,21 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			</div>
 		</div>
 	</div>
-	<div class="hero_row hero_row--secondary hero_row--secondary--homepage transparent-border-left-60-orange transparent-border-right-38-green">
-		<div class="color_stripe_column">
-			<div class="white color_stripe hide-for-small-only"></div>
-		</div>
+	
+  <!-- VIDEO MODULE -->
+	<div class="hero_row hero-row--video_row hero-row--video_row_collaborate-b">
 		<div class="row">
-			<div class="small-12 medium-10 medium-offset-2 large-7 large-offset-5 columns">
-				<h2 class="lead_text--headline">"We have the power to collaborate anytime, anywhere"</h2>
-				<h5 class="quote_source">- Jane Matthews Entrepreneur</h5>
-				<a href="#TODO" class="button button--primary">watch case study video</a>
+			<div class="small-12 medium-10 medium-offset-1 columns lead_text">
+				<h2 class="lead_text--secondary_headline">
+					<a href="http://www.infocus.vagrant.internal/videos?SNMjzPRQUA8">
+						<img src="/resources/static/images/video-icon.png" />
+						<span class="single_line_span">See how collaboration is done</span>
+					</a>
+				</h2>
 			</div>
 		</div>
 	</div>
+  <!-- END VIDEO MODULE -->
 
 	<div class="row homepage--callouts" data-equalizer data-equalize-on="medium">
 		<div class="small-12 medium-7 columns" data-equalizer-watch>
@@ -142,20 +145,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 	</div>
 
-    <!-- VIDEO MODULE -->
-		<div class="hero_row hero-row--video_row hero-row--video_row_collaborate-b">
-			<div class="row">
-				<div class="small-12 medium-10 medium-offset-1 columns lead_text">
-					<h2 class="lead_text--secondary_headline">
-						<a href="http://www.infocus.vagrant.internal/videos?SNMjzPRQUA8">
-							<img src="/resources/static/images/video-icon.png" />
-							<span class="single_line_span">See how collaboration is done</span>
-						</a>
-					</h2>
-				</div>
-			</div>
-		</div>
-    <!-- END VIDEO MODULE -->
 	<script>
 	    $(document).foundation();
 	</script>
