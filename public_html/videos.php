@@ -37,6 +37,20 @@ border-bottom: 1px solid #ccc;
 margin-bottom: 50px;
 height: 380px;
 }
+#main-video {
+  height:auto;
+  min-height: 220px;
+  width: 90%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 40em) {
+  #main-video {
+    width:100%;
+    height:600px;
+  }
+}
+.video { text-align: center;}
+.video p {  text-align: left;}
 </style>
 <script>
 (function( $ ) {
@@ -211,7 +225,7 @@ if(!empty($_SERVER['QUERY_STRING'])){
 		while($row = mysqli_fetch_array($result)) {
 			echo  "<title>$row[1]</title>";
 			echo '<div class="video" style="padding-bottom:30px">
-					<iframe id="main-video" src="//www.youtube.com/embed/' . $row[3] . '?vq=hd720&rel=0&modestbranding=1" style="width:100%;height:600px" frameborder="0" allowfullscreen ></iframe></div>
+					<iframe id="main-video" src="//www.youtube.com/embed/' . $row[3] . '?vq=hd720&rel=0&modestbranding=1" frameborder="0" allowfullscreen ></iframe></div>
 					<h2 class="name" id="videoheader">' . $row[1] . '</h2>
 					<p id="videosummary">' . $row[2] . '</p>
 				</div>';
@@ -247,7 +261,7 @@ if(!empty($_SERVER['QUERY_STRING'])){
 					echo '<div class="video" style="padding-bottom:30px">
 														<h2 class="name" id="videoheader">' . $row[1] . '</h2>
 							<p id="videosummary">' . $row[0] . '</p>
-							<iframe id="main-video" src="//www.youtube.com/embed/' . $row[3] . '?vq=hd720&rel=0&modestbranding=1" style="width:100%;height:600px" frameborder="0" allowfullscreen ></iframe></div>
+							<iframe id="main-video" src="//www.youtube.com/embed/' . $row[3] . '?vq=hd720&rel=0&modestbranding=1" frameborder="0" allowfullscreen ></iframe></div>
 						<div style="text-align:center">
 				<h4>Filter by Video Type or Industry</h4>
 					<div class="ui-widget">
