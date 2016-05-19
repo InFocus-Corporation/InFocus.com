@@ -73,13 +73,15 @@ body {
 .row {
   margin-top: 6em;
   margin-bottom: 4em;
-  max-width: 71.13rem;
-  @media screen and (min-width: 2200px) {max-width: none; }
+  max-width: 1174px;
 }
 header + .hero_row > .row {
     height: 100%;
     margin-top: 0px;
     max-width: 100%;
+}
+.hero_row {
+  @media screen and (min-width: 2200px) {max-width: none; }
 }
 .hero_row.row--full-height {
   height: auto;
@@ -1182,8 +1184,6 @@ div.video_module {
 
 //Vertical Accordion
 .vertical_accordion {
-  margin-left: .9375rem;
-  margin-right: .9375rem;
   position: relative;
   overflow: hidden;
   min-height: 575px;
@@ -1227,6 +1227,7 @@ div.video_module {
   #slide1 {
     z-index: 1;
     background-image: url('../static/images/homepage/homepage-accordion-a--InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg');
+    background-size: cover;
     right: 33.32%;
     .vertical_accordion--slide--background{
        @include background-opacity($infocus_blue);
@@ -1235,6 +1236,7 @@ div.video_module {
   #slide2 {
     z-index: 2;
     background-image: url('../static/images/homepage/homepage-accordion-b--InFocus-Lifestyle-DigiEasel-Education-AsianTeacher-300dpi-CMYK');
+    background-size: cover;
     right: -33.32%;
     .vertical_accordion--slide--background{
         @include background-opacity($infocus_green);
