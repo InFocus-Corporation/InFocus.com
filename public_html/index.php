@@ -119,7 +119,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 					<span>latest news</span>
 				</div>
 				<div class="callout--heading">
-					<h3><?= $latest_news['title'] ?></h3>
+					<h3><a href="/articles?<?= $latest_news['id'] ?>" class=""><?= $latest_news['title'] ?></a></h3>
 				</div>
 				<div class="callout--copy">
 					<h5><?= $latest_news['teaser'] ?></h5>
@@ -130,10 +130,14 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 		<div class="small-12 medium-5 columns" data-equalizer-watch>
 			<div class="callout callout--picture">
+
 				<!-- <div class="callout--heading callout--heading--picture">
 					<img src="http://placehold.it/1311x699" />
 				</div> -->
 				<div class="callout--copy">
+					<div class="module--tag">
+						<span>latest events</span>
+					</div>
 					<h5><a href="http://www.infocommshow.org/">InfoComm</a><br> June 8 - 10, 2016<br> Las Vegas, NV</h5>
 					<h5><a href="http://www.ifsec.co.uk/Content/Welcome">IFSEC</a><br> June 21 - 23, 2016<br> London, England</h5>
 					<h5><a href="http://conference.iste.org/2016/">ISTE</a><br> June 27 - 29, 2016<br> Denver, CO</h5>

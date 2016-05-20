@@ -1664,6 +1664,10 @@ div.video_module {
 .homepage--callouts {
   .callout {
     height: 100%;
+    .button--primary {
+        position: absolute;
+        bottom: 77px;
+    }
   }
   .link--inverted {
     clear: both;
@@ -1697,8 +1701,15 @@ div.video_module {
   background-color: $infocus_light_blue;
   border: 0px;
   border-radius: 3px;
-  // .callout--copy h5 { margin-bottom: 2.55em;}
+  .callout--copy h5 { clear: both; }
   &.callout--picture {
+    .module--tag {
+      margin-bottom: 2.5em;
+      span { color: $infocus_light_blue; }
+      &:before {
+          border: 2px solid $infocus_light_blue;
+      }
+    }
     padding: 0px;
     .callout--copy {
       text-align:center; color: $white;
