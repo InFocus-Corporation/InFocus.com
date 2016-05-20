@@ -1731,9 +1731,20 @@ margin-bottom:.1em;
 }
 
 .image-set img {
-max-width:100%;
-display:block;
-height:auto;
+	max-width:100%;
+	display:block;
+	height:auto;
+}
+
+#overview .C10 .image-set img,
+#details .C10 .image-set img {
+	width: 400px;
+}
+@media screen and (max-width:64em) {
+	#overview .C10 .image-set img,
+	#details .C10 .image-set img {
+		width: 300px;
+	}
 }
 
 .image-set {

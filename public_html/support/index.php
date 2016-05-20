@@ -156,12 +156,18 @@ $(function() {
     <p>
       Our goal in the support department is to provide you every tool you need to resolve your issue in the most convenient way possible.  Customer Service is exceptional people and products developed with teamwork, flexibility, and continuous improvement to create customers for life. Customer Service is our most important product.  Please don't hesitate to contact us for help.
     </p>
-    <p>
-      <a href="http://www.infocusstore.com/Lamps-Accessories/b/7448620011?ie=UTF8&title=Lamps">Buy a Lamp (US)</a><br>
-      <a href="#AreYouSure-popup" class="colorbox-inline">Contact Support</a><br>
-      <a href="/resources/forms/projectioncalculator">Projector Calculator</a><br>
-      <a href="https://infocuscorp.zendesk.com/hc/en-us">Frequently Asked Questions</a>
-    </p>
+    <div style="padding-bottom: 30px;overflow:hidden;">
+      <div style="float:left;width:50%">
+        <a href="http://www.infocusstore.com/Lamps-Accessories/b/7448620011?ie=UTF8&title=Lamps">Buy a Lamp (US)</a><br>
+        <a href="#AreYouSure-popup" class="colorbox-inline">Contact Support</a><br>
+        <a href="/resources/forms/projectioncalculator">Projector Calculator</a><br>
+      </div>
+      <div style="float:left;width:50%">
+        <a href="https://infocuscorp.zendesk.com/hc/en-us">Frequently Asked Questions</a><br>
+        <a href="http://www.jupiter.com/support/contact">Jupiter Product Support</a><br>
+        <a href="http://portal.jupiter.com/clientManage.php?act=signIn">Jupiter Partner Login</a>
+      </div>
+    </div>
     <div>
       <p>If you are having trouble finding your product just start typing in the box below.</p>
         <div class="ui-widget" style="padding-bottom:30px;">
@@ -193,7 +199,6 @@ $(function() {
           <a href="#RMAUSCan-popup" class="colorbox-inline">Get Warranty Service (US &amp; Canada)</a><br>
           <a href="/support/authorized-service-centers#ABU">Find a Repair Provider (US &amp; Canada)</a><br>
           <a href="#RMAWorldMap-popup" class="colorbox-inline">Find a Repair Provider (Worldwide)</a><br>
-
         </p>
       </div>
     </div>
@@ -282,18 +287,7 @@ $(function() {
     <a href="http://ports.infocus.net/">Test Your Ports Now</a>
     <br><br>
   </div>
-  <div class="small-12 medium-6 columns">
-    <img src="/resources/static/images/support/infocus-building.jpg">
-  </div>
 </div>
-
-
-
-
-
-
-
-
 
 
 <div class="hidden" style="display:none;">
