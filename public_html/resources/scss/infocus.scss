@@ -1508,10 +1508,11 @@ header + .hero_row > .row {
 
 div.video_module {
   margin-top: 6em;
-  margin-bottom: 4em;
   position: relative;
   padding-bottom: 60%;
   @media screen and (min-width: 64em) {
+    margin-top: 9em;
+    margin-bottom: 8em;
     height: 825px;
   }
   &.video_module_teach {
