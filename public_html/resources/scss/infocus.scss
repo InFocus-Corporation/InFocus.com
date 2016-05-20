@@ -806,7 +806,11 @@ header + .hero_row > .row {
         background: url('/resources/static/images/teach/distance-learning-fire.jpg') right -45px top no-repeat;
         background-size: contain;
     }
-    &.feature_module_a--visualize .feature_text {  padding: 40px 124px 40px 35px; }
+    &.feature_module_a--visualize .feature_text {
+      @media screen and (min-width: 64em) {
+        padding: 40px 124px 40px 35px;
+      } 
+    }
 
     .color_stripe_column {
       min-height: 0;
@@ -1007,6 +1011,7 @@ header + .hero_row > .row {
 .feature_module_b {
     position: relative;
     height: 0;
+    margin-top: 5%;
     padding-bottom: 60%;
     margin-bottom: 40%;
     @media screen and (min-width: 64em) {
@@ -1015,11 +1020,14 @@ header + .hero_row > .row {
       margin-bottom: 0;
     }
     .module_image {
+        height: 100%;
         width: 100%;
         background: url('../static/images/present/present-module_b.jpg');
         background-size: cover;
-        height: 600px;
         margin-bottom: 0;
+        @media screen and (min-width: 64em) {
+          height: 600px;
+        }
     }
     .hero_inner {
       position: absolute;
@@ -1036,6 +1044,10 @@ header + .hero_row > .row {
         background: url('../static/images/collaborate/collaborate-feature-module-b.jpg');
         background-size: cover;
     }
+    &.feature_module_b--teach .module_image {
+        background: url('../static/images/teach/InFocus-Lifestyle-JTouch-Whiteboard-Classroom-Molecules-300dpi-CMYK.jpg');
+        background-size: cover;
+    }
     &.feature_module_b--visualize .module_image {
         background: url('../static/images/visualize/visualize-feature-module-b.jpg');
         background-size: cover;
@@ -1046,17 +1058,22 @@ header + .hero_row > .row {
         width: 100%;
         min-width: 0;
         min-height: 0;
-        margin: 30% auto 0;
+        margin-top: -90px;
         padding: 10px;
         @include background-opacity($infocus_blue);
         clear: both;
         text-align: center;
         @media screen and (min-width: 40em) {
-          width: 65%;
           min-width: 40em;
           padding: 30px 40px 0;
+          margin-top: -155px;
+        }
+        @media screen and (min-width: 44em) {
+          width: 80%;
+          margin: -155px auto 0;
         }
         @media screen and (min-width: 64em) {
+          width: 65%;
           min-height: 375px;
           padding: 55px 70px 0;
           position: relative;
@@ -1065,37 +1082,87 @@ header + .hero_row > .row {
     }
     &.feature_module_b--collaborate .feature_text {
         @include background-opacity($infocus_green);
-        margin: -270px auto 0;
-
+        margin-top: -55px;
+        @media screen and (min-width: 40em) {
+          margin-top: -105px
+        }
+        @media screen and (min-width: 64em) {
+          margin: -245px auto 0;
+        }
+    }
+    &.feature_module_b--teach .feature_text {
+      @include background-opacity($dark_gray);
+      @media screen and (min-width: 64em) {
+        padding-top: 30px;
+        margin-top: -280px;
+      }
     }
     &.feature_module_b--visualize .feature_text {
         @include background-opacity($infocus_blue);
-        margin: -303px auto 0;
-        padding: 50px 33px 0;
+        @media screen and (min-width: 64em) {
+          margin: -303px auto 0;
+          padding: 50px 33px 0;
+        }
     }
     .lead_text--secondary_headline {
         text-align: center;
         color: $white;
-        font-size: 2rem;
+        font-size: 1.8rem;
         @media screen and (min-width: 40em) {
           font-size: 3rem;
         }
         @media screen and (min-width: 64em) {
-          font-size: 3.75rem;
+          font-size: 3.5rem;
+        }
+    }
+    &.feature_module_b--collaborate .lead_text--secondary_headline {
+        @media screen and (min-width: 64em) {
+          font-size: 3.2rem;
+        }
+    }
+    &.feature_module_b--teach .lead_text--secondary_headline {
+        @media screen and (min-width: 64em) {
+          font-size: 3.2rem;
+        }
+    }
+    &.feature_module_b--visualize .lead_text--secondary_headline {
+        @media screen and (min-width: 64em) {
+          font-size: 3.2rem;
         }
     }
     .lead_text--paragraph {
         color: $white;
+        font-size: .8rem;
+        line-height: 1.4;
+        @media screen and (min-width: 30em) {
+          font-size: 1.1em;
+          line-height: 1.6;
+        }
+        @media screen and (min-width: 40em) {
+          font-size: 1.25rem;
+        }
     }
     .feature_links {
+        padding-bottom: 10px;
+        margin-top: 15px;
+      @media screen and (min-width: 30em) {
+        padding-bottom: 25px;
+        margin-top: 35px;
+      }
+      @media screen and (min-width: 40em) {
         padding-bottom: 35px;
+        margin-top: 48px;
+      }
     }
     .feature_link {
         color: $infocus_light_blue;
         font-family: 'GoodPro-WideMedium';
-        font-size: 13px;
+        font-size: 10px;
         text-transform: uppercase;
         letter-spacing: .25em;
+        @media screen and (min-width: 30em) {
+          font-size: 13px;
+        }
     }
     .feature_link:hover {
         color: $white;
@@ -1200,16 +1267,44 @@ header + .hero_row > .row {
 
 .promo_modules {
     position: relative;
+    @media screen and (min-width: 40em) {
+      height: 0;
+      padding-bottom: 45%;
+    }
     @media screen and (min-width: 64em) {
+        padding-bottom: 0;
         height: 500px;
     }
     .module_text {
-        height: 140px;
-        margin-top: -140px;
-        padding: 41px 45px 0px 45px;
+        position: absolute;
+        width: 100%;
         text-align: center;
+        bottom: 65px;
+        min-height: 75px;
         @include background-opacity($dark_gray);
-
+        @media screen and (min-width: 40em) {
+          bottom: auto;
+          position: relative;
+          height: 130px;
+          margin-top: -130px;
+        }
+        @media screen and (min-width: 68em) {
+          height: 140px;
+          margin-top: -140px;
+        }
+        .module_text_inner {
+              width: 100%;
+              padding: 3%;
+              @media screen and (min-width: 40em) {
+                padding: 0 3%;
+                position: absolute;
+                transform: none;
+                top: 17%;
+              }
+              @media screen and (min-width: 68em) {
+                top: 20%;
+              }
+        }
         &.center-headline {
           padding-top: 70px;
           .lead_text--headline {
@@ -1219,18 +1314,39 @@ header + .hero_row > .row {
             -ms-transform: translate(0,-50%);
           }
         }
-
         .lead_text--headline {
-            font-size: 28px;
+            font-size: 18px;
             font-family: 'GoodPro-WideLight';
             color: $white;
             margin-bottom: 0px;
+            @media screen and (min-width: 21em) {
+              font-size: 22px;
+            }
+            @media screen and (min-width: 25em) {
+              font-size: 24px;
+            }
+            @media screen and (min-width: 32em) {
+              font-size: 28px;
+            }
+            @media screen and (min-width: 40em) {
+              font-size: 24px;
+            }
+            @media screen and (min-width: 68em) {
+              font-size: 28px;
+            }
         }
         .lead_text--paragraph {
             color: $white;
-            font-size: 16px;
+            font-size: 12px;
             font-family: 'GoodPro-WideLight';
             margin-top: 10px;
+            line-height: 1.3;
+            @media screen and (min-width: 21em) {
+              font-size: 15px;
+            }
+            @media (min-width: 68em) {
+              font-size: 16px;
+            }
         }
     }
     .module_links {
@@ -1238,39 +1354,55 @@ header + .hero_row > .row {
         position: relative;
         height: 65px;
         text-align: center;
-
+        div {
+          display: inline-block;
+          width: 100%;
+          position: absolute;
+          top: 44%;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
         .promo_module_link {
+            padding: 0 6px;
             display: inline-block;
             color: $infocus_light_blue;
             text-transform: uppercase;
             font-family: 'GoodPro-WideMedium';
             -webkit-font-feature-settings: "liga" 0;
-            font-size: 12px;
+            font-size: 10px;
             letter-spacing: 0.15em;
-            margin-top: 32px;
-            transform: translate(0,-50%);
-            -webkit-transform: translate(0,-50%);
-            -moz-transform: translate(0,-50%);
-            -ms-transform: translate(0,-50%);
+            transform: translateY(-50%);
+            @media screen and (min-width: 30em) {
+              font-size: 12px;
+            }
+            @media screen and (min-width: 40em) and (max-width: 45em) {
+              font-size: 10px;
+            }
         }
-
     }
     .promo_module_c {
+        padding: 0;
+        position: relative;
         margin-bottom: 1em;
             @media screen and (min-width: 40em) {
                 margin-bottom: 0;
-                padding: 0;
                 position: absolute;
+                padding-left: .625rem;
+                padding-right: .625rem;
                 top: 0;
                 bottom: 0;
                 right: 0;
         }
         .module_image {
-            height: 387px;
+            height: 300px;
             background: url('../static/images/present/present-promo_module_c.jpg') right;
             background-size: cover;
+            @media screen and (min-width: 26em) {
+              height: 387px;
+            }
             @media screen and (min-width: 40em) {
-                height: 100%;
+                height: calc(100% - 65px);
             }
             @media screen and (min-width: 64em) {
                 height: 387px;
@@ -1280,45 +1412,86 @@ header + .hero_row > .row {
             background: url('../static/images/collaborate/collaborate-promo_module_c.jpg');
             background-size: cover;
         }
+        .module_text {
+          .module_text_inner {
+            @media screen and (min-width: 40em) {
+              padding: 0 5%;
+            }
+            @media screen and (min-width: 64em) {
+              padding: 0 10%;
+            }
+          }
+        }
+        .module_links {
+          div {
+            width: 50%;
+          }
+          .module_link_l {
+            top: 44%;
+            bottom: 0;
+            right: 50%;
+            left: 0;
+            position: absolute;
+          }
+          .module_link_r {
+            top: 44%;
+            bottom: 0;
+            right: 0;
+            left: 50%;
+            position: absolute;
+          }
+        }
         .promo_module_link {
-            width: 49%;
+            width: 100%;
             display: inline-block;
         }
         .promo_module_link.first_link {
             border-right: solid 1px #c5c5c5;
         }
-        .module_text {
-          padding-top: 70px;
-          .lead_text--headline {
-            transform: translate(0,-50%);
-          }
-        }
-
     }
     .promo_module_d {
-        margin-bottom: 1em;
-            @media screen and (min-width: 40em) {
-                margin-bottom: 0;
-                padding: 0 15px 0 0;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-            }
+        padding: 0;
+        position: relative;
+        margin-bottom: 3em;
+        @media screen and (min-width: 40em) {
+            margin-bottom: 1em;
+            margin-bottom: 0;
+            padding-left: .625rem;
+            padding-right: .625rem;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
         .module_image {
-            height: 387px;
+            height: 300px;
             background: url('../static/images/teach/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg');
             background-size: cover;
+            @media screen and (min-width: 26em) {
+              height: 387px;
+            }
             @media screen and (min-width: 40em) {
-                height: 100%;
+                height: calc(100% - 65px);
             }
             @media screen and (min-width: 64em) {
                 height: 387px;
             }
         }
-        &.collaborate--promo_module_d .module_image {
+        &.collaborate--promo_module_d {
+          .module_image {
             background: url('../static/images/collaborate/collaborate-promo_module_d.jpg');
             background-size: cover;
             background-position: right bottom;
+          }
+          .module_text_inner {
+            top: 0;
+            height: 100%;
+            .lead_text--headline {
+              top: 45%;
+              transform: translateY(-50%);
+              position: absolute;
+              width: 94%;
+            }
+          }
         }
         .module_text {
           padding-left: 15px;
@@ -1611,6 +1784,10 @@ div.video_module {
 
 // Support Page
 .support-page {
+  .row {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
 
   h6 {
     font-family: 'GoodPro-WideBook';
@@ -1717,12 +1894,6 @@ div.video_module {
 
 //Teach page--404
 .page--teach {
-    .no-pad-left {
-        padding-left: 0 !important;
-    }
-    .no-pad-right {
-        padding-right: 0!important;
-    }
     .text_module_a a.text_module_link {
         font-family: 'GoodPro-WideMedium';
     }
@@ -1730,25 +1901,6 @@ div.video_module {
         font-size: 2.3rem;
         font-weight: 300;
         padding: 0 1em;
-    }
-    div.feature_module_b .module_image {
-        background: url('/resources/static/images/teach/InFocus-Lifestyle-JTouch-Whiteboard-Classroom-Molecules-300dpi-CMYK.jpg') no-repeat;
-        background-size: cover;
-        height: 615px;
-    }
-    div.feature_module_b .feature_text.grey {
-        padding-top: 30px;
-        margin-top: -290px;
-        background-color: rgba(63,74,84,.88)
-    }
-    div.feature_module_b .feature_links {
-        margin-bottom: 35px;
-    }
-    div.feature_module_b .lead_text--secondary_headline {
-        margin-bottom: 1.3rem;
-    }
-    div.feature_module_b .lead_text--paragraph {
-        line-height: 1.4;
     }
     .text_module_a h1.lead_text--headline {
         font-weight: 300;
