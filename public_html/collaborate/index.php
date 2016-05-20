@@ -14,6 +14,28 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $homedir.'/resources/overviews/', 'admin,salespublisher,saleseditor,marketingpublisher,marketingeditor,editor', ".src", "overview", "true", "SavePage","overview");}
 
 ?>
+
+<script>
+var moduleBHeight = function() {
+    var width = $(window).width();
+    var featureModule = $('.feature_module_b');
+    var featureTextHeight = featureModule.find('.feature_text').height();
+
+    if (width < 1025) {
+        var newMargin = featureTextHeight;
+        featureModule.css('margin-bottom', newMargin);
+    } else {
+        featureModule.css('margin-bottom','');
+    }
+}
+
+$(function() {
+    moduleBHeight();
+    $(window).resize(function() {
+        moduleBHeight();
+    });
+});
+</script>
 </head>
 <body class="" style="">
     <?php include($homedir . "/resources/html/mainmenu.html"); ?>
@@ -81,16 +103,14 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- END MULTICOLUMN TEXT MODULE -->
     <!-- FEATURE MODULE B -->
     <div class="row feature_module_b feature_module_b--collaborate">
-        <div class="small-12 columns">
+        <div class="small-12 columns hero_inner">
             <div class="module_image"></div>
             <div class="feature_text text-center">
-                <h2 class="lead_text--secondary_headline">Work better together</h3>
+                <h2 class="lead_text--secondary_headline">Work better together</h2>
                 <p class="lead_text--paragraph">Get more from your meetings with the award-winning touchscreen solution for presenting, video conferencing, whiteboarding, and more.</p>
-                <br><br>
                 <div class="feature_links">
                     <a href="/displays/MONDOPAD-SERIES" class="feature_link">View Mondopad collaboration displays</a><br>
                 </div>
-
             </div>
         </div>
     </div>
@@ -143,40 +163,47 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END FEATURE MODULE A -->
+
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">
-        <div class="small-12 large-6 columns promo_module_d collaborate--promo_module_d">
-            <div class="module_image">
-
-            </div>
-            <div class="module_text center-headline">
-                <p class="lead_text--headline">
-                    Video calling as easy as voice calling
-                </p>
+        <div class="small-12 medium-6 columns promo_module_d collaborate--promo_module_d">
+            <div class="module_image"></div>
+            <div class="module_text">
+                <div class="module_text_inner">
+                    <p class="lead_text--headline">
+                        Video calling as easy as voice calling
+                    </p>
+                </div>
             </div>
             <div class="module_links">
-                <a href="/peripherals/MVP100" class="promo_module_link">
-                    conx phone
-                </a>
+                <div>
+                    <a href="/product-finder" class="promo_module_link">
+                        conx phone
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="small-12 large-6 columns promo_module_c collaborate--promo_module_c">
-            <div class="module_image">
-
-            </div>
+        <div class="small-12 medium-6 columns promo_module_c collaborate--promo_module_c">
+            <div class="module_image"></div>
             <div class="module_text">
-                <p class="lead_text--headline">
-                    Hear every word.<br/>
-                    See every face.
-                </p>
+                <div class="module_text_inner">
+                    <p class="lead_text--headline">
+                        Hear every word.<br/>
+    					See every face.
+                    </p>
+                </div>
             </div>
             <div class="module_links">
-                <a href="/peripherals/INA-TH150" class="promo_module_link">
-                    Thunder speakerphone
-                </a>
-                <a href="/peripherals/INA-PTZ-3" class="promo_module_link">
-                    realcam ptz camera
-                </a>
+                <div class="module_link_l">
+                    <a href="/peripherals/INA-TH150" class="promo_module_link first_link">
+                        Thunder speakerphone
+                    </a>
+                </div>
+                <div class="module_link_r">
+                    <a href="/peripherals/INA-PTZ-3" class="promo_module_link">
+                        realcam ptz camera
+                    </a>
+                </div>
             </div>
         </div>
     </div>

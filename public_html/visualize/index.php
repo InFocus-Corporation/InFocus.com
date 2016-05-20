@@ -14,6 +14,28 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $homedir.'/resources/overviews/', 'admin,salespublisher,saleseditor,marketingpublisher,marketingeditor,editor', ".src", "overview", "true", "SavePage","overview");}
 
 ?>
+
+<script>
+var moduleBHeight = function() {
+    var width = $(window).width();
+    var featureModule = $('.feature_module_b');
+    var featureTextHeight = featureModule.find('.feature_text').height();
+
+    if (width < 1025) {
+        var newMargin = featureTextHeight;
+        featureModule.css('margin-bottom', newMargin);
+    } else {
+        featureModule.css('margin-bottom','');
+    }
+}
+
+$(function() {
+    moduleBHeight();
+    $(window).resize(function() {
+        moduleBHeight();
+    });
+});
+</script>
 </head>
 <body class="" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
@@ -71,35 +93,33 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- END MULTICOLUMN TEXT MODULE -->
     <!-- FEATURE MODULE B -->
     <div class="row feature_module_b feature_module_b--visualize">
-        <div class="small-12 columns">
+        <div class="small-12 columns hero_inner">
             <div class="module_image"></div>
             <div class="feature_text text-center">
-                <h2 class="lead_text--secondary_headline">Engage every corner of your global enterprise</h3>
-    						<p class="lead_text--paragraph">Make well-informed decisions faster when your teams understand and share a common operating picture consisting of real-time video and data. </p>
-                <br><br>
+                <h2 class="lead_text--secondary_headline">Engage every corner of<br>your global enterprise</h2>
+    			<p class="lead_text--paragraph">Make well-informed decisions faster when your teams understand and share a common operating picture consisting of real-time video and data. </p>
                 <div class="feature_links">
                     <a href="http://www.infocus.com/videos?kjVCe1-mZ9g" class="feature_link">Watch Video</a><br>
                 </div>
-
             </div>
         </div>
     </div>
     <!-- END FEATURE MODULE B -->
-		<!-- FEATURE MODULE A -->
-		<div class="row feature_module_a feature_module_a--visualize">
-			<div class="small-6 columns feature_text">
-				<h2 class="lead_text--secondary_headline">Powering command and control </h2>
-				<p class="lead_text--paragraph">Command and control operations that share real-time video and data bi-directionally with their first response and field teams save lives. Teams can share and annotate on live video streams, communicating and collaborating as events unfold.</p>
-				<div class="feature_links">
-						<a href="http://www.avnetwork.com/av-technology/0002/crime-on-display/84800" class="feature_link">Read Los Angeles Police Department Case Study</a>
-				</div>
-			</div>
-			<div class="small-6 columns color_stripe_column">
-				<div class="white color_stripe"></div>
-				<div class="light_blue color_stripe float-right"></div>
+	<!-- FEATURE MODULE A -->
+	<div class="row feature_module_a feature_module_a--visualize">
+		<div class="small-6 columns feature_text">
+			<h2 class="lead_text--secondary_headline">Powering command and control </h2>
+			<p class="lead_text--paragraph">Command and control operations that share real-time video and data bi-directionally with their first response and field teams save lives. Teams can share and annotate on live video streams, communicating and collaborating as events unfold.</p>
+			<div class="feature_links">
+					<a href="http://www.avnetwork.com/av-technology/0002/crime-on-display/84800" class="feature_link">Read Los Angeles Police Department Case Study</a>
 			</div>
 		</div>
-		<!-- END FEATURE MODULE A -->
+		<div class="small-6 columns color_stripe_column">
+			<div class="white color_stripe"></div>
+			<div class="light_blue color_stripe float-right"></div>
+		</div>
+	</div>
+	<!-- END FEATURE MODULE A -->
     <!-- MULTICOLUMN TEXT MODULE -->
     <div class="row multicolumn_text_module">
         <div class="small-12 medium-10 medium-offset-1 columns lead_text">
