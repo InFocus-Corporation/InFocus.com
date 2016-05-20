@@ -62,7 +62,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/display-walls/InFocus-Lifestyle-Mondopad2-ConfRoom-WoodWall-300dpi-CMYK.jpg" alt="">
+			<img src="/resources/images/InFocus-Canvas-Touch-Architecture.jpg" alt="">
 		</div>
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">Canvas Touch</h3>
