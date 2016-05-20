@@ -20,9 +20,14 @@ var moduleBHeight = function() {
     var width = $(window).width();
     var featureModule = $('.feature_module_b');
     var featureTextHeight = featureModule.find('.feature_text').height();
+    var featureTextMarginTop = featureModule.find('.feature_text').css('margin-top');
 
     if (width < 1025) {
-        var newMargin = featureTextHeight;
+        var textMargin = parseInt(featureTextMarginTop);
+        var newMargin = featureTextHeight + textMargin/2;
+        console.log(textMargin);
+        console.log(featureTextHeight);
+        console.log(newMargin);
         featureModule.css('margin-bottom', newMargin);
     } else {
         featureModule.css('margin-bottom','');

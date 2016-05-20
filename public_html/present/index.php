@@ -14,14 +14,20 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $homedir.'/resources/overviews/', 'admin,salespublisher,saleseditor,marketingpublisher,marketingeditor,editor', ".src", "overview", "true", "SavePage","overview");}
 
 ?>
+
 <script>
 var moduleBHeight = function() {
     var width = $(window).width();
     var featureModule = $('.feature_module_b');
     var featureTextHeight = featureModule.find('.feature_text').height();
+    var featureTextMarginTop = featureModule.find('.feature_text').css('margin-top');
 
     if (width < 1025) {
-        var newMargin = featureTextHeight;
+        var textMargin = parseInt(featureTextMarginTop);
+        var newMargin = featureTextHeight + textMargin/3;
+        console.log(textMargin);
+        console.log(featureTextHeight);
+        console.log(newMargin);
         featureModule.css('margin-bottom', newMargin);
     } else {
         featureModule.css('margin-bottom','');
