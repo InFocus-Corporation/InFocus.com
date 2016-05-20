@@ -14,14 +14,17 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $homedir.'/resources/overviews/', 'admin,salespublisher,saleseditor,marketingpublisher,marketingeditor,editor', ".src", "overview", "true", "SavePage","overview");}
 
 ?>
+
 <script>
 var moduleBHeight = function() {
     var width = $(window).width();
     var featureModule = $('.feature_module_b');
     var featureTextHeight = featureModule.find('.feature_text').height();
+    var featureTextMarginTop = featureModule.find('.feature_text').css('margin-top');
 
     if (width < 1025) {
-        var newMargin = featureTextHeight;
+        var textMargin = parseInt(featureTextMarginTop);
+        var newMargin = featureTextHeight + textMargin/3;
         featureModule.css('margin-bottom', newMargin);
     } else {
         featureModule.css('margin-bottom','');
@@ -71,31 +74,25 @@ $(function() {
         </div>
     </div>
     <div class="row multicolumn_text_module">
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <p class="lead_text--paragraph">
                 Plug in any notebook, tablet or smartphone to an InFocus projector or display via HDMI, VGA, USB and more. 
             </p>
-            <br>
             <a href="/projectors/" class="text_module_link">View Projectors</a>
-            <br>
             <a href="/displays/" class="text_module_link">View Touchscreens</a>
         </div>
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <p class="lead_text--paragraph">
                 Project wirelessly from any device with InFocus wireless projectors and adapters.
             </p>
-            <br>
             <a href="/wireless-projector-lineup/" class="text_module_link">Wireless Projectors</a>
-            <br>
             <a href="/peripherals/INLITESHOW4" class="text_module_link">LiteShow 4 Wireless Adapter</a>
         </div>
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <p class="lead_text--paragraph">
                 Share content on an LCD display in seconds with an InFocus wireless touch display or any LCD display with a wireless adapter.
             </p>
-            <br>
             <a href="/displays/JTOUCH-LightCast-SERIES" class="text_module_link">Wireless Touchscreens</a>
-            <br>
             <a href="/peripherals/INLITESHOW4" class="text_module_link">LiteShow 4 Wireless Adapter</a>
         </div>
     </div>
@@ -117,9 +114,8 @@ $(function() {
 
     <!-- MULTICOLUMN ICON AND TEXT MODULE -->
     <div class="row multicol_icon_text_module">
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <img src="/resources/static/images/present/present-huddle.svg" alt="" class="present-page-icon"/>
-            <br><br>
             <p class="lead_text--headline">
                 Huddle Spaces
             </p>
@@ -130,9 +126,8 @@ $(function() {
             <br>
             <a href="/displays/DigiEasel-Series" class="text_module_link">DigiEasel Whiteboard Display</a>
         </div>
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <img src="/resources/static/images/present/present-conference.svg" alt="" class="present-page-icon"/>
-            <br><br>
             <p class="lead_text--headline">
                 Conference Rooms
             </p>
@@ -143,9 +138,8 @@ $(function() {
             <br>
             <a href="/displays/" class="text_module_link">Touchscreen Displays</a>
         </div>
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <img src="/resources/static/images/present/present-auditoriums.svg" alt="" class="present-page-icon"/>
-            <br><br>
             <p class="lead_text--headline">
                 Large Venues
             </p>
@@ -224,7 +218,7 @@ $(function() {
     <!-- END PROMO MODULES C & D -->
     <!-- TEXT MODULE -->
     <div class="row text_module">
-        <div class="small-8 small-offset-2 columns text-center lead_text">
+        <div class="small-12 columns text-center lead_text">
             <h1 class="lead_text--headline widelight">Making the meeting room a productive place to be</h1>
             <p class="lead_text--paragraph">
                 Sharing your ideas takes courage. Our technology works with you and helps you do your best. Plus, our US-based support team is here to help you, as we have been since we pioneered the digital projector nearly 30 years ago.

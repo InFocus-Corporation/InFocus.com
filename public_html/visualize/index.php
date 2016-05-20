@@ -20,9 +20,11 @@ var moduleBHeight = function() {
     var width = $(window).width();
     var featureModule = $('.feature_module_b');
     var featureTextHeight = featureModule.find('.feature_text').height();
+    var featureTextMarginTop = featureModule.find('.feature_text').css('margin-top');
 
     if (width < 1025) {
-        var newMargin = featureTextHeight;
+        var textMargin = parseInt(featureTextMarginTop);
+        var newMargin = featureTextHeight + textMargin/2;
         featureModule.css('margin-bottom', newMargin);
     } else {
         featureModule.css('margin-bottom','');
@@ -60,34 +62,31 @@ $(function() {
 	</div>
     <!-- END HEADER MODULE C -->
     <!-- MULTICOLUMN TEXT MODULE -->
-    <div class="row multicolumn_text_module">
-        <div class="small-12 large-4 columns text-center">
+    <div class="row multicol_icon_text_module">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <img class="svg" src="/resources/static/images/svg/visualize-instant.svg" alt="Visualize" />
             <p class="lead_text--paragraph">
-								<strong>Instant connections</strong><br/>
+				<strong>Instant connections</strong><br/>
               	View a display wall from your computer, tablet or smartphone so you can stay connected to multiple information sources affecting the situation at hand from wherever you are.
-								<br/>
-		      			<a href="/display-walls/canvas" class="text_module_link">Learn About Canvas</a>
             </p>
+            <a href="/display-walls/canvas" class="text_module_link">Learn About Canvas</a>
         </div>
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
               <img class="svg" src="/resources/static/images/svg/visualize-flexible.svg" alt="Visualize" />
             <p class="lead_text--paragraph">
-								<strong>Flexible and secure</strong><br/>
-								Scale up or re-configure your control wall or video stream displays with no loss of functionality. Object-level security keeps your data and access points safe.
-								<br/>
-		      			<a href="/display-walls/canvas" class="text_module_link">Learn About Canvas</a><br/>
-								<a href="/display-walls/fusion-catalyst" class="text_module_link">Learn About Fusion Catalyst</a>
+				<strong>Flexible and secure</strong><br/>
+				Scale up or re-configure your control wall or video stream displays with no loss of functionality. Object-level security keeps your data and access points safe.
             </p>
+            <a href="/display-walls/canvas" class="text_module_link">Learn About Canvas</a><br/>
+            <a href="/display-walls/fusion-catalyst" class="text_module_link">Learn About Fusion Catalyst</a>
         </div>
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <img class="svg" src="/resources/static/images/svg/visualize-insight.svg" alt="Visualize" />
             <p class="lead_text--paragraph">
-								<strong>Superb insight, great performance</strong><br/>
-								Waiting can slow decision response. Low resolution casts uncertainty when detail matters. Collaborate with 4K-quality sources in real time to get ahead of the competition.
-								<br/>
-		      			<a href="/display-walls/canvas-crs4k" class="text_module_link">Learn About Canvas CRS-4K</a>
+				<strong>Superb insight, great performance</strong><br/>
+				Waiting can slow decision response. Low resolution casts uncertainty when detail matters. Collaborate with 4K-quality sources in real time to get ahead of the competition.
             </p>
+            <a href="/display-walls/canvas-crs4k" class="text_module_link">Learn About Canvas CRS-4K</a>
         </div>
     </div>
     <!-- END MULTICOLUMN TEXT MODULE -->
@@ -124,26 +123,26 @@ $(function() {
     <div class="row multicolumn_text_module">
         <div class="small-12 medium-10 medium-offset-1 columns lead_text">
             <h2 class="lead_text--headline text-center">
-							You don’t have time for misunderstandings.
-							</br/>Communicate with video and get more done.</h2>
+            You don’t have time for misunderstandings. Communicate with video and get more done.</h2>
         </div>
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <p class="lead_text--paragraph">
-              	<strong>Have more efficient conversations</strong> when you can see faces, body language and objects. Reduce confusion, accelerate understanding, and ease your workload with video.
+                <b>Have more efficient meetings</b><br>when you can see faces, body language and objects. Reduce confusion, accelerate understanding, and ease your workload with video.
             </p>
         </div>
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <p class="lead_text--paragraph">
-								<strong>Save time and money on travel</strong> when you can have meaningful face-to-face conversations with people located anywhere in the world at any time.
+                <b>Save time and money on travel</b><br>when you can have meaningful face-to-face conversations with people located anywhere in the world at any time.
             </p>
         </div>
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <p class="lead_text--paragraph">
-								<strong>Develop stronger relationships</strong> and build trust with remote colleagues and partners when you talk face to face. Great for sales and human resources.
+                <b>Develop stronger relationships</b><br>and build trust with remote colleagues and partners when you talk face to face. Great for sales and human resources.
             </p>
         </div>
     </div>
     <!-- END MULTICOLUMN TEXT MODULE -->
+
 		<script>
 		    $(document).foundation();
 		</script>

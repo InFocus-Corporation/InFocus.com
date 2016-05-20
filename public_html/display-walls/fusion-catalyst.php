@@ -74,7 +74,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     <ul class="C10 panels resultsList">
                       <li>
               					<div>
-                          <a href="fusion-catalyst-4000"><h6 class="title">Fusion 4000</h6></a>
+                          <a href="fusion-catalyst-4000"><h6 class="title">Fusion Catalyst 4000</h6></a>
             				      <ul class="spec-list">
                             <li>48 slots</li>
                             <li>Up to 96 outputs at 2560x1600 pixels at 32 bits</li>
@@ -86,7 +86,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
               			  </li>
                       <li>
               					<div>
-                          <a href="fusion-catalyst-4500"><h6 class="title">Fusion 4500</h6></a>
+                          <a href="fusion-catalyst-4500"><h6 class="title">Fusion Catalyst 4500</h6></a>
               				    <ul class="spec-list">
                             <li>336 Gbps bandwidth</li>
                             <li>PCI Express 2.0 chassis</li>
@@ -98,7 +98,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
               			  </li>
                       <li>
               					<div>
-                          <a href="fusion-catalyst-8000"><h6 class="title">Fusion 8000</h6></a>
+                          <a href="fusion-catalyst-8000"><h6 class="title">Fusion Catalyst 8000</h6></a>
               				    <ul class="spec-list">
                             <li>320 Gbps bandwidth</li>
                             <li>Up to 80 slots</li>
