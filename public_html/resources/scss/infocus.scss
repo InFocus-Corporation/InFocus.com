@@ -1227,6 +1227,11 @@ header + .hero_row > .row {
           font-size: 24px;
         }
     }
+    &.text_module--teach {
+      .lead_text--paragraph {
+        max-width: 32em;
+      }
+    }
 }
 
 .multicolumn_text_module {
@@ -1249,7 +1254,7 @@ header + .hero_row > .row {
         }
       }
     }
-    h1.lead_text--headline, h2.lead_text--headline{
+    h1.lead_text--headline, h2.lead_text--headline, h3.lead_text--headline {
       color: $dark_gray;
       font-family: 'GoodPro-WideLight';
       font-weight: normal;
@@ -1286,6 +1291,25 @@ header + .hero_row > .row {
       }
       @media screen and (min-width: 64em) {
         font-size: 40px;
+      }
+    }
+    h3.lead_text--headline {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 18px;
+      max-width: 27em;
+      @media screen and (min-width: 22em) {
+        font-size: 22px;
+      }
+      @media screen and (min-width: 30em) {
+        line-height: 1.5;
+        font-size: 24px;
+      }
+      @media screen and (min-width: 40em) {
+        font-size: 26px;
+      }
+      @media screen and (min-width: 64em) {
+        font-size: 32px;
       }
     }
     .lead_text--paragraph {
@@ -1341,6 +1365,21 @@ header + .hero_row > .row {
       width:121px;
       height: 121px;
       * {  stroke: $infocus_orange; }
+    }
+    &.text_module--teach {
+      .three_column_module {
+        .lead_text--paragraph {
+          @media screen and (min-width: 64em) {
+            font-size: 1.25rem;
+            padding: 0 2px;
+          }
+        }
+        .text_module_link {
+          @media screen and (min-width: 40em) {
+            font-size: 100%;
+          }
+        }
+      }
     }
 }
 
@@ -1582,6 +1621,10 @@ header + .hero_row > .row {
             background: url('../static/images/collaborate/collaborate-promo_module_c.jpg');
             background-size: cover;
         }
+        &.teach--promo_module_c .module_image {
+          background: url('/resources/static/images/teach/GettyImages-140872375.jpg') no-repeat;
+          background-size: cover;
+        }
         .module_text {
           .module_text_inner {
             @media screen and (min-width: 40em) {
@@ -1662,6 +1705,10 @@ header + .hero_row > .row {
               width: 94%;
             }
           }
+        }
+        &.teach--promo_module_d .module_image {
+          background: url('/resources/static/images/teach/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg') no-repeat;
+          background-size: cover;
         }
         .module_text {
           padding-left: 15px;
@@ -2059,27 +2106,6 @@ div.video_module {
 }
 
 //Teach page--404
-.page--teach {
-    .text_module_a a.text_module_link {
-        font-family: 'GoodPro-WideMedium';
-    }
-    h4.lead_text--paragraph {
-        font-size: 2.3rem;
-        font-weight: 300;
-        padding: 0 1em;
-    }
-    .text_module_a h1.lead_text--headline {
-        font-weight: 300;
-    }
-    div.promo_modules .promo_module_c .module_image {
-        background: url('/resources/static/images/teach/GettyImages-140872375.jpg') no-repeat;
-        background-size: cover;
-    }
-    div.promo_modules .promo_module_d .module_image {
-        background: url('/resources/static/images/teach/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg') no-repeat;
-        background-size: cover;
-    }
-  }
 
 #kangaroo_page {
     #kangaroo_hero {

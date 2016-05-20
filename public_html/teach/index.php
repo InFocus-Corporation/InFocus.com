@@ -63,38 +63,33 @@ $(function() {
 	</div>
     <!-- END HEADER MODULE C -->
     <br><br>
-    <!-- TEXT MODULE A -->
-    <div class="row text_module_a">
-        <div class="small-12 medium-10 medium-offset-1 columns text-center lead_text">
-            <h4 class="lead_text--paragraph">
-                See engagement and grades go up when the touch technology your students know and love occupies the front of your classroom.
-            </h4>
+    <!-- MULTICOLUMN TEXT MODULE -->
+    <div class="row multicolumn_text_module">
+        <div class="small-12 columns text-center lead_text">
+            <h3 class="lead_text--headline text-center widelight">See engagement and grades go up when the touch technology your students know and love occupies the front of your classroom.</h3>
         </div>
     </div>
-    <div class="row text_module_a">
-        <div class="small-12 large-4 columns text-center">
+    <div class="row multicolumn_text_module text_module--teach">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <p class="lead_text--paragraph">
                 Engage your students and please the staff of your K-12 school with the most affordable 65" interactive whiteboard display on the market.
             </p>
-            <br>
             <a href="/displays/INF6501w" class="text_module_link">View $1,999 (US) Whiteboard</a>
         </div>
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <p class="lead_text--paragraph">
                 Connect devices wirelessly to your display and create a collaborative environment with an interactive whiteboard.
             </p>
-            <br>
             <a href="/displays/JTOUCH-LightCast-SERIES" class="text_module_link">View Wireless Whiteboards</a>
         </div>
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <p class="lead_text--paragraph">
                 Roll your whiteboard where it's needed most, within the room or between rooms, when you mount the display on a mobile cart.
             </p>
-            <br>
             <a href="/accessories/mounts/INF-MOBCART" class="text_module_link">View Mobile Cart</a>
         </div>
     </div>
-    <!-- END TEXT MODULE A -->
+    <!-- END MULTICOLUMN TEXT MODULE -->
     <!-- FEATURE MODULE JTOUCH -->
     <div class="video_module video_module_teach">
         <a href="/videos?1GWVuww_dXw">
@@ -138,7 +133,7 @@ $(function() {
 
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">
-        <div class="small-12 medium-6 columns promo_module_d">
+        <div class="small-12 medium-6 columns promo_module_d teach--promo_module_d">
             <div class="module_image"></div>
             <div class="module_text">
                 <div class="module_text_inner">
@@ -158,7 +153,7 @@ $(function() {
                 </div>
             </div>
         </div>
-        <div class="small-12 medium-6 columns promo_module_c">
+        <div class="small-12 medium-6 columns promo_module_c teach--promo_module_c">
             <div class="module_image">
 
             </div>
@@ -207,10 +202,9 @@ $(function() {
     </div>
     <!-- END FEATURE MODULE A -->
     <!-- TEXT MODULE -->
-    <div class="row text_module">
-        <div class="small-8 small-offset-2 columns text-center lead_text">
-            <a id="inspire" name="inspire"></a>
-            <h1 class="lead_text--headline">Inspire Education Program</h1>
+    <div class="row text_module text_module--teach">
+        <div class="small-12 columns text-center lead_text">
+            <h1 class="lead_text--headline widelight">Inspire Education Program</h1>
             <p class="lead_text--paragraph">
                 Your school can get special pricing, extended warranties and complimentary training when you buy select touchscreens or projectors from an authorized Inspire Dealer.
             </p>
