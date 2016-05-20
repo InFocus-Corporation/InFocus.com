@@ -145,6 +145,7 @@ div.info #blurb {
                                 </div>
                                 <hr>
                             </div>
+                            <br style="clear:both;">
                             <div class="info cmsedit">
                                 <br>
                                 <strong class="tagline mysqledit">
