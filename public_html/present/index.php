@@ -14,6 +14,27 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $homedir.'/resources/overviews/', 'admin,salespublisher,saleseditor,marketingpublisher,marketingeditor,editor', ".src", "overview", "true", "SavePage","overview");}
 
 ?>
+<script>
+var moduleBHeight = function() {
+    var width = $(window).width();
+    var featureModule = $('.feature_module_b');
+    var featureTextHeight = featureModule.find('.feature_text').height();
+
+    if (width < 1025) {
+        var newMargin = featureTextHeight;
+        featureModule.css('margin-bottom', newMargin);
+    } else {
+        featureModule.css('margin-bottom','');
+    }
+}
+
+$(function() {
+    moduleBHeight();
+    $(window).resize(function() {
+        moduleBHeight();
+    });
+});
+</script>
 </head>
 <body id="present_page" class="present_page" style="">
 	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
@@ -38,6 +59,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
 	</div>
     <!-- END HEADER MODULE C -->
+
     <!-- MULTICOLUMN TEXT MODULE -->
     <div class="row multicolumn_text_module">
         <div class="small-12 columns text-center lead_text">
@@ -81,17 +103,13 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <!-- FEATURE MODULE B -->
     <div class="row feature_module_b">
         <div class="small-12 columns hero_inner">
-            <div class="module_image">
-
-            </div>
+            <div class="module_image"></div>
             <div class="feature_text text-center">
-                <h2 class="lead_text--secondary_headline widelight">Capture ideas on a digital canvas</h3>
+                <h2 class="lead_text--secondary_headline widelight">Capture ideas on a<br>digital canvas</h2>
     			<p class="lead_text--paragraph">Take notes, draw, save and share the work with the same touchscreen you're presenting on. It's the efficient, economical, and odor-free answer to dry erase.</p>
-                <br><br>
                 <div class="feature_links">
                     <a href="/displays/JTOUCH-Series" class="feature_link">View Whiteboard Displays</a><br>
                 </div>
-
             </div>
         </div>
     </div>
@@ -155,42 +173,51 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
         </div>
     </div>
     <!-- END FEATURE MODULE A -->
+
     <!-- PROMO MODULES C & D-->
     <div class="row promo_modules">
         <div class="small-12 medium-6 columns promo_module_d">
             <div class="module_image"></div>
             <div class="module_text">
-                <p class="lead_text--headline">
-                    Find the projector that's right for you.
-                </p>
-                <p class="lead_text--paragraph">
-                    Search by your room size, ambient light, connectivity, and more.
-                </p>
+                <div class="module_text_inner">
+                    <p class="lead_text--headline">
+                        Find the projector that's right for you.
+                    </p>
+                    <p class="lead_text--paragraph">
+                        Search by your room size, ambient light, connectivity, and more.
+                    </p>
+                </div>
             </div>
             <div class="module_links">
-                <a href="/product-finder" class="promo_module_link">
-                    Projector Finder
-                </a>
+                <div>
+                    <a href="/product-finder" class="promo_module_link">
+                        Projector Finder
+                    </a>
+                </div>
             </div>
         </div>
         <div class="small-12 medium-6 columns promo_module_c">
-            <div class="module_image">
-
-            </div>
-            <div class="module_text">
-                <p class="lead_text--headline">
-                    Explore solutions for teachers or video conferencing
-                </p>
-            </div>
+            <div class="module_image"></div>
+                <div class="module_text">
+                    <div class="module_text_inner">
+                        <p class="lead_text--headline">
+                            Explore solutions for teachers or video conferencing
+                        </p>
+                    </div>
+                </div>
             <div class="module_links">
-                <a href="/teach/" class="promo_module_link first_link">
-                    Teaching &amp; <br>
-                    Training Solutions
-                </a>
-                <a href="/collaborate/" class="promo_module_link">
-                    Collaboration <br>
-                    Solutions
-                </a>
+                <div class="module_link_l">
+                    <a href="/teach/" class="promo_module_link first_link">
+                        Teaching &amp; <br>
+                        Training Solutions
+                    </a>
+                </div>
+                <div class="module_link_r">
+                    <a href="/collaborate/" class="promo_module_link">
+                        Collaboration <br>
+                        Solutions
+                    </a>
+                </div>
             </div>
         </div>
     </div>

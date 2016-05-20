@@ -50,13 +50,13 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             </div>
             <div class="C10 Col_child C6x4_child">
                 <div class="image-set" style="float:right;">
-                    <img src="/resources/static/images/display-walls/InFocus-Lifestyle-Mondopad2-ConfRoom-WoodWall-300dpi-CMYK.jpg">
+                    <img src="/resources/images/InFocus-Canvas-Touch-Architecture.jpg">
                 </div>
                 <div class="info" style="float:left;">
                     <strong class="tagline mysqledit" id="header">The Essential Endpoint for Your Canvas Environment</strong>
                     <div class="mysqledit" id="blurb">
-                        <p><strong>Canvas Touch extends the power of Canvas’ award-winning visualization solution to conference rooms, huddle spaces, personal offices, or anywhere else groups meet and collaborate.</strong></p>
-                        <p>Use the powerful touchscreen interface of Canvas Touch to collaborate with remote colleagues that run Canvas, including sharing live video, real-time data, application screens, web windows, documents, and presentations.</p>
+                        <p>Canvas Touch extends the power of Canvas’ award-winning visualization solution to conference rooms, huddle spaces, personal offices, or anywhere else groups meet and collaborate.</p>
+                        <p>Use the powerful touchscreen interface of Canvas Touch to collaborate with remote colleagues that run <a href="/display-walls/canvas">Canvas</a>, including sharing live video, real-time data, application screens, web windows, documents, and presentations.</p>
                     </div>
                 </div>
                 <ul class="feature-list" style="padding-bottom:50px; width:38%;">
