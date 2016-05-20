@@ -22,8 +22,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		<div class="row hero_inner">
 			<div class="hero_image"><img src="/resources/static/images/homepage/homepage-hero-a--wb-bertlitz.jpg" /></div>
 			<div class="small-6 medium-5 columns lead_text">
-				<h2 class="lead_text--headline">A better way to work</h2>
-				<p class="lead_text--paragraph">In a perfect world, every meeting is productive and every presentation engages the audience. We make the world a more perfect place.</p>
+				<h2 class="lead_text--headline">A better way to work. Together.</h2>
+				<p class="lead_text--paragraph">What if every meeting were productive, every encounter collaborative, and every presentation delivered impact? They can be. Let us show you how we power great work.</p>
 			</div>
 			<div class="small-1 medium-3 color_stripe_column">
 				<div class="dark_blue color_stripe"></div>
@@ -48,12 +48,12 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 					<div class="vertical_accordion--slide--background">
 					</div>
 					<div class="vertical_accordion--slide--content">
-						<div class="module--tag">
-							<span>For Public Sector</span>
-						</div>
 						<a href="#public">
-							<h2>Enable full situational awareness</h2>
-							<h5>Our visualization solutions help emergency, utility, military, and other critical sectors track their operations.</h5>
+							<div class="module--tag">
+								<span>For Public Sector</span>
+							</div>
+							<h2>See everything, control everything</h2>
+							<h5>Our video conference and visualization solutions enable emergency, utility, military and other critical operations to monitor and connect any time, all the time, from anywhere.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
 							<span><a class="cta" href="/visualize/">Solutions for visualization</a></span><br/>
@@ -66,12 +66,12 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 					<div class="vertical_accordion--slide--background">
 					</div>
 					<div class="vertical_accordion--slide--content">
-						<div class="module--tag">
-							<span>for education</span>
-						</div>
 						<a href="#education">
+							<div class="module--tag">
+								<span>for education</span>
+							</div>
 							<h2>Elevate the classroom experience</h2>
-							<h5>Is it possible to share informations with students in a better, more engaging and powerful way? We think so.</h5>
+							<h5>Is it possible to share and inspire students in a better, more engaging and more impactful way? Absolutely.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
 								<span><a class="cta" href="/teach/">Solutions to teach & train</a></span><br/>
@@ -84,12 +84,12 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 					<div class="vertical_accordion--slide--background">
 					</div>
 					<div class="vertical_accordion--slide--content">
-						<div class="module--tag">
-							<span>for business</span>
-						</div>
 						<a href="#business">
-							<h2>Improve profitability and teamwork</h2>
-							<h5>From the cubicle to the command center, our technologies can improve the way people at all levels of your company work.</h5>
+							<div class="module--tag">
+								<span>for business</span>
+							</div>
+							<h2>Work smarter, better, faster</h2>
+							<h5>From the cubicle to the conference room to the command center, our solutions improve the way people work at all levels of your company.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
 							<span><a class="cta" href="/present/">Solutions for presentations</a></span><br/>
@@ -100,18 +100,16 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			</div>
 		</div>
 	</div>
-	<div class="hero_row hero_row--secondary hero_row--secondary--homepage transparent-border-left-60-orange transparent-border-right-38-green">
-		<div class="color_stripe_column">
-			<div class="white color_stripe hide-for-small-only"></div>
-		</div>
-		<div class="row">
-			<div class="small-12 medium-10 medium-offset-2 large-7 large-offset-5 columns">
-				<h2 class="lead_text--headline">"We have the power to collaborate anytime, anywhere"</h2>
-				<h5 class="quote_source">- Jane Matthews Entrepreneur</h5>
-				<a href="#TODO" class="button button--primary">watch case study video</a>
-			</div>
-		</div>
+
+	<!-- VIDEO MODULE -->
+	<div class="video_module video_module_collaborate-b">
+	    <a href="http://www.infocus.vagrant.internal/videos?SNMjzPRQUA8">
+	        <div class="video_link">
+	            <h2 class="lead_text--secondary_headline">See how collaboration is done</h2>
+	        </div>
+	    </a>
 	</div>
+	<!-- END VIDEO MODULE -->
 
 	<div class="row homepage--callouts" data-equalizer data-equalize-on="medium">
 		<div class="small-12 medium-7 columns" data-equalizer-watch>
@@ -126,7 +124,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 				<div class="callout--copy">
 					<h5><?= $latest_news['teaser'] ?></h5>
 					<a href="/articles?<?= $latest_news['id'] ?>" class="button button--primary">learn more</a>
-					<a href="/about#news" class="right">View All News</a>
+					<a href="/about#news" class="link link--primary link--inverted">View all news</a>
 				</div>
 			</div>
 		</div>

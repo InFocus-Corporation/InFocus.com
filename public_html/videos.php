@@ -33,7 +33,24 @@ padding-left:10px;
 width:18%;
 display:inline-block;
 vertical-align:top;
+border-bottom: 1px solid #ccc;
+margin-bottom: 50px;
+height: 380px;
 }
+#main-video {
+  height:auto;
+  min-height: 220px;
+  width: 90%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 40em) {
+  #main-video {
+    width:100%;
+    height:600px;
+  }
+}
+.video { text-align: center;}
+.video p {  text-align: left;}
 </style>
 <script>
 (function( $ ) {
@@ -177,7 +194,7 @@ $( "#dropdownbox" ).dropdownbox();
 
 });
 
-	
+
 </script>
 	</head>
 <style>
@@ -189,49 +206,38 @@ cursor:pointer;
 }
 
 </style>
-	<body class="">
-		<?php include($homedir . "/resources/html/mainmenu.html"); ?>
-		<div class="content">
-<div class="C9">
-	<h1 class="title">InFocus Videos</h2>
-
+<body class="">
+	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
+	<div class="content">
+		<div class="C9">
+        <div class="productheader C10 Col_child C4x6_child">
+          <div><h1 class="mysqledit h2" id="pagetitle" style="">InFocus Videos</h1></div>
+          <div>
+          </div>
+        </div>
 			<a id="vidtop"></a>
-			
 <?php
 
 if(!empty($_SERVER['QUERY_STRING'])){
+	$result = mysqli_query($connection,'SELECT Summary, title, body, vidid, about, industry FROM videos WHERE vidid = "' . $_SERVER['QUERY_STRING'] . '"');
+	$x=0;
+	if(mysqli_num_rows ($result)>0){
+		while($row = mysqli_fetch_array($result)) {
+			echo  "<title>$row[1]</title>";
+			echo '<div class="video" style="padding-bottom:30px">
+					<iframe id="main-video" src="//www.youtube.com/embed/' . $row[3] . '?vq=hd720&rel=0&modestbranding=1" frameborder="0" allowfullscreen ></iframe></div>
+					<h2 class="name" id="videoheader">' . $row[1] . '</h2>
+					<p id="videosummary">' . $row[2] . '</p>
+				</div>';
+		}
+	} else {
+		echo 'Video not found.';
+	}
 
-
-			$result = mysqli_query($connection,'SELECT Summary, title, body, vidid, about, industry FROM videos WHERE vidid = "' . $_SERVER['QUERY_STRING'] . '"');
-			$x=0;
-			if(mysqli_num_rows ($result)>0){
-			while($row = mysqli_fetch_array($result))
-				{
-				echo  "<title>$row[1]</title>";
-	
-
-					echo '<div class="video" style="padding-bottom:30px">
-							
-							<iframe id="main-video" src="//www.youtube.com/embed/' . $row[3] . '?vq=hd720&rel=0&modestbranding=1" style="width:100%;height:600px" frameborder="0" allowfullscreen ></iframe></div>
-							
-														<h3 id="videoheader">' . $row[1] . '</h3>
-							<p id="videosummary">' . $row[2] . '</p>
-							
-<footer id="site-info" >
-				';
-
-				}
-				}
-				else{echo 'Video not found.
-				
-<footer id="site-info" >
-				';}
-
-
-include($homedir . "/resources/html/footer.html");
-
-echo "</footer></body></html>";
-die();
+	echo '</div></div><footer id="site-info">';
+	include($homedir . "/resources/html/footer.html");
+	echo "</footer></body></html>";
+	die();
 }
 
 
@@ -247,16 +253,16 @@ die();
 				{
 					$displayinclude = false;
 					$projinclude = false;
-					
+
 
 					$prodarray = explode(",",$row[4]);
 					if($x==0){
 
 					echo '<div class="video" style="padding-bottom:30px">
-														<h3 id="videoheader">' . $row[1] . '</h3>
+														<h2 class="name" id="videoheader">' . $row[1] . '</h2>
 							<p id="videosummary">' . $row[0] . '</p>
-							<iframe id="main-video" src="//www.youtube.com/embed/' . $row[3] . '?vq=hd720&rel=0&modestbranding=1" style="width:100%;height:600px" frameborder="0" allowfullscreen ></iframe></div>
-						<div style="text-align:center">	
+							<iframe id="main-video" src="//www.youtube.com/embed/' . $row[3] . '?vq=hd720&rel=0&modestbranding=1" frameborder="0" allowfullscreen ></iframe></div>
+						<div style="text-align:center">
 				<h4>Filter by Video Type or Industry</h4>
 					<div class="ui-widget">
 						<select id="dropdownbox">
@@ -293,17 +299,17 @@ die();
 							$x=1;
 								}
 
-						$allvid .=  '					<li style="height:400px;" class="' . $row[5] . '"><div class="cover';
+						$allvid .=  '					<li class="' . $row[5] . '"><div class="cover';
 						if($x==1){$allvid .=  " nowplaying";$x=2;$y=2;}
-						$allvid .= '"><img src="http://img.youtube.com/vi/' . $row[3] . '/mqdefault.jpg" style="width:100%;height:auto"  onclick="openVid(' . "'" . $row[3] . "'" . ');"/></div>
+						$allvid .= '"><img src="http://img.youtube.com/vi/' . $row[3] . '/mqdefault.jpg" style="width:100%;height:126px;"  onclick="openVid(' . "'" . $row[3] . "'" . ');"/></div>
 						<div class="about">
 							<strong class="abouthead"><a href="?' . $row[3] . '">' . $row[1] . '</a></strong>
 
 							<p class="aboutsumm">' . $row[0] . '</p>
 						</div>
 					</li>';
-						
-						
+
+
 					foreach($prodarray AS $product){
 
 						if(($product == "Mondopad" OR $product == "BigTouch" OR $product == "JTouch") AND $displayinclude == false  ){
@@ -318,7 +324,7 @@ die();
 							</li>';
 							$displayinclude = true;
 						}
-						
+
 						if($product != "Mondopad" AND $product != "BigTouch" AND $product != "JTouch" AND $projinclude == false  ){
 							$projvid .= '					<li style="height:400px;" class="' . $row[5] . '"><div class="cover';
 							if($x==1){$projvid .=  " nowplaying";}
@@ -331,11 +337,11 @@ die();
 							</li>';
 							$projinclude = true;
 						}
-						
+
 					}
 					$x=3;
 
-					
+
 				}
 			$allvid .= '</ul></div>';
 			$displayvid .= '</ul></div>';
@@ -355,17 +361,18 @@ die();
 <?php echo $projvid; ?>
 		</div>
 	</div>
-	
-	
+
+
 </div>
 
 
 			</section>
-		</div>
+	</div>
+</div>
 
-				<footer id="site-info" >
-				<?php include($homedir . "/resources/html/footer.html"); ?>
-				</footer>
+<footer id="site-info" >
+<?php include($homedir . "/resources/html/footer.html"); ?>
+</footer>
 
 <script>
 
@@ -393,7 +400,7 @@ $("#" + $(this).parent().parent().parent().parent().parent().attr('id') + " div"
 $(this).parent().addClass("nowplaying");
 
     });
-	
+
 function openVid(vid){
 
 document.getElementById('main-video').setAttribute('src','//www.youtube.com/embed/' + vid + '?vq=hd720&rel=0&autoplay=1');
