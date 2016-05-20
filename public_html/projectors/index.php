@@ -157,7 +157,7 @@ if($category) {
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/projectors/GettyImages-508065611.jpg" alt="">
+			<img src="/resources/static/images/projectors/short-throw-projectors.jpg" alt="">
 		</div>
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">Short Throw Projectors</h3>
