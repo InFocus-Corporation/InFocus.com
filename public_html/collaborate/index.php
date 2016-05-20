@@ -158,7 +158,7 @@ $(function() {
             <h2 class="lead_text--secondary_headline">View & interact with all your critical information</h2>
             <p class="lead_text--paragraph">Display all of your data sources and HD video conferencing feeds on up to 96 screens – customized for your board room, CxO office, or training center.</p>
             <div class="feature_links">
-                <a href="/projectors/IN2120a-Series" class="feature_link">View ConX Wall</a>
+                <a href="/conx-wall-exec" class="feature_link">View ConX Wall</a>
             </div>
         </div>
         <div class="small-6 columns color_stripe_column">
@@ -199,12 +199,12 @@ $(function() {
             </div>
             <div class="module_links">
                 <div class="module_link_l">
-                    <a href="/teach/" class="promo_module_link first_link">
+                    <a href="/peripherals/INA-TH150" class="promo_module_link first_link">
                         Thunder speakerphone
                     </a>
                 </div>
                 <div class="module_link_r">
-                    <a href="/collaborate/" class="promo_module_link">
+                    <a href="/peripherals/INA-PTZ-3" class="promo_module_link">
                         realcam ptz camera
                     </a>
                 </div>

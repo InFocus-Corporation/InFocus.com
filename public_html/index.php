@@ -22,8 +22,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		<div class="row hero_inner">
 			<div class="hero_image"><img src="/resources/static/images/homepage/homepage-hero-a--wb-bertlitz.jpg" /></div>
 			<div class="small-6 medium-5 columns lead_text">
-				<h2 class="lead_text--headline">A better way to work</h2>
-				<p class="lead_text--paragraph">What if every meeting were productive and every presentation delivered impact? They can be. Let us show you how we power great work.</p>
+				<h2 class="lead_text--headline">A better way to work. Together.</h2>
+				<p class="lead_text--paragraph">What if every meeting were productive, every encounter collaborative, and every presentation delivered impact? They can be. Let us show you how we power great work.</p>
 			</div>
 			<div class="small-1 medium-3 color_stripe_column">
 				<div class="dark_blue color_stripe"></div>
@@ -119,7 +119,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 					<span>latest news</span>
 				</div>
 				<div class="callout--heading">
-					<h3><?= $latest_news['title'] ?></h3>
+					<h3><a href="/articles?<?= $latest_news['id'] ?>" class=""><?= $latest_news['title'] ?></a></h3>
 				</div>
 				<div class="callout--copy">
 					<h5><?= $latest_news['teaser'] ?></h5>
@@ -130,10 +130,14 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 		<div class="small-12 medium-5 columns" data-equalizer-watch>
 			<div class="callout callout--picture">
+
 				<!-- <div class="callout--heading callout--heading--picture">
 					<img src="http://placehold.it/1311x699" />
 				</div> -->
 				<div class="callout--copy">
+					<div class="module--tag">
+						<span>latest events</span>
+					</div>
 					<h5><a href="http://www.infocommshow.org/">InfoComm</a><br> June 8 - 10, 2016<br> Las Vegas, NV</h5>
 					<h5><a href="http://www.ifsec.co.uk/Content/Welcome">IFSEC</a><br> June 21 - 23, 2016<br> London, England</h5>
 					<h5><a href="http://conference.iste.org/2016/">ISTE</a><br> June 27 - 29, 2016<br> Denver, CO</h5>

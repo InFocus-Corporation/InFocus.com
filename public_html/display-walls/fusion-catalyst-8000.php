@@ -93,7 +93,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <p>Fusion Catalyst™ processors ship with ControlPoint Security™, airtight security tools indigenous to Jupiter’s ControlPoint™ wall management software suite.</p>
                           <p>ControlPoint Security features LDAP integration, pro­viding secure login with the standard user name and password controlled by the customer’s IT department.</p>
                           <p>With security defined at the object level, managers can create discrete management and access permissions for wall segments, layouts, inputs, applications, and remote cursor control. User activity and event logging are performed at sub-second resolution, allowing thorough forensic analysis.</p>
-                          <a href="//www.infocus.com/resources/documents/InFocus-Jupiter-ControlPoint-with-ControlPoint-Security-Datasheet-EN.pdf">Download ControlPoint with ControlPoint Security Data Sheet</a>
+                          <a href="/resources/documents/InFocus-Jupiter-ControlPoint-with-ControlPoint-Security-Datasheet-EN.pdf">Download ControlPoint with ControlPoint Security Data Sheet</a>
                           <hr/>
                       </div>
                     </div>

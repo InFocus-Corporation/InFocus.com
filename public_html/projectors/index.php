@@ -122,14 +122,13 @@ if($category) {
 					<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/static/images/svg/icon-projectors.svg'); ?>
 					Projectors
 				</h2>
-				<p class="lead_text--paragraph">Powerful yet portable office and classroom projectors with high resolution, wireless, networking, digital connectivity, and prices your budget will love.</p>
+				<p class="lead_text--paragraph">Whether you’re looking for a projector small enough to fit in your briefcase or one powerful enough for an auditorium, InFocus has you covered.</p>
 			</div>
 			<div class="small-3 color_stripe_column">
 				<div class="dark_blue color_stripe"></div>
 				<div class="white color_stripe"></div>
 			</div>
 		</div>
-
 	</div>
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
@@ -150,7 +149,7 @@ if($category) {
 		</div>
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline">Office/Classroom Projectors</h3>
-			<p class="lead_text--paragraph">Office and classroom projectors with wireless and networking, broad connectivity, and prices your budget will love.</p>
+			<p class="lead_text--paragraph">Powerful yet portable office and classroom projectors with high resolution, wireless, networking, digital connectivity, and prices your budget will love.</p>
 			<a href="/projectors/office-classroom" class="button button--primary">learn more</a>
 		</div>
 	</div>

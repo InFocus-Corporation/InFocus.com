@@ -173,6 +173,12 @@ header + .hero_row > .row {
                 right: 0%;
                 height: 110%;
             }
+            @media screen and (min-width: 1990px) {
+                top: 50%;
+                width: 100%;
+                height: auto;
+                transform: translate(0,-50%);
+            }
         }
     }
     .lead_text>:first-child {
@@ -809,7 +815,7 @@ header + .hero_row > .row {
     &.feature_module_a--visualize .feature_text {
       @media screen and (min-width: 64em) {
         padding: 40px 124px 40px 35px;
-      } 
+      }
     }
 
     .color_stripe_column {
@@ -1718,10 +1724,12 @@ header + .hero_row > .row {
 }
 
 div.video_module {
+  margin-top: 6em;
   position: relative;
-  height: 0;
   padding-bottom: 60%;
   @media screen and (min-width: 64em) {
+    margin-top: 9em;
+    margin-bottom: 8em;
     height: 825px;
   }
   &.video_module_teach {
@@ -1873,6 +1881,10 @@ div.video_module {
 .homepage--callouts {
   .callout {
     height: 100%;
+    .button--primary {
+        position: absolute;
+        bottom: 77px;
+    }
   }
   .link--inverted {
     clear: both;
@@ -1906,8 +1918,15 @@ div.video_module {
   background-color: $infocus_light_blue;
   border: 0px;
   border-radius: 3px;
-  // .callout--copy h5 { margin-bottom: 2.55em;}
+  .callout--copy h5 { clear: both; }
   &.callout--picture {
+    .module--tag {
+      margin-bottom: 2.5em;
+      span { color: $infocus_light_blue; }
+      &:before {
+          border: 2px solid $infocus_light_blue;
+      }
+    }
     padding: 0px;
     .callout--copy {
       text-align:center; color: $white;
@@ -2001,6 +2020,10 @@ div.video_module {
 
 // Support Page
 .support-page {
+  .row {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
 
   h6 {
     font-family: 'GoodPro-WideBook';
