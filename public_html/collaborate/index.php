@@ -20,9 +20,11 @@ var moduleBHeight = function() {
     var width = $(window).width();
     var featureModule = $('.feature_module_b');
     var featureTextHeight = featureModule.find('.feature_text').height();
+    var featureTextMarginTop = featureModule.find('.feature_text').css('margin-top');
 
     if (width < 1025) {
-        var newMargin = featureTextHeight;
+        var textMargin = parseInt(featureTextMarginTop);
+        var newMargin = featureTextHeight + textMargin/3;
         featureModule.css('margin-bottom', newMargin);
     } else {
         featureModule.css('margin-bottom','');
@@ -61,7 +63,7 @@ $(function() {
     <!-- END HEADER MODULE C -->
     <!-- MULTICOLUMN TEXT MODULE -->
     <div class="row multicolumn_text_module">
-        <div class="small-10 small-offset-1 medium-8 medium-offset-2 columns text-center lead_text">
+        <div class="small-12 columns text-center lead_text">
             <h1 class="lead_text--headline">Seeing is believing</h1>
             <p class="lead_text--paragraph">
                 Communicating with video and data provides so many benefits – better understanding, less cost, and more – that you’ll never want to call without it.
@@ -71,33 +73,36 @@ $(function() {
             </p>
         </div>
     </div>
-    <div class="row multicolumn_text_module">
-        <div class="small-12 large-4 columns text-center">
+    <div class="row multicol_icon_text_module">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <img class="svg" src="/resources/static/images/svg/collaborate--low-cost.svg" alt="Collaborate" />
+            <p class="lead_text--headline">
+                Low cost
+            </p>
             <p class="lead_text--paragraph">
-                <strong>Low cost</strong><br/>
                 Start for a minimal cost since video conferencing is hosted in the cloud. Plus, quality is high due to today’s high bandwidth internet services.
-                <br/>
-                <a href="https://www.infocusconx.com/" class="text_module_link">Free Trial of ConX Video Meeting</a>
             </p>
+            <a href="https://www.infocusconx.com/" class="text_module_link">Free Trial of ConX Video Meeting</a>
         </div>
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
               <img class="svg" src="/resources/static/images/svg/collaborate--easy-to-use.svg" alt="Collaborate" />
+            <p class="lead_text--headline">
+                Easy to use
+            </p>
             <p class="lead_text--paragraph">
-                <strong>Easy to use</strong><br/>
                 Make a video call as easily as you would a voice call, maybe even easier. You can join a video meeting by dialing only 4 digits and entering a 4-digit passcode.
-                <br/>
-                <a href="/peripherals/ConX-Series" class="text_module_link">ConX Video Meeting</a>
             </p>
+            <a href="/peripherals/ConX-Series" class="text_module_link">ConX Video Meeting</a>
         </div>
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <img class="svg" src="/resources/static/images/svg/collaborate--device-friendly.svg" alt="Collaborate" />
-            <p class="lead_text--paragraph">
-                <strong>Device-friendly</strong><br/>
-                Call anyone with most any device, including with smartphones, tablets, laptops, video phones, and other SIP and H.323 devices – no matter where you are.
-                <br/>
-                <a href="/resources/documents/ConX/InFocus-Video-Collaboration-WhitePaper.pdf" class="text_module_link">Free Video Conferencing White Paper</a>
+            <p class="lead_text--headline">
+                Device-friendly
             </p>
+            <p class="lead_text--paragraph">
+                Call anyone with most any device, including with smartphones, tablets, laptops, video phones, and other SIP and H.323 devices – no matter where you are.
+            </p>
+            <a href="/peripherals/ConX-Series#datasheets" class="text_module_link">Free Video Conferencing White Paper</a>
         </div>
     </div>
     <!-- END MULTICOLUMN TEXT MODULE -->
@@ -119,22 +124,21 @@ $(function() {
     <div class="row multicolumn_text_module">
         <div class="small-12 medium-10 medium-offset-1 columns lead_text">
             <h2 class="lead_text--headline text-center">
-            You don’t have time for misunderstandings.
-            </br/>Communicate with video and get more done.</h2>
+            You don’t have time for misunderstandings. Communicate with video and get more done.</h2>
         </div>
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <p class="lead_text--paragraph">
-                <b>Have more efficient meetings</b> when you can see faces, body language and objects. Reduce confusion, accelerate understanding, and ease your workload with video.
+                <b>Have more efficient meetings</b><br>when you can see faces, body language and objects. Reduce confusion, accelerate understanding, and ease your workload with video.
             </p>
         </div>
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <p class="lead_text--paragraph">
-                <b>Save time and money on travel</b> when you can have meaningful face-to-face conversations with people located anywhere in the world at any time.
+                <b>Save time and money on travel</b><br>when you can have meaningful face-to-face conversations with people located anywhere in the world at any time.
             </p>
         </div>
-        <div class="small-12 large-4 columns text-center">
+        <div class="small-12 large-4 columns text-center three_column_module">
             <p class="lead_text--paragraph">
-                <b>Develop stronger relationships</b> and build trust with remote colleagues and partners when you talk face to face. Great for sales and human resources.
+                <b>Develop stronger relationships</b><br>and build trust with remote colleagues and partners when you talk face to face. Great for sales and human resources.
             </p>
         </div>
     </div>
