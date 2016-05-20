@@ -173,6 +173,12 @@ header + .hero_row > .row {
                 right: 0%;
                 height: 110%;
             }
+            @media screen and (min-width: 1990px) {
+                top: 50%;
+                width: 100%;
+                height: auto;
+                transform: translate(0,-50%);
+            }
         }
     }
     .lead_text>:first-child {
