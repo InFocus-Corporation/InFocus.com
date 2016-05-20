@@ -130,10 +130,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 		</div>
 		<div class="small-12 medium-5 columns" data-equalizer-watch>
 			<div class="callout callout--picture">
-
-				<!-- <div class="callout--heading callout--heading--picture">
-					<img src="http://placehold.it/1311x699" />
-				</div> -->
 				<div class="callout--copy">
 					<div class="module--tag">
 						<span>latest events</span>
@@ -148,7 +144,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	</div>
 
 	<script>
-	    $(document).foundation();
+		$(function () {
+			$(document).foundation();
+		});
 	</script>
 	<footer id="site-info" >
 	<?php include($homedir . "/resources/html/footer.html"); ?>
