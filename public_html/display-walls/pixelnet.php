@@ -144,11 +144,17 @@ div.info #blurb {
                                     <p>PixelNet® is all about scalability. The same component parts can scale from a single input distributed to a single output to a configuration with hundreds of inputs and outputs. The networked system can support multiple display walls. Need to add another input? Add another PixelNet® input node. Want to add more streaming IP sources? Add another StreamCenter. Expanding the display wall? Add PixelNet® output nodes for the new displays.</p>
                                 </div>
                                 <hr>
+                            </div>
+                            <div class="info cmsedit">
+                                <br>
                                 <strong class="tagline mysqledit">
                                     Watch the PixelNet® video
                                 </strong>
                                 <iframe id="youtube" src="https://www.youtube.com/embed/9BbWL0ZgYEU" frameborder="0" allowfullscreen></iframe>
                                 <hr>
+                            </div>
+                            <div class="info cmsedit">
+                                <br>
                                 <strong class="tagline mysqledit">
                                     A PixelNet® Network
                                 </strong>
