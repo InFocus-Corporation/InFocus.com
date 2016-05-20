@@ -809,7 +809,7 @@ header + .hero_row > .row {
     &.feature_module_a--visualize .feature_text {
       @media screen and (min-width: 64em) {
         padding: 40px 124px 40px 35px;
-      } 
+      }
     }
 
     .color_stripe_column {
@@ -1501,8 +1501,9 @@ header + .hero_row > .row {
 }
 
 div.video_module {
+  margin-top: 6em;
+  margin-bottom: 4em;
   position: relative;
-  height: 0;
   padding-bottom: 60%;
   @media screen and (min-width: 64em) {
     height: 825px;
