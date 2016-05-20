@@ -25,9 +25,6 @@ var moduleBHeight = function() {
     if (width < 1025) {
         var textMargin = parseInt(featureTextMarginTop);
         var newMargin = featureTextHeight + textMargin/2;
-        console.log(textMargin);
-        console.log(featureTextHeight);
-        console.log(newMargin);
         featureModule.css('margin-bottom', newMargin);
     } else {
         featureModule.css('margin-bottom','');
