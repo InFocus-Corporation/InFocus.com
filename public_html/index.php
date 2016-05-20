@@ -121,7 +121,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 					<span>latest news</span>
 				</div>
 				<div class="callout--heading">
-					<h3><?= $latest_news['title'] ?></h3>
+					<h3><a href="/articles?<?= $latest_news['id'] ?>" class=""><?= $latest_news['title'] ?></a></h3>
 				</div>
 				<div class="callout--copy">
 					<h5><?= $latest_news['teaser'] ?></h5>
