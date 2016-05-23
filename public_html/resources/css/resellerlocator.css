@@ -531,6 +531,11 @@ a.olControlZoomOut {
 
 #results-table tbody td {
     width:25%;
+    text-align: center;
+    padding: 10px;
+}
+#results-table tbody td h3 {
+    font-size: 22px;
 }
 
 h2.title {
