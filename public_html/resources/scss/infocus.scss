@@ -1179,7 +1179,14 @@ header + .hero_row > .row {
         color: $white;
     }
 }
-
+.present_page {
+    .feature_links {
+      @media screen and (min-width: 40em) {
+        padding-bottom: 35px;
+        margin-top: 77px;
+      }
+    }
+}
 .text_module {
     font-family: 'GoodPro-WideLight';
     h1.lead_text--headline, h2.lead_text--headline{
