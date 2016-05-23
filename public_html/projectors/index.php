@@ -17,6 +17,9 @@ if(in_array($_REQUEST['cat'], $categories)){
 				$pageText[$category.'meta'],
 				strpos($pageText[$category.'meta'],'<meta name="description" content="')+34,
 				strpos($pageText[$category.'meta']," />")-(strpos($pageText[$category.'meta'],'<meta name="description" content="')+34));
+} else {
+	echo '<title>InFocus | Projectors</title>';
+	echo '<meta name="description" content="InFocus offers ultra-sharp HD projectors for presentation, home theaters, and classrooms. Search from short throw to large venue projectors to suit your needs."/>';
 }
 
 if($_REQUEST['content']=='true') {

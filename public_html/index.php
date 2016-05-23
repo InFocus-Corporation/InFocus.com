@@ -4,7 +4,7 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '"/>' . PHP_EOL;
 ?>
 
-<title>InFocus | Collaboration That Works</title>
+<title>InFocus | Supporting Your Success</title>
 <meta name="description" content="Discover advanced projection equipment offered by InFocus. Global leader in LCD projectors and DLP projection, Mondopad products and projector accessories." />
 <meta name="keywords" content="infocus,mondopad,projector,projection,DLP,LCD,LCD display,digital display,visual communications,projector accessories,infocus company,digital technology,projection equipment,monopad, communication, touchscreen" />
 
@@ -103,7 +103,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 
 	<!-- VIDEO MODULE -->
 	<div class="video_module video_module_collaborate-b">
-	    <a href="http://www.infocus.vagrant.internal/videos?SNMjzPRQUA8">
+	    <a href="/videos?SNMjzPRQUA8">
 	        <div class="video_link">
 	            <h2 class="lead_text--secondary_headline">See how collaboration is done</h2>
 	        </div>
