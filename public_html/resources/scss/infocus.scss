@@ -728,6 +728,7 @@ header + .hero_row > .row {
         @media screen and (min-width: 64em) {
             font-size: 2.75rem;
         }
+        a { color: black;}
     }
     .lead_text--paragraph {
         font-size: .70rem;
@@ -2015,7 +2016,9 @@ div.video_module {
     .product_shot {
         margin-bottom: 20px;
     }
-
+    h4.lead_text--secondary_headline {
+        a { color: black;}
+    }
 }
 
 // Support Page

@@ -39,43 +39,43 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <br><br>
 	<div class="row">
 		<div class="small-12 medium-4 columns">
-			<img src="/resources/static/images/peripherals/realcam.jpg" class="product_shot" alt="" style="max-height: 252px;">
-			<h4 class="lead_text--secondary_headline">RealCam PTZ Camera</h4>
+			<a href="/peripherals/INF-SPTZ-2"><img src="/resources/static/images/peripherals/realcam.jpg" class="product_shot" alt="" style="max-height: 252px;"></a>
+			<h4 class="lead_text--secondary_headline"><a href="/peripherals/INF-SPTZ-2">RealCam PTZ Camera</a></h4>
 			<p>Add a RealCam pan/tilt/zoom (PTZ) professional-quality HD camera to any PC, including a Mondopad, to make your video meetings or events shine.</p>
-			<a href="#" class="button button--primary">learn more</a>
+			<a href="/peripherals/INF-SPTZ-2" class="button button--primary">learn more</a>
 		</div>
 		<div class="small-12 medium-4 columns">
-            <img src="/resources/static/images/peripherals/thunder.png" class="product_shot" alt="">
-			<h4 class="lead_text--secondary_headline">Thunder Speakerphone</h4>
+      <a href="/peripherals/INA-TH150"><img src="/resources/static/images/peripherals/thunder.png" class="product_shot" alt=""></a>
+			<h4 class="lead_text--secondary_headline"><a href="/peripherals/INA-TH150">Thunder Speakerphone</a></h4>
 			<p>Have clear conversations even when people are across a large room with the Thunder speakerphone connected to your PC, phone or Mondopad.</p>
-			<a href="#" class="button button--primary">learn more</a>
+			<a href="/peripherals/INA-TH150" class="button button--primary">learn more</a>
 		</div>
 		<div class="small-12 medium-4 columns">
-            <img src="/resources/static/images/peripherals/mondocenter.png" class="product_shot" alt="">
-			<h4 class="lead_text--secondary_headline">MondoCenter Collaboration PC</h4>
+      <a href="/peripherals/INF-MCENTER2"><img src="/resources/static/images/peripherals/mondocenter.png" class="product_shot" alt=""></a>
+			<h4 class="lead_text--secondary_headline"><a href="/peripherals/INF-MCENTER2">MondoCenter Collaboration PC</a></h4>
 			<p>Connect a MondoCenter to any display device to visually present, capture and share ideas with participants in the room and around the world.</p>
-			<a href="#" class="button button--primary">learn more</a>
+			<a href="/peripherals/INF-MCENTER2" class="button button--primary">learn more</a>
 		</div>
 	</div>
     <hr>
 	<div class="row">
 		<div class="small-12 medium-4 columns">
-            <img src="/resources/static/images/peripherals/liteshow.png" class="product_shot" alt="">
-			<h4 class="lead_text--secondary_headline">LiteShow Wireless Presentation Adapter</h4>
+      <a href="/peripherals/INLITESHOW4"><img src="/resources/static/images/peripherals/liteshow.png" class="product_shot" alt=""></a>
+			<h4 class="lead_text--secondary_headline"><a href="/peripherals/INLITESHOW4">LiteShow Wireless Presentation Adapter</a></h4>
 			<p>Add to any projector or other display with a VGA or HDMI input to share data, audio, and HD video over a secure wireless connection.</p>
-			<a href="#" class="button button--primary">learn more</a>
+			<a href="/peripherals/INLITESHOW4" class="button button--primary">learn more</a>
 		</div>
 		<div class="small-12 medium-4 columns">
-            <img src="/resources/static/images/peripherals/bigconnect.jpg" class="product_shot" alt="" style="height: 252px;">
-			<h4 class="lead_text--secondary_headline">BigConnect Video Calling Software</h4>
+      <a href="/accessories/software/INS-BCONNECT"><img src="/resources/static/images/peripherals/bigconnect.jpg" class="product_shot" alt="" style="height: 252px;"></a>
+			<h4 class="lead_text--secondary_headline"><a href="/accessories/software/INS-BCONNECT">BigConnect Video Calling Software</a></h4>
 			<p>Bring faces and data together using your Windows device with BigConnect video calling software.</p>
-			<a href="#" class="button button--primary">learn more</a>
+			<a href="/accessories/software/INS-BCONNECT" class="button button--primary">learn more</a>
 		</div>
 		<div class="small-12 medium-4 columns">
-            <img src="/resources/static/images/peripherals/bignote.png" class="product_shot" alt="">
-			<h4 class="lead_text--secondary_headline">BigNote Whiteboarding Software</h4>
+      <a href="/peripherals/INS-BIGNOTE"><img src="/resources/static/images/peripherals/bignote.png" class="product_shot" alt=""></a>
+			<h4 class="lead_text--secondary_headline"><a href="/peripherals/INS-BIGNOTE">BigNote Whiteboarding Software</a></h4>
 			<p>Add the BigNote whiteboard app to your Windows device and turn it into a powerful interactive whiteboard.</p>
-			<a href="#" class="button button--primary">learn more</a>
+			<a href="/peripherals/INS-BIGNOTE" class="button button--primary">learn more</a>
 		</div>
 	</div>
 

@@ -38,10 +38,10 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/video-conferencing/video-conferencing-mondopad--InFocus-Lifestyle-Mondopad-DualScreen-LightOffice-300dpi-CMYK.jpg" alt="">
+			<a href="/displays/MONDOPAD-SERIES"><img src="/resources/static/images/video-conferencing/video-conferencing-mondopad--InFocus-Lifestyle-Mondopad-DualScreen-LightOffice-300dpi-CMYK.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline">Mondopad</h3>
+			<h3 class="lead_text--secondary_headline"><a href="/displays/MONDOPAD-SERIES">Mondopad</a></h3>
 			<p class="lead_text--paragraph">Work better together with Mondopad, the smart and easy touchscreen system for video conferencing, whiteboarding, data sharing and more.</p>
 			<a href="/displays/MONDOPAD-SERIES" class="button button--primary">learn more</a>
 		</div>
@@ -50,10 +50,10 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/video-conferencing/video-conference-conx-wall-conx-exec--ConXWall-Hero-Image-3x4-1B-96dpi-RGB.jpg" alt="">
+			<a href="/conx-wall-exec"><img src="/resources/static/images/video-conferencing/video-conference-conx-wall-conx-exec--ConXWall-Hero-Image-3x4-1B-96dpi-RGB.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline">ConX Wall and ConX Exec</h3>
+			<h3 class="lead_text--secondary_headline"><a href="/conx-wall-exec">ConX Wall and ConX Exec</a></h3>
 			<p class="lead_text--paragraph">Display all of your data sources and HD video conferencing feeds on up to 96 screens with this highly-configurable collaboration solution for board rooms, CxO offices, training centers and more.</p>
 			<a href="/conx-wall-exec" class="button button--primary">learn more</a>
 		</div>
@@ -63,10 +63,10 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/video-conferencing/video-conferencing-conx-phone--ConXWall-Hero-Image-3x4-1B-96dpi-RGB.jpg" alt="">
+			<a href="/peripherals/MVP100"><img src="/resources/static/images/video-conferencing/video-conferencing-conx-phone--ConXWall-Hero-Image-3x4-1B-96dpi-RGB.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline">ConX Phone</h3>
+			<h3 class="lead_text--secondary_headline"><a href="/peripherals/MVP100">ConX Phone</a></h3>
 			<p class="lead_text--paragraph">Be more productive in your business interactions with the HD video phone that enables effective visual communication with the ease of a standard phone.</p>
 			<a href="/peripherals/MVP100" class="button button--primary">learn more</a>
 		</div>
@@ -81,15 +81,15 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/video-conferencing/video-conferencing-video-conferencing--InFocus-Lifestyle-MVP100-Construction-96dpi-RGB.jpg" alt="">
+			<a href="/peripherals/ConX-Series"><img src="/resources/static/images/video-conferencing/video-conferencing-video-conferencing--InFocus-Lifestyle-MVP100-Construction-96dpi-RGB.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline">ConX Video Meeting</h3>
+			<h3 class="lead_text--secondary_headline"><a href="/peripherals/ConX-Series">ConX Video Meeting</a></h3>
 			<p class="lead_text--paragraph">InFocus ConX™ provides simple, cost-effective, cloud-based video meetings for your organization. Make important visual connections with people on the devices they already use and save time and money.</p>
 			<a href="/peripherals/ConX-Series" class="paragraph-link">learn more</a>
 		</div>
 		<div class="small-5 small-offset-7 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline">121 Video Calling</h3>
+			<h3 class="lead_text--secondary_headline"><a href="/peripherals/121-Series">121 Video Calling</a></h3>
 			<p class="lead_text--paragraph">InFocus 121 is a cloud-based video calling service to give you all of the power and functionality of video collaboration with none of the cost and overhead of managing premises-based systems.</p>
 			<a href="/peripherals/121-Series" class="paragraph-link">learn more</a>
 		</div>
