@@ -1491,33 +1491,30 @@ header + .hero_row > .row {
         height: 500px;
     }
     .module_text {
-        position: absolute;
         width: 100%;
         text-align: center;
-        bottom: 65px;
-        min-height: 75px;
+        height: 100px;
+        padding-top: 50px;
+        box-sizing: border-box;
         @include background-opacity($dark_gray);
+
         @media screen and (min-width: 40em) {
-          bottom: auto;
-          position: relative;
           height: 130px;
           margin-top: -130px;
+          padding-top: 65px;
         }
         @media screen and (min-width: 68em) {
           height: 140px;
           margin-top: -140px;
+          padding-top: 70px;
         }
         .module_text_inner {
+              transform: translateY(-50%);
               width: 100%;
-              padding: 3%;
+              padding: 0 3%;
               @media screen and (min-width: 40em) {
-                padding: 0 3%;
-                position: absolute;
-                transform: none;
-                top: 17%;
               }
               @media screen and (min-width: 68em) {
-                top: 20%;
               }
         }
         &.center-headline {
@@ -1535,10 +1532,10 @@ header + .hero_row > .row {
             color: $white;
             margin-bottom: 0px;
             @media screen and (min-width: 21em) {
-              font-size: 22px;
+              font-size: 18px;
             }
             @media screen and (min-width: 25em) {
-              font-size: 24px;
+              font-size: 22px;
             }
             @media screen and (min-width: 32em) {
               font-size: 28px;
@@ -1557,7 +1554,7 @@ header + .hero_row > .row {
             margin-top: 10px;
             line-height: 1.3;
             @media screen and (min-width: 21em) {
-              font-size: 15px;
+              font-size: 14px;
             }
             @media (min-width: 68em) {
               font-size: 16px;
@@ -1567,8 +1564,11 @@ header + .hero_row > .row {
     .module_links {
         @include background-opacity($dark_gray, .55);
         position: relative;
+        width: 100%;
         height: 65px;
         text-align: center;
+        box-sizing: border-box;
+
         div {
           display: inline-block;
           width: 100%;
