@@ -71,7 +71,7 @@ if($category) {
 			moz-transition:right 1s ease-out;
 		}
 	</style>
-	<div class='content'>
+	<div class='content category-content--projector'>
 		<div id='category' class='C9' style='overflow:hidden;'>
 			<h2 id="cattitle" class="title" style="text-transform:capitalize;"><?= $catarray[$category]['alt'] .' '. translate('Projectors');?></h2>
 			<div class="C10 Col_child C5_child" id="catdesc">
