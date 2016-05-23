@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 $homedir = $_SERVER['DOCUMENT_ROOT'];
 $categories = array("ultra-portable","office-classroom","short-throw","large-venue","home-theater");
