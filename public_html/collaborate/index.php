@@ -3,8 +3,8 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '"/>' . PHP_EOL;
 ?>
-<title>InFocus | Collaborate</title>
-<meta name="description" content="Discover advanced projection equipment offered by InFocus. Global leader in LCD projectors and DLP projection, Mondopad products and projector accessories." />
+<title>InFocus | Connect & Collaborate</title>
+<meta name="description" content="Great things can happen when everyone is informed and able to contribute. InFocus improves your ability to work and communicate as a team." />
 <meta name="keywords" content="infocus,mondopad,projector,projection,DLP,LCD,LCD display,digital display,visual communications,projector accessories,infocus company,digital technology,projection equipment,monopad, communication, touchscreen" />
 
 <link rel="stylesheet" href="/resources/css/vendor/foundation.min.css" />

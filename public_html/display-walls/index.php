@@ -4,8 +4,8 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '"/>' . PHP_EOL;
 ?>
 
-<title>InFocus | Collaboration That Works</title>
-<meta name="description" content="Discover advanced projection equipment offered by InFocus. Global leader in LCD projectors and DLP projection, Mondopad products and projector accessories." />
+<title>InFocus | Display Walls</title>
+<meta name="description" content="Technology that displays all your data sources and video conferencing feeds together in a single wall. Includes Canvas, Canvas Touch, ConX, Fusion Catalyst, PixelNet, StreamCenter, and VizionPlus II." />
 <meta name="keywords" content="infocus,mondopad,projector,projection,DLP,LCD,LCD display,digital display,visual communications,projector accessories,infocus company,digital technology,projection equipment,monopad, communication, touchscreen" />
 
 <link rel="stylesheet" href="/resources/css/vendor/foundation.min.css" />
