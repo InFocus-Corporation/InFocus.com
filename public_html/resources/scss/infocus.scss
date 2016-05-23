@@ -1919,7 +1919,22 @@ div.video_module {
   background-color: $infocus_light_blue;
   border: 0px;
   border-radius: 3px;
-  .callout--copy h5 { clear: both; }
+  margin-bottom: 0;
+
+  @media screen and (max-width:40em) {
+    margin-bottom: 1rem;
+  }
+
+  .callout--copy {
+    h5 {
+      clear: both;
+
+      p {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
   &.callout--picture {
     .module--tag {
       margin-bottom: 2.5em;
