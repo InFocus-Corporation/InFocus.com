@@ -300,6 +300,7 @@ header#masthead ul.menu > li > .submenu h4 {
 	font-size: 1.2em;
 	font-weight: bold;
 	margin: 0.4em 0 1em;
+  font-family: 'GoodPro-Wide';
 }
 header#masthead ul.menu > li > .submenu p {
 	font-size: 1.2em;
@@ -1755,24 +1756,20 @@ text-align:center;
 z-index: 10;
 }
 
-.btn, a.btn {
-background: #006ba6;
-color: #bbdde6;
-display: inline-block;
-font-family: 'GoodPro', sans-serif;
-font-weight: bold;
-text-transform: uppercase;
-font-size: .80rem;
-line-height: 1.5em;
-color: white;
-margin-bottom: 0em;
-cursor:pointer;
-letter-spacing: .1rem;
-padding: .75em 2em .55em;
+.btn, a.btn, .panels > li > div a.blue_btn {
+  line-height: 1.5em;
+  display: inline-block;
+  padding: 1em 1.25em .9em;
+  font-size: .75rem;
+  letter-spacing: .2rem;
+  background-color: #006BA6;
+  color: #c2e3ee;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-family: 'GoodPro-WideMedium',Verdana,Geneva,sans-serif;
 }
 
-
-.btn:hover, a.btn:hover {
+.btn:hover, a.btn:hover, .panels > li > div a.blue_btn:hover{
 background: #bbdde6;
 color: #006ba6;
 }
@@ -1794,7 +1791,7 @@ color: #bcc853;
 
 .action-links > li {
   padding: 0px;
-	margin: 0 0 24px 40px;
+	margin: 0 0 24px 22px;
 }
 
 
@@ -1884,16 +1881,12 @@ footer a:hover {
 footer:hover {
 	overflow: visible;
 }
-footer .tracking img {
-	opacity: 0.0001;
-}
 footer > div {
 	position: relative;
 	width: 100%;
 	background-color: #303942;
 	color: #bbdde6;
 	overflow: hidden;
-	z-index: 100;
 }
 footer:hover > div {
 	position: absolute;
@@ -2309,12 +2302,6 @@ margin-left:15px;
 	bottom: 2em;
 	left: 50%;
 	width: 150px !important;
-	background-color: #006ba6;
-	font-family: 'GoodPro';
-	font-weight: bold;
-	font-size: 0.8rem;
-	text-transform: uppercase;
-	letter-spacing: 1px;
 	transform: translate(-50%,0);
 	-webkit-transform: translate(-50%,0);
 	-moz-transform: translate(-50%,0);
@@ -2438,20 +2425,20 @@ margin-left:15px;
 
 
 .blue_btn {
-background: #1BA1E2;
-color: #fff !important;
-display: block;
-margin: 0 auto;
-padding: 0.5em 1em;
-text-align: center;
-width: 50%;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-margin-top: 0.75em;
-padding-top: 0.375em;
-padding-bottom: 0.375em;
-margin-bottom: 0em;
+  background: #1BA1E2;
+  /*color: #fff !important;*/
+  display: block;
+  margin: 0 auto;
+  padding: 0.5em 1em;
+  text-align: center;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 0.75em;
+  padding-top: 0.375em;
+  padding-bottom: 0.375em;
+  margin-bottom: 0em;
 }
 
 .blue_btn:hover {
