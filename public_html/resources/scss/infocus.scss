@@ -178,6 +178,9 @@ header + .hero_row > .row {
                 width: 100%;
                 height: auto;
                 transform: translate(0,-50%);
+                -webkit-transform: translate(0,-50%);
+                -moz-transform: translate(0,-50%);
+                -ms-transform: translate(0,-50%);
             }
         }
     }
@@ -584,6 +587,7 @@ header + .hero_row > .row {
       position: absolute;
       width: 100%;
       height: 100%;
+      padding: 0;
       @media screen and (min-width: 64em) {
           position: static;
       }
@@ -1511,6 +1515,9 @@ header + .hero_row > .row {
         }
         .module_text_inner {
               transform: translateY(-50%);
+              -webkit-transform: translateY(-50%);
+              -moz-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
               width: 100%;
               padding: 0 3%;
               @media screen and (min-width: 40em) {
@@ -1574,10 +1581,14 @@ header + .hero_row > .row {
           display: inline-block;
           width: 100%;
           position: absolute;
-          top: 44%;
+          top: 50%;
           bottom: 0;
           left: 0;
           right: 0;
+
+          a.promo_module_link {
+            display: block;
+          }
         }
         .promo_module_link {
             padding: 0 6px;
@@ -1589,6 +1600,9 @@ header + .hero_row > .row {
             font-size: 10px;
             letter-spacing: 0.15em;
             transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
             @media screen and (min-width: 30em) {
               font-size: 12px;
             }
@@ -1647,14 +1661,14 @@ header + .hero_row > .row {
             width: 50%;
           }
           .module_link_l {
-            top: 44%;
+            top: 50%;
             bottom: 0;
             right: 50%;
             left: 0;
             position: absolute;
           }
           .module_link_r {
-            top: 44%;
+            top: 50%;
             bottom: 0;
             right: 0;
             left: 50%;
@@ -1707,9 +1721,12 @@ header + .hero_row > .row {
             height: 100%;
             .lead_text--headline {
               top: 45%;
-              transform: translateY(-50%);
               position: absolute;
               width: 94%;
+              transform: translateY(-50%);
+              -webkit-transform: translateY(-50%);
+              -moz-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
             }
           }
         }
@@ -1753,8 +1770,11 @@ div.video_module {
   .video_link {
     position: absolute;
     top: 45%;
-    transform: translateX(-50%);
     left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
   }
   h2.lead_text--secondary_headline {
       margin-bottom: 0;

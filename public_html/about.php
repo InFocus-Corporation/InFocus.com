@@ -1,15 +1,27 @@
-<!DOCTYPE html>
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] . '"/>' . PHP_EOL;
 
-if(strlen($_SERVER['QUERY_STRING'])>0){
-  echo "<script>window.history.pushState('', '', '/about#" . $_SERVER['QUERY_STRING'] . "');
-  </script>";
-}
- ?>
 
+
+if(strlen($_SERVER['QUERY_STRING'])>0){
+  echo "<script>window.history.pushState('', '', '/about#" . $_SERVER['QUERY_STRING'] . "');</script>";
+}
+
+$titles = array(
+  'infocus-team'=> 'The Team',
+  'news'=> 'News',
+  'events'=> 'Events',
+  'careers'=> 'Careers'
+);
+$title = 'About Overview';
+if(in_array(array_keys($_SERVER['QUERY_STRING'], $titles))) {
+  $title = $titles[$_SERVER['QUERY_STRING']];
+}
+echo '<title>InFocus | '.$title.'</title>';
+
+?>
 <style>
 .read-more{
 cursor:pointer;
@@ -18,10 +30,32 @@ cursor:pointer;
 .tabs > .active {
     text-align: left;
 }
-
 </style>
-	</head>
-	<body class="about--page">
+<script>
+var title = 'About Overview';
+  titles = {
+    'infocus-team': 'The Team',
+    'news': 'News',
+    'events': 'Events',
+    'careers': 'Careers'
+  },
+  hash = window.location.hash.replace('#', '');
+
+function changeTitle(hash) {
+  title = 'About Overview';
+  if(titles[hash]) title = titles[hash];
+  document.title = 'InFocus | '+title;
+}
+changeTitle(hash);
+
+$(function () {
+  $('nav a').click(function (e) {
+    changeTitle(this.href.substr(this.href.indexOf('#')+1));
+  });
+});
+</script>
+</head>
+<body class="about--page">
 		<?php include($homedir . "/resources/html/mainmenu.html"); ?>
       	<h2 class="about--title title"><?php echo translate('About InFocus'); ?></h2>
         <div class="tabs">

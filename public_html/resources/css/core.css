@@ -1508,7 +1508,7 @@ overflow: hidden;
 float:right;
 margin-right:1.5em;
 }
-.Row{padding-top:1.5em;display:inline-block;}
+.Row{padding-top:1.5em;}
 .Col {display:inline-block;padding:0.5%;vertical-align:top;}
 .Col_child > li, .Col_child  > div, .Col_child  > ul {display:inline-block;padding:0.5%;margin:0 auto;}
 @media only screen and (min-width:1680px) and (max-width: 1919px) {
@@ -1880,12 +1880,16 @@ footer a:hover {
 footer:hover {
 	overflow: visible;
 }
+footer .tracking img {
+	opacity: 0.0001;
+}
 footer > div {
 	position: relative;
 	width: 100%;
 	background-color: #303942;
 	color: #bbdde6;
 	overflow: hidden;
+	z-index: 100;
 }
 footer:hover > div {
 	position: absolute;

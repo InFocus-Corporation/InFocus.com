@@ -17,6 +17,9 @@ if(in_array($_REQUEST['cat'], $categories)){
 				$pageText[$category.'meta'],
 				strpos($pageText[$category.'meta'],'<meta name="description" content="')+34,
 				strpos($pageText[$category.'meta']," />")-(strpos($pageText[$category.'meta'],'<meta name="description" content="')+34));
+} else {
+	echo '<title>InFocus | Projectors</title>';
+	echo '<meta name="description" content="InFocus offers ultra-sharp HD projectors for presentation, home theaters, and classrooms. Search from short throw to large venue projectors to suit your needs."/>';
 }
 
 if($_REQUEST['content']=='true') {
@@ -130,10 +133,13 @@ if($category) {
 			</div>
 		</div>
 	</div>
+
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
-			<div class="white color_stripe"></div>
-			<a href="/projectors/ultra-portable"><img src="/resources/static/images/projectors/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg" alt=""></a>
+			<a href="/projectors/ultra-portable">
+				<div class="white color_stripe"></div>
+				<img src="/resources/static/images/projectors/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg" alt="">
+			</a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
 			<h3 class="lead_text--secondary_headline"><a href="/projectors/ultra-portable">Ultra Portable Projectors</a></h3>
