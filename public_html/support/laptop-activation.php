@@ -47,13 +47,14 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	#infotable tbody td {
 		color: #666;
 	}
-	#infotable li {
+	#infotable ul {
 		list-style-type: square;
 		font-size: 1rem;
-		line-height: 1.3em;
-	    text-indent: -14px;
-    	padding-left: 14px;
-    	margin-bottom: 0.25em;
+		line-height: 1.3rem;
+		margin-bottom: 0;
+	}
+	#infotable ul li {
+		margin-bottom: 0.3rem;
 	}
 </style>
 <script>
@@ -98,34 +99,34 @@ $(function () {
 			<tbody>
 		    <tr>
 		        <th class="bottomborder">Acer</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
 					<li>Ctrl-Alt-ESC while computer boots activates the setup menu; system config; advanced sys config; display device; LCD/CRT
 					</li>
 					<li>FN + F5 </li>
-				</td>
+				</ul></td>
 		    </tr>
 		    <tr>
 		        <th class="bottomborder">Advanced Logic Research</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
     <li>Ctrl + Alt + V </li>
   
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Altima</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Shift + Ctrl + Alt + C
 </li>
   <li>Set-up Conf.Simulscan </li>
 
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Ambra</th>
 
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Ctrl + Alt + Esc for set-up screen
 </li>
   <li>FN + F2
@@ -133,54 +134,54 @@ $(function () {
   <li>FN + F5
 </li>
   <li>F2; choose option; F5 </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 
 		        <th class="bottomborder">Amrel</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Set-up screen
 </li>
   <li>Shift + Ctrl + D
 </li>
   <li>FN + F6 </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">AMT</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
 
   
     <li>Set-up; (Advanced) Screen Display; Select CRT </li>
   
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Apple</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
 					<li>Select Monitor Icon on Control Strip; Select Resolution to match display device</li>
 					<li>Control Panel folder; Display folder; Activate Video Mirroring; warm reboot</li>
 					<li>Control Panel folder; Monitors; switch primary display by dragging white menu bar to Monitor 2</li>
 					<li>Many Macintosh computers are not compatible and have no external video port; in these cases there sometimes is a third party device available</li>
-				</td>
+				</ul></td>
 		    </tr>
 		
 		    <tr>
 
 		        <th class="bottomborder">Aspen</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
     <li>Automatic </li>
   
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">AST</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
 
     <li>FN + F5
@@ -196,62 +197,62 @@ $(function () {
     <li>Ctrl + FN + D </li>
 
  
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">AT&amp;T</th>
 
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F3
 </li>
   <li>FN + F6 </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Austin</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Ctrl + Alt + Comma
 </li>
   <li>FN + F12 </li>
-</td>
+</ul></td>
 
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Award</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
 
   
     <li>FN + F6 </li>
   
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">BCC</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
     <li>Reboot the computer </li>
   
 
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Bondwell</th>
 
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
     <li>Reboot for LCD/CRT options to appear </li>
   
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Canon</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F6
 </li>
   <li>Set-up menu
@@ -260,57 +261,57 @@ $(function () {
   <li>FN + F7
 </li>
   <li>Change set-up to CRT </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Chaplet</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Select from set-up screen
 </li>
 
   <li>FN + F6
 </li>
   <li>FN + F4 </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Chembook</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
     <li>FN + F6 </li>
   
 
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Chicony</th>
 
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Ctrl + Alt + Esc
 </li>
   <li>Automatic </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Commax</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Ctrl + Alt + # 6
 </li>
   <li>FN + F7
 </li>
   <li>FN + F6 </li>
 
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 
 		        <th class="bottomborder">Compaq</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F4
 </li>
   <li>FN + F2
@@ -319,80 +320,80 @@ $(function () {
 </li>
   <li>Ctrl + Alt + &lt; </li>
 
-</td>
+</ul></td>
 		    </tr>
 
 		
 		    <tr>
 		        <th class="bottomborder">CompuAdd</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F3 Set-up select Display LCD/CRT
 </li>
   <li>Alt + F for screen set-up option
 </li>
   <li>Automatic </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Compudyne</th>
 
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Ctrl + Shift + D
 </li>
   <li>Set-up screen
 </li>
   <li>FN + F8 </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Data General</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Ctrl + Alt + Command
 
 </li>
   <li>2 CRT/X at DOS prompt </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 
 		        <th class="bottomborder">Data View</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
  
     <li>Ctrl + Shift + M</li>
  
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">DataVue</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
 
     <li>Ctrl + Shift + M&nbsp;</li>
   
-</td>
+</ul></td>
 		    </tr>
 
 		
 		    <tr>
 		        <th class="bottomborder">DEC</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F4
 </li>
   <li>FN + F5
 </li>
   <li>Automatic </li>
-</td>
+</ul></td>
 
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Dell</th>
 
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F8
 </li>
   <li>FN + F12
@@ -403,135 +404,135 @@ $(function () {
 </li>
   <li>Ctrl + Alt + F10 </li>
 
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Digital</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Automatic
 </li>
   <li>FN + F2 </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Dolch</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
 
   
     <li>Set dip switch to CRT before boot-up </li>
  
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">EPS Technologies</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
  
     <li>FN + F4</li>
   
 
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Epson</th>
 
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Set dip switch to CRT before boot-up
 </li>
   <li>FN + F12 </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Everex</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Select from set-up screen
 </li>
   <li>FN + F10
 </li>
   <li>Ctrl + Alt + Shift + C </li>
 
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 
 		        <th class="bottomborder">Fujitsu</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
     <li>FN + F10 </li>
   
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Gateway</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F3
 
 </li>
   <li>FN + F1
 </li>
   <li>Option in set-up </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Grid</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Ctrl + Alt + Tab
 </li>
   <li>FN + F2 </li>
-</td>
+</ul></td>
 
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Hewlett Packard</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
 
   <li>FN + F5
 </li>
   <li>FN + F12 </li>
-</td>
+</ul></td>
 		    </tr>
 
 		
 		    <tr>
 		        <th class="bottomborder">Hitachi</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F7
 </li>
   <li>FN + F8 </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Honeywell</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
     <li>FN + F10</li>
 
   
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 
 		        <th class="bottomborder">Hyundai</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
  
     <li>Set-up screen option </li>
  
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">IBM</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F7
 
 </li>
@@ -544,64 +545,64 @@ $(function () {
   <li>Automatic
 </li>
   <li>FN + F2 </li>
-</td>
+</ul></td>
 
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Infotel</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
     <li>FN + F12</li>
 
   
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 
 		        <th class="bottomborder">Jetbook</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F6
 </li>
   <li>FN + F12 </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Kaypro</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
     <li>Automatic </li>
 
   
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 
 		        <th class="bottomborder">Kris Tech</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
  
     <li>FN + F8 </li>
  
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Leading Edge</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
 
     <li>FN + T </li>
   
-</td>
+</ul></td>
 		    </tr>
 
 		
 		    <tr>
 		        <th class="bottomborder">Macintosh</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Select Monitor Icon on Control Strip; Select Resolution to match display device
 </li>
   <li>Control Panel folder; Display folder; Activate Video Mirroring; warm reboot
@@ -610,92 +611,92 @@ $(function () {
 </li>
   <li>Many Macintosh computers are not compatible and have no external video port; in these cases there sometimes is a third party device available </li>
 
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 
 		        <th class="bottomborder">Magitronic</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
     <li>FN + F4 </li>
   
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Mastersport</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
 
     <li>FN + F2 </li>
   
-</td>
+</ul></td>
 		    </tr>
 
 		
 		    <tr>
 		        <th class="bottomborder">Micro Express</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
  
     <li>Automatic </li>
   
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Micron</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
 
   <li>FN + F2
 </li>
   <li>FN + F12 </li>
-</td>
+</ul></td>
 		    </tr>
 
 		
 		    <tr>
 		        <th class="bottomborder">Microslate</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
     <li>Automatic </li>
  
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Midwest Micro</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
 
   
     <li>FN + F11 </li>
   
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Mitsubishi</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
     <li>SW2 On-Off-Off-Off </li>
  
 
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">NCR</th>
 
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
     <li>Set-up screen option </li>
  
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">NEC</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F3
 </li>
   <li>FN + F10
@@ -706,76 +707,76 @@ $(function () {
   <li>Select "Active" from set-up
 </li>
   <li>CRT at the DOS prompt </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Olivetti</th>
 
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Automatic
 </li>
   <li>FN + O
 </li>
   <li>FN + Asterisk </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Packard Bell</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F10
 
 </li>
   <li>FN + F2
 </li>
   <li>Ctrl + Alt + &lt; </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Panasonic</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F2
 </li>
   <li>Set-up option </li>
 
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">ProStar</th>
 
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F6
 </li>
   <li>Ctrl + Alt + S at startup </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Sager</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F6
 </li>
   <li>FN + F9 </li>
-</td>
+</ul></td>
 
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Sampo</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
 
   
     <li>CTRL + ALT + SHIFT + C </li>
  
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Samsung</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F4
 </li>
   <li>Set-up screen option
@@ -784,72 +785,72 @@ $(function () {
 
 </li>
   <li>FN + F6 </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Sanyo</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
     <li>Set-up screen option </li>
  
 
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Sharp</th>
 
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F5
 </li>
   <li>Set dip switch to CRT </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Sotec</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F5
 </li>
   <li>FN + F1 </li>
-</td>
+</ul></td>
 
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Sun</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
 
  
     <li>Ctrl + Shift + M </li>
  
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Tandy</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Ctrl + Alt + Insert
 </li>
   <li>Set-up option </li>
-</td>
+</ul></td>
 
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Tangent</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
 
   
     <li>FN + F5</li>
  
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Texas Instruments</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F2
 </li>
   <li>FN + F3
@@ -877,21 +878,21 @@ $(function () {
   <li>FN + F10
 </li>
   <li>FN + F5 </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Top-Link</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Set-up option
 </li>
   <li>FN + F6 </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Toshiba</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
 
   <li>FN + End
 </li>
@@ -911,35 +912,35 @@ $(function () {
   <li>Ctrl + Alt + End
 </li>
   <li>Set-up option </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Twinhead</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F7
 </li>
 
   <li>FN + F5
 </li>
   <li>Automatic </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">US Logic</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
  
     <li>FN + F8 </li>
   
 
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Winbook</th>
 
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F6 (simul); FN + F10 (int/ext)
 </li>
   <li>Ctrl + Alt + F10
@@ -950,23 +951,23 @@ $(function () {
 </li>
   <li>FN + F8 </li>
 
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Wyse</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   
     <li>Automatic </li>
   
 
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 		        <th class="bottomborder">Zenith</th>
 
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>FN + F10
 </li>
   <li>FN + F7
@@ -974,17 +975,17 @@ $(function () {
   <li>FN + F2
 </li>
   <li>FN + F1 </li>
-</td>
+</ul></td>
 		    </tr>
 		
 		    <tr>
 
 		        <th class="bottomborder">Zeos</th>
-				<td class="bottomborder">
+				<td class="bottomborder"><ul>
   <li>Ctrl + Shift + D
 </li>
   <li>FN + F1 </li>
-</td>
+</ul></td>
 		    </tr>
 		</tbody>
 		</table>  
