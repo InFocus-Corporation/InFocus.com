@@ -1886,6 +1886,7 @@ footer {
 	box-sizing: border-box;
 	font-size: 0.9rem;
 	margin-top: 8rem;
+	z-index: 750;
 }
 footer h6 {
 	font-family: 'GoodPro-Wide';

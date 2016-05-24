@@ -1085,7 +1085,7 @@ header + .hero_row > .row {
         }
         @media screen and (min-width: 64em) {
           width: 65%;
-          min-height: 375px;
+          min-height: 355px;
           padding: 55px 70px 0;
           position: relative;
           margin: -350px auto 0 auto;
@@ -1105,14 +1105,14 @@ header + .hero_row > .row {
       @include background-opacity($dark_gray);
       @media screen and (min-width: 64em) {
         padding-top: 30px;
-        margin-top: -280px;
+        margin-top: -287px;
       }
     }
     &.feature_module_b--visualize .feature_text {
         @include background-opacity($infocus_blue);
         @media screen and (min-width: 64em) {
-          margin: -303px auto 0;
-          padding: 50px 33px 0;
+          margin: -309px auto 0;
+          padding: 50px 70px 0;
         }
     }
     .lead_text--secondary_headline {
@@ -1179,7 +1179,14 @@ header + .hero_row > .row {
         color: $white;
     }
 }
-
+.present_page {
+    .feature_links {
+      @media screen and (min-width: 40em) {
+        padding-bottom: 35px;
+        margin-top: 77px;
+      }
+    }
+}
 .text_module {
     font-family: 'GoodPro-WideLight';
     h1.lead_text--headline, h2.lead_text--headline{
