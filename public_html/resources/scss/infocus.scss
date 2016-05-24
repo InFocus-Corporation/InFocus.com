@@ -435,6 +435,7 @@ header + .hero_row > .row {
     }
   }
   &.hero-row--jupiter {
+    margin-top: 0px !important;
     background: url('../static/images/jupiter/jupiter-hero-a.jpg') left top no-repeat;
     background-size:cover;
     background-origin: border-box;
