@@ -1,4 +1,5 @@
 <?php 
+require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
 
 function filemtime_remote( $uri ) {
 	$uri = parse_url( $uri );
@@ -27,7 +28,9 @@ function filemtime_remote( $uri ) {
 }
 
 function imagethumb($imagepath, $b = null, $h = null, $w = null, $prefix = "{InFocus-,}", $suffix = "{-Series.*,-Hero.*,.*}"){
-
+	global $connection;
+	mysqli_set_charset($connection, "utf8");
+    
     if (is_null($prefix)) {
         $prefix = '{InFocus-,}';
     }
@@ -69,11 +72,6 @@ elseif( file_exists( $imagepath . ".jpg"  ) ){
 
 }
 else{
-require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
-mysqli_set_charset($connection, "utf8");
-
-
-
 
 global $series;
 

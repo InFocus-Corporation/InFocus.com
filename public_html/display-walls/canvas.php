@@ -87,7 +87,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                             <li><strong>Connect with remote non-Canvas users</strong> - Remote colleagues who do not have Canvas at their location can participate in collaborative sessions with Canvas users.  With this new version, Canvas users can dial out to users of SIP-based conferencing systems, and allows users of SIP-based conferencing systems to dial into a canvas.</li>
                             <li><strong>Supports Canvas CRS-4K</strong> - Jupiter’s new conference room system for Canvas, the <a href="/display-walls/canvas-crs4k">Canvas CRS-4K</a>, turns any conference room or huddle room into a Canvas workspace for teams. The new SimpleShare™ feature employs WebRTC technology to allow anyone with a laptop, even one without Canvas installed, to easily and instantly present content to local and remote Canvas users without downloading software, connecting cables, or attaching a dongle.</li>
                           </ul>
-                          <hr/>
 			                </div>
                     </div>
                 </div>
