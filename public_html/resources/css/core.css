@@ -7,30 +7,36 @@ Primary: #006699, #1D5773, #00557F, #1BA1E2, #5CA7CC, #E1EEF4
  */
 @font-face {
   font-family: 'GoodPro-Wide';
-  src:  url("../fonts/GoodPro-WideLight.otf") format("opentype");
+  src: url("../fonts/GoodPro-WideLight.otf") format("opentype");
+  src: url('../fonts/GoodPro-WideLight.eot?#iefix') format('embedded-opentype');
 }
 @font-face {
   font-family: 'GoodPro-WideBook';
-  src:  url("../fonts/GoodPro-WideBook.otf") format("opentype");
+  src: url("../fonts/GoodPro-WideBook.otf") format("opentype");
+  src: url('../fonts/GoodPro-WideBook.eot?#iefix') format('embedded-opentype');
   font-weight: bold;
 }
 @font-face {
   font-family: 'GoodPro';
-  src:  url("../fonts/GoodPro-Light.otf") format("opentype");
+  src: url("../fonts/GoodPro-Light.otf") format("opentype");
+  src: url('../fonts/GoodPro-Light.eot?#iefix') format('embedded-opentype');
 }
 @font-face {
   font-family: 'GoodPro-WideLight';
-  src:  url("../fonts/GoodPro-WideLight.otf") format("opentype");
+  src: url("../fonts/GoodPro-WideLight.otf") format("opentype");
+  src: url('../fonts/GoodPro-WideLight.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
 }
 @font-face {
   font-family: 'GoodPro';
-  src:  url("../fonts/GoodPro-Medium.otf") format("opentype");
+  src: url("../fonts/GoodPro-Medium.otf") format("opentype");
+  src: url('../fonts/GoodPro-Medium.eot?#iefix') format('embedded-opentype');
   font-weight: bold;
 }
 @font-face {
   font-family: 'GoodPro-WideMedium';
-  src: url("../fonts/GoodPro-WideMedium.otf") format("opentype");
+  src: url("../fonts/GoodPro-WideMedium.otf") format("opentype"),
+  	   url('../fonts/GoodPro-WideMedium.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
 }
 
