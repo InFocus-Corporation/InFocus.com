@@ -2078,6 +2078,9 @@ footer form#form_0007 button:hover {
 		position: relative !important;
 		width: 100%;
 	}
+	footer > div > div {
+		padding-bottom: 12em;
+	}
 	footer h6 {
 		padding: 1em 0 0.5rem !important;
 	}
@@ -2128,6 +2131,27 @@ footer form#form_0007 button:hover {
 	footer form#form_0007 button {
 		display: inline-block;
 	}
+	footer form#form_0007 label.sign_up_label,
+	footer form#form_0007 input.sign_up_input,
+	footer form#form_0007 button.sign_up_button,
+	footer div .copy.privacypolicy {
+		position: absolute;
+		margin: 0 0 0 .3rem;
+		left: 15%;
+	}
+	footer form#form_0007 label.sign_up_label {
+		bottom: 8.6em;
+	}
+	footer form#form_0007 input.sign_up_input {
+		bottom: 5.5em;
+		width: 185px;
+	}
+	footer form#form_0007 button.sign_up_button {
+		bottom: 3em;
+	}
+	footer div .copy.privacypolicy {
+		bottom: .1em;
+	}
 }
 @media screen and (max-width: 666px) {
 	footer h6 {
@@ -2159,6 +2183,12 @@ footer form#form_0007 button:hover {
 	}
 	footer form#form_0007 input {
 	    width: 55%;
+	}
+	footer form#form_0007 label.sign_up_label,
+	footer form#form_0007 input.sign_up_input,
+	footer form#form_0007 button.sign_up_button,
+	footer div .copy.privacypolicy {
+		left: 5%;
 	}
 }
 
@@ -2461,6 +2491,18 @@ margin-left:15px;
 	opacity: 0.001;
 	cursor: pointer;
 	z-index:99;
+}
+#specFrame table thead tr th:not(:first-child):before,
+#specFrame table thead tr th:not(:first-child):after {
+       cursor: pointer;
+       content: ' ';
+       position: absolute;
+       top: 24px;
+       right: 20px;
+       display: block;
+       width: 20px;
+       height: 0px;
+       border-top: 2px solid #fff;
 }
 #specFrame table thead tr th:not(:first-child):before {
 	transform: rotate(45deg);
