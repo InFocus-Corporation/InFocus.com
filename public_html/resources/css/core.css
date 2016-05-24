@@ -718,6 +718,9 @@ header#masthead.blue ul.menu.small > li .search {
 		height: auto !important;
 		margin: 1em 10% 1em 15%;
 	}
+	header#masthead ul.menu > li > .submenu.products h3 {
+		font-size: 1.7em;
+	}
 	header#masthead ul.menu > li > .submenu.products h3 a {
 		text-align: left;
 	}
@@ -814,6 +817,9 @@ header#masthead.blue ul.menu.small > li .search {
 	header#masthead .products img {
 		width: 32%;
 		margin: 1em 9%;
+	}
+	header#masthead ul.menu > li > .submenu.products h3 {
+		font-size: 1.2em;
 	}
 	header#masthead ul.menu > li > .submenu.products a:not(:first-child) {
 		font-size: 1rem;
