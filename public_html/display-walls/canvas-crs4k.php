@@ -96,7 +96,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <p>The Canvas CRS-4K supports viewing up to 8 simultaneous sources, including H.264 video streams, VNC viewer windows, web windows, and SimpleShare windows.</p>
                           <p>Four Mini DisplayPort connections support up to four 1080p HD displays or one 4K Ultra HD display.</p>
                           <p>The Canvas CRS-4K’s high performance graphics system is ideal for use in Engineering and Design (CAD/CAE/AEC), Geographical Information Systems (GIS) & Visualization, Oil & Gas, Life Sciences, Digital Content Creation (DCC) & Digital Media, and other demanding applications.</p>
-                          <hr/>
+
                       </div>
                     </div>
                 </div>
