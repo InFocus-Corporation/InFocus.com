@@ -115,8 +115,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                             <li><strong>New Battery Saver feature automatically conserves power</strong></li>
                             <li><strong>Available as a software upgrade on the 57-, 65-, and 70-inch models</strong></li>
                           </ul>
-
-                            </div>
+                      </div>
                     </div>
                 </div>
                 <div id="details">

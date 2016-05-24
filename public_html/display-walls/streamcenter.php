@@ -99,7 +99,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                         </div>
                       </div>
                       <div style="clear: both; width:100%; display: block;"></div>
-
                     </div>
                     <div id="downloads">
                         <h2>Datasheets</h2>
