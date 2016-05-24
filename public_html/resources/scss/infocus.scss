@@ -1767,6 +1767,7 @@ div.video_module {
   &.video_module_teach {
     background: url('/resources/static/images/teach/JTouch-classroom.jpg') left center no-repeat;
     background-size: cover;
+    box-shadow: $box_shadow_gray;
   }
   &.video_module_collaborate-a {
     background: url('/resources/static/images/collaborate/collaborate-video-a.jpg') left center no-repeat;
