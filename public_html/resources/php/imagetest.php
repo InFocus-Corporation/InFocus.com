@@ -42,7 +42,7 @@ function imagethumb($imagepath, $b = null, $h = null, $w = null, $prefix = "{InF
 	$BASE_HREF = $_SERVER['DOCUMENT_ROOT'] . '/resources/images/';/* the path string to prepend to every image requested (except external resources, if they are allowed) */
 	$ALLOW_HTTP_IMAGES = false;	/* allow requests of http:// or ftp:// resources? Make sure that in php.ini "allow_url_fopen" is set to "true" */
 
-	//filemtime_remote( $uri );
+	filemtime_remote( $uri );
 
 /* temporary kludge */
 //while ( list( $key, $val ) = each( $HTTP_GET_VARS ) ) $_GET[ $key ] = $val;
