@@ -1519,7 +1519,7 @@ overflow: hidden;
 float:right;
 margin-right:1.5em;
 }
-.Row{padding-top:1.5em;}
+.Row{padding-top:1.5em;display:inline-block;}
 .Col {display:inline-block;padding:0.5%;vertical-align:top;}
 .Col_child > li, .Col_child  > div, .Col_child  > ul {display:inline-block;padding:0.5%;margin:0 auto;}
 @media only screen and (min-width:1680px) and (max-width: 1919px) {
@@ -1728,7 +1728,7 @@ border-image: url("/resources/images/svg/dotted_circle_line.svg") 10 repeat;
     width: 96%;
     padding-left: 2%;
     padding-right: 2%;
-  /*  height: 100%;*/ 
+  /*  height: 100%;*/
   }
   .transformer-tabs ul.open li:hover a {
   	background-color: transparent;
