@@ -9,62 +9,10 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 <meta name="keywords" content="infocus,mondopad,projector,projection,DLP,LCD,LCD display,digital display,visual communications,projector accessories,infocus company,digital technology,projection equipment,monopad, communication, touchscreen" />
 
 <link rel="stylesheet" href="/resources/css/core.css" />
-
+<link rel="stylesheet" href="/resources/css/jupiter_pages.css" />
 <?php
 if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $homedir.'/resources/overviews/', 'admin,salespublisher,saleseditor,marketingpublisher,marketingeditor,editor', ".src", "overview", "true", "SavePage","overview");}
 ?>
-<style>
-div.image-set {
-    float: right;
-    width: 45%;
-}
-div.image-set img { width: 100%; }
-div.info {
-    width: 45%;
-}
-div.info .tagline {
-    font-family: 'GoodPro';
-    font-weight: bold;
-}
-div.info span {
-    font-size: 1.3rem;
-}
-div.info #blurb {
-    font-size: 1rem;
-}
-#downloads .rounded {
-    margin:auto;
-    max-width:960px;
-}
-#downloads h2 {
-    margin-top:40px;
-    text-align:center;
-}
-#downloads .HeaderRow th:nth-child(1) { width: 45px; }
-#downloads .HeaderRow th:nth-child(3) { width: 160px; }
-#downloads table tbody tr td img {
-    width: 45px;
-}
-#details_photo {
-    float: right;
-}
-#youtube {
-    width: 655px;
-    height: 368px;
-}
-#warp_more {
-    display: none;
-}
-
-.product_details {
-    text-align: left;
-    padding: 0 0 0 2em;
-}
-.product_details .product_photos {
-    float: right;
-    margin-left: 20px;
-}
-</style>
 <script>
     $(function () {
         // Datasheet Download Languages
@@ -131,44 +79,48 @@ div.info #blurb {
                     </ul>
                 </nav>
                 <div id="overview" class="active">
-                    <div class="C10 alternateDivChildL2">
-                        <div>
+                    <div class="C5 alternateDivChildL2" style="float: right;">
+                        <div class="info cmsedit">
                             <div class="image-set cmsedit">
-                                <img src="/resources/static/images/display-walls/Product_PixelNet_AnalogHD.jpg" >
+                                <img src="/resources/static/images/display-walls/Product_PixelNet_AnalogHD.jpg">
                             </div>
-                            <div class="info cmsedit">
-                                <strong class="tagline mysqledit">
-                                    Flexible, Scable, Powerful.
-                                </strong>
-                                <div class="mysqledit">
-                                    <p>PixelNet® is all about scalability. The same component parts can scale from a single input distributed to a single output to a configuration with hundreds of inputs and outputs. The networked system can support multiple display walls. Need to add another input? Add another PixelNet® input node. Want to add more streaming IP sources? Add another StreamCenter. Expanding the display wall? Add PixelNet® output nodes for the new displays.</p>
-                                </div>
-                                <hr>
+                          </div>
+                      </div>
+                      <div class="C5 alternateDivChildL2" style="float: left;">
+                          <div class="info cmsedit">
+                            <h5 class="name">
+                                Flexible, Scable, Powerful.
+                            </h5>
+                            <div class="mysqledit">
+                                <p>PixelNet® is all about scalability. The same component parts can scale from a single input distributed to a single output to a configuration with hundreds of inputs and outputs. The networked system can support multiple display walls. Need to add another input? Add another PixelNet® input node. Want to add more streaming IP sources? Add another StreamCenter. Expanding the display wall? Add PixelNet® output nodes for the new displays.</p>
                             </div>
-                            <br style="clear:both;">
-                            <div class="info cmsedit">
-                                <br>
-                                <strong class="tagline mysqledit">
-                                    Watch the PixelNet® video
-                                </strong>
-                                <iframe id="youtube" src="https://www.youtube.com/embed/9BbWL0ZgYEU" frameborder="0" allowfullscreen></iframe>
-                                <hr>
-                            </div>
-                            <div class="info cmsedit">
-                                <br>
-                                <strong class="tagline mysqledit">
-                                    A PixelNet® Network
-                                </strong>
-                                <div class="mysqledit">
-                                    <img src="/resources/static/images/display-walls/PixelNet_System_rev.jpg">
-                                </div>
+                          </div>
+                      </div>
+                      <div style="clear: both; display: block"></div>
+                      <hr/>
+
+                      <div class="C5 alternateDivChildL2" style="float: left;">
+                        <div class="info cmsedit">
+                            <h5 class="name">
+                                Watch the PixelNet® video
+                            </h5>
+                            <iframe id="youtube" src="https://www.youtube.com/embed/9BbWL0ZgYEU" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                      <div class="C5 alternateDivChildL2" style="float: right;">
+                        <div class="info cmsedit">
+                            <h5 class="name">
+                                A PixelNet® Network
+                            </h5>
+                            <div class="mysqledit">
+                                <img src="/resources/static/images/display-walls/PixelNet_System_rev.jpg" style="width: 100%; margin-bottom: 3em;">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="details">
                     <div class="C10 alternateDivChildL2">
-                        <div>
+                        <div class="info">
                             <div class="image-set cmsedit" id="details_photo">
                                 <img src="/resources/static/images/display-walls/Product_PixelNet_AnalogHD.jpg" >
                             </div>
@@ -179,15 +131,6 @@ div.info #blurb {
                         <hr>
                         <div class="product_details">
                             <div class="product_photos">
-                                <a href="/resources/static/images/display-walls/Product_PixelNet_DVI.jpg" title="PixelNet® DVI input Node" class="colorbox" rel="gallery-node-370-dVCuqrD4mKk">
-                                    <img
-                                    src="/resources/static/images/display-walls/Product_PixelNet_DVI.jpg"
-                                    class="product_detail_image"
-                                    width="400"
-                                    height="300"
-                                    alt=""
-                                    title="PixelNet® DVI input Node"/>
-                                </a>
                                 <a href="/resources/static/images/display-walls/PN_DVI_Input_back.jpg" title="PixelNet® DVI input Node Back" class="colorbox" rel="gallery-node-370-dVCuqrD4mKk">
                                     <img
                                     class="product_detail_image"
@@ -213,16 +156,6 @@ div.info #blurb {
                         </div>
                         <div class="product_details">
                             <div class="product_photos">
-                                <a href="/resources/static/images/display-walls/Product_PixelNet_AnalogHD_0.jpg" title="PixelNet® Analog HD Input Node" class="colorbox" rel="gallery-node-371-dVCuqrD4mKk">
-                                    <img
-                                    class="product_detail_image"
-                                    typeof="foaf:Image"
-                                    src="/resources/static/images/display-walls/Product_PixelNet_AnalogHD_0.jpg"
-                                    width="400"
-                                    height="300"
-                                    alt=""
-                                    title="PixelNet® Analog HD Input Node"/>
-                                </a>
                                 <a href="/resources/static/images/display-walls/PN_Analog_Input_back.jpg" title="PixelNet® Analog HD Input Node Back" class="colorbox" rel="gallery-node-371-dVCuqrD4mKk"><img
                                     class="product_detail_image"
                                     typeof="foaf:Image"
@@ -247,17 +180,6 @@ div.info #blurb {
                         </div>
                         <div class="product_details">
                             <div class="product_photos">
-
-                                <a href="/resources/static/images/display-walls/Product_PixelNet_QuadCVBS_0.jpg" title="PixelNet® Quad CVBS Input Node" class="colorbox" rel="gallery-node-372-dVCuqrD4mKk">
-                                    <img
-                                    class="product_detail_image"
-                                    typeof="foaf:Image"
-                                    src="/resources/static/images/display-walls/Product_PixelNet_QuadCVBS_0.jpg"
-                                    width="400"
-                                    height="300"
-                                    alt=""
-                                    title="PixelNet® Quad CVBS Input Node"/>
-                                </a>
                                 <a href="/resources/static/images/display-walls/PN_Quad_SD_back.jpg" title="PixelNet® Quad CVBS Input Node Back" class="colorbox" rel="gallery-node-372-dVCuqrD4mKk">
                                     <img
                                     class="product_detail_image"
@@ -283,16 +205,6 @@ div.info #blurb {
                         </div>
                         <div class="product_details">
                             <div class="product_photos">
-                                <a href="/resources/static/images/display-walls/Product_PixelNet_3GSDI_0.jpg" title="PixelNet® 3G-SDI Input Node" class="colorbox" rel="gallery-node-373-dVCuqrD4mKk">
-                                    <img
-                                    class="product_detail_image"
-                                    typeof="foaf:Image"
-                                    src="/resources/static/images/display-walls/Product_PixelNet_3GSDI_0.jpg"
-                                    width="400"
-                                    height="300"
-                                    alt=""
-                                    title="PixelNet® 3G-SDI Input Node"/>
-                                </a>
                                 <a href="/resources/static/images/display-walls/PN_3G_SDI_back.jpg" title="PixelNet® 3G-SDI Input Node Back" class="colorbox" rel="gallery-node-373-dVCuqrD4mKk">
                                     <img
                                     class="product_detail_image"
@@ -318,17 +230,6 @@ div.info #blurb {
                         </div>
                         <div class="product_details">
                             <div class="product_photos">
-
-                                <a href="/resources/static/images/display-walls/Product_PixelNet_TeamMate_0.jpg" title="PixelNet® TeamMate Output Node" class="colorbox" rel="gallery-node-379-dVCuqrD4mKk">
-                                    <img
-                                    class="product_detail_image"
-                                    typeof="foaf:Image"
-                                    src="/resources/static/images/display-walls/Product_PixelNet_TeamMate_0.jpg"
-                                    width="400"
-                                    height="300"
-                                    alt=""
-                                    title="PixelNet® TeamMate Output Node"/>
-                                </a>
                                 <a href="/resources/static/images/display-walls/PN_Teammate_output_back.jpg" title="PixelNet® TeamMate Output Node Back" class="colorbox" rel="gallery-node-379-dVCuqrD4mKk">
                                     <img
                                     class="product_detail_image"
@@ -354,16 +255,6 @@ div.info #blurb {
                         </div>
                         <div class="product_details">
                             <div class="product_photos">
-                                <a href="/resources/static/images/display-walls/Product_PixelNet_AudioOutput_0.jpg" title="PixelNet® Audio Output Node" class="colorbox" rel="gallery-node-374-dVCuqrD4mKk">
-                                    <img
-                                    class="product_detail_image"
-                                    typeof="foaf:Image"
-                                    src="/resources/static/images/display-walls/Product_PixelNet_AudioOutput_0.jpg"
-                                    width="400"
-                                    height="300"
-                                    alt=""
-                                    title="PixelNet® Audio Output Node"/>
-                                </a>
                                 <a href="/resources/static/images/display-walls/PN_Audio_Output_back.jpg" title="PixelNet® Audio Output Node Back" class="colorbox" rel="gallery-node-374-dVCuqrD4mKk">
                                     <img
                                     class="product_detail_image"
@@ -389,16 +280,6 @@ div.info #blurb {
                         </div>
                         <div class="product_details">
                             <div class="product_photos">
-                                <a href="/resources/static/images/display-walls/Product_PixelNet_WarmBlend_0.jpg" title="PixelNet® Warp/Blend Node" class="colorbox" rel="gallery-node-375-dVCuqrD4mKk">
-                                    <img
-                                    class="product_detail_image"
-                                    typeof="foaf:Image"
-                                    src="/resources/static/images/display-walls/Product_PixelNet_WarmBlend_0.jpg"
-                                    width="400"
-                                    height="300"
-                                    alt=""
-                                    title="PixelNet® Warp/Blend Node"/>
-                                </a>
                                 <a href="/resources/static/images/display-walls/PN_Warp_Blend_Node_back.jpg" title="PixelNet® Warp/Blend Node Back" class="colorbox" rel="gallery-node-375-dVCuqrD4mKk">
                                     <img
                                     class="product_detail_image"
