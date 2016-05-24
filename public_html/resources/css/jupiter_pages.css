@@ -18,3 +18,19 @@ h5 { font-weight: normal; margin-bottom: 1em; text-transform: capitalize;}
 #downloads table tbody tr td img {
     width: 45px;
 }
+#youtube {
+    width: 655px;
+    height: 368px;
+    width: 100%;
+}
+#warp_more {
+    display: none;
+}
+
+.product_details {
+    text-align: left;
+}
+.product_details .product_photos {
+    float: right;
+    margin-left: 20px;
+}
