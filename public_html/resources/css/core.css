@@ -1704,10 +1704,10 @@ border-image: url("/resources/images/svg/dotted_circle_line.svg") 10 repeat;
   	border: 1px solid #b7b7b7;
   	background-color: #ccc;
   	margin: 0 1px;
-/*    background: -webkit-linear-gradient(red, yellow, green);
-    background: -o-linear-gradient(red, yellow, green);*/
+    background: -webkit-linear-gradient(top, #ececec 49%, #e0e0e0 50%, #f3f3f3 99%);
+    background: -o-linear-gradient(top, #ececec 49%, #e0e0e0 50%, #f3f3f3 99%);
     background: -moz-linear-gradient(top, #ececec 49%, #e0e0e0 50%, #f3f3f3 99%);
-    /*background: linear-gradient(top, #ececec 50%, #2288ff 75%, #e0e0e0 99%);*/
+    background: linear-gradient(top, #ececec 49%, #e0e0e0 50%, #f3f3f3 99%);
   }
   .transformer-tabs a {
     position: absolute;
