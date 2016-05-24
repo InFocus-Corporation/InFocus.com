@@ -7,31 +7,40 @@ Primary: #006699, #1D5773, #00557F, #1BA1E2, #5CA7CC, #E1EEF4
  */
 @font-face {
   font-family: 'GoodPro-Wide';
-  src:  url("../fonts/GoodPro-WideLight.otf") format("opentype");
+  src: url("../fonts/GoodPro-WideLight.otf"),
+       url('../fonts/GoodPro-WideLight.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: 'GoodPro-WideBook';
-  src:  url("../fonts/GoodPro-WideBook.otf") format("opentype");
+  src: url("../fonts/GoodPro-WideBook.otf"), url('../fonts/GoodPro-WideBook.eot?#iefix') format('embedded-opentype');
+  font-style: normal;
   font-weight: bold;
 }
 @font-face {
   font-family: 'GoodPro';
-  src:  url("../fonts/GoodPro-Light.otf") format("opentype");
+  src: url("../fonts/GoodPro-Light.otf"), url('../fonts/GoodPro-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: 'GoodPro-WideLight';
-  src:  url("../fonts/GoodPro-WideLight.otf") format("opentype");
+  src: url("../fonts/GoodPro-WideLight.otf"), url('../fonts/GoodPro-WideLight.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: 'GoodPro';
-  src:  url("../fonts/GoodPro-Medium.otf") format("opentype");
+  src: url("../fonts/GoodPro-Medium.otf"), url('../fonts/GoodPro-Medium.eot?#iefix') format('embedded-opentype');
   font-weight: bold;
+  font-style: normal;
 }
 @font-face {
   font-family: 'GoodPro-WideMedium';
-  src: url("../fonts/GoodPro-WideMedium.otf") format("opentype");
+  src: url("../fonts/GoodPro-WideMedium.otf"), url('../fonts/GoodPro-WideMedium.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
+  font-style: normal;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -121,9 +130,10 @@ header#masthead h3#logo {
 }
 /* line 30, ../sass/blocks/_header.scss */
 header#masthead h3#logo a {
-  background: url("/resources/static/images/logo.png") no-repeat;
+  background-image: url("/resources/static/images/logo.png");
   background-size: 100% auto;
   background-position: 0 67%;
+  background-repeat: no-repeat;
   display: block;
   font-size: 0;
   height: 29px;
@@ -149,7 +159,7 @@ header#masthead .menu-button {
 header#masthead ul.menu {
 	float: left;
 	list-style-type: none;
-	margin: 0 0 0 8rem;
+	margin: 0 0 0 7rem;
 	padding: 0;
 }
 @media screen and (min-width: 2200px) {
@@ -1509,7 +1519,7 @@ overflow: hidden;
 float:right;
 margin-right:1.5em;
 }
-.Row{padding-top:1.5em;}
+.Row{padding-top:1.5em;display:inline-block;}
 .Col {display:inline-block;padding:0.5%;vertical-align:top;}
 .Col_child > li, .Col_child  > div, .Col_child  > ul {display:inline-block;padding:0.5%;margin:0 auto;}
 @media only screen and (min-width:1680px) and (max-width: 1919px) {
@@ -1704,10 +1714,10 @@ border-image: url("/resources/images/svg/dotted_circle_line.svg") 10 repeat;
   	border: 1px solid #b7b7b7;
   	background-color: #ccc;
   	margin: 0 1px;
-/*    background: -webkit-linear-gradient(red, yellow, green);
-    background: -o-linear-gradient(red, yellow, green);*/
+    background: -webkit-linear-gradient(top, #ececec 49%, #e0e0e0 50%, #f3f3f3 99%);
+    background: -o-linear-gradient(top, #ececec 49%, #e0e0e0 50%, #f3f3f3 99%);
     background: -moz-linear-gradient(top, #ececec 49%, #e0e0e0 50%, #f3f3f3 99%);
-    /*background: linear-gradient(top, #ececec 50%, #2288ff 75%, #e0e0e0 99%);*/
+    background: linear-gradient(top, #ececec 49%, #e0e0e0 50%, #f3f3f3 99%);
   }
   .transformer-tabs a {
     position: absolute;
@@ -1718,7 +1728,7 @@ border-image: url("/resources/images/svg/dotted_circle_line.svg") 10 repeat;
     width: 96%;
     padding-left: 2%;
     padding-right: 2%;
-  /*  height: 100%;*/ 
+  /*  height: 100%;*/
   }
   .transformer-tabs ul.open li:hover a {
   	background-color: transparent;
@@ -1948,9 +1958,10 @@ footer div.logo {
 	padding: 0;
 }
 footer div.logo > a {
-	background: url("/resources/static/images/logo.png") no-repeat;
+	background-image: url("/resources/static/images/logo.png");
 	background-size: 100% auto;
 	background-position: 0 0%;
+	background-repeat: no-repeat;
 	display: block;
 	font-size: 0;
 	height: 29px;
@@ -2303,6 +2314,13 @@ margin-left:15px;
 	box-sizing: border-box;
 	padding: 1em .2em;
 	margin: 0em .8em;
+}
+.resultsList.panels.extra-tall .spec-list {
+	min-height: 254px;
+  border-bottom: 0px solid #006ba6;
+}
+.resultsList.panels.extra-tall .spec-list li:last-child {
+  border-bottom: 1px solid #006ba6;
 }
 .panels > li > div h6.title {
 	margin-top: 0.6em;

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -6,7 +6,6 @@
 <link rel="icon" href="/favicon.png" type="image/gif" sizes="32x32">
 
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<!-- <script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
 <script type="text/Javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 
@@ -22,9 +21,7 @@
 <script type="text/Javascript" src="/resources/js/jquery.hoverIntent.min.js"></script>
 <script src="/resources/js/jquery.fitvids.js"></script>
 <link rel="stylesheet" href="/resources/css/font-awesome.min.css" />
-<!--[if IE]>
-  <link href="/resources/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-<![endif]-->
+<link rel="stylesheet" href="/resources/css/ie.css" />
 <!-- Start Visual Website Optimizer Asynchronous Code -->
 <script type='text/javascript'>
 var _vwo_code=(function(){
