@@ -1,4 +1,5 @@
 <?php 
+require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
 
 function filemtime_remote( $uri ) {
 	$uri = parse_url( $uri );
@@ -27,84 +28,69 @@ function filemtime_remote( $uri ) {
 }
 
 function imagethumb($imagepath, $b = null, $h = null, $w = null, $prefix = "{InFocus-,}", $suffix = "{-Series.*,-Hero.*,.*}"){
+	global $connection;
+	mysqli_set_charset($connection, "utf8");
 
     if (is_null($prefix)) {
         $prefix = '{InFocus-,}';
     }
 
 
-$GENERATE_CACHE = true;	/* if true, generates caches of the thumbnailed images */
-$CACHE_PATH = $_SERVER['DOCUMENT_ROOT'] . '/tmp/imagethumbs/';	/* the full path where thumbnails should be saved (if $GENERATE_CACHE is enabled) */
-$BROKEN_IMAGE_PATH = 'no-image.png';	/* the full path to the image to be shown when a non-valid image is required or found */
-$BASE_HREF = $_SERVER['DOCUMENT_ROOT'] . '/resources/images/';	/* the path string to prepend to every image requested (except external resources, if they are allowed) */
-$ALLOW_HTTP_IMAGES = false;	/* allow requests of http:// or ftp:// resources? Make sure that in php.ini "allow_url_fopen" is set to "true" */
+	$GENERATE_CACHE = true;	/* if true, generates caches of the thumbnailed images */
+	$CACHE_PATH = $_SERVER['DOCUMENT_ROOT'] . '/tmp/imagethumbs/';	/* the full path where thumbnails should be saved (if $GENERATE_CACHE is enabled) */
+	$BROKEN_IMAGE_PATH = 'no-image.png';	/* the full path to the image to be shown when a non-valid image is required or found */
+	$BASE_HREF = $_SERVER['DOCUMENT_ROOT'] . '/resources/images/';/* the path string to prepend to every image requested (except external resources, if they are allowed) */
+	$ALLOW_HTTP_IMAGES = false;	/* allow requests of http:// or ftp:// resources? Make sure that in php.ini "allow_url_fopen" is set to "true" */
 
-/* some settings */
-// ignore_user_abort();
-// set_time_limit( 0 );
-// error_reporting( FATAL | ERROR | WARNING );
-
-/* security check */
-// ini_set( 'register_globals', '0' );
-
-
-/* start buffered output */
-//ob_start();
-
-filemtime_remote( $uri );
+	//filemtime_remote( $uri );
 
 /* temporary kludge */
 //while ( list( $key, $val ) = each( $HTTP_GET_VARS ) ) $_GET[ $key ] = $val;
-if ( ! eregi( "^http://", $imagepath ) && ! eregi( "^ftp://", $imagepath ) ) {
+	if ( ! eregi( "^http://", $imagepath ) && ! eregi( "^ftp://", $imagepath ) ) {
 
-require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
-mysqli_set_charset($connection, "utf8");
+		$pn = $imagepath;
 
-$pn = $imagepath;
+		if(substr($pn,-3)=="jpg"){
+			$imagepath = $BASE_HREF . $pn;
+		} else {
+			global $series;
 
+			$result = mysqli_query($connection, 'SELECT `series` FROM productseries WHERE `productseries`.`partnumber` = "' . $pn . '"');
+			while($row = mysqli_fetch_array($result))
+			{
+				$series = str_replace("-Series", "", $row[0]);
+			}
 
-if(substr($pn,-3)=="jpg"){
-$imagepath = $BASE_HREF . $pn;
-}
+			if(mysqli_num_rows($result)==0) {
+				$series = $pn;
+			}
 
-else{
-global $series;
+			$filename = glob($BASE_HREF . $prefix . "{" . $pn . "," . $series . "}" . $suffix, GLOB_BRACE);
+	    	$imagepath = $filename[0];
 
-$result = mysqli_query($connection,'SELECT `series` FROM productseries WHERE `productseries`.`partnumber` = "' . $pn . '"');
-	
-while($row = mysqli_fetch_array($result))
-{
-	$series = str_replace("-Series","",$row[0]);
-}
-if(mysqli_num_rows($result)==0)
-{$series = $pn;}
+			// error_log ('90:' . $filename[0]);
+			/* get source image size */
+			if(empty($filename[0])){$imagepath = $BASE_HREF . $BROKEN_IMAGE_PATH;}
+		}
+	}
 
+	$src_size = getimagesize( $imagepath );
 
-$filename = glob($BASE_HREF . $prefix . "{" . $pn . "," . $series . "}" . $suffix,GLOB_BRACE);
-    $imagepath = $filename[0];
-// error_log ('90:' . $filename[0]);
-/* get source image size */
-if(empty($filename[0])){$imagepath = $BASE_HREF . $BROKEN_IMAGE_PATH;}
-}
-}
+	/* some checks */
+	if ( ! isset( $imagepath ) ) die( 'Source image not specified' );
+	if ( isset( $w ) && ereg( "^[0-9]+$", $w ) ) $MAX_WIDTH = $w;
+	else $MAX_WIDTH = $src_size[0];
+	if ( isset( $h ) && ereg( "^[0-9]+$", $h ) ) $MAX_HEIGHT = $h;
+	else $MAX_HEIGHT = $src_size[1];
+	if ( isset( $b ) && ereg( "^[0-9]+$", $b ) ) $MAX_BOTH = $b;
 
-$src_size = getimagesize( $imagepath );
-
-/* some checks */
-if ( ! isset( $imagepath ) ) die( 'Source image not specified' );
-if ( isset( $w ) && ereg( "^[0-9]+$", $w ) ) $MAX_WIDTH = $w;
-else $MAX_WIDTH = $src_size[0];
-if ( isset( $h ) && ereg( "^[0-9]+$", $h ) ) $MAX_HEIGHT = $h;
-else $MAX_HEIGHT = $src_size[1];
-if ( isset( $b ) && ereg( "^[0-9]+$", $b ) ) $MAX_BOTH = $b;
-
-if($src_size[1] > $src_size[0] && isset( $b ) && ereg( "^[0-9]+$", $b )){
-$MAX_HEIGHT = $MAX_BOTH;
-$MAX_WIDTH = $src_size[0];
-}
-elseif(isset( $b ) && ereg( "^[0-9]+$", $b )){
-$MAX_HEIGHT = $src_size[1];
-$MAX_WIDTH = $MAX_BOTH;
+	if($src_size[1] > $src_size[0] && isset( $b ) && ereg( "^[0-9]+$", $b )){
+	$MAX_HEIGHT = $MAX_BOTH;
+	$MAX_WIDTH = $src_size[0];
+	}
+	elseif(isset( $b ) && ereg( "^[0-9]+$", $b )){
+	$MAX_HEIGHT = $src_size[1];
+	$MAX_WIDTH = $MAX_BOTH;
 }
 
 
