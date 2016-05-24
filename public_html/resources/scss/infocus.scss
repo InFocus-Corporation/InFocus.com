@@ -471,6 +471,17 @@ header + .hero_row > .row {
           height: 100%;
           right: 0;
         }
+        &.present img {
+          @media screen and (min-width: 1960px) {
+            width: 100%;
+            height: auto;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+          }
+        }
         &.connect img, &.visualize img {
           @media screen and (min-width: 1717px) {
             width: 100%;
