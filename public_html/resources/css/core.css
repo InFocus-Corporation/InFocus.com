@@ -1504,6 +1504,16 @@ padding-top:3.25em;
 overflow: hidden;
 }
 
+.alternateDivChildL2 > div.cmsedit {
+	padding-top: 1.75em;
+}
+.alternateDivChildL2 > div.cmsedit:first-child {
+	padding-top: 1em;
+}
+.alternateDivChildL2 > div.cmsedit hr {
+	margin-top: 2.5em;
+}
+
 .alternateDivChildL2 > li:nth-child(odd) > div:first-child, .alternateDivChildL2 > div:nth-child(odd) > div:first-child ,
 .alternateDivChildL2 > li:nth-child(even) > div:first-child, .alternateDivChildL2 > div:nth-child(even) > div:first-child {
 float:right;
