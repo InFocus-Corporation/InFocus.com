@@ -145,7 +145,7 @@ $(function() {
     <!-- END MULTICOLUMN TEXT MODULE -->
     <!-- VIDEO MODULE -->
     <div class="video_module video_module_collaborate-a">
-        <a href="http://www.infocus.vagrant.internal/videos?aGcZS6K92fk">
+        <a href="/videos?aGcZS6K92fk">
             <div class="video_link">
                 <h2 class="lead_text--secondary_headline">See how ConX Video Meeting<br>brings teams together</h2>
             </div>
@@ -215,14 +215,14 @@ $(function() {
 
     <!-- VIDEO MODULE -->
     <div class="video_module video_module_collaborate-b">
-        <a href="http://www.infocus.vagrant.internal/videos?SNMjzPRQUA8">
+        <a href="/videos?SNMjzPRQUA8">
             <div class="video_link">
                 <h2 class="lead_text--secondary_headline">See how collaboration is done</h2>
             </div>
         </a>
     </div>
     <!-- END VIDEO MODULE -->
-    
+
     <script>
         $(document).foundation();
     </script>
