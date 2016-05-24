@@ -27,7 +27,7 @@ if($_GET['edit']=="true"){CMSHTML("SavePage",'admin,editor');}
 		<div class="content">
 <div id="product" class="C9" itemscope itemtype="http://schema.org/Product">
 <div class="breadcrumb"><ol itemscope itemtype="https://schema.org/BreadcrumbList"><?=$product->breadcrumb ?></ol></div>
-	<div class="productheader C10 Col_child C4x6_child" >
+	<div class="productheader C10 Col_child C6x4_child" >
  		<?=$priceBuyNow?>
  		</ul></div>
 
@@ -47,7 +47,7 @@ if($_GET['edit']=="true"){CMSHTML("SavePage",'admin,editor');}
 				</div>
 	</div>
 <div class="tabs">
-  
+
   <nav role='navigation' class="C10 transformer-tabs tabs-wrapper">
     <ul>
 <?=$product->productTabs ?>
@@ -55,7 +55,7 @@ if($_GET['edit']=="true"){CMSHTML("SavePage",'admin,editor');}
    </ul>
 	<div class="tab-shadow"></div>
   </nav>
-  
+
 		<div id="overview" class="active">
 		<?=$overview ?>
 		</div>
