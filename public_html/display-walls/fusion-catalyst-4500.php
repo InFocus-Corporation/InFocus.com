@@ -92,7 +92,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <p>With optional Quad HD Decoder Cards, Fusion Catalyst 4500 can support up to 108 video streams. Most popular IP cameras and encoders are supported, as are desktop PC streams with real-time updates.</p>
                           <p>With optional Dual-Link DVI-I Input Cards, Fusion Catalyst 4500 can support up to 54 DVI-I, progressive scan component HD, or analog RGB inputs. </p>
                           <p>Up to 216 video inputs can be accommodated using optional Octal SD Video Input Cards.</p>
-                          <hr/>
                       </div>
                     </div>
                     <div style="display: block; clear: both; width: 100%;"></div>

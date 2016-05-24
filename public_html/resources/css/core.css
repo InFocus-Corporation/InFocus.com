@@ -1503,7 +1503,9 @@ clear:both;
 padding-top:3.25em;
 overflow: hidden;
 }
-
+.tabs .alternateDivChildL2 > li, .tabs .alternateDivChildL2 > div {
+  padding-top:1.75em;
+}
 .alternateDivChildL2 > li:nth-child(odd) > div:first-child, .alternateDivChildL2 > div:nth-child(odd) > div:first-child ,
 .alternateDivChildL2 > li:nth-child(even) > div:first-child, .alternateDivChildL2 > div:nth-child(even) > div:first-child {
 float:right;

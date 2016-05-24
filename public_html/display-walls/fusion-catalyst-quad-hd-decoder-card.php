@@ -85,7 +85,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <strong class="tagline">Power and Simplicity</strong>
                           <p>Setting up streams is simple and intuitive with Jupiter’s ControlPoint drag-and-drop graphical user interface.</p>
                           <p>Quad HD Decoder windows can be scaled from postage stamp size to the size of the full wall, while maintaining true, real time update rates and perfect visual performance. Stream and decoder management software, a component of the ControlPoint software suite, ensures that in the event of a decoder or network failure, routing of streams to available resources is done quickly and automatically.</p>
-                          <hr/>
                       </div>
                     </div>
                     <div style="display: block; clear: both; width: 100%;"></div>
