@@ -124,7 +124,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 				<div class="callout--copy">
 					<h5><?= $latest_news['teaser'] ?></h5>
 					<a href="/articles?<?= $latest_news['id'] ?>" class="button button--primary">learn more</a>
-					<a href="/about#news" class="link link--primary link--inverted">View all news</a>
+					<a href="/about#news" class="link link--inverted">View all news</a>
 				</div>
 			</div>
 		</div>
@@ -134,9 +134,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 					<div class="module--tag">
 						<span>latest events</span>
 					</div>
-					<h5><a href="http://www.infocommshow.org/">InfoComm</a><br> June 8 - 10, 2016<br> Las Vegas, NV</h5>
-					<h5><a href="http://www.ifsec.co.uk/Content/Welcome">IFSEC</a><br> June 21 - 23, 2016<br> London, England</h5>
-					<h5><a href="http://conference.iste.org/2016/">ISTE</a><br> June 27 - 29, 2016<br> Denver, CO</h5>
+					<h5><a href="http://www.infocommshow.org/">InfoComm</a><br> June 8 - 10, 2016 / Las Vegas, NV</h5>
+					<h5><a href="http://www.ifsec.co.uk/Content/Welcome">IFSEC</a><br> June 21 - 23, 2016 / London, England</h5>
+					<h5><a href="http://conference.iste.org/2016/">ISTE</a><br> June 27 - 29, 2016 / Denver, CO</h5>
 					<a href="/about#events" class="link link--primary">View all events</a>
 				</div>
 			</div>
