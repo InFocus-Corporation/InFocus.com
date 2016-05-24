@@ -2304,6 +2304,13 @@ margin-left:15px;
 	padding: 1em .2em;
 	margin: 0em .8em;
 }
+.resultsList.panels.extra-tall .spec-list {
+	min-height: 254px;
+  border-bottom: 0px solid #006ba6;
+}
+.resultsList.panels.extra-tall .spec-list li:last-child {
+  border-bottom: 1px solid #006ba6;
+}
 .panels > li > div h6.title {
 	margin-top: 0.6em;
 	font-family: 'GoodPro';
