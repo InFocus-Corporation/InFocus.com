@@ -1128,14 +1128,14 @@ header + .hero_row > .row {
           margin-top: -105px
         }
         @media screen and (min-width: 64em) {
-          margin: -245px auto 0;
+          margin: -255px auto 0;
         }
     }
     &.feature_module_b--teach .feature_text {
       @include background-opacity($dark_gray);
       @media screen and (min-width: 64em) {
         padding-top: 30px;
-        margin-top: -287px;
+        margin-top: -293px;
       }
     }
     &.feature_module_b--visualize .feature_text {
