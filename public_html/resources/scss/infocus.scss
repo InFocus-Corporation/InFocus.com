@@ -70,6 +70,12 @@ body {
   padding-top: 99px;
 }
 
+@media screen and (min-width: 40em) {
+  h5 {
+    font-size: 1.2rem;
+  }
+}
+
 .row {
   margin-top: 6em;
   margin-bottom: 4em;
@@ -633,7 +639,7 @@ header + .hero_row > .row {
           height: 100%;
       }
       .lead_text--paragraph {
-          font-size: .75em;
+          font-size: .8em;
           line-height: 1.1;
           @media screen and (min-width: 30em) {
               font-size: .9em;
@@ -648,7 +654,7 @@ header + .hero_row > .row {
               line-height: 1.5;
           }
           @media screen and (min-width: 64em) {
-              font-size: 1.25em;
+              font-size: 1.3em;
               line-height: 1.6;
           }
       }
@@ -720,7 +726,7 @@ header + .hero_row > .row {
     }
     h3.lead_text--secondary_headline {
         margin-bottom: .65rem;
-        font-size: 1.25rem;
+        font-size: 1.3rem;
         @media screen and (min-width: 30em) {
             font-size: 1.7rem;
         }
@@ -731,7 +737,7 @@ header + .hero_row > .row {
             font-size: 2.3rem;
         }
         @media screen and (min-width: 64em) {
-            font-size: 2.75rem;
+            font-size: 2.8rem;
         }
         a { color: black;}
     }
@@ -751,7 +757,7 @@ header + .hero_row > .row {
             line-height: 1.4;
         }
         @media screen and (min-width: 64em) {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             line-height: 1.6;
         }
     }
@@ -759,7 +765,7 @@ header + .hero_row > .row {
         font-size: .5rem;
         letter-spacing: .1rem;
         @media screen and (min-width: 40em) {
-          font-size: .75rem;
+          font-size: .8rem;
           letter-spacing: .2rem;
         }
     }
@@ -889,7 +895,7 @@ header + .hero_row > .row {
           font-size: 1.1rem;
         }
         @media screen and (min-width: 64em) {
-          font-size: 1.25rem;
+          font-size: 1.3rem;
           line-height: 1.6;
         }
     }
@@ -991,7 +997,7 @@ header + .hero_row > .row {
           font-size: 1.1rem;
         }
         @media screen and (min-width: 64em) {
-          font-size: 1.25rem;
+          font-size: 1.3rem;
           line-height: 1.6;
         }
     }
@@ -1151,7 +1157,7 @@ header + .hero_row > .row {
           line-height: 1.6;
         }
         @media screen and (min-width: 40em) {
-          font-size: 1.25rem;
+          font-size: 1.3rem;
         }
     }
     .feature_links {
@@ -1171,7 +1177,7 @@ header + .hero_row > .row {
         font-family: 'GoodPro-WideMedium';
         font-size: 10px;
         text-transform: uppercase;
-        letter-spacing: .25em;
+        letter-spacing: .2em;
         @media screen and (min-width: 30em) {
           font-size: 13px;
         }
@@ -1389,7 +1395,7 @@ header + .hero_row > .row {
       .three_column_module {
         .lead_text--paragraph {
           @media screen and (min-width: 64em) {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             padding: 0 2px;
           }
         }
@@ -1962,7 +1968,7 @@ div.video_module {
       clear: both;
 
       p {
-        margin-bottom: 5rem;
+        font-size: 1.3rem;
       }
     }
   }

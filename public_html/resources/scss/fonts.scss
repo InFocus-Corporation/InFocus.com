@@ -1,47 +1,43 @@
 @font-face {
   font-family: 'GoodPro';
-  src: url("../fonts/GoodPro-Medium.otf") format("opentype");
-  src: url('../fonts/GoodPro-Medium.eot?#iefix') format('embedded-opentype');
+  src: url("../fonts/GoodPro-Medium.otf"),
+       url('../fonts/GoodPro-Medium.eot?#iefix') format('embedded-opentype');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'GoodPro';
-  src: url("../fonts/GoodPro-Bold.otf") format("opentype");
-  src: url('../fonts/GoodPro-Bold.eot?#iefix') format('embedded-opentype');
+  src: url("../fonts/GoodPro-Bold.otf"), url('../fonts/GoodPro-Bold.eot?#iefix') format('embedded-opentype');
   font-weight: 900;
 }
 
 @font-face {
   font-family: 'GoodPro-WideLight';
-  src: url("../fonts/GoodPro-WideLight.otf") format("opentype");
-  src: url('../fonts/GoodPro-WideLight.eot?#iefix') format('embedded-opentype');
+  src: url("../fonts/GoodPro-WideLight.otf"), url('../fonts/GoodPro-WideLight.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'GoodPro-WideBold';
-  src: url("../fonts/GoodPro-WideBold.otf") format("opentype");
-  src: url('../fonts/GoodPro-WideBold.eot?#iefix') format('embedded-opentype');
+  src: url("../fonts/GoodPro-WideBold.otf"), url('../fonts/GoodPro-WideBold.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'GoodPro-Book';
-  src: url("../fonts/GoodPro-Book.otf") format("opentype");
-  src: url('../fonts/GoodPro-Book.eot?#iefix') format('embedded-opentype');
+  src: url("../fonts/GoodPro-Book.otf"),
+       url('../fonts/GoodPro-Book.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'GoodPro-WideBook';
-  src: url("../fonts/GoodPro-WideBook.otf") format("opentype");
-  src: url('../fonts/GoodPro-WideBook.eot?#iefix') format('embedded-opentype');
+  src: url("../fonts/GoodPro-WideBook.otf"), url('../fonts/GoodPro-WideBook.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
 }
+
 @font-face {
   font-family: 'GoodPro-WideMedium';
-  src: url("../fonts/GoodPro-WideMedium.otf") format("opentype");
-  src: url('../fonts/GoodPro-WideMedium.eot?#iefix') format('embedded-opentype');
+  src: url("../fonts/GoodPro-WideMedium.otf"), url('../fonts/GoodPro-WideMedium.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
 }

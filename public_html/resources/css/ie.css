@@ -1,31 +1,7 @@
-/* Welcome to Compass. Use this file to write IE specific override styles.
- * Import this file using the following HTML or equivalent:
- * <!--[if IE]>
- *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
- * <![endif]--> */
-/* line 7, ../sass/ie.scss */
-header, nav, article, footer, section, aside, figure, figcaption {
-  display: block; }
-
-/* line 9, ../sass/ie.scss */
-
-
-/* line 13, ../sass/ie.scss */
-
-
-  form .wrap li{
-display: block;
-}
-
-.tab-shadow{
-    content: "";
-    display: block;
-    height: 20px;
-    position: absolute;
-    top: -10px;
-    width: 100%;
-    background: -ms-radial-gradient(50% -50%, rgba(0, 0, 0, 0.45), transparent);
-	border-radius:40%;
-	    background: #000000; /* The color you want for the radial gradient */
-	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=45, finishopacity=0, style=2);
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  header#masthead h3#logo a,
+  footer div.logo > a {
+    background-image: url(/resources/static/images/logo-ie.png);
+  }
 }
