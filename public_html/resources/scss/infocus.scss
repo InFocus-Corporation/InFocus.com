@@ -1111,7 +1111,7 @@ header + .hero_row > .row {
     &.feature_module_b--visualize .feature_text {
         @include background-opacity($infocus_blue);
         @media screen and (min-width: 64em) {
-          margin: -303px auto 0;
+          margin: -309px auto 0;
           padding: 50px 70px 0;
         }
     }
