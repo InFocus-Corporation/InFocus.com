@@ -103,13 +103,16 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 
 	<!-- VIDEO MODULE -->
 	<div class="video_module video_module_collaborate-b">
-	    <a href="/videos?SNMjzPRQUA8">
+	    <a href="/videos_colorbox?SNMjzPRQUA8" class="video-box">
 	        <div class="video_link">
 	            <h2 class="lead_text--secondary_headline">See how collaboration is done</h2>
 	        </div>
 	    </a>
 	</div>
 	<!-- END VIDEO MODULE -->
+	<script>
+	$(".video-box").colorbox({iframe:true, innerWidth:'560px', innerHeight:'395px'});
+	</script>
 
 	<div class="row homepage--callouts" data-equalizer data-equalize-on="medium">
 		<div class="small-12 medium-7 columns" data-equalizer-watch>

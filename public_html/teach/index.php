@@ -92,12 +92,15 @@ $(function() {
     <!-- END MULTICOLUMN TEXT MODULE -->
     <!-- FEATURE MODULE JTOUCH -->
     <div class="video_module video_module_teach">
-        <a href="/videos?1GWVuww_dXw">
+        <a href="/videos_colorbox?1GWVuww_dXw" class="video-box">
             <div class="video_link">
                 <h2 class="lead_text--secondary_headline">See how JTouch invigorated<br>a 5th grade classroom</h2>
             </div>
         </a>
     </div>
+  	<script>
+  	$(".video-box").colorbox({iframe:true, innerWidth:'560px', innerHeight:'395px'});
+  	</script>
     <!-- END FEATURE MODULE JTOUCH -->
     <!-- FEATURE MODULE A -->
     <div class="row feature_module_a orange feature_module_a--orange">
