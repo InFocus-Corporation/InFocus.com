@@ -41,7 +41,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<a href="/display-walls/canvas"><img src="/resources/static/images/display-walls/160775957.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline"><a href="/display-walls/canvas">Canvas</a></h3>
+			<h3 class="lead_text--secondary_headline"><a href="/display-walls/canvas">Jupiter Canvas</a></h3>
 			<p class="lead_text--paragraph">Share video, data, applications, and more with colleagues anywhere, on any device, for end-to-end collaboration.</p>
 			<a href="/display-walls/canvas" class="button button--primary">learn more</a>
 		</div>
@@ -53,7 +53,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<a href="/display-walls/canvas-crs4k"><img src="/resources/static/images/display-walls/iStock_000049003822XLarge_test1170x500.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline"><a href="/display-walls/canvas-crs4k">Canvas CRS-4K</a></h3>
+			<h3 class="lead_text--secondary_headline"><a href="/display-walls/canvas-crs4k">Jupiter Canvas CRS-4K</a></h3>
 			<p class="lead_text--paragraph">Extend the power of Canvas' award-winning solution to teams working together on up to four HD displays or one 4K display in conference rooms and huddle rooms.</p>
 			<a href="/display-walls/canvas-crs4k" class="button button--primary">learn more</a>
 		</div>
@@ -65,7 +65,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<a href="/display-walls/canvas-touch"><img src="/resources/images/InFocus-Canvas-Touch-Architecture.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline"><a href="/display-walls/canvas-touch">Canvas Touch</a></h3>
+			<h3 class="lead_text--secondary_headline"><a href="/display-walls/canvas-touch">Jupiter Canvas Touch</a></h3>
 			<p class="lead_text--paragraph">Collaborate on this touchscreen endpoint for your Canvas environment in your conference rooms, huddle spaces, personal offices, or anywhere else groups meet.</p>
 			<a href="/display-walls/canvas-touch" class="button button--primary">learn more</a>
 		</div>
@@ -89,7 +89,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<a href="/display-walls/fusion-catalyst"><img src="/resources/static/images/display-walls/BoM_Jupiter_People_07.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline"><a href="/display-walls/fusion-catalyst">Fusion Catalyst</a></h3>
+			<h3 class="lead_text--secondary_headline"><a href="/display-walls/fusion-catalyst">Jupiter Fusion Catalyst</a></h3>
 			<p class="lead_text--paragraph">Incorporate all of the visual data sources found in a control room environment and display them in movable, scalable windows on a virtual display comprised of multiple output devices.</p>
 			<a href="/display-walls/fusion-catalyst" class="button button--primary">learn more</a>
 		</div>
@@ -101,7 +101,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<a href="/display-walls/pixelnet"><img src="/resources/static/images/display-walls/pixelnet_hero-1.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline"><a href="/display-walls/pixelnet">PixelNet</a></h3>
+			<h3 class="lead_text--secondary_headline"><a href="/display-walls/pixelnet">Jupiter PixelNet</a></h3>
 			<p class="lead_text--paragraph">Create a network of input and output nodes to show information sources on any display, such as a window on a single display, or a window spanning multiple displays in a display wall.</p>
 			<a href="/display-walls/pixelnet" class="button button--primary">learn more</a>
 		</div>
@@ -113,7 +113,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<a href="/display-walls/streamcenter"><img src="/resources/static/images/display-walls/BoM_Jupiter_Meeting_Room_1.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline"><a href="/display-walls/streamcenter">StreamCenter</a></h3>
+			<h3 class="lead_text--secondary_headline"><a href="/display-walls/streamcenter">Jupiter StreamCenter</a></h3>
 			<p class="lead_text--paragraph">Decode multiple video streams, including standard and high definition IP streams from cameras, encoders, NVRs, and PCs.</p>
 			<a href="/display-walls/streamcenter" class="button button--primary">learn more</a>
 		</div>
@@ -125,7 +125,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 			<a href="/display-walls/vizionplus-ii"><img src="/resources/static/images/display-walls/169263611.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline"><a href="/display-walls/vizionplus-ii">VizionPlus II</a></h3>
+			<h3 class="lead_text--secondary_headline"><a href="/display-walls/vizionplus-ii">Jupiter VizionPlus II</a></h3>
 			<p class="lead_text--paragraph">US military installations worldwide use VizionPlus II to run mission-critical apps, access data through the network, engage the information, and collaborate on a wall-sized desktop.</p>
 			<a href="/display-walls/vizionplus-ii" class="button button--primary">learn more</a>
 		</div>

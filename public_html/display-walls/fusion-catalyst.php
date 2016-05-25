@@ -35,11 +35,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <a href="/">Home</a> &gt;
                     <a href="/display-walls/">Display Walls</a> &gt;
-                    <a href="/display-walls/fusion-catalyst">Fusion Catalyst</a>
+                    <a href="/display-walls/fusion-catalyst">Jupiter Fusion Catalyst</a>
                 </ol>
             </div>
-            <div class="productheader C10 Col_child C4x6_child">
-                <div><h1 class="mysqledit h2" id="pagetitle">Fusion Catalyst</h1></div>
+            <div class="productheader C10 Col_child C6x4_child">
+                <div><h1 class="mysqledit h2" id="pagetitle">Jupiter Fusion Catalyst</h1></div>
                 <div>
                     <ul class="action-links Col_child">
                         <li></li>
@@ -275,7 +275,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                         </ul>
                                     </td>
                                 </tr>
-                                
+
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
