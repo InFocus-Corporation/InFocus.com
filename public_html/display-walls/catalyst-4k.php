@@ -113,56 +113,79 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                       </div>
                     </div>
                 </div>
+
                 <div id="specifications">
                     <div class="C10 alternateDivChildL2">
                       <div class="info cmsedit">
-                          <div class="image-set cmsedit" style="float: right; padding: 1em; width: 40%;">
+                          <div class="image-set cmsedit" style="float: right; max-width: 400px;">
                               <img src="/resources/static/images/display-walls/InFocus-Jupiter-Catalyst-4K-Back.jpg" >
                           </div>
                         <h5 class="name"></h5>
                         <p><strong>System Architecture Chassis</strong></p>
                         <p>
-                        <ul class="feature-list" style="padding-bottom:50px;">
-                            <li>PCI Express 3.0 Chassis with 6 high speed slots for input, output, or auxiliary cards</li>
-                            <li>CPU Board Processor: Intel E5 Six Core Xeon CPU</li>
-                            <li>CPU Board System Memory: 32GB RAM per CPU standard, up to 128GB RAM optional</li>
-                            <li>Drives: 512GB solid state drives, optional 2nd and 3rd drives, RAID1 array with hot spare</li>
-                            <li>Optical Storage: DVD-RW/CD-RW</li>
-                            <li>Network Interface (Ethernet): Standard dual 100/1000 Mbps RJ45 ports</li>
-                            <li>Input Devices (USB): 104-key keyboard and mouse</li>
-                        </ul>
+                            <ul class="feature-list">
+                                <li>PCI Express 3.0 Chassis with 6 high speed slots for input, output, or auxiliary cards</li>
+                                <li>CPU Board Processor: Intel E5 Six Core Xeon CPU</li>
+                                <li>CPU Board System Memory: 32GB RAM per CPU standard, up to 128GB RAM optional</li>
+                                <li>Drives: 512GB solid state drives, optional 2nd and 3rd drives, RAID1 array with hot spare</li>
+                                <li>Optical Storage: DVD-RW/CD-RW</li>
+                                <li>Network Interface (Ethernet): Standard dual 100/1000 Mbps RJ45 ports</li>
+                                <li>Input Devices (USB): 104-key keyboard and mouse</li>
+                            </ul>
                         </p>
+                        <hr/>
+                        <h5 class="name"></h5>
                         <p><strong>Expansion Chassis (Optional)</strong></p>
-                        <p>Catalyst 4K Expansion Chassis: PCI Express 2.0 Chassis with 7 slots for input or output cards</p>
+                        <p>
+                            <ul class="feature-list">
+                                <li>Catalyst 4K Expansion Chassis: PCI Express 2.0 Chassis with 7 slots for input or output cards</li>
+                            </ul>
+                        </p>
+                        <hr/>
+                        <h5 class="name"></h5>                        
                         <p><strong>Quad HD Decoder Input Card (Optional)</strong></p>
                         <p>
-                            Up to 112 inputs in 1 CPU Chassis + 4 Expansion Chassis<br>
-                            Supports real-time decoding of HD or SD streams<br>
-                            Supports most popular IP cameras and encoders
+                            <ul class="feature-list">
+                                <li>Up to 112 inputs in 1 CPU Chassis + 4 Expansion Chassis</li>
+                                <li>Supports real-time decoding of HD or SD streams</li>
+                                <li>Supports most popular IP cameras and encoders</li>
+                            </ul>
                         </p>
+                        <hr/>
+                        <h5 class="name"></h5>                        
                         <p><strong>Dual-Link DVI Input Card without HDCP Support for Local Display Only (Optional)</strong></p>
                         <p>
-                            Inputs: Up to 56 inputs in 1 CPU Chassis + 4 Expansion Chassis<br>
-                            Format: Dual-Link DVI-D up to 2560x1600, Single-Link DVI-D up to 2048x1200<br>
-                            Pixel Rate: Digital: Up to 270 MHz<br>
-                            Pixel Format: 32 bits per pixel<br>
-                            Windows: 4 destination windows per card
+                            <ul class="feature-list">
+                                <li>Inputs: Up to 56 inputs in 1 CPU Chassis + 4 Expansion Chassis</li>
+                                <li>Format: Dual-Link DVI-D up to 2560x1600, Single-Link DVI-D up to 2048x1200</li>
+                                <li>Pixel Rate: Digital: Up to 270 MHz</li>
+                                <li>Pixel Format: 32 bits per pixel</li>
+                                <li>Windows: 4 destination windows per card</li>
+                            </ul>
                         </p>
+                        <hr/>
+                        <h5 class="name"></h5>                        
                         <p><strong>Catalyst 4K Output Graphics Card</strong></p>
                         <p>
-                            Outputs: Up to 12 non-HDCP outputs with Canvas collaborative visualization software in 1<br>
-                            CPU Chassis + 4 Expansion Chassis<br>
-                            Resolution: Digital:  3840 x 2160 pixels per output<br>
-                            Color Depth: 32 bits per pixel<br>
-                            Output Signal: mini DisplayPort
+                            <ul class="feature-list">
+                                <li>Outputs: Up to 12 non-HDCP outputs with Canvas collaborative visualization software in 1</li>
+                                <li>CPU Chassis + 4 Expansion Chassis</li>
+                                <li>Resolution: Digital:  3840 x 2160 pixels per output</li>
+                                <li>Color Depth: 32 bits per pixel</li>
+                                <li>Output Signal: mini DisplayPort</li>
+                            </ul>
                         </p>
+                        <hr/>
+                        <h5 class="name"></h5>                        
                         <p><strong>Catalyst 4K Input Capture Card</strong></p>
                         <p>
-                            Inputs:  Up to 28 non-HDCP inputs with Canvas collaborative visualization software in 1 CPU<br>
-                            Chassis + 4 Expansion Chassis<br>
-                            Resolution: Digital:  3840 x 2160 pixels per output<br>
-                            Color Depth: 32 bits per pixel<br>
-                            Input Signal: DVI-D single-link connector
+                            <ul class="feature-list">
+                                <li>Inputs:  Up to 28 non-HDCP inputs with Canvas collaborative visualization software in 1 CPU</li>
+                                <li>Chassis + 4 Expansion Chassis</li>
+                                <li>Resolution: Digital:  3840 x 2160 pixels per output</li>
+                                <li>Color Depth: 32 bits per pixel</li>
+                                <li>Input Signal: DVI-D single-link connector</li>
+                            </ul>
                         </p>
 
                       </div>
@@ -194,8 +217,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                                 Choose Language
                                                 <ul>
                                                     <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Catalyst-4K-Datasheet-EN.pdf">English</a></li>
-                                                    <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Catalyst-4K-Datasheet-ES.pdf">Español</a></li>
-                                                    <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Catalyst-4K-Datasheet-RU.pdf">русский</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
