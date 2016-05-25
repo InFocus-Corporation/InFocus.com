@@ -105,7 +105,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <div class="image-set cmsedit" style="float: right; padding: 1em;">
                               <img src="/resources/static/images/display-walls/canvas4k.jpg" >
                           </div>
-                        <h5 class="name">SYSTEM CONFIGURATION</h5>
+                        <h5 class="name">System Configuration</h5>
                         <p><strong>Features</strong></p>
                         <p>
                         Form Factor: Mini-ITX desktop<br>
@@ -124,7 +124,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                         <hr>
                     </div>
                     <div class="info cmsedit">
-                        <h5 class="name">SUPPORTED SOURCES</h5>
+                        <h5 class="name">Supported Sources</h5>
                         <p><strong>Accessed Via LAN</strong></p>
                         <p>H.264 Video Streams: Up to 8 simultaneous streams</p>
                         <p>VNC Screen Graphics: Up to 8 simultaneous VNC viewer windows</p>
@@ -133,21 +133,21 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                         <hr>
                     </div>
                     <div class="info cmsedit">
-                        <h5 class="name">GRAPHICS OUTPUTS</h5>
+                        <h5 class="name">Graphics Outputs</h5>
                         <p><strong>Mini DisplayPort Digital Interface</strong></p>
                         <p>Graphics Card: PCI Express 3.0 16-lane graphics card with 2GB GDDR5 GPU memory (72 GB/s)</p>
                         <p>Outputs: 4 Mini DisplayPort connectors supporting DisplayPort version 1.2</p>
                         <p>Resolution: Supports up to four HD displays at 1920x1080 pixels each -OR- one Ultra HD 4K display at 4096x2160 pixels</p>
                         <p>Color Depth: 30-bit, producing more than 1 billion colors</p>
                         <hr>
-                        <h5 class="name">AUDIO</h5>
+                        <h5 class="name">Audio</h5>
                         <p><strong>Front Panel I/O</strong></p>
                         <p>MIC In: 3.5mm connector, supports AC’97 and HD Audio</p>
                         <p>Line Out: 3.5mm connector, supports AC’97 and HD Audio</p>
                         <hr>
                     </div>
                     <div class="info cmsedit">
-                        <h5 class="name">OTHER</h5>
+                        <h5 class="name">Other</h5>
                         <p><strong>Chassis</strong></p>
                         <p>Dimensions: 3.8” H x 8.7” W x 13.4” D (96 mm x 222 mm x 328 mm)</p>
                         <p>Weight: 10 lbs. (4.6 kg.)</p>
