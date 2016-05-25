@@ -99,7 +99,7 @@ $(function() {
         </a>
     </div>
   	<script>
-  	$(".video-box").colorbox({iframe:true, innerWidth:'560px', innerHeight:'395px'});
+  	$(".video-box").colorbox({iframe:true, innerWidth:'92%', innerHeight:'92%'});
   	</script>
     <!-- END FEATURE MODULE JTOUCH -->
     <!-- FEATURE MODULE A -->

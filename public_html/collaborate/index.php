@@ -152,7 +152,7 @@ $(function() {
         </a>
     </div>
   	<script>
-  	$(".video-box1").colorbox({iframe:true, innerWidth:'560px', innerHeight:'395px'});
+  	$(".video-box1").colorbox({iframe:true, innerWidth:'92%', innerHeight:'92%'});
   	</script>
     <!-- END VIDEO MODULE -->
     <!-- FEATURE MODULE A -->
@@ -226,7 +226,7 @@ $(function() {
     </div>
     <!-- END VIDEO MODULE -->
   	<script>
-  	$(".video-box2").colorbox({iframe:true, innerWidth:'560px', innerHeight:'395px'});
+  	$(".video-box2").colorbox({iframe:true, innerWidth:'92%', innerHeight:'92%'});
   	</script>
     <script>
         $(document).foundation();
