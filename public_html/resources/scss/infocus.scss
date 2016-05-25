@@ -1954,6 +1954,11 @@ div.video_module {
         bottom: 36px;
         margin-bottom: 0px;
     }
+    &.callout--picture {
+      .module--tag {
+        margin-bottom: 1.8em;
+      }
+    }
   }
   .link--inverted {
     text-align: center;
@@ -1962,7 +1967,7 @@ div.video_module {
     right: 2.5em;
   }
   h5 {
-    margin-bottom: 1.85em;
+    margin-bottom: 1em;
     text-align: left;
     a {
       color: $infocus_light_blue;
