@@ -1555,12 +1555,12 @@ html{line-height:1.1em;}
 html{line-height:1em;}
 }
 @media only screen and (min-width:640px) and (max-width: 719px) {
-.content { font-size: 60%;width:625px;}
+.content { font-size: 70%; width:625px;}
 html{line-height:1em;}
 }
 @media only screen and (max-width: 639px) {
 .content {
-  font-size: 60%;
+  font-size: 70%;
   width: 100%;
 }
 .alternateDivChildL2 > li > div.image-set {
@@ -1756,6 +1756,8 @@ border-image: url("/resources/images/svg/dotted_circle_line.svg") 10 repeat;
 .tabs > .active ul.C10.alternateDivChildL2 > li {
   border-top: 1px solid #ccc;
   /*margin-bottom: 3.15em;*/
+  clear: both;
+  display: block;
 }
 .tabs > .active ul.C10.alternateDivChildL2 li:first-child {
   border-top: 0px solid #ccc;
@@ -2793,7 +2795,7 @@ padding-left: 20px;
 
 .feature-list.half  ul {
  width:45%;
- font-size: 100%;
+ /*font-size: 100%;*/
 }​
 
 @media only screen and (min-width:590px) and (max-width: 799px) {
@@ -3544,71 +3546,43 @@ table.rwd-table-large > tbody > tr.item{
 
 @media only screen and (max-width: 1135px) and (min-width: 960px) {
 	.tableWrap {
-		margin-top: 80px;
+		margin-top: 0px;
+	}
+	.tableWrap .C3_tag, .tableWrap .C8_tag {
+		width:100%;
 	}
 	.tagBtn {
 		width: 200px;
 	}
 }
 
-@media only screen and (max-width: 959px) and (min-width: 800px){
+@media only screen and (max-width: 959px) {
 	.tableWrap {
-		margin-top: 80px;
+		margin-top: 0px;
 	}
 	.tagBtn {
 		width: 158px;
 	}
-
+	.tableWrap .C3_tag, .tableWrap .C8_tag {
+		width:100%;
+	}
+  .tableWrap .rwd-table-large th {
+    font-size: 90%;
+    padding: .35em;
+  }
+  .tableWrap .rwd-table-large th:nth-child(3), .tableWrap .rwd-table-large td:nth-child(3),
+  .tableWrap .rwd-table-large th:nth-child(4), .tableWrap .rwd-table-large td:nth-child(4) {
+    display: none;
+  }
+  .tableWrap .rwd-table-large td {
+    padding: .20em;
+  }
+  .tableWrap .rwd-table-large td a.table_button, .tableWrap .rwd-table-large td a {
+    min-width: 40px;
+    margin: .25em;
+    font-size: 90%;
+  }
 }
-
-
-@media only screen and (max-width: 719px) and (min-width: 640px){
-	.tableWrap {
-		margin-top: 170px;
-	}
-	.infocusTable {
-		margin-top: 20px;
-	}
-	.C3_tag {
-		display: block;
-		width: 100%;
-		float: none;
-	}
-	.C7_tag {
-		display: block;
-		width: 100%;
-		float: none;
-	}
-	.checkCon {
-		padding: 0px 0px 0px 0px;
-	}
-	.tagsort-tags-container span {
-	    margin: 10px 0px 10px 0px;
-	}
-}
-
-@media only screen and (max-width: 639px) {
-	.infocusTable {
-		margin-top: 20px;
-	}
-	.C3_tag {
-		display: block;
-		width: 100%;
-		float: none;
-	}
-	.C7_tag {
-		display: block;
-		width: 100%;
-		float: none;
-	}
-	.checkCon {
-		padding: 0px 0px 0px 0px;
-	}
-	.tagsort-tags-container span {
-	    margin: 10px 0px 10px 0px;
-	}
-}
-
 
 /* ================================================== */
 
