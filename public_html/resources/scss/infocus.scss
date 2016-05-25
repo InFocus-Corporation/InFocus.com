@@ -1212,7 +1212,6 @@ header + .hero_row > .row {
 .present_page {
     .feature_links {
       @media screen and (min-width: 40em) {
-        padding-bottom: 35px;
         margin-top: 77px;
       }
     }
@@ -1647,6 +1646,9 @@ header + .hero_row > .row {
             @media screen and (min-width: 40em) and (max-width: 45em) {
               font-size: 10px;
             }
+        }
+        .promo_module_link:hover {
+            color: $white;
         }
     }
     .promo_module_c {
