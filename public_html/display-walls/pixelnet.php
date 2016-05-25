@@ -120,15 +120,16 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 </div>
                 <div id="details">
                     <div class="C10 alternateDivChildL2">
-                        <div class="info">
-                            <div class="image-set cmsedit" id="details_photo">
-                                <img src="/resources/static/images/display-walls/Product_PixelNet_AnalogHD.jpg" >
+                        <div class="product_details">
+                            <div class="product_photos">
+                              <img src="/resources/static/images/display-walls/Product_PixelNet_AnalogHD.jpg" style="height: 250px;">
                             </div>
                             <div class="info cmsedit">
-                                <p>PixelNet® makes creating complex topologies of inputs, outputs and switches simple, cost effective, and future proof. Massively scalable, the same component parts can scale from a single input distributed to a single output to hundreds of inputs and outputs. PixelNet® input nodes are small, silent and use very little power. PixelNet® Domain Control software provides an intuitive, object-oriented, drag-and-drop interface to control and manage multiple inputs, outputs and display walls.</p>
+                              <p style="min-height: 250px;">PixelNet® makes creating complex topologies of inputs, outputs and switches simple, cost effective, and future proof. Massively scalable, the same component parts can scale from a single input distributed to a single output to hundreds of inputs and outputs. PixelNet® input nodes are small, silent and use very little power. PixelNet® Domain Control software provides an intuitive, object-oriented, drag-and-drop interface to control and manage multiple inputs, outputs and display walls.</p>
                             </div>
                         </div>
                         <hr>
+                        <div style="clear:both;display: block;"></div>
                         <div class="product_details">
                             <div class="product_photos">
                                 <a href="/resources/static/images/display-walls/PN_DVI_Input_back.jpg" title="PixelNet® DVI input Node Back" class="colorbox" rel="gallery-node-370-dVCuqrD4mKk">
