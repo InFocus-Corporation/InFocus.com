@@ -8,7 +8,6 @@ require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
 mysqli_set_charset($connection, "utf8");
 //$countryList = mysqli_real_escape_string($connection, strtoupper($_POST["countryList"]));
 $countryList = $_POST["countryList"];
-
 $result = mysqli_query($connection,'SELECT * FROM resellers WHERE ' . $countryList . ' AND latitude = "Online" AND products LIKE "%' . $_POST['products'] . '%" ORDER BY ID');
 $currentCountry="";
 while($row = mysqli_fetch_array($result))

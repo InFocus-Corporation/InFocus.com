@@ -1,0 +1,36 @@
+div.info p, .cmsedit p:first-of-type, .cmsedit p:first-of-type a {
+    font-size: 18px;
+}
+h5 { font-weight: normal; margin-bottom: 1em; text-transform: capitalize;}
+.image-set img {
+    float: right;
+}
+#downloads .rounded {
+    margin:auto;
+    max-width:960px;
+}
+#downloads h2 {
+    margin-top:40px;
+    text-align:center;
+}
+#downloads .HeaderRow th:nth-child(1) { width: 45px; }
+#downloads .HeaderRow th:nth-child(3) { width: 160px; }
+#downloads table tbody tr td img {
+    width: 45px;
+}
+#youtube {
+    width: 655px;
+    height: 368px;
+    width: 100%;
+}
+#warp_more {
+    display: none;
+}
+
+.product_details {
+    text-align: left;
+}
+.product_details .product_photos {
+    float: right;
+    margin-left: 20px;
+}

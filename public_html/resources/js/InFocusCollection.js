@@ -276,16 +276,17 @@ function getProductList(where,elemId,insert){
 }
 
 function updateSpecs(modelList, phpFile){
-var n = document.getElementById('modlist').value.indexOf(modelList);
-if(n>0){
-<!--Trans-Marker-->
-// alert("Model already present in the table");
-return;
-}
+  var n = document.getElementById('modlist').value.indexOf(modelList);
 
-document.getElementById('modlist').value = document.getElementById('modlist').value +  modelList;
-modelList = document.getElementById('modlist').value;
-	var tableWidth = 250 + (modelList.split(",").length*215)
+  if(n>0){
+    <!--Trans-Marker-->
+    // alert("Model already present in the table");
+    return;
+  }
+
+  document.getElementById('modlist').value = document.getElementById('modlist').value +  modelList;
+  modelList = document.getElementById('modlist').value;
+  var tableWidth = 250 + (modelList.split(",").length*215);
 	jQuery.post("/resources/php/" + phpFile,
 			{pn: modelList},
 			function(response){
@@ -294,9 +295,9 @@ modelList = document.getElementById('modlist').value;
 }
 
 function removeSpecs(removeModel, phpFile){
-var modelList = document.getElementById('modlist').value;
-modelList = modelList.replace(removeModel,"");
-document.getElementById('modlist').value = modelList;
+  var modelList = document.getElementById('modlist').value;
+  modelList = modelList.replace(removeModel,"");
+  document.getElementById('modlist').value = modelList;
 	var tableWidth = 200 + (modelList.split(",").length*165)
 	jQuery.post("/resources/php/" + phpFile,
 			{pn: modelList},
@@ -306,8 +307,8 @@ document.getElementById('modlist').value = modelList;
 }
 
 $(function() {
-$( "#tabs-min" ).tabs();
-if($(".flexnav").length>0){$(".flexnav").flexNav();}
+  $( "#tabs-min" ).tabs();
+  if($(".flexnav").length>0){$(".flexnav").flexNav();}
 });
 
 
@@ -380,51 +381,72 @@ return { input: input, inputSelector: inputSelector, textarea: valueSelector, se
 };
 var requiredFields = new Array(); 
 var requiredFieldGroups = new Array(); 
-addRequiredField = function (id) { requiredFields.push (id); };
+addRequiredField = function (id) {
+  requiredFields.push (id);
+  var $label = $('#'+id).closest('li').find('label');
+  if(!$label.find('span.required').length) {
+    $label.append('<span class="required">*</span>');
+  }
+};
 addRequiredFieldGroup = function (id, count) { requiredFieldGroups.push ([id, count]); };
 missing = function (fieldName) { 
-var f = document.getElementById(fieldName); 
-var v = formElementSerializers()[f.tagName.toLowerCase()](f);
-if (v) { v = v.replace (/^\s*(.*)/, "$1"); v = v.replace (/(.*?)\s*$/, "$1"); } if (!v) { f.style.backgroundColor = '#FFFFCC'; return 1; } else { f.style.backgroundColor = ''; return 0; } };
+  var f = document.getElementById(fieldName); 
+  var v = formElementSerializers()[f.tagName.toLowerCase()](f);
+  if (v) { v = v.replace (/^\s*(.*)/, "$1"); v = v.replace (/(.*?)\s*$/, "$1"); }
+  if (!v) { $(f).addClass('error'); return 1; } else { $(f).addClass('valid'); return 0; }
+};
 missingGroup = function (fieldName, count) { 
-var result = 1; 
-var color = '#FFFFCC'; 
-for (var i = 0; i < count; i++) { 
-if (document.getElementById(fieldName+'-'+i).checked) { 
-color = ''; result = 0; 
-break; } } 
-for (var i = 0; i < count; i++) 
-	document.getElementById(fieldName+'-'+i).parentNode.style.backgroundColor = color; return result; 
+  var result = 1; 
+  var color = '#FFFFCC'; 
+  for (var i = 0; i < count; i++) { 
+    if (document.getElementById(fieldName+'-'+i).checked) { 
+      color = ''; result = 0; 
+      break;
+    }
+  }
+  for (var i = 0; i < count; i++) 
+    document.getElementById(fieldName+'-'+i).parentNode.style.backgroundColor = color; return result; 
 };
 var validatedFields = new Array(); 
 addFieldToValidate = function (id, validationType, arg1, arg2) { 
-validatedFields.push ([ id, validationType, arg1, arg2 ]); 
+  validatedFields.push ([ id, validationType, arg1, arg2 ]); 
 };
 validateField = function (id, fieldValidationValue, arg1, arg2) { 
-var field = document.getElementById(id); 
-var name = field.name; 
-var value = formElementSerializers()[field.tagName.toLowerCase()](field); 
-for (var i = 0; i < validators.length; i++) { 
-var validationDisplay = validators[i][3]; 
-var validationValue = validators[i][1]; 
-var validationFunction	= validators[i][2]; 
-if (validationValue === fieldValidationValue) { 
-if (!validationFunction (value,arg1,arg2,id)) {	
-field.style.backgroundColor = '#FFFFCC'; 
-alert (validationDisplay); 
-return false; } else { field.style.backgroundColor = ''; } 
-break; } } for (var i = 0; i < implicitValidators.length; i++) { 
-var validationDisplay = implicitValidators[i][0]; 
-var validationValue = implicitValidators[i][1];
- var validationFunction	= implicitValidators[i][2]; 
- if (validationValue === fieldValidationValue) { 
- if (!validationFunction (value,arg1,arg2,id)) { 
- field.style.backgroundColor = '#FFFFCC'; alert (validationDisplay); 
- return false; 
- } else { field.style.backgroundColor = ''; } 
- break; 
- } } 
- return true; };
+  var field = document.getElementById(id); 
+  var name = field.name; 
+  var value = formElementSerializers()[field.tagName.toLowerCase()](field); 
+  for (var i = 0; i < validators.length; i++) { 
+    var validationDisplay = validators[i][3]; 
+    var validationValue = validators[i][1]; 
+    var validationFunction	= validators[i][2]; 
+    if (validationValue === fieldValidationValue) { 
+      if (!validationFunction (value,arg1,arg2,id)) {	
+        $(field).addClass('error'); 
+        alert (validationDisplay); 
+        return false;
+      } else {
+        $(field).addClass('valid');
+      } 
+      break;
+    }
+  }
+  for (var i = 0; i < implicitValidators.length; i++) { 
+    var validationDisplay = implicitValidators[i][0]; 
+    var validationValue = implicitValidators[i][1];
+    var validationFunction	= implicitValidators[i][2]; 
+    if (validationValue === fieldValidationValue) { 
+      if (!validationFunction (value,arg1,arg2,id)) { 
+        $(field).addClass('error');
+        alert(validationDisplay); 
+        return false; 
+      } else {
+        $(field).addClass('valid');
+      } 
+      break; 
+    }
+  } 
+  return true;
+};
 
 var r = ''; 
 formElementById = function(form, id) { for (var i = 0; i < form.length; ++i) if (form[i].id === id) return form[i]; 

@@ -31,13 +31,30 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
- <script> //run all scripts and functions from here
- 
+<style>
+body {
+	background: #f2f2f0;
+	padding-top: 3rem;
+}
+.navbar-default {
+	display: none;
+    background: transparent;
+    border: none;
+}
+.container-fluid {
+	clear: both;
+}
+.rightSpecs {
+	padding-right: 40px;
+}
+</style>
+
+<script> //run all scripts and functions from here
  if(self==top){window.location = "/#projectioncalculator";}
 $(document).ready(function() {
     parent.$.colorbox.resize({
         innerWidth:$('body').width()+20,
-        innerHeight:$('body').height()+60
+        innerHeight:$('body').height()
     });	});
 
 /*if(self==top){window.location = "/#projectioncalculator";}
@@ -3649,8 +3666,8 @@ getMinMaxDist();
 
 
     <!-- Begin page content -->
-    <div class="container">
-        <div class="row">
+    <div class="container-fluid">
+        <div class="row-fluid">
             <div class="col-md-8">
                 
                 <ul class="projDropList">
@@ -4171,12 +4188,6 @@ getMinMaxDist();
             </div>
         </div>
     </div>
-
-    <footer class="footer">
-      <div class="container">
-      </div>
-    </footer>
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

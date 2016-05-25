@@ -1,179 +1,103 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/infocusscripts.php");
 require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
-
-echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '/displays/"/>' . PHP_EOL;
-
+echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '"/>' . PHP_EOL;
 ?>
 
-<?php echo $pageText['meta'];?>
+<title>InFocus | Touchscreens</title>
+<meta name="description" content="InFocus large collaboration touchscreen displays break down visual communication barrier to transform the conference room into a visual collaboration workspace with cloud-based video conferencing." />
+<meta name="keywords" content="infocus,mondopad,projector,projection,DLP,LCD,LCD display,digital display,visual communications,projector accessories,infocus company,digital technology,projection equipment,monopad, communication, touchscreen" />
 
-<script type="text/javascript">
+<link rel="stylesheet" href="/resources/css/vendor/foundation.min.css" />
+<link rel="stylesheet" href="/resources/css/infocus.min.css" />
 
-  
-$(document).ready(function() {
-  var hash = window.location.hash;
-  hash = hash.substring(1);
-  if(hash.length>0){
-
-  showCategory(hash);
-  
-  }
-});
-
-
-</script>
-<style>
-.model{
-height:350px;
-}
-a:hover{
-cursor:pointer;
-}
-	</style>
-	<base target="_parent" />
-	</head>
-	<body>
-		<?php include($homedir . "/resources/html/mainmenu.html"); ?>
-
-		<div class="content">
-<div id="category" class="C9">
-	<h2 id="cattitle" class="title" style="text-transform:capitalize;">
-	
-<?php echo $translate['Touchscreen Solutions'];?>
-
-</h2>
-
-		<div class="C10 Col_child C5_child" >
-				<div class="image-set" style="float:right;">
-						<image  src="<?php echo imagethumb('cat-hero-displays','520');?>" />
-				</div>
-				<div class="info">
-					<h5 class="tagline"><?php echo $pageText['tagline'];?>
-</h5><div><?php echo $pageText['description'];?>
-<br>
-<br><a href="/resources/documents/InFocus-Touchscreen-Solutions-Datasheet-<?php echo strtoupper($lang);?>.pdf" class="btn"><?php echo $translate['Download Touchscreen Brochure'];?></a>
-					</div></div></div>
-	<a id="categoriesstart"></a>
-	<div id="details" class="C10 tabs-wrapper" style="min-height:600px;overflow:hidden;">
-<h6 class="sub-title"><?php echo $pageText['choose'];?></h6>
-	<div class="tab-shadow"></div>
-<style>
-
-.displaylist {
-margin:0 auto;
-}
-
-.displaylist img {
-max-width:100%;
-
-}
-
-.displaylist > li {
-padding-left:2%;
-width:17%;
-float:left;
-padding-bottom: 60px;
-}
-
-.image-set{
-margin:auto;
-}
-.categoryThumb {
-margin:auto;
-}
-
-.image-set img{
-margin:auto;
-}
-</style>
-
-<?PHP
-
-ini_set('default_charset', 'utf-8');
-
-mysqli_set_charset($connection, "utf8");
-
-$category = "display";
-
-$sortorder[0] = "MONDOPAD";
-$sortorder[1] = "BIGTOUCH";
-$sortorder[2] = "JTOUCH";
-
-$arrayKey = array();
-
-$result = mysqli_query($connection,'SELECT producttext.partnumber, listtitle, description FROM producttext WHERE `active` != 0 and `active` IS NOT NULL and category LIKE "%' . $category . '%" AND lang="' . $lang . '"');
-  
-echo '<div >
-<ul class="displaylist">';
-
-while($row = mysqli_fetch_array($result))
-{
- $subject = $row[0];
-         $subject = str_replace('-Series','',$subject);
-   
- $sortableArray[$subject]= array($row[0],$row[1],$row[2],$subject);
- array_push($arrayKey,$subject);
-
-}
-
-usort($arrayKey,"listcmp");
-
-foreach($arrayKey as $row){
- echo '
-    <li class="model">
-     <div class="meta">
- <a href="' . $sortableArray[$row][0] . '"><div class="image-set categoryThumb"><img src="' . imagethumb($sortableArray[$row][3], '500') . '" /></div>
- <span  class="title">' . $sortableArray[$row][1] . '</span></a>
- <div class="description">' . $sortableArray[$row][2] . '
- </div>
-     </div>
-    </li>';
-}
-
-echo '  </ul></div>';
-
-
-
-
-
-
-function listcmp($a, $b) 
-{ 
-  global $sortorder; 
-
-  foreach($sortorder as $key => $value) 
-    { 
-      if($a==$value) 
-        { 
-          return 0; 
-          break; 
-        } 
-
-      if($b==$value) 
-        { 
-          return 1; 
-          break; 
-        } 
-    } 
-} 
-
+<?php
+if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $homedir.'/resources/overviews/', 'admin,salespublisher,saleseditor,marketingpublisher,marketingeditor,editor', ".src", "overview", "true", "SavePage","overview");}
 
 ?>
-  	</div>
-		
-		
-	</div>
-</div>
-
-<style>
-</style>
-				<footer id="site-info" >
-				<?php include($homedir . "/resources/html/footer.html"); ?>
-				</footer>
-			</section>
+</head>
+<body class="" style="">
+	<?php include($homedir . "/resources/html/mainmenu.html"); ?>
+	<div class="hero_row transparent-border-right-40-orange solid-border-left-24-blue hero-row--touchscreens">
+		<div class="row hero_inner">
+			<div class="hero_image"><img src="/resources/static/images/touchscreens/InFocus-Mondopad-INF5720-Lifestyle-Whiteboard-Architect-300dpi-CMYK.jpg" /></div>
+			<div class="small-6 medium-5 columns lead_text">
+				<h2 class="lead_text--secondary_headline">
+					<?php echo file_get_contents($_SERVER['DOCUMENT_ROOT'].'/resources/static/images/svg/icon-touchscreens.svg'); ?>
+					Touchscreens
+				</h2>
+				<p class="lead_text--paragraph">Boost collaboration and engage your audience in the meeting room, the classroom, and beyond with a touchscreen display perfectly suited to your needs.</p>
+			</div>
+			<div class="small-3 color_stripe_column">
+				<div class="dark_blue color_stripe"></div>
+				<div class="white color_stripe"></div>
+			</div>
 		</div>
 
+	</div>
+	<div class="row product_module">
+		<div class="small-7 medium-8 columns color_stripe_column">
+			<div class="white color_stripe"></div>
+			<a href="/displays/MONDOPAD-SERIES"><img src="/resources/static/images/touchscreens/InFocus-Lifestyle-Mondopad-HallwayMeeting-Arch-Annotation-300dpi-CMYK.jpg" alt=""></a>
+		</div>
+		<div class="small-5 medium-4 columns product_text">
+			<h3 class="lead_text--secondary_headline"><a href="/displays/MONDOPAD-SERIES">Mondopad</a></h3>
+			<p class="lead_text--paragraph">Work better together with Mondopad, the smart and easy touchscreen system for video conferencing, whiteboarding, data sharing and more.</p>
+			<a href="/displays/MONDOPAD-SERIES" class="button button--primary">learn more</a>
+		</div>
+	</div>
 
+	<div class="row product_module">
+		<div class="small-7 medium-8 columns color_stripe_column">
+			<div class="white color_stripe"></div>
+			<a href="/displays/JTOUCH-Series"><img src="../resources/static/images/touchscreens/InFocus-Lifestyle-JTouch-K12-MuscleDiagram-300dpi-CMYK.jpg" alt=""></a>
+		</div>
+		<div class="small-5 medium-4 columns product_text">
+			<h3 class="lead_text--secondary_headline"><a href="/displays/JTOUCH-Series">JTouch</a></h3>
+			<p class="lead_text--paragraph">Share your content on a bright, colorful touch experience that engages audiences in the classroom or meeting room with a JTouch flat panel touchscreen display.</p>
+			<a href="/displays/JTOUCH-Series" class="button button--primary">learn more</a>
+		</div>
+	</div>
 
-</body></html>
+	<div class="row product_module">
+		<div class="small-7 medium-8 columns color_stripe_column">
+			<div class="white color_stripe"></div>
+			<a href="/displays/DigiEasel-Series"><img src="/resources/static/images/touchscreens/InFocus-DigiEasel-Business-Presentation.jpg" alt=""></a>
+		</div>
+		<div class="small-5 medium-4 columns product_text">
+			<h3 class="lead_text--secondary_headline"><a href="/displays/DigiEasel-Series">DigiEasel</a></h3>
+			<p class="lead_text--paragraph">Draw, write, and capture notes or share your device’s screen on a professional interactive touch display that's affordable, fun to use and impressive to visitors.</p>
+			<a href="/displays/DigiEasel-Series" class="button button--primary">learn more</a>
+		</div>
+	</div>
+	<div class="row product_module">
+		<div class="small-7 medium-8 columns color_stripe_column">
+			<div class="white color_stripe"></div>
+			<a href="/displays/BIGTOUCH-Series"><img src="/resources/static/images/touchscreens/InFocus-Lifestyle-BigTouch-INF8012-Win10-2-300dpi-CMYK.jpg" alt=""></a>
+		</div>
+		<div class="small-5 medium-4 columns product_text">
+			<h3 class="lead_text--secondary_headline"><a href="/displays/BIGTOUCH-Series">BigTouch</a></h3>
+			<p class="lead_text--paragraph">Utilize your software to customize this giant touch display with built-in PC for the specific needs of your shared work space.</p>
+			<a href="/displays/BIGTOUCH-Series" class="button button--primary">learn more</a>
+		</div>
+	</div>
+	<div class="row product_module">
+		<div class="small-7 medium-8 columns color_stripe_column">
+			<div class="white color_stripe"></div>
+			<a href="/displays/Q-Tablet-Series"><img src="/resources/static/images/touchscreens/InFocus-Lifestyle-QTablet-Construction-300dpi-CMYK.jpg" alt=""></a>
+		</div>
+		<div class="small-5 medium-4 columns product_text">
+			<h3 class="lead_text--secondary_headline"><a href="/displays/Q-Tablet-Series">QTablet</a></h3>
+			<p class="lead_text--paragraph">Be productive at work or school and entertained at home with a powerful, portable and feature-rich QTablet from InFocus.</p>
+			<a href="/displays/Q-Tablet-Series" class="button button--primary">learn more</a>
+		</div>
+	</div>
+
+	<script>
+	    $(document).foundation();
+	</script>
+	<footer id="site-info" >
+	<?php include($homedir . "/resources/html/footer.html"); ?>
+	</footer>
+</body>
+</html>
