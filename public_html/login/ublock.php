@@ -3,8 +3,9 @@
 	# require() it from within another page which you want to protect.
 	# See the ubtest.php file for an example.
 
+# All commented out. We'll use an htaccess file for this instead, in production.
 
-
+/*
 	$DOCROOT = $DOCUMENT_ROOT ? $DOCUMENT_ROOT : $_SERVER['DOCUMENT_ROOT'];
 	#
 	# On Windows servers, you may need to set $DOCROOT manually.  Check the
@@ -192,3 +193,4 @@
 		exit;
 	}
 ?>
+*/
