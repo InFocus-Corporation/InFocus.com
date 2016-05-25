@@ -50,7 +50,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 
             <div class="C10 Col_child C6x4_child">
                 <div class="image-set" style="float:right;">
-                    <img src="/resources/static/images/display-walls/video-wall.jpg">
+                    <img src="/resources/static/images/display-walls/InFocus-Jupiter-Catalyst-4K-Video-Wall-Room.jpg">
                 </div>
                 <div class="info" style="float:left;">
                     <strong class="tagline mysqledit" id="header">4K Display Wall Processor with Canvas 5.0</strong>
@@ -96,7 +96,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <strong class="tagline"></strong>
                           <p>Catalyst 4K offers CPU-based decoding on both H.264 and H.265 HD and 4K sources.</p>
                           <p>Catalyst 4K supports decoding up to:</p>
-                          <ul class="feature-list" style="padding-bottom:50px;">
+                          <ul class="feature-list">
                             <li>Eight HD streams or two 4K streams from H.264 sources</li>
                             <li>Eight HD streams with low bitrate from H.265 sources</li>
                             <li>8-bit 4K streams from H.265 sources</li>
@@ -117,75 +117,63 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <div id="specifications">
                     <div class="C10 alternateDivChildL2">
                       <div class="info cmsedit">
-                          <div class="image-set cmsedit" style="float: right; max-width: 400px;">
+                          <div class="image-set cmsedit" style="float: right; margin-right: 0; max-width: 260px;">
                               <img src="/resources/static/images/display-walls/InFocus-Jupiter-Catalyst-4K-Back.jpg" >
                           </div>
-                        <h5 class="name"></h5>
-                        <p><strong>System Architecture Chassis</strong></p>
+                        
+                        <strong class="tagline mysqledit">System Architecture Chassis</strong>
                         <p>
-                            <ul class="feature-list">
-                                <li>PCI Express 3.0 Chassis with 6 high speed slots for input, output, or auxiliary cards</li>
-                                <li>CPU Board Processor: Intel E5 Six Core Xeon CPU</li>
-                                <li>CPU Board System Memory: 32GB RAM per CPU standard, up to 128GB RAM optional</li>
-                                <li>Drives: 512GB solid state drives, optional 2nd and 3rd drives, RAID1 array with hot spare</li>
-                                <li>Optical Storage: DVD-RW/CD-RW</li>
-                                <li>Network Interface (Ethernet): Standard dual 100/1000 Mbps RJ45 ports</li>
-                                <li>Input Devices (USB): 104-key keyboard and mouse</li>
-                            </ul>
+                            PCI Express 3.0 Chassis with 6 high speed slots for input, output, or auxiliary cards<br>
+                            <strong>CPU Board Processor:</strong> Intel E5 Six Core Xeon CPU<br>
+                            <strong>CPU Board System Memory:</strong> 32GB RAM per CPU standard, up to 128GB RAM optional<br>
+                            <strong>Drives:</strong> 512GB solid state drives, optional 2nd and 3rd drives, RAID1 array with hot spare<br>
+                            <strong>Optical Storage:</strong> DVD-RW/CD-RW<br>
+                            <strong>Network Interface (Ethernet):</strong> Standard dual 100/1000 Mbps RJ45 ports<br>
+                            <strong>Input Devices (USB):</strong> 104-key keyboard and mouse
                         </p>
-                        <hr/>
-                        <h5 class="name"></h5>
-                        <p><strong>Expansion Chassis (Optional)</strong></p>
+                        <br>
+
+                        <strong class="tagline mysqledit">Expansion Chassis (Optional)</strong>
                         <p>
-                            <ul class="feature-list">
-                                <li>Catalyst 4K Expansion Chassis: PCI Express 2.0 Chassis with 7 slots for input or output cards</li>
-                            </ul>
+                            Catalyst 4K Expansion Chassis: PCI Express 2.0 Chassis with 7 slots for input or output cards
                         </p>
-                        <hr/>
-                        <h5 class="name"></h5>                        
-                        <p><strong>Quad HD Decoder Input Card (Optional)</strong></p>
+                        <br>
+                    
+                        <strong class="tagline mysqledit">Quad HD Decoder Input Card (Optional)</strong>
                         <p>
-                            <ul class="feature-list">
-                                <li>Up to 112 inputs in 1 CPU Chassis + 4 Expansion Chassis</li>
-                                <li>Supports real-time decoding of HD or SD streams</li>
-                                <li>Supports most popular IP cameras and encoders</li>
-                            </ul>
+                            Up to 112 inputs in 1 CPU Chassis + 4 Expansion Chassis<br>
+                            Supports real-time decoding of HD or SD streams<br>
+                            Supports most popular IP cameras and encoders
                         </p>
-                        <hr/>
-                        <h5 class="name"></h5>                        
-                        <p><strong>Dual-Link DVI Input Card without HDCP Support for Local Display Only (Optional)</strong></p>
+                        <br>
+
+                        <strong class="tagline mysqledit">Dual-Link DVI Input Card without HDCP Support for Local Display Only (Optional)</strong>
                         <p>
-                            <ul class="feature-list">
-                                <li>Inputs: Up to 56 inputs in 1 CPU Chassis + 4 Expansion Chassis</li>
-                                <li>Format: Dual-Link DVI-D up to 2560x1600, Single-Link DVI-D up to 2048x1200</li>
-                                <li>Pixel Rate: Digital: Up to 270 MHz</li>
-                                <li>Pixel Format: 32 bits per pixel</li>
-                                <li>Windows: 4 destination windows per card</li>
-                            </ul>
+                            <strong>Inputs:</strong> Up to 56 inputs in 1 CPU Chassis + 4 Expansion Chassis<br>
+                            <strong>Format:</strong> Dual-Link DVI-D up to 2560x1600, Single-Link DVI-D up to 2048x1200<br>
+                            <strong>Pixel Rate:</strong> Digital: Up to 270 MHz<br>
+                            <strong>Pixel Format:</strong> 32 bits per pixel<br>
+                            <strong>Windows:</strong> 4 destination windows per card
                         </p>
-                        <hr/>
-                        <h5 class="name"></h5>                        
-                        <p><strong>Catalyst 4K Output Graphics Card</strong></p>
+                        <br>
+
+                        <strong class="tagline mysqledit">Catalyst 4K Output Graphics Card</strong>
                         <p>
-                            <ul class="feature-list">
-                                <li>Outputs: Up to 12 non-HDCP outputs with Canvas collaborative visualization software in 1</li>
-                                <li>CPU Chassis + 4 Expansion Chassis</li>
-                                <li>Resolution: Digital:  3840 x 2160 pixels per output</li>
-                                <li>Color Depth: 32 bits per pixel</li>
-                                <li>Output Signal: mini DisplayPort</li>
-                            </ul>
+                            CPU Chassis + 4 Expansion Chassis<br>
+                            <strong>Outputs:</strong> Up to 12 non-HDCP outputs with Canvas collaborative visualization software in 1<br>
+                            <strong>Resolution: Digital:</strong>  3840 x 2160 pixels per output<br>
+                            <strong>Color Depth:</strong> 32 bits per pixel<br>
+                            <strong>Output Signal:</strong> mini DisplayPort
                         </p>
-                        <hr/>
-                        <h5 class="name"></h5>                        
-                        <p><strong>Catalyst 4K Input Capture Card</strong></p>
+                        <br>
+
+                        <strong class="tagline mysqledit">Catalyst 4K Input Capture Card</strong>
                         <p>
-                            <ul class="feature-list">
-                                <li>Inputs:  Up to 28 non-HDCP inputs with Canvas collaborative visualization software in 1 CPU</li>
-                                <li>Chassis + 4 Expansion Chassis</li>
-                                <li>Resolution: Digital:  3840 x 2160 pixels per output</li>
-                                <li>Color Depth: 32 bits per pixel</li>
-                                <li>Input Signal: DVI-D single-link connector</li>
-                            </ul>
+                            Chassis + 4 Expansion Chassis<br>
+                            <strong>Inputs:</strong>  Up to 28 non-HDCP inputs with Canvas collaborative visualization software in 1 CPU<br>
+                            <strong>Resolution:</strong> Digital:  3840 x 2160 pixels per output<br>
+                            <strong>Color Depth:</strong> 32 bits per pixel<br>
+                            <strong>Input Signal:</strong> DVI-D single-link connector
                         </p>
 
                       </div>

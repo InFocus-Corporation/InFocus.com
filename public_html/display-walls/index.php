@@ -86,6 +86,18 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
+			<a href="/display-walls/catalyst-4k"><img src="/resources/static/images/display-walls/InFocus-Jupiter-Catalyst-4K-Video-Wall.jpg" alt=""></a>
+		</div>
+		<div class="small-5 medium-4 columns product_text">
+			<h3 class="lead_text--secondary_headline"><a href="/display-walls/catalyst-4k">Jupiter Catalyst 4K</a></h3>
+			<p class="lead_text--paragraph">Create the world's highest resolution video wall with 4K resolution on every display with the most powerful display wall processor in its class.</p>
+			<a href="/display-walls/catalyst-4k" class="button button--primary">learn more</a>
+		</div>
+	</div>
+
+	<div class="row product_module">
+		<div class="small-7 medium-8 columns color_stripe_column">
+			<div class="white color_stripe"></div>
 			<a href="/display-walls/fusion-catalyst"><img src="/resources/static/images/display-walls/BoM_Jupiter_People_07.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
