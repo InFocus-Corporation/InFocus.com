@@ -91,12 +91,12 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <li>Juxtapose sources in order to get full 360-degree view of ops</li>
                           <li>Save and recall layouts appropriate for specific situations, users, or time of day</li>
                         </ul>
-                        <p><strong>Cost effective and efficient native CPU based decoding with the Catalyst 4K display wall processor.</strong></p>
+                        <p><strong>Cost effective and efficient native CPU based decoding with the <a href="/display-walls/catalyst-4k">Catalyst 4K</a> display wall processor.</strong></p>
                         <ul class="feature-list">
                           <li>For H.264, simultaneously decode 8 HD streams or 2 UHD streams</li>
                           <li>For H.265, simultaneously decode 8 HD streams or 2 UHD streams</li>
                         </ul>
-                        <p><strong>Canvas 5.0 now ships standard with Catalyst 4K, bringing 4K and 1080p HD sources together on one video wall.</strong></p>
+                        <p><strong>Canvas 5.0 now ships standard with <a href="/display-walls/catalyst-4k">Catalyst 4K</a>, bringing 4K and 1080p HD sources together on one video wall.</strong></p>
                         <ul class="feature-list">
                           <li>Available as an upgrade to earlier Fusion Catalyst 1000, 4000, 8000, and 4500 systems</li>
                           <li>Canvas 5.0 replaces ControlPoint and previous versions of Canvas</li>
@@ -220,7 +220,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                         <p>
                           <strong>OS:</strong> iOS 6.1 or later<br>
                           <strong>Devices:</strong><br>
-                          iPhone 3GS, 4, 4S, 5, or later<br>
+                          iPhone 4, 4S, 5, or later<br>
                           iPad 2nd Gen, 3rd Gen, 4th Gen, or later<br>
                           iPad Mini 1st Gen or later
                         </p>
