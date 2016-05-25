@@ -1,4 +1,8 @@
 <?PHP
+// TODO: Update press release time
+define('PRESS_RELEASE_2016JUNE2', $_REQUEST['june2'] || (strtotime('2016-06-02 05:30:00') < time()));
+
+
 if(strpos(dirname(__FILE__),"dev")>0){
 
 }

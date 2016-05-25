@@ -511,10 +511,12 @@ header + .hero_row > .row {
         content: "";
         border: 2px solid white;
         display: block;
+        margin-bottom: 5px;
     }
     .module--tag span{
+        font-weight: normal;
         color: white;
-        font-family: 'GoodPro-WideBook';
+        font-family: 'GoodPro-WideMedium';
         font-size: 12px;
         letter-spacing: .2em;
         @media screen and (min-width: 30em) {
