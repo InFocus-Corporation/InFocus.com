@@ -2494,6 +2494,18 @@ margin-left:15px;
 	cursor: pointer;
 	z-index:99;
 }
+#specFrame table thead tr th:not(:first-child):before,
+#specFrame table thead tr th:not(:first-child):after {
+       cursor: pointer;
+       content: ' ';
+       position: absolute;
+       top: 24px;
+       right: 20px;
+       display: block;
+       width: 20px;
+       height: 0px;
+       border-top: 2px solid #fff;
+}
 #specFrame table thead tr th:not(:first-child):before {
 	transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);

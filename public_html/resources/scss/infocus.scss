@@ -780,16 +780,20 @@ header + .hero_row > .row {
           letter-spacing: .2rem;
         }
     }
+    a img {
+      border-radius: 3px;
+    }
 }
 
 .feature_module_a {
-  margin-top: 5%;
-  margin-bottom: 4%;
+    margin-top: 5%;
+    margin-bottom: 4%;
     position: relative;
     height: 0;
     padding-bottom: 60%;
     background: url('../static/images/present/present-module_a.jpg') right top no-repeat;
     background-size: contain;
+    border-radius: 3px;
     @media screen and (min-width: 64em) {
       margin-top: 6em;
       margin-bottom: 4em;
@@ -811,6 +815,8 @@ header + .hero_row > .row {
         padding-right: 20px;
         bottom: 0;
         top: 0;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
         @include background-opacity($infocus_green);
         @media screen and (min-width: 30em) {
           padding: 30px;
@@ -844,6 +850,8 @@ header + .hero_row > .row {
     .color_stripe_column {
       min-height: 0;
       height: 100%;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
     }
     .white.color_stripe {
         width: 7%;
@@ -863,6 +871,8 @@ header + .hero_row > .row {
         margin-right: 0;
         width: 25px;
         height: 100%;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
         @media screen and (min-width: 40em) {
           width: 35px;
         }
@@ -1054,6 +1064,7 @@ header + .hero_row > .row {
         background: url('../static/images/present/present-module_b.jpg');
         background-size: cover;
         margin-bottom: 0;
+        border-radius: 3px;
         @media screen and (min-width: 64em) {
           height: 600px;
         }
@@ -1089,6 +1100,7 @@ header + .hero_row > .row {
         min-height: 0;
         margin-top: -90px;
         padding: 10px;
+        border-radius: 3px;
         @include background-opacity($infocus_blue);
         clear: both;
         text-align: center;
@@ -1116,14 +1128,14 @@ header + .hero_row > .row {
           margin-top: -105px
         }
         @media screen and (min-width: 64em) {
-          margin: -245px auto 0;
+          margin: -255px auto 0;
         }
     }
     &.feature_module_b--teach .feature_text {
       @include background-opacity($dark_gray);
       @media screen and (min-width: 64em) {
         padding-top: 30px;
-        margin-top: -287px;
+        margin-top: -293px;
       }
     }
     &.feature_module_b--visualize .feature_text {
@@ -1601,7 +1613,8 @@ header + .hero_row > .row {
         height: 65px;
         text-align: center;
         box-sizing: border-box;
-
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
         div {
           display: inline-block;
           width: 100%;
@@ -1653,6 +1666,8 @@ header + .hero_row > .row {
             height: 300px;
             background: url('../static/images/present/present-promo_module_c.jpg') right;
             background-size: cover;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
             @media screen and (min-width: 26em) {
               height: 387px;
             }
@@ -1725,6 +1740,8 @@ header + .hero_row > .row {
             height: 300px;
             background: url('../static/images/teach/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg');
             background-size: cover;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
             @media screen and (min-width: 26em) {
               height: 387px;
             }
