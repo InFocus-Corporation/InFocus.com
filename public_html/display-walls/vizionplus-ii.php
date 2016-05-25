@@ -34,11 +34,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <a href="/">Home</a> &gt;
                     <a href="/display-walls/">Display Walls</a> &gt;
-                    <a href="/display-walls/vizionplus-ii">VizionPlus II</a>
+                    <a href="/display-walls/vizionplus-ii">Jupiter VizionPlus II</a>
                 </ol>
             </div>
-            <div class="productheader C10 Col_child C4x6_child">
-                <div><h1 class="mysqledit h2" id="pagetitle">VizionPlus II</h1></div>
+            <div class="productheader C10 Col_child C6x4_child">
+                <div><h1 class="mysqledit h2" id="pagetitle">Jupiter VizionPlus II</h1></div>
                 <div>
                     <ul class="action-links Col_child">
                         <li></li>

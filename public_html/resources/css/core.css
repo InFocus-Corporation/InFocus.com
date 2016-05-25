@@ -718,6 +718,9 @@ header#masthead.blue ul.menu.small > li .search {
 		height: auto !important;
 		margin: 1em 10% 1em 15%;
 	}
+	header#masthead ul.menu > li > .submenu.products h3 {
+		font-size: 1.7em;
+	}
 	header#masthead ul.menu > li > .submenu.products h3 a {
 		text-align: left;
 	}
@@ -814,6 +817,9 @@ header#masthead.blue ul.menu.small > li .search {
 	header#masthead .products img {
 		width: 32%;
 		margin: 1em 9%;
+	}
+	header#masthead ul.menu > li > .submenu.products h3 {
+		font-size: 1.2em;
 	}
 	header#masthead ul.menu > li > .submenu.products a:not(:first-child) {
 		font-size: 1rem;
@@ -3567,20 +3573,20 @@ table.rwd-table-large > tbody > tr.item{
 		width:100%;
 	}
   .tableWrap .rwd-table-large th {
-    font-size: 90%;
+    font-size: 95%;
     padding: .35em;
-  }
-  .tableWrap .rwd-table-large th:nth-child(3), .tableWrap .rwd-table-large td:nth-child(3),
-  .tableWrap .rwd-table-large th:nth-child(4), .tableWrap .rwd-table-large td:nth-child(4) {
-    display: none;
   }
   .tableWrap .rwd-table-large td {
     padding: .20em;
+    font-size: 85%;
   }
   .tableWrap .rwd-table-large td a.table_button, .tableWrap .rwd-table-large td a {
     min-width: 40px;
     margin: .25em;
     font-size: 90%;
+  }
+  .infocusTable td[data-label='Price US'] {
+    min-width: none;
   }
 }
 
