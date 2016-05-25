@@ -4,8 +4,8 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '"/>' . PHP_EOL;
 ?>
 
-<title>InFocus | Collaboration That Works</title>
-<meta name="description" content="Discover advanced projection equipment offered by InFocus. Global leader in LCD projectors and DLP projection, Mondopad products and projector accessories." />
+<title>InFocus | Touchscreens</title>
+<meta name="description" content="InFocus large collaboration touchscreen displays break down visual communication barrier to transform the conference room into a visual collaboration workspace with cloud-based video conferencing." />
 <meta name="keywords" content="infocus,mondopad,projector,projection,DLP,LCD,LCD display,digital display,visual communications,projector accessories,infocus company,digital technology,projection equipment,monopad, communication, touchscreen" />
 
 <link rel="stylesheet" href="/resources/css/vendor/foundation.min.css" />
@@ -38,10 +38,10 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/touchscreens/InFocus-Lifestyle-Mondopad-DualScreen-LightOffice-300dpi-CMYK.jpg" alt="">
+			<a href="/displays/MONDOPAD-SERIES"><img src="/resources/static/images/touchscreens/InFocus-Lifestyle-Mondopad-HallwayMeeting-Arch-Annotation-300dpi-CMYK.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline">Mondopad</h3>
+			<h3 class="lead_text--secondary_headline"><a href="/displays/MONDOPAD-SERIES">Mondopad</a></h3>
 			<p class="lead_text--paragraph">Work better together with Mondopad, the smart and easy touchscreen system for video conferencing, whiteboarding, data sharing and more.</p>
 			<a href="/displays/MONDOPAD-SERIES" class="button button--primary">learn more</a>
 		</div>
@@ -50,11 +50,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="../resources/static/images/touchscreens/InFocus-Lifestyle-JTouch-K12-MuscleDiagram-300dpi-CMYK.jpg" alt="">
+			<a href="/displays/JTOUCH-Series"><img src="../resources/static/images/touchscreens/InFocus-Lifestyle-JTouch-K12-MuscleDiagram-300dpi-CMYK.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline">JTouch</h3>
-			<p class="lead_text--paragraph">Connect the InFocus JTouch touchscreen display to your notebook to create a bright, colorful touch experience that engages audiences in classrooms and beyond.</p>
+			<h3 class="lead_text--secondary_headline"><a href="/displays/JTOUCH-Series">JTouch</a></h3>
+			<p class="lead_text--paragraph">Share your content on a bright, colorful touch experience that engages audiences in the classroom or meeting room with a JTouch flat panel touchscreen display.</p>
 			<a href="/displays/JTOUCH-Series" class="button button--primary">learn more</a>
 		</div>
 	</div>
@@ -62,34 +62,34 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/touchscreens/InFocus-DigiEasel-Business-Presentation.jpg" alt="">
+			<a href="/displays/DigiEasel-Series"><img src="/resources/static/images/touchscreens/InFocus-DigiEasel-Business-Presentation.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline">DigiEasel</h3>
-			<p class="lead_text--paragraph">Draw, write, and capture notes or share your device’s screen on a professional, high-tech interactive touch display that's affordable, fun to use and impressive to visitors.</p>
+			<h3 class="lead_text--secondary_headline"><a href="/displays/DigiEasel-Series">DigiEasel</a></h3>
+			<p class="lead_text--paragraph">Draw, write, and capture notes or share your device’s screen on a professional interactive touch display that's affordable, fun to use and impressive to visitors.</p>
 			<a href="/displays/DigiEasel-Series" class="button button--primary">learn more</a>
 		</div>
 	</div>
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/touchscreens/InFocus-Lifestyle-QTablet-Construction-300dpi-CMYK.jpg" alt="">
+			<a href="/displays/BIGTOUCH-Series"><img src="/resources/static/images/touchscreens/InFocus-Lifestyle-BigTouch-INF8012-Win10-2-300dpi-CMYK.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline">QTablet</h3>
-			<p class="lead_text--paragraph">InFocus Q Tablets have the power and features to be productive at work or school and entertained at home – all at great low prices.</p>
-			<a href="/displays/Q-Tablet-Series" class="button button--primary">learn more</a>
+			<h3 class="lead_text--secondary_headline"><a href="/displays/BIGTOUCH-Series">BigTouch</a></h3>
+			<p class="lead_text--paragraph">Utilize your software to customize this giant touch display with built-in PC for the specific needs of your shared work space.</p>
+			<a href="/displays/BIGTOUCH-Series" class="button button--primary">learn more</a>
 		</div>
 	</div>
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/touchscreens/InFocus-INF5711-Win8-Front.jpg" alt="">
+			<a href="/displays/Q-Tablet-Series"><img src="/resources/static/images/touchscreens/InFocus-Lifestyle-QTablet-Construction-300dpi-CMYK.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline">BigTouch</h3>
-			<p class="lead_text--paragraph">Windows 8 combines the fun of a tablet with the productivity of a PC, and the InFocus BigTouch amplifies that beautiful, fast and fluid touch experience for your shared work space.</p>
-			<a href="/displays/BIGTOUCH-Series" class="button button--primary">learn more</a>
+			<h3 class="lead_text--secondary_headline"><a href="/displays/Q-Tablet-Series">QTablet</a></h3>
+			<p class="lead_text--paragraph">Be productive at work or school and entertained at home with a powerful, portable and feature-rich QTablet from InFocus.</p>
+			<a href="/displays/Q-Tablet-Series" class="button button--primary">learn more</a>
 		</div>
 	</div>
 

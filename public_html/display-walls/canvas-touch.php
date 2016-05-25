@@ -35,11 +35,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <a href="/">Home</a> &gt;
                     <a href="/display-walls/">Display Walls</a> &gt;
-                    <a href="/display-walls/canvas">Canvas</a>
+                    <a href="/display-walls/canvas-touch">Jupiter Canvas Touch</a>
                 </ol>
             </div>
-            <div class="productheader C10 Col_child C4x6_child">
-                <div><h1 class="mysqledit h2" id="pagetitle">InFocus Canvas Touch&trade;</h1></div>
+            <div class="productheader C10 Col_child C6x4_child">
+                <div><h1 class="mysqledit h2" id="pagetitle">Jupiter Canvas Touch&trade;</h1></div>
                 <div>
                     <ul class="action-links Col_child">
                         <li></li>
@@ -50,13 +50,13 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             </div>
             <div class="C10 Col_child C6x4_child">
                 <div class="image-set" style="float:right;">
-                    <img src="/resources/static/images/display-walls/InFocus-Lifestyle-Mondopad2-ConfRoom-WoodWall-300dpi-CMYK.jpg">
+                    <img src="/resources/images/InFocus-Canvas-Touch-Architecture.jpg">
                 </div>
                 <div class="info" style="float:left;">
                     <strong class="tagline mysqledit" id="header">The Essential Endpoint for Your Canvas Environment</strong>
                     <div class="mysqledit" id="blurb">
-                        <p><strong>Canvas Touch extends the power of Canvas’ award-winning visualization solution to conference rooms, huddle spaces, personal offices, or anywhere else groups meet and collaborate.</strong></p>
-                        <p>Use the powerful touchscreen interface of Canvas Touch to collaborate with remote colleagues that run Canvas, including sharing live video, real-time data, application screens, web windows, documents, and presentations.</p>
+                        <p>Canvas Touch extends the power of Canvas’ award-winning visualization solution to conference rooms, huddle spaces, personal offices, or anywhere else groups meet and collaborate.</p>
+                        <p>Use the powerful touchscreen interface of Canvas Touch to collaborate with remote colleagues that run <a href="/display-walls/canvas">Canvas</a>, including sharing live video, real-time data, application screens, web windows, documents, and presentations.</p>
                     </div>
                 </div>
                 <ul class="feature-list" style="padding-bottom:50px; width:38%;">
@@ -115,8 +115,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                             <li><strong>New Battery Saver feature automatically conserves power</strong></li>
                             <li><strong>Available as a software upgrade on the 57-, 65-, and 70-inch models</strong></li>
                           </ul>
-                          <hr/>
-                            </div>
+                      </div>
                     </div>
                 </div>
                 <div id="details">
@@ -177,7 +176,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Jupiter-Canvas-Datasheet" href="/resources/static/documents/canvas-touch/LR_JUP-070 Canvas Touch brochure_030116.pdf">
+                                        <a data-event="Jupiter-Canvas-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Canvas-Touch-Datasheet-EN.pdf">
                                             <span class="title">Canvas Touch</span><br>
                                             <span class="description">Conference Room System</span>
                                         </a>
@@ -187,7 +186,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                             <li>
                                                 Choose Language
                                                 <ul>
-                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="/resources/static/documents/canvas-touch/LR_JUP-070 Canvas Touch brochure_030116.pdf">English</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Canvas-Touch-Datasheet-EN.pdf">English</a></li>
                                                 </ul>
                                             </li>
                                         </ul>

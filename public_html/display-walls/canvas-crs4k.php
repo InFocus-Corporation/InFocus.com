@@ -34,11 +34,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <a href="/">Home</a> &gt;
                     <a href="/display-walls/">Display Walls</a> &gt;
-                    <a href="/display-walls/canvas-crs4k">Canvas</a>
+                    <a href="/display-walls/canvas-crs4k">Jupiter Canvas</a>
                 </ol>
             </div>
-            <div class="productheader C10 Col_child C4x6_child">
-                <div><h1 class="mysqledit h2" id="pagetitle">Canvas CRS-4K</h1></div>
+            <div class="productheader C10 Col_child C6x4_child">
+                <div><h1 class="mysqledit h2" id="pagetitle">Jupiter Canvas CRS-4K</h1></div>
                 <div>
                     <ul class="action-links Col_child">
                         <li></li>
@@ -56,7 +56,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     <strong class="tagline mysqledit" id="header">Now every conference room and huddle room is a Canvas room.</strong>
                     <div class="mysqledit" id="blurb">
                         <p><strong>Collaborative Visualization for Teams</strong></p>
-                        <p>Canvas has set the standard for collaborative visualization on smartphones, tablets, PCs, and control room display walls. Global 2000 companies in fields from finance to pharmaceuticals to oil and gas, construction, engineering, and electric utilities, as well as governments and public agencies use Canvas to manage operations. The Canvas CRS-4K™ system extends the power of Canvas’ award-winning solution to teams working in conference rooms and huddle rooms.</p>
+                        <p><a href="/display-walls/canvas">Canvas</a> has set the standard for collaborative visualization on smartphones, tablets, PCs, and control room display walls. Global 2000 companies in fields from finance to pharmaceuticals to oil and gas, construction, engineering, and electric utilities, as well as governments and public agencies use Canvas to manage operations. The Canvas CRS-4K™ system extends the power of Canvas’ award-winning solution to teams working in conference rooms and huddle rooms.</p>
                         <p>The Canvas CRS-4K system is a small, quiet box that can be located anywhere in the room. What it enables is enormous.</p>
                         <p>With the Canvas CRS-4K, teams in huddle rooms can collaborate with remote colleagues running Canvas on almost any device, sharing live video, real-time data, application screens, web windows, documents, and presentations. Users can annotate onscreen, coordinate using voice and text chat, share whiteboards, and jointly edit documents, spreadsheets, and presentations.</p>
                         <p>Using Canvas SimpleShare™, any user can walk into the conference room and wirelessly present their laptop screen to both local and remote Canvas participants. No cables to connect, no dongles to hunt down.</p>
@@ -89,6 +89,14 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <p>A multitouch web-based interface supports most tablets, providing easy control of canvas placement and resizing, as well as video previews.</p>
                           <hr/>
                       </div>
+                      <div class="info cmsedit">
+                          <h5 class="name">At the Center of Teamwork</h5>
+                          <strong class="tagline"></strong>
+                          <p>Measuring only 3.8” x 8.7” x 12.9”, the Canvas CRS-4K™ system is at home on the conference room table, on a shelf, or in an equipment closet.</p>
+                          <p>The Canvas CRS-4K supports viewing up to 8 simultaneous sources, including H.264 video streams, VNC viewer windows, web windows, and SimpleShare windows.</p>
+                          <p>Four Mini DisplayPort connections support up to four 1080p HD displays or one 4K Ultra HD display.</p>
+                          <p>The Canvas CRS-4K’s high performance graphics system is ideal for use in Engineering and Design (CAD/CAE/AEC), Geographical Information Systems (GIS) & Visualization, Oil & Gas, Life Sciences, Digital Content Creation (DCC) & Digital Media, and other demanding applications.</p>
+                      </div>
                     </div>
                 </div>
                 <div id="details">
@@ -97,14 +105,72 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <div class="image-set cmsedit" style="float: right; padding: 1em;">
                               <img src="/resources/static/images/display-walls/canvas4k.jpg" >
                           </div>
-                          <h5 class="name">At the Center of Teamwork</h5>
-                          <strong class="tagline"></strong>
-                          <p>Measuring only 3.8” x 8.7” x 12.9”, the Canvas CRS-4K™ system is at home on the conference room table, on a shelf, or in an equipment closet.</p>
-                          <p>The Canvas CRS-4K supports viewing up to 8 simultaneous sources, including H.264 video streams, VNC viewer windows, web windows, and SimpleShare windows.</p>
-                          <p>Four Mini DisplayPort connections support up to four 1080p HD displays or one 4K Ultra HD display.</p>
-                          <p>The Canvas CRS-4K’s high performance graphics system is ideal for use in Engineering and Design (CAD/CAE/AEC), Geographical Information Systems (GIS) & Visualization, Oil & Gas, Life Sciences, Digital Content Creation (DCC) & Digital Media, and other demanding applications.</p>
-                          <hr/>
+                        <h5 class="name">SYSTEM CONFIGURATION</h5>
+                        <p><strong>Features</strong></p>
+                        <p>
+                        Form Factor: Mini-ITX desktop<br>
+                        CPU: Intel i7 4770S (65w)<br>
+                        System Memory: 16GB RAM<br>
+                        Storage: 128GB solid state drive<br>
+                        Operating System: Windows 7 Ultimate
+                        </p>
+                        <p><strong>Network Interface</strong></p>
+                        <p>Ethernet: Two Gigabit LAN RJ45 ports</p>
+                        <p><strong>Input Devices</strong></p>
+                        <p>
+                            Tablet Interface: Multitouch web-based tablet GUI for video preview and controlling size and position of canvases on displays<br>
+                            Keyboard & Mouse: 104-key USB keyboard and USB mouse
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="info cmsedit">
+                        <h5 class="name">SUPPORTED SOURCES</h5>
+                        <p><strong>Accessed Via LAN</strong></p>
+                        <p>H.264 Video Streams: Up to 8 simultaneous streams</p>
+                        <p>VNC Screen Graphics: Up to 8 simultaneous VNC viewer windows</p>
+                        <p>Web Windows: Up to 8 simultaneous web browser windows</p>
+                        <p>Desktop Presentation Screens: Up to 2 simultaneous SimpleShare™ windows</p>
+                        <hr>
+                    </div>
+                    <div class="info cmsedit">
+                        <h5 class="name">GRAPHICS OUTPUTS</h5>
+                        <p><strong>Mini DisplayPort Digital Interface</strong></p>
+                        <p>Graphics Card: PCI Express 3.0 16-lane graphics card with 2GB GDDR5 GPU memory (72 GB/s)</p>
+                        <p>Outputs: 4 Mini DisplayPort connectors supporting DisplayPort version 1.2</p>
+                        <p>Resolution: Supports up to four HD displays at 1920x1080 pixels each -OR- one Ultra HD 4K display at 4096x2160 pixels</p>
+                        <p>Color Depth: 30-bit, producing more than 1 billion colors</p>
+                        <hr>
+                        <h5 class="name">AUDIO</h5>
+                        <p><strong>Front Panel I/O</strong></p>
+                        <p>MIC In: 3.5mm connector, supports AC’97 and HD Audio</p>
+                        <p>Line Out: 3.5mm connector, supports AC’97 and HD Audio</p>
+                        <hr>
+                    </div>
+                    <div class="info cmsedit">
+                        <h5 class="name">OTHER</h5>
+                        <p><strong>Chassis</strong></p>
+                        <p>Dimensions: 3.8” H x 8.7” W x 13.4” D (96 mm x 222 mm x 328 mm)</p>
+                        <p>Weight: 10 lbs. (4.6 kg.)</p>
+                        <p>Shipping dimensions: 8.7” H x 11” W x 19.5” D (220 mm x 280 mm x 425 mm)</p>
+                        <p>Shipping weight: 15 lbs. (6.8 kg.)</p>
+                        <p><strong>Operating Range</strong></p>
+                        <p>Temperature Range, Operating: 32°F – 104°F (0°C – 40°C)</p>
+                        <p>Temperature Range, Non-operating: 14°F – 150°F (-10°C – 66°C)</p>
+                        <p>Humidity Range: 10-90% non-condensing</p>
+                        <p>Altitude Range: Up to 10,000 feet (3,048.0 m)</p>
+                        <p><strong>Electrical</strong></p>
+                        <p>Power supply: Single 150 watt</p>
+                        <p>Input voltage: 100-240 VAC</p>
+                        <p>Line frequency: 50-60 Hz</p>
+                        <p>Power consumption: 150 Watts nominal</p>
+                        <p><strong>Operational Acoustics</strong></p>
+                        <p>Noise Level: 30 dbA</p>
+                        <p><strong>Regulatory</strong></p>
+                        <p>United States: UL 60950 listed, FCC Class A</p>
+                        <p>Canada: cUL CSA C22.2, No. 60950</p>
+                        <p>International: CE Mark, CB Certificate, EAC, CCC, C-Tick, VCCI</p>
                       </div>
+
                     </div>
                 </div>
                 <div id="downloads">
@@ -122,7 +188,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="/resources/static/documents/canvas-crs-4k/LR_Canvas CRS-4K_022916.pdf">
+                                        <a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-CRS-4K-Datasheet-EN.pdf">
                                             <span class="title">Canvas CRS-4K</span><br>
                                             <span class="description">Conference Room System</span>
                                         </a>
@@ -132,9 +198,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                             <li>
                                                 Choose Language
                                                 <ul>
-                                                    <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="/resources/static/documents/canvas-crs-4k/LR_Canvas CRS-4K_022916.pdf">English</a></li>
-                                                    <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="/resources/static/documents/canvas-crs-4k/SPA Canvas CRS-4K_Jan2015.pdf">Español</a></li>
-                                                    <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="/resources/static/documents/canvas-crs-4k/Canvas CRS-4K_Jan2015_ru-RU.pdf">русский</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-CRS-4K-Datasheet-EN.pdf">English</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-CRS-4K-Datasheet-ES.pdf">Español</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-CRS-4K-Datasheet-RU.pdf">русский</a></li>
                                                 </ul>
                                             </li>
                                         </ul>

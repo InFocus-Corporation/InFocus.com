@@ -1,3 +1,5 @@
 /.git
 *.pyc
 /public_html/resources/images
+/public_html/resources/misc
+/public_html/tmp

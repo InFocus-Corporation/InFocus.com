@@ -18,13 +18,13 @@ p.lead_text,
 h5,
 .callout h5,
 .lead_text--secondary_headline,
-.vertical_accordian--slide--content h2
+.vertical_accordion--slide--content h2
  {
   font-weight: normal;
   font-family: 'GoodPro-WideLight', Verdana, Geneva, sans-serif;
 }
 
-.callout h3 {
+.callout h3, .callout h3 a {
   font-weight: normal;
   font-family: 'GoodPro-WideMedium', Verdana, Geneva, sans-serif;
   line-height: 1.25em;
@@ -85,11 +85,11 @@ h4.lead_text--secondary_headline {
   letter-spacing: .35em;
   font-size: .65em;
 }
-.vertical_accordian--slide {
+.vertical_accordion--slide {
   .module--tag span {
     color: $white;
   }
-  .vertical_accordian--slide--content {
+  .vertical_accordion--slide--content {
     h2 {
         font-size: 1.75rem;
         line-height: 1;

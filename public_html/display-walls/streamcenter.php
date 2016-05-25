@@ -34,11 +34,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <a href="/">Home</a> &gt;
                     <a href="/display-walls/">Display Walls</a> &gt;
-                    <a href="/display-walls/streamcenter">StreamCenter</a>
+                    <a href="/display-walls/streamcenter">Jupiter StreamCenter</a>
                 </ol>
             </div>
-            <div class="productheader C10 Col_child C4x6_child">
-                <div><h1 class="mysqledit h2" id="pagetitle">StreamCenter</h1></div>
+            <div class="productheader C10 Col_child C6x4_child">
+                <div><h1 class="mysqledit h2" id="pagetitle">Jupiter StreamCenter</h1></div>
                 <div>
                     <ul class="action-links Col_child">
                         <li></li>
@@ -78,7 +78,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     			<strong class="tagline"></strong>
                           <p>Each StreamCenter chassis can decode up to 32 channels of HD video. For projects with large numbers of sources, multiple StreamCenters can be put to work decoding hundreds or even thousands of streams simultaneously.</p>
                           <p>StreamCenter decodes most major streaming formats, including H.264, MPEG-2, MPEG-4, and MJPEG at resolutions up to 1920x1080.</p>
-                          <hr/>
+
 			                </div>
                     </div>
                 </div>
@@ -99,7 +99,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                         </div>
                       </div>
                       <div style="clear: both; width:100%; display: block;"></div>
-                      <hr>
                     </div>
                     <div id="downloads">
                         <h2>Datasheets</h2>
@@ -116,7 +115,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                       <tr class="">
                                           <td><img src="/resources/images/pdficon"></td>
                                           <td>
-                                              <a data-event="Jupiter-Canvas-Datasheet" href="/resources/static/documents/streamcenter/StreamCenter (rev 201-306)-v4(web).pdf">
+                                              <a data-event="Jupiter-Canvas-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-StreamCenter-Datasheet-EN.pdf">
                                                   <span class="title">StreamCenter</span><br>
                                                   <span class="description">Multistream Video Decoder for PixelNet</span>
                                               </a>
@@ -126,7 +125,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                                   <li>
                                                       Choose Language
                                                       <ul>
-                                                          <li><a data-event="Jupiter-Canvas-Datasheet" href="/resources/static/documents/streamcenter/StreamCenter (rev 201-306)-v4(web).pdf">English</a></li>
+                                                          <li><a data-event="Jupiter-Canvas-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-StreamCenter-Datasheet-EN.pdf">English</a></li>
                                                       </ul>
                                                   </li>
                                               </ul>

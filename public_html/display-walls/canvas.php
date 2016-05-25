@@ -35,11 +35,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <a href="/">Home</a> &gt;
                     <a href="/display-walls/">Display Walls</a> &gt;
-                    <a href="/display-walls/canvas">Canvas</a>
+                    <a href="/display-walls/canvas">Jupiter Canvas</a>
                 </ol>
             </div>
             <div class="productheader C10 Col_child C4x6_child">
-                <div><h1 class="mysqledit h2" id="pagetitle">Canvas</h1></div>
+                <div><h1 class="mysqledit h2" id="pagetitle">Jupiter Canvas</h1></div>
                 <div>
                     <ul class="action-links Col_child">
                         <li></li>
@@ -74,7 +74,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <div id="overview" class="active">
                     <div class="C10 alternateDivChildL2">
                       <div class="info cmsedit">
-                          <div class="image-set cmsedit" style="float: right; padding: 1em;">
+                          <div class="image-set cmsedit" style="float: right; padding: 1em; max-width: 350px;">
                               <img src="/resources/static/images/display-walls/canvas.jpg" >
                           </div>
                     			<h5 class="name">New in Canvas 3.1</h5>
@@ -85,9 +85,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           	<li><strong>Shared voice chat</strong> - All Canvas participants are automatically enrolled in a shared voice chat room to facilitate collaboration and teamwork.</li>
                             <li><strong>Microsoft Lync&reg; integration</strong> - Integration with the leading UCC platform means that users can escalate to Canvas from the Lync client or start a Lync conversation from Canvas.</li>
                             <li><strong>Connect with remote non-Canvas users</strong> - Remote colleagues who do not have Canvas at their location can participate in collaborative sessions with Canvas users.  With this new version, Canvas users can dial out to users of SIP-based conferencing systems, and allows users of SIP-based conferencing systems to dial into a canvas.</li>
-                            <li><strong>Supports Canvas CRS-4K</strong> - Jupiter’s new conference room system for Canvas, the Canvas CRS-4K, turns any conference room or huddle room into a Canvas workspace for teams. The new SimpleShare™ feature employs WebRTC technology to allow anyone with a laptop, even one without Canvas installed, to easily and instantly present content to local and remote Canvas users without downloading software, connecting cables, or attaching a dongle.</li>
+                            <li><strong>Supports Canvas CRS-4K</strong> - Jupiter’s new conference room system for Canvas, the <a href="/display-walls/canvas-crs4k">Canvas CRS-4K</a>, turns any conference room or huddle room into a Canvas workspace for teams. The new SimpleShare™ feature employs WebRTC technology to allow anyone with a laptop, even one without Canvas installed, to easily and instantly present content to local and remote Canvas users without downloading software, connecting cables, or attaching a dongle.</li>
                           </ul>
-                          <hr/>
 			                </div>
                     </div>
                 </div>
@@ -127,7 +126,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                       <div class="C5 alternateDivChildL2" style="float:right;">
                             <div class="info cmsedit">
                           			<h5 class="name">Watch the Canvas video</h5>
-                                <a href="http://www.jupiter.com/vef/load/a65fcace882c229ea0a725ce25fc65e6?width=640px&amp;height=365" class="colorbox-load init-colorbox-load-processed cboxElement"><img class="video_thumbnail img-responsive" typeof="foaf:Image" src="http://www.jupiter.com/system/files/styles/video_thumbnail/private/video-thumbnails/Video_Still_Canvas2_1.jpg?itok=bxT7uDqe" width="740" height="415" alt=""></a>
+                                <a href="//www.infocus.com/videos?kjVCe1-mZ9g" class="colorbox-load init-colorbox-load-processed cboxElement"><img class="video_thumbnail img-responsive" typeof="foaf:Image" src="http://www.jupiter.com/system/files/styles/video_thumbnail/private/video-thumbnails/Video_Still_Canvas2_1.jpg?itok=bxT7uDqe" width="740" alt=""></a>
       			                </div>
                         </div>
                         <div class="C5 alternateDivChildL2" style="float:left;">
@@ -145,7 +144,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <div class="info cmsedit">
                               <h5 class="name">Use your Canvas video wall for in-room presentations, too</h5>
                               <strong class="tagline"></strong>
-                              <p>Your Canvas video wall can be used for displaying content for a local audience when not in a Canvas session. DVI inputs can be connected to a Fusion Catalyst display wall processor running Canvas for display on the attached video wall. Now the local video wall can be used for making in-room presentations or viewing other sources not intended for sharing and collaboration.    </p>
+                              <p>Your Canvas video wall can be used for displaying content for a local audience when not in a Canvas session. DVI inputs can be connected to a <a href="/display-walls/fusion-catalyst">Fusion Catalyst</a> display wall processor running Canvas for display on the attached video wall. Now the local video wall can be used for making in-room presentations or viewing other sources not intended for sharing and collaboration.    </p>
                               <hr/>
                           </div>
                           <div class="info cmsedit">
@@ -170,7 +169,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Jupiter-Canvas-Datasheet" href="/resources/static/documents/canvas/LR_4pCanvas brochure_030116.pdf">
+                                        <a data-event="Jupiter-Canvas-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-Datasheet-EN.pdf">
                                             <span class="title">Canvas Brochure</span><br>
                                             <span class="description">Benefits and specifications for Canvas</span>
                                         </a>
@@ -180,10 +179,10 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                             <li>
                                                 Choose Language
                                                 <ul>
-                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="/resources/static/documents/canvas/LR_4pCanvas brochure_030116.pdf">English</a></li>
-                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="/resources/static/documents/canvas/SPA JUP_Canvas_Brochure_150126.pdf">Español</a></li>
-                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="/resources/static/documents/canvas/Arabic Canvas brochure 2014.pdf">العربية</a></li>
-                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="/resources/static/documents/canvas/JUP_Canvas_Brochure_150126_ru-RU.pdf">русский</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-Datasheet-EN.pdf">English</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-Datasheet-ES.pdf">Español</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-Datasheet-AR.pdf">العربية</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-Datasheet-RU.pdf">русский</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -192,7 +191,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                 <tr class="">
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
-                                        <a data-event="Jupiter-Canvas-Customer-Sample" href="/resources/static/documents/canvas/Canvas Customers, A Sample List - 7 Apr 2015.pdf">
+                                        <a data-event="Jupiter-Canvas-Customer-Sample" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-Customer-List-EN.pdf">
                                             <span class="title">Canvas Customers</span><br>
                                             <span class="description">Canvas Customers Sample List</span>
                                         </a>
@@ -202,7 +201,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                             <li>
                                                 Choose Language
                                                 <ul>
-                                                    <li><a data-event="Jupiter-Canvas-Customer-Sample" href="/resources/static/documents/canvas/Canvas Customers, A Sample List - 7 Apr 2015.pdf">English</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-Customer-Sample" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-Customer-List-EN.pdf">English</a></li>
                                                 </ul>
                                             </li>
                                         </ul>

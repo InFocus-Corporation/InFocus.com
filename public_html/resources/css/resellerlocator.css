@@ -48,9 +48,10 @@ div.olLayerDiv {
 .olControlAttribution {
     font-size: smaller;
     right: 3px;
-    bottom: 4.5em;
+    bottom: 0.25rem;
     position: absolute;
     display: block;
+    font-size: 0.9rem;
 }
 .olControlScale {
     right: 3px;
@@ -521,7 +522,7 @@ a.olControlZoomOut {
 }
 
 #map1 .olControlZoom.olControlNoSelect, #map1 .olControlAttribution {
-    z-index: 999 !important; /* !important because we have to override inline styles */
+    z-index: 749 !important; /* !important because we have to override inline styles */
 }
 
 #layout #content #locator #results table#results-table {
@@ -531,10 +532,33 @@ a.olControlZoomOut {
 
 #results-table tbody td {
     width:25%;
+    text-align: center !important;
+    padding: 10px;
+    font-family: 'GoodPro';
+    font-size: 0.9rem;
+    vertical-align: top;
+}
+#results-table tbody td h3 {
+    font-size: 22px;
+}
+#results-table tbody td a {
+    font-size: 0.9rem;
+    margin: 10px 0 0;
+    word-break: break-all;
+}
+#results-table tbody td a.cboxElement {
 }
 
 h2.title {
     font-family: 'GoodPro-WideLight';
     font-weight: normal;
     font-size: 60px;
+}
+
+#results-header {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+#shopOnline {
+    white-space: nowrap;
 }

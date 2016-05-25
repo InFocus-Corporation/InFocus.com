@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 $homedir = $_SERVER['DOCUMENT_ROOT'];
 $categories = array("ultra-portable","office-classroom","short-throw","large-venue","home-theater");
@@ -17,6 +18,9 @@ if(in_array($_REQUEST['cat'], $categories)){
 				$pageText[$category.'meta'],
 				strpos($pageText[$category.'meta'],'<meta name="description" content="')+34,
 				strpos($pageText[$category.'meta']," />")-(strpos($pageText[$category.'meta'],'<meta name="description" content="')+34));
+} else {
+	echo '<title>InFocus | Projectors</title>';
+	echo '<meta name="description" content="InFocus offers ultra-sharp HD projectors for presentation, home theaters, and classrooms. Search from short throw to large venue projectors to suit your needs."/>';
 }
 
 if($_REQUEST['content']=='true') {
@@ -68,7 +72,7 @@ if($category) {
 			moz-transition:right 1s ease-out;
 		}
 	</style>
-	<div class='content'>
+	<div class='content category-content--projector'>
 		<div id='category' class='C9' style='overflow:hidden;'>
 			<h2 id="cattitle" class="title" style="text-transform:capitalize;"><?= $catarray[$category]['alt'] .' '. translate('Projectors');?></h2>
 			<div class="C10 Col_child C5_child" id="catdesc">
@@ -129,15 +133,17 @@ if($category) {
 				<div class="white color_stripe"></div>
 			</div>
 		</div>
-
 	</div>
+
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
-			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/projectors/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg" alt="">
+			<a href="/projectors/ultra-portable">
+				<div class="white color_stripe"></div>
+				<img src="/resources/static/images/projectors/InFocus-IN1110A-IN1112A-Front-with-Hand-300dpi-CMYK.jpg" alt="">
+			</a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline">Ultra Portable Projectors</h3>
+			<h3 class="lead_text--secondary_headline"><a href="/projectors/ultra-portable">Ultra Portable Projectors</a></h3>
 			<p class="lead_text--paragraph">You're on the move. Your taste calls for exceptional, but your budget calls for frugal. You'll find the right mobile projector here.</p>
 			<a href="/projectors/ultra-portable" class="button button--primary">learn more</a>
 		</div>
@@ -146,11 +152,11 @@ if($category) {
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/projectors/InFocus-Lifestyle-IN118HDx-96dpi-RGB.jpg" alt="">
+			<a href="/projectors/office-classroom"><img src="/resources/static/images/projectors/InFocus-Lifestyle-IN118HDx-96dpi-RGB.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline">Office/Classroom Projectors</h3>
-			<p class="lead_text--paragraph">Office and classroom projectors with wireless and networking, broad connectivity, and prices your budget will love.</p>
+			<h3 class="lead_text--secondary_headline"><a href="/projectors/office-classroom">Office/Classroom Projectors</a></h3>
+			<p class="lead_text--paragraph">Powerful yet portable office and classroom projectors with high resolution, wireless, networking, digital connectivity, and prices your budget will love.</p>
 			<a href="/projectors/office-classroom" class="button button--primary">learn more</a>
 		</div>
 	</div>
@@ -158,10 +164,10 @@ if($category) {
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/projectors/GettyImages-508065611.jpg" alt="">
+			<a href="/projectors/short-throw"><img src="/resources/static/images/projectors/short-throw-projectors.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline">Short Throw Projectors</h3>
+			<h3 class="lead_text--secondary_headline"><a href="/projectors/short-throw">Short Throw Projectors</a></h3>
 			<p class="lead_text--paragraph">Get a big image from a short distance and reduce shadows with a low-cost, high-quality short throw projector.</p>
 			<a href="/projectors/short-throw" class="button button--primary">learn more</a>
 		</div>
@@ -170,10 +176,10 @@ if($category) {
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/projectors/GettyImages-172209295.jpg" alt="">
+			<a href="/projectors/large-venue"><img src="/resources/static/images/projectors/GettyImages-172209295.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline">Large Venue Projectors</h3>
+			<h3 class="lead_text--secondary_headline"><a href="/projectors/large-venue">Large Venue Projectors</a></h3>
 			<p class="lead_text--paragraph">InFocus leads the way with HD color performance, installation flexibility, and dynamic design for demanding installations.</p>
 			<a href="/projectors/large-venue" class="button button--primary">learn more</a>
 		</div>
@@ -182,10 +188,10 @@ if($category) {
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<img src="/resources/static/images/projectors/GettyImages-507832233.jpg" alt="">
+			<a href="/projectors/home-theater"><img src="/resources/static/images/projectors/GettyImages-507832233.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline">Home Theater Projectors</h3>
+			<h3 class="lead_text--secondary_headline"><a href="/projectors/home-theater">Home Theater Projectors</a></h3>
 			<p class="lead_text--paragraph">Bring home the cinematic experience with a 1080p projector from the legend in digital projection.</p>
 			<a href="/projectors/home-theater" class="button button--primary">learn more</a>
 		</div>

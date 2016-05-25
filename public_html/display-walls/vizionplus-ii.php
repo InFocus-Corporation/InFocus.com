@@ -34,11 +34,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <a href="/">Home</a> &gt;
                     <a href="/display-walls/">Display Walls</a> &gt;
-                    <a href="/display-walls/vizionplus-ii">VizionPlus II</a>
+                    <a href="/display-walls/vizionplus-ii">Jupiter VizionPlus II</a>
                 </ol>
             </div>
-            <div class="productheader C10 Col_child C4x6_child">
-                <div><h1 class="mysqledit h2" id="pagetitle">VizionPlus II</h1></div>
+            <div class="productheader C10 Col_child C6x4_child">
+                <div><h1 class="mysqledit h2" id="pagetitle">Jupiter VizionPlus II</h1></div>
                 <div>
                     <ul class="action-links Col_child">
                         <li></li>
@@ -85,7 +85,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                         <strong class="tagline"></strong>
                         <p>VizionPlus II is designed for continuous, 24x7 operation in command and control settings, both tactical and strategic. Jupiter's high performance display wall processors are used in military operations around the world to provide the common operating picture so critical to decision making. Built for a wide range of applications, Jupiter products have been adapted for battlespace requirements on land, sea, and air. To develop situational awareness, you need to be able to see everything available-video, data, images, maps, and more. That's what Jupiter delivers. Jupiter products are used by the US Army, US Navy, US Marine corps, US Air Force, CIA and NSA, as well as in the Pentagon. Jupiter display wall processors are also employed by NATO, in addition to other military organizations on nearly every continent. VizionPlus II is built in Jupiter's ISO 9001:2008 certified factory in Hayward, California.</p>
                         <p>The VizionPlus II is built specifically for the military and its unique applications and is not available to the general commercial market.</p>
-                        <p>For more information, please contact your local <a href="http://www.jupiter.com/about/contact/sales-areas">Jupiter Systems sales representative</a>.</p><br/>
+                        <p>For more information, please contact your local <a class="contact-us" href="/resources/forms/contactus">Jupiter Systems sales representative</a>.</p><br/>
                         <hr/>
                     </div>
                   </div>

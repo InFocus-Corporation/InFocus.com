@@ -1,27 +1,31 @@
 
 <?php
 $localdir = dirname(__FILE__);
-$homedir=$_SERVER['DOCUMENT_ROOT']; 
+$homedir=$_SERVER['DOCUMENT_ROOT'];
+
 require_once($homedir . "/resources/php/imageprocess.php"); 
-require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
+require($homedir . "/resources/php/connections.php");
+
 mysqli_set_charset($connection, "utf8");
 ini_set('default_charset', 'utf-8');
 
-if(substr($_SERVER['SERVER_NAME'], -2)=="de"){
-$lang = "de";
-}
-else{
-$lang = "en";
+if(substr($_SERVER['SERVER_NAME'], -2)=="de") {
+    $lang = "de";
+} else {
+    $lang = "en";
 } 
 
 
 $sql = "SELECT keygroup, transtext FROM (SELECT transkey as keygroup FROM InFocus.labeltranslation GROUP BY transkey) as KeyList LEFT JOIN (SELECT transkey, transtext FROM InFocus.labeltranslation where labeltranslation.lang = '" . $lang . "') as labeltrans ON keygroup = transkey;";
-$results = mysqli_query($connection,$sql);
+$results = mysqli_query($connection, $sql);
 
-while($row = mysqli_fetch_array($results)){
+while($row = mysqli_fetch_array($results)) {
 
-if($row[1] == null){$translate[$row[0]] = $row[0];}
-else{$translate[$row[0]] = $row[1];}
+    if($row[1] == null) {
+        $translate[$row[0]] = $row[0];
+    } else {
+        $translate[$row[0]] = $row[1];
+    }
 
 }
 
@@ -135,47 +139,43 @@ return $transposed_array;
 }
 }
 
-function PrintVerticalTable($tname, $colnames, $SQLst = 'false', $IncHeader = 'true', $SelectDB = 'InFocus')
-{
-/* connect to the db */
-require($_SERVER['DOCUMENT_ROOT'] . "/resources/php/connections.php");
-global $homedir;
-global $partnumbers;
-global $translate;
-/* show tables */
-//$result = mysqli_query($connection,'SHOW TABLES') or die(AlertAdmin(mysqli_error($connection),$sql));
+function PrintVerticalTable($tname, $colnames, $SQLst = 'false', $IncHeader = 'true', $SelectDB = 'InFocus') {
+    /* connect to the db */
+    global $connection;
+    global $homedir;
+    global $partnumbers;
+    global $translate;
+    /* show tables */
+    //$result = mysqli_query($connection,'SHOW TABLES') or die(AlertAdmin(mysqli_error($connection),$sql));
 
-$arrlength=count($colnames);
+    $arrlength=count($colnames);
 
- $table = $tname;
+    $table = $tname;
+    $result2 = mysqli_query($connection,$SQLst);
 
+    if ($colnames[0]=='ALL') {
+        $i = 0;
+        if (mysqli_fetch_field_direct($result2, $i)->name=='rownumber') {$i++;}
 
- $result2 = mysqli_query($connection,$SQLst);
+        $colnames[0] = mysqli_fetch_field_direct($result2, $i)->name;
+        $i++;
 
-  if ($colnames[0]=='ALL')
-  {
-   $i = 0;
-   if (mysqli_fetch_field_direct($result2, $i)->name=='rownumber'){$i++;}
-   $colnames[0]=mysqli_fetch_field_direct($result2, $i)->name;
-   $i++;
-   while ($i < mysqli_num_fields($result2)) 
-   {
-   $colnames[$i]=mysqli_fetch_field_direct($result2, $i)->name;
-   $i++;
-   }
-  }
-  $arrlength=count($colnames);
+        while ($i < mysqli_num_fields($result2)) {
+            $colnames[$i]=mysqli_fetch_field_direct($result2, $i)->name;
+            $i++;
+        }
+    }
+    $arrlength=count($colnames);
 
- while($row = mysqli_fetch_array($result2))
- {
-    $allRow[] = $row;
- }
+    while($row = mysqli_fetch_array($result2))
+    {
+        $allRow[] = $row;
+    }
  
-  $rowNum=count($allRow);
-  if($rowNum == 0){echo "No Specifications Found</thead></table>";die();}
-  $row=transpose(array_reverse($allRow));
-   $x=0;
-   
+    $rowNum=count($allRow);
+    if($rowNum == 0){echo "No Specifications Found</thead></table>";die();}
+    $row=transpose(array_reverse($allRow));
+    $x=0;
    
     $rresult .= '<tr><th style="text-align:right;width:100px">' . $translate[$colnames[$x]] . '</th>';
    
@@ -185,7 +185,7 @@ $arrlength=count($colnames);
    }
     $rresult .= '</tr>';
    
-    $rresult .= '</thead><tbody><tr><td  style="width:50px !important;"></td>';
+    $rresult .= '</thead><tbody><tr>';
 
    $x=1;
    

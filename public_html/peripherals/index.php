@@ -4,8 +4,8 @@ require_once($_SERVER['DOCUMENT_ROOT']. "/resources/php/header.php");
 echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] . '"/>' . PHP_EOL;
 ?>
 
-<title>InFocus | Collaboration That Works</title>
-<meta name="description" content="Discover advanced projection equipment offered by InFocus. Global leader in LCD projectors and DLP projection, Mondopad products and projector accessories." />
+<title>InFocus | Peripherals</title>
+<meta name="description" content="Audio and video quality, and the ability to share your ideas can be the difference between a productive meeting and frustration. Our peripherals can help." />
 <meta name="keywords" content="infocus,mondopad,projector,projection,DLP,LCD,LCD display,digital display,visual communications,projector accessories,infocus company,digital technology,projection equipment,monopad, communication, touchscreen" />
 
 <link rel="stylesheet" href="/resources/css/vendor/foundation.min.css" />
@@ -27,7 +27,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     <br><br>
 					Peripherals
 				</h2>
-				<p class="lead_text--paragraph">Audio and video quality can be the difference between a productive conference call and frustration. Our camera, speakerphone, and other peripherals can help.</p>
+				<p class="lead_text--paragraph">Audio and video quality, and the ability to share your ideas can be the difference between a productive meeting and frustration. Our peripherals can help. And they'll work with the technology you already use.</p>
 			</div>
 			<div class="small-3 color_stripe_column">
 				<div class="dark_blue color_stripe"></div>
@@ -39,55 +39,43 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <br><br>
 	<div class="row">
 		<div class="small-12 medium-4 columns">
-			<img src="/resources/static/images/peripherals/pealcam.png" class="product_shot" alt="">
-			<h4 class="lead_text--secondary_headline">PealCam PTZ Camera</h4>
-			<p>
-                Add the InFocus RealCam pan/tilt/zoom (PTZ) professional-quality HD camera to any PC, including a Mondopad to make your video meetings or events shine.
-            </p>
-			<a href="#" class="button button--primary">learn more</a>
+			<a href="/peripherals/INF-SPTZ-2"><img src="/resources/static/images/peripherals/realcam.jpg" class="product_shot" alt="" style="max-height: 252px;"></a>
+			<h4 class="lead_text--secondary_headline"><a href="/peripherals/INF-SPTZ-2">RealCam PTZ Camera</a></h4>
+			<p>Add a RealCam pan/tilt/zoom (PTZ) professional-quality HD camera to any PC, including a Mondopad, to make your video meetings or events shine.</p>
+			<a href="/peripherals/INF-SPTZ-2" class="button button--primary">learn more</a>
 		</div>
 		<div class="small-12 medium-4 columns">
-            <img src="/resources/static/images/peripherals/thunder.png" class="product_shot" alt="">
-			<h4 class="lead_text--secondary_headline">Thunder Speakerphone</h4>
-			<p>
-                Have clear conversations even when people are across a large room with the InFocus Thunder speakerphone.
-            </p>
-			<a href="#" class="button button--primary">learn more</a>
+      <a href="/peripherals/INA-TH150"><img src="/resources/static/images/peripherals/thunder.png" class="product_shot" alt=""></a>
+			<h4 class="lead_text--secondary_headline"><a href="/peripherals/INA-TH150">Thunder Speakerphone</a></h4>
+			<p>Have clear conversations even when people are across a large room with the Thunder speakerphone connected to your PC, phone or Mondopad.</p>
+			<a href="/peripherals/INA-TH150" class="button button--primary">learn more</a>
 		</div>
 		<div class="small-12 medium-4 columns">
-            <img src="/resources/static/images/peripherals/mondocenter.png" class="product_shot" alt="">
-			<h4 class="lead_text--secondary_headline">MondoCenter Collaboration PC</h4>
-			<p>
-                Connect an InFocus MondoCenter to any display device to visually present, capture and share ideas with participants in the room and around the world.
-            </p>
-			<a href="#" class="button button--primary">learn more</a>
+      <a href="/peripherals/INF-MCENTER2"><img src="/resources/static/images/peripherals/mondocenter.png" class="product_shot" alt=""></a>
+			<h4 class="lead_text--secondary_headline"><a href="/peripherals/INF-MCENTER2">MondoCenter Collaboration PC</a></h4>
+			<p>Connect a MondoCenter to any display device to visually present, capture and share ideas with participants in the room and around the world.</p>
+			<a href="/peripherals/INF-MCENTER2" class="button button--primary">learn more</a>
 		</div>
 	</div>
     <hr>
 	<div class="row">
 		<div class="small-12 medium-4 columns">
-            <img src="/resources/static/images/peripherals/liteshow.png" class="product_shot" alt="">
-			<h4 class="lead_text--secondary_headline">Liteshow Wireless Presentation Adaptor</h4>
-			<p>
-                Add the InFocus LiteShow 4 wireless presentation adapter to any projector or other display with a VGA or HDMI input to quickly and easily share data, audio, and HD video over a secure wireless connection.
-            </p>
-			<a href="#" class="button button--primary">learn more</a>
+      <a href="/peripherals/INLITESHOW4"><img src="/resources/static/images/peripherals/liteshow.png" class="product_shot" alt=""></a>
+			<h4 class="lead_text--secondary_headline"><a href="/peripherals/INLITESHOW4">LiteShow Wireless Presentation Adapter</a></h4>
+			<p>Add to any projector or other display with a VGA or HDMI input to share data, audio, and HD video over a secure wireless connection.</p>
+			<a href="/peripherals/INLITESHOW4" class="button button--primary">learn more</a>
 		</div>
 		<div class="small-12 medium-4 columns">
-            <img src="/resources/static/images/peripherals/bigconnect.png" class="product_shot" alt="">
-			<h4 class="lead_text--secondary_headline">Big Connect Video Calling Software</h4>
-			<p>
-                InFocus BigConnect video calling software brings faces and ideas together using your Windows device.
-            </p>
-			<a href="#" class="button button--primary">learn more</a>
+      <a href="/accessories/software/INS-BCONNECT"><img src="/resources/static/images/peripherals/bigconnect.jpg" class="product_shot" alt="" style="height: 252px;"></a>
+			<h4 class="lead_text--secondary_headline"><a href="/accessories/software/INS-BCONNECT">BigConnect Video Calling Software</a></h4>
+			<p>Bring faces and data together using your Windows device with BigConnect video calling software.</p>
+			<a href="/accessories/software/INS-BCONNECT" class="button button--primary">learn more</a>
 		</div>
 		<div class="small-12 medium-4 columns">
-            <img src="/resources/static/images/peripherals/bignote.png" class="product_shot" alt="">
-			<h4 class="lead_text--secondary_headline">BigNote Whiteboarding Software</h4>
-			<p>
-                Add the BigNote 1.2 whiteboard app to your Windows device and turn it into a powerful interactive whiteboard.
-            </p>
-			<a href="#" class="button button--primary">learn more</a>
+      <a href="/peripherals/INS-BIGNOTE"><img src="/resources/static/images/peripherals/bignote.png" class="product_shot" alt=""></a>
+			<h4 class="lead_text--secondary_headline"><a href="/peripherals/INS-BIGNOTE">BigNote Whiteboarding Software</a></h4>
+			<p>Add the BigNote whiteboard app to your Windows device and turn it into a powerful interactive whiteboard.</p>
+			<a href="/peripherals/INS-BIGNOTE" class="button button--primary">learn more</a>
 		</div>
 	</div>
 

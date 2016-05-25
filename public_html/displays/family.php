@@ -46,7 +46,7 @@ $priceBuyNow = $product->priceBuyNow($product->pn);
 
               <div id="overview" class="active">
                 <div id="models" class="active">
-                  <ul class="C10 panels resultsList">
+                  <ul class="C10 panels resultsList extra-tall">
                     <?=$models ?>
                   </ul>
                 </div>
