@@ -511,10 +511,12 @@ header + .hero_row > .row {
         content: "";
         border: 2px solid white;
         display: block;
+        margin-bottom: 5px;
     }
     .module--tag span{
+        font-weight: normal;
         color: white;
-        font-family: 'GoodPro-WideBook';
+        font-family: 'GoodPro-WideMedium';
         font-size: 12px;
         letter-spacing: .2em;
         @media screen and (min-width: 30em) {
@@ -1212,7 +1214,6 @@ header + .hero_row > .row {
 .present_page {
     .feature_links {
       @media screen and (min-width: 40em) {
-        padding-bottom: 35px;
         margin-top: 77px;
       }
     }
@@ -1647,6 +1648,9 @@ header + .hero_row > .row {
             @media screen and (min-width: 40em) and (max-width: 45em) {
               font-size: 10px;
             }
+        }
+        .promo_module_link:hover {
+            color: $white;
         }
     }
     .promo_module_c {
