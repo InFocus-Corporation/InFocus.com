@@ -631,9 +631,9 @@ header + .hero_row > .row {
               margin-top: 10rem;
               font-size: 3.75rem;
           }
-          svg {
+          svg, img {
               width: 20%;
-              height: 20%;
+              height: auto;
               max-width: 140px;
               max-height: 85px;
               @media screen and (min-width: 40em) {
@@ -650,7 +650,7 @@ header + .hero_row > .row {
           height: 100%;
       }
       .lead_text--paragraph {
-          font-size: .8em;
+          font-size: .7em;
           line-height: 1.1;
           @media screen and (min-width: 30em) {
               font-size: .9em;
