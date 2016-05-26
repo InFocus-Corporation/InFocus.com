@@ -1878,6 +1878,7 @@ ul.feature-list li {
     padding-left: 1em;
     line-height: 1.5em;
     position: relative;
+    text-align: left;
 }
 
 .feature-list ul li:after,
@@ -2382,21 +2383,26 @@ margin-left:15px;
 	display: block;
 	width: 100%;
 	margin: 0;
-	padding: 0 1.4em;
+	padding: 0 1rem;
 	box-sizing: border-box;
-	text-align: left;
+	text-align: center;
 	font-family: 'GoodPro-Wide';
 	font-weight: bold;
 	font-size: 0.9rem;
 	color: #333f48;
 }
 .panels > li > div small.price a {
-	float: right;
+	display: inline-block;
 	font-family: 'GoodPro-Wide';
 	font-weight: normal;
 	color: #333f48;
 	font-size: 0.9rem !important;
 }
+.panels > li > div small.price .infolink+a,
+.panels > li > div small.price #price+a {
+	margin-left: 1rem;
+}
+
 .panels > li > div small.price a > span {
 	font-size: 0.9rem !important;
 }
@@ -2883,12 +2889,12 @@ margin-bottom:1em;
 	display:inline-block;
 	vertical-align:top;
 }
-.resultsList > li:first-child > div {
+/*.resultsList > li:first-child > div {
   margin-left: 0px;
 }
 .resultsList > li:last-child > div {
   margin-right: 0px;
-}
+}*/
 .bnwp > li:nth-child(1) {
 border: 1px darkgrey solid;
 }
