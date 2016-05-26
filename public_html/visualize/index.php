@@ -107,7 +107,7 @@ $(function() {
 	<!-- FEATURE MODULE A -->
 	<div class="row feature_module_a feature_module_a--visualize">
 		<div class="small-6 columns feature_text">
-			<h2 class="lead_text--secondary_headline">Powering command and control </h2>
+			<h3 class="lead_text--secondary_headline">Powering command and control </h3>
 			<p class="lead_text--paragraph">Command and control operations that share real-time video and data bi-directionally with their first response and field teams save lives. Teams can share and annotate on live video streams, communicating and collaborating as events unfold.</p>
 			<div class="feature_links">
 					<a href="http://www.avnetwork.com/av-technology/0002/crime-on-display/84800" class="feature_link">Read Los Angeles Police Department Case Study</a>

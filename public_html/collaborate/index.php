@@ -158,7 +158,7 @@ $(function() {
     <!-- FEATURE MODULE A -->
     <div class="row feature_module_a feature_module_a--collaborate">
         <div class="small-6 columns feature_text">
-            <h2 class="lead_text--secondary_headline">View & interact with all your critical information</h2>
+            <h3 class="lead_text--secondary_headline">View & interact with all your critical information</h3>
             <p class="lead_text--paragraph">Display all of your data sources and HD video conferencing feeds on up to 96 screens – customized for your board room, CxO office, or training center.</p>
             <div class="feature_links">
                 <a href="/conx-wall-exec" class="feature_link">View ConX Wall</a>
