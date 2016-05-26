@@ -145,12 +145,15 @@ $(function() {
     <!-- END MULTICOLUMN TEXT MODULE -->
     <!-- VIDEO MODULE -->
     <div class="video_module video_module_collaborate-a">
-        <a href="/videos?aGcZS6K92fk">
+        <a href="/videos_colorbox?aGcZS6K92fk" class="video-box1">
             <div class="video_link">
                 <h2 class="lead_text--secondary_headline">See how ConX Video Meeting<br>brings teams together</h2>
             </div>
         </a>
     </div>
+  	<script>
+  	$(".video-box1").colorbox({iframe:true, innerWidth:'92%', innerHeight:'92%'});
+  	</script>
     <!-- END VIDEO MODULE -->
     <!-- FEATURE MODULE A -->
     <div class="row feature_module_a feature_module_a--collaborate">
@@ -215,14 +218,16 @@ $(function() {
 
     <!-- VIDEO MODULE -->
     <div class="video_module video_module_collaborate-b">
-        <a href="/videos?SNMjzPRQUA8">
+        <a href="/videos_colorbox?SNMjzPRQUA8" class="video-box2">
             <div class="video_link">
                 <h2 class="lead_text--secondary_headline">See how collaboration is done</h2>
             </div>
         </a>
     </div>
     <!-- END VIDEO MODULE -->
-
+  	<script>
+  	$(".video-box2").colorbox({iframe:true, innerWidth:'92%', innerHeight:'92%'});
+  	</script>
     <script>
         $(document).foundation();
     </script>
