@@ -125,19 +125,21 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                         <hr>
                       </div>
                     </div>
-                    <div class="C5 alternateDivChildL2" style="float:right;">
+                    <div class="C10 alternateDivChildL2" style="clear:both;">
                       <div class="cmsedit info">
                         <h5 class="name">Watch The Canvas Video</h5>
-                        <a href="//www.infocus.com/videos?kjVCe1-mZ9g" class="colorbox-load init-colorbox-load-processed cboxElement"><img class="video_thumbnail img-responsive" typeof="foaf:Image" src="http://www.jupiter.com/system/files/styles/video_thumbnail/private/video-thumbnails/Video_Still_Canvas2_1.jpg?itok=bxT7uDqe" width="740" alt=""></a>
+                        <a href="//www.infocus.com/videos?kjVCe1-mZ9g" class="colorbox-load init-colorbox-load-processed cboxElement"><img class="video_thumbnail" typeof="foaf:Image" src="http://www.jupiter.com/system/files/styles/video_thumbnail/private/video-thumbnails/Video_Still_Canvas2_1.jpg?itok=bxT7uDqe" width="740" alt=""></a>
                       </div>
+                      <hr>
                     </div>
-                    <div class="C5 alternateDivChildL2" style="float:left;">
+                    <div class="C10 alternateDivChildL2" style="clear:both;">
                       <div class="cmsedit info">
                         <h5 class="name">A Secure System</h5>
                         <p>Canvas authenticates users via the customer’s own Windows Active Directory. User permissions, including access to specific sources and features are assigned and managed by the system administrator. Role-based security makes management of large numbers of users and permissions easy and flexible, according privileges to cadres of users sharing a common role in the enterprise.</p>
                         <p>Employing a superior security design, Canvas provides object-level security for all sources, eliminating inadvertent disclosure of restricted content. The system actively prevents users from sharing sources with any other user lacking appropriate permission.</p>
                         <p>Content and communications to and from mobile devices are encrypted, because you should feel as secure working in the field as you do in your office. Upstream video from mobile devices is encrypted with AES 128/256 encryption, including SHA-1, 80-bit authentication. Video sent downstream to mobile devices is protected with HTTP basic authentication and SSL encryption.</p>
                       </div>
+                      <hr>
                     </div>
                     <div class="C10 alternateDivChildL2" style="clear:both;">
                       <div class="cmsedit info">
@@ -147,7 +149,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                       </div>
                       <div class="cmsedit info">
                         <h5 class="name">The Canvas System</h5>
-                        <img alt="" class="img-responsive" src="http://www.jupiter.com/system/files/Canvas%20ecosystem%20diagram_Jan_2016.jpg">
+                        <img alt="" class="img-responsive" src="http://www.jupiter.com/system/files/Canvas%20ecosystem%20diagram_Jan_2016.jpg" style="width:auto;max-width:100%">
                       </div>
                     </div>
                 <?php } else { ?>
@@ -247,13 +249,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                       </div>
                     </div>
                 <?php } else { ?>
-                    <div class="C5 alternateDivChildL2" style="float:right;">
-                        <div class="image-set cmsedit">
-                            <img src="/resources/static/images/display-walls/canvas.jpg" >
-                        </div>
-                    </div>
-                    <div class="C5 alternateDivChildL2" style="float:left;">
+                    <div class="C10 alternateDivChildL2">
                         <div class="info cmsedit">
+                            <div class="image-set cmsedit" style="float:right; margin-left: 1em; padding: 0 1em 1em;">
+                                <img src="/resources/static/images/display-walls/canvas.jpg" >
+                            </div>
                       			<h5 class="name">Instant connection and access</h5>
                       			<strong class="tagline"></strong>
                             <p>Canvas transforms your computer, tablet or smartphone into a portable video wall to provide instant connection and access to essential visual information from anywhere. Share camera feeds, web pages, application screens and real time data for rapid, well-informed decision making.</p>
@@ -263,7 +263,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                       			<h5 class="name">End-to-end collaboration</h5>
                       			<strong class="tagline"></strong>
                             <p>Canvas elevates teamwork to a level previously unimagined by enabling remote users to be both sources and destinations for visual information. Colleagues can annotate directly on live video streams as events unfold, empowering true end-to-end collaboration.</p>
-                            <hr/>
+                            <hr style="clear:both;"/>
   			                </div>
                         <div class="info cmsedit">
                       			<h5 class="name">Collaboration, evolved</h5>
@@ -276,16 +276,16 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                               <li>Create whiteboards for brainstorming</li>
                             </ul>
   			                </div>
+                        <hr style="clear:both;"/>
                     </div>
-                    <div style="clear: both; width:100%; display: block;"></div>
-                    <hr>
-                    <div class="C5 alternateDivChildL2" style="float:right;">
+                    <div class="C10 alternateDivChildL2">
                         <div class="info cmsedit">
                       			<h5 class="name">Watch the Canvas video</h5>
-                            <a href="//www.infocus.com/videos?kjVCe1-mZ9g" class="colorbox-load init-colorbox-load-processed cboxElement"><img class="video_thumbnail img-responsive" typeof="foaf:Image" src="http://www.jupiter.com/system/files/styles/video_thumbnail/private/video-thumbnails/Video_Still_Canvas2_1.jpg?itok=bxT7uDqe" width="740" alt=""></a>
+                            <a href="//www.infocus.com/videos?kjVCe1-mZ9g" class="colorbox-load init-colorbox-load-processed cboxElement"><img class="video_thumbnail img-responsive" typeof="foaf:Image" src="http://www.jupiter.com/system/files/styles/video_thumbnail/private/video-thumbnails/Video_Still_Canvas2_1.jpg?itok=bxT7uDqe" style="width:740px;max-width:100%;" alt=""></a>
   			                </div>
+                        <hr style="clear:both;"/>
                     </div>
-                    <div class="C5 alternateDivChildL2" style="float:left;">
+                    <div class="C10 alternateDivChildL2">
                         <div class="info cmsedit">
                       			<h5 class="name">A secure system</h5>
                       			<strong class="tagline"></strong>
@@ -293,15 +293,14 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                             <p>Employing a superior security design, Canvas provides object-level security for all sources, eliminating inadvertent disclosure of restricted content. The system actively prevents users from sharing sources with any other user lacking appropriate permission.</p>
                             <p>Content and communications to and from mobile devices are encrypted, because you should feel as secure working in the field as you do in your office. Upstream video from mobile devices is encrypted with AES 128/256 encryption, including SHA-1, 80-bit authentication. Video sent downstream to mobile devices is protected with HTTP basic authentication and SSL encryption.</p>
   			                </div>
+                        <hr style="clear:both;"/>
 			              </div>
-                    <div style="clear: both; width:100%; display: block;"></div>
-                    <hr>
                     <div class="C10 alternateDivChildL2">
                       <div class="info cmsedit">
                           <h5 class="name">Use your Canvas video wall for in-room presentations, too</h5>
                           <strong class="tagline"></strong>
                           <p>Your Canvas video wall can be used for displaying content for a local audience when not in a Canvas session. DVI inputs can be connected to a <a href="/display-walls/fusion-catalyst">Fusion Catalyst</a> display wall processor running Canvas for display on the attached video wall. Now the local video wall can be used for making in-room presentations or viewing other sources not intended for sharing and collaboration.    </p>
-                          <hr/>
+                          <hr style="clear:both;"/>
                       </div>
                       <div class="info cmsedit">
                           <h5 class="name">The Canvas system</h5>

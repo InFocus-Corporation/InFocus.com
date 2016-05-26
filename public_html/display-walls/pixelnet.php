@@ -81,7 +81,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <div id="overview" class="active">
                     <div class="C10 alternateDivChildL2">
                         <div class="info cmsedit">
-                            <div class="image-set cmsedit" style="float:right;padding:1em;">
+                            <div class="image-set cmsedit" style="float:right;padding:0 1em 1em;">
                                 <img src="/resources/static/images/display-walls/Product_PixelNet_AnalogHD.jpg">
                             </div>
                             <h5 class="name">Flexible, Scable, Powerful.</h5>
