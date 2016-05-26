@@ -102,11 +102,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     </div>
                     <div class="C10 alternateDivChildL2" style="float: right;">
                         <div class="info cmsedit">
-                            <div class="image-set cmsedit" style="margin-right: 0px;width:657px;max-width:100%;padding:1em;">
-                              <img src="/resources/static/images/display-walls/PixelNet_System_rev.jpg" style="width:auto;">
+                            <div class="image-set cmsedit" style="max-width: 657px; display: inline-block; float: left; text-align:left;">
+                                <h5 class="name">A PixelNet Network®</h5>
+                                <p>PixelNet® makes creating complex topologies of inputs, outputs and switches simple, cost effective, and future proof. Massively scalable, the same component parts can scale from a single input distributed to a single output to hundreds of inputs and outputs. PixelNet® input nodes are small, silent and use very little power. PixelNet® Domain Control software provides an intuitive, object-oriented, drag-and-drop interface to control and manage multiple inputs, outputs and display walls.</p>
+                                <img src="/resources/static/images/display-walls/PixelNet_System_rev.jpg" style="float: left; width:auto;">
                             </div>
-                            <h5 class="name">A PixelNet Network®</h5>
-                            <p>PixelNet® makes creating complex topologies of inputs, outputs and switches simple, cost effective, and future proof. Massively scalable, the same component parts can scale from a single input distributed to a single output to hundreds of inputs and outputs. PixelNet® input nodes are small, silent and use very little power. PixelNet® Domain Control software provides an intuitive, object-oriented, drag-and-drop interface to control and manage multiple inputs, outputs and display walls.</p>
                         </div>
                     </div>
                     <div style="clear: both; display: block"></div>
@@ -288,7 +288,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                 scalable way.
                                 <a id="warp_show"><br><br>Read More...</a>
                             </p>
-                            
+
 
                             <div id="warp_more">
                                 <p>The Warp/Blend Node opens PixelNet® to a variety of new applications using projectors, including simulation, training, and scientific visualization and provides seamless display screens for command and control, boardroom, and digital signage installations.</p>
