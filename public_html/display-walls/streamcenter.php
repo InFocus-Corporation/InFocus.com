@@ -61,7 +61,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 </div>
             </div>
             <div class="tabs">
-                <nav role="navigation" class="C10 transformer-tabs tabs-wrapper">
+                <nav role="navigation" class="C10 transformer-tabs tabs-wrapper" style="margin-top: 2em;">
                     <ul>
                         <li><a href="#overview" class="active">Overview</a></li>
                         <li><a href="#details">Details</a></li>
@@ -78,7 +78,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     			<strong class="tagline"></strong>
                           <p>Each StreamCenter chassis can decode up to 32 channels of HD video. For projects with large numbers of sources, multiple StreamCenters can be put to work decoding hundreds or even thousands of streams simultaneously.</p>
                           <p>StreamCenter decodes most major streaming formats, including H.264, MPEG-2, MPEG-4, and MJPEG at resolutions up to 1920x1080.</p>
-
+                          <div style="clear: both;"></div>
 			                </div>
                     </div>
                 </div>
