@@ -1,4 +1,5 @@
 <?PHP
+/*
 	# ubvars.php: this file/page is not visited directly; instead you
 	# require() it from within another page where you want to access
 	# UserBase variables (logged-in username, etc).  See the ubinfo.php
@@ -148,4 +149,4 @@
 			}
 		}
 	}
-?>
+?>*/

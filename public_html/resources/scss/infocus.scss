@@ -1214,7 +1214,6 @@ header + .hero_row > .row {
 .present_page {
     .feature_links {
       @media screen and (min-width: 40em) {
-        padding-bottom: 35px;
         margin-top: 77px;
       }
     }
@@ -1650,6 +1649,9 @@ header + .hero_row > .row {
               font-size: 10px;
             }
         }
+        .promo_module_link:hover {
+            color: $white;
+        }
     }
     .promo_module_c {
         padding: 0;
@@ -1954,6 +1956,11 @@ div.video_module {
         bottom: 36px;
         margin-bottom: 0px;
     }
+    &.callout--picture {
+      .module--tag {
+        margin-bottom: 1.8em;
+      }
+    }
   }
   .link--inverted {
     text-align: center;
@@ -1962,7 +1969,7 @@ div.video_module {
     right: 2.5em;
   }
   h5 {
-    margin-bottom: 1.85em;
+    margin-bottom: 1em;
     text-align: left;
     a {
       color: $infocus_light_blue;
