@@ -49,10 +49,10 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 </div>
             </div>
 
-            <div class="C10 alternateDivChildL2">
+            <div class="C10 Col_child">
                 <div class="info">
-                    <div class="image-set" style="float:right; margin-left: 1em;">
-                        <img src="/resources/static/images/display-walls/fusion-catalyst1.jpg">
+                    <div class="image-set" style="float:right; margin-left: 1em; padding: 0 1em 1em;">
+                        <img src="/resources/static/images/display-walls/fusion-catalyst1.jpg" style="width:460px;max-width:100%;">
                     </div>
                     <strong class="tagline mysqledit" id="header">The next generation of display wall processors has arrived.</strong>
                     <div class="mysqledit" id="blurb">

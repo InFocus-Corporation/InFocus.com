@@ -1878,6 +1878,7 @@ ul.feature-list li {
     padding-left: 1em;
     line-height: 1.5em;
     position: relative;
+    text-align: left;
 }
 
 .feature-list ul li:after,
