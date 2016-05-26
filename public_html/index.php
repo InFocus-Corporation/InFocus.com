@@ -111,7 +111,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	</div>
 	<!-- END VIDEO MODULE -->
 	<script>
-	$(".video-box").colorbox({iframe:true, innerWidth:'560px', innerHeight:'395px'});
+	$(".video-box").colorbox({iframe:true, innerWidth:'92%', innerHeight:'92%'});
 	</script>
 
 	<div class="row homepage--callouts" data-equalizer data-equalize-on="medium">
