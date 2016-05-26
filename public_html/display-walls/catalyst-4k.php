@@ -34,11 +34,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <a href="/">Home</a> &gt;
                     <a href="/display-walls/">Display Walls</a> &gt;
-                    <a href="/display-walls/catalyst-4k">Catalyst 4K</a>
+                    <a href="/display-walls/catalyst-4k">Jupiter Catalyst 4K</a>
                 </ol>
             </div>
-            <div class="productheader C10 Col_child C4x6_child">
-                <div><h1 class="mysqledit h2" id="pagetitle">Catalyst 4K</h1></div>
+            <div class="productheader C10 Col_child C6x4_child">
+                <div><h1 class="mysqledit h2" id="pagetitle">Jupiter Catalyst 4K</h1></div>
                 <div>
                     <ul class="action-links Col_child">
                         <li></li>
@@ -120,7 +120,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <div class="image-set cmsedit" style="float: right; margin-right: 0; max-width: 260px;">
                               <img src="/resources/static/images/display-walls/InFocus-Jupiter-Catalyst-4K-Back.jpg" >
                           </div>
-                        
+
                         <strong class="tagline mysqledit">System Architecture Chassis</strong>
                         <p>
                             PCI Express 3.0 Chassis with 6 high speed slots for input, output, or auxiliary cards<br>
@@ -138,7 +138,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                             Catalyst 4K Expansion Chassis: PCI Express 2.0 Chassis with 7 slots for input or output cards
                         </p>
                         <br>
-                    
+
                         <strong class="tagline mysqledit">Quad HD Decoder Input Card (Optional)</strong>
                         <p>
                             Up to 112 inputs in 1 CPU Chassis + 4 Expansion Chassis<br>
