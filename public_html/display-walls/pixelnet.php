@@ -46,7 +46,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     <a href="/display-walls/pixelnet">Jupiter PixelNet</a>
                 </ol>
             </div>
-            <div class="productheader C10 Col_child C4x6_child">
+            <div class="productheader C10 Col_child C6x4_child">
                 <div><h1 class="mysqledit h2" id="pagetitle">Jupiter PixelNet</h1></div>
                 <div>
                     <ul class="action-links Col_child">
@@ -56,8 +56,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     </ul>
                 </div>
             </div>
-            <div class="C10 Col_child C6x4_child">
+            <div class="C10 Col_child">
                 <div class="info">
+                    <div class="image-set" style="float:right; margin-left: 1em; padding: 0 1em 1em;">
+                        <img src="/resources/static/images/display-walls/pixelnet_hero-1.jpg" style="width:460px;max-width:100%;">
+                    </div>
                     <strong class="tagline mysqledit" id="header">A better way to get visual information where you need it.</strong>
                     <span>PixelNet®adopts Gigabit Ethernet technology to create a network of input and output nodes to drive high resolution, real time video walls.</span>
                     <div class="mysqledit" id="blurb">
@@ -65,9 +68,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 
                         <p>PixelNet® makes creating complex topologies of inputs, outputs and switches simple, cost effective, and future proof. Massively scalable, the same component parts can scale from a single input distributed to a single output to hundreds of inputs and outputs. PixelNet® input nodes are small, silent and use very little power. PixelNet® Domain Control software provides an intuitive, object-oriented, drag-and-drop interface to control and manage multiple inputs, outputs and display walls.</p>
                     </div>
-                </div>
-                <div class="image-set">
-                    <img src="/resources/static/images/display-walls/pixelnet_hero-1.jpg">
                 </div>
             </div>
             <div class="tabs">
