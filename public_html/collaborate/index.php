@@ -184,7 +184,7 @@ $(function() {
             </div>
             <div class="module_links">
                 <div>
-                    <a href="/product-finder" class="promo_module_link">
+                    <a href="/peripherals/MVP100" class="promo_module_link">
                         conx phone
                     </a>
                 </div>
@@ -195,8 +195,7 @@ $(function() {
             <div class="module_text">
                 <div class="module_text_inner">
                     <p class="lead_text--headline">
-                        Hear every word.<br/>
-    					See every face.
+                        Hear every word.<br/>See every face.
                     </p>
                 </div>
             </div>
