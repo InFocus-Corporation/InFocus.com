@@ -1046,7 +1046,8 @@ table#table-comparison .btn.buy-now  {
     text-transform: capitalize;
 }
 .infocusTable td[data-label='Price US'] { min-width: 128px; }
-table#table-comparison td:first-child {  text-align: right; }
+.tabs table#table-comparison td:first-child {  text-align: right; }
+.cmsedit table#table-comparison td:first-child {  text-align: center; }
 
 
 
