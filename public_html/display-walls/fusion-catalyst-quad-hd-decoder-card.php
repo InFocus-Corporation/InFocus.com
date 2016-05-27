@@ -73,7 +73,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     </ul>
                 </nav>
                 <div id="overview" class="active">
-                    <div class="C6" style="float: left;">
+                    <div class="C10">
                       <div class="info cmsedit">
                           <h5 class="name"></h5>
                           <strong class="tagline">Leading Technology, Maximum Flexibility</strong>

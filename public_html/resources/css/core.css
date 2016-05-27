@@ -1046,7 +1046,8 @@ table#table-comparison .btn.buy-now  {
     text-transform: capitalize;
 }
 .infocusTable td[data-label='Price US'] { min-width: 128px; }
-table#table-comparison td:first-child {  text-align: right; }
+.tabs table#table-comparison td:first-child {  text-align: right; }
+.cmsedit table#table-comparison td:first-child {  text-align: center; }
 
 
 
@@ -1878,6 +1879,7 @@ ul.feature-list li {
     padding-left: 1em;
     line-height: 1.5em;
     position: relative;
+    text-align: left;
 }
 
 .feature-list ul li:after,
@@ -2382,21 +2384,26 @@ margin-left:15px;
 	display: block;
 	width: 100%;
 	margin: 0;
-	padding: 0 1.4em;
+	padding: 0 1rem;
 	box-sizing: border-box;
-	text-align: left;
+	text-align: center;
 	font-family: 'GoodPro-Wide';
 	font-weight: bold;
 	font-size: 0.9rem;
 	color: #333f48;
 }
 .panels > li > div small.price a {
-	float: right;
+	display: inline-block;
 	font-family: 'GoodPro-Wide';
 	font-weight: normal;
 	color: #333f48;
 	font-size: 0.9rem !important;
 }
+.panels > li > div small.price .infolink+a,
+.panels > li > div small.price #price+a {
+	margin-left: 1rem;
+}
+
 .panels > li > div small.price a > span {
 	font-size: 0.9rem !important;
 }
@@ -2883,12 +2890,12 @@ margin-bottom:1em;
 	display:inline-block;
 	vertical-align:top;
 }
-.resultsList > li:first-child > div {
+/*.resultsList > li:first-child > div {
   margin-left: 0px;
 }
 .resultsList > li:last-child > div {
   margin-right: 0px;
-}
+}*/
 .bnwp > li:nth-child(1) {
 border: 1px darkgrey solid;
 }
@@ -3709,4 +3716,68 @@ table.rwd-table-large > tbody > tr.item{
     position: absolute;
     margin-left: -22px;
   }
+}
+
+#infocus-team h2 {
+	margin-top: 1.2rem;
+}
+.about--page .staff-list {
+	margin-top: 3rem;
+}
+.about--page .staff-list li {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 1rem;
+	margin-bottom: 3rem;
+	overflow: hidden;
+}
+.about--page .staff-list li:last-child {
+	border-bottom: none;
+}
+.about--page .staff-list div.avatar {
+	float: left;
+	display: block;
+	width: 175px;
+}
+.about--page .staff-list div.bio {
+	margin-left: 175px;
+}
+.about--page .staff-list div.bio h6 {
+	font-size: 1.6rem;
+}
+.about--page .staff-list div.bio h5 {
+	font-size: 1.1rem;
+	margin-bottom: 1rem;
+}
+.about--page .staff-list div.bio p {
+	font-size: 1rem;
+	line-height: 1.4rem;
+}
+@media screen and (max-width: 62em) {
+	.about--page .staff-list div.avatar {
+		padding-left: 25px;
+	}
+	.about--page .staff-list div.bio {
+		margin-left: 200px;
+	}
+}
+@media screen and (max-width: 40em) {
+	.about--page .staff-list li {
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+	.about--page .staff-list div.avatar {
+		box-sizing: border-box;
+		padding-left: 0px;
+		width: 100%;
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+	.about--page .staff-list div.bio {
+		margin-left: 0;
+		clear: both;
+	}
+	.about--page .staff-list div.bio h6,
+	.about--page .staff-list div.bio h5 {
+		text-align: center;
+	}
 }

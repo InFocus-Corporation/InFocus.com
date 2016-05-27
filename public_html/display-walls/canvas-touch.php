@@ -94,10 +94,16 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                             <li><strong>SimpleShare&trade; windows</strong></li>
                           </ul>
                           <p>All of Canvas’ rich collaboration tools are available so users can annotate on-screen, share whiteboards, and jointly edit documents, spreadsheets, and presentations.</p>
+                            <hr>
+                      </div>
+                        <div class="info cmsedit">
                                 <h5 class="name">Wirelessly Share Information</h5>
                                 <strong class="tagline"></strong>
                           <p>Users can wirelessly present content from their laptop to Canvas Touch by using SimpleShare technology, even if it does not have Canvas installed.</p>
                           <p>They can present their entire desktop or selected application window to both local and remote Canvas participants.</p>
+                            <hr>
+                        </div>
+                        <div class="info cmsedit">
                                 <h5 class="name">The Power Of Touch</h5>
                                 <strong class="tagline"></strong>
                           <p>Touchscreens bring information to life. Canvas Touch employs a beautiful 57-, 65-, 70-, or 80-inch interactive display that empowers teams with hands-on access to critical Canvas video and data.</p>
@@ -107,6 +113,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                             <li><strong>Perform Windows gestures, such as tap, slide, swipe, pinch, and rotate to get a global view of everything on the screen</strong></li>
                             <li><strong>Wireless keyboard and mouse included to easily control the display from your seat</strong></li>
                           </ul>
+                            <hr>
+                        </div>
+                        <div class="info cmsedit">
                                 <h5 class="name">Powered By Windows 10</h5>
                                 <strong class="tagline"></strong>
                           <p>The 80-inch Canvas Touch model is built on Windows 10, offering the performance and flexibility you need for all of your applications. Windows 10 provides an elegant interface that leverages familiar aspects of previous Windows operating systems so that everyone can intuitively use it, plus new features that you'll love.</p>

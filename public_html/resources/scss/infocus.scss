@@ -905,7 +905,7 @@ header + .hero_row > .row {
     }
     .lead_text--paragraph {
         color: $white;
-        font-size: .7rem;
+        font-size: .6rem;
         line-height: 1.2;
         @media screen and (min-width: 30em) {
           font-size: .8rem;
@@ -922,11 +922,7 @@ header + .hero_row > .row {
           line-height: 1.6;
         }
     }
-    &.feature_module_a--orange .feature_text .lead_text--paragraph {
-        @media screen and (max-width: 30em) {
-          font-size: .6rem;
-        }
-    }
+
     .feature_links {
         display: block;
         position: absolute;
@@ -943,10 +939,13 @@ header + .hero_row > .row {
     }
     .feature_link {
         display: block;
-        font-size: 10px;
+        font-size: 8px;
         color: $infocus_light_blue;
         font-family: 'GoodPro-WideMedium';
         text-transform: uppercase;
+        @media screen and (min-width: 25em) {
+          font-size: 10px;
+        }
         @media screen and (min-width: 30em) {
           font-size: 12px;
         }
@@ -1956,6 +1955,11 @@ div.video_module {
         bottom: 36px;
         margin-bottom: 0px;
     }
+    &.callout--picture {
+      .module--tag {
+        margin-bottom: 1.8em;
+      }
+    }
   }
   .link--inverted {
     text-align: center;
@@ -1964,7 +1968,7 @@ div.video_module {
     right: 2.5em;
   }
   h5 {
-    margin-bottom: 1.85em;
+    margin-bottom: 1em;
     text-align: left;
     a {
       color: $infocus_light_blue;

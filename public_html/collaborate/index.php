@@ -145,17 +145,20 @@ $(function() {
     <!-- END MULTICOLUMN TEXT MODULE -->
     <!-- VIDEO MODULE -->
     <div class="video_module video_module_collaborate-a">
-        <a href="/videos?aGcZS6K92fk">
+        <a href="/videos_colorbox?aGcZS6K92fk" class="video-box1">
             <div class="video_link">
                 <h2 class="lead_text--secondary_headline">See how ConX Video Meeting<br>brings teams together</h2>
             </div>
         </a>
     </div>
+  	<script>
+  	$(".video-box1").colorbox({iframe:true, innerWidth:'92%', innerHeight:'92%'});
+  	</script>
     <!-- END VIDEO MODULE -->
     <!-- FEATURE MODULE A -->
     <div class="row feature_module_a feature_module_a--collaborate">
         <div class="small-6 columns feature_text">
-            <h2 class="lead_text--secondary_headline">View & interact with all your critical information</h2>
+            <h3 class="lead_text--secondary_headline">View & interact with all your critical information</h3>
             <p class="lead_text--paragraph">Display all of your data sources and HD video conferencing feeds on up to 96 screens – customized for your board room, CxO office, or training center.</p>
             <div class="feature_links">
                 <a href="/conx-wall-exec" class="feature_link">View ConX Wall</a>
@@ -181,7 +184,7 @@ $(function() {
             </div>
             <div class="module_links">
                 <div>
-                    <a href="/product-finder" class="promo_module_link">
+                    <a href="/peripherals/MVP100" class="promo_module_link">
                         conx phone
                     </a>
                 </div>
@@ -192,8 +195,7 @@ $(function() {
             <div class="module_text">
                 <div class="module_text_inner">
                     <p class="lead_text--headline">
-                        Hear every word.<br/>
-    					See every face.
+                        Hear every word.<br/>See every face.
                     </p>
                 </div>
             </div>
@@ -215,14 +217,16 @@ $(function() {
 
     <!-- VIDEO MODULE -->
     <div class="video_module video_module_collaborate-b">
-        <a href="/videos?SNMjzPRQUA8">
+        <a href="/videos_colorbox?SNMjzPRQUA8" class="video-box2">
             <div class="video_link">
                 <h2 class="lead_text--secondary_headline">See how collaboration is done</h2>
             </div>
         </a>
     </div>
     <!-- END VIDEO MODULE -->
-
+  	<script>
+  	$(".video-box2").colorbox({iframe:true, innerWidth:'92%', innerHeight:'92%'});
+  	</script>
     <script>
         $(document).foundation();
     </script>

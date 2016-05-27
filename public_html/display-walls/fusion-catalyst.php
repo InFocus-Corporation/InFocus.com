@@ -49,10 +49,10 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 </div>
             </div>
 
-            <div class="C10 alternateDivChildL2">
+            <div class="C10 Col_child">
                 <div class="info">
-                    <div class="image-set" style="float:right; margin-left: 1em;">
-                        <img src="/resources/static/images/display-walls/fusion-catalyst1.jpg">
+                    <div class="image-set" style="float:right; margin-left: 1em; padding: 0 1em 1em;">
+                        <img src="/resources/static/images/display-walls/fusion-catalyst1.jpg" style="width:460px;max-width:100%;">
                     </div>
                     <strong class="tagline mysqledit" id="header">The next generation of display wall processors has arrived.</strong>
                     <div class="mysqledit" id="blurb">
@@ -110,7 +110,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
               			  </li>
                       <li>
               					<div>
-                          <a href="quad-hd-decoder-card-fusion-catalyst"><h6 class="title">Quad HD Decoder Card <br/>
+                          <a href="fusion-catalyst-quad-hd-decoder-card"><h6 class="title">Quad HD Decoder Card <br/>
                           for Fusion Catalyst</h6></a>
               				    <ul class="spec-list">
                             <li>Support for MPEG-2, MPEG-4, H.264, and MJPEG formats.</li>
@@ -124,7 +124,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                   </div>
                     <div class="C10 alternateDivChildL2">
                       <div class="info cmsedit">
-                          <div class="image-set cmsedit" style="float: right; padding: 1em;">
+                          <div class="image-set cmsedit" style="float: right; padding: 0 1em 1em;">
                               <img src="/resources/static/images/display-walls/fusion-catalyst2.jpg" >
                           </div>
                           <h5 class="name">The Fusion Catalyst 4500™ Product Line</h5>
@@ -189,38 +189,52 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <div id="details">
                     <div class="C10 alternateDivChildL2">
                       <div class="info cmsedit">
-                          <div class="image-set cmsedit" style="float: right; padding: 1em;">
+                          <div class="image-set cmsedit" style="float: right; padding: 0 1em 1em;">
                               <img src="/resources/static/images/display-walls/fusion-catalyst2.jpg" >
                           </div>
-                          <p><strong>Express Switch Fabric: Critical for Control Room Operations PCI</strong></p>
+                          <h5 class="name">Express Switch Fabric: Critical for Control Room Operations PCI</h5>
                           <p>Fusion Catalyst display wall processors feature Second Generation PCI Express technology, creating a true non-blocking communication infrastructure within each chassis. With at least double the bandwidth found in its competition, and up to eight times that of previous generations of Fusion 900-series processors, the new Fusion Catalyst family of display wall processors provides more expandability, faster graphics, real time SD/DVI/RGB/HD frame rates, and better overall system performance, regardless of configuration size.</p>
-                          <hr>
-                          <p><strong>Run Applications on the Controller</strong></p>
+                          <hr style="clear:both;display:block;">
+                      </div>
+                      <div class="info cmsedit">
+                          <h5 class="name">Run Applications on the Controller</h5>
                           <p>Fusion Catalyst processors are also PCs, with Intel CPUs and Microsoft Windows, enabling applications to be run directly on the processor. The Fusion Catalyst 8000 and Fusion Catalyst 4000 models feature two Quad Core Xeon CPUs and up to 64 GB RAM, while the Fusion Catalyst 1000 features a Core 2 Duo with 4 GB RAM. Speedy, capacious drives extend the functionality. The result is unrivaled performance for even the most demanding command and control applications.</p>
                           <hr>
-                          <p><strong>High Performance Graphics</strong></p>
+                      </div>
+                      <div class="info cmsedit">
+                          <h5 class="name">High Performance Graphics</h5>
                           <p>Fusion Catalyst utilizes the most advanced graphics GPU architecture found in a display wall processor today--each output card capable of driving two displays at up to 2560x1600 (Dual-Link DVI) digital, or up to 2048x1536 analog. With 11 GB/s of internal bandwidth and 256 MB of GDDR3 memory per card, the Fusion Catalyst can render complex application data while displaying multiple video or computer inputs simultaneously. All outputs are synchronized to eliminate “frame tearing” between displays.</p>
                           <hr>
-                          <p><strong>Abundant, Powerful Inputs</strong></p>
+                      </div>
+                      <div class="info cmsedit">
+                          <h5 class="name">Abundant, Powerful Inputs</h5>
                           <p>Fusion Catalyst display wall processors can be configured to specific direct input connection requirements. The Dual DVI-I input card handles input signals such as single- and dual-link DVI up to 2560x1600, analog VGA inputs up to 2048x1200, and component video progressive-scan HD inputs up to 1080p60.</p>
                           <p>The Octal SD Video input card handles up standard definition composite and S-Video inputs through a rackmountable input panel. It uses Jupiter’s motion-compensated de-interlacing and scaling engine to provide world class video quality, with scalable windows that are freely sized and placed on the display wall.</p>
                           <p>The Quad HD Decoder Card supports HD or SD streams in MPEG-2, MPEG-4, MJPEG, and H.264 formats. Most popular IP cameras and encoders are supported, as are desktop PC streams with real-time updates.</p>
                           <p>All input cards employ Jupiter’s proprietary communication technology, ensuring that each card can transmit and display input signals at full frame rate – no dropped frames regardless of output window size – while maintaining absolutely perfect visualization. In addition, each source can be placed into as many as four separately positioned and scaled windows, simultaneously. Overlap, PIP, multiple PIP – virtually any arrangement is possible without performance penalty.</p>
                           <hr>
-                          <p><strong>Uniquely Engineered for Display Walls</strong></p>
+                      </div>
+                      <div class="info cmsedit">
+                          <h5 class="name">Uniquely Engineered for Display Walls</h5>
                           <p>Jupiter Systems designs all its own software and hardware as an integrated whole, creating a tightly woven system architecture that provides the best functionality and achieves the highest possible performance. This provides Jupiter with a better foundation for supporting our products in the field – we have the sort of deep system knowledge that no integrator of 3rd party or COTS components can claim.</p>
                           <hr>
-                          <p><strong>System Availability</strong></p>
+                      </div>
+                      <div class="info cmsedit">
+                          <h5 class="name">System Availability</h5>
                           <p>Fusion Catalyst systems are designed for continuous 24/7 operation, specifically for the most demanding visualization environments where availability of critical decision support systems can literally mean life or death. To this end, the Fusion Catalyst 4000 features many redundant components including hot-swappable N+1 redundant power supplies, hot-swappable system fans, and hot-swappable disk drives configured as a RAID 1 array. The Fusion Catalyst 8000 adds hot-swappable input and output cards to that list. Hardware and software continuously monitor key system parameters such as ambient chassis temperature, CPU temperatures, power supply voltages, fan tachometers, and ECC memory performance, automatically alerting users to conditions that require direct intervention. System events are logged both in ControlPoint software and in the standard Windows event log.</p>
                           <hr>
-                          <p><strong>ControlPoint™ GUI, Protocol and API</strong></p>
+                      </div>
+                      <div class="info cmsedit">
+                          <h5 class="name">ControlPoint™ GUI, Protocol and API</h5>
                           <p>Fusion Catalyst is delivered with ControlPoint software standard. ControlPoint is a complete, integrated, and intuitive software solution for the control and management of the display wall processor. ControlPoint is a client/server based system: the server resides on the Fusion Catalyst processor directly accessing hardware functionality, whereas the client is installed on a network accessible PC running Windows XP/Vista/7. ControlPoint client and server communicate over a TCP/IP connection using an open, clear-text communications protocol: the ControlPoint protocol. ControlPoint protocol and supporting APIs can be used for custom applications and control. Simple applications using JavaScript and HTML can be generated in minutes. Using well-documented API, the complete power of the Fusion Catalyst processor is available to those who truly want a customized interface and complete control. An RS-232 gateway is provided for devices requiring serial communication.</p>
                           <p>
                           The ControlPoint client provides a consistent user interface to start, position, size, and scale application, DVI, RGB, HD, and SD video windows remotely via a network client.&nbsp;ControlPoint offers an object-based, drag and drop interface – defined objects such as DVI, RGB, HD, and Video inputs, Streaming Video inputs, web browsers, image viewers, and local and remote application windows can be dragged and dropped onto the display mimic. Setting up complex combinations of graphical and real-time data is simple, quick and intuitive. Toolbar shortcuts to commonly used functionality are provided to make adjustments to windows even more convenient.</p>
                           <p>ControlPoint provides the ability to save the state of the display wall into a layout, stored on the display processor, and to quickly recall saved layouts directly from the user interface or from user-assignable hot-keys. The number of layouts that can be stored is enormous, limited only by the size of the hard drive on the Fusion Catalyst.</p>
                           <p><a href="/resources/documents/InFocus-Jupiter-ControlPoint-with-ControlPoint-Security-Datasheet-EN.pdf" target="_blank">Download ControlPoint with ControlPoint Security Data Sheet</a></p>
                           <hr>
-                          <p><strong>Safeguard Operations with ControlPoint Security™</strong></p>
+                      </div>
+                      <div class="info cmsedit">
+                          <h5 class="name">Safeguard Operations with ControlPoint Security™</h5>
                           <p>Fusion Catalyst™ processors ship with ControlPoint Security™, airtight security tools indigenous to Jupiter’s ControlPoint™ wall management software suite. ControlPoint Security features Active Directory integration, providing secure login with the standard user name and password controlled by the customer’s IT department. With security defined at the object level, managers can create discrete management and access permissions for wall segments, layouts, inputs, applications, and remote cursor control. User activity and event logging are performed at sub-second resolution, allowing thorough forensic analysis.</p>
                       </div>
                     </div>
