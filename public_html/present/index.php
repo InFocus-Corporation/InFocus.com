@@ -76,7 +76,7 @@ $(function() {
     <div class="row multicolumn_text_module">
         <div class="small-12 large-4 columns text-center three_column_module">
             <p class="lead_text--paragraph">
-                Plug in any notebook, tablet or smartphone to an InFocus projector or display via HDMI, VGA, USB and more. 
+                Plug in any notebook, tablet or smartphone to an InFocus projector or display via HDMI, VGA, USB and more.
             </p>
             <a href="/projectors/" class="text_module_link">View Projectors</a>
             <a href="/displays/" class="text_module_link">View Touchscreens</a>
@@ -105,7 +105,7 @@ $(function() {
                 <h2 class="lead_text--secondary_headline widelight">Capture ideas on a<br>digital canvas</h2>
     			<p class="lead_text--paragraph">Take notes, draw, save and share the work with the same touchscreen you're presenting on. It's the efficient, economical, and odor-free answer to dry erase.</p>
                 <div class="feature_links">
-                    <a href="/displays/JTOUCH-Series" class="feature_link">View Whiteboard Displays</a><br>
+                    <a href="/displays/JTOUCH-Whiteboard-SERIES" class="feature_link">View Whiteboard Displays</a><br>
                 </div>
             </div>
         </div>
