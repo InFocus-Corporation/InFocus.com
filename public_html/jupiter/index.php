@@ -45,21 +45,21 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
               Find information about the entire line of Jupiter products at the links below:
           </p>
           <br>
-          <a href="http://www.jupiter.com/solutions/canvas" class="text_module_link">Canvas</a>
+          <a href="/display-walls/canvas" class="text_module_link">Canvas</a>
           <br>
-          <a href="http://www.jupiter.com/solutions/canvas-crs-4k" class="text_module_link">Canvas CRS 4k</a>
+          <a href="/display-walls/canvas-crs4k" class="text_module_link">Canvas CRS 4k</a>
           <br>
-          <a href="http://www.jupiter.com/solutions/canvas-touch" class="text_module_link">Canvas Touch</a>
+          <a href="/display-walls/canvas-touch" class="text_module_link">Canvas Touch</a>
           <br>
           <a href="/conx-wall-exec" class="text_module_link">ConX Exec and ConX Wall</a>
           <br>
-          <a href="http://www.jupiter.com/solutions/fusion-catalyst" class="text_module_link">Fusion Catalyst</a>
+          <a href="/display-walls/fusion-catalyst" class="text_module_link">Fusion Catalyst</a>
           <br>
-          <a href="http://www.jupiter.com/solutions/pixelnet" class="text_module_link">Pixelnet</a>
+          <a href="/display-walls/pixelnet" class="text_module_link">Pixelnet</a>
           <br>
-          <a href="http://www.jupiter.com/solutions/streamcenter" class="text_module_link">StreamCenter</a>
+          <a href="/display-walls/streamcenter" class="text_module_link">StreamCenter</a>
           <br>
-          <a href="http://www.jupiter.com/solutions/vizionplus-ii" class="text_module_link">VizionPlus II</a>
+          <a href="/display-walls/vizionplus-ii" class="text_module_link">VizionPlus II</a>
       </div>
       <div class="small-12 large-4 columns text-center">
           <h4 class="text--gray">The best training and expert support in the industry</h4>
@@ -83,7 +83,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
               If you haven't found what you need, please call us at 877-388-8360
           </p>
           <br>
-          <a href="http://www.jupiter.com/about/contact" class="text_module_link">Email Us</a>
+          <a href="/resources/forms/contactus" class="text_module_link">Email Us</a>
       </div>
     </div>
 

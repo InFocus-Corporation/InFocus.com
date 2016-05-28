@@ -69,7 +69,7 @@ $(function() {
                 Communicating with video and data provides so many benefits – better understanding, less cost, and more – that you’ll never want to call without it.
             </p>
             <p class="lead_text--paragraph">
-                <a href="/peripherals/ConX-Series#videos" class="text_module_link">ConX Video Communication Story</a>
+                <a href="http://www.infocus.com/resources/documents/InFocus-ConX-Ecosystem-Datasheet-EN.pdf" class="text_module_link">ConX Video Communication Story</a>
             </p>
         </div>
     </div>
@@ -102,7 +102,7 @@ $(function() {
             <p class="lead_text--paragraph">
                 Call anyone with most any device, including with smartphones, tablets, laptops, video phones, and other SIP and H.323 devices – no matter where you are.
             </p>
-            <a href="/peripherals/ConX-Series#datasheets" class="text_module_link">Free Video Conferencing White Paper</a>
+            <a href="http://www.infocus.com/resources/documents/ConX/InFocus-Video-Collaboration-WhitePaper.pdf" class="text_module_link">Free Video Conferencing White Paper</a>
         </div>
     </div>
     <!-- END MULTICOLUMN TEXT MODULE -->
@@ -145,7 +145,7 @@ $(function() {
     <!-- END MULTICOLUMN TEXT MODULE -->
     <!-- VIDEO MODULE -->
     <div class="video_module video_module_collaborate-a">
-        <a href="/videos_colorbox?aGcZS6K92fk" class="video-box1">
+        <a href="/videos_colorbox?G4RESM7h3KA" class="video-box1">
             <div class="video_link">
                 <h2 class="lead_text--secondary_headline">See how ConX Video Meeting<br>brings teams together</h2>
             </div>
