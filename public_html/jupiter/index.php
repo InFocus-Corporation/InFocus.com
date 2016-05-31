@@ -45,21 +45,21 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
               Find information about the entire line of Jupiter products at the links below:
           </p>
           <br>
-          <a href="/display-walls/canvas" class="text_module_link">Canvas</a>
+          <a href="/collaborative-visualization/canvas" class="text_module_link">Canvas</a>
           <br>
-          <a href="/display-walls/canvas-crs4k" class="text_module_link">Canvas CRS 4k</a>
+          <a href="/collaborative-visualization/canvas-crs4k" class="text_module_link">Canvas CRS 4k</a>
           <br>
-          <a href="/display-walls/canvas-touch" class="text_module_link">Canvas Touch</a>
+          <a href="/collaborative-visualization/canvas-touch" class="text_module_link">Canvas Touch</a>
           <br>
           <a href="/conx-wall-exec" class="text_module_link">ConX Exec and ConX Wall</a>
           <br>
-          <a href="/display-walls/fusion-catalyst" class="text_module_link">Fusion Catalyst</a>
+          <a href="/collaborative-visualization/fusion-catalyst" class="text_module_link">Fusion Catalyst</a>
           <br>
-          <a href="/display-walls/pixelnet" class="text_module_link">Pixelnet</a>
+          <a href="/collaborative-visualization/pixelnet" class="text_module_link">Pixelnet</a>
           <br>
-          <a href="/display-walls/streamcenter" class="text_module_link">StreamCenter</a>
+          <a href="/collaborative-visualization/streamcenter" class="text_module_link">StreamCenter</a>
           <br>
-          <a href="/display-walls/vizionplus-ii" class="text_module_link">VizionPlus II</a>
+          <a href="/collaborative-visualization/vizionplus-ii" class="text_module_link">VizionPlus II</a>
       </div>
       <div class="small-12 large-4 columns text-center">
           <h4 class="text--gray">The best training and expert support in the industry</h4>

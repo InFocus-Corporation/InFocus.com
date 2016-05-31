@@ -57,7 +57,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 						</a>
 						<div class="module--tag module--tag--bottom">
 							<span><a class="cta" href="/visualize/">Solutions for visualization</a></span><br/>
-							<span><a class="cta" href="/display-walls/">Our display walls</a></span>
+							<span><a class="cta" href="/collaborative-visualization/">Collaborative visualization solutions</a></span>
 						</div>
 					</div>
 				</div>
@@ -74,7 +74,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 							<h5>Is it possible to share and inspire students in a better, more engaging and more impactful way? Absolutely.</h5>
 						</a>
 						<div class="module--tag module--tag--bottom">
-								<span><a class="cta" href="/teach/">Solutions to teach & train</a></span><br/>
+								<span><a class="cta" href="/teach/">Solutions to teach &amp; train</a></span><br/>
 								<span><a class="cta" href="/inspire">Our Inspire education program</a></span>
 						</div>
 					</div>

@@ -34,8 +34,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             <div class="breadcrumb">
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <a href="/">Home</a> &gt;
-                    <a href="/display-walls/">Display Walls</a> &gt;
-                    <a href="/display-walls/canvas-touch">Jupiter Canvas Touch</a>
+                    <a href="/collaborative-visualization/">Display Walls</a> &gt;
+                    <a href="/collaborative-visualization/canvas-touch">Jupiter Canvas Touch</a>
                 </ol>
             </div>
             <div class="productheader C10 Col_child C6x4_child">
@@ -56,7 +56,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     <strong class="tagline mysqledit" id="header">The Essential Endpoint for Your Canvas Environment</strong>
                     <div class="mysqledit" id="blurb">
                         <p>Canvas Touch extends the power of Canvas’ award-winning visualization solution to conference rooms, huddle spaces, personal offices, or anywhere else groups meet and collaborate.</p>
-                        <p>Use the powerful touchscreen interface of Canvas Touch to collaborate with remote colleagues that run <a href="/display-walls/canvas">Canvas</a>, including sharing live video, real-time data, application screens, web windows, documents, and presentations.</p>
+                        <p>Use the powerful touchscreen interface of Canvas Touch to collaborate with remote colleagues that run <a href="/collaborative-visualization/canvas">Canvas</a>, including sharing live video, real-time data, application screens, web windows, documents, and presentations.</p>
                     </div>
                 </div>
                 <ul class="feature-list" style="padding-bottom:50px; width:38%;">

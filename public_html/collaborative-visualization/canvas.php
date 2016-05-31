@@ -34,8 +34,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             <div class="breadcrumb">
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <a href="/">Home</a> &gt;
-                    <a href="/display-walls/">Display Walls</a> &gt;
-                    <a href="/display-walls/canvas">Jupiter Canvas</a>
+                    <a href="/collaborative-visualization/">Collaborative Visualization</a> &gt;
+                    <a href="/collaborative-visualization/canvas">Jupiter Canvas</a>
                 </ol>
             </div>
             <div class="productheader C10 Col_child C4x6_child">
@@ -91,12 +91,12 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <li>Juxtapose sources in order to get full 360-degree view of ops</li>
                           <li>Save and recall layouts appropriate for specific situations, users, or time of day</li>
                         </ul>
-                        <p><strong>Cost effective and efficient native CPU based decoding with the <a href="/display-walls/catalyst-4k">Catalyst 4K</a> display wall processor.</strong></p>
+                        <p><strong>Cost effective and efficient native CPU based decoding with the <a href="/collaborative-visualization/catalyst-4k">Catalyst 4K</a> display wall processor.</strong></p>
                         <ul class="feature-list">
                           <li>For H.264, simultaneously decode 8 HD streams or 2 UHD streams</li>
                           <li>For H.265, simultaneously decode 8 HD streams or 2 UHD streams</li>
                         </ul>
-                        <p><strong>Canvas 5.0 now ships standard with <a href="/display-walls/catalyst-4k">Catalyst 4K</a>, bringing 4K and 1080p HD sources together on one video wall.</strong></p>
+                        <p><strong>Canvas 5.0 now ships standard with <a href="/collaborative-visualization/catalyst-4k">Catalyst 4K</a>, bringing 4K and 1080p HD sources together on one video wall.</strong></p>
                         <ul class="feature-list">
                           <li>Available as an upgrade to earlier Fusion Catalyst 1000, 4000, 8000, and 4500 systems</li>
                           <li>Canvas 5.0 replaces ControlPoint and previous versions of Canvas</li>
@@ -166,7 +166,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           	<li><strong>Shared voice chat</strong> - All Canvas participants are automatically enrolled in a shared voice chat room to facilitate collaboration and teamwork.</li>
                             <li><strong>Microsoft Lync&reg; integration</strong> - Integration with the leading UCC platform means that users can escalate to Canvas from the Lync client or start a Lync conversation from Canvas.</li>
                             <li><strong>Connect with remote non-Canvas users</strong> - Remote colleagues who do not have Canvas at their location can participate in collaborative sessions with Canvas users.  With this new version, Canvas users can dial out to users of SIP-based conferencing systems, and allows users of SIP-based conferencing systems to dial into a canvas.</li>
-                            <li><strong>Supports Canvas CRS-4K</strong> - Jupiter’s new conference room system for Canvas, the <a href="/display-walls/canvas-crs4k">Canvas CRS-4K</a>, turns any conference room or huddle room into a Canvas workspace for teams. The new SimpleShare™ feature employs WebRTC technology to allow anyone with a laptop, even one without Canvas installed, to easily and instantly present content to local and remote Canvas users without downloading software, connecting cables, or attaching a dongle.</li>
+                            <li><strong>Supports Canvas CRS-4K</strong> - Jupiter’s new conference room system for Canvas, the <a href="/collaborative-visualization/canvas-crs4k">Canvas CRS-4K</a>, turns any conference room or huddle room into a Canvas workspace for teams. The new SimpleShare™ feature employs WebRTC technology to allow anyone with a laptop, even one without Canvas installed, to easily and instantly present content to local and remote Canvas users without downloading software, connecting cables, or attaching a dongle.</li>
                           </ul>
 			                </div>
                     </div>
@@ -299,7 +299,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                       <div class="info cmsedit">
                           <h5 class="name">Use your Canvas video wall for in-room presentations, too</h5>
                           <strong class="tagline"></strong>
-                          <p>Your Canvas video wall can be used for displaying content for a local audience when not in a Canvas session. DVI inputs can be connected to a <a href="/display-walls/fusion-catalyst">Fusion Catalyst</a> display wall processor running Canvas for display on the attached video wall. Now the local video wall can be used for making in-room presentations or viewing other sources not intended for sharing and collaboration.    </p>
+                          <p>Your Canvas video wall can be used for displaying content for a local audience when not in a Canvas session. DVI inputs can be connected to a <a href="/collaborative-visualization/fusion-catalyst">Fusion Catalyst</a> display wall processor running Canvas for display on the attached video wall. Now the local video wall can be used for making in-room presentations or viewing other sources not intended for sharing and collaboration.    </p>
                           <hr style="clear:both;"/>
                       </div>
                       <div class="info cmsedit">
