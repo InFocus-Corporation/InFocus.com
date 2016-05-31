@@ -76,6 +76,8 @@ RewriteRule ^([A-Za-z0-9-_/]+)EX\.aspx$ $1 [NC]
 RewriteRule  ^qtablet/live /resources/php/test.php [NC,L]
 RewriteRule  ^bigtouch/live /resources/php/test.php [NC,L]
 
+RewriteRule  ^display-walls/(.*) /collaborative-visualization/$1 [R=301,L]
+
 RewriteRule  ^realcam$ /peripherals/product.php?pn=INF-SPTZ-2 [NC,L]
 RewriteRule  ^ic2015$ http://infocus.box.com/s/m1f93uhbrorgl2tnnyzl8auniqorpbxb [NC,L]
 RewriteRule  ^mp20assets$ /mondopad20assets [NC,L]
