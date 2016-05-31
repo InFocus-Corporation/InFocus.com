@@ -101,7 +101,7 @@ if($category) {
 									<a href="<?= $cat[0].'/'.$row[0] ?>">
 										<section class="stretch-wrap60">
 											<div class="">
-												<img src="<?= imagethumb($subject, '132') ?>" alt="InFocus <?= $row[0].' Projector' ?>" />
+												<img src="<?= imagethumb($subject, '320') ?>" alt="InFocus <?= $row[0].' Projector' ?>" />
 											</div>
 										</section>
 										<span class="title"><?= $row[1] ?></span>
