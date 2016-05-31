@@ -33,8 +33,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             <div class="breadcrumb">
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <a href="/">Home</a> &gt;
-                    <a href="/display-walls/">Display Walls</a> &gt;
-                    <a href="/display-walls/catalyst-4k">Jupiter Catalyst 4K</a>
+                    <a href="/collaborative-visualization/">Collaborative Visualization</a> &gt;
+                    <a href="/collaborative-visualization/catalyst-4k">Jupiter Catalyst 4K</a>
                 </ol>
             </div>
             <div class="productheader C10 Col_child C6x4_child">
@@ -58,7 +58,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                         <p>Create the world’s highest resolution video wall with 4K resolution on every display.</p>
                         <p>Get razor-sharp 4K resolution on every display in your video wall with the new, highly evolved Catalyst 4K processor. Faster graphics, real time frame rates, and better overall system performance than anything in its class is delivered thanks to its Intel E5 Six-Core Xeon CPU-based platform with a PCI Express 3.0 chassis and 6 powerful, high speed slots. </p>
                         <p>Drag and drop video and data windows anywhere on the display wall, juxtapose sources in order to get a full 360-degree view of operations, and save and recall layouts appropriate for specific situations, users, or time of day.</p>
-                        <p>Catalyst 4K ships with <a href="/display-walls/canvas">Canvas 5.0</a>, the latest version of our award-winning collaborative visualization suite.</p>
+                        <p>Catalyst 4K ships with <a href="/collaborative-visualization/canvas">Canvas 5.0</a>, the latest version of our award-winning collaborative visualization suite.</p>
                         <p></p>
                         <p></p>
                     </div>
@@ -86,7 +86,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                       <div class="info cmsedit">
                           <h5 class="name">Built for Canvas</h5>
                           <strong class="tagline"></strong>
-                          <p>The Catalyst 4K display wall processor ships with <a href="/display-walls/canvas">Canvas 5.0</a>, providing access to all of the visual business intelligence made available in the user’s network—including live streams from network cameras and mobile devices, application screens from PCs, and real-time data feeds.</p>
+                          <p>The Catalyst 4K display wall processor ships with <a href="/collaborative-visualization/canvas">Canvas 5.0</a>, providing access to all of the visual business intelligence made available in the user’s network—including live streams from network cameras and mobile devices, application screens from PCs, and real-time data feeds.</p>
                           <p>Users at the display wall can collaborate with distant colleagues on their PCs, smartphones, tablets, and in conference rooms equipped with Canvas Touch or CRS-4K endpoints.</p>
                           <p>With Canvas, users can annotate directly on live video streams, chat by text or voice, integrate with Microsoft Lync, and collaborate on documents in real time. Canvas 5.0 adds software decoding of IP video streams (including 4K), as well as support for user authentication in Active Directory or Workgroup environments.</p>
                           <hr/>

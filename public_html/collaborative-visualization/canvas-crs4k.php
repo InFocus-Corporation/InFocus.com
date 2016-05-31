@@ -33,8 +33,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             <div class="breadcrumb">
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <a href="/">Home</a> &gt;
-                    <a href="/display-walls/">Display Walls</a> &gt;
-                    <a href="/display-walls/canvas-crs4k">Jupiter Canvas</a>
+                    <a href="/collaborative-visualization/">Display Walls</a> &gt;
+                    <a href="/collaborative-visualization/canvas-crs4k">Jupiter Canvas</a>
                 </ol>
             </div>
             <div class="productheader C10 Col_child C6x4_child">
@@ -56,7 +56,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     <strong class="tagline mysqledit" id="header">Now every conference room and huddle room is a Canvas room.</strong>
                     <div class="mysqledit" id="blurb">
                         <p><strong>Collaborative Visualization for Teams</strong></p>
-                        <p><a href="/display-walls/canvas">Canvas</a> has set the standard for collaborative visualization on smartphones, tablets, PCs, and control room display walls. Global 2000 companies in fields from finance to pharmaceuticals to oil and gas, construction, engineering, and electric utilities, as well as governments and public agencies use Canvas to manage operations. The Canvas CRS-4K™ system extends the power of Canvas’ award-winning solution to teams working in conference rooms and huddle rooms.</p>
+                        <p><a href="/collaborative-visualization/canvas">Canvas</a> has set the standard for collaborative visualization on smartphones, tablets, PCs, and control room display walls. Global 2000 companies in fields from finance to pharmaceuticals to oil and gas, construction, engineering, and electric utilities, as well as governments and public agencies use Canvas to manage operations. The Canvas CRS-4K™ system extends the power of Canvas’ award-winning solution to teams working in conference rooms and huddle rooms.</p>
                         <p>The Canvas CRS-4K system is a small, quiet box that can be located anywhere in the room. What it enables is enormous.</p>
                         <p>With the Canvas CRS-4K, teams in huddle rooms can collaborate with remote colleagues running Canvas on almost any device, sharing live video, real-time data, application screens, web windows, documents, and presentations. Users can annotate onscreen, coordinate using voice and text chat, share whiteboards, and jointly edit documents, spreadsheets, and presentations.</p>
                         <p>Using Canvas SimpleShare™, any user can walk into the conference room and wirelessly present their laptop screen to both local and remote Canvas participants. No cables to connect, no dongles to hunt down.</p>

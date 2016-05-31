@@ -34,9 +34,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             <div class="breadcrumb">
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <a href="/">Home</a> &gt;
-                    <a href="/display-walls/">Display Walls</a> &gt;
-                    <a href="/display-walls/fusion-catalyst">Fusion Catalyst</a> &gt;
-                    <a href="/display-walls/fusion-catalyst-4000">Fusion Catalyst 4000</a>
+                    <a href="/collaborative-visualization/">Collaborative Visualization</a> &gt;
+                    <a href="/collaborative-visualization/fusion-catalyst">Fusion Catalyst</a> &gt;
+                    <a href="/collaborative-visualization/fusion-catalyst-4000">Fusion Catalyst 4000</a>
 
                 </ol>
             </div>
