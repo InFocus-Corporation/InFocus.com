@@ -62,17 +62,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 	<div class="row product_module">
 		<div class="small-7 medium-8 columns color_stripe_column">
 			<div class="white color_stripe"></div>
-			<a href="/displays/DigiEasel-Series"><img src="/resources/static/images/touchscreens/InFocus-DigiEasel-Business-Presentation.jpg" alt=""></a>
-		</div>
-		<div class="small-5 medium-4 columns product_text">
-			<h3 class="lead_text--secondary_headline"><a href="/displays/DigiEasel-Series">DigiEasel</a></h3>
-			<p class="lead_text--paragraph">Draw, write, and capture notes or share your device’s screen on a professional interactive touch display that's affordable, fun to use and impressive to visitors.</p>
-			<a href="/displays/DigiEasel-Series" class="button button--primary">learn more</a>
-		</div>
-	</div>
-	<div class="row product_module">
-		<div class="small-7 medium-8 columns color_stripe_column">
-			<div class="white color_stripe"></div>
 			<a href="/displays/BIGTOUCH-Series"><img src="/resources/static/images/touchscreens/InFocus-Lifestyle-BigTouch-INF8012-Win10-2-300dpi-CMYK.jpg" alt=""></a>
 		</div>
 		<div class="small-5 medium-4 columns product_text">
