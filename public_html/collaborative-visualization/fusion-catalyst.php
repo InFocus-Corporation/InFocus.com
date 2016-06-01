@@ -34,8 +34,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             <div class="breadcrumb">
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <a href="/">Home</a> &gt;
-                    <a href="/display-walls/">Display Walls</a> &gt;
-                    <a href="/display-walls/fusion-catalyst">Jupiter Fusion Catalyst</a>
+                    <a href="/collaborative-visualization/">Collaborative Visualization</a> &gt;
+                    <a href="/collaborative-visualization/fusion-catalyst">Jupiter Fusion Catalyst</a>
                 </ol>
             </div>
             <div class="productheader C10 Col_child C6x4_child">
@@ -215,7 +215,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <hr>
                       </div>
                       <div class="info cmsedit">
-                          <h5 class="name">Uniquely Engineered for Display Walls</h5>
+                          <h5 class="name">Uniquely Engineered for Collaborative Visualization</h5>
                           <p>Jupiter Systems designs all its own software and hardware as an integrated whole, creating a tightly woven system architecture that provides the best functionality and achieves the highest possible performance. This provides Jupiter with a better foundation for supporting our products in the field – we have the sort of deep system knowledge that no integrator of 3rd party or COTS components can claim.</p>
                           <hr>
                       </div>

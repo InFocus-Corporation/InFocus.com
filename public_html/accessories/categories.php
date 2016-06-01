@@ -116,7 +116,7 @@ $result = mysqli_query($connection,'SELECT producttext.partnumber, listtitle, de
 while($row = mysqli_fetch_array($result))
 {
 echo "<li><div><a href='$category/{$row[0]}'><section class='stretch-wrap60'><div><img ";
-echo 'src="' . imagethumb( $row[0], '192') . '" alt="InFocus ' . $row[0] . '" /></div></section><span  class="title">' . $row[1] . '</span></a><div class="subprod-desc">' . $row[2] . '</div></div></li>
+echo 'src="' . imagethumb( $row[0], '300') . '" alt="InFocus ' . $row[0] . '" /></div></section><span  class="title">' . $row[1] . '</span></a><div class="subprod-desc">' . $row[2] . '</div></div></li>
 ';
 
 }

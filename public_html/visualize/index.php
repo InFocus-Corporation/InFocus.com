@@ -69,7 +69,7 @@ $(function() {
 				<strong>Instant connections</strong><br/>
               	View a display wall from your computer, tablet or smartphone so you can stay connected to multiple information sources affecting the situation at hand from wherever you are.
             </p>
-            <a href="/display-walls/canvas" class="text_module_link">Learn About Jupiter Canvas</a>
+            <a href="/collaborative-visualization/canvas" class="text_module_link">Learn About Jupiter Canvas</a>
         </div>
         <div class="small-12 large-4 columns text-center three_column_module">
               <img class="svg" src="/resources/static/images/svg/visualize-flexible.svg" alt="Visualize" />
@@ -77,8 +77,8 @@ $(function() {
 				<strong>Flexible and secure</strong><br/>
 				Scale up or re-configure your control wall or video stream displays with no loss of functionality. Object-level security keeps your data and access points safe.
             </p>
-            <a href="/display-walls/canvas" class="text_module_link">Learn About Jupiter Canvas</a><br/>
-            <a href="/display-walls/fusion-catalyst" class="text_module_link">Learn About Jupiter Fusion Catalyst</a>
+            <a href="/collaborative-visualization/canvas" class="text_module_link">Learn About Jupiter Canvas</a><br/>
+            <a href="/collaborative-visualization/fusion-catalyst" class="text_module_link">Learn About Jupiter Fusion Catalyst</a>
         </div>
         <div class="small-12 large-4 columns text-center three_column_module">
             <img class="svg" src="/resources/static/images/svg/visualize-insight.svg" alt="Visualize" />
@@ -86,7 +86,7 @@ $(function() {
 				<strong>Superb insight, great performance</strong><br/>
 				Waiting can slow decision response. Low resolution casts uncertainty when detail matters. Collaborate with 4K-quality sources in real time to get ahead of the competition.
             </p>
-            <a href="/display-walls/canvas-crs4k" class="text_module_link">Learn About Jupiter Canvas CRS-4K</a>
+            <a href="/collaborative-visualization/canvas-crs4k" class="text_module_link">Learn About Jupiter Canvas CRS-4K</a>
         </div>
     </div>
     <!-- END MULTICOLUMN TEXT MODULE -->
