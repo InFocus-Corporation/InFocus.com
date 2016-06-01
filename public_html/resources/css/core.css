@@ -2504,6 +2504,7 @@ margin-left:15px;
 }
 #specFrame table thead tr th {
 	position: relative;
+	padding-top: 15px;
 	padding-right: 45px;
 }
 #specFrame table thead tr th:not(:first-child) img {
@@ -2530,13 +2531,13 @@ margin-left:15px;
 #specFrame table thead tr th:not(:first-child):before {
 	transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
+	-moz-transform: translateY(-1px) rotate(45deg);
 	-ms-transform: rotate(45deg);
 }
 #specFrame table thead tr th:not(:first-child):after {
 	transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
+	-moz-transform: translateY(-1px) rotate(-45deg);
 	-ms-transform: rotate(-45deg);
 }
 
