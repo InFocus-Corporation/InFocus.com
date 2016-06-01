@@ -2433,6 +2433,10 @@ margin-left:15px;
   width: 100% !important;
 }
 
+#specs #specFrame .rounded {
+	overflow-x: auto;
+}
+
 #specs > div.ui-widget {
     font-family: 'GoodPro-Wide';
     font-size: 2.2rem;
@@ -2500,9 +2504,13 @@ margin-left:15px;
 }
 #specFrame table thead tr th {
 	position: relative;
+	padding-right: 45px;
 }
 #specFrame table thead tr th:not(:first-child) img {
-	position: relative;
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	display: block;
 	opacity: 0.001;
 	cursor: pointer;
 	z-index:99;
