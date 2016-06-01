@@ -90,7 +90,7 @@ if($category) {
 			<div id="details" class="C10 tabs-wrapper" style="min-height:600px;overflow:hidden;">
 				<h6 class="sub-title" id="choosetitle"><?= $pageText['choosecategory'];?></h6>
 				<div class="tab-shadow"></div>
-				<div id="catlist"><a style="font-size:110%;padding-bottom:5px;" onclick="backUp();">&lt;<?= translate('Back') ?></a>
+				<div id="catlist"><a style="font-size:110%;padding-bottom:5px;" href="/projectors/">&lt;<?= translate('Back') ?></a>
 					<ul class="floatList">
 						<?php while($row = mysqli_fetch_array($result)) {
 							$subject = $row[0];
