@@ -50,7 +50,7 @@ else
 echo '<select id="GetAQuote_productofinterest_c" type="text" name="productofinterest_c" >
 </select>
 <script>
-getProductList(" productgroup = \'Display\' AND active != 0 AND active is not null AND active != 9","GetAQuote_productofinterest_c",\'<option value="Canvas">Canvas</option><option value="Canvas CRS-4K">Canvas CRS-4K</option><option value="Canvas Touch">Canvas Touch</option><option value="Fusion Catalyst">Fusion Catalyst</option><option value="PixelNet">PixelNet</option><option value="StreamCenter">StreamCenter</option><option value="VizionPlus II">VizionPlus II</option><option value="ConX Wall">ConX Wall or ConX Exec</option>\');
+getProductList(" productgroup = \'Display\' AND active != 0 AND active is not null AND active != 9","GetAQuote_productofinterest_c",\'<option value="Canvas">Canvas</option><option value="Canvas CRS-4K">Canvas CRS-4K</option><option value="Canvas Touch">Canvas Touch</option><option value="Catalyst 4K">Catalyst 4K</option><option value="Fusion Catalyst">Fusion Catalyst</option><option value="PixelNet">PixelNet</option><option value="StreamCenter">StreamCenter</option><option value="VizionPlus II">VizionPlus II</option><option value="ConX Wall">ConX Wall or ConX Exec</option>\');
 </script>';
 }
 

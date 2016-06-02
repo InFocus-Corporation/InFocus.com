@@ -425,10 +425,10 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
 
 ?>
 
-	</head>
-	<body class="" style="">
+</head>
+<body class="" style="">
 		<?php include($homedir . "/resources/html/mainmenu.html"); ?>
-<div class="content" style="width:100%;padding-top: 87px;">
+<div class="content" style="max-width:100%;width:100%;padding-top: 87px;">
 <div id="ytplayer" class="player"></div>
 
 <div class="device" style="width:100%;">
