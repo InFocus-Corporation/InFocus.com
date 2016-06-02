@@ -445,6 +445,27 @@ header + .hero_row > .row {
     background: url('../static/images/jupiter/jupiter-hero-a.jpg') left top no-repeat;
     background-size:cover;
     background-origin: border-box;
+
+    &.transparent-border-left-125-orange {
+      @media screen and (max-width:62em) {
+        border-left-width: 80px;
+        margin-bottom: 6em;
+      }
+      @media screen and (max-width:40em) {
+        border-left-width: 40px;
+        margin-bottom: 3em;
+      }    
+    }
+
+    .lead_text--headline {
+      @media screen and (max-width:62em) {
+        font-size: 3rem;
+      }
+      @media screen and (max-width:40em) {
+        font-size: 1.8rem;
+        margin-top: 1em !important;
+      }
+    }
   }
   &.hero-row--header_module_c {
     background-size: contain;
@@ -1878,6 +1899,14 @@ div.video_module {
       height: 100%;
       & > a {padding: 2.35em;}
     }
+    h5 {
+      @media screen and (max-width: 50em) {
+        font-size: 0.9rem;
+      }
+      @media screen and (max-width: 40em) {
+        font-size: 0.8rem;
+      }
+    }
     .module--tag--bottom {
       &:before {
         border: 0px;
@@ -1909,7 +1938,6 @@ div.video_module {
         @include background-opacity($infocus_green);
     }
   }
-
   #slide3 {
     z-index: 3;
     right: -49.98%;
