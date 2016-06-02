@@ -43,6 +43,7 @@ RewriteRule ^peripherals - [L,NC]
 RewriteRule ^kangaroo - [L,NC]
 RewriteRule ^jupiter - [L,NC]
 #
+RewriteRule  ^education /teach [R=302,NC,L]
 
 RewriteCond %{HTTP_HOST} !^www\.
 RewriteCond %{HTTP_HOST} !^dev\.
