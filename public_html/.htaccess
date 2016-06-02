@@ -12,7 +12,7 @@ Header set Cache-Control "max-age=172800, public, must-revalidate"
 </FilesMatch>
 
 # 2 HOURS (7200)
-<FilesMatch "\.(html|htm|js|css)$">
+<FilesMatch "\.(html|htm|css|js)$">
 Header set Cache-Control "max-age=7200, must-revalidate"
 </FilesMatch>
 
@@ -23,7 +23,6 @@ SetOutputFilter DEFLATE
 </ifmodule>
 
 ErrorDocument 404 /404.php
-
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
