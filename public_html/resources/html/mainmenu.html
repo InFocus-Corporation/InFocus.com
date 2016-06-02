@@ -128,8 +128,24 @@ $(function () {
     	responsiveColorbox('/resources/forms/freightestimate.php');
     }
 
+    if(window.location.pathname.replace('/','')=='demokeys') {
+    	responsiveColorbox('/resources/forms/demokeys.php');
+    }
+
+    if(window.location.pathname.replace('/','')=='proav-communications-sign') {
+    	responsiveColorbox('/resources/forms/proavsignup.php');
+    }
+
     if(window.location.hash.replace('#','')=='mptraining') {
     	responsiveColorbox('/resources/forms/mptraining.php');
+    }
+
+    if(window.location.hash.replace('#','')=='getaquote') {
+    	responsiveColorbox('/resources/forms/getaquote.php');
+    }
+    
+    if(window.location.hash.replace('#','')=='projectioncalculator') {
+    	responsiveColorbox('/resources/forms/projectioncalculator.php');
     }
 });
 </script>
