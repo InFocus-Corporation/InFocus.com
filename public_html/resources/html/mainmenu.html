@@ -57,11 +57,16 @@ function responsiveColorbox(link, defaultWidth) {
 		height= window.screen.height;
 	}
 
+	var href = link;
+	if(typeof link != 'string') {
+		href = $(link).attr('href');
+	}
+
 	$.colorbox({
 		iframe: true,
 		innerWidth: width,
 		innerHeight:height,
-		href: $(link).attr('href')
+		href: href
 	});
 }
 $(function () {
@@ -118,6 +123,10 @@ $(function () {
 		e.stopPropagation();
 		$(this).closest('header').toggleClass('open');
 	});
+
+    if(window.location.pathname.replace('/','')=='freightestimate') {
+    	responsiveColorbox('/resources/forms/freightestimate.php');
+    }
 });
 </script>
 <header id="masthead" class="<?= $headclass ?>">
