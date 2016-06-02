@@ -3790,3 +3790,8 @@ table.rwd-table-large > tbody > tr.item{
 		text-align: center;
 	}
 }
+
+.tracking,
+.tracking img {
+	opacity: 0.0001 !important;
+}
