@@ -39,10 +39,10 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
     <br><br>
 	<div class="row">
 		<div class="small-12 medium-4 columns">
-			<a href="/peripherals/INF-SPTZ-2"><img src="/resources/static/images/peripherals/realcam.jpg" class="product_shot" alt="" style="max-height: 252px;"></a>
-			<h4 class="lead_text--secondary_headline"><a href="/peripherals/INF-SPTZ-2">RealCam PTZ Camera</a></h4>
+			<a href="/peripherals/INA-PTZ-3"><img src="/resources/static/images/peripherals/realcam.jpg" class="product_shot" alt="" style="max-height: 252px;"></a>
+			<h4 class="lead_text--secondary_headline"><a href="/peripherals/INA-PTZ-3">RealCam PTZ Camera</a></h4>
 			<p>Add a RealCam pan/tilt/zoom (PTZ) professional-quality HD camera to any PC, including a Mondopad, to make your video meetings or events shine.</p>
-			<a href="/peripherals/INF-SPTZ-2" class="button button--primary">learn more</a>
+			<a href="/peripherals/INA-PTZ-3" class="button button--primary">learn more</a>
 		</div>
 		<div class="small-12 medium-4 columns">
       <a href="/peripherals/INA-TH150"><img src="/resources/static/images/peripherals/thunder.png" class="product_shot" alt=""></a>
