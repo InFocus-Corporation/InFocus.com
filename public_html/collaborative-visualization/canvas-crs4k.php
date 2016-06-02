@@ -33,7 +33,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             <div class="breadcrumb">
                 <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                     <a href="/">Home</a> &gt;
-                    <a href="/collaborative-visualization/">Display Walls</a> &gt;
+                    <a href="/collaborative-visualization/">Collaborative Visualization</a> &gt;
                     <a href="/collaborative-visualization/canvas-crs4k">Jupiter Canvas</a>
                 </ol>
             </div>

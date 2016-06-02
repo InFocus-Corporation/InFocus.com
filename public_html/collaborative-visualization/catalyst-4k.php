@@ -195,7 +195,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                     <td><img src="/resources/images/pdficon"></td>
                                     <td>
                                         <a data-event="Jupiter-Catalyst-4K-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Catalyst-4K-Datasheet-EN.pdf">
-                                            <span class="title">Catalyst-4K</span><br>
+                                            <span class="title">Catalyst 4K</span><br>
                                             <span class="description">4K Display Wall Processor with Canvas 5.0</span>
                                         </a>
                                     </td>
