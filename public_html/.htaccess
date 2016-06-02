@@ -41,7 +41,8 @@ RewriteRule ^teach - [L,NC]
 RewriteRule ^visualize - [L,NC]
 RewriteRule ^video-conferencing - [L,NC]
 RewriteRule ^peripherals - [L,NC]
-
+RewriteRule ^kangaroo - [L,NC]
+RewriteRule ^jupiter - [L,NC]
 #
 
 RewriteCond %{HTTP_HOST} !^www\.
