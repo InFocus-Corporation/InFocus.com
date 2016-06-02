@@ -2,7 +2,7 @@ Options +MultiViews -Indexes
 # AddType application/x-httpd-php5 .php
 
 # 480 weeks (290304000)
-<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
 Header set Cache-Control "max-age=290304000, public"
 </FilesMatch>
 
@@ -12,7 +12,7 @@ Header set Cache-Control "max-age=172800, public, must-revalidate"
 </FilesMatch>
 
 # 2 HOURS (7200)
-<FilesMatch "\.(html|htm)$">
+<FilesMatch "\.(html|htm|js|css)$">
 Header set Cache-Control "max-age=7200, must-revalidate"
 </FilesMatch>
 
@@ -35,6 +35,13 @@ RewriteRule ^resources/html - [L,NC]
 RewriteRule ^resources/js - [L,NC]
 RewriteRule ^resources/misc - [L,NC]
 RewriteRule ^resources/php - [L,NC]
+RewriteRule ^present - [L,NC]
+RewriteRule ^collaborate - [L,NC]
+RewriteRule ^teach - [L,NC]
+RewriteRule ^visualize - [L,NC]
+RewriteRule ^video-conferencing - [L,NC]
+RewriteRule ^peripherals - [L,NC]
+
 #
 
 RewriteCond %{HTTP_HOST} !^www\.
