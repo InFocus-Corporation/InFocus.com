@@ -12,7 +12,6 @@
 
 
 <?php
-$SN = '';
 extract($_POST);
 ?>
 
@@ -27,7 +26,7 @@ extract($_POST);
 //$groups_allowed = "ASC";
 //require($_SERVER['DOCUMENT_ROOT'] . "/login/ublock.php");
 
-if ( isset($run) ) {
+if ( isset($SN) ) {
 $connection = mysqli_connect('localhost','partners_login','InF0cusP@ssw0rd', 'partners_IFC_IB',3306);
 mysqli_set_charset($connection, "utf8");
 

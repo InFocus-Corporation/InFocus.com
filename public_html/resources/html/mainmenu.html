@@ -51,7 +51,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script>
 function responsiveColorbox(link, defaultWidth) {
 	var width = defaultWidth||"80%",
-		height= 400;
+		height= 600;
 	if(window.screen.width<1090) {
 		width = "100%";
 		height= window.screen.height;
@@ -134,6 +134,10 @@ $(function () {
 
     if(window.location.pathname.replace('/','')=='proav-communications-sign') {
     	responsiveColorbox('/resources/forms/proavsignup.php');
+    }
+
+    if(window.location.pathname.replace('/','')=='event-form') {
+    	responsiveColorbox('http://marketing.infocus.com/acton/form/16218/0016:d-0001/1/-/-/-/-/index.htm', '650px');
     }
 
     if(window.location.hash.replace('#','')=='mptraining') {
