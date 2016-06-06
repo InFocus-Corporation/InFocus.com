@@ -454,7 +454,7 @@ header + .hero_row > .row {
       @media screen and (max-width:40em) {
         border-left-width: 40px;
         margin-bottom: 3em;
-      }    
+      }
     }
 
     .lead_text--headline {
@@ -2202,7 +2202,7 @@ div.video_module {
     }
   }
 
-  .Button-1 {
+  .Button-1, .alert-box {
     background: transparent;
     -moz-border-radius:6px;
     -webkit-border-radius:6px;
@@ -2219,7 +2219,22 @@ div.video_module {
     text-decoration:none;
     letter-spacing: 1px;
   }
-
+  .alert-box {
+    width: 100%;
+    background-color: #FFF5F5;
+    padding: 1.05em;
+    border: 1px solid #BA0000;
+    margin-bottom: 2em;
+    color: black;
+    .Button-1 { background-color: white; text-align: center;}
+    & > span:first-child { padding: 0em .5em .5em .5em; width: 100%; clear: both; display: block; text-align: center; margin-top: .9em;}
+    & > span:last-child { width: 100%; clear: both; margin: 0 auto; display: block; text-align: center;}
+    .red { color: #BA0000; font-weight: bold; }
+    @media screen and (min-width: 60em) {
+        & > span:first-child { text-align: left; float: left; width: 70%; clear: none; }
+        & > span:last-child { text-align: left; float: left; a { float: right; } width: 30%; clear: none;}
+    }
+  }
   table {
     border:none;
 
