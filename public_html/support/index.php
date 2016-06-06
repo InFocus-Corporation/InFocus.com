@@ -16,16 +16,16 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
         this.wrapper = $( "<span>" )
           .addClass( "custom-combobox" )
           .insertAfter( this.element );
- 
+
         this.element.hide();
         this._createAutocomplete();
         this._createShowAllButton();
       },
- 
+
       _createAutocomplete: function() {
         var selected = this.element.children( ":selected" ),
           value = selected.val() ? selected.text() : "";
- 
+
         this.input = $( "<input>" )
           .appendTo( this.wrapper )
           .val( value )
@@ -39,7 +39,7 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
           .tooltip({
             tooltipClass: "ui-state-highlight"
           });
- 
+
         this._on( this.input, {
           autocompleteselect: function( event, ui ) {
             ui.item.option.selected = true;
@@ -47,15 +47,15 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
               item: ui.item.option
             });
           },
- 
+
           autocompletechange: "_removeIfInvalid"
         });
       },
- 
+
       _createShowAllButton: function() {
         var input = this.input,
           wasOpen = false;
- 
+
         $( "<a>" )
           .attr( "tabIndex", -1 )
           .attr( "title", "Show All Items" )
@@ -74,17 +74,17 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
           })
           .click(function() {
             input.focus();
- 
+
             // Close if already visible
             if ( wasOpen ) {
               return;
             }
- 
+
             // Pass empty string as value to search for, displaying all results
             input.autocomplete( "search", "" );
           });
       },
- 
+
       _source: function( request, response ) {
         var matcher = new RegExp( $.ui.autocomplete.escapeRegex(request.term), "i" );
         response( this.element.children( "option" ).map(function() {
@@ -97,14 +97,14 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
             };
         }) );
       },
- 
+
       _removeIfInvalid: function( event, ui ) {
- 
+
         // Selected an item, nothing to do
         if ( ui.item ) {
           return;
         }
- 
+
         // Search for a match (case-insensitive)
         var value = this.input.val(),
           valueLowerCase = value.toLowerCase(),
@@ -115,12 +115,12 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
             return false;
           }
         });
- 
+
         // Found a match, nothing to do
         if ( valid ) {
           return;
         }
- 
+
         // Remove invalid value
         this.input
           .val( "" )
@@ -132,14 +132,14 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
         }, 2500 );
         this.input.data( "ui-autocomplete" ).term = "";
       },
- 
+
       _destroy: function() {
         this.wrapper.remove();
         this.element.show();
       }
     });
 })( jQuery );
- 
+
 $(function() {
   $( "#combobox" ).combobox();
   $( "#toggle" ).click(function() {
@@ -168,6 +168,11 @@ $(function() {
         <a href="http://portal.jupiter.com/clientManage.php?act=signIn">Jupiter Partner Login</a>
       </div>
     </div>
+    <div class="alert-box radius">
+      <span><span class="red">Mondopad Owners!</span> Do not upgrade to Windows 10</span>
+      <span><a href="/resources/documents/Mondopad-and-Window-10.pdf" class="Button-1 form-box cboxElement">View Details</a></span>
+    </div>
+
     <div>
       <p>If you are having trouble finding your product just start typing in the box below.</p>
         <div class="ui-widget" style="padding-bottom:30px;">
@@ -176,12 +181,12 @@ $(function() {
           <option value="" selected><?php echo $Selectproduct; ?></option>
           <option value="/accessories/product?pn=INLITESHOW3">Liteshow III</option>
           <option value="/accessories/product?pn=INLITESHOW2">Liteshow II</option>
-          <?php 
+          <?php
             $sql = "SELECT partnumber, productgroup, active FROM producttext WHERE partnumber NOT LIKE 'A%' AND partnumber NOT LIKE 'C%' AND partnumber NOT LIKE 'DP%' AND productgroup != 'Accessory' AND productgroup != 'Series' AND lang = '" . $lang . "' AND active is not null ORDER BY partnumber";
             $results = mysqli_query($connection,$sql);
             while($row = mysqli_fetch_array($results)){
               echo '<option value="/'. strtolower($row['productgroup']) . "s/" . $row['partnumber'] .'">'.$row['partnumber'] .'</option>';
-          } ?>      
+          } ?>
         </select>
         <input type="button" id="btn" class="Button-1" value="Go" onclick="window.location = document.getElementById('combobox').value + '#support';"  />
       </div>
@@ -197,6 +202,7 @@ $(function() {
         <p>
           <a href="/support/warrantyvt.php" class="form-box">Check Your Warranty Status</a><br>
           <a href="#RMAUSCan-popup" class="colorbox-inline">Get Warranty Service (US &amp; Canada)</a><br>
+          <a href="http://service.infocus.info">Get Warranty Service (Europe)</a><br>
           <a href="/support/authorized-service-centers#ABU">Find a Repair Provider (US &amp; Canada)</a><br>
           <a href="#RMAWorldMap-popup" class="colorbox-inline">Find a Repair Provider (Worldwide)</a><br>
         </p>
@@ -349,15 +355,15 @@ $(function() {
 if(strpos(strtolower("a" . $_SERVER['QUERY_STRING']),"register")>0){
   echo '$.colorbox({iframe: true, href: "/resources/forms/register?';
   foreach($_GET as $key => $value){
-    echo $key . "=" . $value . "&"; 
+    echo $key . "=" . $value . "&";
   }
   echo '", innerWidth: "80%", innerHeight: 800});';
 } elseif(strlen($_SERVER['QUERY_STRING'])>0) {
   echo '$.colorbox({iframe: true, href: "/resources/forms/' . $_SERVER['QUERY_STRING'];
   echo '", innerWidth: "80%", innerHeight: 800});';
 } ?>
-				
-				
+
+
   var hash = window.location.hash;
   hash = hash.substring(1);
   if(hash.length>0) {
@@ -371,7 +377,7 @@ if(strpos(strtolower("a" . $_SERVER['QUERY_STRING']),"register")>0){
             });
           });
   }
-  
+
 </script>
 
 <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","infocuscorp.zendesk.com");
