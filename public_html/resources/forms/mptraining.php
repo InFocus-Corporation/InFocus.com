@@ -23,9 +23,11 @@ $descript .=  "
 
 >>>Products & Service?:
 ";
+if(is_array($_POST["optchk"])){
 foreach($_POST["optchk"] as $value){
 $descript .= $value . "
 ";
+}
 }
 
 $descript .= "
@@ -43,25 +45,30 @@ $descript .= $_POST["opt1"];
 
 
 		
-		
-switch($_POST['reqtime1']){
-	case 8:
-$startTime = $_POST['reqdate1'] . " 9:00:00";        
-$endTime = $_POST['reqdate1'] . " 11:00:00";         
-	break;
-	case 10:
-$startTime = $_POST['reqdate1'] . " 11:00:00";        
-$endTime = $_POST['reqdate1'] . " 13:00:00";         
-	break;
-	case 12:
-$startTime = $_POST['reqdate1'] . " 13:00:00";        
-$endTime = $_POST['reqdate1'] . " 15:00:00";         
-	break;
-	case 2:
-$startTime = $_POST['reqdate1'] . " 15:00:00";        
-$endTime = $_POST['reqdate1'] . " 17:00:00";         
-	break;
-}	
+
+// $startTime = new DateTime(strtotime($_POST['reqdate1'])); 
+// $endTime = new DateTime(strtotime($_POST['reqdate1'])); 
+// switch($_POST['reqtime1']){
+	// case 8:
+// $startTime->add(new DateInterval("PT16H"));
+// $endTime->add(new DateInterval("PT18H"));
+	// break;
+	// case 10:
+// $startTime->add(new DateInterval("PT18H"));
+// $endTime->add(new DateInterval("PT20H"));
+	// break;
+	// case 12:
+// $startTime->add(new DateInterval("PT20H"));
+// $endTime->add(new DateInterval("PT22H"));
+	// break;
+	// case 2:
+// $startTime->add(new DateInterval("PT22H"));
+// $endTime->add(new DateInterval("PT24H"));
+	// break;
+// }	
+$headers = 'From: webmaster@infocus.com' . "\r\n" .
+    'Reply-To: webmaster@infocus.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
 
 $from_name = $_POST['firstname'] . " " . $_POST['lastname'];        
 $from_address = $_POST['email'];        
@@ -70,6 +77,9 @@ $to_address = "MPTraining@infocus.com";
 $subject = "Mondopad Training Registration: " . $_POST['org'];        
 		
 $description = "Session 1
+Date: " . $_POST['reqdate1'] . "
+Time Slot: " . $_POST['reqtime1'] . "
+EU Time Zone: " . substr($_POST['timeZone'],0,3) . "
 Organization: " . $_POST['org'] . "
 Email: " . $_POST['email'] . "
 Phone: " . $_POST['phone'] . "
@@ -80,10 +90,11 @@ Customer Notes:" . $_POST['note1'] . "
 
 " . $s1train . $descript;
 
-$description = str_replace("
-","<br>",$description);
+// $description = str_replace("
+// ","<br>",$description);
 
-sendIcalEvent($to_name, $to_address, $to_name, $to_address, $startTime, $endTime, $subject, $description, $location);
+	mail($to_address, $subject, $description, $headers);
+// sendIcalEvent($to_name, $to_address, $to_name, $to_address, $startTime, $endTime, $subject, $description, $location);
 
   //send email
 
@@ -105,26 +116,26 @@ $s2train = str_replace("mps2t6","InFocus Video Conferencing (1hr)",$s2train);
 	if(empty($_POST['org'])){$_POST['org']= $_POST['firstname'] . " " . $_POST['lastname'];}
 
 
-
-		
-switch($_POST['reqtime2']){
-	case 8:
-$startTime = $_POST['reqdate2'] . " 9:00:00";        
-$endTime = $_POST['reqdate2'] . " 11:00:00";         
-	break;
-	case 10:
-$startTime = $_POST['reqdate2'] . " 11:00:00";        
-$endTime = $_POST['reqdate2'] . " 13:00:00";         
-	break;
-	case 12:
-$startTime = $_POST['reqdate2'] . " 13:00:00";        
-$endTime = $_POST['reqdate2'] . " 15:00:00";         
-	break;
-	case 2:
-$startTime = $_POST['reqdate2'] . " 15:00:00";        
-$endTime = $_POST['reqdate2'] . " 17:00:00";         
-	break;
-}	
+// $startTime = new DateTime(strtotime($_POST['reqdate2'])); 
+// $endTime = new DateTime(strtotime($_POST['reqdate2'])); 
+// switch($_POST['reqtime2']){
+	// case 8:
+// $startTime->add(new DateInterval("PT16H"));
+// $endTime->add(new DateInterval("PT18H"));
+	// break;
+	// case 10:
+// $startTime->add(new DateInterval("PT18H"));
+// $endTime->add(new DateInterval("PT20H"));
+	// break;
+	// case 12:
+// $startTime->add(new DateInterval("PT20H"));
+// $endTime->add(new DateInterval("PT22H"));
+	// break;
+	// case 2:
+// $startTime->add(new DateInterval("PT22H"));
+// $endTime->add(new DateInterval("PT24H"));
+	// break;
+// }	
 
 $from_name = $_POST['firstname'] . " " . $_POST['lastname'];        
 $from_address = $_POST['email'];        
@@ -132,7 +143,10 @@ $to_name = "MPTraining";
 $to_address = "MPTraining@infocus.com";        
 $subject = "Mondopad Training Registration: " . $_POST['org'];        
 		
-$description = "Session 1
+$description = "Session 2
+Date: " . $_POST['reqdate2'] . "
+Time Slot: " . $_POST['reqtime2'] . "
+EU Time Zone: " . substr($_POST['timeZone'],0,3) . "
 Organization: " . $_POST['org'] . "
 Email: " . $_POST['email'] . "
 Phone: " . $_POST['phone'] . "
@@ -143,11 +157,12 @@ Customer Notes:" . $_POST['note2'] . "
 
 " . $s1train . $descript;
 
-$description = str_replace("
-","<br>",$description);
+// $description = str_replace("
+// ","<br>",$description);
 
 
-sendIcalEvent($to_name, $to_address, $to_name, $to_address, $startTime, $endTime, $subject, $description, $location);
+	mail($to_address, $subject, $description, $headers);
+//sendIcalEvent($to_name, $to_address, $to_name, $to_address, $startTime, $endTime, $subject, $description, $location);
 
   //send email
 
@@ -168,44 +183,6 @@ echo "<script src='http://code.jquery.com/jquery-1.9.1.js'></script>
  $thankyou";
  die();
 }
-
-
-function sendEmail($emailTo, $emailSubject, $emailBody, SugarBean $relatedBean = null)
-{
-    $emailObj = new Email();
-    $defaults = $emailObj->getSystemDefaultEmail();
-    $mail = new SugarPHPMailer();
-    $mail->setMailerForSystem();
-    $mail->From = $defaults['email'];
-    $mail->FromName = $defaults['name'];
-    $mail->ClearAllRecipients();
-    $mail->ClearReplyTos();
-    $mail->Subject=from_html($emailSubject);
-    $mail->Body=from_html($emailBody);
-    $mail->prepForOutbound();
-    $mail->AddAddress($emailTo);
-
-    //now create email
-    if (@$mail->Send()) {
-        $emailObj->to_addrs= '';
-        $emailObj->type= 'archived';
-        $emailObj->deleted = '0';
-        $emailObj->name = $mail->Subject ;
-        $emailObj->description = $mail->Body;
-        $emailObj->description_html = null;
-        $emailObj->from_addr = $mail->From;
-        if ( $relatedBean instanceOf SugarBean && !empty($relatedBean->id) ) {
-            $emailObj->parent_type = $relatedBean->module_dir;
-            $emailObj->parent_id = $relatedBean->id;
-        }
-        $emailObj->date_sent = TimeDate::getInstance()->nowDb();
-        $emailObj->modified_user_id = '1';
-        $emailObj->created_by = '1';
-        $emailObj->status = 'sent';
-        $emailObj->save();
-    }
-}
-
 
 
 
@@ -238,31 +215,14 @@ function sendIcalEvent($from_name, $from_address, $to_name, $to_address, $startT
     'PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN' . "\r\n" .
     'VERSION:2.0' . "\r\n" .
     'METHOD:REQUEST' . "\r\n" .
-    'BEGIN:VTIMEZONE' . "\r\n" .
-    'TZID:Eastern Time' . "\r\n" .
-    'BEGIN:STANDARD' . "\r\n" .
-    'DTSTART:20091101T020000' . "\r\n" .
-    'RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=1SU;BYMONTH=11' . "\r\n" .
-    'TZOFFSETFROM:-0400' . "\r\n" .
-    'TZOFFSETTO:-0500' . "\r\n" .
-    'TZNAME:EST' . "\r\n" .
-    'END:STANDARD' . "\r\n" .
-    'BEGIN:DAYLIGHT' . "\r\n" .
-    'DTSTART:20090301T020000' . "\r\n" .
-    'RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=2SU;BYMONTH=3' . "\r\n" .
-    'TZOFFSETFROM:-0500' . "\r\n" .
-    'TZOFFSETTO:-0400' . "\r\n" .
-    'TZNAME:EDST' . "\r\n" .
-    'END:DAYLIGHT' . "\r\n" .
-    'END:VTIMEZONE' . "\r\n" .	
     'BEGIN:VEVENT' . "\r\n" .
     'ORGANIZER;CN="'.$from_name.'":MAILTO:'.$from_address. "\r\n" .
     'ATTENDEE;CN="'.$to_name.'";ROLE=REQ-PARTICIPANT;RSVP=TRUE:MAILTO:'.$to_address. "\r\n" .
     'LAST-MODIFIED:' . date("Ymd\TGis") . "\r\n" .
-    'UID:'.date("Ymd\TGis", strtotime($startTime)).rand()."@".$domain."\r\n" .
+    'UID:'.$startTime->format("Ymd\TGis").rand()."@".$domain."\r\n" .
     'DTSTAMP:'.date("Ymd\TGis"). "\r\n" .
-    'DTSTART;TZID="Eastern Time":'.date("Ymd\THis", strtotime($startTime)). "\r\n" .
-    'DTEND;TZID="Eastern Time":'.date("Ymd\THis", strtotime($endTime)). "\r\n" .
+    'DTSTART":'.$startTime->format("Ymd\THis"). "\r\n" .
+    'DTEND":'.$endTime->format("Ymd\THis"). "\r\n" .
     'TRANSP:OPAQUE'. "\r\n" .
     'SEQUENCE:1'. "\r\n" .
     'SUMMARY:' . $subject . "\r\n" .
@@ -300,6 +260,26 @@ function sendIcalEvent($from_name, $from_address, $to_name, $to_address, $startT
   <![endif]-->
 
 <script>
+var timeZone;
+function timeAdjust(timeValue){
+	timeValue = timeValue.toString().split(".");
+	if(typeof timeValue[1] == "undefined") timeValue[1] = ":00";
+		else  timeValue[1] = ":30";
+	var response = timeValue[0]+timeValue[1]+"am";
+	if(Number(timeValue[0])>12) response = eval(timeValue[0]-12)+timeValue[1]+"pm";
+	if(Number(timeValue[0])>24) response = eval(timeValue[0]-24)+timeValue[1]+"am";
+	if(Number(timeValue[0])==24) response = "12"+timeValue[1]+"am";
+	return response;
+}
+function changeTimeZone(elem){
+	console.log(elem.value);
+	elem = elem.value.split(",");
+	document.getElementById("tz8").innerHTML = timeAdjust(eval(16+elem[1]));
+	document.getElementById("tz10").innerHTML = timeAdjust(eval(18+elem[1]));
+	document.getElementById("tz12").innerHTML = timeAdjust(eval(20+elem[1]));
+	document.getElementById("tz2").innerHTML = timeAdjust(eval(22+elem[1]));
+
+	}
 <!--Pages function-->
 		function collapseElement(obj)
 		{
@@ -467,7 +447,7 @@ if(document.getElementById('lastname').value == ''){return true;}
 if(document.getElementById('phone').value == ''){return true;}
 if(document.getElementById('email').value == ''){return true;}
 if(document.getElementById('org').value == ''){return true;}
-if(document.getElementById('state').value == ''){return true;}
+if(document.getElementById('timeZone').value == ''){return true;}
 return false;
 }
 </script>
@@ -542,40 +522,40 @@ span{line-height: 1.6em;}
 <input type="text" name="org" id="org" style="" required/>
  </li>
 <li>
-        <label class="top" for="state">Time Zone</label>
-<select type="text" name="state" id="state" style="">
+        <label class="top" for="timeZone">Time Zone</label>
+<select type="text" name="timeZone" onchange="changeTimeZone(this);" id="timeZone" style="">
 <option value=''>Select Time Zone</option>
-<option value='GMT'>GMT</option>
-<option value='ECT'>ECT - GMT+1:00</option>
-<option value='EET'>EET - GMT+2:00</option>
-<option value='ART'>ART - GMT+2:00</option>
-<option value='EAT'>EAT - GMT+3:00</option>
-<option value='MET'>MET - GMT+3:30</option>
-<option value='NET'>NET - GMT+4:00</option>
-<option value='PLT'>PLT - GMT+5:00</option>
-<option value='IST'>IST - GMT+5:30</option>
-<option value='BST'>BST - GMT+6:00</option>
-<option value='VST'>VST - GMT+7:00</option>
-<option value='CTT'>CTT - GMT+8:00</option>
-<option value='JST'>JST - GMT+9:00</option>
-<option value='ACT'>ACT - GMT+9:30</option>
-<option value='AET'>AET - GMT+10:00</option>
-<option value='SST'>SST - GMT+11:00</option>
-<option value='NST'>NST - GMT+12:00</option>
-<option value='MIT'>MIT - GMT-11:00</option>
-<option value='HST'>HST - GMT-10:00</option>
-<option value='AST'>AST - GMT-9:00</option>
-<option value='PST'>PST - GMT-8:00</option>
-<option value='PNT'>PNT - GMT-7:00</option>
-<option value='MST'>MST - GMT-7:00</option>
-<option value='CST'>CST - GMT-6:00</option>
-<option value='EST'>EST - GMT-5:00</option>
-<option value='IET'>IET - GMT-5:00</option>
-<option value='PRT'>PRT - GMT-4:00</option>
-<option value='CNT'>CNT - GMT-3:30</option>
-<option value='AGT'>AGT - GMT-3:00</option>
-<option value='BET'>BET - GMT-3:00</option>
-<option value='CAT'>CAT - GMT-1:00</option>
+<option value='UTC,+0'>UTC</option>
+<option value='ECT,+1'>ECT - UTC+1:00</option>
+<option value='EET,+2'>EET - UTC+2:00</option>
+<option value='ART,+2'>ART - UTC+2:00</option>
+<option value='EAT,+3'>EAT - UTC+3:00</option>
+<option value='MET,+3.5'>MET - UTC+3:30</option>
+<option value='NET,+4'>NET - UTC+4:00</option>
+<option value='PLT,+5'>PLT - UTC+5:00</option>
+<option value='IST,+5.5'>IST - UTC+5:30</option>
+<option value='BST,+6'>BST - UTC+6:00</option>
+<option value='VST,+7'>VST - UTC+7:00</option>
+<option value='CTT,+8'>CTT - UTC+8:00</option>
+<option value='JST,+9'>JST - UTC+9:00</option>
+<option value='ACT,+9.5'>ACT - UTC+9:30</option>
+<option value='AET,+10'>AET - UTC+10:00</option>
+<option value='SST,+11'>SST - UTC+11:00</option>
+<option value='NST,+12'>NST - UTC+12:00</option>
+<option value='MIT,-11'>MIT - UTC-11:00</option>
+<option value='HST,-10'>HST - UTC-10:00</option>
+<option value='AST,-9'>AST - UTC-9:00</option>
+<option value='PST,-8'>PST - UTC-8:00</option>
+<option value='PNT,-7'>PNT - UTC-7:00</option>
+<option value='MST,-7'>MST - UTC-7:00</option>
+<option value='CST,-6'>CST - UTC-6:00</option>
+<option value='EST,-5'>EST - UTC-5:00</option>
+<option value='IET,-5'>IET - UTC-5:00</option>
+<option value='PRT,-4'>PRT - UTC-4:00</option>
+<option value='CNT,-3.5'>CNT - UTC-3:30</option>
+<option value='AGT,-3'>AGT - UTC-3:00</option>
+<option value='BET,-3'>BET - UTC-3:00</option>
+<option value='CAT,-1'>CAT - UTC-1:00</option>
 </select>
 </li>
 <br><br>
@@ -792,10 +772,10 @@ You can click <a target="_blank" href="https://outlook.office365.com/owa/calenda
 <li>
 <label for="reqtime1">Starting Time:</label>
 <select type="text" name="reqtime1">
-<option value="8">8:00am PST</option>
-<option value="10">10:00am PST</option>
-<option value="12">12:00pm PST</option>
-<option value="2">2:00pm PST</option>
+<option id="tz8" value="8">8:00am PST</option>
+<option id="tz10" value="10">10:00am PST</option>
+<option id="tz12" value="12">12:00pm PST</option>
+<option id="tz2" value="2">2:00pm PST</option>
 </select>
 </li>
 <li>
