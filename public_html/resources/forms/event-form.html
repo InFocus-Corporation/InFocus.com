@@ -1,0 +1,342 @@
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="/resources/css/core.css">
+		<title>InfoComm 2016 DigiEasel</title>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"/>
+		<META NAME="og:title" CONTENT="InfoComm 2016 DigiEasel"/>
+		<META HTTP-EQUIV="expires" VALUE="Sat, 1 Jan 2000 11:00:00 GMT">
+		<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+		<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+		<META NAME="viewport" CONTENT="width=device-width">
+		<script type="text/javascript" src="http://marketing.infocus.com/acton/form/16218/0016/form.js"></script>
+		<script type="text/javascript">
+function formElementSerializers() { function input(element) { switch (element.type.toLowerCase()) { case 'checkbox': case 'radio': return inputSelector(element); default: return valueSelector(element); } };
+function inputSelector(element) { return element.checked ? element.value : null; };
+function valueSelector(element) { return element.value; };
+function select(element) { return (element.type === 'select-one' ? selectOne : selectMany)(element); };
+function selectOne(element) { var index = element.selectedIndex; return index < 0 ? null : optionValue(element.options[index]); };
+function selectMany(element) { var length = element.length; if (!length) return null; var values = []; for (var i = 0; i < length; i++) { var opt = element.options[i]; if (opt.selected) values.push(optionValue(opt)); } return values; };
+function optionValue(opt) { if (document.documentElement.hasAttribute) return opt.hasAttribute('value') ? opt.value : opt.text; var element = document.getElementById(opt); if (element && element.getAttributeNode('value')) return opt.value; else return opt.text; };
+return { input: input, inputSelector: inputSelector, textarea: valueSelector, select: select, selectOne: selectOne, selectMany: selectMany, optionValue: optionValue, button: valueSelector };
+};			var requiredFields 		= new Array();		//	[id]
+			var requiredFieldGroups = new Array();		//	[id,count]
+			function addRequiredField (id)
+				{
+				requiredFields.push (id);
+				}
+			function addRequiredFieldGroup (id, count)
+				{
+				requiredFieldGroups.push ([id, count]);
+				}
+			function missing (fieldName)
+				{
+				var f = document.getElementById (fieldName);
+				var v = formElementSerializers()[f.tagName.toLowerCase()](f);
+				if (v)
+					{
+					//	Trim
+					v = v.replace (/^\s*(.*)/,  "$1");
+					v = v.replace (/(.*?)\s*$/, "$1");
+					}
+				if (!v)
+					{
+					f.style.backgroundColor = '#FFFFCC';
+					return 1;
+					}
+				else
+					{
+					f.style.backgroundColor = '';
+					return 0;
+					}
+				}
+			function missingGroup (fieldName, count)
+				{
+				var found = false;
+				for (var i = 0; i < count; i++)
+					{
+					if (document.getElementById(fieldName+'-'+i).checked)
+						{
+						found = true;
+						break;
+						}
+					}
+				if (found)
+					{
+					for (var i = 0; i < count; i++)
+						document.getElementById(fieldName+'-'+i).parentNode.style.backgroundColor = '';
+					return 0;
+					}
+				else
+					{
+					for (var i = 0; i < count; i++)
+						document.getElementById(fieldName+'-'+i).parentNode.style.backgroundColor = '#FFFFCC';
+					return 1;
+					}
+				}
+			var validatedFields = new Array();
+			function addFieldToValidate (id, validationType, arg1, arg2)
+				{
+				validatedFields.push (
+					[ id, validationType, arg1, arg2 ]
+					);
+				}
+			function validateField (id, fieldValidationValue, arg1, arg2)
+				{
+				var field = document.getElementById(id);
+				var name  = field.name;
+				var value = formElementSerializers()[field.tagName.toLowerCase()](field);
+				for (var i = 0; i < validators.length; i++)
+					{
+					var validationDisplay   = validators[i][3];
+					var validationValue 	= validators[i][1];
+					var validationFunction	= validators[i][2];
+					if (validationValue === fieldValidationValue)
+						{
+						if (!validationFunction (value,arg1,arg2,id))
+							{							
+							field.style.backgroundColor = '#FFFFCC';
+							// alert (name + ': ' + validationDisplay);
+							alert (validationDisplay);
+							return false;
+							}
+						else
+							{
+							field.style.backgroundColor = '';
+							}
+						break;
+						}
+					}
+				for (var i = 0; i < implicitValidators.length; i++)
+					{
+					var validationDisplay   = implicitValidators[i][0];
+					var validationValue 	= implicitValidators[i][1];
+					var validationFunction	= implicitValidators[i][2];
+					if (validationValue === fieldValidationValue)
+						{
+						if (!validationFunction (value,arg1,arg2,id))
+							{							
+							field.style.backgroundColor = '#FFFFCC';
+							// alert (name + ': ' + validationDisplay);
+							alert (validationDisplay);
+							return false;
+							}
+						else
+							{
+							field.style.backgroundColor = '';
+							}
+						break;
+						}
+					}
+				return true;
+				}
+			var r = 'l-0025:0';
+			function doSubmit(form)
+				{
+				try {
+					if (typeof(customSubmitProcessing) === "function")
+						customSubmitProcessing();
+					}
+				catch (err) { }
+				var submitButton = document.getElementById (form.id+'_ao_submit_button');
+				submitButton.style.visibility = 'hidden';
+				//	Check required fields
+				var missingCount = 0;
+				for (var i = 0; i < requiredFields.length; i++)
+					missingCount += missing (requiredFields[i]);
+				for (var i = 0; i < requiredFieldGroups.length; i++)
+					missingCount += missingGroup (requiredFieldGroups[i][0], requiredFieldGroups[i][1]);
+				if (missingCount > 0)
+					{
+					alert ('Please fill all required (*) fields. ');
+					submitButton.style.visibility = 'visible';
+					return;
+					}
+				//	Validate all fields
+				for (var i = 0; i < validatedFields.length; i++)
+					{
+					var ff = validatedFields[i];
+					if (!validateField (ff[0], ff[1], ff[2], ff[3]))
+						{
+						document.getElementById(ff[0]).focus();
+						submitButton.style.visibility = 'visible';
+						return;
+						}
+					}
+				//	Make sure it is not a preview situation
+				if (document.getElementById('ao_p').value === '1')
+					{
+					submitButton.style.visibility = 'visible';
+					return;
+					}
+				// Enable the form handler
+				document.getElementById('ao_bot').value = 'nope';
+                try{
+                // Save the parent href if the form is in an iframe
+                document.getElementById('ao_iframe').value = window.parent ? window.parent.location.href : "";
+                }catch(xxx){}
+				// Submit
+				//form.submit();
+    $.post( 'http://marketing.infocus.com/acton/forms/userSubmit.jsp', $('form#form_0016').serialize(), function(data) {
+       },
+       'json' // I expect a JSON response
+    );
+	document.getElementById('form_0016').innerHTML="Thank you for your interest! Your information has been submitted and we will reach out to you after the event.";
+	    parent.jQuery.colorbox.resize({
+        innerWidth:$('#form_0016').width(),
+        innerHeight:$('#form_0016').height()+130
+    });
+	setTimeout(function(){parent.jQuery.colorbox.close();},5000);
+}
+		</script>
+		<style>
+		form input[type=checkbox]{
+		display:none;
+		}
+		form{padding: 100px 100px 10px 20px;;display: inline-block;}
+		</style>
+
+		<form id="form_0016" method="post" enctype="multipart/form-data" action="http://marketing.infocus.com/acton/forms/userSubmit.jsp" accept-charset="UTF-8" target="_self">
+		<input type="hidden" name="ao_a"      value="16218"				>
+		<input type="hidden" name="ao_f"      value="0016"					>
+		<input type="hidden" name="ao_d"      value="0016:d-0001"					>
+		<input type="hidden" name="ao_p"      id="ao_p"      value="0"	>
+		<input type="hidden" name="ao_jstzo"  id="ao_jstzo"  value=""					>
+		<input type="hidden" name="ao_refurl" id="ao_refurl" value=""					>
+		<input type="hidden" name="ao_cuid"   value="l-0025:0"				>
+		<input type="hidden" name="ao_srcid"  value=""					>
+		<input type="hidden" name="ao_nc"	  value=""					>
+		<input type="hidden" name="ao_pf"	  value="1"				>
+		<input type="hidden" name="ao_bot"    id="ao_bot"	value="yes"					>
+        <input type="hidden" name="ao_iframe" id="ao_iframe" value=""                   >
+		<input type="hidden" name="ao_camp"   value=""					>
+		<input type="hidden" name="ao_campid"  value=""				>		
+		<!-- -------------------------------------------------------------------------------------------- -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<div class="formField">
+	<div class="formSectionDescription"><p>If you'd like to learn more about our solutions, please complete the form below.</p></div>
+</div>
+	<div class="formField">
+
+			<div class="formFieldLabel"><label>First Name <b style="color: #FF0000; cursor: default" title="Required Field">*</b></label></div>
+			<input type="text" class="formFieldText formFieldLarge"  id="form_0016_fld_1_fn" name="First Name" value="">
+	</div>
+	<div class="formField">
+			<div class="formFieldLabel"><label >Last Name <b style="color: #FF0000; cursor: default" title="Required Field">*</b></label></div>
+			<input type="text" class="formFieldText formFieldLarge" id="form_0016_fld_1_ln" name="Last Name" value="">
+			
+	</div>
+	<script type="text/javascript">
+		if (typeof(addRequiredField) != 'undefined')
+			{
+			addRequiredField ('form_0016_fld_1_fn');
+			addRequiredField ('form_0016_fld_1_ln');
+			}
+	</script>
+
+	<div class="formField">
+		<div class="formFieldLabel" id="form_0016_fld_2-Label"><label for = "form_0016_fld_2">Organization <b style="color: #FF0000; cursor: default" title="Required Field">*</b></label></div>
+		<input type="text" class="formFieldText formFieldLarge" id="form_0016_fld_2" name="Company" >
+	</div>
+	<script type="text/javascript">
+		if (typeof(addRequiredField) != 'undefined')
+			{
+			addRequiredField ('form_0016_fld_2');
+			}
+	</script>
+
+	<div class="formField">
+		<div class="formFieldLabel" id="form_0016_fld_3-Label"><label for = "form_0016_fld_3">Email Address <b style="color: #FF0000; cursor: default" title="Required Field">*</b></label></div>
+		<input type="text" class="formFieldText formFieldLarge" id="form_0016_fld_3" name="E-mail Address"  onBlur="singleCheck ('form_0016_fld_3', 'EMAIL', 'form_0016_fld_3-Label')">
+	</div>
+	<script type="text/javascript">
+		if (typeof(addRequiredField) != 'undefined')
+			{
+			addRequiredField ('form_0016_fld_3');
+			}
+	</script>
+	<script type="text/javascript">
+		if (typeof(addFieldToValidate) != 'undefined')
+			{
+				addFieldToValidate ('form_0016_fld_3', 'EMAIL');
+			}
+	</script>
+
+	<div class="formField">
+		<div class="formFieldLabel" id="form_0016_fld_4-Label"><label for = "form_0016_fld_4">Business Phone <b style="color: #FF0000; cursor: default" title="Required Field">*</b></label></div>
+		<input type="text" class="formFieldText formFieldLarge" id="form_0016_fld_4" name="Business Phone"  onBlur="singleCheck ('form_0016_fld_4', 'USPHONE', 'form_0016_fld_4-Label')">
+	</div>
+	<script type="text/javascript">
+		if (typeof(addRequiredField) != 'undefined')
+			{
+			addRequiredField ('form_0016_fld_4');
+			}
+	</script>
+	<script type="text/javascript">
+		if (typeof(addFieldToValidate) != 'undefined')
+			{
+				addFieldToValidate ('form_0016_fld_4', 'USPHONE');
+				addFieldToValidate ('form_0016_fld_4', 'LENGTH', 110);
+			}
+	</script>
+
+	
+			<div class="l6e formFieldLabel">Choose All That Apply<b style="color: #FF0000; cursor: default" title="Required Field">*</b></div>
+			<div>
+			<input type="checkbox" name="Product of Interest" id="form_0016_fld_5-0" value="Mondopad" >
+			<label for="form_0016_fld_5-0" class="formFieldLabel checkboxFieldLabel">Mondopad</label>
+			</div>
+			<div>
+			<input type="checkbox" name="Product of Interest" id="form_0016_fld_5-1" value="JTouch" >
+			<label for="form_0016_fld_5-1" class="formFieldLabel checkboxFieldLabel">JTouch</label>
+			</div>
+			<div>
+			<input type="checkbox" name="Product of Interest" id="form_0016_fld_5-2" value="Projectors" >
+			<label for="form_0016_fld_5-2" class="formFieldLabel checkboxFieldLabel">Projectors</label>
+			</div>
+			<div>
+			<input type="checkbox" name="Product of Interest" id="form_0016_fld_5-3" value="ConX" >
+			<label for="form_0016_fld_5-3" class="formFieldLabel checkboxFieldLabel">ConX</label>
+			</div>
+			<div>
+			<input type="checkbox" name="Product of Interest" id="form_0016_fld_5-4" value="Canvas 5" >
+			<label for="form_0016_fld_5-4" class="formFieldLabel checkboxFieldLabel">Canvas 5</label>
+			</div>
+			<div>
+			<input type="checkbox" name="Product of Interest" id="form_0016_fld_5-5" value="Catalyst 4K" >
+			<label for="form_0016_fld_5-5" class="formFieldLabel checkboxFieldLabel">Catalyst 4K</label>
+			</div>
+			<div>
+			<input type="checkbox" name="Product of Interest" id="form_0016_fld_5-6" value="Other" >
+			<label for="form_0016_fld_5-6" class="formFieldLabel checkboxFieldLabel">Other</label>
+			</div>
+		<script type="text/javascript">
+			if (typeof(addRequiredFieldGroup) != 'undefined')
+				{
+				addRequiredFieldGroup ('form_0016_fld_5', 7);
+				}
+		</script>
+				<button id="form_0016_ao_submit_button" type="button" name="Submit" value="Submit" onClick="doSubmit(document.getElementById('form_0016'))">Submit</button>
+		<div class="formNegCap"  style="display:none;"><td>
+		<input type="text" id="ao_form_neg_cap" name="ao_form_neg_cap" value="">
+		</div>
+		</form>
+		<div id="prefillDiv" style="display: none"></div>
+		<script>/*<![CDATA[*/(function(w,a,b,d,s){w[a]=w[a]||{};w[a][b]=w[a][b]||{q:[],track:function(r,e,t){this.q.push({r:r,e:e,t:t||+new Date});}};var e=d.createElement(s);var f=d.getElementsByTagName(s)[0];e.async=1;e.src='//marketing.infocus.com/cdnr/87/acton/bn/tracker/16218';f.parentNode.insertBefore(e,f);})(window,'ActOn','Beacon',document,'script');ActOn.Beacon.track();/*]]>*/</script>
+
+<script>
+
+
+$(document).ready(function() {
+    parent.jQuery.colorbox.resize({
+        innerWidth:$('#form_0016').width(),
+        innerHeight:$('#form_0016').height()+60
+    });
+ document.getElementById("form_0016").reset();
+});
+
+</script>
+	
+	
