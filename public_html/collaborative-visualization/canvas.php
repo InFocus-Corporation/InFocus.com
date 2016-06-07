@@ -128,7 +128,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     <div class="C10 alternateDivChildL2" style="clear:both;">
                       <div class="cmsedit info">
                         <h5 class="name">Watch The Canvas Video</h5>
-                        <a href="//www.infocus.com/videos?kjVCe1-mZ9g" class="colorbox-load init-colorbox-load-processed cboxElement"><img class="video_thumbnail" typeof="foaf:Image" src="http://www.jupiter.com/system/files/styles/video_thumbnail/private/video-thumbnails/Video_Still_Canvas2_1.jpg?itok=bxT7uDqe" width="740" alt=""></a>
+                        <a href="//www.infocus.com/videos?Hr02fvMVmF0" class="colorbox-load init-colorbox-load-processed cboxElement"><img class="video_thumbnail" typeof="foaf:Image" src="//www.infocus.com/resources/images/InFocus-Jupiter-Canvas-5-Video-Teaser.png" width="740" alt=""></a>
                       </div>
                       <hr>
                     </div>
