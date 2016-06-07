@@ -170,7 +170,7 @@ $(function() {
     </div>
     <div class="alert-box radius">
       <span><span class="red">Mondopad Owners!</span> Do not upgrade to Windows 10</span>
-      <span><a href="/resources/documents/Mondopad-and-Window-10.pdf" class="Button-1 form-box cboxElement">View Details</a></span>
+      <span><a href="/resources/documents/Mondopad-and-Window-10.pdf" class="Button-1">View Details</a></span>
     </div>
 
     <div>

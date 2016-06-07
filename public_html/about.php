@@ -87,6 +87,7 @@ $(function () {
                       <p>You rely on your digital tools to enable you to get work done faster and better. Your PC. Your smartphone. Dozens of apps. And when you need to connect with one person or a thousand anywhere, any time from any device, we have the right solution for you.
                       <p>More than just conference room, classroom, display wall and boardroom solutions, we offer tools that connect global enterprise infrastructures and employees from any and everywhere. And while technology innovation is important, sharing ideas, information and connecting with people beyond what you can do with a traditional conference call is what we care about. Because that’s how successful companies connect teams and monitor information. That’s how you do it better and faster.</p>
                       <p>We do important work every day, too – we work with a passion to provide you seamless solutions that enable you to share more, do more, work faster, be smarter and succeed beyond what you’d expect every single day. We’re powering great work. We’re InFocus.</p>
+                      <p style="text-align:center;"><br><a class="btn" href="http://www.infocus.com/resources/documents/InFocus-Corporate-Brochure-EN.pdf">View InFocus Brochure</a></p>
                     </div>
                 </div>
                 <div class="about--row second_row">
