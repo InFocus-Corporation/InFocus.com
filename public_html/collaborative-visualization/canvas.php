@@ -336,6 +336,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                                 Choose Language
                                                 <ul>
                                                     <li><a data-event="Jupiter-Canvas-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-Datasheet-EN.pdf">English</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-Datasheet-EU.pdf">Intl English</a></li>
                                                     <li><a data-event="Jupiter-Canvas-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-Datasheet-ES.pdf">Español</a></li>
                                                     <li><a data-event="Jupiter-Canvas-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-Datasheet-AR.pdf">العربية</a></li>
                                                     <li><a data-event="Jupiter-Canvas-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Jupiter-Canvas-Datasheet-RU.pdf">русский</a></li>

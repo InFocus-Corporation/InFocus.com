@@ -196,6 +196,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                                 Choose Language
                                                 <ul>
                                                     <li><a data-event="Jupiter-Canvas-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Canvas-Touch-Datasheet-EN.pdf">English</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Canvas-Touch-Datasheet-EU.pdf">Intl English</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
