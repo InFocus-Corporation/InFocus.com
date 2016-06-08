@@ -176,6 +176,9 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <?php if (PRESS_RELEASE_2016JUNE2) { ?>
                     <div class="C10 alternateDivChildL2">
                       <div class="cmsedit info">
+                        <div class="image-set cmsedit" style="float: right; padding: 1em;">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/kjVCe1-mZ9g?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
                         <h5 class="name">Uniquely adaptable</h5>
                         <p>Canvas defines flexibility, supporting a broad range of common networks and applications, as well as unique customizations.</p>
                         <ul class="feature-list">
