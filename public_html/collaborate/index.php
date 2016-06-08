@@ -69,7 +69,8 @@ $(function() {
                 Communicating with video and data provides so many benefits – better understanding, less cost, and more – that you’ll never want to call without it.
             </p>
             <p class="lead_text--paragraph">
-                <a href="http://www.infocus.com/resources/documents/InFocus-ConX-Ecosystem-Datasheet-EN.pdf" class="text_module_link">ConX Video Communication Story</a>
+                <a href="http://www.infocus.com/videos?5owEaLTmp4A" class="text_module_link">Watch ConX Video Communication Story</a>
+                <a href="http://www.infocus.com/resources/documents/InFocus-ConX-Ecosystem-Datasheet-EN.pdf" class="text_module_link">View ConX Family Brochure</a>
             </p>
         </div>
     </div>
@@ -162,6 +163,8 @@ $(function() {
             <p class="lead_text--paragraph">Display all of your data sources and HD video conferencing feeds on up to 96 screens – customized for your board room, CxO office, or training center.</p>
             <div class="feature_links">
                 <a href="/conx-wall-exec" class="feature_link">View ConX Wall</a>
+                <a href="http://www.infocus.com/videos?5owEaLTmp4A" class="feature_link">Watch ConX Video</a>
+
             </div>
         </div>
         <div class="small-6 columns color_stripe_column">
