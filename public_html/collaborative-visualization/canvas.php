@@ -174,9 +174,10 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 </div>
                 <div id="details">
                 <?php if (PRESS_RELEASE_2016JUNE2) { ?>
-                    <div class="C5" style="float:left;">
+                    <div class="C10">
                       <div class="cmsedit info">
-                       <h5 class="name">Uniquely adaptable</h5>
+                        <iframe style="position:relative;z-index:100;float:right;display:block;margin:1em;max-width:100%;" width="560" height="315" src="https://www.youtube.com/embed/kjVCe1-mZ9g?rel=0" frameborder="0" allowfullscreen></iframe>
+                        <h5 class="name">Uniquely adaptable</h5>
                         <p>Canvas defines flexibility, supporting a broad range of common networks and applications, as well as unique customizations.</p>
                         <ul class="feature-list">
                           <li>Supports most enterprise LAN and WAN network configurations</li>
@@ -184,11 +185,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <li>Supports integration with popular UCC platforms and VMS systems</li>
                           <li>Robust API permits the creation of customized features and integrations</li>
                         </ul>
-                      </div>
-                    </div>
-                    <div class="C5" style="float:left;">
-                      <div class="image-set cmsedit" style="padding: 1em;">
-                          <iframe width="560" height="315" src="https://www.youtube.com/embed/kjVCe1-mZ9g?rel=0" frameborder="0" allowfullscreen></iframe>
                       </div>
                     </div>
                     <div class="C10 alternateDivChildL2" style="clear:both;">

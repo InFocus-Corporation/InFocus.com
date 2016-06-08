@@ -75,9 +75,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                 <div id="overview" class="active">
                     <div class="C10 alternateDivChildL2">
                       <div class="info cmsedit">
-                          <div class="image-set cmsedit" style="float: right; padding: 1em;">
-                              <iframe width="420" height="315" src="https://www.youtube.com/embed/pUQ76I5mYTQ?rel=0" frameborder="0" allowfullscreen></iframe>
-                          </div>
+                          <iframe style="position:relative;z-index:100;float:right;display:block;margin:1em;max-width:100%;" width="420" height="315" src="https://www.youtube.com/embed/pUQ76I5mYTQ?rel=0" frameborder="0" allowfullscreen></iframe>
                           <h5 class="name">4K Input and Output Support</h5>
                           <strong class="tagline"></strong>
                           <p>Capable of decoding up to 28 non-HDCP 4K signals, Catalyst 4K supports input signals with a 4K DVI input card that leverages a DVI-D single-link connector. Catalyst 4K supports up to 12 non-HDCP 4K outputs on a single CPU chassis. Each 4K display has a resolution of 3840 x 2160 pixels per output and four destination windows per card through a mini DisplayPort interface. Add up to four Expansion Chassis to gain even more inputs.</p>
@@ -93,9 +91,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <hr/>
                       </div>
                         <div class="info cmsedit">
-                          <div class="image-set cmsedit" style="float: right; padding: 1em;">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/rotyK8OgFP0?rel=0" frameborder="0" allowfullscreen></iframe>
-                          </div>
+                          <iframe style="position:relative;z-index:100;float:right;display:block;margin:1em;max-width:100%;" width="560" height="315" src="https://www.youtube.com/embed/rotyK8OgFP0?rel=0" frameborder="0" allowfullscreen></iframe>
                           <h5 class="name">Native 4K Decoding</h5>
                           <strong class="tagline"></strong>
                           <p>Catalyst 4K offers CPU-based decoding on both H.264 and H.265 HD and 4K sources.</p>
@@ -210,6 +206,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                                                 Choose Language
                                                 <ul>
                                                     <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Catalyst-4K-Datasheet-EN.pdf">English</a></li>
+                                                    <li><a data-event="Jupiter-Canvas-CRS-4K-Datasheet" href="//www.infocus.com/resources/documents/InFocus-Catalyst-4K-Datasheet-EU.pdf">Intl English</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
