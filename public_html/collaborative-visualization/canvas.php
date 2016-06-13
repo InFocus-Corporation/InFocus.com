@@ -50,7 +50,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
             </div>
             <div class="C10 Col_child C6x4_child">
                 <div class="image-set" style="float:right;">
-                    <img src="/resources/static/images/display-walls/160775957.jpg">
+                    <img src="/resources/static/images/display-walls/160775957.jpg" style="float:none;">
+                    <img src="/resources/static/images/infocomm/Canvas5-Catalyst4K-INFO16-BestofShow-AVT-Winner.jpg" style="float:none;max-width:90%;margin:2rem auto 1rem;">
                 </div>
                 <div class="info" style="float:left;">
                     <strong class="tagline mysqledit" id="header">The world's most powerful collaborative visualization tool.</strong>
