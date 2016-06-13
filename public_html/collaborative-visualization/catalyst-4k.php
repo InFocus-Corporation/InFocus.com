@@ -83,6 +83,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <hr/>
                       </div>
                       <div class="info cmsedit">
+                            <img style="float:right;max-width:100%;" src="/resources/static/images/infocomm/Canvas5-Catalyst4K-INFO16-BestofShow-AVT-Winner.jpg">
                           <h5 class="name">Built for Canvas</h5>
                           <strong class="tagline"></strong>
                           <p>The Catalyst 4K display wall processor ships with <a href="/collaborative-visualization/canvas">Canvas 5.0</a>, providing access to all of the visual business intelligence made available in the user’s network—including live streams from network cameras and mobile devices, application screens from PCs, and real-time data feeds.</p>
