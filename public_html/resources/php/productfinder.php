@@ -1,4 +1,4 @@
-﻿<?PHP
+<?PHP
 
 $localdir = dirname(__FILE__);
 $homedir = $_SERVER['DOCUMENT_ROOT']; 
@@ -201,7 +201,7 @@ $result = mysqli_query($connection,$sql);
  while($row = mysqli_fetch_array($result))
  {
 
- echo '<li class="liresults" style="position:relative"><a href="/projectors/product?pn=' . strtoupper($row[0]) . '">
+ echo '<li class="liresults" style="position:relative"><a href="/projectors/' . strtoupper($row[0]) . '">
      ';
     
 $prod = strtoupper($row[0]);
@@ -209,7 +209,7 @@ $prod = strtoupper($row[0]);
  echo '<img style="float:left;max-width:49%;padding-top:15px;" src="'. imagethumb($prod,'320') . '" width="50%">';
       
       
- echo ' </a><div style="display:inline-block;vertical-align:top;margin-left:20px;max-width:45%;text-align:left;"><a href="/projectors/product?pn=' . strtoupper($row[0]) . '"><h4 class="tagline">InFocus ' . $row[0] . " " . $row[8] . " Projector" . '</h4></a><span style="font-size:70%">' . $row[1] . '</span><div class="feature-list" style="font-size:80%;">
+ echo ' </a><div style="display:inline-block;vertical-align:top;margin-left:20px;max-width:45%;text-align:left;"><a href="/projectors/' . strtoupper($row[0]) . '"><h4 class="tagline">InFocus ' . $row[0] . " " . $row[8] . " Projector" . '</h4></a><span style="font-size:70%">' . $row[1] . '</span><div class="feature-list" style="font-size:80%;">
      
    ' . str_replace('<ul>','<ul>',$row[12]) . ' </div></div>';
    if(strlen($row[13])>1){ echo '<div style="position:absolute;bottom:20px;color:darkgrey;font-weight:400;">MSRP: ' . $row[13] . '
