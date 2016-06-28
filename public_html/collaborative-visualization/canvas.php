@@ -73,7 +73,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                     </ul>
                 </nav>
                 <div id="overview" class="active">
-                <?php if (PRESS_RELEASE_2016JUNE2) { ?>
                   <div class="C10 alternateDivChildL2">
                       <div class="info cmsedit">
                         <div class="image-set cmsedit" style="float: right; padding: 1em; max-width: 350px;">
@@ -104,6 +103,11 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                         </ul>
                         <hr>
                       </div>
+                      <div class="cmsedit info">
+                        <h5 class="name">Watch The Canvas Video</h5>
+                        <a href="//www.infocus.com/videos?Hr02fvMVmF0" class="colorbox-load init-colorbox-load-processed cboxElement"><img class="video_thumbnail" typeof="foaf:Image" src="//www.infocus.com/resources/images/InFocus-Jupiter-Canvas-5-Video-Teaser.png" width="740" alt=""></a>
+                        <hr style="clear:both;">
+                      </div>
                       <div class="info cmsedit">
                         <h5 class="name">Instant Connection And Access</h5>
                         <p>Canvas transforms your computer, tablet or smartphone into a portable video wall to provide instant connection and access to essential visual information from anywhere. Share camera feeds, web pages, application screens and real time data for rapid, well-informed decision making.</p>
@@ -115,6 +119,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                         <hr>
                       </div>
                       <div class="info cmsedit">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/zVJWe_LGBw8" frameborder="0" allowfullscreen style="float:right;margin-left:1em;margin-bottom:1em;"></iframe>
                         <h5 class="name">Collaboration, Evolved</h5>
                         <p>Canvas enables managers to annotate directly on live video shared with remote colleagues across a broad array of devices.</p>
                         <ul class="feature-list">
@@ -123,15 +128,8 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <li>Drag shapes from the toolbar to any area in the video to be resized, colored and titled</li>
                           <li>Create whiteboards for brainstorming</li>
                         </ul>
-                        <hr>
+                        <hr style="clear:both;">
                       </div>
-                    </div>
-                    <div class="C10 alternateDivChildL2" style="clear:both;">
-                      <div class="cmsedit info">
-                        <h5 class="name">Watch The Canvas Video</h5>
-                        <a href="//www.infocus.com/videos?Hr02fvMVmF0" class="colorbox-load init-colorbox-load-processed cboxElement"><img class="video_thumbnail" typeof="foaf:Image" src="//www.infocus.com/resources/images/InFocus-Jupiter-Canvas-5-Video-Teaser.png" width="740" alt=""></a>
-                      </div>
-                      <hr>
                     </div>
                     <div class="C10 alternateDivChildL2" style="clear:both;">
                       <div class="cmsedit info">
@@ -153,25 +151,6 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                         <img alt="" class="img-responsive" src="http://www.jupiter.com/system/files/Canvas%20ecosystem%20diagram_Jan_2016.jpg" style="width:auto;max-width:100%">
                       </div>
                     </div>
-                <?php } else { ?>
-                    <div class="C10 alternateDivChildL2">
-                      <div class="info cmsedit">
-                          <div class="image-set cmsedit" style="float: right; padding: 1em; max-width: 350px;">
-                              <img src="/resources/static/images/display-walls/canvas.jpg" >
-                          </div>
-                    			<h5 class="name">New in Canvas 3.1</h5>
-                    			<strong class="tagline"></strong>
-                          <p>Canvas 3.1 delivers new, advanced communications and presentation features, as well as integrations with major unified communication and collaboration platforms, to make this edition of Canvas the most powerful solution of its kind.</p>
-                          <p>New features of the updated Canvas 3.1 software include:</p>
-                          <ul class="feature-list">
-                          	<li><strong>Shared voice chat</strong> - All Canvas participants are automatically enrolled in a shared voice chat room to facilitate collaboration and teamwork.</li>
-                            <li><strong>Microsoft Lync&reg; integration</strong> - Integration with the leading UCC platform means that users can escalate to Canvas from the Lync client or start a Lync conversation from Canvas.</li>
-                            <li><strong>Connect with remote non-Canvas users</strong> - Remote colleagues who do not have Canvas at their location can participate in collaborative sessions with Canvas users.  With this new version, Canvas users can dial out to users of SIP-based conferencing systems, and allows users of SIP-based conferencing systems to dial into a canvas.</li>
-                            <li><strong>Supports Canvas CRS-4K</strong> - Jupiter’s new conference room system for Canvas, the <a href="/collaborative-visualization/canvas-crs4k">Canvas CRS-4K</a>, turns any conference room or huddle room into a Canvas workspace for teams. The new SimpleShare™ feature employs WebRTC technology to allow anyone with a laptop, even one without Canvas installed, to easily and instantly present content to local and remote Canvas users without downloading software, connecting cables, or attaching a dongle.</li>
-                          </ul>
-			                </div>
-                    </div>
-                <?php } ?>
                 </div>
                 <div id="details">
                 <?php if (PRESS_RELEASE_2016JUNE2) { ?>
