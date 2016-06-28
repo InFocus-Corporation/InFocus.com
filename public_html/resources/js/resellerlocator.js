@@ -379,7 +379,7 @@ map1.events.on({moveend: function(evt) {
 		countryOverlap("Nigeria",lonLow,lonHigh,latLow,latHigh,x);
 
 		//United States
-		lonLow=-13748826.794577;lonHigh=3809473.3699661;latLow=-7956734.5400461;latHigh=6275331.9021025;
+		lonLow=-13748826.794577;lonHigh=-7478206.1164353;latLow=2961498.307606;latHigh=6275331.9021025;
 		countryOverlap("United States",lonLow,lonHigh,latLow,latHigh,x);
 
 		//Canada
@@ -656,6 +656,7 @@ function displayResults(featArray,i){
 				if((i+1)%4 == 0){ 
 				temptext = temptext + "</tr><tr>";
 				}
+				console.log(featArray.attributes['NAME']+"|"+featArray.attributes['COUNTRY'])
 		displayedCountry = featArray.attributes['COUNTRY'];
 		return temptext;
 

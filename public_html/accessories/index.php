@@ -104,12 +104,12 @@ a:hover{
                   <div>
                     <a href="/accessories/mondopad-accessories"><section class="stretch-wrap60">
                       <div><img src="<?php echo imagethumb('mpbtaccessories','135');?>" alt="<?php echo translate('Accessories for');?><br>Mondopad <?php echo translate('and');?> BigTouch"/></div></section>
-                      <span id="mpbtaccessories" class="title"><?= translate('Accessories for');?><br>Mondopad <?= translate('and');?> BigTouch</span></a>
+                      <span id="mpbtaccessories" class="title"><?= translate('Accessories for');?><br>Displays</span></a>
                       <div class="description"><?= $pageText['mpbtaccessories'];?></div>
                       <span class="accesories_button_wrapper"><a href="/accessories/mondopad-accessories" class="view-all" ><?= translate('View All');?></a>
 
                         <?php if($lang != "de"){
-                          echo '<a href="http://www.infocusstore.com/s?defaultSearchTextValue=Search&searchKeywords=mondopad&Action=submit&field_brandtextbin=&field_subjectbin=7448597011&field_color_map=&field_price=&field_size_name=&searchRank=salesrank&searchSize=12&searchPage=1&searchBinNameList=brandtextbin%2Csubjectbin%2Ccolor_map%2Cprice%2Csize_name" >'. translate('Go to Store') . '</a>';
+                          echo '<a href="https://infocusdirect.com/" >'. translate('Go to Store') . '</a>';
                         }
                         ?>
                       </span>
@@ -123,7 +123,7 @@ a:hover{
                         <span class="accesories_button_wrapper"><a href="/accessories/cables" class="inbound view-all" ><?= translate('View All');?></a>
 
                           <?php if($lang != "de"){
-                            echo '<a href="http://www.infocusstore.com/Cables-Adapters-Accessories/b/7448598011?ie=UTF8&title=Cables+%26+Adapters" >'. translate('Go to Store') . '</a>';
+                            echo '<a href="https://www.infocusdirect.com/accessories/cables-and-adapters" >'. translate('Go to Store') . '</a>';
                           }
                           ?>
                         </span></div></li><li><div>
@@ -134,7 +134,7 @@ a:hover{
                             <span class="accesories_button_wrapper"><a href="/accessories/cases" class="inbound view-all"><?= translate('View All');?></a>
 
                               <?php if($lang != "de"){
-                                echo '<a href="http://www.infocusstore.com/Cases-Accessories/b/7448599011?ie=UTF8&title=Cases" >'. translate('Go to Store') . '</a>';
+                                echo '<a href="https://www.infocusdirect.com/Accessory/Cases" >'. translate('Go to Store') . '</a>';
                               }
                               ?>
                             </span></div></li><li><div>
@@ -145,7 +145,7 @@ a:hover{
                                 <span class="accesories_button_wrapper"><a href="/accessories/lamps" class="view-all"><?= translate('View All');?></a>
 
                                   <?php if($lang != "de"){
-                                    echo '<a href="http://www.infocusstore.com/Lamps-Accessories/b/7448620011?ie=UTF8&title=Lamps" >'. translate('Go to Store') . '</a>';
+                                    echo '<a href="https://www.infocusdirect.com/Accessory/Lamps" >'. translate('Go to Store') . '</a>';
                                   }
                                   ?>
                                 </span></div></li><li><div>
@@ -156,7 +156,7 @@ a:hover{
                                     <span class="accesories_button_wrapper"><a href="/accessories/lenses" class="view-all"><?= translate('View All');?></a>
 
                                       <?php if($lang != "de"){
-                                        echo '<a href="http://www.infocusstore.com/Lamps-Accessories/b/7448620011?ie=UTF8&title=Lamps" >'. translate('Go to Store') . '</a>';
+                                        echo '<a href="https://www.infocusdirect.com/Accessory/Lenses" >'. translate('Go to Store') . '</a>';
                                       }
                                       ?>
                                     </span></div></li><li><div>
@@ -167,7 +167,7 @@ a:hover{
                                         <span class="accesories_button_wrapper"><a href="/accessories/misc" class="view-all"><?= translate('View All');?></a>
 
                                           <?php if($lang != "de"){
-                                            echo '<a href="http://www.infocusstore.com/Filters-Accessories/b/7448619011?class=tier2" >'. translate('Go to Store') . '</a>';
+                                            echo '<a href="https://www.infocusdirect.com/Accessory/Misc" >'. translate('Go to Store') . '</a>';
                                           }
                                           ?>
                                         </span></div></li><li><div>
@@ -178,7 +178,7 @@ a:hover{
                                             <span class="accesories_button_wrapper"><a href="/accessories/mounts" class="view-all" ><?= translate('View All');?></a>
 
                                               <?php if($lang != "de"){
-                                                echo '<a href="http://www.infocusstore.com/Mounts-Stands-Accessories/b/7448623011?class=tier2" >'. translate('Go to Store') . '</a>';
+                                                echo '<a href="https://www.infocusdirect.com/accessories/mounts-and-stands" >'. translate('Go to Store') . '</a>';
                                               }
                                               ?>
                                             </span></div></li><li><div>
@@ -189,7 +189,7 @@ a:hover{
                                                 <span class="accesories_button_wrapper"><a href="/accessories/remotes" class="view-all"><?= translate('View All');?></a>
 
                                                   <?php if($lang != "de"){
-                                                    echo '<a href="http://www.infocusstore.com/Remotes-Accessories/b/7448624011?ie=UTF8&title=Remotes" >'. translate('Go to Store') . '</a>';
+                                                    echo '<a href="https://www.infocusdirect.com/accessories/remotes" >'. translate('Go to Store') . '</a>';
                                                   }
                                                   echo '</span></div></li>';
                                                   if($lang != "de"){
@@ -199,7 +199,7 @@ a:hover{
                                                     <div ><img src="' . imagethumb('screens' , '192') . '" alt="'. translate('Screens') . '"/></div></section>
                                                     <span id="screens" class="title">'. translate('Screens') . '</span></a>
                                                     <div class="description">'. $pageText['screens'] . '</div>
-                                                    <span class="accesories_button_wrapper"><a href="/accessories/screens" class="view-all" >'. translate('View All') . '</a><a href="http://www.infocusstore.com/Screens-Accessories/b/7448625011?ie=UTF8&title=Screens" >'. translate('Go to Store') . '</a></span>
+                                                    <span class="accesories_button_wrapper"><a href="/accessories/screens" class="view-all" >'. translate('View All') . '</a><a href="https://www.infocusdirect.com/Accessory/Screens" >'. translate('Go to Store') . '</a></span>
                                                     </div></li>';
                                                   }
                                                   ?>
@@ -210,7 +210,7 @@ a:hover{
                                                       <div class="description"><?= $pageText['software'];?></div>
                                                       <span class="accesories_button_wrapper"><a href="/accessories/software" class="view-all" ><?= translate('View All');?></a>
                                                         <?php if($lang != "de"){
-                                                          echo '<a href="http://www.infocusstore.com/Software-Accessories/b/7288445011?ie=UTF8&title=Software" >'. translate('Go to Store') . '</a>';
+                                                          echo '<a href="https://www.infocusdirect.com/Accessory/Software" >'. translate('Go to Store') . '</a>';
                                                         }
                                                         ?>
                                                       </span></div></li><li><div>
@@ -221,7 +221,7 @@ a:hover{
                                                           <span class="accesories_button_wrapper"><a href="/accessories/services" class="view-all" ><?php echo translate('View All');?></a>
 
                                                             <?php if($lang != "de"){
-                                                              echo '<a href="http://www.infocusstore.com/Warranties-Accessories/b/7448626011?class=tier2" >'. translate('Go to Store') . '</a>';
+                                                              echo '<a href="https://www.infocusdirect.com/accessories/warranties" >'. translate('Go to Store') . '</a>';
                                                             }
                                                             ?>
                                                           </span></div></li><li><div>
@@ -232,7 +232,7 @@ a:hover{
                                                               <span class="accesories_button_wrapper"><a href="/accessories/networking" class="view-all"><?= translate('View All');?></a>
 
                                                                 <?php if($lang != "de"){
-                                                                  echo '<a href="http://www.infocusstore.com/Wireless-Accessories/b/7448627011?class=tier2" >'. translate('Go to Store') . '</a>';
+                                                                  echo '<a href="https://www.infocusdirect.com/accessories/wireless-and-networking" >'. translate('Go to Store') . '</a>';
                                                                 }
                                                                 ?>
                                                               </span></div></li>
