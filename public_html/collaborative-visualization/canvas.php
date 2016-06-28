@@ -119,7 +119,7 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                         <hr>
                       </div>
                       <div class="info cmsedit">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/zVJWe_LGBw8" frameborder="0" allowfullscreen style="float:right;margin-left:1em;margin-bottom:1em;"></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/zVJWe_LGBw8" frameborder="0" allowfullscreen style="position:relative;z-index:100;float:right;display:block;margin:1em;max-width:100%;"></iframe>
                         <h5 class="name">Collaboration, Evolved</h5>
                         <p>Canvas enables managers to annotate directly on live video shared with remote colleagues across a broad array of devices.</p>
                         <ul class="feature-list">

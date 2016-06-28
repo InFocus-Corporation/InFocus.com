@@ -106,12 +106,13 @@ if($_GET['edit']=="true"){CMSscript("/resources/overviews/$pn-$lang.src", $pn, $
                           <hr/>
                       </div>
                       <div class="info cmsedit">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/zVJWe_LGBw8" frameborder="0" allowfullscreen style="position:relative;z-index:100;float:right;display:block;margin:1em;max-width:100%;"></iframe>
                           <h5 class="name">Catalyst 4K in Action</h5>
                           <strong class="tagline"></strong>
                           <p>The Catalyst 4K processor is the ideal solution for projects of any size. Each 3RU rack-mountable CPU Chassis has 6 PCI Express 3.0 slots while each of up to 4 expansion chassis has 7 PCI Express 2.0 slots, enabling very large configurations.</p>
                           <p>Catalyst 4K supports up to 12 4K displays, which can showcase up to 48 HD sources. With optional Quad HD Decoder Cards, Catalyst 4K can support up to 112 HD inputs in one CPU Chassis plus four Expansion Chassis.</p>
                           <p>The Catalyst 4K processor is also valuable when users want to present content to an in-room audience outside of a Canvas session. With optional Dual-Link DVI Input Cards, up to 56 inputs without HDCP are supported for display on the local display wall only. Inputs via the DVI connection are not shareable in Canvas.</p>
-
+                          <br style="clear:both;">
                       </div>
                     </div>
                 </div>
