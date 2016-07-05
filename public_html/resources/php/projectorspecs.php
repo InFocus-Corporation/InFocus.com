@@ -24,6 +24,14 @@ if($row[1] == null){$translate[$row[0]] = $row[0];}
 else{$translate[$row[0]] = $row[1];}
 
 }
+
+function translate($key){
+global $translate;
+
+if($translate[$key] == NULL){return $key;}
+else{return $translate[$key];}
+}
+
 $homedir=$_SERVER['DOCUMENT_ROOT']; 
 				$partnumbers = str_replace(" ","",$_REQUEST['pn']);
 				$partnumbers = explode(",",$partnumbers);
@@ -53,6 +61,7 @@ $homedir=$_SERVER['DOCUMENT_ROOT'];
 				otherspecs AS 'Lens Shift: Horz (min/max)',
 				otherspecs AS 'Lens Shift: Vert (min/max)',
 				CONCAT(`throwh`,'~',throwl) AS `Throw Ratio`, 
+				CONCAT('1:',TRUNCATE( `throwh`/throwl, 3)) AS `Zoom Ratio`,
 				CONCAT(`weight`,'/',ROUND(`weight`/2.2,1)) as 'Weight(lbs/kg)',
 				`dimensions` as 'Product Dimensions HxWxD',
 				CONCAT(`shipweight`,'/',ROUND(`shipweight`/2.2,1)) as 'Shipping Weight(lbs/kg)',
@@ -143,7 +152,7 @@ $arrlength=count($colnames);
 
 			$x=1;
 			
-				$rresult .= '<tr><td style="text-align:right">' . $translate[$colnames[$x]] . '</td>';
+				$rresult .= '<tr><td style="text-align:right">' . translate($colnames[$x]) . '</td>';
 			for($i=0;$i<$rowNum;$i++)
 			{
 
@@ -160,7 +169,7 @@ $arrlength=count($colnames);
 
 			for($x=2;$x<$arrlength;$x++)
 			{
-				$rresult .= '<tr><td style="text-align:right">' . $translate[$colnames[$x]] . '</td>';
+				$rresult .= '<tr><td style="text-align:right">' . translate($colnames[$x]) . '</td>';
 			for($i=0;$i<$rowNum;$i++)
 			{
 				if($colnames[$x] == "Approvals"){
@@ -220,7 +229,7 @@ $arrlength=count($colnames);
 					
 				}
 				elseif($colnames[$x] == "Product Warranty" AND strpos($row[$x][$i],"Year")>0){
-					$rresult .= '<td >' . $translate[$row[$x][$i]] . '</td>';
+					$rresult .= '<td >' . translate($row[$x][$i]) . '</td>';
 				}
 				else{
 					$rresult .= '<td >' . $row[$x][$i] . '</td>';
