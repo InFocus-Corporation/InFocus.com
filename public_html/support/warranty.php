@@ -24,6 +24,10 @@ echo PHP_EOL . '<link rel="canonical" href="http://' .  $_SERVER['SERVER_NAME'] 
 		<p>Prefer the comfort of a longer warranty? <a href="/accessories/services">See our extended projector warranties here</a> or contact your reseller.</p>
 		<br>
 		<a href="/resources/documents/InFocus-MVP100-Limited-Warranty.pdf">MVP100 Video Phone Warranty Terms (pdf)</a>
+		<br><br>
+		<h3>InFocus Software License Agreement</h3>
+		<a href="/resources/documents/InFocus-Standard-Software-EULA-EN.pdf">InFocus Standard Software End User License Agreement (EULA)(pdf)</a>
+
 
 </div>
 </div>
