@@ -278,8 +278,7 @@ class IFCSeries extends InFocus
 		else{$priceSection .=   '">';}
 		if(in_array($this->productText['active'], array(1,2,5,6,7))){
 			$priceSection .=   '<li><span class="cost mysqledit" id="price" style="font-size:160%;">';
-			if(strlen($this->productText['active'])>0){$priceSection .= $this->modelPrice[$model] . $infoLink; }
-		}
+		if(strlen($this->productText['active'])>0 AND strlen($this->modelPrice[$model])>0){$priceSection .= $this->modelPrice[$model] . $infoLink; }		}
 		$priceSection .= '</span>';
 		//if(in_array($this->modelActive[$model], array(2,7))){$priceSection .= '</span></li>';}
 		if(in_array($this->productText['active'], array(1,5,6))){$priceSection .= str_replace("{{link}}", $modelLink, $gacode) . "</li>";}
