@@ -134,11 +134,11 @@ Email Address:<span style="color: #FF0000; cursor: default" title="Required Fiel
 <div style="padding-left: 10px">
 	<p class="privacy"><?php echo $pageText['PrivacyReview'];?></p>
 	<div id="form_0002_ao_submit_button" style="padding:0;">
-		<button id="form_0002_ao_submit_input" type="button" onClick="doSubmit(document.getElementById('form_0002'),'http://marketing.infocus.com/acton/forms/userSubmit.jsp','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit')"><?=translate('Send')?></button>
-	</div>
-
-	<br><span class="form-required" style="font-size:70%">* <?=translate('Denotes a Required field');?>.</span>
+<button id="form_0002_ao_submit_input" type="button" onClick="doSubmit(document.getElementById('form_0002'),'/resources/forms/formtoemail.php','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit')"><?=translate('Send')?></button>
 </div>
+
+<br><span class="form-required" style="font-size:70%">* <?=translate('Denotes a Required field');?>.</span>
+
 <input type="hidden" id="name" name="name">
 <input type="hidden" id="clear" name="clear" value="Thank you for your interest.  Someone will be contacting you shortly to schedule your demo.">
 </section>
@@ -160,6 +160,10 @@ addFieldToValidate ('form_0002_fld_4', 'LENGTH', 110);
 addFieldToValidate ('form_0002_fld_1_2', 'EMAIL');
 }
  </script>
+
+
+<input id="name" name="name" type="hidden"> <input name="eto" value="mptraining@infocus.com,lisa.johnson@infocus.com" type="hidden"> <input name="esub" value="Display Demo Request" type="hidden">
+
 
 </form>
 </div>
