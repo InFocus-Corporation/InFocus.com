@@ -41,21 +41,6 @@ p.page-text a {
 
 <form id="form_0002" method="POST" enctype="multipart/form-data" action="" >
 <section id="clearContainer">
-		<input type="hidden" name="ao_a"      value="16218">
-		<input type="hidden" name="ao_f"      value="0002">
-		<input type="hidden" name="ao_d"      value="0002:d-0001">
-		<input type="hidden" name="ao_jstzo"  id="ao_jstzo"  value="">
-		<input type="hidden" name="ao_refurl" id="ao_refurl" value="">
-		<input type="hidden" name="ao_cuid"   value="">
-		<input type="hidden" name="ao_srcid"  value="">
-		<input type="hidden" name="ao_nc"	  value="">
-		<input type="hidden" name="ao_pf"	  value="0">
-		<input type="hidden" name="ao_p"      id="ao_p"      value="0">
-		<input type="hidden" name="ao_bot"    id="ao_bot"	value="yes">
-        <input type="hidden" name="ao_iframe" id="ao_iframe" value="">
-		<input type="hidden" name="ao_camp"   value="">
-		<input type="hidden" name="ao_campid"  value="">		
-		<!-- -------------------------------------------------------------------------------------------- -->
 
 <h2 style="text-align: center;text-transform:capitalize;"><?php echo $pageText['MPAction'];?></h2>
 <p class="page-text"><?php echo $pageText['ManyWays'];?><br>
