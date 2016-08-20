@@ -782,7 +782,7 @@ Please select from the list below. To view a complete description of each course
 <ul id="page_5">
 
 <h2>Schedule It!</h2>
-You can click <a target="_blank" href="https://outlook.office365.com/owa/calendar/42bfb8e514c640638c540de2536b89f9@infocus.com/877eeafff8a24ea7befeee46520b49e01056002142867044319/calendar.html">here</a> to see the current schedule.  Any time that is labeled as "free" is a 2 hours slot that can be requested.  Appointment times are not guaranteed and are approved on a first come first serve basis.  It is recommended to put a second available time in the notes.
+You can click <a target="_blank" href="/TrainingSchedule">here</a> to see the current schedule.  Any time that is labeled as "free" is a 2 hours slot that can be requested.  Appointment times are not guaranteed and are approved on a first come first serve basis.  It is recommended to put a second available time in the notes.
 <br><br>
 <li>
 <h2 id='s1h'></h2>
