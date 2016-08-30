@@ -16,47 +16,36 @@ window.location = "/#mpdemo";
 </script>
 <style>
   form {
-	background: #f7f7f7;
 	padding: 20px;
-	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 0px 0px 0px rgba(255, 255, 255, 1);
-	border: 0px solid #B2B2B2;
+	box-shadow: none;
+	border: 0px;
+}
+.page-text {
+	text-align:center;
+	padding-left:5rem;
+	padding-right:5rem;
+}
+.page-text a {
+	margin-left: 6px;
+}
+form input[type=checkbox] + label {
+    font-size: 13px;
 }
 </style>
  </HEAD>
 <body style="max-width:1200px;background: #f7f7f7;">
 
 <div id="MPpopup-popup">
-<!-- ======================================================================================= -->
-
-
 <form id="form_0002" method="POST" enctype="multipart/form-data" action="" >
 <section id="clearContainer">
-		<input type="hidden" name="ao_a"      value="16218">
-		<input type="hidden" name="ao_f"      value="0002">
-		<input type="hidden" name="ao_d"      value="0002:d-0001">
-		<input type="hidden" name="ao_jstzo"  id="ao_jstzo"  value="">
-		<input type="hidden" name="ao_refurl" id="ao_refurl" value="">
-		<input type="hidden" name="ao_cuid"   value="">
-		<input type="hidden" name="ao_srcid"  value="">
-		<input type="hidden" name="ao_nc"	  value="">
-		<input type="hidden" name="ao_pf"	  value="0">
-		<input type="hidden" name="ao_p"      id="ao_p"      value="0">
-		<input type="hidden" name="ao_bot"    id="ao_bot"	value="yes">
-        <input type="hidden" name="ao_iframe" id="ao_iframe" value="">
-		<input type="hidden" name="ao_camp"   value="">
-		<input type="hidden" name="ao_campid"  value="">		
-		<!-- -------------------------------------------------------------------------------------------- -->
-
-<h2 style="text-align: left;"><?php echo $pageText['MPAction'];?></h2>
-<p style="text-align: left;"><?php echo $pageText['ManyWays'];?><br>
-<?php echo $pageText['LiveDemo'];?>
-</p>
-<p style="text-align: left;font-size: 12px;"><?php echo $pageText['FillOut'];?></p>
+<h2 style="text-align: center;text-transform:capitalize;"><?php echo $pageText['MPAction'];?></h2>
+<div class="page-text"><?php echo $pageText['ManyWays'];?>
+</div>
+<p style="text-align: center;font-size: 12px;"><?php echo $pageText['FillOut'];?></p>
 <ul class="wrap">
 <li  >
 <label class="top" for = "form_0002_fld_1_2">
-Email Address:<span style="color: #FF0000; cursor: default" title="Required Field" id="form_0002_fld_1_2-Label">
-*&nbsp;&nbsp;&nbsp;</span></label>
+Email Address:<span style="color: #FF0000; cursor: default" title="Required Field" id="form_0002_fld_1_2-Label"></span></label>
 <input type="text" id="form_0002_fld_1_2" name="E-mail Address" value="" onBlur="singleCheck ('form_0002_fld_1_2', 'EMAIL', 'form_0002_fld_1_2-Label')">
 </li>
 <li>
@@ -69,20 +58,13 @@ Email Address:<span style="color: #FF0000; cursor: default" title="Required Fiel
 <input id="form_0002_fld_1_ln" type="text" name="Last Name"  onchange="validateHuman();"/>
 </li>
 <li>
-<label class="top" for="Job Title"><?=translate('Job Title');?>: </label>
-<input id="form_0002_fld_2_1" type="text" name="Job Title" />
-</li>
-<li>
 <label class="top" for="Company"><?=translate('Organization Name');?>: <span class="required" style="color: #ff0000;">*</span></label>
 <input id="form_0002_fld_2_2" type="text" name="Company" />
 </li>
+
 <li>
-<label class="top" for="Business Street"><?=translate('Address');?>: <span class="required" style="color: #ff0000;">*</span></label>
-<input id="form_0002_fld_3_Street" type="text" name="Business Street" />
-</li>
-<li>
-<label class="top" for="Business City"><?=translate('City');?>: <span class="required" style="color: #ff0000;">*</span></label>
-<input id="form_0002_fld_3_City" type="text" name="Business City" />
+<label class="top" for="Business Phone"><?=translate('Phone');?>: <span id="form_0002_fld_4-Label" class="required" style="color: #ff0000;">*&nbsp;&nbsp;&nbsp;</span></label>
+<input type="text" id="form_0002_fld_4" name="Business Phone" onBlur="singleCheck ('form_0002_fld_4', 'ANYPHONE', 'form_0002_fld_4-Label')">
 </li>
 <li>
 <label class="top" for="Business Country"><?=translate('Country');?>: <span class="required" style="color: #ff0000;">*</span></label>
@@ -114,26 +96,46 @@ Email Address:<span style="color: #FF0000; cursor: default" title="Required Fiel
 </li>
 
 <li>
-<label class="top" for="Business Phone"><?=translate('Phone');?>: <span id="form_0002_fld_4-Label" class="required" style="color: #ff0000;">*&nbsp;&nbsp;&nbsp;</span></label>
-<input type="text" id="form_0002_fld_4" name="Business Phone" onBlur="singleCheck ('form_0002_fld_4', 'ANYPHONE', 'form_0002_fld_4-Label')">
+<label class="top" id="Products_label" for="Products"><?php echo $pageText['InterestedProductsP1'];?><span class="required" style="color: #ff0000;">*</span><br>
+<small><?php echo $pageText['InterestedProductsP2'];?></small></label>
+<input id="Products1" name="products[]" class="css-checkbox" type="checkbox" value="Mondopad">
+<label for="Products1" class="css-label">Mondopad</label><br>
+<input id="Products2" name="products[]" class="css-checkbox" type="checkbox" value="BigTouch">
+<label for="Products2" class="css-label">BigTouch</label><br>
+<input id="Products3" name="products[]" class="css-checkbox" type="checkbox" value="JTouch">
+<label for="Products3" class="css-label">JTouch</label><br>
+<input id="Products4" name="products[]" class="css-checkbox" type="checkbox" value="DigiEasel">
+<label for="Products4" class="css-label">DigiEasel</label>
+</li>
+
+<li>
+<label class="top" for="Company"><?=translate('I am');?><span class="required" style="color: #ff0000;">*</span>...</label>
+<input id="reseller"  class="css-checkbox" type="checkbox" value="Reseller" onchange="if(this.checked){$('#custNameContainer').show();$('#workWith')[0].checked = false;$('#dealerContainer').hide();}else{$('#custNameContainer').hide();}">
+<label for="reseller" class="css-label"><?=translate('an InFocus Reseller');?></label><br>
+<input id="workWith"  class="css-checkbox" type="checkbox" value="Reseller" onchange="if(this.checked){$('#dealerContainer').show();$('#reseller')[0].checked = false;$('#custNameContainer').hide();}else{$('#dealerContainer').hide();}">
+<label for="workWith" class="css-label"><?=translate('considering purchasing for myself or my organization');?></label>
+<li id="custNameContainer" class="techOnly" style="display:none">
+<label class="top" id="CustName" for="CustName"><?=translate('Customer Name');?>: </label>
+<input id="CustName" type="text" name="CustName" />
+</li>
+<li id="dealerContainer" class="techOnly" style="display:none">
+<label class="top" id="DealerName" for="DealerName"><?=translate('Dealer Name');?>: </label>
+<input id="DealerName" type="text" name="DealerName" />
+</li>
 </li>
 <li>
 <label class="top" for="Description"><strong><?php echo $pageText['Additional'];?></strong> - <?php echo $pageText['TellUs'];?></label>
 <textarea id="Description" type="text" name="Description" rows="8" /> </textarea>
 </li>
 </ul>
-<p><?php echo $pageText['PrivacyReview'];?></p>
-<p> </p>
+<div style="padding-left: 10px">
+	<p class="privacy"><?php echo $pageText['PrivacyReview'];?></p>
+	<div id="form_0002_ao_submit_button" style="padding:0;">
+		<button id="form_0002_ao_submit_input" type="button" onClick="doSubmit(document.getElementById('form_0002'),'http://marketing.infocus.com/acton/forms/userSubmit.jsp','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit')"><?=translate('Send')?></button>
+	</div>
 
-
-
-<br><br>
-<div id="form_0002_ao_submit_button">
-<button id="form_0002_ao_submit_input" type="button" onClick="doSubmit(document.getElementById('form_0002'),'http://marketing.infocus.com/acton/forms/userSubmit.jsp','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit')"><?=translate('Send')?></button>
+	<br><span class="form-required" style="font-size:70%">* <?=translate('Denotes a Required field');?>.</span>
 </div>
-
-<br><span class="form-required" style="font-size:70%">* <?=translate('Denotes a Required field');?>.</span>
-
 <input type="hidden" id="name" name="name">
 <input type="hidden" id="clear" name="clear" value="Thank you for your interest.  Someone will be contacting you shortly to schedule your demo.">
 </section>
@@ -162,7 +164,7 @@ addFieldToValidate ('form_0002_fld_1_2', 'EMAIL');
 $(document).ready(function() { 
     parent.$.colorbox.resize({
         innerWidth:$('body').width(),
-        innerHeight:$('body').height()+6
+        innerHeight:$('body').height()+100
     });
 	
 });
