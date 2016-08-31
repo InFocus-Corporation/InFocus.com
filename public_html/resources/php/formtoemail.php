@@ -9,6 +9,7 @@ Created On:" . $result . "\r";
 foreach($_POST as $key=>$value){
 	if($key != "clear" AND $key != "eto" AND $key != "esub"  AND $key != "name" AND substr($key,0,3) != "ao_" AND $key != "type"){
 		$key = ucwords(str_replace("_"," ",$key));
+		if(is_array($value)) $value = print_r($value,TRUE);
 		$msg .= "$key: $value\n";
 		}
 	}
@@ -39,5 +40,5 @@ foreach($_POST as $key=>$value){
 
 
 // send email
-mail($_REQUEST['eto'].",daniel.boggs@infocus.com",$_REQUEST['esub'],$msg,$headers);
+mail($_REQUEST['eto'],$_REQUEST['esub'],$msg,$headers);
 ?>
