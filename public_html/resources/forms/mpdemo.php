@@ -39,7 +39,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <?php endif; ?>
 
-<script>
  <script>
 if(self==top){
 var sPath=window.location.pathname;
@@ -166,7 +165,7 @@ Email Address:<span style="color: #FF0000; cursor: default" title="Required Fiel
 <div style="padding-left: 10px">
 	<p class="privacy"><?php echo $pageText['PrivacyReview'];?></p>
 	<div id="form_0002_ao_submit_button" style="padding:0;">
-		<button id="form_0002_ao_submit_input" type="button" onClick="doSubmit(document.getElementById('form_0002'),'http://marketing.infocus.com/acton/forms/userSubmit.jsp','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit')"><?=translate('Send')?></button>
+		<button id="form_0002_ao_submit_input" type="button" onClick="doSubmit(document.getElementById('form_0002'),'http://www.infocus.com/resources/php/formtoemail.php?eto=mptraining@infocus.com,lisa.johnson@infocus.com&esub=Demo%20Request','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit','https://infocuscrm.sugarondemand.com/rest/v10/Web/submit')"><?=translate('Send')?></button>
 	</div>
 
 	<br><span class="form-required" style="font-size:70%">* <?=translate('Denotes a Required field');?>.</span>
@@ -178,8 +177,6 @@ Email Address:<span style="color: #FF0000; cursor: default" title="Required Fiel
 <script type="text/javascript">
 if (typeof(addRequiredField) != 'undefined') { 
 addRequiredField ('form_0002_fld_4'); 
-addRequiredField ('form_0002_fld_3_Street'); 
-addRequiredField ('form_0002_fld_3_City'); 
 addRequiredField ('form_0002_fld_3_Country'); 
 addRequiredField ('form_0002_fld_2_2');
 addRequiredField ('form_0002_fld_1_2');
